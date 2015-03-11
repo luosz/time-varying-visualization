@@ -1,0 +1,371 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13149,        362]
+NotebookOptionsPosition[     12759,        344]
+NotebookOutlinePosition[     13135,        360]
+CellTagsIndexPosition[     13092,        357]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tf", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<D:\\\\document\\\\work\\\\volume-visualiser\\\\transferfuncs\\\\\
+nucleon.tfi\>\"", ",", "\"\<XML\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"intensity", "=", 
+   RowBox[{"ToExpression", "@", 
+    RowBox[{"Cases", "[", 
+     RowBox[{"tf", ",", 
+      RowBox[{
+       RowBox[{"XMLElement", "[", 
+        RowBox[{"\"\<intensity\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"\"\<value\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
+          "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+      "\[Infinity]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "=", 
+   RowBox[{"ToExpression", "@", 
+    RowBox[{"Cases", "[", 
+     RowBox[{"tf", ",", 
+      RowBox[{
+       RowBox[{"XMLElement", "[", 
+        RowBox[{"\"\<colorL\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"\"\<r\>\"", "\[Rule]", "atrib_"}], ",", "___"}], "}"}], 
+         ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+      "\[Infinity]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"g", "=", 
+   RowBox[{"ToExpression", "@", 
+    RowBox[{"Cases", "[", 
+     RowBox[{"tf", ",", 
+      RowBox[{
+       RowBox[{"XMLElement", "[", 
+        RowBox[{"\"\<colorL\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{"___", ",", 
+           RowBox[{"\"\<g\>\"", "\[Rule]", "atrib_"}], ",", "___"}], "}"}], 
+         ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+      "\[Infinity]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", "=", 
+   RowBox[{"ToExpression", "@", 
+    RowBox[{"Cases", "[", 
+     RowBox[{"tf", ",", 
+      RowBox[{
+       RowBox[{"XMLElement", "[", 
+        RowBox[{"\"\<colorL\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{"___", ",", 
+           RowBox[{"\"\<b\>\"", "\[Rule]", "atrib_"}], ",", "___"}], "}"}], 
+         ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+      "\[Infinity]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"ToExpression", "@", 
+    RowBox[{"Cases", "[", 
+     RowBox[{"tf", ",", 
+      RowBox[{
+       RowBox[{"XMLElement", "[", 
+        RowBox[{"\"\<colorL\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{"___", ",", 
+           RowBox[{"\"\<a\>\"", "\[Rule]", "atrib_"}]}], "}"}], ",", "___"}], 
+        "]"}], "\[RuleDelayed]", "atrib"}], ",", "\[Infinity]"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"rgba", "=", 
+   RowBox[{"Transpose", "[", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "g", ",", "b", ",", "a"}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"normalized", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", "rgba"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"denormalized", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"IntegerPart", "[", 
+       RowBox[{"255", "#"}], "]"}], "&"}], ")"}], "/@", "normalized"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "=", 
+   RowBox[{
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"intensity", ",", "denormalized"}], "}"}], "]"}], "//", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Flatten", "[", "#", "]"}], "&"}], "/@", "#"}], "&"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"strlist", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"ToString", "[", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
+       RowBox[{"ToString", "[", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", 
+       RowBox[{"ToString", "[", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", "3", "]"}], "]"}], "]"}], ",", 
+       RowBox[{"ToString", "[", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", "4", "]"}], "]"}], "]"}], ",", 
+       RowBox[{"ToString", "[", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", "5", "]"}], "]"}], "]"}]}], "}"}], "&"}], "/@", "r"}]}],
+   ";"}]}], "Input",
+ CellChangeTimes->{{3.634570235668953*^9, 3.634570248045511*^9}, 
+   3.6345702836420193`*^9, {3.6345704456576242`*^9, 3.6345704583081956`*^9}, {
+   3.634570576501458*^9, 3.634570576782683*^9}, 3.6345706280457945`*^9, {
+   3.634570764671801*^9, 3.6345709411199865`*^9}, {3.6345710300868917`*^9, 
+   3.634571139740325*^9}, {3.6345711975414076`*^9, 3.6345712024945803`*^9}, {
+   3.634571251906962*^9, 3.6345712603444843`*^9}, 3.634571434575832*^9, {
+   3.6345715100112367`*^9, 3.634571525084995*^9}, {3.6345715624471903`*^9, 
+   3.6345716471976533`*^9}, {3.634571689770895*^9, 3.6345718896063023`*^9}, {
+   3.634571996288807*^9, 3.6345723252592654`*^9}, {3.6345723776725707`*^9, 
+   3.6345725586203556`*^9}, {3.6345725991475945`*^9, 
+   3.6345727893694134`*^9}, {3.6345728296348763`*^9, 
+   3.6345728301817513`*^9}, {3.634572919183163*^9, 3.6345729468905983`*^9}, {
+   3.6345733392249584`*^9, 3.6345733458265285`*^9}, {3.634573416663721*^9, 
+   3.6345734179919057`*^9}, {3.6345735539201193`*^9, 3.6345735558576183`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"alphaMode", "=", 
+   RowBox[{"XMLElement", "[", 
+    RowBox[{"\"\<alphaMode\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<value\>\"", "\[Rule]", "\"\<1\>\""}], "}"}], ",", 
+     RowBox[{"{", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gammaValue", "=", 
+   RowBox[{"XMLElement", "[", 
+    RowBox[{"\"\<gammaValue\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<value\>\"", "\[Rule]", "\"\<1\>\""}], "}"}], ",", 
+     RowBox[{"{", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"domain", "=", 
+   RowBox[{"XMLElement", "[", 
+    RowBox[{"\"\<domain\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\"\<x\>\"", "\[Rule]", "\"\<0\>\""}], ",", 
+       RowBox[{"\"\<y\>\"", "\[Rule]", "\"\<1\>\""}]}], "}"}], ",", 
+     RowBox[{"{", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"threshold", "=", 
+    RowBox[{"XMLElement", "[", 
+     RowBox[{"\"\<threshold\>\"", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\"\<x\>\"", "\[Rule]", "\"\<0\>\""}], ",", 
+        RowBox[{"\"\<y\>\"", "\[Rule]", "\"\<1\>\""}]}], "}"}], ",", 
+      RowBox[{"{", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"intensity", "=", 
+     RowBox[{"XMLElement", "[", 
+      RowBox[{"\"\<intensity\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<value\>\"", "\[Rule]", "\"\<0.14115535\>\""}], "}"}], 
+       ",", 
+       RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"split", "=", 
+     RowBox[{"XMLElement", "[", 
+      RowBox[{"\"\<split\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<value\>\"", "\[Rule]", "\"\<false\>\""}], "}"}], ",", 
+       RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"colorL", "=", 
+     RowBox[{"XMLElement", "[", 
+      RowBox[{"\"\<colorL\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"\"\<r\>\"", "\[Rule]", "\"\<153\>\""}], ",", 
+         RowBox[{"\"\<g\>\"", "\[Rule]", "\"\<0\>\""}], ",", 
+         RowBox[{"\"\<b\>\"", "\[Rule]", "\"\<255\>\""}], ",", 
+         RowBox[{"\"\<a\>\"", "\[Rule]", "\"\<0\>\""}]}], "}"}], ",", 
+       RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"key", "=", 
+     RowBox[{"XMLElement", "[", 
+      RowBox[{"\"\<key\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<type\>\"", "\[Rule]", "\"\<TransFuncMappingKey\>\""}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"intensity", ",", "split", ",", "colorL"}], "}"}]}], "]"}]}], 
+    ";"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"intensity", "=", 
+         RowBox[{"XMLElement", "[", 
+          RowBox[{"\"\<intensity\>\"", ",", 
+           RowBox[{"{", 
+            RowBox[{"\"\<value\>\"", "\[Rule]", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "}"}], ",", 
+           RowBox[{"{", "}"}]}], "]"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"split", "=", 
+         RowBox[{"XMLElement", "[", 
+          RowBox[{"\"\<split\>\"", ",", 
+           RowBox[{"{", 
+            RowBox[{"\"\<value\>\"", "\[Rule]", "\"\<false\>\""}], "}"}], ",", 
+           RowBox[{"{", "}"}]}], "]"}]}], ",", "\[IndentingNewLine]", 
+        RowBox[{"colorL", "=", 
+         RowBox[{"XMLElement", "[", 
+          RowBox[{"\"\<colorL\>\"", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"\"\<r\>\"", "\[Rule]", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+             RowBox[{"\"\<g\>\"", "\[Rule]", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "3", "]"}], "]"}]}], ",", 
+             RowBox[{"\"\<b\>\"", "\[Rule]", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "4", "]"}], "]"}]}], ",", 
+             RowBox[{"\"\<a\>\"", "\[Rule]", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "5", "]"}], "]"}]}]}], "}"}], ",", 
+           RowBox[{"{", "}"}]}], "]"}]}]}], "}"}], "&"}], ")"}], "/@", 
+    "strlist"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"keylist", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"XMLElement", "[", 
+      RowBox[{"\"\<key\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<type\>\"", "\[Rule]", "\"\<TransFuncMappingKey\>\""}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], ",", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "3", "]"}], "]"}]}], "}"}]}], "]"}], "&"}], "/@", 
+    "k"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"keys", "=", 
+   RowBox[{"XMLElement", "[", 
+    RowBox[{"\"\<Keys\>\"", ",", 
+     RowBox[{"{", "}"}], ",", "keylist"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TransFuncIntensity", "=", 
+   RowBox[{"XMLElement", "[", 
+    RowBox[{"\"\<TransFuncIntensity\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<type\>\"", "\[Rule]", "\"\<TransFuncIntensity\>\""}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "alphaMode", ",", "gammaValue", ",", "domain", ",", "threshold", ",", 
+       "keys"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"VoreenData", "=", 
+   RowBox[{"XMLElement", "[", 
+    RowBox[{"\"\<VoreenData\>\"", ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<version\>\"", "\[Rule]", "\"\<1\>\""}], "}"}], ",", 
+     RowBox[{"{", "TransFuncIntensity", "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"xml", "=", 
+   RowBox[{
+    RowBox[{"XMLObject", "[", "\"\<Document\>\"", "]"}], "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"XMLObject", "[", "\"\<Declaration\>\"", "]"}], "[", 
+        RowBox[{"\"\<Version\>\"", "\[Rule]", "\"\<1.0\>\""}], "]"}], ",", 
+       RowBox[{
+        RowBox[{"XMLObject", "[", "\"\<Comment\>\"", "]"}], "[", 
+        "\"\<exported from Mathematica\>\"", "]"}]}], "}"}], ",", 
+     "VoreenData", ",", 
+     RowBox[{"{", "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<e:/xml.tfi\>\"", ",", "xml", ",", " ", "\"\<XML\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.634569532590762*^9, 3.634569866443445*^9}, {
+   3.634569936978257*^9, 3.6345699435021744`*^9}, {3.6345703523787594`*^9, 
+   3.634570361535*^9}, 3.6345713443024178`*^9, {3.634572977272067*^9, 
+   3.634572985013386*^9}, {3.6345730545189004`*^9, 3.634573059197521*^9}, {
+   3.6345732416670556`*^9, 3.634573282227647*^9}, {3.6345734209043407`*^9, 
+   3.6345735008447647`*^9}, 3.6345735597951355`*^9}],
+
+Cell[BoxData["\<\"e:/xml.tfi\"\>"], "Output",
+ CellChangeTimes->{{3.6345735623889313`*^9, 3.634573602279769*^9}, 
+   3.6345742082247553`*^9, 3.635095174252881*^9, 3.6350952400313983`*^9}]
+}, Open  ]]
+},
+WindowSize->{1602, 996},
+WindowMargins->{{-9, Automatic}, {Automatic, -9}},
+Magnification:>1.2 Inherited,
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 5190, 139, 267, "Input"],
+Cell[CellGroupData[{
+Cell[5773, 163, 6780, 174, 405, "Input"],
+Cell[12556, 339, 187, 2, 36, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
