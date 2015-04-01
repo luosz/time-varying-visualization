@@ -1,0 +1,1971 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     73555,       1962]
+NotebookOptionsPosition[     71845,       1913]
+NotebookOutlinePosition[     72359,       1933]
+CellTagsIndexPosition[     72316,       1930]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", 
+  RowBox[{
+  "Hurricane", "\[IndentingNewLine]", "alpha", " ", "H", " ", "S", " ", "B", 
+   "\[IndentingNewLine]", "cloud", " ", "wind", " ", "cloud", " ", "grad", 
+   " ", "mag", "\[IndentingNewLine]", "cloud", " ", "wind", " ", "constant", 
+   "\[IndentingNewLine]", "cloud", " ", "constant", " ", "wind", 
+   "\[IndentingNewLine]", "Lung", "\[IndentingNewLine]", "alha", " ", "H", 
+   " ", "S", " ", "B", "\[IndentingNewLine]", "I", " ", "constant", " ", 
+   "grad", " ", "mag"}], "\[IndentingNewLine]", "*)"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"http", ":"}], "//", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"www", ".", "wolfram", ".", "com"}], "/", "mathematica"}], "/", 
+     "new"}], "-", "in", "-", 
+    RowBox[{"10", "/", "enhanced"}], "-", 
+    RowBox[{"3", "d"}], "-", "image", "-", 
+    RowBox[{"processing", "/", "analyzing"}], "-", "and", "-", "rendering", 
+    "-", "simulation", "-", 
+    RowBox[{"data", ".", "html"}]}]}], "\[IndentingNewLine]", "*)"}]], "Input",
+ CellChangeTimes->{{3.6362914298000584`*^9, 3.636291433735255*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"GetUCARFile", "[", "filename_String", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"url", "=", "\"\<http://www.vets.ucar.edu/vg/isabeldata/\>\""}], 
+     "}"}], ",", 
+    RowBox[{
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"Not", "@", 
+        RowBox[{"FileExistsQ", "[", "filename", "]"}]}], ",", 
+       RowBox[{"URLSave", "[", 
+        RowBox[{
+         RowBox[{"url", "<>", "filename"}], ",", "filename"}], "]"}]}], "]"}],
+      ";", "\[IndentingNewLine]", 
+     RowBox[{"Import", "[", 
+      RowBox[{"filename", ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}], "}"}],
+        ",", 
+       RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"UCARFileToImage3D", "[", 
+    RowBox[{"data_", ",", "opts___Rule"}], "]"}], ":=", 
+   RowBox[{"Image3D", "[", 
+    RowBox[{
+     RowBox[{"Reverse", "@", 
+      RowBox[{"Transpose", "[", 
+       RowBox[{
+        RowBox[{"Partition", "[", 
+         RowBox[{
+          RowBox[{"Partition", "[", 
+           RowBox[{
+            RowBox[{"Clip", "[", 
+             RowBox[{"data", ",", 
+              RowBox[{
+               RowBox[{"2", "^", "16"}], " ", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}]}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "0"}], "}"}]}], "]"}], ",", "500"}], "]"}], 
+          ",", "500"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "3", ",", "2"}], "}"}]}], "]"}]}], ",", 
+     "\"\<Real32\>\"", ",", "opts"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"UCARImage3D", ":=", 
+   RowBox[{
+    RowBox[{"Image3D", "[", 
+     RowBox[{
+      RowBox[{"Reverse", "@", 
+       RowBox[{"Transpose", "[", 
+        RowBox[{
+         RowBox[{"Partition", "[", 
+          RowBox[{
+           RowBox[{"Partition", "[", 
+            RowBox[{
+             RowBox[{"Clip", "[", 
+              RowBox[{"#1", ",", 
+               RowBox[{
+                RowBox[{"2", "^", "16"}], " ", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], ",", "1"}], "}"}]}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0"}], "}"}]}], "]"}], ",", "500"}], "]"}], 
+           ",", "500"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "3", ",", "2"}], "}"}]}], "]"}]}], ",", 
+      "\"\<Real32\>\""}], "]"}], "&"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"elevation", "=", 
+   RowBox[{"Transpose", "@", 
+    RowBox[{"Partition", "[", 
+     RowBox[{
+      RowBox[{
+      "GetUCARFile", "[", 
+       "\"\<E:\\\\_time_varying_data\\\\isabeldata\\\\HGTdata.bin.gz\>\"", 
+       "]"}], ",", "500"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"groundColor", "=", 
+   RowBox[{
+    RowBox[{"Blend", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0.", ",", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{"0.", ",", "0.0675975", ",", "0.467384"}], "]"}]}], "}"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"0.001", ",", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{
+           "0.42313633333333334`", ",", "0.4823743333333333", ",", 
+            "0.434165"}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0.3", ",", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{
+           "0.4680942", ",", "0.4216284", ",", "0.29627780000000004`"}], 
+           "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0.6", ",", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{
+           "0.5066887333333333", ",", "0.3798376666666667", ",", 
+            "0.24217553333333333`"}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0.8", ",", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{
+           "0.6809748666666666", ",", "0.5876996666666666", ",", 
+            "0.49616886666666665`"}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1.", ",", 
+          RowBox[{"RGBColor", "[", 
+           RowBox[{"1.", ",", "1.", ",", "1."}], "]"}]}], "}"}]}], "}"}], ",",
+       "#"}], "]"}], "&"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"ground", "=", 
+   RowBox[{"ListPlot3D", "[", 
+    RowBox[{
+     RowBox[{"Reverse", "@", 
+      RowBox[{"ArrayResample", "[", 
+       RowBox[{
+        RowBox[{"GaussianFilter", "[", 
+         RowBox[{
+          RowBox[{"elevation", "/", "200"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"12", ",", "4"}], "}"}]}], "]"}], ",", "128"}], "]"}]}], 
+     ",", 
+     RowBox[{"PlotStyle", "\[Rule]", 
+      RowBox[{"Texture", "[", 
+       RowBox[{"ReliefImage", "[", 
+        RowBox[{"elevation", ",", 
+         RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+         RowBox[{"ColorFunction", "\[Rule]", "groundColor"}]}], "]"}], 
+       "]"}]}], ",", 
+     RowBox[{"DataRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "500"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "500"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "100"}], "}"}]}], "}"}]}], ",", 
+     RowBox[{"BoxRatios", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "1", ",", "0.1"}], "}"}]}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+     RowBox[{"Mesh", "\[Rule]", "None"}], ",", 
+     RowBox[{"Axes", "\[Rule]", "False"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"n", "=", "48"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"clist", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"\"\<E:\\\\_time_varying_data\\\\isabeldata\\\\CLOUDf\>\"", "<>", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.bin.gz\>\""}], 
+      ")"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "n"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ulist", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"\"\<E:\\\\_time_varying_data\\\\isabeldata\\\\Uf\>\"", "<>", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.bin.gz\>\""}], 
+      ")"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "n"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vlist", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"\"\<E:\\\\_time_varying_data\\\\isabeldata\\\\Vf\>\"", "<>", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.bin.gz\>\""}], 
+      ")"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "n"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"wlist", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"\"\<E:\\\\_time_varying_data\\\\isabeldata\\\\Wf\>\"", "<>", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.bin.gz\>\""}], 
+      ")"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "n"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vaporlist", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"\"\<E:\\\\_time_varying_data\\\\isabeldata\\\\QVAPORf\>\"", "<>", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.bin.gz\>\""}], 
+      ")"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "n"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"plist", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"\"\<E:\\\\_time_varying_data\\\\isabeldata\\\\Pf\>\"", "<>", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.bin.gz\>\""}], 
+      ")"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "n"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"preciplist", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"\"\<E:\\\\_time_varying_data\\\\isabeldata\\\\PRECIPf\>\"", "<>", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.bin.gz\>\""}], 
+      ")"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "n"}], "]"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.636205610101866*^9, 3.63620561077374*^9}, {
+  3.6362057261971583`*^9, 3.6362057269002857`*^9}, {3.6362057836499095`*^9, 
+  3.636205803211651*^9}, {3.636206162887823*^9, 3.636206169618414*^9}, {
+  3.6362134768259*^9, 3.6362135033105907`*^9}, {3.636287256473303*^9, 
+  3.6362872591920547`*^9}, {3.636287581927187*^9, 3.636287582442811*^9}, {
+  3.636288709523793*^9, 3.6362887105550103`*^9}, {3.6363092433709884`*^9, 
+  3.6363092791072865`*^9}, {3.636369138980053*^9, 3.6363691728976235`*^9}, {
+  3.6363697459433923`*^9, 3.636369758757572*^9}, {3.636370362021985*^9, 
+  3.6363703914556627`*^9}, {3.636370476093796*^9, 3.6363704929617376`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", 
+  RowBox[{
+  "Downsample", " ", "the", " ", "hurricane", " ", "isabel", " ", "data", " ",
+    "set"}], "\[IndentingNewLine]", "*)"}]], "Input",
+ CellChangeTimes->{{3.6362891788782635`*^9, 3.6362891940033245`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"data", ",", "img", ",", "size"}], "}"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"Import", "[", 
+            RowBox[{
+             RowBox[{"clist", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}], 
+              "}"}], ",", 
+             RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"img", "=", 
+           RowBox[{"UCARImage3D", "[", "data", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"size", "=", 
+           RowBox[{"ImageDimensions", "[", "img", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ImageResize", "[", 
+           RowBox[{"img", ",", 
+            RowBox[{"size", "/", "2"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+        "]"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<isabeldata_resized\\\\CLOUDf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.tif\>\""}], ",", "#"}], "]"}], 
+         "&"}], ",", "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.636284737472679*^9, 3.636284826972834*^9}, {
+   3.636284916894867*^9, 3.6362849311761737`*^9}, {3.636284987676235*^9, 
+   3.6362849982856584`*^9}, {3.6362850650669975`*^9, 3.6362851507390156`*^9}, 
+   3.636285200598479*^9, {3.636285231848531*^9, 3.636285287239254*^9}, {
+   3.6362853556925116`*^9, 3.6362853561456547`*^9}, {3.6362865327973175`*^9, 
+   3.6362865913026576`*^9}, {3.636286628655697*^9, 3.6362866338588257`*^9}, 
+   3.636286672843335*^9, {3.636286792144068*^9, 3.636286792362847*^9}, {
+   3.6362870191446424`*^9, 3.636287069738477*^9}, 3.6362872690671196`*^9, 
+   3.6363690176401434`*^9, {3.6363691140606656`*^9, 3.6363691167478895`*^9}, 
+   3.6363697638514223`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"img", ",", "size"}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"img", "=", 
+           RowBox[{"UCARImage3D", "[", 
+            RowBox[{"Import", "[", 
+             RowBox[{
+              RowBox[{"ulist", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}],
+                "}"}], ",", 
+              RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"size", "=", 
+           RowBox[{"ImageDimensions", "[", "img", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ImageResize", "[", 
+           RowBox[{"img", ",", 
+            RowBox[{"size", "/", "2"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+        "]"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<isabeldata_resized\\\\Uf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.tif\>\""}], ",", "#"}], "]"}], 
+         "&"}], ",", "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{
+  3.636287111551115*^9, 3.636287152535555*^9, {3.6363094344718843`*^9, 
+   3.636309442013553*^9}, 3.6363690212494607`*^9, 3.6363691222829685`*^9, 
+   3.63636976758669*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"img", ",", "size"}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"img", "=", 
+           RowBox[{"UCARImage3D", "[", 
+            RowBox[{"Import", "[", 
+             RowBox[{
+              RowBox[{"vlist", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}],
+                "}"}], ",", 
+              RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"size", "=", 
+           RowBox[{"ImageDimensions", "[", "img", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ImageResize", "[", 
+           RowBox[{"img", ",", 
+            RowBox[{"size", "/", "2"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+        "]"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<isabeldata_resized\\\\Vf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.tif\>\""}], ",", "#"}], "]"}], 
+         "&"}], ",", "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6362872023637757`*^9, 3.636287211754475*^9}, {
+   3.6363094489888544`*^9, 3.636309452901901*^9}, 3.6363690258276243`*^9, 
+   3.6363691247019677`*^9, 3.6363697706180043`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"img", ",", "size"}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"img", "=", 
+           RowBox[{"UCARImage3D", "[", 
+            RowBox[{"Import", "[", 
+             RowBox[{
+              RowBox[{"wlist", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}],
+                "}"}], ",", 
+              RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"size", "=", 
+           RowBox[{"ImageDimensions", "[", "img", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ImageResize", "[", 
+           RowBox[{"img", ",", 
+            RowBox[{"size", "/", "2"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+        "]"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<isabeldata_resized\\\\Wf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.tif\>\""}], ",", "#"}], "]"}], 
+         "&"}], ",", "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.636287229691988*^9, 3.63628723777013*^9}, {
+   3.63630945819728*^9, 3.636309462821294*^9}, 3.6363690291401234`*^9, 
+   3.6363691279688034`*^9, 3.636369774586756*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"img", ",", "size"}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"img", "=", 
+           RowBox[{"UCARImage3D", "[", 
+            RowBox[{"Import", "[", 
+             RowBox[{
+              RowBox[{"vaporlist", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}],
+                "}"}], ",", 
+              RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"size", "=", 
+           RowBox[{"ImageDimensions", "[", "img", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ImageResize", "[", 
+           RowBox[{"img", ",", 
+            RowBox[{"size", "/", "2"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+        "]"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<isabeldata_resized\\\\QVAPORf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.tif\>\""}], ",", "#"}], "]"}], 
+         "&"}], ",", "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.636309332156204*^9, 3.636309345019752*^9}, {
+   3.636309468951988*^9, 3.6363094736627293`*^9}, 3.6363690331864424`*^9, 
+   3.6363691299490557`*^9, 3.636369777674678*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"img", ",", "size"}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"img", "=", 
+           RowBox[{"UCARImage3D", "[", 
+            RowBox[{"Import", "[", 
+             RowBox[{
+              RowBox[{"plist", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}],
+                "}"}], ",", 
+              RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"size", "=", 
+           RowBox[{"ImageDimensions", "[", "img", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ImageResize", "[", 
+           RowBox[{"img", ",", 
+            RowBox[{"size", "/", "2"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+        "]"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<isabeldata_resized\\\\Pf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.tif\>\""}], ",", "#"}], "]"}], 
+         "&"}], ",", "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.636369188463667*^9, 3.6363692127211957`*^9}, 
+   3.636369781104081*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"img", ",", "size"}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"img", "=", 
+           RowBox[{"UCARImage3D", "[", 
+            RowBox[{"Import", "[", 
+             RowBox[{
+              RowBox[{"preciplist", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}],
+                "}"}], ",", 
+              RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"size", "=", 
+           RowBox[{"ImageDimensions", "[", "img", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ImageResize", "[", 
+           RowBox[{"img", ",", 
+            RowBox[{"size", "/", "2"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+        "]"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<isabeldata_resized\\\\PRECIPf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.tif\>\""}], ",", "#"}], "]"}], 
+         "&"}], ",", "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6363705117247896`*^9, 3.6363705177732425`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", 
+  RowBox[{"Render", " ", "the", " ", "downsampled", " ", "data", " ", "set"}],
+   "\[IndentingNewLine]", "*)"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"clist2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+      "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\isabeldata_\
+resized\\\\CLOUDf\>\"", "<>", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.tif\>\""}], 
+      ")"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "n"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ulist2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+      "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\isabeldata_\
+resized\\\\Uf\>\"", "<>", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.tif\>\""}], 
+      ")"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "n"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vlist2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+      "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\isabeldata_\
+resized\\\\Vf\>\"", "<>", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.tif\>\""}], 
+      ")"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "n"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"wlist2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+      "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\isabeldata_\
+resized\\\\Wf\>\"", "<>", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.tif\>\""}], 
+      ")"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "n"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vaporlist2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+      "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\isabeldata_\
+resized\\\\QVAPORf\>\"", "<>", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.tif\>\""}], 
+      ")"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "n"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"plist2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+      "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\isabeldata_\
+resized\\\\Pf\>\"", "<>", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.tif\>\""}], 
+      ")"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "n"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"preciplist2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+      "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\isabeldata_\
+resized\\\\PRECIPf\>\"", "<>", 
+       RowBox[{"IntegerString", "[", 
+        RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.tif\>\""}], 
+      ")"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"1", ",", "n"}], "]"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6362871895981617`*^9, 3.636287190113801*^9}, {
+   3.6362878100152235`*^9, 3.636287921484215*^9}, {3.6362881530629225`*^9, 
+   3.636288154703549*^9}, 3.6362882005473824`*^9, {3.6363096024752684`*^9, 
+   3.6363096325778933`*^9}, {3.636369037123989*^9, 3.6363690469058905`*^9}, {
+   3.6363692205761175`*^9, 3.636369229567746*^9}, {3.636370424681252*^9, 
+   3.6363704637448497`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ImageAdjust", "@", 
+        RowBox[{"Import", "[", 
+         RowBox[{
+          RowBox[{"clist2", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Image3D\>\""}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<hurricane_small\\\\CLOUDf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+           RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+        "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.636288180906725*^9, 3.6362882088443103`*^9}, {
+   3.636288239573598*^9, 3.636288245525016*^9}, {3.6362882957758417`*^9, 
+   3.636288302951318*^9}, {3.636288334420328*^9, 3.6362883414671936`*^9}, 
+   3.6362891375813313`*^9, {3.6362922288217106`*^9, 3.636292230227968*^9}, 
+   3.6363695799019146`*^9, 3.6363697851432*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ImageAdjust", "@", 
+        RowBox[{"Import", "[", 
+         RowBox[{
+          RowBox[{"ulist2", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Image3D\>\""}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<hurricane_small\\\\Uf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+           RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+        "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6362883654672785`*^9, 3.636288461538844*^9}, 
+   3.636289139284422*^9, {3.63629223257172*^9, 3.636292234056101*^9}, 
+   3.63636958195047*^9, 3.63636978850238*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ImageAdjust", "@", 
+        RowBox[{"Import", "[", 
+         RowBox[{
+          RowBox[{"vlist2", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Image3D\>\""}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<hurricane_small\\\\Vf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+           RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+        "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.636288173687922*^9, 3.6362881751410704`*^9}, {
+   3.636288255724606*^9, 3.6362882808290477`*^9}, {3.6362883807573647`*^9, 
+   3.636288464616967*^9}, 3.636289142206294*^9, {3.636292236102976*^9, 
+   3.6362922376186085`*^9}, 3.636369583622263*^9, 3.636369791486112*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ImageAdjust", "@", 
+        RowBox[{"Import", "[", 
+         RowBox[{
+          RowBox[{"wlist2", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Image3D\>\""}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<hurricane_small\\\\Wf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+           RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+        "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6362884566950455`*^9, 3.636288468632579*^9}, 
+   3.636289144018803*^9, {3.636292239556115*^9, 3.6362922410092444`*^9}, 
+   3.636369585653122*^9, 3.636369794175143*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ImageAdjust", "@", 
+        RowBox[{"Import", "[", 
+         RowBox[{
+          RowBox[{"vaporlist2", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Image3D\>\""}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<hurricane_small\\\\QVAPORf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+           RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+        "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.63630964590993*^9, 3.636309653614725*^9}, 
+   3.636369587187967*^9, 3.6363697970209613`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ImageAdjust", "@", 
+        RowBox[{"Import", "[", 
+         RowBox[{
+          RowBox[{"plist2", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Image3D\>\""}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<hurricane_small\\\\Pf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+           RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+        "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6363695963667808`*^9, 3.636369603863747*^9}, 
+   3.6363697994603395`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ImageAdjust", "@", 
+        RowBox[{"Import", "[", 
+         RowBox[{
+          RowBox[{"preciplist2", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<Image3D\>\""}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<hurricane_small\\\\PRECIPf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+           RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+        "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.636370608395462*^9, 3.6363706167209234`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", 
+  RowBox[{
+  "Render", " ", "gradient", " ", "magnitudes", " ", "of", " ", "the", " ", 
+   "resized", " ", "data", " ", "set"}], "\[IndentingNewLine]", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.6363068187636547`*^9, 3.6363068447834187`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"num", ",", "udata", ",", "vdata", ",", "wdata"}], "}"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"num", "=", 
+        RowBox[{"Range", "[", 
+         RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"udata", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Import", "[", 
+           RowBox[{
+            RowBox[{"ulist2", "[", 
+             RowBox[{"[", "#", "]"}], "]"}], ",", "\"\<Image3D\>\""}], "]"}], 
+          "&"}], "/@", "num"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"vdata", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Import", "[", 
+           RowBox[{
+            RowBox[{"vlist2", "[", 
+             RowBox[{"[", "#", "]"}], "]"}], ",", "\"\<Image3D\>\""}], "]"}], 
+          "&"}], "/@", "num"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"wdata", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Import", "[", 
+           RowBox[{
+            RowBox[{"wlist2", "[", 
+             RowBox[{"[", "#", "]"}], "]"}], ",", "\"\<Image3D\>\""}], "]"}], 
+          "&"}], "/@", "num"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"ParallelTable", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Module", "[", 
+           RowBox[{
+            RowBox[{"{", "k", "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"k", "=", 
+              RowBox[{"i", "-", "j", "+", "1"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"ImageAdjust", "@", 
+              RowBox[{"ImageApply", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Sqrt", "[", 
+                  RowBox[{"N", "[", 
+                   RowBox[{
+                    RowBox[{"#1", "*", "#1"}], "+", 
+                    RowBox[{"#2", "*", "#2"}], "+", 
+                    RowBox[{"#3", "*", "#3"}]}], "]"}], "]"}], "&"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"udata", "[", 
+                   RowBox[{"[", "k", "]"}], "]"}], ",", 
+                  RowBox[{"vdata", "[", 
+                   RowBox[{"[", "k", "]"}], "]"}], ",", 
+                  RowBox[{"wdata", "[", 
+                   RowBox[{"[", "k", "]"}], "]"}]}], "}"}]}], "]"}]}]}]}], 
+           "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+        "\[IndentingNewLine]", "//", 
+        RowBox[{
+         RowBox[{"MapIndexed", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Export", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+               "\"\<hurricane_small\\\\uvw\>\"", "<>", 
+               RowBox[{"IntegerString", "[", 
+                RowBox[{
+                 RowBox[{"num", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10",
+                  ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+              RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+           "#"}], "]"}], "&"}]}]}]}], "\[IndentingNewLine]", "]"}]}], 
+   "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6363068842197056`*^9, 3.6363068847088804`*^9}, 
+   3.6363698019584565`*^9}],
+
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", 
+  RowBox[{"Render", " ", "the", " ", "original", " ", "data", " ", "set"}], 
+  "\[IndentingNewLine]", "*)"}]], "Input",
+ CellChangeTimes->{{3.636288440616872*^9, 3.636288441179384*^9}, {
+  3.636289218909646*^9, 3.63628922748772*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ImageAdjust", "@", 
+        RowBox[{"UCARImage3D", "[", 
+         RowBox[{"Import", "[", 
+          RowBox[{
+           RowBox[{"clist", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}], 
+            "}"}], ",", 
+           RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<hurricane_original\\\\CLOUDf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+           RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+        "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6363097077265763`*^9, 3.6363097204564223`*^9}, 
+   3.6363698043212805`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ImageAdjust", "@", 
+        RowBox[{"UCARImage3D", "[", 
+         RowBox[{"Import", "[", 
+          RowBox[{
+           RowBox[{"ulist", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}], 
+            "}"}], ",", 
+           RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<hurricane_original\\\\Uf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+           RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+        "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6362887866958356`*^9, 3.636288800274029*^9}, {
+   3.636309734628393*^9, 3.6363097386771326`*^9}, 3.6363698061181307`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ImageAdjust", "@", 
+        RowBox[{"UCARImage3D", "[", 
+         RowBox[{"Import", "[", 
+          RowBox[{
+           RowBox[{"vlist", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}], 
+            "}"}], ",", 
+           RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<hurricane_original\\\\Vf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+           RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+        "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.636288809227124*^9, 3.636288813524064*^9}, {
+   3.6363097459633207`*^9, 3.6363097506173525`*^9}, 3.636369807806244*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ImageAdjust", "@", 
+        RowBox[{"UCARImage3D", "[", 
+         RowBox[{"Import", "[", 
+          RowBox[{
+           RowBox[{"wlist", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}], 
+            "}"}], ",", 
+           RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<hurricane_original\\\\Wf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+           RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+        "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.636288821008401*^9, 3.6362888241022043`*^9}, {
+   3.636309766089368*^9, 3.636309770512165*^9}, 3.636369809432726*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ImageAdjust", "@", 
+        RowBox[{"UCARImage3D", "[", 
+         RowBox[{"Import", "[", 
+          RowBox[{
+           RowBox[{"vaporlist", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}], 
+            "}"}], ",", 
+           RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<hurricane_original\\\\QVAPORf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+           RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+        "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6363097980635347`*^9, 3.6363098064597235`*^9}, 
+   3.636369811632564*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ImageAdjust", "@", 
+        RowBox[{"UCARImage3D", "[", 
+         RowBox[{"Import", "[", 
+          RowBox[{
+           RowBox[{"plist", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}], 
+            "}"}], ",", 
+           RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<hurricane_original\\\\Pf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+           RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+        "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.636369832315709*^9, 3.636369846504776*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ImageAdjust", "@", 
+        RowBox[{"UCARImage3D", "[", 
+         RowBox[{"Import", "[", 
+          RowBox[{
+           RowBox[{"preciplist", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}], 
+            "}"}], ",", 
+           RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+            "\"\<hurricane_original\\\\PRECIPf\>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+           RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+        "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.636370541374333*^9, 3.636370558507554*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", 
+  RowBox[{
+  "Render", " ", "gradient", " ", "magnitudes", " ", "of", " ", "the", " ", 
+   "original", " ", "data", " ", "set"}], "\[IndentingNewLine]", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.636288893883597*^9, 3.6362888943992224`*^9}, {
+  3.6362892323002295`*^9, 3.6362892501753316`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"udata", ",", "vdata", ",", "wdata"}], "}"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"udata", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Import", "[", 
+           RowBox[{
+            RowBox[{"ulist", "[", 
+             RowBox[{"[", "k", "]"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}], 
+             "}"}], ",", 
+            RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"k", ",", "j", ",", "endofstep"}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"vdata", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Import", "[", 
+           RowBox[{
+            RowBox[{"vlist", "[", 
+             RowBox[{"[", "k", "]"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}], 
+             "}"}], ",", 
+            RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"k", ",", "j", ",", "endofstep"}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"wdata", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Import", "[", 
+           RowBox[{
+            RowBox[{"wlist", "[", 
+             RowBox[{"[", "k", "]"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<GZIP\>\"", ",", "\"\<Binary\>\"", ",", "\"\<Real32\>\""}], 
+             "}"}], ",", 
+            RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"k", ",", "j", ",", "endofstep"}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"ParallelTable", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Module", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"k", ",", "uvw", ",", "gradient"}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"k", "=", 
+              RowBox[{"i", "-", "j", "+", "1"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"uvw", "=", 
+              RowBox[{"Transpose", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"udata", "[", 
+                  RowBox[{"[", "k", "]"}], "]"}], ",", 
+                 RowBox[{"vdata", "[", 
+                  RowBox[{"[", "k", "]"}], "]"}], ",", 
+                 RowBox[{"wdata", "[", 
+                  RowBox[{"[", "k", "]"}], "]"}]}], "}"}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"gradient", "=", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Sqrt", "[", 
+                 RowBox[{"N", "[", 
+                  RowBox[{
+                   RowBox[{"#1", "*", "#1"}], "+", 
+                   RowBox[{"#2", "*", "#2"}], "+", 
+                   RowBox[{"#3", "*", "#3"}]}], "]"}], "]"}], "&"}], "@@@", 
+               "uvw"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"ImageAdjust", "@", 
+              RowBox[{"UCARImage3D", "[", "gradient", "]"}]}]}]}], 
+           "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+        "\[IndentingNewLine]", "//", 
+        RowBox[{
+         RowBox[{"MapIndexed", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Export", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+               "\"\<hurricane_original\\\\gradient\>\"", "<>", 
+               RowBox[{"IntegerString", "[", 
+                RowBox[{
+                 RowBox[{"num", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10",
+                  ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], ",", "#", ",", 
+              RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], "&"}], ",", 
+           "#"}], "]"}], "&"}]}]}]}], "\[IndentingNewLine]", "]"}]}], 
+   "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{3.63636981343445*^9}]
+},
+WindowSize->{1602, 996},
+WindowMargins->{{-9, Automatic}, {Automatic, -9}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{595.1999999999999, 841.92}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 577, 9, 212, "Input"],
+Cell[1138, 31, 586, 14, 72, "Input"],
+Cell[1727, 47, 9161, 249, 392, "Input"],
+Cell[10891, 298, 266, 5, 72, "Input"],
+Cell[11160, 305, 3244, 77, 292, "Input"],
+Cell[14407, 384, 2635, 68, 272, "Input"],
+Cell[17045, 454, 2639, 67, 272, "Input"],
+Cell[19687, 523, 2631, 67, 272, "Input"],
+Cell[22321, 592, 2644, 67, 272, "Input"],
+Cell[24968, 661, 2537, 66, 272, "Input"],
+Cell[27508, 729, 2523, 65, 272, "Input"],
+Cell[30034, 796, 175, 3, 72, "Input"],
+Cell[30212, 801, 3520, 97, 152, "Input"],
+Cell[33735, 900, 2097, 52, 192, "Input"],
+Cell[35835, 954, 1936, 50, 192, "Input"],
+Cell[37774, 1006, 2041, 51, 192, "Input"],
+Cell[39818, 1059, 1941, 50, 192, "Input"],
+Cell[41762, 1111, 1875, 49, 192, "Input"],
+Cell[43640, 1162, 1847, 49, 192, "Input"],
+Cell[45490, 1213, 1829, 48, 192, "Input"],
+Cell[47322, 1263, 295, 6, 72, "Input"],
+Cell[47620, 1271, 3927, 99, 352, "Input"],
+Cell[51550, 1372, 286, 5, 72, "Input"],
+Cell[51839, 1379, 2086, 55, 192, "Input"],
+Cell[53928, 1436, 2128, 55, 192, "Input"],
+Cell[56059, 1493, 2126, 55, 192, "Input"],
+Cell[58188, 1550, 2124, 55, 192, "Input"],
+Cell[60315, 1607, 2089, 55, 192, "Input"],
+Cell[62407, 1664, 2050, 54, 192, "Input"],
+Cell[64460, 1720, 2060, 54, 192, "Input"],
+Cell[66523, 1776, 347, 7, 72, "Input"],
+Cell[66873, 1785, 4968, 126, 392, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
