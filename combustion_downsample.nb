@@ -1,0 +1,435 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     18435,        426]
+NotebookOptionsPosition[     18035,        408]
+NotebookOutlinePosition[     18379,        423]
+CellTagsIndexPosition[     18336,        420]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"UCARImage3D", ":=", 
+     RowBox[{
+      RowBox[{"Image3D", "[", 
+       RowBox[{
+        RowBox[{"Reverse", "@", 
+         RowBox[{"Transpose", "[", 
+          RowBox[{
+           RowBox[{"Partition", "[", 
+            RowBox[{
+             RowBox[{"Partition", "[", 
+              RowBox[{
+               RowBox[{"Clip", "[", 
+                RowBox[{"#1", ",", 
+                 RowBox[{
+                  RowBox[{"2", "^", "16"}], " ", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], ",", "1"}], "}"}]}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "0"}], "}"}]}], "]"}], ",", "480"}], 
+              "]"}], ",", "720"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "3", ",", "2"}], "}"}]}], "]"}]}], ",", 
+        "\"\<Real32\>\""}], "]"}], "&"}]}], ";"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"UCARImage3D", ":=", 
+     RowBox[{
+      RowBox[{"Image3D", "[", 
+       RowBox[{
+        RowBox[{"Partition", "[", 
+         RowBox[{
+          RowBox[{"Partition", "[", 
+           RowBox[{
+            RowBox[{"Clip", "[", 
+             RowBox[{"#1", ",", 
+              RowBox[{
+               RowBox[{"2", "^", "16"}], " ", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1"}], ",", "1"}], "}"}]}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "0"}], "}"}]}], "]"}], ",", "480"}], "]"}], 
+          ",", "720"}], "]"}], ",", "\"\<Real32\>\""}], "]"}], "&"}]}], ";"}],
+    "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"num", "=", 
+     RowBox[{"Join", "[", 
+      RowBox[{
+       RowBox[{"Range", "[", 
+        RowBox[{"1", ",", "24"}], "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"26", ",", "44"}], "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"46", ",", "49"}], "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"51", ",", "77"}], "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"81", ",", "108"}], "]"}], ",", 
+       RowBox[{"Range", "[", 
+        RowBox[{"111", ",", "120"}], "]"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"filelist", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+       "\"\<E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_\>\"", "<>", 
+        RowBox[{"IntegerString", "[", 
+         RowBox[{
+          RowBox[{"num", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ",", "10", ",", "4"}], "]"}], 
+        "<>", "\"\<\\\\jet_chi_\>\"", "<>", 
+        RowBox[{"IntegerString", "[", 
+         RowBox[{
+          RowBox[{"num", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ",", "10", ",", "4"}], "]"}], 
+        "<>", "\"\<.dat\>\""}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", 
+         RowBox[{"Length", "[", "num", "]"}]}], "}"}]}], "]"}]}], 
+    ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.634390619182286*^9, 3.634390622406331*^9}, {
+  3.6349260140141754`*^9, 3.634926033061212*^9}, {3.634926150170751*^9, 
+  3.634926153701954*^9}, {3.6349262179052277`*^9, 3.634926225983368*^9}, {
+  3.634926462987158*^9, 3.634926468299654*^9}, {3.6374989979057865`*^9, 
+  3.637498998177861*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["filelist"], "Input",
+ CellChangeTimes->{{3.6349255770249853`*^9, 3.634925638966516*^9}, {
+   3.634925695013524*^9, 3.6349256989041953`*^9}, {3.634925733607356*^9, 
+   3.634925755935523*^9}, 3.6349258073731303`*^9, 3.634926174467676*^9, 
+   3.6349262522334065`*^9, {3.634926723323741*^9, 3.6349267234927735`*^9}, {
+   3.6349268174231834`*^9, 3.6349268206153216`*^9}, {3.634926857393424*^9, 
+   3.6349268943215733`*^9}, {3.6349269476996307`*^9, 
+   3.6349270185736995`*^9}, {3.6349276541370993`*^9, 
+   3.6349276541460886`*^9}, {3.6349277130675097`*^9, 3.63492774010002*^9}, {
+   3.6349279844770412`*^9, 3.6349280176219587`*^9}, {3.634928193004073*^9, 
+   3.634928200683513*^9}, {3.6349282349174767`*^9, 3.6349283211463566`*^9}, 
+   3.634928378250704*^9, 3.634929352079743*^9, {3.63749899604171*^9, 
+   3.637499005480712*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0001\\\\\
+jet_chi_0001.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0002\\\\\
+jet_chi_0002.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0003\\\\\
+jet_chi_0003.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0004\\\\\
+jet_chi_0004.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0005\\\\\
+jet_chi_0005.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0006\\\\\
+jet_chi_0006.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0007\\\\\
+jet_chi_0007.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0008\\\\\
+jet_chi_0008.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0009\\\\\
+jet_chi_0009.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0010\\\\\
+jet_chi_0010.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0011\\\\\
+jet_chi_0011.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0012\\\\\
+jet_chi_0012.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0013\\\\\
+jet_chi_0013.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0014\\\\\
+jet_chi_0014.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0015\\\\\
+jet_chi_0015.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0016\\\\\
+jet_chi_0016.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0017\\\\\
+jet_chi_0017.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0018\\\\\
+jet_chi_0018.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0019\\\\\
+jet_chi_0019.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0020\\\\\
+jet_chi_0020.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0021\\\\\
+jet_chi_0021.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0022\\\\\
+jet_chi_0022.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0023\\\\\
+jet_chi_0023.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0024\\\\\
+jet_chi_0024.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0026\\\\\
+jet_chi_0026.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0027\\\\\
+jet_chi_0027.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0028\\\\\
+jet_chi_0028.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0029\\\\\
+jet_chi_0029.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0030\\\\\
+jet_chi_0030.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0031\\\\\
+jet_chi_0031.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0032\\\\\
+jet_chi_0032.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0033\\\\\
+jet_chi_0033.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0034\\\\\
+jet_chi_0034.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0035\\\\\
+jet_chi_0035.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0036\\\\\
+jet_chi_0036.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0037\\\\\
+jet_chi_0037.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0038\\\\\
+jet_chi_0038.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0039\\\\\
+jet_chi_0039.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0040\\\\\
+jet_chi_0040.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0041\\\\\
+jet_chi_0041.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0042\\\\\
+jet_chi_0042.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0043\\\\\
+jet_chi_0043.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0044\\\\\
+jet_chi_0044.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0046\\\\\
+jet_chi_0046.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0047\\\\\
+jet_chi_0047.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0048\\\\\
+jet_chi_0048.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0049\\\\\
+jet_chi_0049.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0051\\\\\
+jet_chi_0051.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0052\\\\\
+jet_chi_0052.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0053\\\\\
+jet_chi_0053.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0054\\\\\
+jet_chi_0054.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0055\\\\\
+jet_chi_0055.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0056\\\\\
+jet_chi_0056.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0057\\\\\
+jet_chi_0057.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0058\\\\\
+jet_chi_0058.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0059\\\\\
+jet_chi_0059.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0060\\\\\
+jet_chi_0060.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0061\\\\\
+jet_chi_0061.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0062\\\\\
+jet_chi_0062.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0063\\\\\
+jet_chi_0063.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0064\\\\\
+jet_chi_0064.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0065\\\\\
+jet_chi_0065.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0066\\\\\
+jet_chi_0066.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0067\\\\\
+jet_chi_0067.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0068\\\\\
+jet_chi_0068.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0069\\\\\
+jet_chi_0069.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0070\\\\\
+jet_chi_0070.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0071\\\\\
+jet_chi_0071.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0072\\\\\
+jet_chi_0072.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0073\\\\\
+jet_chi_0073.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0074\\\\\
+jet_chi_0074.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0075\\\\\
+jet_chi_0075.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0076\\\\\
+jet_chi_0076.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0077\\\\\
+jet_chi_0077.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0081\\\\\
+jet_chi_0081.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0082\\\\\
+jet_chi_0082.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0083\\\\\
+jet_chi_0083.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0084\\\\\
+jet_chi_0084.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0085\\\\\
+jet_chi_0085.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0086\\\\\
+jet_chi_0086.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0087\\\\\
+jet_chi_0087.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0088\\\\\
+jet_chi_0088.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0089\\\\\
+jet_chi_0089.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0090\\\\\
+jet_chi_0090.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0091\\\\\
+jet_chi_0091.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0092\\\\\
+jet_chi_0092.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0093\\\\\
+jet_chi_0093.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0094\\\\\
+jet_chi_0094.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0095\\\\\
+jet_chi_0095.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0096\\\\\
+jet_chi_0096.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0097\\\\\
+jet_chi_0097.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0098\\\\\
+jet_chi_0098.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0099\\\\\
+jet_chi_0099.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0100\\\\\
+jet_chi_0100.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0101\\\\\
+jet_chi_0101.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0102\\\\\
+jet_chi_0102.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0103\\\\\
+jet_chi_0103.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0104\\\\\
+jet_chi_0104.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0105\\\\\
+jet_chi_0105.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0106\\\\\
+jet_chi_0106.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0107\\\\\
+jet_chi_0107.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0108\\\\\
+jet_chi_0108.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0111\\\\\
+jet_chi_0111.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0112\\\\\
+jet_chi_0112.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0113\\\\\
+jet_chi_0113.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0114\\\\\
+jet_chi_0114.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0115\\\\\
+jet_chi_0115.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0116\\\\\
+jet_chi_0116.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0117\\\\\
+jet_chi_0117.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0118\\\\\
+jet_chi_0118.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0119\\\\\
+jet_chi_0119.dat\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0120\\\\\
+jet_chi_0120.dat\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.637499006339763*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"data", ",", "d"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"data", "=", 
+       RowBox[{"Import", "[", 
+        RowBox[{
+         RowBox[{"filelist", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<Binary\>\"", ",", "\"\<Real32\>\""}], "}"}], ",", 
+         RowBox[{"ByteOrdering", "\[Rule]", 
+          RowBox[{"-", "1"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"d", "=", 
+       RowBox[{
+        RowBox[{"ImageAdjust", "[", 
+         RowBox[{"UCARImage3D", "[", 
+          RowBox[{"data", ",", 
+           RowBox[{
+           "ColorFunction", "\[Rule]", "\"\<WhiteBlackOpacity\>\""}]}], "]"}],
+          "]"}], "//", 
+        RowBox[{
+         RowBox[{"ImageApply", "[", 
+          RowBox[{
+           RowBox[{"#", "&"}], ",", "#"}], "]"}], "&"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+         "\"\<combustion\\\\jet_chi_\>\"", "<>", 
+         RowBox[{"IntegerString", "[", 
+          RowBox[{
+           RowBox[{"num", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", "10", ",", "4"}], "]"}], 
+         "<>", "\"\<.png\>\""}], ",", "d", ",", " ", 
+        RowBox[{"ImageSize", "\[Rule]", "640"}]}], "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", 
+     RowBox[{"Length", "[", "num", "]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.634925812029398*^9, 3.634925861091992*^9}, {
+  3.6349259132639756`*^9, 3.6349259817016425`*^9}, {3.634926044811121*^9, 
+  3.6349260488736286`*^9}, {3.6349277685886936`*^9, 3.634927772296906*^9}, {
+  3.634928361353732*^9, 3.6349283617867737`*^9}}]
+},
+WindowSize->{1602, 996},
+WindowMargins->{{-9, Automatic}, {Automatic, -9}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3305, 91, 92, "Input"],
+Cell[CellGroupData[{
+Cell[3888, 115, 838, 12, 31, "Input"],
+Cell[4729, 129, 11403, 226, 1132, "Output"]
+}, Open  ]],
+Cell[16147, 358, 1884, 48, 112, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
