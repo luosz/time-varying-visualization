@@ -1,0 +1,173 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5412,        164]
+NotebookOptionsPosition[      5130,        150]
+NotebookOutlinePosition[      5474,        165]
+CellTagsIndexPosition[      5431,        162]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"img", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<result\\\\hurricane_white_cloud_35.png\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"itti", "=", 
+   RowBox[{"ImageSaliencyFilter", "[", 
+    RowBox[{"img", ",", 
+     RowBox[{"Method", "\[Rule]", "\"\<Itti\>\""}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", "=", 
+   RowBox[{"ImageSaliencyFilter", "[", 
+    RowBox[{"img", ",", 
+     RowBox[{"Method", "\[Rule]", "\"\<IttiColor\>\""}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", 
+   RowBox[{"ImageSaliencyFilter", "[", 
+    RowBox[{"img", ",", 
+     RowBox[{"Method", "\[Rule]", "\"\<IttiIntensity\>\""}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"o", "=", 
+   RowBox[{"ImageSaliencyFilter", "[", 
+    RowBox[{"img", ",", 
+     RowBox[{"Method", "\[Rule]", "\"\<IttiOrientation\>\""}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<result\\\\hurricane_white_cloud_35_Itti.png\>\""}], ",", "itti"}], 
+   "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<result\\\\hurricane_white_cloud_35_IttiColor.png\>\""}], ",", "c"}],
+    "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<result\\\\hurricane_white_cloud_35_IttiIntensity.png\>\""}], ",", 
+    "i"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<result\\\\hurricane_white_cloud_35_IttiOrientation.png\>\""}], ",", 
+    "o"}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.64063214412156*^9, 3.640632160924343*^9}, {
+  3.6406323729876823`*^9, 3.640632399252796*^9}, {3.6406325122897377`*^9, 
+  3.6406325165762987`*^9}, {3.6406348397655573`*^9, 3.640634891670871*^9}, {
+  3.640635007165159*^9, 3.640635030492756*^9}, {3.6406350905397654`*^9, 
+  3.6406352194939027`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"img", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<result\\\\hurricane_hsba_0_5std_1-10precip_cloud_35.png\>\""}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"itti", "=", 
+   RowBox[{"ImageSaliencyFilter", "[", 
+    RowBox[{"img", ",", 
+     RowBox[{"Method", "\[Rule]", "\"\<Itti\>\""}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"c", "=", 
+   RowBox[{"ImageSaliencyFilter", "[", 
+    RowBox[{"img", ",", 
+     RowBox[{"Method", "\[Rule]", "\"\<IttiColor\>\""}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", "=", 
+   RowBox[{"ImageSaliencyFilter", "[", 
+    RowBox[{"img", ",", 
+     RowBox[{"Method", "\[Rule]", "\"\<IttiIntensity\>\""}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"o", "=", 
+   RowBox[{"ImageSaliencyFilter", "[", 
+    RowBox[{"img", ",", 
+     RowBox[{"Method", "\[Rule]", "\"\<IttiOrientation\>\""}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<result\\\\hurricane_hsba_0_5std_1-10precip_cloud_35_Itti.png\>\""}],
+     ",", "itti"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<result\\\\hurricane_hsba_0_5std_1-10precip_cloud_35_IttiColor.png\>\
+\""}], ",", "c"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<result\\\\hurricane_hsba_0_5std_1-10precip_cloud_35_IttiIntensity.\
+png\>\""}], ",", "i"}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<result\\\\hurricane_hsba_0_5std_1-10precip_cloud_35_IttiOrientation.\
+png\>\""}], ",", "o"}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.640634936834629*^9, 3.640634957225193*^9}, {
+   3.6406349930681176`*^9, 3.640634999987943*^9}, 3.640635038772459*^9, 
+   3.640635085805496*^9, {3.640635234662792*^9, 3.640635264907076*^9}}]
+},
+WindowSize->{1602, 996},
+WindowMargins->{{-9, Automatic}, {Automatic, -9}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2296, 64, 192, "Input"],
+Cell[2857, 86, 2269, 62, 192, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

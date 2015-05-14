@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     18435,        426]
-NotebookOptionsPosition[     18035,        408]
-NotebookOutlinePosition[     18379,        423]
-CellTagsIndexPosition[     18336,        420]
+NotebookDataLength[     69565,       1758]
+NotebookOptionsPosition[     65289,       1642]
+NotebookOutlinePosition[     65632,       1657]
+CellTagsIndexPosition[     65589,       1654]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -69,7 +69,7 @@ Cell[BoxData[
           ",", "720"}], "]"}], ",", "\"\<Real32\>\""}], "]"}], "&"}]}], ";"}],
     "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"num", "=", 
+    RowBox[{"numbers", "=", 
      RowBox[{"Join", "[", 
       RowBox[{
        RowBox[{"Range", "[", 
@@ -86,6 +86,9 @@ Cell[BoxData[
         RowBox[{"111", ",", "120"}], "]"}]}], "]"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
+    RowBox[{"n", "=", 
+     RowBox[{"Length", "[", "numbers", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
     RowBox[{"filelist", "=", 
      RowBox[{"Table", "[", 
       RowBox[{
@@ -93,268 +96,127 @@ Cell[BoxData[
        "\"\<E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_\>\"", "<>", 
         RowBox[{"IntegerString", "[", 
          RowBox[{
-          RowBox[{"num", "[", 
+          RowBox[{"numbers", "[", 
            RowBox[{"[", "i", "]"}], "]"}], ",", "10", ",", "4"}], "]"}], 
         "<>", "\"\<\\\\jet_chi_\>\"", "<>", 
         RowBox[{"IntegerString", "[", 
          RowBox[{
-          RowBox[{"num", "[", 
+          RowBox[{"numbers", "[", 
            RowBox[{"[", "i", "]"}], "]"}], ",", "10", ",", "4"}], "]"}], 
         "<>", "\"\<.dat\>\""}], ",", 
        RowBox[{"{", 
-        RowBox[{"i", ",", "1", ",", 
-         RowBox[{"Length", "[", "num", "]"}]}], "}"}]}], "]"}]}], 
+        RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}], 
     ";"}]}]}]], "Input",
  CellChangeTimes->{{3.634390619182286*^9, 3.634390622406331*^9}, {
   3.6349260140141754`*^9, 3.634926033061212*^9}, {3.634926150170751*^9, 
   3.634926153701954*^9}, {3.6349262179052277`*^9, 3.634926225983368*^9}, {
   3.634926462987158*^9, 3.634926468299654*^9}, {3.6374989979057865`*^9, 
-  3.637498998177861*^9}}],
+  3.637498998177861*^9}, {3.6397605733688555`*^9, 3.6397605813999705`*^9}, {
+  3.6397607383319473`*^9, 3.639760759244158*^9}, {3.6397608103138437`*^9, 
+  3.6397608105894804`*^9}, {3.6397608421699057`*^9, 3.6397608631501803`*^9}, {
+  3.639760984296342*^9, 3.639760984546324*^9}, {3.63976552073006*^9, 
+  3.6397656530780916`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"i", "=", "10"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+     RowBox[{"filelist", "[", 
+      RowBox[{"[", "i", "]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Binary\>\"", ",", "\"\<Real32\>\""}], "}"}], ",", 
+     RowBox[{"ByteOrdering", "\[Rule]", 
+      RowBox[{"-", "1"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"img", "=", 
+  RowBox[{"Image3D", "[", 
+   RowBox[{
+    RowBox[{"ImageAdjust", "@", 
+     RowBox[{"UCARImage3D", "[", "data", "]"}]}], ",", 
+    RowBox[{"ColorFunction", "\[Rule]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"RGBColor", "[", 
+        RowBox[{"#", ",", "#", ",", "#", ",", "#"}], "]"}], "&"}], ")"}]}]}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{
+  3.6398215279048643`*^9, {3.6398216059301176`*^9, 3.6398216086958337`*^9}, {
+   3.639821708786885*^9, 3.6398217093181376`*^9}}],
 
 Cell[CellGroupData[{
 
-Cell[BoxData["filelist"], "Input",
- CellChangeTimes->{{3.6349255770249853`*^9, 3.634925638966516*^9}, {
-   3.634925695013524*^9, 3.6349256989041953`*^9}, {3.634925733607356*^9, 
-   3.634925755935523*^9}, 3.6349258073731303`*^9, 3.634926174467676*^9, 
-   3.6349262522334065`*^9, {3.634926723323741*^9, 3.6349267234927735`*^9}, {
-   3.6349268174231834`*^9, 3.6349268206153216`*^9}, {3.634926857393424*^9, 
-   3.6349268943215733`*^9}, {3.6349269476996307`*^9, 
-   3.6349270185736995`*^9}, {3.6349276541370993`*^9, 
-   3.6349276541460886`*^9}, {3.6349277130675097`*^9, 3.63492774010002*^9}, {
-   3.6349279844770412`*^9, 3.6349280176219587`*^9}, {3.634928193004073*^9, 
-   3.634928200683513*^9}, {3.6349282349174767`*^9, 3.6349283211463566`*^9}, 
-   3.634928378250704*^9, 3.634929352079743*^9, {3.63749899604171*^9, 
-   3.637499005480712*^9}}],
+Cell[BoxData[
+ RowBox[{"ImageDimensions", "[", "img", "]"}]], "Input",
+ CellChangeTimes->{{3.6398105174680986`*^9, 3.6398105423810835`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0001\\\\\
-jet_chi_0001.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0002\\\\\
-jet_chi_0002.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0003\\\\\
-jet_chi_0003.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0004\\\\\
-jet_chi_0004.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0005\\\\\
-jet_chi_0005.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0006\\\\\
-jet_chi_0006.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0007\\\\\
-jet_chi_0007.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0008\\\\\
-jet_chi_0008.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0009\\\\\
-jet_chi_0009.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0010\\\\\
-jet_chi_0010.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0011\\\\\
-jet_chi_0011.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0012\\\\\
-jet_chi_0012.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0013\\\\\
-jet_chi_0013.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0014\\\\\
-jet_chi_0014.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0015\\\\\
-jet_chi_0015.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0016\\\\\
-jet_chi_0016.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0017\\\\\
-jet_chi_0017.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0018\\\\\
-jet_chi_0018.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0019\\\\\
-jet_chi_0019.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0020\\\\\
-jet_chi_0020.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0021\\\\\
-jet_chi_0021.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0022\\\\\
-jet_chi_0022.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0023\\\\\
-jet_chi_0023.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0024\\\\\
-jet_chi_0024.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0026\\\\\
-jet_chi_0026.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0027\\\\\
-jet_chi_0027.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0028\\\\\
-jet_chi_0028.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0029\\\\\
-jet_chi_0029.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0030\\\\\
-jet_chi_0030.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0031\\\\\
-jet_chi_0031.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0032\\\\\
-jet_chi_0032.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0033\\\\\
-jet_chi_0033.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0034\\\\\
-jet_chi_0034.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0035\\\\\
-jet_chi_0035.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0036\\\\\
-jet_chi_0036.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0037\\\\\
-jet_chi_0037.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0038\\\\\
-jet_chi_0038.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0039\\\\\
-jet_chi_0039.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0040\\\\\
-jet_chi_0040.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0041\\\\\
-jet_chi_0041.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0042\\\\\
-jet_chi_0042.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0043\\\\\
-jet_chi_0043.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0044\\\\\
-jet_chi_0044.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0046\\\\\
-jet_chi_0046.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0047\\\\\
-jet_chi_0047.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0048\\\\\
-jet_chi_0048.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0049\\\\\
-jet_chi_0049.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0051\\\\\
-jet_chi_0051.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0052\\\\\
-jet_chi_0052.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0053\\\\\
-jet_chi_0053.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0054\\\\\
-jet_chi_0054.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0055\\\\\
-jet_chi_0055.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0056\\\\\
-jet_chi_0056.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0057\\\\\
-jet_chi_0057.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0058\\\\\
-jet_chi_0058.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0059\\\\\
-jet_chi_0059.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0060\\\\\
-jet_chi_0060.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0061\\\\\
-jet_chi_0061.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0062\\\\\
-jet_chi_0062.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0063\\\\\
-jet_chi_0063.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0064\\\\\
-jet_chi_0064.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0065\\\\\
-jet_chi_0065.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0066\\\\\
-jet_chi_0066.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0067\\\\\
-jet_chi_0067.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0068\\\\\
-jet_chi_0068.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0069\\\\\
-jet_chi_0069.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0070\\\\\
-jet_chi_0070.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0071\\\\\
-jet_chi_0071.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0072\\\\\
-jet_chi_0072.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0073\\\\\
-jet_chi_0073.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0074\\\\\
-jet_chi_0074.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0075\\\\\
-jet_chi_0075.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0076\\\\\
-jet_chi_0076.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0077\\\\\
-jet_chi_0077.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0081\\\\\
-jet_chi_0081.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0082\\\\\
-jet_chi_0082.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0083\\\\\
-jet_chi_0083.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0084\\\\\
-jet_chi_0084.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0085\\\\\
-jet_chi_0085.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0086\\\\\
-jet_chi_0086.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0087\\\\\
-jet_chi_0087.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0088\\\\\
-jet_chi_0088.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0089\\\\\
-jet_chi_0089.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0090\\\\\
-jet_chi_0090.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0091\\\\\
-jet_chi_0091.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0092\\\\\
-jet_chi_0092.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0093\\\\\
-jet_chi_0093.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0094\\\\\
-jet_chi_0094.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0095\\\\\
-jet_chi_0095.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0096\\\\\
-jet_chi_0096.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0097\\\\\
-jet_chi_0097.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0098\\\\\
-jet_chi_0098.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0099\\\\\
-jet_chi_0099.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0100\\\\\
-jet_chi_0100.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0101\\\\\
-jet_chi_0101.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0102\\\\\
-jet_chi_0102.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0103\\\\\
-jet_chi_0103.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0104\\\\\
-jet_chi_0104.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0105\\\\\
-jet_chi_0105.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0106\\\\\
-jet_chi_0106.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0107\\\\\
-jet_chi_0107.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0108\\\\\
-jet_chi_0108.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0111\\\\\
-jet_chi_0111.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0112\\\\\
-jet_chi_0112.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0113\\\\\
-jet_chi_0113.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0114\\\\\
-jet_chi_0114.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0115\\\\\
-jet_chi_0115.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0116\\\\\
-jet_chi_0116.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0117\\\\\
-jet_chi_0117.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0118\\\\\
-jet_chi_0118.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0119\\\\\
-jet_chi_0119.dat\"\>", 
-   ",", "\<\"E:\\\\_time_varying_data\\\\combustion\\\\data\\\\jet_0120\\\\\
-jet_chi_0120.dat\"\>"}], "}"}]], "Output",
- CellChangeTimes->{3.637499006339763*^9}]
+  RowBox[{"480", ",", "720", ",", "120"}], "}"}]], "Output",
+ CellChangeTimes->{{3.6398105210678425`*^9, 3.639810542834244*^9}}]
 }, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", "data", "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"Import", "[", 
+            RowBox[{
+             RowBox[{"filelist", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Binary\>\"", ",", "\"\<Real32\>\""}], "}"}], ",", 
+             RowBox[{"ByteOrdering", "\[Rule]", 
+              RowBox[{"-", "1"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"UCARImage3D", "[", "data", "]"}]}]}], 
+        "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+           "\"\<E:\\\\_time_varying_data\\\\combustion_tiff\\\\jet_chi_\>\"", 
+            "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "4"}], "]"}], "<>", "\"\<.tif\>\""}], ",", "#"}], "]"}], 
+         "&"}], ",", "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{
+  3.639760556487525*^9, {3.6397606509149976`*^9, 3.6397606872666516`*^9}, {
+   3.6397648667797303`*^9, 3.639764902731927*^9}, 3.639765136540341*^9, 
+   3.6398126788824735`*^9}],
 
 Cell[BoxData[
  RowBox[{"Do", "[", 
@@ -362,7 +224,7 @@ Cell[BoxData[
    RowBox[{"Module", "[", 
     RowBox[{
      RowBox[{"{", 
-      RowBox[{"data", ",", "d"}], "}"}], ",", 
+      RowBox[{"data", ",", "d"}], "}"}], ",", "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"data", "=", 
        RowBox[{"Import", "[", 
@@ -374,18 +236,16 @@ Cell[BoxData[
          RowBox[{"ByteOrdering", "\[Rule]", 
           RowBox[{"-", "1"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"d", "=", 
-       RowBox[{
-        RowBox[{"ImageAdjust", "[", 
-         RowBox[{"UCARImage3D", "[", 
-          RowBox[{"data", ",", 
-           RowBox[{
-           "ColorFunction", "\[Rule]", "\"\<WhiteBlackOpacity\>\""}]}], "]"}],
-          "]"}], "//", 
+       RowBox[{"Image3D", "[", 
         RowBox[{
-         RowBox[{"ImageApply", "[", 
-          RowBox[{
-           RowBox[{"#", "&"}], ",", "#"}], "]"}], "&"}]}]}], ";", 
-      "\[IndentingNewLine]", 
+         RowBox[{"ImageAdjust", "@", 
+          RowBox[{"UCARImage3D", "[", "data", "]"}]}], ",", 
+         RowBox[{"ColorFunction", "\[Rule]", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"RGBColor", "[", 
+             RowBox[{"#", ",", "#", ",", "#", ",", "#"}], "]"}], "&"}], 
+           ")"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"Export", "[", 
        RowBox[{
         RowBox[{
@@ -393,21 +253,1395 @@ Cell[BoxData[
          "\"\<combustion\\\\jet_chi_\>\"", "<>", 
          RowBox[{"IntegerString", "[", 
           RowBox[{
-           RowBox[{"num", "[", 
+           RowBox[{"numbers", "[", 
             RowBox[{"[", "i", "]"}], "]"}], ",", "10", ",", "4"}], "]"}], 
          "<>", "\"\<.png\>\""}], ",", "d", ",", " ", 
         RowBox[{"ImageSize", "\[Rule]", "640"}]}], "]"}]}]}], 
     "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
    RowBox[{"{", 
     RowBox[{"i", ",", "1", ",", 
-     RowBox[{"Length", "[", "num", "]"}]}], "}"}]}], "]"}]], "Input",
+     RowBox[{"Length", "[", "numbers", "]"}]}], "}"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.634925812029398*^9, 3.634925861091992*^9}, {
-  3.6349259132639756`*^9, 3.6349259817016425`*^9}, {3.634926044811121*^9, 
-  3.6349260488736286`*^9}, {3.6349277685886936`*^9, 3.634927772296906*^9}, {
-  3.634928361353732*^9, 3.6349283617867737`*^9}}]
+   3.6349259132639756`*^9, 3.6349259817016425`*^9}, {3.634926044811121*^9, 
+   3.6349260488736286`*^9}, {3.6349277685886936`*^9, 3.634927772296906*^9}, {
+   3.634928361353732*^9, 3.6349283617867737`*^9}, 3.639760336774004*^9, {
+   3.6397646325604405`*^9, 3.639764657284749*^9}, {3.6397654666668873`*^9, 
+   3.6397654781476135`*^9}, {3.6397656687914705`*^9, 
+   3.6397656937496643`*^9}, {3.6397658164058275`*^9, 3.6397658170327015`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"start", "=", "1"}], ";", 
+  RowBox[{"end", "=", "n"}], ";", 
+  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"endofstep", "=", 
+     RowBox[{"Min", "[", 
+      RowBox[{
+       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"num", "=", 
+     RowBox[{"Range", "[", 
+      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Table", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"data", ",", "img"}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"Import", "[", 
+            RowBox[{
+             RowBox[{"filelist", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Binary\>\"", ",", "\"\<Real32\>\""}], "}"}], ",", 
+             RowBox[{"ByteOrdering", "\[Rule]", 
+              RowBox[{"-", "1"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"img", "=", 
+           RowBox[{"UCARImage3D", "[", "data", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ImageResize", "[", 
+           RowBox[{"img", ",", 
+            RowBox[{
+             RowBox[{"ImageDimensions", "[", "img", "]"}], "/", "2"}]}], 
+           "]"}]}]}], "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+     "\[IndentingNewLine]", "//", 
+     RowBox[{
+      RowBox[{"MapIndexed", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{
+           "\"\<E:\\\\_time_varying_data\\\\combustion_resized\\\\jet_chi_\>\"\
+", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"num", "[", 
+               RowBox[{"[", 
+                RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], ",", "10", 
+              ",", "4"}], "]"}], "<>", "\"\<.tif\>\""}], ",", "#"}], "]"}], 
+         "&"}], ",", "#"}], "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6398110569290013`*^9, 3.6398110975640616`*^9}, 
+   3.6398126760945663`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"filelist2", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"\"\<E:\\\\_time_varying_data\\\\combustion2\\\\jet_\>\"", "<>", 
+      RowBox[{"IntegerString", "[", 
+       RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", 
+      "\"\<\\\\jet_chi_\>\"", "<>", 
+      RowBox[{"IntegerString", "[", 
+       RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", "\"\<.dat\>\""}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "120"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"data", ",", "d"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"data", "=", 
+       RowBox[{"Import", "[", 
+        RowBox[{
+         RowBox[{"filelist2", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<Binary\>\"", ",", "\"\<Real32\>\""}], "}"}], ",", 
+         RowBox[{"ByteOrdering", "\[Rule]", 
+          RowBox[{"-", "1"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"d", "=", 
+       RowBox[{"Image3D", "[", 
+        RowBox[{
+         RowBox[{"ImageAdjust", "@", 
+          RowBox[{"UCARImage3D", "[", "data", "]"}]}], ",", 
+         RowBox[{"ColorFunction", "\[Rule]", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"RGBColor", "[", 
+             RowBox[{"#", ",", "#", ",", "#", ",", "#"}], "]"}], "&"}], 
+           ")"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+         "\"\<combustion2\\\\jet_chi_\>\"", "<>", 
+         RowBox[{"IntegerString", "[", 
+          RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", "\"\<.png\>\""}], 
+        ",", "d", ",", " ", 
+        RowBox[{"ImageSize", "\[Rule]", "1000"}]}], "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", 
+     RowBox[{"Length", "[", "filelist2", "]"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6398300827387247`*^9, 3.6398301145669584`*^9}, {
+  3.6398301933953257`*^9, 3.6398302196610637`*^9}, {3.639830348442768*^9, 
+  3.6398303490677524`*^9}, {3.639830427693047*^9, 3.6398304430055494`*^9}, {
+  3.6398312314998846`*^9, 3.639831241011267*^9}, {3.639831322602936*^9, 
+  3.639831348775046*^9}, {3.6398314009755473`*^9, 3.6398314097847137`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639831842538497*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639831842632209*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639831842725995*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \[NoBreak]\\!\\(Clip[]\\)\[NoBreak] \
+should be an array of rank 3 or 4 with machine-sized numbers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \
+\\\"Image3D::imgarray\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398318428509912`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639831842975997*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \
+\[NoBreak]\\!\\(ImageAdjust[\\(\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \
+\\\"Real32\\\"\\)\\)]\\)\\)]\\)\[NoBreak] should be an array of rank 3 or 4 \
+with machine-sized numbers. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \\\"Image3D::imgarray\\\
+\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398318431009607`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639831863897904*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398318639760447`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Clip :: \
+argb\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639831864022921*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \[NoBreak]\\!\\(Clip[]\\)\[NoBreak] \
+should be an array of rank 3 or 4 with machine-sized numbers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \
+\\\"Image3D::imgarray\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398318641166716`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Image3D \
+:: imgarray\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during \
+this calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398318641635494`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398318642729425`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398320035390406`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Import :: \
+nffil\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639832003585879*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398320036952715`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ImageAdjust :: imginv\\), \\\"MessageName\\\"]\
+\\)\[NoBreak] will be suppressed during this calculation. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398320037265053`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"filelist2", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"\"\<E:\\\\_time_varying_data\\\\combustion2\\\\jet_\>\"", "<>", 
+      RowBox[{"IntegerString", "[", 
+       RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", 
+      "\"\<\\\\jet_vort_\>\"", "<>", 
+      RowBox[{"IntegerString", "[", 
+       RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", "\"\<.dat\>\""}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "120"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"data", ",", "d"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"data", "=", 
+       RowBox[{"Import", "[", 
+        RowBox[{
+         RowBox[{"filelist2", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<Binary\>\"", ",", "\"\<Real32\>\""}], "}"}], ",", 
+         RowBox[{"ByteOrdering", "\[Rule]", 
+          RowBox[{"-", "1"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"d", "=", 
+       RowBox[{"Image3D", "[", 
+        RowBox[{
+         RowBox[{"ImageAdjust", "@", 
+          RowBox[{"UCARImage3D", "[", "data", "]"}]}], ",", 
+         RowBox[{"ColorFunction", "\[Rule]", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"RGBColor", "[", 
+             RowBox[{"#", ",", "#", ",", "#", ",", "#"}], "]"}], "&"}], 
+           ")"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+         "\"\<combustion2\\\\jet_vort_\>\"", "<>", 
+         RowBox[{"IntegerString", "[", 
+          RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", "\"\<.png\>\""}], 
+        ",", "d", ",", " ", 
+        RowBox[{"ImageSize", "\[Rule]", "1000"}]}], "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", 
+     RowBox[{"Length", "[", "filelist2", "]"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6398313697103786`*^9, 3.639831413159717*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398324288841963`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398324289935713`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639832429056095*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \[NoBreak]\\!\\(Clip[]\\)\[NoBreak] \
+should be an array of rank 3 or 4 with machine-sized numbers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \
+\\\"Image3D::imgarray\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398324291810894`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398324292904654`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \
+\[NoBreak]\\!\\(ImageAdjust[\\(\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \
+\\\"Real32\\\"\\)\\)]\\)\\)]\\)\[NoBreak] should be an array of rank 3 or 4 \
+with machine-sized numbers. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \\\"Image3D::imgarray\\\
+\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639832429399847*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639832445259252*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398324453374214`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Clip :: \
+argb\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398324453686695`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \[NoBreak]\\!\\(Clip[]\\)\[NoBreak] \
+should be an array of rank 3 or 4 with machine-sized numbers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \
+\\\"Image3D::imgarray\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398324455092773`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Image3D \
+:: imgarray\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during \
+this calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639832445556151*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639832445665506*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.63983244583738*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Import :: \
+nffil\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398324458686295`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.63983244599363*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ImageAdjust :: imginv\\), \\\"MessageName\\\"]\
+\\)\[NoBreak] will be suppressed during this calculation. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398324460405426`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"filelist2", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"\"\<E:\\\\_time_varying_data\\\\combustion2\\\\jet_\>\"", "<>", 
+      RowBox[{"IntegerString", "[", 
+       RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", 
+      "\"\<\\\\jet_mixfrac_\>\"", "<>", 
+      RowBox[{"IntegerString", "[", 
+       RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", "\"\<.dat\>\""}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "120"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"data", ",", "d"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"data", "=", 
+       RowBox[{"Import", "[", 
+        RowBox[{
+         RowBox[{"filelist2", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<Binary\>\"", ",", "\"\<Real32\>\""}], "}"}], ",", 
+         RowBox[{"ByteOrdering", "\[Rule]", 
+          RowBox[{"-", "1"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"d", "=", 
+       RowBox[{"Image3D", "[", 
+        RowBox[{
+         RowBox[{"ImageAdjust", "@", 
+          RowBox[{"UCARImage3D", "[", "data", "]"}]}], ",", 
+         RowBox[{"ColorFunction", "\[Rule]", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"RGBColor", "[", 
+             RowBox[{"#", ",", "#", ",", "#", ",", "#"}], "]"}], "&"}], 
+           ")"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+         "\"\<combustion2\\\\jet_mixfrac_\>\"", "<>", 
+         RowBox[{"IntegerString", "[", 
+          RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", "\"\<.png\>\""}], 
+        ",", "d", ",", " ", 
+        RowBox[{"ImageSize", "\[Rule]", "1000"}]}], "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", 
+     RowBox[{"Length", "[", "filelist2", "]"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.639831429945837*^9, 3.6398314340396013`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398329873079877`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639832987401738*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639832987479866*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \[NoBreak]\\!\\(Clip[]\\)\[NoBreak] \
+should be an array of rank 3 or 4 with machine-sized numbers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \
+\\\"Image3D::imgarray\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639832987589262*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639832987698619*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \
+\[NoBreak]\\!\\(ImageAdjust[\\(\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \
+\\\"Real32\\\"\\)\\)]\\)\\)]\\)\[NoBreak] should be an array of rank 3 or 4 \
+with machine-sized numbers. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \\\"Image3D::imgarray\\\
+\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639832987807989*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398330086361694`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398330087143154`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Clip :: \
+argb\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398330087612395`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \[NoBreak]\\!\\(Clip[]\\)\[NoBreak] \
+should be an array of rank 3 or 4 with machine-sized numbers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \
+\\\"Image3D::imgarray\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398330088705683`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Image3D \
+:: imgarray\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during \
+this calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398330089018126`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639833009011205*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.63983315729294*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ImageAdjust :: imginv\\), \\\"MessageName\\\"]\
+\\)\[NoBreak] will be suppressed during this calculation. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639833157339813*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398331585116816`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Import :: \
+nffil\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398331585429487`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"filelist2", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"\"\<E:\\\\_time_varying_data\\\\combustion2\\\\jet_\>\"", "<>", 
+      RowBox[{"IntegerString", "[", 
+       RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", "\"\<\\\\jet_hr_\>\"",
+       "<>", 
+      RowBox[{"IntegerString", "[", 
+       RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", "\"\<.dat\>\""}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "120"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"data", ",", "d"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"data", "=", 
+       RowBox[{"Import", "[", 
+        RowBox[{
+         RowBox[{"filelist2", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<Binary\>\"", ",", "\"\<Real32\>\""}], "}"}], ",", 
+         RowBox[{"ByteOrdering", "\[Rule]", 
+          RowBox[{"-", "1"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"d", "=", 
+       RowBox[{"Image3D", "[", 
+        RowBox[{
+         RowBox[{"ImageAdjust", "@", 
+          RowBox[{"UCARImage3D", "[", "data", "]"}]}], ",", 
+         RowBox[{"ColorFunction", "\[Rule]", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"RGBColor", "[", 
+             RowBox[{"#", ",", "#", ",", "#", ",", "#"}], "]"}], "&"}], 
+           ")"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+         "\"\<combustion2\\\\jet_hr_\>\"", "<>", 
+         RowBox[{"IntegerString", "[", 
+          RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", "\"\<.png\>\""}], 
+        ",", "d", ",", " ", 
+        RowBox[{"ImageSize", "\[Rule]", "1000"}]}], "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", 
+     RowBox[{"Length", "[", "filelist2", "]"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.639831540580496*^9, 3.6398315455844183`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639833484856536*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639833484919054*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \[NoBreak]\\!\\(Clip[]\\)\[NoBreak] \
+should be an array of rank 3 or 4 with machine-sized numbers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \
+\\\"Image3D::imgarray\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639833485028434*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639833485137857*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \
+\[NoBreak]\\!\\(ImageAdjust[\\(\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \
+\\\"Real32\\\"\\)\\)]\\)\\)]\\)\[NoBreak] should be an array of rank 3 or 4 \
+with machine-sized numbers. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \\\"Image3D::imgarray\\\
+\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639833485247209*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398335834975224`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398335835600142`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Clip :: \
+argb\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398335836068892`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \[NoBreak]\\!\\(Clip[]\\)\[NoBreak] \
+should be an array of rank 3 or 4 with machine-sized numbers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \
+\\\"Image3D::imgarray\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639833583716267*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Image3D \
+:: imgarray\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during \
+this calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639833583763138*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398335838724957`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639833599341334*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398335994351015`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ImageAdjust :: imginv\\), \\\"MessageName\\\"]\
+\\)\[NoBreak] will be suppressed during this calculation. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639833599481947*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.63983359965382*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Import :: \
+nffil\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.63983359968505*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"filelist2", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"\"\<E:\\\\_time_varying_data\\\\combustion2\\\\jet_\>\"", "<>", 
+      RowBox[{"IntegerString", "[", 
+       RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", 
+      "\"\<\\\\jet_Y_OH_\>\"", "<>", 
+      RowBox[{"IntegerString", "[", 
+       RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", "\"\<.dat\>\""}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "120"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"data", ",", "d"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"data", "=", 
+       RowBox[{"Import", "[", 
+        RowBox[{
+         RowBox[{"filelist2", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<Binary\>\"", ",", "\"\<Real32\>\""}], "}"}], ",", 
+         RowBox[{"ByteOrdering", "\[Rule]", 
+          RowBox[{"-", "1"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"d", "=", 
+       RowBox[{"Image3D", "[", 
+        RowBox[{
+         RowBox[{"ImageAdjust", "@", 
+          RowBox[{"UCARImage3D", "[", "data", "]"}]}], ",", 
+         RowBox[{"ColorFunction", "\[Rule]", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"RGBColor", "[", 
+             RowBox[{"#", ",", "#", ",", "#", ",", "#"}], "]"}], "&"}], 
+           ")"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+         "\"\<combustion2\\\\jet_Y_OH_\>\"", "<>", 
+         RowBox[{"IntegerString", "[", 
+          RowBox[{"i", ",", "10", ",", "4"}], "]"}], "<>", "\"\<.png\>\""}], 
+        ",", "d", ",", " ", 
+        RowBox[{"ImageSize", "\[Rule]", "1000"}]}], "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", 
+     RowBox[{"Length", "[", "filelist2", "]"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.639831585472348*^9, 3.6398315886598577`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639834054420993*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398340544991155`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \[NoBreak]\\!\\(Clip[]\\)\[NoBreak] \
+should be an array of rank 3 or 4 with machine-sized numbers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \
+\\\"Image3D::imgarray\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398340546084895`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639834054717866*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \
+\[NoBreak]\\!\\(ImageAdjust[\\(\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \
+\\\"Real32\\\"\\)\\)]\\)\\)]\\)\[NoBreak] should be an array of rank 3 or 4 \
+with machine-sized numbers. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \\\"Image3D::imgarray\\\
+\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398340548272395`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639834153843205*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Clip", "::", "argb"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Clip\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; between \[NoBreak]\\!\\(1\\)\
+\[NoBreak] and \[NoBreak]\\!\\(3\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argb\\\", \
+ButtonNote -> \\\"Clip::argb\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398341539213305`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Clip :: \
+argb\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398341539682026`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Image3D", "::", "imgarray"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The specified argument \[NoBreak]\\!\\(Clip[]\\)\[NoBreak] \
+should be an array of rank 3 or 4 with machine-sized numbers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Image3D\\\", ButtonNote -> \
+\\\"Image3D::imgarray\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398341540619507`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Image3D \
+:: imgarray\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during \
+this calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398341541088676`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398341542182074`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398341722026415`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ImageAdjust", "::", "imginv"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Expecting an image or graphics instead of \
+\[NoBreak]\\!\\(Image3D[\\(\\(\\(\\(Clip[]\\)\\), \\\"Real32\\\"\\)\\)]\\)\
+\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/ImageAdjust\\\", ButtonNote -> \
+\\\"ImageAdjust::imginv\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398341723120155`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ImageAdjust :: imginv\\), \\\"MessageName\\\"]\
+\\)\[NoBreak] will be suppressed during this calculation. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639834172358892*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "nffil"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"File not found during \[NoBreak]\\!\\(Import\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/Import/nffil\\\", \
+ButtonNote -> \\\"Import::nffil\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.639834312812516*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Import :: \
+nffil\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.6398343128593693`*^9}]
+}, Open  ]]
 },
-WindowSize->{1602, 996},
-WindowMargins->{{-9, Automatic}, {Automatic, -9}},
+WindowSize->{1602, 978},
+WindowMargins->{{-9, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -422,12 +1656,110 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3305, 91, 92, "Input"],
+Cell[558, 20, 3692, 97, 112, "Input"],
+Cell[4253, 119, 941, 26, 72, "Input"],
 Cell[CellGroupData[{
-Cell[3888, 115, 838, 12, 31, "Input"],
-Cell[4729, 129, 11403, 226, 1132, "Output"]
+Cell[5219, 149, 140, 2, 31, "Input"],
+Cell[5362, 153, 157, 3, 31, "Output"]
 }, Open  ]],
-Cell[16147, 358, 1884, 48, 112, "Input"]
+Cell[5534, 159, 2308, 59, 252, "Input"],
+Cell[7845, 220, 2143, 49, 132, "Input"],
+Cell[9991, 271, 2491, 65, 272, "Input"],
+Cell[CellGroupData[{
+Cell[12507, 340, 2460, 58, 152, "Input"],
+Cell[14970, 400, 438, 9, 21, "Message"],
+Cell[15411, 411, 563, 11, 21, "Message"],
+Cell[15977, 424, 563, 11, 21, "Message"],
+Cell[16543, 437, 499, 10, 21, "Message"],
+Cell[17045, 449, 514, 11, 21, "Message"],
+Cell[17562, 462, 577, 12, 21, "Message"],
+Cell[18142, 476, 438, 9, 21, "Message"],
+Cell[18583, 487, 565, 11, 21, "Message"],
+Cell[19151, 500, 527, 11, 21, "Message"],
+Cell[19681, 513, 499, 10, 21, "Message"],
+Cell[20183, 525, 536, 11, 21, "Message"],
+Cell[20722, 538, 516, 11, 21, "Message"],
+Cell[21241, 551, 440, 9, 21, "Message"],
+Cell[21684, 562, 530, 11, 21, "Message"],
+Cell[22217, 575, 516, 11, 21, "Message"],
+Cell[22736, 588, 538, 11, 21, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23311, 604, 2158, 54, 152, "Input"],
+Cell[25472, 660, 440, 9, 21, "Message"],
+Cell[25915, 671, 565, 11, 21, "Message"],
+Cell[26483, 684, 563, 11, 21, "Message"],
+Cell[27049, 697, 499, 10, 21, "Message"],
+Cell[27551, 709, 516, 11, 21, "Message"],
+Cell[28070, 722, 575, 12, 21, "Message"],
+Cell[28648, 736, 438, 9, 21, "Message"],
+Cell[29089, 747, 565, 11, 21, "Message"],
+Cell[29657, 760, 529, 11, 21, "Message"],
+Cell[30189, 773, 499, 10, 21, "Message"],
+Cell[30691, 785, 534, 11, 21, "Message"],
+Cell[31228, 798, 514, 11, 21, "Message"],
+Cell[31745, 811, 437, 9, 21, "Message"],
+Cell[32185, 822, 532, 11, 21, "Message"],
+Cell[32720, 835, 513, 11, 21, "Message"],
+Cell[33236, 848, 538, 11, 21, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33811, 864, 2164, 54, 152, "Input"],
+Cell[35978, 920, 440, 9, 21, "Message"],
+Cell[36421, 931, 563, 11, 21, "Message"],
+Cell[36987, 944, 563, 11, 21, "Message"],
+Cell[37553, 957, 497, 10, 21, "Message"],
+Cell[38053, 969, 514, 11, 21, "Message"],
+Cell[38570, 982, 575, 12, 21, "Message"],
+Cell[39148, 996, 440, 9, 21, "Message"],
+Cell[39591, 1007, 565, 11, 21, "Message"],
+Cell[40159, 1020, 529, 11, 21, "Message"],
+Cell[40691, 1033, 499, 10, 21, "Message"],
+Cell[41193, 1045, 536, 11, 21, "Message"],
+Cell[41732, 1058, 514, 11, 21, "Message"],
+Cell[42249, 1071, 513, 11, 21, "Message"],
+Cell[42765, 1084, 536, 11, 21, "Message"],
+Cell[43304, 1097, 440, 9, 21, "Message"],
+Cell[43747, 1108, 532, 11, 21, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44316, 1124, 2154, 54, 152, "Input"],
+Cell[46473, 1180, 563, 11, 21, "Message"],
+Cell[47039, 1193, 563, 11, 21, "Message"],
+Cell[47605, 1206, 497, 10, 21, "Message"],
+Cell[48105, 1218, 514, 11, 21, "Message"],
+Cell[48622, 1231, 575, 12, 21, "Message"],
+Cell[49200, 1245, 440, 9, 21, "Message"],
+Cell[49643, 1256, 565, 11, 21, "Message"],
+Cell[50211, 1269, 529, 11, 21, "Message"],
+Cell[50743, 1282, 497, 10, 21, "Message"],
+Cell[51243, 1294, 534, 11, 21, "Message"],
+Cell[51780, 1307, 516, 11, 21, "Message"],
+Cell[52299, 1320, 438, 9, 21, "Message"],
+Cell[52740, 1331, 516, 11, 21, "Message"],
+Cell[53259, 1344, 536, 11, 21, "Message"],
+Cell[53798, 1357, 437, 9, 21, "Message"],
+Cell[54238, 1368, 529, 11, 21, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[54804, 1384, 2158, 54, 152, "Input"],
+Cell[56965, 1440, 563, 11, 21, "Message"],
+Cell[57531, 1453, 565, 11, 21, "Message"],
+Cell[58099, 1466, 499, 10, 21, "Message"],
+Cell[58601, 1478, 514, 11, 21, "Message"],
+Cell[59118, 1491, 577, 12, 21, "Message"],
+Cell[59698, 1505, 438, 9, 21, "Message"],
+Cell[60139, 1516, 565, 11, 21, "Message"],
+Cell[60707, 1529, 529, 11, 21, "Message"],
+Cell[61239, 1542, 499, 10, 21, "Message"],
+Cell[61741, 1554, 536, 11, 21, "Message"],
+Cell[62280, 1567, 516, 11, 21, "Message"],
+Cell[62799, 1580, 440, 9, 21, "Message"],
+Cell[63242, 1591, 516, 11, 21, "Message"],
+Cell[63761, 1604, 536, 11, 21, "Message"],
+Cell[64300, 1617, 438, 9, 21, "Message"],
+Cell[64741, 1628, 532, 11, 21, "Message"]
+}, Open  ]]
 }
 ]
 *)
