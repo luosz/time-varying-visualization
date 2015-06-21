@@ -1,0 +1,595 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19885,        586]
+NotebookOptionsPosition[     19288,        563]
+NotebookOutlinePosition[     19631,        578]
+CellTagsIndexPosition[     19588,        575]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"knee", "=", 
+   RowBox[{"ExampleData", "[", 
+    RowBox[{"{", 
+     RowBox[{"\"\<TestImage3D\>\"", ",", "\"\<MRknee\>\""}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y", ",", "z"}], "}"}], "=", 
+   RowBox[{"ImageDimensions", "[", "knee", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"step", "=", 
+   RowBox[{"1.", "/", 
+    RowBox[{"(", 
+     RowBox[{"z", "-", "1"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bins", "=", 
+   RowBox[{"Range", "[", 
+    RowBox[{"0", ",", 
+     RowBox[{"1", "+", "step"}], ",", "step"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.64345714746873*^9, 3.6434571581890807`*^9}, {
+   3.6434572069433217`*^9, 3.64345720727144*^9}, {3.643457636872918*^9, 
+   3.6434576372324133`*^9}, {3.6434576971946163`*^9, 3.643457710283458*^9}, 
+   3.6434577554885406`*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"img1", "=", 
+   RowBox[{
+    RowBox[{"Import", "[", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+      "\"\<depth\\\\t_color_1.jpg\>\""}], "]"}], "//", 
+    RowBox[{
+     RowBox[{"ImageResize", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{
+        RowBox[{"ImageDimensions", "[", "#", "]"}], "/", "2"}]}], "]"}], 
+     "&"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"depth1", "=", 
+    RowBox[{
+     RowBox[{"Import", "[", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+       "\"\<depth\\\\t_depth_1.jpg\>\""}], "]"}], "//", 
+     RowBox[{
+      RowBox[{"ImageResize", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{
+         RowBox[{"ImageDimensions", "[", "#", "]"}], "/", "2"}]}], "]"}], 
+      "&"}]}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"v1", "=", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"ImageApply", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", ">=", 
+              RowBox[{"bins", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], "&&", 
+             RowBox[{"#", "<", 
+              RowBox[{"bins", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", "+", "1"}], "]"}], "]"}]}]}], ",", 
+            RowBox[{"List", "@@", "#2"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "]"}], "&"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"depth1", ",", "img1"}], "}"}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{
+          RowBox[{"Length", "[", "bins", "]"}], "-", "1"}]}], "}"}]}], "]"}], 
+     "//", 
+     RowBox[{
+      RowBox[{"Image3D", "[", 
+       RowBox[{"Reverse", "[", "#", "]"}], "]"}], "&"}]}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"img2", "=", 
+   RowBox[{
+    RowBox[{"Import", "[", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+      "\"\<depth\\\\t_color_2.jpg\>\""}], "]"}], "//", 
+    RowBox[{
+     RowBox[{"ImageResize", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{
+        RowBox[{"ImageDimensions", "[", "#", "]"}], "/", "2"}]}], "]"}], 
+     "&"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"depth2", "=", 
+    RowBox[{
+     RowBox[{"Import", "[", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+       "\"\<depth\\\\t_depth_2.jpg\>\""}], "]"}], "//", 
+     RowBox[{
+      RowBox[{"ImageResize", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{
+         RowBox[{"ImageDimensions", "[", "#", "]"}], "/", "2"}]}], "]"}], 
+      "&"}]}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"v2", "=", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"ImageApply", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", ">=", 
+              RowBox[{"bins", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], "&&", 
+             RowBox[{"#", "<", 
+              RowBox[{"bins", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", "+", "1"}], "]"}], "]"}]}]}], ",", 
+            RowBox[{"List", "@@", "#2"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "]"}], "&"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"depth2", ",", "img2"}], "}"}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{
+          RowBox[{"Length", "[", "bins", "]"}], "-", "1"}]}], "}"}]}], "]"}], 
+     "//", 
+     RowBox[{
+      RowBox[{"Image3D", "[", 
+       RowBox[{"Reverse", "[", "#", "]"}], "]"}], "&"}]}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"img3", "=", 
+   RowBox[{
+    RowBox[{"Import", "[", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+      "\"\<depth\\\\t_color_3.jpg\>\""}], "]"}], "//", 
+    RowBox[{
+     RowBox[{"ImageResize", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{
+        RowBox[{"ImageDimensions", "[", "#", "]"}], "/", "2"}]}], "]"}], 
+     "&"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"depth3", "=", 
+    RowBox[{
+     RowBox[{"Import", "[", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+       "\"\<depth\\\\t_depth_3.jpg\>\""}], "]"}], "//", 
+     RowBox[{
+      RowBox[{"ImageResize", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{
+         RowBox[{"ImageDimensions", "[", "#", "]"}], "/", "2"}]}], "]"}], 
+      "&"}]}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"v3", "=", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"ImageApply", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", ">=", 
+              RowBox[{"bins", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], "&&", 
+             RowBox[{"#", "<", 
+              RowBox[{"bins", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", "+", "1"}], "]"}], "]"}]}]}], ",", 
+            RowBox[{"List", "@@", "#2"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "]"}], "&"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"depth3", ",", "img3"}], "}"}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{
+          RowBox[{"Length", "[", "bins", "]"}], "-", "1"}]}], "}"}]}], "]"}], 
+     "//", 
+     RowBox[{
+      RowBox[{"Image3D", "[", 
+       RowBox[{"Reverse", "[", "#", "]"}], "]"}], "&"}]}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"img4", "=", 
+     RowBox[{
+      RowBox[{"Import", "[", 
+       RowBox[{
+        RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+        "\"\<depth\\\\t_color_4.jpg\>\""}], "]"}], "//", 
+      RowBox[{
+       RowBox[{"ImageResize", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{
+          RowBox[{"ImageDimensions", "[", "#", "]"}], "/", "2"}]}], "]"}], 
+       "&"}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"depth4", "=", 
+     RowBox[{
+      RowBox[{"Import", "[", 
+       RowBox[{
+        RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+        "\"\<depth\\\\t_depth_4.jpg\>\""}], "]"}], "//", 
+      RowBox[{
+       RowBox[{"ImageResize", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{
+          RowBox[{"ImageDimensions", "[", "#", "]"}], "/", "2"}]}], "]"}], 
+       "&"}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"v4", "=", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"ImageApply", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#", ">=", 
+               RowBox[{"bins", "[", 
+                RowBox[{"[", "i", "]"}], "]"}]}], "&&", 
+              RowBox[{"#", "<", 
+               RowBox[{"bins", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", "+", "1"}], "]"}], "]"}]}]}], ",", 
+             RowBox[{"List", "@@", "#2"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "]"}], "&"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"depth4", ",", "img4"}], "}"}]}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{
+           RowBox[{"Length", "[", "bins", "]"}], "-", "1"}]}], "}"}]}], "]"}],
+       "//", 
+      RowBox[{
+       RowBox[{"Image3D", "[", 
+        RowBox[{"Reverse", "[", "#", "]"}], "]"}], "&"}]}]}]}], 
+   "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.643452062284622*^9, 3.643452083779075*^9}, {
+   3.643452746079314*^9, 3.643452747824318*^9}, 3.643452945242657*^9, 
+   3.643457431630319*^9, {3.6434576485580554`*^9, 3.643457657794628*^9}, {
+   3.643468705995896*^9, 3.6434687171730113`*^9}, {3.6434711267570233`*^9, 
+   3.643471156518121*^9}, {3.643471211346473*^9, 3.6434712160591335`*^9}, 
+   3.6434712584860735`*^9, {3.643471373304039*^9, 3.6434713771452107`*^9}, {
+   3.6434714808942184`*^9, 3.6434715093932295`*^9}, {3.6434722079392476`*^9, 
+   3.6434722270028615`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"hand1", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"ImageApply", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", ">=", 
+              RowBox[{"bins", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], "&&", 
+             RowBox[{"#", "<", 
+              RowBox[{"bins", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", "+", "1"}], "]"}], "]"}]}]}], ",", "#", ",", 
+            "0"}], "]"}], "&"}], ",", "depth1"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{
+          RowBox[{"Length", "[", "bins", "]"}], "-", "1"}]}], "}"}]}], "]"}], 
+     "//", 
+     RowBox[{
+      RowBox[{"Image3D", "[", 
+       RowBox[{"Reverse", "[", "#", "]"}], "]"}], "&"}]}], "//", 
+    "DeleteSmallComponents"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"hand2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"ImageApply", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", ">=", 
+              RowBox[{"bins", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], "&&", 
+             RowBox[{"#", "<", 
+              RowBox[{"bins", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", "+", "1"}], "]"}], "]"}]}]}], ",", "#", ",", 
+            "0"}], "]"}], "&"}], ",", "depth2"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{
+          RowBox[{"Length", "[", "bins", "]"}], "-", "1"}]}], "}"}]}], "]"}], 
+     "//", 
+     RowBox[{
+      RowBox[{"Image3D", "[", 
+       RowBox[{"Reverse", "[", "#", "]"}], "]"}], "&"}]}], "//", 
+    "DeleteSmallComponents"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"hand3", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"ImageApply", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", ">=", 
+              RowBox[{"bins", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], "&&", 
+             RowBox[{"#", "<", 
+              RowBox[{"bins", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", "+", "1"}], "]"}], "]"}]}]}], ",", "#", ",", 
+            "0"}], "]"}], "&"}], ",", "depth3"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{
+          RowBox[{"Length", "[", "bins", "]"}], "-", "1"}]}], "}"}]}], "]"}], 
+     "//", 
+     RowBox[{
+      RowBox[{"Image3D", "[", 
+       RowBox[{"Reverse", "[", "#", "]"}], "]"}], "&"}]}], "//", 
+    "DeleteSmallComponents"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"hand4", "=", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"ImageApply", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"#", ">=", 
+                RowBox[{"bins", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}]}], "&&", 
+               RowBox[{"#", "<", 
+                RowBox[{"bins", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"i", "+", "1"}], "]"}], "]"}]}]}], ",", "#", ",", 
+              "0"}], "]"}], "&"}], ",", "depth4"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{
+            RowBox[{"Length", "[", "bins", "]"}], "-", "1"}]}], "}"}]}], 
+        "]"}], "//", 
+       RowBox[{
+        RowBox[{"Image3D", "[", 
+         RowBox[{"Reverse", "[", "#", "]"}], "]"}], "&"}]}], "//", 
+      "DeleteSmallComponents"}]}], ";"}], "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.643456915100913*^9, 3.6434569680884485`*^9}, {
+   3.6434570427799263`*^9, 3.6434570442952323`*^9}, {3.643468720501178*^9, 
+   3.6434687237353272`*^9}, {3.6434711582399435`*^9, 3.64347116637545*^9}, {
+   3.643471219418441*^9, 3.643471224221305*^9}, 3.643471254261403*^9, {
+   3.6434714736001606`*^9, 3.643471477383667*^9}, {3.6434722404022846`*^9, 
+   3.643472241554038*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"ImageAdd", "[", 
+  RowBox[{"hand1", ",", "knee"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ImageAdd", "[", 
+  RowBox[{"hand2", ",", "knee"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ImageAdd", "[", 
+  RowBox[{"hand3", ",", "knee"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"ImageAdd", "[", 
+    RowBox[{"hand4", ",", "knee"}], "]"}], "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.643456817378296*^9, 3.6434568284938374`*^9}, {
+   3.643456987702255*^9, 3.643457000457038*^9}, {3.6434687266002226`*^9, 
+   3.643468729113514*^9}, 3.6434711787174225`*^9, {3.643471237615408*^9, 
+   3.6434712484022894`*^9}, {3.6434722546679697`*^9, 3.64347225588072*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"clipped", "=", 
+    RowBox[{
+     RowBox[{"Mean", "@", 
+      RowBox[{"Select", "[", 
+       RowBox[{
+        RowBox[{"Flatten", "@", 
+         RowBox[{"ImageData", "[", "hand1", "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"#", ">", "0"}], "&"}]}], "]"}]}], "//", 
+     RowBox[{
+      RowBox[{"Image3D", "[", 
+       RowBox[{"knee", ",", 
+        RowBox[{"ClipPlanes", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0", ",", 
+            RowBox[{"-", "1"}], ",", 
+            RowBox[{"#", "*", "z"}]}], "}"}], "}"}]}]}], "]"}], "&"}]}]}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"distance", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"MorphologicalComponents", "[", "knee", "]"}], "//", 
+        "Image3D"}], "//", "Binarize"}], "//", "DistanceTransform"}], "//", 
+     "ImageAdjust"}]}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.643468930616808*^9, 3.643468941902678*^9}, {
+   3.6434690085902348`*^9, 3.643469017549137*^9}, {3.6434705885944834`*^9, 
+   3.643470661020553*^9}, {3.6434707259594154`*^9, 3.6434707295028915`*^9}, {
+   3.6434709242388625`*^9, 3.643470925718237*^9}, {3.643470998192946*^9, 
+   3.643471036704717*^9}, 3.6434711819655247`*^9, 3.6434712350237885`*^9, 
+   3.6434722707468133`*^9, {3.643472806429941*^9, 3.6434728066481133`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"mean", "=", 
+  RowBox[{"Mean", "@", 
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"Flatten", "@", 
+      RowBox[{"ImageData", "[", "hand1", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"#", ">", "0"}], "&"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mask", "=", 
+   RowBox[{
+    RowBox[{"ImageApply", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"#", ">=", "mean"}], ",", "#", ",", "0"}], "]"}], "&"}], ",",
+       "distance"}], "]"}], "//", "Binarize"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ImageMultiply", "[", 
+  RowBox[{"knee", ",", "mask"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"mean", "=", 
+  RowBox[{"Mean", "@", 
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"Flatten", "@", 
+      RowBox[{"ImageData", "[", "hand2", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"#", ">", "0"}], "&"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mask", "=", 
+   RowBox[{
+    RowBox[{"ImageApply", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"#", ">=", "mean"}], ",", "#", ",", "0"}], "]"}], "&"}], ",",
+       "distance"}], "]"}], "//", "Binarize"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ImageMultiply", "[", 
+  RowBox[{"knee", ",", "mask"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"mean", "=", 
+  RowBox[{"Mean", "@", 
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"Flatten", "@", 
+      RowBox[{"ImageData", "[", "hand3", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"#", ">", "0"}], "&"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mask", "=", 
+   RowBox[{
+    RowBox[{"ImageApply", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"#", ">=", "mean"}], ",", "#", ",", "0"}], "]"}], "&"}], ",",
+       "distance"}], "]"}], "//", "Binarize"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ImageMultiply", "[", 
+  RowBox[{"knee", ",", "mask"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.643471728327113*^9, 3.643471767386885*^9}, {
+   3.643471814516676*^9, 3.6434718190215287`*^9}, {3.643471939475993*^9, 
+   3.643471940656365*^9}, {3.6434722832333965`*^9, 3.6434722834533405`*^9}, {
+   3.643472347883726*^9, 3.6434723759572678`*^9}, {3.643472409294211*^9, 
+   3.6434724153289924`*^9}, {3.643472549526864*^9, 3.643472573456147*^9}, {
+   3.6434727055215206`*^9, 3.643472706671695*^9}, 3.6434728130039277`*^9, 
+   3.643472867221674*^9, {3.6434731748383036`*^9, 3.6434731807270885`*^9}}],
+
+Cell[BoxData["0.3878921075768923`"], "Output",
+ CellChangeTimes->{
+  3.643472449004633*^9, 3.64347263686411*^9, 3.643472727124704*^9, {
+   3.643472856963256*^9, 3.6434728801254206`*^9}, 3.6434732121351824`*^9}],
+
+Cell[BoxData["0.7588755402434038`"], "Output",
+ CellChangeTimes->{
+  3.643472449004633*^9, 3.64347263686411*^9, 3.643472727124704*^9, {
+   3.643472856963256*^9, 3.6434728801254206`*^9}, 3.6434732207460065`*^9}],
+
+Cell[BoxData["0.9992519219918218`"], "Output",
+ CellChangeTimes->{
+  3.643472449004633*^9, 3.64347263686411*^9, 3.643472727124704*^9, {
+   3.643472856963256*^9, 3.6434728801254206`*^9}, 3.6434732294245815`*^9}]
+}, Open  ]]
+},
+WindowSize->{1602, 978},
+WindowMargins->{{-9, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 936, 26, 92, "Input"],
+Cell[1497, 48, 8216, 243, 252, "Input"],
+Cell[9716, 293, 4238, 124, 92, "Input"],
+Cell[13957, 419, 703, 14, 92, "Input"],
+Cell[14663, 435, 1408, 36, 52, "Input"],
+Cell[CellGroupData[{
+Cell[16096, 475, 2537, 70, 192, "Input"],
+Cell[18636, 547, 210, 3, 31, "Output"],
+Cell[18849, 552, 210, 3, 31, "Output"],
+Cell[19062, 557, 210, 3, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
