@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1521117,      27069]
-NotebookOptionsPosition[   1517750,      26968]
-NotebookOutlinePosition[   1518093,      26983]
-CellTagsIndexPosition[   1518050,      26980]
+NotebookDataLength[   1519206,      27044]
+NotebookOptionsPosition[   1515837,      26943]
+NotebookOutlinePosition[   1516180,      26958]
+CellTagsIndexPosition[   1516137,      26955]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -336,7 +336,8 @@ Nfo19qeNfo1+jX6Nfo1+jX4b+jW6AQAAAPC+/QmQWert
    3.6438894017269845`*^9, 3.6438901499676113`*^9, 3.6438901843607674`*^9, 
    3.6439085652720375`*^9, 3.6439185412762327`*^9, 3.643964024815528*^9, {
    3.643977786075306*^9, 3.6439778153586917`*^9}, 3.6439792086135845`*^9, {
-   3.643993740741028*^9, 3.6439937570407333`*^9}}],
+   3.643993740741028*^9, 3.6439937570407333`*^9}, 3.6439992523782997`*^9, {
+   3.6439993096259317`*^9, 3.6439993343878527`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -348,7 +349,8 @@ Cell[BoxData[
    3.6438894017269845`*^9, 3.6438901499676113`*^9, 3.6438901843607674`*^9, 
    3.6439085652720375`*^9, 3.6439185412762327`*^9, 3.643964024815528*^9, {
    3.643977786075306*^9, 3.6439778153586917`*^9}, 3.6439792086135845`*^9, {
-   3.643993740741028*^9, 3.6439937570407333`*^9}}]
+   3.643993740741028*^9, 3.6439937570407333`*^9}, 3.6439992523782997`*^9, {
+   3.6439993096259317`*^9, 3.6439993343878527`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -453,7 +455,8 @@ vx+SH5bYgTg=
    3.6438889114466057`*^9, 3.643889402055092*^9, 3.643890150034555*^9, 
    3.6438901844277716`*^9, 3.6439085653970146`*^9, 3.643918541345237*^9, 
    3.6439640251238575`*^9, {3.6439777861533804`*^9, 3.6439778154524403`*^9}, 
-   3.6439792087698383`*^9, {3.6439937413293867`*^9, 3.643993757259465*^9}}],
+   3.6439792087698383`*^9, {3.6439937413293867`*^9, 3.643993757259465*^9}, 
+   3.643999252440775*^9, {3.643999309704074*^9, 3.6439993344503145`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -597,7 +600,8 @@ Cell[BoxData[
    3.6438889114466057`*^9, 3.643889402055092*^9, 3.643890150034555*^9, 
    3.6438901844277716`*^9, 3.6439085653970146`*^9, 3.643918541345237*^9, 
    3.6439640251238575`*^9, {3.6439777861533804`*^9, 3.6439778154524403`*^9}, 
-   3.6439792087698383`*^9, {3.6439937413293867`*^9, 3.6439937572750893`*^9}}]
+   3.6439792087698383`*^9, {3.6439937413293867`*^9, 3.643993757259465*^9}, 
+   3.643999252440775*^9, {3.643999309704074*^9, 3.6439993344659395`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -720,7 +724,8 @@ pst1QgghhBBCCLGEznArfZ4rHh19Nz2Z/jBAiU4IIYQk5L82sl/R
    3.6438889130360627`*^9, 3.643889402086398*^9, 3.64389015007154*^9, 
    3.6438901844548197`*^9, 3.643908565412709*^9, 3.643918541388238*^9, 
    3.6439640267473607`*^9, {3.6439777862002745`*^9, 3.64397781549936*^9}, 
-   3.643979210332304*^9, {3.643993742860654*^9, 3.6439937573063016`*^9}}],
+   3.643979210332304*^9, {3.643993742860654*^9, 3.6439937573063016`*^9}, 
+   3.6439992524876523`*^9, {3.6439993097509365`*^9, 3.6439993344815664`*^9}}],
 
 Cell[BoxData[
  Graphics3DBox[Raster3DBox[CompressedData["
@@ -808,7 +813,8 @@ pst1QgghhBBCCLGEznArfZ4rHh19Nz2Z/jBAiU4IIYQk5L82sl/R
    3.6438889130360627`*^9, 3.643889402086398*^9, 3.64389015007154*^9, 
    3.6438901844548197`*^9, 3.643908565412709*^9, 3.643918541388238*^9, 
    3.6439640267473607`*^9, {3.6439777862002745`*^9, 3.64397781549936*^9}, 
-   3.643979210332304*^9, {3.643993742860654*^9, 3.643993757603198*^9}}]
+   3.643979210332304*^9, {3.643993742860654*^9, 3.6439937573063016`*^9}, 
+   3.6439992524876523`*^9, {3.6439993097509365`*^9, 3.643999334778405*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -905,7 +911,8 @@ Cell[BoxData["41"], "Output",
    3.643889402914264*^9, 3.6438901508156376`*^9, 3.643890185245818*^9, 
    3.6439085659439297`*^9, 3.6439185420753136`*^9, 3.643964027717207*^9, {
    3.6439777868721313`*^9, 3.643977816030566*^9}, 3.6439792111916637`*^9, {
-   3.6439937434387784`*^9, 3.6439937579469166`*^9}}],
+   3.6439937434387784`*^9, 3.6439937579469166`*^9}, 3.643999252875679*^9, {
+   3.6439993103133764`*^9, 3.6439993350597095`*^9}}],
 
 Cell[BoxData[
  Graphics3DBox[
@@ -948,7 +955,8 @@ KfVX+HGy90n6i8lVDazRKJUvvwOtyOUEVkqprdJoSnL6h1qrN+1xDXc=
    3.643889402914264*^9, 3.6438901508156376`*^9, 3.643890185245818*^9, 
    3.6439085659439297`*^9, 3.6439185420753136`*^9, 3.643964027717207*^9, {
    3.6439777868721313`*^9, 3.643977816030566*^9}, 3.6439792111916637`*^9, {
-   3.6439937434387784`*^9, 3.643993758212597*^9}}]
+   3.6439937434387784`*^9, 3.6439937579469166`*^9}, 3.643999252875679*^9, {
+   3.6439993103133764`*^9, 3.6439993353253365`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1046,7 +1054,8 @@ Cell[BoxData["41"], "Output",
    3.6438901511516113`*^9, 3.643890185566841*^9, 3.643908566209571*^9, 
    3.6439185424963417`*^9, 3.643964028017149*^9, {3.643977787197385*^9, 
    3.643977816311817*^9}, 3.6439792114729147`*^9, {3.6439937437200303`*^9, 
-   3.6439937582437897`*^9}}],
+   3.6439937582437897`*^9}, 3.6439992531560307`*^9, {3.6439993105790577`*^9, 
+   3.6439993353253365`*^9}}],
 
 Cell[BoxData[
  Graphics3DBox[
@@ -1090,7 +1099,8 @@ hO+7cE77UAP0F5MfDXc=
    3.6438901511516113`*^9, 3.643890185566841*^9, 3.643908566209571*^9, 
    3.6439185424963417`*^9, 3.643964028017149*^9, {3.643977787197385*^9, 
    3.643977816311817*^9}, 3.6439792114729147`*^9, {3.6439937437200303`*^9, 
-   3.6439937585094233`*^9}}]
+   3.6439937582437897`*^9}, 3.6439992531560307`*^9, {3.6439993105790577`*^9, 
+   3.6439993356065826`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1418,7 +1428,8 @@ C6VvV7P50oz4auGrha/eTL7RFiIiIqK79H+YSp6x
  CellChangeTimes->{
   3.6439122700448637`*^9, 3.643918542913349*^9, 3.6439193178738503`*^9, 
    3.643964028304661*^9, {3.6439777874786444`*^9, 3.6439778166211123`*^9}, 
-   3.6439792117564883`*^9, {3.643993744001266*^9, 3.6439937585250463`*^9}}]
+   3.6439792117564883`*^9, {3.643993744001266*^9, 3.6439937585250463`*^9}, 
+   3.6439992534529257`*^9, {3.6439993108915415`*^9, 3.643999335637781*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -6150,7 +6161,8 @@ xQdKbQ==
   PlotRange->{{0, 41}, {0, 41}, {0, 41}}]], "Output",
  CellChangeTimes->{
   3.6439778167305355`*^9, 3.6439792117877436`*^9, {3.6439937440481033`*^9, 
-   3.6439937585563545`*^9}}],
+   3.6439937585563545`*^9}, 3.64399925348416*^9, {3.6439993109071274`*^9, 
+   3.6439993356690335`*^9}}],
 
 Cell[BoxData[
  Graphics3DBox[
@@ -10894,7 +10906,8 @@ ShooMwNvVDNU33MyipbQMjl5ejIAcN4uyfat3w==
   PlotRange->{{0, 41}, {0, 41}, {0, 41}}]], "Output",
  CellChangeTimes->{
   3.6439778167305355`*^9, 3.6439792117877436`*^9, {3.6439937440481033`*^9, 
-   3.643993758587542*^9}}],
+   3.6439937585563545`*^9}, 3.64399925348416*^9, {3.6439993109071274`*^9, 
+   3.6439993358096743`*^9}}],
 
 Cell[BoxData[
  Graphics3DBox[
@@ -15581,7 +15594,8 @@ f4QgFjY=
   PlotRange->{{0, 41}, {0, 41}, {0, 41}}]], "Output",
  CellChangeTimes->{
   3.6439778167305355`*^9, 3.6439792117877436`*^9, {3.6439937440481033`*^9, 
-   3.6439937586187906`*^9}}],
+   3.6439937585563545`*^9}, 3.64399925348416*^9, {3.6439993109071274`*^9, 
+   3.643999335934696*^9}}],
 
 Cell[BoxData[
  Graphics3DBox[
@@ -20201,7 +20215,8 @@ eXojJW6/SBTUMJd+45BJ689k0/8HtBkJzg==
    0.8349297653921857}]], "Output",
  CellChangeTimes->{
   3.6439778167305355`*^9, 3.6439792117877436`*^9, {3.6439937440481033`*^9, 
-   3.643993758634417*^9}}]
+   3.6439937585563545`*^9}, 3.64399925348416*^9, {3.6439993109071274`*^9, 
+   3.643999336012781*^9}}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -20307,7 +20322,9 @@ Cell[BoxData[{
      RowBox[{"(", 
       RowBox[{"chartcolors", "//", "Darker"}], ")"}]}], ",", 
     RowBox[{"ChartLabels", "\[Rule]", 
-     RowBox[{"ToString", "/@", "visibility"}]}]}], 
+     RowBox[{"Placed", "[", 
+      RowBox[{
+       RowBox[{"ToString", "/@", "visibility"}], ",", "Above"}], "]"}]}]}], 
    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"dog", "=", "g1"}], ";"}], "\[IndentingNewLine]", 
@@ -20338,7 +20355,9 @@ Cell[BoxData[{
       "}"}]}], ",", 
     RowBox[{"ChartStyle", "\[Rule]", "chartcolors"}], ",", 
     RowBox[{"ChartLabels", "\[Rule]", 
-     RowBox[{"ToString", "/@", "saliency"}]}]}], 
+     RowBox[{"Placed", "[", 
+      RowBox[{
+       RowBox[{"ToString", "/@", "saliency"}], ",", "Above"}], "]"}]}]}], 
    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"viss", "=", 
@@ -20373,7 +20392,10 @@ Cell[BoxData[{
      RowBox[{"(", 
       RowBox[{"chartcolors", "//", "Lighter"}], ")"}]}], ",", 
     RowBox[{"ChartLabels", "\[Rule]", 
-     RowBox[{"ToString", "/@", "vs"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+     RowBox[{"Placed", "[", 
+      RowBox[{
+       RowBox[{"ToString", "/@", "vs"}], ",", "Above"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"viss2", "=", 
    RowBox[{"ImageMultiply", "[", 
@@ -20407,7 +20429,10 @@ Cell[BoxData[{
      RowBox[{"(", 
       RowBox[{"chartcolors", "//", "Lighter"}], ")"}]}], ",", 
     RowBox[{"ChartLabels", "\[Rule]", 
-     RowBox[{"ToString", "/@", "vs2"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+     RowBox[{"Placed", "[", 
+      RowBox[{
+       RowBox[{"ToString", "/@", "vs2"}], ",", "Above"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
  RowBox[{"mean", "=", 
   RowBox[{"Mean", "[", 
    RowBox[{"{", 
@@ -20422,7 +20447,10 @@ Cell[BoxData[{
       "}"}]}], ",", 
     RowBox[{"ChartStyle", "\[Rule]", "chartcolors"}], ",", 
     RowBox[{"ChartLabels", "\[Rule]", 
-     RowBox[{"ToString", "/@", "mean"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+     RowBox[{"Placed", "[", 
+      RowBox[{
+       RowBox[{"ToString", "/@", "mean"}], ",", "Above"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Export", "[", 
    RowBox[{
@@ -20458,7 +20486,9 @@ Cell[BoxData[{
      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
      "\"\<disk_visibility_saliency_weighted_chart_left.png\>\""}], ",", 
     "weighted"}], "]"}], ";"}]}], "Input",
- CellChangeTimes->{{3.643977692514688*^9, 3.6439777403372*^9}}],
+ CellChangeTimes->{{3.643977692514688*^9, 3.6439777403372*^9}, {
+  3.643998980954749*^9, 3.6439990362849293`*^9}, {3.643999189311352*^9, 
+  3.643999193452961*^9}, {3.6439992470692577`*^9, 3.6439992472567587`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -20466,7 +20496,10 @@ Cell[BoxData[
   "0.450036469730124`", ",", "0.3814733770970095`", ",", 
    "0.16849015317286653`"}], "}"}]], "Output",
  CellChangeTimes->{{3.6439777880254765`*^9, 3.6439778169180546`*^9}, 
-   3.643979212001748*^9, {3.6439937441575146`*^9, 3.6439937586813345`*^9}}],
+   3.643979212001748*^9, {3.6439937441575146`*^9, 3.6439937586813345`*^9}, 
+   3.6439989890923786`*^9, 3.643999038113084*^9, 3.643999193765477*^9, {
+   3.6439992478144894`*^9, 3.6439992536716194`*^9}, {3.643999311141541*^9, 
+   3.643999336059658*^9}}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{
@@ -20552,8 +20585,28 @@ Cell[BoxData[
             "0.16849015317286653"], 
            StyleBox["0.16849015317286653`", {}, StripOnInput -> False]], 
           Annotation[#, 
-           Style[0.16849015317286653`, {}], 
-           "Tooltip"]& ]}}}, {}, {}}, {}, {}, {
+           Style[0.16849015317286653`, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.450036\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {1., 0.450036469730124}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.381473\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {2., 0.3814733770970095}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.16849\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {3., 0.16849015317286653`}], 
+       ImageScaled[{0.5, 0}]]}, {
       StyleBox[{Antialiasing -> False, {
          Directive[
           Thickness[Tiny]], {
@@ -20569,39 +20622,10 @@ Cell[BoxData[
            LineBox[{{3.455788514129444, 0.}, 
              
              Offset[{-1.102182119232618*^-15, -6.}, {3.455788514129444, 
-              0.}]}], {{}, {}, {}, {
-             LineBox[{{1.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {1.455788514129444, 
-                0.}]}], 
-             LineBox[{{1.544211485870556, 0.}, 
-               Offset[{-7.347880794884119*^-16, -4.}, {1.544211485870556, 
-                0.}]}], 
-             LineBox[{{2.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.455788514129444, 
-                0.}]}], 
-             LineBox[{{2.544211485870556, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.544211485870556, 
-                0.}]}]}, {}}}, 
-          StyleBox[{
-            Directive[
-             Thickness[Tiny]], 
-            Directive[
-             Thickness[Tiny]], 
-            Directive[], {
-             InsetBox[
-              FormBox["\"0.450036\"", TraditionalForm], 
-              Offset[{0., -2.}, {1., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.381473\"", TraditionalForm], 
-              Offset[{0., -2.}, {2., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.16849\"", TraditionalForm], 
-              Offset[{0., -2.}, {3., 0.}], {0, 1}, Automatic, {1, 0}]}}, 
-           "GraphicsLabel", StripOnInput -> False]}, "GraphicsTicks", 
-         StripOnInput -> False]}, "GraphicsAxes", StripOnInput -> False]}}, {
+              0.}]}], {{}, {}, {}, {}, {}}}, 
+          StyleBox[{}, "GraphicsLabel", StripOnInput -> False]}, 
+         "GraphicsTicks", StripOnInput -> False]}, "GraphicsAxes", 
+       StripOnInput -> False]}}, {
     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {False, True}, AxesLabel -> {None, None}, 
      AxesOrigin -> {0.48597994530537825`, 0.}, 
@@ -20621,16 +20645,7 @@ Cell[BoxData[
              
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
-            Spacer[0]], TraditionalForm], {0.004, 0}}, {1., 
-          FormBox["\"0.450036\"", TraditionalForm], 0}, {2., 
-          FormBox[
-           InterpretationBox[
-            StyleBox[
-             
-             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
-              Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {2., 
-          FormBox["\"0.381473\"", TraditionalForm], 0}, {3., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -20638,7 +20653,13 @@ Cell[BoxData[
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {3., 
-          FormBox["\"0.16849\"", TraditionalForm], 0}}, {{1., 
+          FormBox[
+           InterpretationBox[
+            StyleBox[
+             
+             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
+              Baseline], "CacheGraphics" -> False], 
+            Spacer[0]], TraditionalForm], {0.004, 0}}}, {{1., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -20942,7 +20963,10 @@ Cell[BoxData[
        RowBox[{"Placed", "[", 
          RowBox[{#2, ",", "After"}], "]"}]}], "]"}]& )]], "Output",
  CellChangeTimes->{{3.6439777880254765`*^9, 3.6439778169180546`*^9}, 
-   3.643979212001748*^9, {3.6439937441575146`*^9, 3.643993758775041*^9}}],
+   3.643979212001748*^9, {3.6439937441575146`*^9, 3.6439937586813345`*^9}, 
+   3.6439989890923786`*^9, 3.643999038113084*^9, 3.643999193765477*^9, {
+   3.6439992478144894`*^9, 3.6439992536716194`*^9}, {3.643999311141541*^9, 
+   3.643999336137782*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -20950,7 +20974,10 @@ Cell[BoxData[
   "101.86545139905135`", ",", "98.21260075071741`", ",", 
    "74.23152569908312`"}], "}"}]], "Output",
  CellChangeTimes->{{3.6439777880254765`*^9, 3.6439778169180546`*^9}, 
-   3.643979212001748*^9, {3.6439937441575146`*^9, 3.643993758775041*^9}}],
+   3.643979212001748*^9, {3.6439937441575146`*^9, 3.6439937586813345`*^9}, 
+   3.6439989890923786`*^9, 3.643999038113084*^9, 3.643999193765477*^9, {
+   3.6439992478144894`*^9, 3.6439992536716194`*^9}, {3.643999311141541*^9, 
+   3.643999336153447*^9}}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{
@@ -21036,7 +21063,28 @@ Cell[BoxData[
             "74.23152569908312"], 
            StyleBox["74.23152569908312`", {}, StripOnInput -> False]], 
           Annotation[#, 
-           Style[74.23152569908312, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {}, {
+           Style[74.23152569908312, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {
+      InsetBox[
+       FormBox[
+        StyleBox["\"101.865\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {1., 101.86545139905135`}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"98.2126\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {2., 98.21260075071741}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"74.2315\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {3., 74.23152569908312}], 
+       ImageScaled[{0.5, 0}]]}, {
       StyleBox[{Antialiasing -> False, {
          Directive[
           Thickness[Tiny]], {
@@ -21052,40 +21100,10 @@ Cell[BoxData[
            LineBox[{{3.455788514129444, 0.}, 
              
              Offset[{-1.102182119232618*^-15, -6.}, {3.455788514129444, 
-              0.}]}], {{}, {}, {}, {
-             LineBox[{{1.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {1.455788514129444, 
-                0.}]}], 
-             LineBox[{{1.544211485870556, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {1.544211485870556, 
-                0.}]}], 
-             LineBox[{{2.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.455788514129444, 
-                0.}]}], 
-             LineBox[{{2.544211485870556, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.544211485870556, 
-                0.}]}]}, {}}}, 
-          StyleBox[{
-            Directive[
-             Thickness[Tiny]], 
-            Directive[
-             Thickness[Tiny]], 
-            Directive[], {
-             InsetBox[
-              FormBox["\"101.865\"", TraditionalForm], 
-              Offset[{0., -2.}, {1., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"98.2126\"", TraditionalForm], 
-              Offset[{0., -2.}, {2., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"74.2315\"", TraditionalForm], 
-              Offset[{0., -2.}, {3., 0.}], {0, 1}, Automatic, {1, 0}]}}, 
-           "GraphicsLabel", StripOnInput -> False]}, "GraphicsTicks", 
-         StripOnInput -> False]}, "GraphicsAxes", StripOnInput -> False]}}, {
+              0.}]}], {{}, {}, {}, {}, {}}}, 
+          StyleBox[{}, "GraphicsLabel", StripOnInput -> False]}, 
+         "GraphicsTicks", StripOnInput -> False]}, "GraphicsAxes", 
+       StripOnInput -> False]}}, {
     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {False, True}, AxesLabel -> {None, None}, 
      AxesOrigin -> {0.48597994530537825`, 0.}, 
@@ -21105,16 +21123,7 @@ Cell[BoxData[
              
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
-            Spacer[0]], TraditionalForm], {0.004, 0}}, {1., 
-          FormBox["\"101.865\"", TraditionalForm], 0}, {2., 
-          FormBox[
-           InterpretationBox[
-            StyleBox[
-             
-             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
-              Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {2., 
-          FormBox["\"98.2126\"", TraditionalForm], 0}, {3., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -21122,7 +21131,13 @@ Cell[BoxData[
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {3., 
-          FormBox["\"74.2315\"", TraditionalForm], 0}}, {{1., 
+          FormBox[
+           InterpretationBox[
+            StyleBox[
+             
+             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
+              Baseline], "CacheGraphics" -> False], 
+            Spacer[0]], TraditionalForm], {0.004, 0}}}, {{1., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -21426,7 +21441,10 @@ Cell[BoxData[
        RowBox[{"Placed", "[", 
          RowBox[{#2, ",", "After"}], "]"}]}], "]"}]& )]], "Output",
  CellChangeTimes->{{3.6439777880254765`*^9, 3.6439778169180546`*^9}, 
-   3.643979212001748*^9, {3.6439937441575146`*^9, 3.643993758868791*^9}}],
+   3.643979212001748*^9, {3.6439937441575146`*^9, 3.6439937586813345`*^9}, 
+   3.6439989890923786`*^9, 3.643999038113084*^9, 3.643999193765477*^9, {
+   3.6439992478144894`*^9, 3.6439992536716194`*^9}, {3.643999311141541*^9, 
+   3.6439993362315674`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -21434,7 +21452,10 @@ Cell[BoxData[
   "0.5345053037276641`", ",", "0.3089161644694447`", ",", 
    "0.15657853180289114`"}], "}"}]], "Output",
  CellChangeTimes->{{3.6439777880254765`*^9, 3.6439778169180546`*^9}, 
-   3.643979212001748*^9, {3.6439937441575146`*^9, 3.643993758868791*^9}}],
+   3.643979212001748*^9, {3.6439937441575146`*^9, 3.6439937586813345`*^9}, 
+   3.6439989890923786`*^9, 3.643999038113084*^9, 3.643999193765477*^9, {
+   3.6439992478144894`*^9, 3.6439992536716194`*^9}, {3.643999311141541*^9, 
+   3.6439993362471914`*^9}}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{
@@ -21519,8 +21540,28 @@ Cell[BoxData[
             "0.15657853180289114"], 
            StyleBox["0.15657853180289114`", {}, StripOnInput -> False]], 
           Annotation[#, 
-           Style[0.15657853180289114`, {}], 
-           "Tooltip"]& ]}}}, {}, {}}, {}, {}, {
+           Style[0.15657853180289114`, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.534505\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {1., 0.5345053037276641}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.308916\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {2., 0.3089161644694447}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.156579\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {3., 0.15657853180289114`}], 
+       ImageScaled[{0.5, 0}]]}, {
       StyleBox[{Antialiasing -> False, {
          Directive[
           Thickness[Tiny]], {
@@ -21536,39 +21577,10 @@ Cell[BoxData[
            LineBox[{{3.455788514129444, 0.}, 
              
              Offset[{-1.102182119232618*^-15, -6.}, {3.455788514129444, 
-              0.}]}], {{}, {}, {}, {
-             LineBox[{{1.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {1.455788514129444, 
-                0.}]}], 
-             LineBox[{{1.544211485870556, 0.}, 
-               Offset[{-7.347880794884119*^-16, -4.}, {1.544211485870556, 
-                0.}]}], 
-             LineBox[{{2.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.455788514129444, 
-                0.}]}], 
-             LineBox[{{2.544211485870556, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.544211485870556, 
-                0.}]}]}, {}}}, 
-          StyleBox[{
-            Directive[
-             Thickness[Tiny]], 
-            Directive[
-             Thickness[Tiny]], 
-            Directive[], {
-             InsetBox[
-              FormBox["\"0.534505\"", TraditionalForm], 
-              Offset[{0., -2.}, {1., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.308916\"", TraditionalForm], 
-              Offset[{0., -2.}, {2., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.156579\"", TraditionalForm], 
-              Offset[{0., -2.}, {3., 0.}], {0, 1}, Automatic, {1, 0}]}}, 
-           "GraphicsLabel", StripOnInput -> False]}, "GraphicsTicks", 
-         StripOnInput -> False]}, "GraphicsAxes", StripOnInput -> False]}}, {
+              0.}]}], {{}, {}, {}, {}, {}}}, 
+          StyleBox[{}, "GraphicsLabel", StripOnInput -> False]}, 
+         "GraphicsTicks", StripOnInput -> False]}, "GraphicsAxes", 
+       StripOnInput -> False]}}, {
     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {False, True}, AxesLabel -> {None, None}, 
      AxesOrigin -> {0.48597994530537825`, 0.}, 
@@ -21588,16 +21600,7 @@ Cell[BoxData[
              
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
-            Spacer[0]], TraditionalForm], {0.004, 0}}, {1., 
-          FormBox["\"0.534505\"", TraditionalForm], 0}, {2., 
-          FormBox[
-           InterpretationBox[
-            StyleBox[
-             
-             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
-              Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {2., 
-          FormBox["\"0.308916\"", TraditionalForm], 0}, {3., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -21605,7 +21608,13 @@ Cell[BoxData[
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {3., 
-          FormBox["\"0.156579\"", TraditionalForm], 0}}, {{1., 
+          FormBox[
+           InterpretationBox[
+            StyleBox[
+             
+             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
+              Baseline], "CacheGraphics" -> False], 
+            Spacer[0]], TraditionalForm], {0.004, 0}}}, {{1., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -21907,7 +21916,10 @@ Cell[BoxData[
        RowBox[{"Placed", "[", 
          RowBox[{#2, ",", "After"}], "]"}]}], "]"}]& )]], "Output",
  CellChangeTimes->{{3.6439777880254765`*^9, 3.6439778169180546`*^9}, 
-   3.643979212001748*^9, {3.6439937441575146`*^9, 3.643993758962581*^9}}],
+   3.643979212001748*^9, {3.6439937441575146`*^9, 3.6439937586813345`*^9}, 
+   3.6439989890923786`*^9, 3.643999038113084*^9, 3.643999193765477*^9, {
+   3.6439992478144894`*^9, 3.6439992536716194`*^9}, {3.643999311141541*^9, 
+   3.643999336309699*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -21915,7 +21927,10 @@ Cell[BoxData[
   "0.15500986876060857`", ",", "0.7551334058360413`", ",", 
    "0.08985672540335009`"}], "}"}]], "Output",
  CellChangeTimes->{{3.6439777880254765`*^9, 3.6439778169180546`*^9}, 
-   3.643979212001748*^9, {3.6439937441575146`*^9, 3.643993758962581*^9}}],
+   3.643979212001748*^9, {3.6439937441575146`*^9, 3.6439937586813345`*^9}, 
+   3.6439989890923786`*^9, 3.643999038113084*^9, 3.643999193765477*^9, {
+   3.6439992478144894`*^9, 3.6439992536716194`*^9}, {3.643999311141541*^9, 
+   3.6439993363253365`*^9}}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{
@@ -22000,7 +22015,28 @@ Cell[BoxData[
             "0.08985672540335009"], 
            StyleBox["0.08985672540335009`", {}, StripOnInput -> False]], 
           Annotation[#, 
-           Style[0.08985672540335009, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {}, {
+           Style[0.08985672540335009, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.15501\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {1., 0.15500986876060857`}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.755133\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {2., 0.7551334058360413}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.0898567\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {3., 0.08985672540335009}], 
+       ImageScaled[{0.5, 0}]]}, {
       StyleBox[{Antialiasing -> False, {
          Directive[
           Thickness[Tiny]], {
@@ -22016,39 +22052,10 @@ Cell[BoxData[
            LineBox[{{3.455788514129444, 0.}, 
              
              Offset[{-1.102182119232618*^-15, -6.}, {3.455788514129444, 
-              0.}]}], {{}, {}, {}, {
-             LineBox[{{1.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {1.455788514129444, 
-                0.}]}], 
-             LineBox[{{1.544211485870556, 0.}, 
-               Offset[{-7.347880794884119*^-16, -4.}, {1.544211485870556, 
-                0.}]}], 
-             LineBox[{{2.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.455788514129444, 
-                0.}]}], 
-             LineBox[{{2.544211485870556, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.544211485870556, 
-                0.}]}]}, {}}}, 
-          StyleBox[{
-            Directive[
-             Thickness[Tiny]], 
-            Directive[
-             Thickness[Tiny]], 
-            Directive[], {
-             InsetBox[
-              FormBox["\"0.15501\"", TraditionalForm], 
-              Offset[{0., -2.}, {1., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.755133\"", TraditionalForm], 
-              Offset[{0., -2.}, {2., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.0898567\"", TraditionalForm], 
-              Offset[{0., -2.}, {3., 0.}], {0, 1}, Automatic, {1, 0}]}}, 
-           "GraphicsLabel", StripOnInput -> False]}, "GraphicsTicks", 
-         StripOnInput -> False]}, "GraphicsAxes", StripOnInput -> False]}}, {
+              0.}]}], {{}, {}, {}, {}, {}}}, 
+          StyleBox[{}, "GraphicsLabel", StripOnInput -> False]}, 
+         "GraphicsTicks", StripOnInput -> False]}, "GraphicsAxes", 
+       StripOnInput -> False]}}, {
     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {False, True}, AxesLabel -> {None, None}, 
      AxesOrigin -> {0.48597994530537825`, 0.}, 
@@ -22068,16 +22075,7 @@ Cell[BoxData[
              
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
-            Spacer[0]], TraditionalForm], {0.004, 0}}, {1., 
-          FormBox["\"0.15501\"", TraditionalForm], 0}, {2., 
-          FormBox[
-           InterpretationBox[
-            StyleBox[
-             
-             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
-              Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {2., 
-          FormBox["\"0.755133\"", TraditionalForm], 0}, {3., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -22085,7 +22083,13 @@ Cell[BoxData[
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {3., 
-          FormBox["\"0.0898567\"", TraditionalForm], 0}}, {{1., 
+          FormBox[
+           InterpretationBox[
+            StyleBox[
+             
+             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
+              Baseline], "CacheGraphics" -> False], 
+            Spacer[0]], TraditionalForm], {0.004, 0}}}, {{1., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -22387,7 +22391,10 @@ Cell[BoxData[
        RowBox[{"Placed", "[", 
          RowBox[{#2, ",", "After"}], "]"}]}], "]"}]& )]], "Output",
  CellChangeTimes->{{3.6439777880254765`*^9, 3.6439778169180546`*^9}, 
-   3.643979212001748*^9, {3.6439937441575146`*^9, 3.6439937590563245`*^9}}],
+   3.643979212001748*^9, {3.6439937441575146`*^9, 3.6439937586813345`*^9}, 
+   3.6439989890923786`*^9, 3.643999038113084*^9, 3.643999193765477*^9, {
+   3.6439992478144894`*^9, 3.6439992536716194`*^9}, {3.643999311141541*^9, 
+   3.6439993363878374`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -22395,7 +22402,10 @@ Cell[BoxData[
   "0.3447575862441363`", ",", "0.532024785152743`", ",", 
    "0.1232176286031206`"}], "}"}]], "Output",
  CellChangeTimes->{{3.6439777880254765`*^9, 3.6439778169180546`*^9}, 
-   3.643979212001748*^9, {3.6439937441575146`*^9, 3.6439937590563245`*^9}}],
+   3.643979212001748*^9, {3.6439937441575146`*^9, 3.6439937586813345`*^9}, 
+   3.6439989890923786`*^9, 3.643999038113084*^9, 3.643999193765477*^9, {
+   3.6439992478144894`*^9, 3.6439992536716194`*^9}, {3.643999311141541*^9, 
+   3.6439993364034414`*^9}}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{
@@ -22481,7 +22491,28 @@ Cell[BoxData[
             "0.1232176286031206"], 
            StyleBox["0.1232176286031206`", {}, StripOnInput -> False]], 
           Annotation[#, 
-           Style[0.1232176286031206, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {}, {
+           Style[0.1232176286031206, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.344758\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {1., 0.3447575862441363}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.532025\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {2., 0.532024785152743}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.123218\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {3., 0.1232176286031206}], 
+       ImageScaled[{0.5, 0}]]}, {
       StyleBox[{Antialiasing -> False, {
          Directive[
           Thickness[Tiny]], {
@@ -22497,39 +22528,10 @@ Cell[BoxData[
            LineBox[{{3.455788514129444, 0.}, 
              
              Offset[{-1.102182119232618*^-15, -6.}, {3.455788514129444, 
-              0.}]}], {{}, {}, {}, {
-             LineBox[{{1.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {1.455788514129444, 
-                0.}]}], 
-             LineBox[{{1.544211485870556, 0.}, 
-               Offset[{-7.347880794884119*^-16, -4.}, {1.544211485870556, 
-                0.}]}], 
-             LineBox[{{2.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.455788514129444, 
-                0.}]}], 
-             LineBox[{{2.544211485870556, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.544211485870556, 
-                0.}]}]}, {}}}, 
-          StyleBox[{
-            Directive[
-             Thickness[Tiny]], 
-            Directive[
-             Thickness[Tiny]], 
-            Directive[], {
-             InsetBox[
-              FormBox["\"0.344758\"", TraditionalForm], 
-              Offset[{0., -2.}, {1., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.532025\"", TraditionalForm], 
-              Offset[{0., -2.}, {2., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.123218\"", TraditionalForm], 
-              Offset[{0., -2.}, {3., 0.}], {0, 1}, Automatic, {1, 0}]}}, 
-           "GraphicsLabel", StripOnInput -> False]}, "GraphicsTicks", 
-         StripOnInput -> False]}, "GraphicsAxes", StripOnInput -> False]}}, {
+              0.}]}], {{}, {}, {}, {}, {}}}, 
+          StyleBox[{}, "GraphicsLabel", StripOnInput -> False]}, 
+         "GraphicsTicks", StripOnInput -> False]}, "GraphicsAxes", 
+       StripOnInput -> False]}}, {
     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {False, True}, AxesLabel -> {None, None}, 
      AxesOrigin -> {0.48597994530537825`, 0.}, 
@@ -22549,16 +22551,7 @@ Cell[BoxData[
              
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
-            Spacer[0]], TraditionalForm], {0.004, 0}}, {1., 
-          FormBox["\"0.344758\"", TraditionalForm], 0}, {2., 
-          FormBox[
-           InterpretationBox[
-            StyleBox[
-             
-             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
-              Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {2., 
-          FormBox["\"0.532025\"", TraditionalForm], 0}, {3., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -22566,7 +22559,13 @@ Cell[BoxData[
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {3., 
-          FormBox["\"0.123218\"", TraditionalForm], 0}}, {{1., 
+          FormBox[
+           InterpretationBox[
+            StyleBox[
+             
+             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
+              Baseline], "CacheGraphics" -> False], 
+            Spacer[0]], TraditionalForm], {0.004, 0}}}, {{1., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -22870,7 +22869,10 @@ Cell[BoxData[
        RowBox[{"Placed", "[", 
          RowBox[{#2, ",", "After"}], "]"}]}], "]"}]& )]], "Output",
  CellChangeTimes->{{3.6439777880254765`*^9, 3.6439778169180546`*^9}, 
-   3.643979212001748*^9, {3.6439937441575146`*^9, 3.6439937591500993`*^9}}]
+   3.643979212001748*^9, {3.6439937441575146`*^9, 3.6439937586813345`*^9}, 
+   3.6439989890923786`*^9, 3.643999038113084*^9, 3.643999193765477*^9, {
+   3.6439992478144894`*^9, 3.6439992536716194`*^9}, {3.643999311141541*^9, 
+   3.6439993364659805`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -23069,7 +23071,8 @@ FMWo/B2fTlke
   ImageSizeRaw->41,
   PlotRange->{{0, 41}, {0, 41}, {0, 41}}]], "Output",
  CellChangeTimes->{
-  3.6439792139481673`*^9, {3.6439937455169086`*^9, 3.6439937598219757`*^9}}],
+  3.6439792139481673`*^9, {3.6439937455169086`*^9, 3.6439937598219757`*^9}, 
+   3.643999254656036*^9, {3.643999312169663*^9, 3.6439993371054897`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -23325,7 +23328,8 @@ iGqr778lpH+cuqZjf35+BQAAAAAAAADAh1n1wkm/97SHvHbUOdSA+vCI358d
     ImageSizeRaw->41,
     PlotRange->{{0, 41}, {0, 41}, {0, 41}}]}], "}"}]], "Output",
  CellChangeTimes->{
-  3.6439792139481673`*^9, {3.6439937455169086`*^9, 3.6439937598376017`*^9}}]
+  3.6439792139481673`*^9, {3.6439937455169086`*^9, 3.6439937598219757`*^9}, 
+   3.643999254656036*^9, {3.643999312169663*^9, 3.643999337121133*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -23362,7 +23366,9 @@ Cell[BoxData[{
      RowBox[{"(", 
       RowBox[{"chartcolors", "//", "Darker"}], ")"}]}], ",", 
     RowBox[{"ChartLabels", "\[Rule]", 
-     RowBox[{"ToString", "/@", "visibility"}]}]}], 
+     RowBox[{"Placed", "[", 
+      RowBox[{
+       RowBox[{"ToString", "/@", "visibility"}], ",", "Above"}], "]"}]}]}], 
    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"dog", "=", "g1"}], ";"}], "\[IndentingNewLine]", 
@@ -23393,7 +23399,9 @@ Cell[BoxData[{
       "}"}]}], ",", 
     RowBox[{"ChartStyle", "\[Rule]", "chartcolors"}], ",", 
     RowBox[{"ChartLabels", "\[Rule]", 
-     RowBox[{"ToString", "/@", "saliency"}]}]}], 
+     RowBox[{"Placed", "[", 
+      RowBox[{
+       RowBox[{"ToString", "/@", "saliency"}], ",", "Above"}], "]"}]}]}], 
    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"viss", "=", 
@@ -23428,7 +23436,10 @@ Cell[BoxData[{
      RowBox[{"(", 
       RowBox[{"chartcolors", "//", "Lighter"}], ")"}]}], ",", 
     RowBox[{"ChartLabels", "\[Rule]", 
-     RowBox[{"ToString", "/@", "vs"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+     RowBox[{"Placed", "[", 
+      RowBox[{
+       RowBox[{"ToString", "/@", "vs"}], ",", "Above"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"viss2", "=", 
    RowBox[{"ImageMultiply", "[", 
@@ -23462,7 +23473,10 @@ Cell[BoxData[{
      RowBox[{"(", 
       RowBox[{"chartcolors", "//", "Lighter"}], ")"}]}], ",", 
     RowBox[{"ChartLabels", "\[Rule]", 
-     RowBox[{"ToString", "/@", "vs2"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+     RowBox[{"Placed", "[", 
+      RowBox[{
+       RowBox[{"ToString", "/@", "vs2"}], ",", "Above"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
  RowBox[{"mean", "=", 
   RowBox[{"Mean", "[", 
    RowBox[{"{", 
@@ -23477,7 +23491,10 @@ Cell[BoxData[{
       "}"}]}], ",", 
     RowBox[{"ChartStyle", "\[Rule]", "chartcolors"}], ",", 
     RowBox[{"ChartLabels", "\[Rule]", 
-     RowBox[{"ToString", "/@", "mean"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+     RowBox[{"Placed", "[", 
+      RowBox[{
+       RowBox[{"ToString", "/@", "mean"}], ",", "Above"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Export", "[", 
    RowBox[{
@@ -23513,7 +23530,8 @@ Cell[BoxData[{
      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
      "\"\<disk_visibility_saliency_weighted_chart_right.png\>\""}], ",", 
     "weighted"}], "]"}], ";"}]}], "Input",
- CellChangeTimes->{{3.6439777519653916`*^9, 3.643977760517705*^9}}],
+ CellChangeTimes->{{3.6439777519653916`*^9, 3.643977760517705*^9}, 
+   3.6439993068743424`*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -23521,7 +23539,8 @@ Cell[BoxData[
   "0.16849015317286653`", ",", "0.3814733770970095`", ",", 
    "0.450036469730124`"}], "}"}]], "Output",
  CellChangeTimes->{{3.64397778925511*^9, 3.643977818886754*^9}, 
-   3.643979213979435*^9, {3.6439937458919144`*^9, 3.643993760400084*^9}}],
+   3.643979213979435*^9, {3.6439937458919144`*^9, 3.643993760400084*^9}, 
+   3.6439992550778728`*^9, {3.6439993125290794`*^9, 3.643999337480451*^9}}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{
@@ -23607,7 +23626,28 @@ Cell[BoxData[
             "0.450036469730124"], 
            StyleBox["0.450036469730124`", {}, StripOnInput -> False]], 
           Annotation[#, 
-           Style[0.450036469730124, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {}, {
+           Style[0.450036469730124, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.16849\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {1., 0.16849015317286653`}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.381473\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {2., 0.3814733770970095}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.450036\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {3., 0.450036469730124}], 
+       ImageScaled[{0.5, 0}]]}, {
       StyleBox[{Antialiasing -> False, {
          Directive[
           Thickness[Tiny]], {
@@ -23623,39 +23663,10 @@ Cell[BoxData[
            LineBox[{{3.455788514129444, 0.}, 
              
              Offset[{-1.102182119232618*^-15, -6.}, {3.455788514129444, 
-              0.}]}], {{}, {}, {}, {
-             LineBox[{{1.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {1.455788514129444, 
-                0.}]}], 
-             LineBox[{{1.544211485870556, 0.}, 
-               Offset[{-7.347880794884119*^-16, -4.}, {1.544211485870556, 
-                0.}]}], 
-             LineBox[{{2.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.455788514129444, 
-                0.}]}], 
-             LineBox[{{2.544211485870556, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.544211485870556, 
-                0.}]}]}, {}}}, 
-          StyleBox[{
-            Directive[
-             Thickness[Tiny]], 
-            Directive[
-             Thickness[Tiny]], 
-            Directive[], {
-             InsetBox[
-              FormBox["\"0.16849\"", TraditionalForm], 
-              Offset[{0., -2.}, {1., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.381473\"", TraditionalForm], 
-              Offset[{0., -2.}, {2., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.450036\"", TraditionalForm], 
-              Offset[{0., -2.}, {3., 0.}], {0, 1}, Automatic, {1, 0}]}}, 
-           "GraphicsLabel", StripOnInput -> False]}, "GraphicsTicks", 
-         StripOnInput -> False]}, "GraphicsAxes", StripOnInput -> False]}}, {
+              0.}]}], {{}, {}, {}, {}, {}}}, 
+          StyleBox[{}, "GraphicsLabel", StripOnInput -> False]}, 
+         "GraphicsTicks", StripOnInput -> False]}, "GraphicsAxes", 
+       StripOnInput -> False]}}, {
     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {False, True}, AxesLabel -> {None, None}, 
      AxesOrigin -> {0.48597994530537825`, 0.}, 
@@ -23675,16 +23686,7 @@ Cell[BoxData[
              
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
-            Spacer[0]], TraditionalForm], {0.004, 0}}, {1., 
-          FormBox["\"0.16849\"", TraditionalForm], 0}, {2., 
-          FormBox[
-           InterpretationBox[
-            StyleBox[
-             
-             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
-              Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {2., 
-          FormBox["\"0.381473\"", TraditionalForm], 0}, {3., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -23692,7 +23694,13 @@ Cell[BoxData[
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {3., 
-          FormBox["\"0.450036\"", TraditionalForm], 0}}, {{1., 
+          FormBox[
+           InterpretationBox[
+            StyleBox[
+             
+             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
+              Baseline], "CacheGraphics" -> False], 
+            Spacer[0]], TraditionalForm], {0.004, 0}}}, {{1., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -23996,7 +24004,8 @@ Cell[BoxData[
        RowBox[{"Placed", "[", 
          RowBox[{#2, ",", "After"}], "]"}]}], "]"}]& )]], "Output",
  CellChangeTimes->{{3.64397778925511*^9, 3.643977818886754*^9}, 
-   3.643979213979435*^9, {3.6439937458919144`*^9, 3.6439937604938526`*^9}}],
+   3.643979213979435*^9, {3.6439937458919144`*^9, 3.643993760400084*^9}, 
+   3.6439992550778728`*^9, {3.6439993125290794`*^9, 3.64399933755863*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -24004,7 +24013,8 @@ Cell[BoxData[
   "101.86545139905135`", ",", "98.21260075071741`", ",", 
    "74.23152569908312`"}], "}"}]], "Output",
  CellChangeTimes->{{3.64397778925511*^9, 3.643977818886754*^9}, 
-   3.643979213979435*^9, {3.6439937458919144`*^9, 3.6439937604938526`*^9}}],
+   3.643979213979435*^9, {3.6439937458919144`*^9, 3.643993760400084*^9}, 
+   3.6439992550778728`*^9, {3.6439993125290794`*^9, 3.6439993375741987`*^9}}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{
@@ -24090,7 +24100,28 @@ Cell[BoxData[
             "74.23152569908312"], 
            StyleBox["74.23152569908312`", {}, StripOnInput -> False]], 
           Annotation[#, 
-           Style[74.23152569908312, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {}, {
+           Style[74.23152569908312, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {
+      InsetBox[
+       FormBox[
+        StyleBox["\"101.865\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {1., 101.86545139905135`}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"98.2126\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {2., 98.21260075071741}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"74.2315\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {3., 74.23152569908312}], 
+       ImageScaled[{0.5, 0}]]}, {
       StyleBox[{Antialiasing -> False, {
          Directive[
           Thickness[Tiny]], {
@@ -24106,40 +24137,10 @@ Cell[BoxData[
            LineBox[{{3.455788514129444, 0.}, 
              
              Offset[{-1.102182119232618*^-15, -6.}, {3.455788514129444, 
-              0.}]}], {{}, {}, {}, {
-             LineBox[{{1.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {1.455788514129444, 
-                0.}]}], 
-             LineBox[{{1.544211485870556, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {1.544211485870556, 
-                0.}]}], 
-             LineBox[{{2.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.455788514129444, 
-                0.}]}], 
-             LineBox[{{2.544211485870556, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.544211485870556, 
-                0.}]}]}, {}}}, 
-          StyleBox[{
-            Directive[
-             Thickness[Tiny]], 
-            Directive[
-             Thickness[Tiny]], 
-            Directive[], {
-             InsetBox[
-              FormBox["\"101.865\"", TraditionalForm], 
-              Offset[{0., -2.}, {1., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"98.2126\"", TraditionalForm], 
-              Offset[{0., -2.}, {2., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"74.2315\"", TraditionalForm], 
-              Offset[{0., -2.}, {3., 0.}], {0, 1}, Automatic, {1, 0}]}}, 
-           "GraphicsLabel", StripOnInput -> False]}, "GraphicsTicks", 
-         StripOnInput -> False]}, "GraphicsAxes", StripOnInput -> False]}}, {
+              0.}]}], {{}, {}, {}, {}, {}}}, 
+          StyleBox[{}, "GraphicsLabel", StripOnInput -> False]}, 
+         "GraphicsTicks", StripOnInput -> False]}, "GraphicsAxes", 
+       StripOnInput -> False]}}, {
     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {False, True}, AxesLabel -> {None, None}, 
      AxesOrigin -> {0.48597994530537825`, 0.}, 
@@ -24159,16 +24160,7 @@ Cell[BoxData[
              
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
-            Spacer[0]], TraditionalForm], {0.004, 0}}, {1., 
-          FormBox["\"101.865\"", TraditionalForm], 0}, {2., 
-          FormBox[
-           InterpretationBox[
-            StyleBox[
-             
-             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
-              Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {2., 
-          FormBox["\"98.2126\"", TraditionalForm], 0}, {3., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -24176,7 +24168,13 @@ Cell[BoxData[
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {3., 
-          FormBox["\"74.2315\"", TraditionalForm], 0}}, {{1., 
+          FormBox[
+           InterpretationBox[
+            StyleBox[
+             
+             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
+              Baseline], "CacheGraphics" -> False], 
+            Spacer[0]], TraditionalForm], {0.004, 0}}}, {{1., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -24480,7 +24478,8 @@ Cell[BoxData[
        RowBox[{"Placed", "[", 
          RowBox[{#2, ",", "After"}], "]"}]}], "]"}]& )]], "Output",
  CellChangeTimes->{{3.64397778925511*^9, 3.643977818886754*^9}, 
-   3.643979213979435*^9, {3.6439937458919144`*^9, 3.6439937605719757`*^9}}],
+   3.643979213979435*^9, {3.6439937458919144`*^9, 3.643993760400084*^9}, 
+   3.6439992550778728`*^9, {3.6439993125290794`*^9, 3.6439993376679497`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -24488,7 +24487,8 @@ Cell[BoxData[
   "0.23526776214318748`", ",", "0.33824572132811304`", ",", 
    "0.42648651652869946`"}], "}"}]], "Output",
  CellChangeTimes->{{3.64397778925511*^9, 3.643977818886754*^9}, 
-   3.643979213979435*^9, {3.6439937458919144`*^9, 3.6439937605719757`*^9}}],
+   3.643979213979435*^9, {3.6439937458919144`*^9, 3.643993760400084*^9}, 
+   3.6439992550778728`*^9, {3.6439993125290794`*^9, 3.643999337683631*^9}}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{
@@ -24573,8 +24573,28 @@ Cell[BoxData[
             "0.42648651652869946"], 
            StyleBox["0.42648651652869946`", {}, StripOnInput -> False]], 
           Annotation[#, 
-           Style[0.42648651652869946`, {}], 
-           "Tooltip"]& ]}}}, {}, {}}, {}, {}, {
+           Style[0.42648651652869946`, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.235268\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {1., 0.23526776214318748`}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.338246\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {2., 0.33824572132811304`}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.426487\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {3., 0.42648651652869946`}], 
+       ImageScaled[{0.5, 0}]]}, {
       StyleBox[{Antialiasing -> False, {
          Directive[
           Thickness[Tiny]], {
@@ -24590,39 +24610,10 @@ Cell[BoxData[
            LineBox[{{3.455788514129444, 0.}, 
              
              Offset[{-1.102182119232618*^-15, -6.}, {3.455788514129444, 
-              0.}]}], {{}, {}, {}, {
-             LineBox[{{1.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {1.455788514129444, 
-                0.}]}], 
-             LineBox[{{1.544211485870556, 0.}, 
-               Offset[{-7.347880794884119*^-16, -4.}, {1.544211485870556, 
-                0.}]}], 
-             LineBox[{{2.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.455788514129444, 
-                0.}]}], 
-             LineBox[{{2.544211485870556, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.544211485870556, 
-                0.}]}]}, {}}}, 
-          StyleBox[{
-            Directive[
-             Thickness[Tiny]], 
-            Directive[
-             Thickness[Tiny]], 
-            Directive[], {
-             InsetBox[
-              FormBox["\"0.235268\"", TraditionalForm], 
-              Offset[{0., -2.}, {1., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.338246\"", TraditionalForm], 
-              Offset[{0., -2.}, {2., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.426487\"", TraditionalForm], 
-              Offset[{0., -2.}, {3., 0.}], {0, 1}, Automatic, {1, 0}]}}, 
-           "GraphicsLabel", StripOnInput -> False]}, "GraphicsTicks", 
-         StripOnInput -> False]}, "GraphicsAxes", StripOnInput -> False]}}, {
+              0.}]}], {{}, {}, {}, {}, {}}}, 
+          StyleBox[{}, "GraphicsLabel", StripOnInput -> False]}, 
+         "GraphicsTicks", StripOnInput -> False]}, "GraphicsAxes", 
+       StripOnInput -> False]}}, {
     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {False, True}, AxesLabel -> {None, None}, 
      AxesOrigin -> {0.48597994530537825`, 0.}, 
@@ -24642,16 +24633,7 @@ Cell[BoxData[
              
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
-            Spacer[0]], TraditionalForm], {0.004, 0}}, {1., 
-          FormBox["\"0.235268\"", TraditionalForm], 0}, {2., 
-          FormBox[
-           InterpretationBox[
-            StyleBox[
-             
-             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
-              Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {2., 
-          FormBox["\"0.338246\"", TraditionalForm], 0}, {3., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -24659,7 +24641,13 @@ Cell[BoxData[
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {3., 
-          FormBox["\"0.426487\"", TraditionalForm], 0}}, {{1., 
+          FormBox[
+           InterpretationBox[
+            StyleBox[
+             
+             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
+              Baseline], "CacheGraphics" -> False], 
+            Spacer[0]], TraditionalForm], {0.004, 0}}}, {{1., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -24961,7 +24949,8 @@ Cell[BoxData[
        RowBox[{"Placed", "[", 
          RowBox[{#2, ",", "After"}], "]"}]}], "]"}]& )]], "Output",
  CellChangeTimes->{{3.64397778925511*^9, 3.643977818886754*^9}, 
-   3.643979213979435*^9, {3.6439937458919144`*^9, 3.643993760650086*^9}}],
+   3.643979213979435*^9, {3.6439937458919144`*^9, 3.643993760400084*^9}, 
+   3.6439992550778728`*^9, {3.6439993125290794`*^9, 3.643999337761773*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -24969,7 +24958,8 @@ Cell[BoxData[
   "0.05986018933380558`", ",", "0.7254101923196615`", ",", 
    "0.21472961834653287`"}], "}"}]], "Output",
  CellChangeTimes->{{3.64397778925511*^9, 3.643977818886754*^9}, 
-   3.643979213979435*^9, {3.6439937458919144`*^9, 3.6439937606657324`*^9}}],
+   3.643979213979435*^9, {3.6439937458919144`*^9, 3.643993760400084*^9}, 
+   3.6439992550778728`*^9, {3.6439993125290794`*^9, 3.643999337777367*^9}}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{
@@ -25054,8 +25044,28 @@ Cell[BoxData[
             "0.21472961834653287"], 
            StyleBox["0.21472961834653287`", {}, StripOnInput -> False]], 
           Annotation[#, 
-           Style[0.21472961834653287`, {}], 
-           "Tooltip"]& ]}}}, {}, {}}, {}, {}, {
+           Style[0.21472961834653287`, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.0598602\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {1., 0.05986018933380558}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.72541\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {2., 0.7254101923196615}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.21473\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {3., 0.21472961834653287`}], 
+       ImageScaled[{0.5, 0}]]}, {
       StyleBox[{Antialiasing -> False, {
          Directive[
           Thickness[Tiny]], {
@@ -25071,39 +25081,10 @@ Cell[BoxData[
            LineBox[{{3.455788514129444, 0.}, 
              
              Offset[{-1.102182119232618*^-15, -6.}, {3.455788514129444, 
-              0.}]}], {{}, {}, {}, {
-             LineBox[{{1.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {1.455788514129444, 
-                0.}]}], 
-             LineBox[{{1.544211485870556, 0.}, 
-               Offset[{-7.347880794884119*^-16, -4.}, {1.544211485870556, 
-                0.}]}], 
-             LineBox[{{2.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.455788514129444, 
-                0.}]}], 
-             LineBox[{{2.544211485870556, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.544211485870556, 
-                0.}]}]}, {}}}, 
-          StyleBox[{
-            Directive[
-             Thickness[Tiny]], 
-            Directive[
-             Thickness[Tiny]], 
-            Directive[], {
-             InsetBox[
-              FormBox["\"0.0598602\"", TraditionalForm], 
-              Offset[{0., -2.}, {1., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.72541\"", TraditionalForm], 
-              Offset[{0., -2.}, {2., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.21473\"", TraditionalForm], 
-              Offset[{0., -2.}, {3., 0.}], {0, 1}, Automatic, {1, 0}]}}, 
-           "GraphicsLabel", StripOnInput -> False]}, "GraphicsTicks", 
-         StripOnInput -> False]}, "GraphicsAxes", StripOnInput -> False]}}, {
+              0.}]}], {{}, {}, {}, {}, {}}}, 
+          StyleBox[{}, "GraphicsLabel", StripOnInput -> False]}, 
+         "GraphicsTicks", StripOnInput -> False]}, "GraphicsAxes", 
+       StripOnInput -> False]}}, {
     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {False, True}, AxesLabel -> {None, None}, 
      AxesOrigin -> {0.48597994530537825`, 0.}, 
@@ -25123,16 +25104,7 @@ Cell[BoxData[
              
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
-            Spacer[0]], TraditionalForm], {0.004, 0}}, {1., 
-          FormBox["\"0.0598602\"", TraditionalForm], 0}, {2., 
-          FormBox[
-           InterpretationBox[
-            StyleBox[
-             
-             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
-              Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {2., 
-          FormBox["\"0.72541\"", TraditionalForm], 0}, {3., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -25140,7 +25112,13 @@ Cell[BoxData[
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {3., 
-          FormBox["\"0.21473\"", TraditionalForm], 0}}, {{1., 
+          FormBox[
+           InterpretationBox[
+            StyleBox[
+             
+             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
+              Baseline], "CacheGraphics" -> False], 
+            Spacer[0]], TraditionalForm], {0.004, 0}}}, {{1., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -25442,7 +25420,8 @@ Cell[BoxData[
        RowBox[{"Placed", "[", 
          RowBox[{#2, ",", "After"}], "]"}]}], "]"}]& )]], "Output",
  CellChangeTimes->{{3.64397778925511*^9, 3.643977818886754*^9}, 
-   3.643979213979435*^9, {3.6439937458919144`*^9, 3.6439937607438354`*^9}}],
+   3.643979213979435*^9, {3.6439937458919144`*^9, 3.643993760400084*^9}, 
+   3.6439992550778728`*^9, {3.6439993125290794`*^9, 3.643999337886742*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -25450,7 +25429,8 @@ Cell[BoxData[
   "0.14756397573849653`", ",", "0.5318279568238873`", ",", 
    "0.32060806743761616`"}], "}"}]], "Output",
  CellChangeTimes->{{3.64397778925511*^9, 3.643977818886754*^9}, 
-   3.643979213979435*^9, {3.6439937458919144`*^9, 3.643993760759457*^9}}],
+   3.643979213979435*^9, {3.6439937458919144`*^9, 3.643993760400084*^9}, 
+   3.6439992550778728`*^9, {3.6439993125290794`*^9, 3.643999337886742*^9}}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{
@@ -25536,8 +25516,28 @@ Cell[BoxData[
             "0.32060806743761616"], 
            StyleBox["0.32060806743761616`", {}, StripOnInput -> False]], 
           Annotation[#, 
-           Style[0.32060806743761616`, {}], 
-           "Tooltip"]& ]}}}, {}, {}}, {}, {}, {
+           Style[0.32060806743761616`, {}], "Tooltip"]& ]}}}, {}, {}}, {}, {
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.147564\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {1., 0.14756397573849653`}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.531828\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {2., 0.5318279568238873}], 
+       ImageScaled[{0.5, 0}]], 
+      InsetBox[
+       FormBox[
+        StyleBox["\"0.320608\"", {
+          Directive[], 
+          Directive[]}, StripOnInput -> False], TraditionalForm], 
+       Offset[{0, 4}, {3., 0.32060806743761616`}], 
+       ImageScaled[{0.5, 0}]]}, {
       StyleBox[{Antialiasing -> False, {
          Directive[
           Thickness[Tiny]], {
@@ -25553,39 +25553,10 @@ Cell[BoxData[
            LineBox[{{3.455788514129444, 0.}, 
              
              Offset[{-1.102182119232618*^-15, -6.}, {3.455788514129444, 
-              0.}]}], {{}, {}, {}, {
-             LineBox[{{1.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {1.455788514129444, 
-                0.}]}], 
-             LineBox[{{1.544211485870556, 0.}, 
-               Offset[{-7.347880794884119*^-16, -4.}, {1.544211485870556, 
-                0.}]}], 
-             LineBox[{{2.455788514129444, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.455788514129444, 
-                0.}]}], 
-             LineBox[{{2.544211485870556, 0.}, 
-               
-               Offset[{-7.347880794884119*^-16, -4.}, {2.544211485870556, 
-                0.}]}]}, {}}}, 
-          StyleBox[{
-            Directive[
-             Thickness[Tiny]], 
-            Directive[
-             Thickness[Tiny]], 
-            Directive[], {
-             InsetBox[
-              FormBox["\"0.147564\"", TraditionalForm], 
-              Offset[{0., -2.}, {1., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.531828\"", TraditionalForm], 
-              Offset[{0., -2.}, {2., 0.}], {0, 1}, Automatic, {1, 0}], 
-             InsetBox[
-              FormBox["\"0.320608\"", TraditionalForm], 
-              Offset[{0., -2.}, {3., 0.}], {0, 1}, Automatic, {1, 0}]}}, 
-           "GraphicsLabel", StripOnInput -> False]}, "GraphicsTicks", 
-         StripOnInput -> False]}, "GraphicsAxes", StripOnInput -> False]}}, {
+              0.}]}], {{}, {}, {}, {}, {}}}, 
+          StyleBox[{}, "GraphicsLabel", StripOnInput -> False]}, 
+         "GraphicsTicks", StripOnInput -> False]}, "GraphicsAxes", 
+       StripOnInput -> False]}}, {
     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {False, True}, AxesLabel -> {None, None}, 
      AxesOrigin -> {0.48597994530537825`, 0.}, 
@@ -25605,16 +25576,7 @@ Cell[BoxData[
              
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
-            Spacer[0]], TraditionalForm], {0.004, 0}}, {1., 
-          FormBox["\"0.147564\"", TraditionalForm], 0}, {2., 
-          FormBox[
-           InterpretationBox[
-            StyleBox[
-             
-             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
-              Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {2., 
-          FormBox["\"0.531828\"", TraditionalForm], 0}, {3., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -25622,7 +25584,13 @@ Cell[BoxData[
              GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
               Baseline], "CacheGraphics" -> False], 
             Spacer[0]], TraditionalForm], {0.004, 0}}, {3., 
-          FormBox["\"0.320608\"", TraditionalForm], 0}}, {{1., 
+          FormBox[
+           InterpretationBox[
+            StyleBox[
+             
+             GraphicsBox[{}, ImageSize -> {0, 0}, BaselinePosition -> 
+              Baseline], "CacheGraphics" -> False], 
+            Spacer[0]], TraditionalForm], {0.004, 0}}}, {{1., 
           FormBox[
            InterpretationBox[
             StyleBox[
@@ -25926,7 +25894,8 @@ Cell[BoxData[
        RowBox[{"Placed", "[", 
          RowBox[{#2, ",", "After"}], "]"}]}], "]"}]& )]], "Output",
  CellChangeTimes->{{3.64397778925511*^9, 3.643977818886754*^9}, 
-   3.643979213979435*^9, {3.6439937458919144`*^9, 3.643993760837598*^9}}]
+   3.643979213979435*^9, {3.6439937458919144`*^9, 3.643993760400084*^9}, 
+   3.6439992550778728`*^9, {3.6439993125290794`*^9, 3.6439993379805083`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -26125,7 +26094,8 @@ EAU=
   ImageSizeRaw->41,
   PlotRange->{{0, 41}, {0, 41}, {0, 41}}]], "Output",
  CellChangeTimes->{
-  3.6439792153075604`*^9, {3.643993746951664*^9, 3.643993761509476*^9}}],
+  3.6439792153075604`*^9, {3.643993746951664*^9, 3.643993761509476*^9}, 
+   3.6439992562028904`*^9, {3.643999313560283*^9, 3.643999338696183*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -26381,7 +26351,8 @@ b6K73fiRqEfMX/porD8AAAAA+GXz3wFEMr8=
     ImageSizeRaw->41,
     PlotRange->{{0, 41}, {0, 41}, {0, 41}}]}], "}"}]], "Output",
  CellChangeTimes->{
-  3.6439792153075604`*^9, {3.643993746951664*^9, 3.643993761509476*^9}}]
+  3.6439792153075604`*^9, {3.643993746951664*^9, 3.643993761509476*^9}, 
+   3.6439992562028904`*^9, {3.643999313560283*^9, 3.643999338696183*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -26649,7 +26620,8 @@ eK39AnXIfokq+yXqx/aLbPT8iNzt/UvE++c2PvXkmB0DPv8CAAAAsNz9G0oN
    3.643890164133977*^9, 3.6438901917409215`*^9}, 3.6439085712310495`*^9, 
    3.6439185447884445`*^9, {3.643920678307994*^9, 3.643920698251377*^9}, 
    3.643964030790357*^9, 3.643977790692665*^9, 3.6439778211671925`*^9, 
-   3.643979215526313*^9, {3.643993747498523*^9, 3.6439937620599003`*^9}}]
+   3.643979215526313*^9, {3.643993747498523*^9, 3.6439937620599003`*^9}, 
+   3.6439992567653947`*^9, {3.643999314110045*^9, 3.643999339242473*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -26917,7 +26889,8 @@ K78GbrjHc5hYcedO+SWee0F+3dWS++WXkF+kevx+I8aPzI3mL51YfwAAAADw
    3.6438901919529085`*^9}, 3.6439085714341526`*^9, 3.643918545010427*^9, {
    3.6439206797491026`*^9, 3.64392069973118*^9}, 3.64396403102037*^9, 
    3.643977790895795*^9, 3.6439778213703165`*^9, 3.6439792157294407`*^9, {
-   3.643993747701601*^9, 3.6439937622567697`*^9}}]
+   3.643993747701601*^9, 3.6439937622567697`*^9}, 3.6439992569842196`*^9, {
+   3.6439993143132114`*^9, 3.6439993394455805`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -26940,7 +26913,8 @@ Cell[BoxData[
   3.6439099581545362`*^9, {3.643910136810073*^9, 3.6439101404695797`*^9}, 
    3.6439184150335236`*^9, 3.6439185450574613`*^9, 3.6439640310343556`*^9, 
    3.643977790911379*^9, 3.643977821385924*^9, 3.643979215745063*^9, {
-   3.6439937477172766`*^9, 3.643993762272396*^9}}]
+   3.6439937477172766`*^9, 3.643993762272396*^9}, 3.6439992569842196`*^9, {
+   3.6439993143132114`*^9, 3.6439993394612036`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -26963,7 +26937,8 @@ Cell[BoxData[
   3.6439099696442146`*^9, {3.643910138075062*^9, 3.6439101421662445`*^9}, 
    3.6439185450664062`*^9, 3.643964031061315*^9, 3.6439777909269905`*^9, 
    3.6439778214015675`*^9, 3.643979215745063*^9, {3.6439937477172766`*^9, 
-   3.643993762272396*^9}}]
+   3.643993762272396*^9}, 3.6439992569998064`*^9, {3.6439993143288317`*^9, 
+   3.643999339476829*^9}}]
 }, Open  ]]
 },
 WindowSize->{1602, 978},
@@ -26984,92 +26959,92 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 5419, 127, 244, "Input"],
-Cell[6002, 151, 10236, 187, 104, "Output"],
-Cell[16241, 340, 618, 10, 31, "Output"]
+Cell[6002, 151, 10314, 188, 104, "Output"],
+Cell[16319, 341, 696, 11, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16896, 355, 1901, 48, 112, "Input"],
-Cell[18800, 405, 2449, 50, 147, "Output"],
-Cell[21252, 457, 5647, 142, 31, "Output"]
+Cell[17052, 357, 1901, 48, 112, "Input"],
+Cell[18956, 407, 2523, 51, 147, "Output"],
+Cell[21482, 460, 5719, 143, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[26936, 604, 1157, 30, 92, "Input"],
-Cell[28096, 636, 5118, 86, 375, "Output"],
-Cell[33217, 724, 5117, 86, 375, "Output"]
+Cell[27238, 608, 1157, 30, 92, "Input"],
+Cell[28398, 640, 5196, 87, 375, "Output"],
+Cell[33597, 729, 5195, 87, 375, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38371, 815, 2782, 82, 172, "Input"],
-Cell[41156, 899, 542, 8, 31, "Output"],
-Cell[41701, 909, 2153, 41, 406, "Output"]
+Cell[38829, 821, 2782, 82, 172, "Input"],
+Cell[41614, 905, 618, 9, 31, "Output"],
+Cell[42235, 916, 2231, 42, 406, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[43891, 955, 2767, 83, 172, "Input"],
-Cell[46661, 1040, 524, 8, 31, "Output"],
-Cell[47188, 1050, 2162, 42, 406, "Output"]
+Cell[44503, 963, 2767, 83, 172, "Input"],
+Cell[47273, 1048, 602, 9, 31, "Output"],
+Cell[47878, 1059, 2240, 43, 406, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[49387, 1097, 688, 18, 52, "Input"],
-Cell[50078, 1117, 16943, 303, 104, "Output"]
+Cell[50155, 1107, 688, 18, 52, "Input"],
+Cell[50846, 1127, 17019, 304, 104, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[67058, 1425, 2549, 79, 92, "Input"],
-Cell[69610, 1506, 282812, 4646, 406, "Output"],
-Cell[352425, 6154, 288698, 4742, 406, "Output"],
-Cell[641126, 10898, 285191, 4685, 406, "Output"],
-Cell[926320, 15585, 281111, 4618, 369, "Output"]
+Cell[67902, 1436, 2549, 79, 92, "Input"],
+Cell[70454, 1517, 282887, 4647, 406, "Output"],
+Cell[353344, 6166, 288775, 4743, 406, "Output"],
+Cell[642122, 10911, 285264, 4686, 406, "Output"],
+Cell[927389, 15599, 281186, 4619, 369, "Output"]
 }, Open  ]],
-Cell[1207446, 20206, 2425, 67, 112, "Input"],
+Cell[1208590, 20221, 2425, 67, 112, "Input"],
 Cell[CellGroupData[{
-Cell[1209896, 20277, 6455, 183, 392, "Input"],
-Cell[1216354, 20462, 290, 6, 31, "Output"],
-Cell[1216647, 20470, 21400, 474, 244, "Output"],
-Cell[1238050, 20946, 286, 6, 31, "Output"],
-Cell[1238339, 20954, 21373, 474, 242, "Output"],
-Cell[1259715, 21430, 289, 6, 31, "Output"],
-Cell[1260007, 21438, 21315, 471, 244, "Output"],
-Cell[1281325, 21911, 290, 6, 31, "Output"],
-Cell[1281618, 21919, 21310, 470, 244, "Output"],
-Cell[1302931, 22391, 289, 6, 31, "Output"],
-Cell[1303223, 22399, 21367, 473, 244, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[1324627, 22877, 853, 25, 72, "Input"],
-Cell[1325483, 22904, 9630, 167, 406, "Output"],
-Cell[1335116, 23073, 13894, 254, 104, "Output"]
+Cell[1211040, 20292, 6962, 198, 392, "Input"],
+Cell[1218005, 20492, 466, 9, 31, "Output"],
+Cell[1218474, 20503, 20866, 465, 241, "Output"],
+Cell[1239343, 20970, 464, 9, 31, "Output"],
+Cell[1239810, 20981, 20837, 465, 240, "Output"],
+Cell[1260650, 21448, 469, 9, 31, "Output"],
+Cell[1261122, 21459, 20781, 462, 241, "Output"],
+Cell[1281906, 21923, 470, 9, 31, "Output"],
+Cell[1282379, 21934, 20789, 462, 241, "Output"],
+Cell[1303171, 22398, 467, 9, 31, "Output"],
+Cell[1303641, 22409, 20842, 465, 241, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1349047, 23332, 6464, 183, 392, "Input"],
-Cell[1355514, 23517, 283, 6, 31, "Output"],
-Cell[1355800, 23525, 21385, 473, 244, "Output"],
-Cell[1377188, 24000, 283, 6, 31, "Output"],
-Cell[1377474, 24008, 21370, 474, 242, "Output"],
-Cell[1398847, 24484, 288, 6, 31, "Output"],
-Cell[1399138, 24492, 21326, 471, 244, "Output"],
-Cell[1420467, 24965, 287, 6, 31, "Output"],
-Cell[1420757, 24973, 21315, 471, 244, "Output"],
-Cell[1442075, 25446, 285, 6, 31, "Output"],
-Cell[1442363, 25454, 21393, 474, 244, "Output"]
+Cell[1324520, 22879, 853, 25, 72, "Input"],
+Cell[1325376, 22906, 9704, 168, 406, "Output"],
+Cell[1335083, 23076, 13966, 255, 104, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1463793, 25933, 905, 26, 72, "Input"],
-Cell[1464701, 25961, 9557, 166, 406, "Output"],
-Cell[1474261, 26129, 13878, 254, 104, "Output"]
+Cell[1349086, 23336, 6849, 197, 392, "Input"],
+Cell[1355938, 23535, 359, 7, 31, "Output"],
+Cell[1356300, 23544, 20758, 463, 241, "Output"],
+Cell[1377061, 24009, 359, 7, 31, "Output"],
+Cell[1377423, 24018, 20730, 463, 240, "Output"],
+Cell[1398156, 24483, 362, 7, 31, "Output"],
+Cell[1398521, 24492, 20694, 460, 241, "Output"],
+Cell[1419218, 24954, 361, 7, 31, "Output"],
+Cell[1419582, 24963, 20679, 460, 241, "Output"],
+Cell[1440264, 25425, 361, 7, 31, "Output"],
+Cell[1440628, 25434, 20761, 463, 241, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1488176, 26388, 473, 14, 31, "Input"],
-Cell[1488652, 26404, 13504, 247, 104, "Output"]
+Cell[1461426, 25902, 905, 26, 72, "Input"],
+Cell[1462334, 25930, 9631, 167, 406, "Output"],
+Cell[1471968, 26099, 13952, 255, 104, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1502193, 26656, 497, 14, 31, "Input"],
-Cell[1502693, 26672, 13549, 247, 104, "Output"]
+Cell[1485957, 26359, 473, 14, 31, "Input"],
+Cell[1486433, 26375, 13578, 248, 104, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1516279, 26924, 280, 7, 31, "Input"],
-Cell[1516562, 26933, 437, 9, 31, "Output"]
+Cell[1500048, 26628, 497, 14, 31, "Input"],
+Cell[1500548, 26644, 13627, 248, 104, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1517036, 26947, 280, 7, 31, "Input"],
-Cell[1517319, 26956, 415, 9, 31, "Output"]
+Cell[1514212, 26897, 280, 7, 31, "Input"],
+Cell[1514495, 26906, 515, 10, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1515047, 26921, 280, 7, 31, "Input"],
+Cell[1515330, 26930, 491, 10, 31, "Output"]
 }, Open  ]]
 }
 ]
