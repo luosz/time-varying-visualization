@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<!DOCTYPE Expression SYSTEM 'http://www.wolfram.com/XML/notebookml1.dtd'>
+<Expression xmlns:mathematica='http://www.wolfram.com/XML/'
+    xmlns='http://www.wolfram.com/XML/'>
+ <Function>
+  <Symbol>List</Symbol>
+  <String></String>
+  <String></String>
+  <Function>
+   <Symbol>List</Symbol>
+   <String>Disk 1</String>
+   <String>Disk 2</String>
+   <String>Disk 3</String>
+   <String>Disk 4</String>
+  </Function>
+  <Function>
+   <Symbol>List</Symbol>
+   <String>left</String>
+   <String>right</String>
+  </Function>
+  <Function>
+   <Symbol>List</Symbol>
+   <String>D:\document\work\time-varying-visualization\~images\disk_saliency_chart.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\disk_visibility_chart.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\disk_visibility_saliency_brightness_chart.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\disk_visibility_saliency_saturation_chart.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\disk_visibility_saliency_weighted_chart.png</String>
+  </Function>
+  <Function>
+   <Symbol>List</Symbol>
+   <String>D:\document\work\time-varying-visualization\~images\disk_saliency_chart.txt</String>
+   <String>D:\document\work\time-varying-visualization\~images\disk_visibility_chart.txt</String>
+   <String>D:\document\work\time-varying-visualization\~images\disk_visibility_saliency_brightness_chart.txt</String>
+   <String>D:\document\work\time-varying-visualization\~images\disk_visibility_saliency_saturation_chart.txt</String>
+   <String>D:\document\work\time-varying-visualization\~images\disk_visibility_saliency_weighted_chart.txt</String>
+  </Function>
+  <Function>
+   <Symbol>List</Symbol>
+   <String>D:\document\work\time-varying-visualization\~images\disk_visibility_saliency_feature.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\disk_visibility.raw</String>
+  </Function>
+  <String>D:\document\work\time-varying-visualization\~images\</String>
+ </Function>
+</Expression>

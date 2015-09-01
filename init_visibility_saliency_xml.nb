@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     19293,        480]
-NotebookOptionsPosition[     18730,        458]
-NotebookOutlinePosition[     19072,        473]
-CellTagsIndexPosition[     19029,        470]
+NotebookDataLength[     21202,        535]
+NotebookOptionsPosition[     20598,        512]
+NotebookOutlinePosition[     20939,        527]
+CellTagsIndexPosition[     20896,        524]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -125,53 +125,6 @@ tooth.tfi\>\"", ",", "\[IndentingNewLine]",
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"dataname", "=", "\"\<vismale\>\""}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"filenames", "=", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"othernames", "=", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", "onames"}]}],
-   ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"expressionML", "=", 
-   RowBox[{"{", 
-    RowBox[{
-    "\"\<D:\\\\document\\\\work\\\\artivvis-development-repository\\\\data\\\\\
-VisMale_spectrum_4_balance_1000_region_1000.tfi\>\"", ",", 
-     "\[IndentingNewLine]", "\"\<D:\\\\_data\\\\VisMale.tif\>\"", ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"{", 
-      RowBox[{
-      "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", "\"\<Feature 3\>\"",
-        ",", "\"\<Feature 4\>\""}], "}"}], ",", "\[IndentingNewLine]", 
-     "\"\<left\>\"", ",", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
-      "filenames"}], ",", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
-      "filenames"}], ",", "\[IndentingNewLine]", "othernames", ",", 
-     "\[IndentingNewLine]", "path"}], "\[IndentingNewLine]", "}"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Export", "[", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-     "\"\<vismale_visibility_saliency.xml\>\""}], ",", "expressionML"}], 
-   "]"}], ";"}]}], "Input",
- CellChangeTimes->{{3.650038711886649*^9, 3.65003872045522*^9}}],
-
-Cell[BoxData[{
- RowBox[{
   RowBox[{"dataname", "=", "\"\<tooth\>\""}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"filenames", "=", 
@@ -221,6 +174,53 @@ tooth_balance.tfi\>\"", ",", "\[IndentingNewLine]",
    3.650024701881273*^9}, 3.650025251741309*^9, {3.6500254044515038`*^9, 
    3.650025448391306*^9}, 3.65003818312611*^9, {3.6500387377101717`*^9, 
    3.650038751228307*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dataname", "=", "\"\<vismale\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"filenames", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"othernames", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", "onames"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"expressionML", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<D:\\\\document\\\\work\\\\artivvis-development-repository\\\\data\\\\\
+VisMale_spectrum_4_balance_1000_region_1000.tfi\>\"", ",", 
+     "\[IndentingNewLine]", "\"\<D:\\\\_data\\\\VisMale.tif\>\"", ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", "\"\<Feature 3\>\"",
+        ",", "\"\<Feature 4\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+     "\"\<left\>\"", ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
+      "filenames"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
+      "filenames"}], ",", "\[IndentingNewLine]", "othernames", ",", 
+     "\[IndentingNewLine]", "path"}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<vismale_visibility_saliency.xml\>\""}], ",", "expressionML"}], 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.650038711886649*^9, 3.65003872045522*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -322,6 +322,55 @@ engine.tfi\>\"", ",", "\[IndentingNewLine]",
   3.6500252929819603`*^9, 3.6500252991218567`*^9}, {3.6500254885447335`*^9, 
   3.6500255025855384`*^9}, {3.6500387888507805`*^9, 3.6500387952957115`*^9}}],
 
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dataname", "=", "\"\<disk\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"filenames", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"othernames", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", "onames"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"expressionML", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<\>\"", ",", "\[IndentingNewLine]", "\"\<\>\"", ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Disk 1\>\"", ",", "\"\<Disk 2\>\"", ",", "\"\<Disk 3\>\"", ",", 
+       "\"\<Disk 4\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<left\>\"", ",", "\"\<right\>\""}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
+      "filenames"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
+      "filenames"}], ",", "\[IndentingNewLine]", "othernames", ",", 
+     "\[IndentingNewLine]", "path"}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+     "\"\<_visibility_saliency.xml\>\""}], ",", "expressionML"}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.6500985295155053`*^9, 3.6500985721507006`*^9}, {
+  3.650098623974819*^9, 3.650098636357939*^9}, {3.6500990793211937`*^9, 
+  3.6500990846878033`*^9}}],
+
 Cell[CellGroupData[{
 
 Cell[BoxData[
@@ -330,7 +379,10 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"s", "=", 
      RowBox[{
-      RowBox[{"InputString", "[", "\"\<Enter xml file name\>\"", "]"}], "//", 
+      RowBox[{"InputString", "[", 
+       RowBox[{
+       "\"\<Enter xml file name\>\"", ",", 
+        "\"\<engine_visibility_saliency.xml\>\""}], "]"}], "//", 
       RowBox[{
        RowBox[{"StringReplace", "[", 
         RowBox[{"#", ",", 
@@ -338,17 +390,13 @@ Cell[BoxData[
     ";"}], "*)"}], "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
-    RowBox[{"s", "=", "\"\<\>\""}], ";"}], "\[IndentingNewLine]", 
+    RowBox[{"s", "=", "\"\<disk_visibility_saliency.xml\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"xml", "=", 
      RowBox[{"Import", "[", 
       RowBox[{
-       RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-       RowBox[{"If", "[", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"Length", "[", "s", "]"}], ">", "0"}], ",", "s", ",", 
-         "\"\<engine_visibility_saliency.xml\>\""}], "]"}]}], "]"}]}], ";"}], 
+       RowBox[{"NotebookDirectory", "[", "]"}], "<>", "s"}], "]"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
@@ -390,48 +438,51 @@ Cell[BoxData[
    3.650039755411337*^9, 3.6500397556613417`*^9}, {3.650042377522483*^9, 
    3.6500423832389755`*^9}, {3.6500449466805816`*^9, 3.65004498245288*^9}, {
    3.6500450760135813`*^9, 3.6500450788635054`*^9}, {3.6500451328366194`*^9, 
-   3.650045142804812*^9}, {3.6500453107328563`*^9, 3.6500453258110223`*^9}}],
+   3.650045142804812*^9}, {3.6500453107328563`*^9, 3.6500453258110223`*^9}, {
+   3.650098062608247*^9, 3.6500980967777996`*^9}, {3.6500991022691936`*^9, 
+   3.650099102894597*^9}}],
 
 Cell[BoxData[
  TagBox[GridBox[{
-    {"\<\"D:\\\\document\\\\work\\\\artivvis-development-repository\\\\data\\\
-\\engine.tfi\"\>"},
-    {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\CTengine.tiff\"\>"},
+    {"\<\"\"\>"},
+    {"\<\"\"\>"},
     {
      RowBox[{"{", 
-      RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
-       ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
-    {"\<\"front\"\>"},
+      RowBox[{"\<\"Disk 1\"\>", ",", "\<\"Disk 2\"\>", ",", "\<\"Disk 3\"\>", 
+       ",", "\<\"Disk 4\"\>"}], "}"}]},
     {
      RowBox[{"{", 
-      RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\engine_saliency_chart.png\"\>", 
-       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\engine_visibility_chart.png\"\>", 
-       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\engine_visibility_saliency_brightness_chart.png\"\>", 
-       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\engine_visibility_saliency_saturation_chart.png\"\>", 
-       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\engine_visibility_saliency_weighted_chart.png\"\>"}], "}"}]},
+      RowBox[{"\<\"left\"\>", ",", "\<\"right\"\>"}], "}"}]},
     {
      RowBox[{"{", 
       RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\engine_saliency_chart.txt\"\>", 
+images\\\\disk_saliency_chart.png\"\>", 
        ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\engine_visibility_chart.txt\"\>", 
+images\\\\disk_visibility_chart.png\"\>", 
        ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\engine_visibility_saliency_brightness_chart.txt\"\>", 
+images\\\\disk_visibility_saliency_brightness_chart.png\"\>", 
        ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\engine_visibility_saliency_saturation_chart.txt\"\>", 
+images\\\\disk_visibility_saliency_saturation_chart.png\"\>", 
        ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\engine_visibility_saliency_weighted_chart.txt\"\>"}], "}"}]},
+images\\\\disk_visibility_saliency_weighted_chart.png\"\>"}], "}"}]},
     {
      RowBox[{"{", 
       RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\engine_visibility_saliency_feature.png\"\>", 
+images\\\\disk_saliency_chart.txt\"\>", 
        ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\engine_visibility.raw\"\>"}], "}"}]},
+images\\\\disk_visibility_chart.txt\"\>", 
+       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\disk_visibility_saliency_brightness_chart.txt\"\>", 
+       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\disk_visibility_saliency_saturation_chart.txt\"\>", 
+       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\disk_visibility_saliency_weighted_chart.txt\"\>"}], "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\disk_visibility_saliency_feature.png\"\>", 
+       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\disk_visibility.raw\"\>"}], "}"}]},
     {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\\\
 \"\>"}
    },
@@ -448,16 +499,19 @@ images\\\\engine_visibility.raw\"\>"}], "}"}]},
    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
   "Column"]], "Output",
  CellChangeTimes->{{3.6500396867043324`*^9, 3.6500397010382366`*^9}, {
-  3.6500397419737*^9, 3.650039775282688*^9}, {3.650042371465991*^9, 
-  3.650042395651179*^9}, {3.6500443711499977`*^9, 3.6500443760327*^9}, {
-  3.6500447410130196`*^9, 3.650044784258623*^9}, {3.6500449509473476`*^9, 
-  3.650044982936763*^9}, {3.65004507199037*^9, 3.650045079339932*^9}, {
-  3.650045138629387*^9, 3.650045143674035*^9}, {3.650045320431927*^9, 
-  3.6500453281191797`*^9}}]
+   3.6500397419737*^9, 3.650039775282688*^9}, {3.650042371465991*^9, 
+   3.650042395651179*^9}, {3.6500443711499977`*^9, 3.6500443760327*^9}, {
+   3.6500447410130196`*^9, 3.650044784258623*^9}, {3.6500449509473476`*^9, 
+   3.650044982936763*^9}, {3.65004507199037*^9, 3.650045079339932*^9}, {
+   3.650045138629387*^9, 3.650045143674035*^9}, {3.650045320431927*^9, 
+   3.6500453281191797`*^9}, 3.650097727709149*^9, 3.650098043307847*^9, {
+   3.65009810234896*^9, 3.6500981141929803`*^9}, 3.650098145338987*^9, {
+   3.650098292146079*^9, 3.6500982925991373`*^9}, {3.650099088782655*^9, 
+   3.6500991085619106`*^9}}]
 }, Open  ]]
 },
-WindowSize->{1266, 797},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{1266, 788},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 7, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -474,13 +528,14 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 1724, 43, 172, "Input"],
 Cell[2285, 65, 2656, 58, 272, "Input"],
-Cell[4944, 125, 1697, 45, 272, "Input"],
-Cell[6644, 172, 2020, 50, 272, "Input"],
+Cell[4944, 125, 2020, 50, 272, "Input"],
+Cell[6967, 177, 1697, 45, 272, "Input"],
 Cell[8667, 224, 2002, 49, 272, "Input"],
 Cell[10672, 275, 1840, 47, 272, "Input"],
+Cell[12515, 324, 1714, 47, 272, "Input"],
 Cell[CellGroupData[{
-Cell[12537, 326, 3076, 66, 112, "Input"],
-Cell[15616, 394, 3098, 61, 342, "Output"]
+Cell[14254, 375, 3103, 67, 112, "Input"],
+Cell[17360, 444, 3222, 65, 340, "Output"]
 }, Open  ]]
 }
 ]
