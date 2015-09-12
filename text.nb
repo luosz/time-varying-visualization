@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     11596,        306]
-NotebookOptionsPosition[     11234,        290]
-NotebookOutlinePosition[     11576,        305]
-CellTagsIndexPosition[     11533,        302]
+NotebookDataLength[     23886,        595]
+NotebookOptionsPosition[     23250,        570]
+NotebookOutlinePosition[     23591,        585]
+CellTagsIndexPosition[     23548,        582]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -37,8 +37,9 @@ Cell[BoxData[{
          FrameTicks->None,
          ImageSize->
           Dynamic[{
-           Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-            Magnification]}],
+           Automatic, 
+            1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification])}],
          PlotRangePadding->None],
         "RGBColor[{0.01568627450980392, 1., 0.}]"],
        Appearance->None,
@@ -80,8 +81,9 @@ Cell[BoxData[{
          FrameTicks->None,
          ImageSize->
           Dynamic[{
-           Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-            Magnification]}],
+           Automatic, 
+            1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification])}],
          PlotRangePadding->None],
         "RGBColor[{0.28627450980392155, 1., 0.00392156862745098}]"],
        Appearance->None,
@@ -123,8 +125,9 @@ Cell[BoxData[{
          FrameTicks->None,
          ImageSize->
           Dynamic[{
-           Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
-            Magnification]}],
+           Automatic, 
+            1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+             Magnification])}],
          PlotRangePadding->None],
         "RGBColor[{0.21176470588235294, 0.996078431372549, 0.2}]"],
        Appearance->None,
@@ -280,16 +283,293 @@ to the rest of the image?\>\""}], ";"}], "\[IndentingNewLine]",
   RowBox[{"Export", "[", 
    RowBox[{
     RowBox[{"path", "<>", "\"\<_asterisk.png\>\""}], ",", "t2"}], "]"}], 
-  ";"}], "\[IndentingNewLine]"}], "Input",
+  ";"}]}], "Input",
  CellChangeTimes->{{3.6491709023898253`*^9, 3.649170953244194*^9}, {
    3.6491709904483147`*^9, 3.649170993309919*^9}, {3.649171649052863*^9, 
    3.6491716505656395`*^9}, 3.6491716853252516`*^9, {3.6491722239924717`*^9, 
    3.649172229832435*^9}, 3.649172262816622*^9, {3.6491723196578503`*^9, 
    3.6491723206980405`*^9}, {3.649172510186877*^9, 3.649172516636118*^9}, 
-   3.64917257371467*^9}]
+   3.64917257371467*^9, 3.6509578628550262`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "SetDirectory", "[", 
+   "\"\<D:\\\\document\\\\work\\\\asf\\\\documentation\\\\ASFdemos\\\\brm\\\\\
+saliency\\\\img\>\"", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ordered", "=", 
+  RowBox[{"Sort", "[", 
+   RowBox[{
+    RowBox[{"FileNames", "[", "]"}], ",", 
+    RowBox[{
+     RowBox[{"OrderedQ", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"ToExpression", "@", "#1"}], ",", 
+        RowBox[{"ToExpression", "@", "#2"}]}], "}"}], "]"}], "&"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\<D:\\\\document\\\\work\\\\asf\\\\documentation\\\\ASFdemos\\\\brm\\\\\
+saliency\\\\ordered.std\>\"", ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"\"\<img\\\\\>\"", "<>", "#"}], "&"}], "/@", "ordered"}], ",", 
+    "\"\<Text\>\""}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"random", "=", 
+     RowBox[{"Join", "[", 
+      RowBox[{
+       RowBox[{"ordered", "[", 
+        RowBox[{"[", 
+         RowBox[{";;", "11"}], "]"}], "]"}], ",", 
+       RowBox[{"RandomSample", "@", 
+        RowBox[{"ordered", "[", 
+         RowBox[{"[", 
+          RowBox[{"12", ";;"}], "]"}], "]"}]}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Export", "[", 
+     RowBox[{
+     "\"\<D:\\\\document\\\\work\\\\asf\\\\documentation\\\\ASFdemos\\\\brm\\\
+\\saliency\\\\random.std\>\"", ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"\"\<img\\\\\>\"", "<>", "#"}], "&"}], "/@", "random"}], ",", 
+      "\"\<Text\>\""}], "]"}], ";"}], "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.6509577971233444`*^9, 3.65095780835876*^9}, {
+   3.650957867447385*^9, 3.650957878425424*^9}, {3.6509579092647643`*^9, 
+   3.650957945096651*^9}, {3.650958233737866*^9, 3.6509583159463797`*^9}, 
+   3.650958364053014*^9, {3.6509589475758953`*^9, 3.6509589493195086`*^9}, {
+   3.6509590492633*^9, 3.6509590517655067`*^9}, {3.6509649523887243`*^9, 
+   3.6509649652113404`*^9}, {3.650966012647723*^9, 3.6509660211910295`*^9}, {
+   3.650966846827416*^9, 3.6509668484137826`*^9}, 3.6509701797771883`*^9, 
+   3.650970481745617*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"_0blue.jpg\"\>", ",", "\<\"_0green.jpg\"\>", 
+   ",", "\<\"_0red.jpg\"\>", ",", "\<\"_0yellow.jpg\"\>", 
+   ",", "\<\"_0.JPG\"\>", ",", "\<\"_CThead_medium_green.png\"\>", 
+   ",", "\<\"_lobster_medium_green.png\"\>", 
+   ",", "\<\"_CThead_strong_green.png\"\>", 
+   ",", "\<\"_lobster_strong_green.png\"\>", 
+   ",", "\<\"_CThead_weak_green.png\"\>", 
+   ",", "\<\"_lobster_week_green.png\"\>", ",", "\<\"engine_naive.png\"\>", 
+   ",", "\<\"foot_naive.png\"\>", ",", "\<\"CT-Knee_naive.png\"\>", 
+   ",", "\<\"MRbrain_naive.png\"\>", ",", "\<\"nucleon_naive.png\"\>", 
+   ",", "\<\"tooth_naive.png\"\>", ",", "\<\"vismale_naive.png\"\>", 
+   ",", "\<\"engine_medium_green.png\"\>", 
+   ",", "\<\"engine_naive_optimized_green_1000.png\"\>", 
+   ",", "\<\"engine_strong_green.png\"\>", 
+   ",", "\<\"engine_strong_green_only.png\"\>", 
+   ",", "\<\"engine_weak_red_optimized_red_1000.png\"\>", 
+   ",", "\<\"engine_weak_green.png\"\>", ",", "\<\"engine_weak_red.png\"\>", 
+   ",", "\<\"engine_week_green_only.png\"\>", 
+   ",", "\<\"foot_green_medium_optimized_green_1000.png\"\>", 
+   ",", "\<\"foot_green_medium.png\"\>", ",", "\<\"foot_green_strong.png\"\>",
+    ",", "\<\"foot_green_weak.png\"\>", 
+   ",", "\<\"foot_naive_optimized_green_1000.png\"\>", 
+   ",", "\<\"horse_embryo_45_days_naive_optimized_blue_1000.png\"\>", 
+   ",", "\<\"horse_embryo_45_days_naive2_optimized_blue_1000.png\"\>", 
+   ",", "\<\"horse_embryo_45_days_naive.png\"\>", 
+   ",", "\<\"horse_embryo_45_days_naive2.png\"\>", 
+   ",", "\<\"CT-Knee_medium_green_only.png\"\>", 
+   ",", "\<\"CT-Knee_naive_optimized_green_1000.png\"\>", 
+   ",", "\<\"CT-Knee_strong_green.png\"\>", 
+   ",", "\<\"CT-Knee_strong_green_only.png\"\>", 
+   ",", "\<\"CT-Knee_strong_red.png\"\>", 
+   ",", "\<\"CT-Knee_weak_green_optimized_green_1000.png\"\>", 
+   ",", "\<\"CT-Knee_weak_red_optimized_red_1000.png\"\>", 
+   ",", "\<\"CT-Knee_weak_green.png\"\>", 
+   ",", "\<\"CT-Knee_weak_green_only.png\"\>", 
+   ",", "\<\"CT-Knee_weak_red.png\"\>", 
+   ",", "\<\"MRbrain_naive_optimized_green_1000.png\"\>", 
+   ",", "\<\"MRbrain_strong_green.png\"\>", 
+   ",", "\<\"MRbrain_weak_green.png\"\>", 
+   ",", "\<\"nucleon_naive_optimized_green_1000.png\"\>", 
+   ",", "\<\"nucleon_naive_optimized_red_1000.png\"\>", 
+   ",", "\<\"nucleon_strong_red_coronal.png\"\>", 
+   ",", "\<\"nucleon_weak_red_coronal.png\"\>", 
+   ",", "\<\"tooth_naive_optimized_yellow_1000.png\"\>", 
+   ",", "\<\"tooth_strong_yellow.png\"\>", 
+   ",", "\<\"tooth_weak_yellow_optimized_yellow_1000.png\"\>", 
+   ",", "\<\"tooth_weak_yellow.png\"\>", 
+   ",", "\<\"vismale_naive_optimized_green_1000.png\"\>", 
+   ",", "\<\"vismale_naive_optimized_red_1000.png\"\>", 
+   ",", "\<\"vismale_strong_green.png\"\>", 
+   ",", "\<\"vismale_strong_green_only.png\"\>", 
+   ",", "\<\"vismale_strong_red_only.png\"\>", 
+   ",", "\<\"vismale_strong_red.png\"\>", 
+   ",", "\<\"vismale_weak_red_only.png\"\>", 
+   ",", "\<\"vismale_weak_red.png\"\>", ",", "\<\"vismale_week_green.png\"\>",
+    ",", "\<\"vismale_week_green_only.png\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.6509583062360964`*^9, 3.6509583351710835`*^9}, 
+   3.6509583665431166`*^9, {3.6509585750012655`*^9, 3.6509586189613123`*^9}, {
+   3.650958918445404*^9, 3.650958951130663*^9}, {3.6509590271662264`*^9, 
+   3.650959053833314*^9}, {3.6509591948441544`*^9, 3.6509592197490234`*^9}, {
+   3.650959260819899*^9, 3.6509592806339426`*^9}, {3.650959314864316*^9, 
+   3.650959337080338*^9}, 3.6509593698034925`*^9, 3.6509594032996078`*^9, 
+   3.6509649066602287`*^9, 3.650964971563243*^9, 3.650965914544188*^9, {
+   3.650966024333169*^9, 3.6509660456773343`*^9}, {3.6509665830088205`*^9, 
+   3.650966609142438*^9}, 3.650966669031065*^9, {3.6509668297234726`*^9, 
+   3.6509668506019287`*^9}, 3.650967080238744*^9, {3.6509674745110598`*^9, 
+   3.650967490028965*^9}, 3.6509697639212627`*^9, 3.6509701816236954`*^9, {
+   3.6509712450646067`*^9, 3.650971251414928*^9}, {3.650971386584962*^9, 
+   3.65097140745138*^9}, 3.650972205821582*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\<D:\\\\document\\\\work\\\\asf\\\\documentation\\\\ASFdemos\\\\brm\\\\\
+saliency\\\\dumb_trd.txt\>\"", ",", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\< 0 2 180 \>\"", "<>", 
+       RowBox[{"ToString", "[", "i", "]"}], "<>", "\"\< 900 2 2 3\>\""}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "66"}], "}"}]}], "]"}], ",", "\"\<Text\>\""}], "]"}],
+   ";"}]], "Input",
+ CellChangeTimes->{{3.6509673722193694`*^9, 3.6509673817726197`*^9}, {
+  3.650971383131092*^9, 3.650971383561118*^9}, {3.650992508281427*^9, 
+  3.650992508790924*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"trd", "=", 
+   RowBox[{
+    RowBox[{"Import", "[", 
+     RowBox[{
+     "\"\<D:\\\\document\\\\work\\\\asf\\\\documentation\\\\ASFdemos\\\\brm\\\
+\\saliency\\\\ordered.trd\>\"", ",", "\"\<Text\>\""}], "]"}], "//", 
+    RowBox[{
+     RowBox[{"StringSplit", "[", 
+      RowBox[{"#", ",", "\"\<\\n\>\""}], "]"}], "&"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"random", "=", 
+   RowBox[{"RandomSample", "@", 
+    RowBox[{"trd", "[", 
+     RowBox[{"[", 
+      RowBox[{"12", ";;"}], "]"}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"renumbered", "=", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ToString", "[", 
+       RowBox[{"i", "+", "11"}], "]"}], "<>", 
+      RowBox[{"StringDrop", "[", 
+       RowBox[{
+        RowBox[{"random", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], ",", "2"}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"Length", "[", "random", "]"}]}], "}"}]}], "]"}], "//", 
+   RowBox[{
+    RowBox[{"Join", "[", 
+     RowBox[{
+      RowBox[{"trd", "[", 
+       RowBox[{"[", 
+        RowBox[{";;", "11"}], "]"}], "]"}], ",", "#"}], "]"}], 
+    "&"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\<D:\\\\document\\\\work\\\\asf\\\\documentation\\\\ASFdemos\\\\brm\\\\\
+saliency\\\\random.trd.txt\>\"", ",", "renumbered", ",", "\"\<Text\>\""}], 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6509712197872686`*^9, 3.6509712235318995`*^9}, {
+  3.650997433961407*^9, 3.650997434609646*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"73 PictureNumber\"\>", ",", "\<\"2 0 2 90 2 90 2 2 3\"\>", 
+   ",", "\<\"3 0 3 90 3 90 2 2 3\"\>", ",", "\<\"4 0 4 90 4 90 2 2 3\"\>", 
+   ",", "\<\"5 0 5 90 5 90 2 2 3\"\>", ",", "\<\"6 0 2 180 6 600 2 2 3\"\>", 
+   ",", "\<\"7 0 2 180 7 600 2 2 3\"\>", ",", "\<\"8 0 2 180 8 600 2 2 3\"\>",
+    ",", "\<\"9 0 2 180 9 600 2 2 3\"\>", 
+   ",", "\<\"10 0 2 180 10 600 2 2 3\"\>", 
+   ",", "\<\"11 0 2 180 11 600 2 2 3\"\>", 
+   ",", "\<\"12 0 2 180 19 600 2 2 3\"\>", 
+   ",", "\<\"13 0 2 180 15 600 2 2 3\"\>", 
+   ",", "\<\"14 0 2 180 31 600 2 2 3\"\>", 
+   ",", "\<\"15 0 2 180 41 600 2 2 3\"\>", 
+   ",", "\<\"16 0 1 180 35 600 2 2 3\"\>", 
+   ",", "\<\"17 0 2 180 43 600 2 2 3\"\>", 
+   ",", "\<\"18 0 4 180 55 600 2 2 3\"\>", 
+   ",", "\<\"19 0 2 180 49 600 2 2 3\"\>", 
+   ",", "\<\"20 0 2 180 59 600 2 2 3\"\>", 
+   ",", "\<\"21 0 4 180 53 600 2 2 3\"\>", 
+   ",", "\<\"22 0 2 180 21 600 2 2 3\"\>", 
+   ",", "\<\"23 0 3 180 64 600 2 2 3\"\>", 
+   ",", "\<\"24 0 2 180 65 600 2 2 3\"\>", 
+   ",", "\<\"25 0 3 180 25 600 2 2 3\"\>", 
+   ",", "\<\"26 0 4 180 53 600 2 2 3\"\>", 
+   ",", "\<\"27 0 1 180 35 600 2 2 3\"\>", 
+   ",", "\<\"28 0 2 180 44 600 2 2 3\"\>", 
+   ",", "\<\"29 0 1 180 32 600 2 2 3\"\>", 
+   ",", "\<\"30 0 3 180 18 600 2 2 3\"\>", 
+   ",", "\<\"31 0 1 180 32 600 2 2 3\"\>", 
+   ",", "\<\"32 0 3 180 51 600 2 2 3\"\>", 
+   ",", "\<\"33 0 2 180 48 600 2 2 3\"\>", 
+   ",", "\<\"34 0 4 180 56 600 2 2 3\"\>", 
+   ",", "\<\"35 0 3 180 63 600 2 2 3\"\>", 
+   ",", "\<\"36 0 2 180 12 600 2 2 3\"\>", 
+   ",", "\<\"37 0 3 180 40 600 2 2 3\"\>", 
+   ",", "\<\"38 0 2 180 14 600 2 2 3\"\>", 
+   ",", "\<\"39 0 2 180 13 600 2 2 3\"\>", 
+   ",", "\<\"40 0 2 180 37 600 2 2 3\"\>", 
+   ",", "\<\"41 0 2 180 66 600 2 2 3\"\>", 
+   ",", "\<\"42 0 1 180 33 600 2 2 3\"\>", 
+   ",", "\<\"43 0 2 180 26 600 2 2 3\"\>", 
+   ",", "\<\"44 0 2 180 39 600 2 2 3\"\>", 
+   ",", "\<\"45 0 2 180 57 600 2 2 3\"\>", 
+   ",", "\<\"46 0 2 180 38 600 2 2 3\"\>", 
+   ",", "\<\"47 0 2 180 22 600 2 2 3\"\>", 
+   ",", "\<\"48 0 3 180 58 600 2 2 3\"\>", 
+   ",", "\<\"49 0 1 180 34 600 2 2 3\"\>", 
+   ",", "\<\"50 0 3 180 52 600 2 2 3\"\>", 
+   ",", "\<\"51 0 2 180 36 600 2 2 3\"\>", 
+   ",", "\<\"52 0 3 180 42 600 2 2 3\"\>", 
+   ",", "\<\"53 0 2 180 18 600 2 2 3\"\>", 
+   ",", "\<\"54 0 2 180 20 600 2 2 3\"\>", 
+   ",", "\<\"55 0 3 180 61 600 2 2 3\"\>", 
+   ",", "\<\"56 0 3 180 50 600 2 2 3\"\>", 
+   ",", "\<\"57 0 2 180 29 600 2 2 3\"\>", 
+   ",", "\<\"58 0 2 180 27 600 2 2 3\"\>", 
+   ",", "\<\"59 0 4 180 17 600 2 2 3\"\>", 
+   ",", "\<\"60 0 2 180 49 600 2 2 3\"\>", 
+   ",", "\<\"61 0 4 180 17 600 2 2 3\"\>", 
+   ",", "\<\"62 0 2 180 30 600 2 2 3\"\>", 
+   ",", "\<\"63 0 3 180 23 600 2 2 3\"\>", 
+   ",", "\<\"64 0 4 180 54 600 2 2 3\"\>", 
+   ",", "\<\"65 0 3 180 45 600 2 2 3\"\>", 
+   ",", "\<\"66 0 2 180 47 600 2 2 3\"\>", 
+   ",", "\<\"67 0 2 180 16 600 2 2 3\"\>", 
+   ",", "\<\"68 0 3 180 16 600 2 2 3\"\>", 
+   ",", "\<\"69 0 2 180 24 600 2 2 3\"\>", 
+   ",", "\<\"70 0 2 180 60 600 2 2 3\"\>", 
+   ",", "\<\"71 0 3 180 50 600 2 2 3\"\>", 
+   ",", "\<\"72 0 3 180 62 600 2 2 3\"\>", 
+   ",", "\<\"73 0 2 180 46 600 2 2 3\"\>", 
+   ",", "\<\"74 0 2 180 28 600 2 2 3\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6509711782679586`*^9, {3.6509712315990252`*^9, 3.6509712514599676`*^9}, {
+   3.6509713867171507`*^9, 3.650971407498328*^9}, 3.650972205943833*^9}]
+}, Open  ]]
 },
-WindowSize->{1266, 797},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{1266, 781},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 7, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -304,10 +584,19 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 5790, 142, 72, "Input"],
-Cell[6351, 164, 1508, 43, 172, "Input"],
-Cell[7862, 209, 2476, 57, 172, "Input"],
-Cell[10341, 268, 889, 20, 92, "Input"]
+Cell[558, 20, 5838, 145, 72, "Input"],
+Cell[6399, 167, 1508, 43, 172, "Input"],
+Cell[7910, 212, 2476, 57, 172, "Input"],
+Cell[10389, 271, 890, 20, 72, "Input"],
+Cell[CellGroupData[{
+Cell[11304, 295, 2143, 55, 112, "Input"],
+Cell[13450, 352, 4064, 70, 292, "Output"]
+}, Open  ]],
+Cell[17529, 425, 678, 16, 52, "Input"],
+Cell[CellGroupData[{
+Cell[18232, 445, 1570, 46, 92, "Input"],
+Cell[19805, 493, 3429, 74, 312, "Output"]
+}, Open  ]]
 }
 ]
 *)

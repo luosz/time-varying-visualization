@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<!DOCTYPE Expression SYSTEM 'http://www.wolfram.com/XML/notebookml1.dtd'>
+<Expression xmlns:mathematica='http://www.wolfram.com/XML/'
+    xmlns='http://www.wolfram.com/XML/'>
+ <Function>
+  <Symbol>List</Symbol>
+  <String>D:\document\work\artivvis-development-repository\data\tooth_balance.tfi</String>
+  <String>D:\_volume_data\Mathematica\tooth.tif</String>
+  <Function>
+   <Symbol>List</Symbol>
+   <String>Feature 1</String>
+   <String>Feature 2</String>
+   <String>Feature 3</String>
+   <String>Feature 4</String>
+  </Function>
+  <String>front</String>
+  <Function>
+   <Symbol>List</Symbol>
+   <String>D:\document\work\time-varying-visualization\~images\tooth_2_saliency_chart.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\tooth_2_visibility_chart.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\tooth_2_visibility_saliency_brightness_chart.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\tooth_2_visibility_saliency_saturation_chart.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\tooth_2_visibility_saliency_weighted_chart.png</String>
+  </Function>
+  <Function>
+   <Symbol>List</Symbol>
+   <String>D:\document\work\time-varying-visualization\~images\tooth_2_saliency_chart.txt</String>
+   <String>D:\document\work\time-varying-visualization\~images\tooth_2_visibility_chart.txt</String>
+   <String>D:\document\work\time-varying-visualization\~images\tooth_2_visibility_saliency_brightness_chart.txt</String>
+   <String>D:\document\work\time-varying-visualization\~images\tooth_2_visibility_saliency_saturation_chart.txt</String>
+   <String>D:\document\work\time-varying-visualization\~images\tooth_2_visibility_saliency_weighted_chart.txt</String>
+  </Function>
+  <Function>
+   <Symbol>List</Symbol>
+   <String>D:\document\work\time-varying-visualization\~images\tooth_2_visibility_saliency_feature.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\tooth_2_visibility.raw</String>
+  </Function>
+  <String>D:\document\work\time-varying-visualization\saliency.xml</String>
+  <String>D:\document\work\time-varying-visualization\~images\tooth_2.png</String>
+  <String>D:\document\work\time-varying-visualization\~images\tooth_2.raw</String>
+  <String>tooth_2</String>
+ </Function>
+</Expression>
