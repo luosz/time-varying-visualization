@@ -3,40 +3,172 @@
 <Expression xmlns:mathematica='http://www.wolfram.com/XML/'
     xmlns='http://www.wolfram.com/XML/'>
  <Function>
-  <Symbol>Association</Symbol>
+  <Symbol>List</Symbol>
   <Function>
-   <Symbol>Association</Symbol>
+   <Symbol>Rule</Symbol>
+   <String>disk_left</String>
    <Function>
-    <Symbol>Association</Symbol>
+    <Symbol>List</Symbol>
     <Function>
-     <Symbol>Association</Symbol>
-     <Function>
-      <Symbol>Association</Symbol>
-      <Function>
-       <Symbol>Association</Symbol>
-       <Function>
-        <Symbol>Association</Symbol>
-        <Function>
-         <Symbol>Association</Symbol>
-         <Function>
-          <Symbol>Association</Symbol>
-          <Function>
-           <Symbol>Association</Symbol>
-           <Function>
-            <Symbol>Identity</Symbol>
-            <Symbol>$Failed</Symbol>
-            <Function>
-             <Symbol>Rule</Symbol>
-             <String>WrapperFunction</String>
-             <Symbol>HoldComplete</Symbol>
-            </Function>
-           </Function>
-          </Function>
-         </Function>
-        </Function>
-       </Function>
-      </Function>
-     </Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.1860150783562284</Number>
+     <Number Precision=''>0.1793446886565983</Number>
+     <Number Precision=''>0.1355531272924656</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.450036469730124</Number>
+     <Number Precision=''>0.3814733770970095</Number>
+     <Number Precision=''>0.16849015317286653</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.5345052723780661</Number>
+     <Number Precision=''>0.30891618336809384</Number>
+     <Number Precision=''>0.15657854425384002</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.1550098882612006</Number>
+     <Number Precision=''>0.7551333746326314</Number>
+     <Number Precision=''>0.08985673710616804</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.3447575803196333</Number>
+     <Number Precision=''>0.5320247790003626</Number>
+     <Number Precision=''>0.12321764068000403</Number>
+    </Function>
+   </Function>
+  </Function>
+  <Function>
+   <Symbol>Rule</Symbol>
+   <String>disk_right</String>
+   <Function>
+    <Symbol>List</Symbol>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.1860150783562284</Number>
+     <Number Precision=''>0.1793446886565983</Number>
+     <Number Precision=''>0.1355531272924656</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.16849015317286653</Number>
+     <Number Precision=''>0.3814733770970095</Number>
+     <Number Precision=''>0.450036469730124</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.23526778465370948</Number>
+     <Number Precision=''>0.33824575960320546</Number>
+     <Number Precision=''>0.4264864557430851</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.05986021475410987</Number>
+     <Number Precision=''>0.7254102073453067</Number>
+     <Number Precision=''>0.21472957790058342</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.14756399970390968</Number>
+     <Number Precision=''>0.5318279834742561</Number>
+     <Number Precision=''>0.32060801682183426</Number>
+    </Function>
+   </Function>
+  </Function>
+  <Function>
+   <Symbol>Rule</Symbol>
+   <String>foot_right</String>
+   <Function>
+    <Symbol>List</Symbol>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.07787084822288601</Number>
+     <Number Precision=''>0.15940884608226402</Number>
+     <Number Precision=''>0.07742336156401049</Number>
+     <Number Precision=''>0.09568774012916215</Number>
+     <Number Precision=''>0.08958827349514754</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.2845310448846367</Number>
+     <Number Precision=''>0.057208053360011446</Number>
+     <Number Precision=''>0.2589957694326428</Number>
+     <Number Precision=''>0.23797582017668067</Number>
+     <Number Precision=''>0.16128931214600856</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.37505314102194276</Number>
+     <Number Precision=''>0.04360826691982287</Number>
+     <Number Precision=''>0.2070358097030836</Number>
+     <Number Precision=''>0.23445458673211292</Number>
+     <Number Precision=''>0.13984819562303782</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.22267816320845066</Number>
+     <Number Precision=''>0.2182374785703421</Number>
+     <Number Precision=''>0.24324353583670452</Number>
+     <Number Precision=''>0.018583265762640886</Number>
+     <Number Precision=''>0.2972575566218619</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.2988656521151967</Number>
+     <Number Precision=''>0.1309228727450825</Number>
+     <Number Precision=''>0.22513967276989405</Number>
+     <Number Precision=''>0.1265189262473769</Number>
+     <Number Precision=''>0.21855287612244984</Number>
+    </Function>
+   </Function>
+  </Function>
+  <Function>
+   <Symbol>Rule</Symbol>
+   <String>foot_top</String>
+   <Function>
+    <Symbol>List</Symbol>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.07787084822288601</Number>
+     <Number Precision=''>0.15940884608226402</Number>
+     <Number Precision=''>0.07742336156401049</Number>
+     <Number Precision=''>0.09568774012916215</Number>
+     <Number Precision=''>0.08958827349514754</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.14141374973892085</Number>
+     <Number Precision=''>0.38237038512347254</Number>
+     <Number Precision=''>0.1648264296169873</Number>
+     <Number Precision=''>0.15142673083481556</Number>
+     <Number Precision=''>0.15996270468579601</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.20591946804239872</Number>
+     <Number Precision=''>0.2974723582984376</Number>
+     <Number Precision=''>0.15780389559967098</Number>
+     <Number Precision=''>0.1742411031914053</Number>
+     <Number Precision=''>0.16456317486808764</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.05660255024281358</Number>
+     <Number Precision=''>0.6892248059013053</Number>
+     <Number Precision=''>0.08583559189010272</Number>
+     <Number Precision=''>0.0063938862539237706</Number>
+     <Number Precision=''>0.1619431657118547</Number>
+    </Function>
+    <Function>
+     <Symbol>List</Symbol>
+     <Number Precision=''>0.13126100914260616</Number>
+     <Number Precision=''>0.4933485820998714</Number>
+     <Number Precision=''>0.12181974374488685</Number>
+     <Number Precision=''>0.09031749472266452</Number>
+     <Number Precision=''>0.16325317028997116</Number>
     </Function>
    </Function>
   </Function>
