@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     47412,       1168]
-NotebookOptionsPosition[     46271,       1131]
-NotebookOutlinePosition[     46612,       1146]
-CellTagsIndexPosition[     46569,       1143]
+NotebookDataLength[     60025,       1510]
+NotebookOptionsPosition[     58754,       1470]
+NotebookOutlinePosition[     59095,       1485]
+CellTagsIndexPosition[     59052,       1482]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -289,6 +289,101 @@ VisMale_spectrum_4_clipplane_region_1000.tfi\>\"", ",",
 
 Cell[BoxData[{
  RowBox[{
+  RowBox[{"dataname", "=", "\"\<vismale_naive\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"filenames", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"othernames", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", "onames"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"expressionML", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\vismale_naive.tfi\>\"", ",", "\[IndentingNewLine]", 
+     "\"\<D:\\\\_data\\\\VisMale.tif\>\"", ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", "\"\<Feature 3\>\"",
+        ",", "\"\<Feature 4\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+     "\"\<left\>\"", ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
+      "filenames"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
+      "filenames"}], ",", "othernames", ",", "resultxml", ",", 
+     RowBox[{"path", "<>", "dataname", "<>", "\"\<.png\>\""}], ",", 
+     RowBox[{"path", "<>", "dataname", "<>", "\"\<.raw\>\""}], ",", 
+     "dataname"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+     "xmlname"}], ",", "expressionML"}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.651273639977206*^9, 3.651273666203465*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dataname", "=", "\"\<vismale_naive_optimized_green_1000\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"filenames", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"othernames", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", "onames"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"expressionML", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\vismale_naive_optimized_green_1000.tfi\>\"", ",", 
+     "\[IndentingNewLine]", "\"\<D:\\\\_data\\\\VisMale.tif\>\"", ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", "\"\<Feature 3\>\"",
+        ",", "\"\<Feature 4\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+     "\"\<left\>\"", ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
+      "filenames"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
+      "filenames"}], ",", "othernames", ",", "resultxml", ",", 
+     RowBox[{"path", "<>", "dataname", "<>", "\"\<.png\>\""}], ",", 
+     RowBox[{"path", "<>", "dataname", "<>", "\"\<.raw\>\""}], ",", 
+     "dataname"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+     "xmlname"}], ",", "expressionML"}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6512736872662125`*^9, 3.651273690618533*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
   RowBox[{"dataname", "=", "\"\<disk\>\""}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"filenames", "=", 
@@ -545,6 +640,101 @@ transfer_function\\\\CT-Knee_weak_green.tfi\>\"", ",", "\[IndentingNewLine]",
 
 Cell[BoxData[{
  RowBox[{
+  RowBox[{"dataname", "=", "\"\<CT-Knee_naive\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"filenames", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"othernames", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", "onames"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"expressionML", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\CT-Knee_naive.tfi\>\"", ",", "\[IndentingNewLine]", 
+     "\"\<D:\\\\_data\\\\CT-Knee.tif\>\"", ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", "\"\<Feature 3\>\"",
+        ",", "\"\<Feature 4\>\"", ",", "\"\<Feature 5\>\""}], "}"}], ",", 
+     "\[IndentingNewLine]", "\"\<front\>\"", ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
+      "filenames"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
+      "filenames"}], ",", "othernames", ",", "resultxml", ",", 
+     RowBox[{"path", "<>", "dataname", "<>", "\"\<.png\>\""}], ",", 
+     RowBox[{"path", "<>", "dataname", "<>", "\"\<.raw\>\""}], ",", 
+     "dataname"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+     "xmlname"}], ",", "expressionML"}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6512735349049597`*^9, 3.6512735391707335`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dataname", "=", "\"\<CT-Knee_naive_optimized_green_1000\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"filenames", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"othernames", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", "onames"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"expressionML", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\CT-Knee_naive_optimized_green_1000.tfi\>\"", ",", 
+     "\[IndentingNewLine]", "\"\<D:\\\\_data\\\\CT-Knee.tif\>\"", ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", "\"\<Feature 3\>\"",
+        ",", "\"\<Feature 4\>\"", ",", "\"\<Feature 5\>\""}], "}"}], ",", 
+     "\[IndentingNewLine]", "\"\<front\>\"", ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
+      "filenames"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
+      "filenames"}], ",", "othernames", ",", "resultxml", ",", 
+     RowBox[{"path", "<>", "dataname", "<>", "\"\<.png\>\""}], ",", 
+     RowBox[{"path", "<>", "dataname", "<>", "\"\<.raw\>\""}], ",", 
+     "dataname"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+     "xmlname"}], ",", "expressionML"}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6512735690523386`*^9, 3.65127357596867*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
   RowBox[{"dataname", "=", "\"\<engine_strong_green\>\""}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -570,7 +760,7 @@ transfer_function\\\\engine_strong_green.tfi\>\"", ",",
       RowBox[{
       "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", "\"\<Feature 3\>\"",
         ",", "\"\<Feature 4\>\""}], "}"}], ",", "\[IndentingNewLine]", 
-     "\"\<front\>\"", ",", "\[IndentingNewLine]", 
+     "\"\<bottom\>\"", ",", "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{
        RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
@@ -594,7 +784,7 @@ transfer_function\\\\engine_strong_green.tfi\>\"", ",",
    3.6501026669025993`*^9, 3.6501028257137227`*^9, 3.6501282553948755`*^9, {
    3.6501375453035913`*^9, 3.650137548278757*^9}, 3.6502658185415664`*^9, 
    3.6502658564817095`*^9, {3.6503706182218933`*^9, 3.650370738152733*^9}, 
-   3.650370814393448*^9}],
+   3.650370814393448*^9, 3.651266532528681*^9}],
 
 Cell[BoxData[{
  RowBox[{
@@ -623,7 +813,7 @@ transfer_function\\\\engine_medium_green.tfi\>\"", ",",
       RowBox[{
       "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", "\"\<Feature 3\>\"",
         ",", "\"\<Feature 4\>\""}], "}"}], ",", "\[IndentingNewLine]", 
-     "\"\<front\>\"", ",", "\[IndentingNewLine]", 
+     "\"\<bottom\>\"", ",", "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{
        RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
@@ -641,7 +831,8 @@ transfer_function\\\\engine_medium_green.tfi\>\"", ",",
     RowBox[{
      RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
      "xmlname"}], ",", "expressionML"}], "]"}], ";"}]}], "Input",
- CellChangeTimes->{{3.650370869659997*^9, 3.650370873132442*^9}}],
+ CellChangeTimes->{{3.650370869659997*^9, 3.650370873132442*^9}, 
+   3.6512665288587284`*^9}],
 
 Cell[BoxData[{
  RowBox[{
@@ -670,7 +861,7 @@ transfer_function\\\\engine_week_green.tfi\>\"", ",",
       RowBox[{
       "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", "\"\<Feature 3\>\"",
         ",", "\"\<Feature 4\>\""}], "}"}], ",", "\[IndentingNewLine]", 
-     "\"\<front\>\"", ",", "\[IndentingNewLine]", 
+     "\"\<bottom\>\"", ",", "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{
        RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
@@ -689,7 +880,7 @@ transfer_function\\\\engine_week_green.tfi\>\"", ",",
      RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
      "xmlname"}], ",", "expressionML"}], "]"}], ";"}]}], "Input",
  CellChangeTimes->{{3.650370892668768*^9, 3.650370898197486*^9}, 
-   3.650371729056267*^9}],
+   3.650371729056267*^9, 3.651266524949479*^9}],
 
 Cell[BoxData[{
  RowBox[{
@@ -713,7 +904,7 @@ Cell[BoxData[{
     RowBox[{
     "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
 transfer_function\\\\nucleon_strong_red.tfi\>\"", ",", 
-     "\"\<D:\\\\_volume_data\\\\Mathematica\\\\CTengine.tiff\>\"", ",", 
+     "\"\<D:\\\\_data\\\\nucleon.tif\>\"", ",", 
      RowBox[{"{", 
       RowBox[{
       "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", "\"\<Feature 3\>\"",
@@ -736,7 +927,8 @@ transfer_function\\\\nucleon_strong_red.tfi\>\"", ",",
     RowBox[{
      RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
      "xmlname"}], ",", "expressionML"}], "]"}], ";"}]}], "Input",
- CellChangeTimes->{{3.6503709882159395`*^9, 3.650370991593437*^9}}],
+ CellChangeTimes->{{3.6503709882159395`*^9, 3.650370991593437*^9}, 
+   3.652442884281932*^9}],
 
 Cell[BoxData[{
  RowBox[{
@@ -760,7 +952,7 @@ Cell[BoxData[{
     RowBox[{
     "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
 transfer_function\\\\nucleon_medium_red.tfi\>\"", ",", 
-     "\"\<D:\\\\_volume_data\\\\Mathematica\\\\CTengine.tiff\>\"", ",", 
+     "\"\<D:\\\\_data\\\\nucleon.tif\>\"", ",", 
      RowBox[{"{", 
       RowBox[{
       "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", "\"\<Feature 3\>\"",
@@ -783,7 +975,8 @@ transfer_function\\\\nucleon_medium_red.tfi\>\"", ",",
     RowBox[{
      RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
      "xmlname"}], ",", "expressionML"}], "]"}], ";"}]}], "Input",
- CellChangeTimes->{{3.650371007368596*^9, 3.650371009465404*^9}}],
+ CellChangeTimes->{{3.650371007368596*^9, 3.650371009465404*^9}, 
+   3.6524428783516912`*^9}],
 
 Cell[BoxData[{
  RowBox[{
@@ -807,7 +1000,7 @@ Cell[BoxData[{
     RowBox[{
     "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
 transfer_function\\\\nucleon_weak_red.tfi\>\"", ",", 
-     "\"\<D:\\\\_volume_data\\\\Mathematica\\\\CTengine.tiff\>\"", ",", 
+     "\"\<D:\\\\_data\\\\nucleon.tif\>\"", ",", 
      RowBox[{"{", 
       RowBox[{
       "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", "\"\<Feature 3\>\"",
@@ -830,7 +1023,8 @@ transfer_function\\\\nucleon_weak_red.tfi\>\"", ",",
     RowBox[{
      RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
      "xmlname"}], ",", "expressionML"}], "]"}], ";"}]}], "Input",
- CellChangeTimes->{{3.6503710215845623`*^9, 3.6503710260338144`*^9}}],
+ CellChangeTimes->{{3.6503710215845623`*^9, 3.6503710260338144`*^9}, 
+   3.652442870934054*^9}],
 
 Cell[CellGroupData[{
 
@@ -991,7 +1185,9 @@ nucleon_weak_red.raw\"\>"},
    3.6503714163165574`*^9, 3.6503714337168517`*^9}, {3.6510617017531605`*^9, 
    3.6510617056134696`*^9}, {3.6510619633800635`*^9, 
    3.6510619700671573`*^9}, {3.65106228702495*^9, 3.6510623118723526`*^9}, 
-   3.651062342652485*^9, 3.6510625879567876`*^9}]
+   3.651062342652485*^9, 3.6510625879567876`*^9, {3.6512665439163337`*^9, 
+   3.6512665604263334`*^9}, {3.65127358008959*^9, 3.651273585146389*^9}, 
+   3.6512737002562757`*^9, 3.6523861800527472`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1004,11 +1200,13 @@ Cell[BoxData[{
     RowBox[{"Association", "@", 
      RowBox[{"Import", "[", "resultxml", "]"}]}], ",", 
     RowBox[{"<|", "|>"}]}], "]"}]}], "\[IndentingNewLine]", 
- RowBox[{"Export", "[", 
-  RowBox[{"resultxml", ",", 
-   RowBox[{"Normal", "[", "scoremap", "]"}]}], "]"}]}], "Input",
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"resultxml", ",", 
+    RowBox[{"Normal", "[", "scoremap", "]"}]}], "]"}], ";"}]}], "Input",
  CellChangeTimes->{{3.651061893641124*^9, 3.651061900581818*^9}, {
-   3.651061931527834*^9, 3.651061967857427*^9}, 3.651062280579293*^9}],
+   3.651061931527834*^9, 3.651061967857427*^9}, 3.651062280579293*^9, 
+   3.651266550129377*^9}],
 
 Cell[BoxData[
  RowBox[{"\[LeftAssociation]", 
@@ -1114,19 +1312,160 @@ Cell[BoxData[
        RowBox[{
        "0.13126100914260616`", ",", "0.4933485820998714`", ",", 
         "0.12181974374488685`", ",", "0.09031749472266452`", ",", 
-        "0.16325317028997116`"}], "}"}]}], "}"}]}]}], 
+        "0.16325317028997116`"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"\<\"engine_strong_green\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0.17585799456776366`", ",", "0.47370804666213023`"}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"0.2727662488685001`", ",", "0.7272337511314999`"}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"0.007884548755537223`", ",", "0.9921154512445173`"}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"0.011334339305620304`", ",", "0.9886656606944495`"}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"0.009609444030578763`", ",", "0.9903905559694834`"}], "}"}]}],
+      "}"}]}], ",", 
+   RowBox[{"\<\"engine_weak_green\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0.17585799456776366`", ",", "0.47370804666213023`"}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"0.8694899467213996`", ",", "0.1305100532786005`"}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"0.20918236201797125`", ",", "0.7908176379827416`"}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"0.18722926965625966`", ",", "0.8127707303450973`"}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"0.19820581583711544`", ",", "0.8017941841639195`"}], "}"}]}], 
+     "}"}]}], ",", 
+   RowBox[{"\<\"engine_medium_green\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0.17585799456776366`", ",", "0.47370804666213023`"}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"0.6628492030551645`", ",", "0.3371507969448356`"}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"0.0659434598498578`", ",", "0.9340565401501755`"}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"0.060298202146752994`", ",", "0.93970179785429`"}], "}"}], 
+      ",", 
+      RowBox[{"{", 
+       RowBox[{"0.0631208309983054`", ",", "0.9368791690022327`"}], "}"}]}], 
+     "}"}]}], ",", 
+   RowBox[{"\<\"vismale_naive\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "0.02333950228965181`", ",", "0.3290030748080643`", ",", 
+        "0.0006849718402539331`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.3919283555414521`", ",", "0.5989017267622457`", ",", 
+        "0.0024353435253506323`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.08497977264292425`", ",", "0.9135722691825346`", ",", 
+        "0.0014445241701480642`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.476877415716118`", ",", "0.5154680612710948`", ",", 
+        "0.007624889057187475`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.28092859417952115`", ",", "0.7145201652268147`", ",", 
+        "0.00453470661366777`"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"\<\"vismale_naive_optimized_green_1000\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "0.02333950228965181`", ",", "0.3290030748080643`", ",", 
+        "0.0006277954410234585`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.15598797531639222`", ",", "0.8281976889049966`", ",", 
+        "0.007331562205733406`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.031312293704120205`", ",", "0.964674347411484`", ",", 
+        "0.0040098677629221875`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.20827860218213462`", ",", "0.7635146667360428`", ",", 
+        "0.028164163398164795`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.11979544794312741`", ",", "0.8640945070737633`", ",", 
+        "0.01608701558054349`"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"\<\"tooth\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "0.17886794163205513`", ",", "0.21075388558500305`", ",", 
+        "0.2781183899590318`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.45283066295793`", ",", "0.3666850752865029`", ",", 
+        "0.18048426175556703`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.3399849754066354`", ",", "0.2879180526270437`", ",", 
+        "0.3720969719659212`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.42552151374589675`", ",", "0.515774233140157`", ",", 
+        "0.05870425311369345`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.3827532445762661`", ",", "0.4018461428836003`", ",", 
+        "0.2154006125398073`"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"\<\"tooth_2\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "0.17886794163205513`", ",", "0.21075388558500305`", ",", 
+        "0.27803832077278035`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.3110845477322975`", ",", "0.23251899185297442`", ",", 
+        "0.45639646041472814`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.12826282653400148`", ",", "0.02380108981209396`", ",", 
+        "0.8479360836530662`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.37157291927568104`", ",", "0.19543479588405394`", ",", 
+        "0.4329922848398358`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "0.24991787290484124`", ",", "0.10961794284807394`", ",", 
+        "0.640464184246451`"}], "}"}]}], "}"}]}]}], 
   "\[RightAssociation]"}]], "Output",
  CellChangeTimes->{
   3.651061901241891*^9, {3.6510619634037685`*^9, 3.6510619700936813`*^9}, {
    3.6510622871154613`*^9, 3.651062311964364*^9}, 3.65106234273703*^9, 
-   3.6510625880373096`*^9}],
-
-Cell[BoxData["\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\\
-saliency.xml\"\>"], "Output",
- CellChangeTimes->{
-  3.651061901241891*^9, {3.6510619634037685`*^9, 3.6510619700936813`*^9}, {
-   3.6510622871154613`*^9, 3.651062311964364*^9}, 3.65106234273703*^9, 
-   3.6510625880628033`*^9}]
+   3.6510625880373096`*^9, {3.651266544028801*^9, 3.651266560521845*^9}, {
+   3.651273580178158*^9, 3.6512735852449007`*^9}, 3.6512737003577313`*^9, 
+   3.652386180271462*^9}]
 }, Open  ]]
 },
 WindowSize->{1266, 788},
@@ -1150,25 +1489,28 @@ Cell[2340, 61, 3012, 63, 212, "Input"],
 Cell[5355, 126, 2403, 54, 212, "Input"],
 Cell[7761, 182, 1966, 48, 212, "Input"],
 Cell[9730, 232, 2398, 55, 212, "Input"],
-Cell[12131, 289, 1998, 50, 212, "Input"],
-Cell[14132, 341, 1944, 50, 212, "Input"],
-Cell[16079, 393, 2090, 51, 212, "Input"],
-Cell[18172, 446, 2085, 50, 212, "Input"],
-Cell[20260, 498, 1773, 45, 212, "Input"],
-Cell[22036, 545, 2138, 51, 192, "Input"],
-Cell[24177, 598, 1725, 45, 192, "Input"],
-Cell[25905, 645, 1747, 46, 192, "Input"],
-Cell[27655, 693, 1725, 45, 192, "Input"],
-Cell[29383, 740, 1723, 45, 192, "Input"],
-Cell[31109, 787, 1723, 45, 192, "Input"],
+Cell[12131, 289, 1734, 45, 212, "Input"],
+Cell[13868, 336, 1784, 46, 212, "Input"],
+Cell[15655, 384, 1998, 50, 212, "Input"],
+Cell[17656, 436, 1944, 50, 212, "Input"],
+Cell[19603, 488, 2090, 51, 212, "Input"],
+Cell[21696, 541, 2085, 50, 212, "Input"],
+Cell[23784, 593, 1773, 45, 212, "Input"],
+Cell[25560, 640, 1765, 45, 212, "Input"],
+Cell[27328, 687, 1810, 46, 212, "Input"],
+Cell[29141, 735, 2161, 51, 192, "Input"],
+Cell[31305, 788, 1754, 46, 192, "Input"],
+Cell[33062, 836, 1770, 46, 192, "Input"],
+Cell[34835, 884, 1727, 46, 192, "Input"],
+Cell[36565, 932, 1727, 46, 192, "Input"],
+Cell[38295, 980, 1725, 46, 192, "Input"],
 Cell[CellGroupData[{
-Cell[32857, 836, 3471, 70, 112, "Input"],
-Cell[36331, 908, 4784, 85, 389, "Output"]
+Cell[40045, 1030, 3471, 70, 112, "Input"],
+Cell[43519, 1102, 4935, 87, 389, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[41152, 998, 540, 12, 52, "Input"],
-Cell[41695, 1012, 4256, 109, 172, "Output"],
-Cell[45954, 1123, 301, 5, 31, "Output"]
+Cell[48491, 1194, 586, 14, 52, "Input"],
+Cell[49080, 1210, 9658, 257, 372, "Output"]
 }, Open  ]]
 }
 ]

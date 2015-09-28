@@ -1,0 +1,961 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     41514,        952]
+NotebookOptionsPosition[     40199,        902]
+NotebookOutlinePosition[     40541,        917]
+CellTagsIndexPosition[     40498,        914]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"path", "=", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~images\\\\\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"names", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<_saliency_chart\>\"", ",", "\[IndentingNewLine]", 
+     "\"\<_visibility_chart\>\"", ",", 
+     "\"\<_visibility_saliency_brightness_chart\>\"", ",", 
+     "\"\<_visibility_saliency_saturation_chart\>\"", ",", 
+     "\"\<_visibility_saliency_weighted_chart\>\""}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"onames", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<_visibility_saliency_feature.png\>\"", ",", 
+     "\"\<_visibility.raw\>\""}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"xmlname", "=", "\"\<.xml\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"resultxml", "=", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~images\\\\\>\"", 
+    "<>", "\"\<saliency.xml\>\""}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.650038067581571*^9, 3.6500380879937973`*^9}, {
+   3.650038142090377*^9, 3.6500381654776726`*^9}, {3.650038269862339*^9, 
+   3.650038292817396*^9}, {3.65003839200552*^9, 3.650038405492761*^9}, {
+   3.6500384972842474`*^9, 3.6500385150264573`*^9}, {3.6500385480065203`*^9, 
+   3.650038552793985*^9}, {3.6500386220883503`*^9, 3.650038695851278*^9}, 
+   3.6500389619649057`*^9, {3.650137496777986*^9, 3.6501375152983866`*^9}, {
+   3.650139251471568*^9, 3.650139256632738*^9}, 3.650139304024089*^9, {
+   3.650139345376359*^9, 3.650139349362116*^9}, {3.6501395670094414`*^9, 
+   3.650139572633778*^9}, {3.6501397645083466`*^9, 3.6501397737833133`*^9}, {
+   3.650265780674996*^9, 3.650265800331646*^9}, 3.6502658564442043`*^9, {
+   3.6503713944530315`*^9, 3.650371410909602*^9}, 3.6524418959437647`*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{
+   "StringSplit", "@", 
+    "\"\<CT-Knee_naive_optimized_green_1000\nCT-Knee_naive\n\
+CT-Knee_strong_green\nCT-Knee_strong_red\n\
+CT-Knee_weak_green_optimized_green_1000\nCT-Knee_weak_green\n\
+CT-Knee_weak_red_optimized_red_1000\nCT-Knee_weak_red\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dataname", "=", 
+      RowBox[{"str", "[", 
+       RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"filenames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"othernames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", 
+       "onames"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"expressionML", "=", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\\>\"", "<>", "dataname", "<>", "\"\<.tfi\>\""}], ",", 
+        "\[IndentingNewLine]", "\"\<D:\\\\_data\\\\CT-Knee.tif\>\"", ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
+          "\"\<Feature 3\>\"", ",", "\"\<Feature 4\>\"", ",", 
+          "\"\<Feature 5\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+        "\"\<front\>\"", ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
+         "filenames"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
+         "filenames"}], ",", "othernames", ",", "resultxml", ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.png\>\""}], ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.raw\>\""}], ",", 
+        "dataname"}], "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~images\\\\\>\"", 
+        "<>", "dataname", "<>", "xmlname"}], ",", "expressionML"}], "]"}]}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", 
+      RowBox[{"Length", "[", "str", "]"}]}], "}"}]}], "]"}], "//", 
+  "Length"}]}], "Input",
+ CellChangeTimes->{{3.6523897566588974`*^9, 3.652389775171593*^9}, {
+   3.6523898120986443`*^9, 3.6523898579791994`*^9}, {3.6523899277677555`*^9, 
+   3.6523899307611303`*^9}, {3.6523899712566576`*^9, 3.652390039835124*^9}, {
+   3.652390088066274*^9, 3.6523901180604687`*^9}, {3.6523901582692432`*^9, 
+   3.6523901631420126`*^9}, {3.652390553443434*^9, 3.6523906141053247`*^9}, {
+   3.6523907397464323`*^9, 3.652390743942891*^9}, {3.6523907768310738`*^9, 
+   3.652390872432847*^9}, {3.652390906196341*^9, 3.6523909129425764`*^9}, {
+   3.6523909669300575`*^9, 3.6523909744740343`*^9}, 3.6523912925587006`*^9, 
+   3.652441547883399*^9, 3.652442959072906*^9, {3.6524676333582144`*^9, 
+   3.6524676353616753`*^9}}],
+
+Cell[BoxData["8"], "Output",
+ CellChangeTimes->{
+  3.652442965400665*^9, 3.6524432507448506`*^9, 3.652443596444307*^9, 
+   3.6524437897018003`*^9, {3.6524452749923773`*^9, 3.652445282392399*^9}, 
+   3.652445718484455*^9, {3.6524548286624117`*^9, 3.6524548386378975`*^9}, 
+   3.652457358098285*^9, 3.652465359458341*^9, 3.652466837900531*^9, 
+   3.652467341999318*^9, 3.6524676027130117`*^9, 3.6524676360653143`*^9, 
+   3.652467670535453*^9, 3.6524677776327066`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{
+   "StringSplit", "@", 
+    "\"\<engine_medium_green\nengine_naive_optimized_green_1000\nengine_naive\
+\nengine_strong_green\nengine_weak_green\nengine_weak_red_optimized_red_1000\n\
+engine_weak_red\>\""}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dataname", "=", 
+      RowBox[{"str", "[", 
+       RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"filenames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"othernames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", 
+       "onames"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"expressionML", "=", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\\>\"", "<>", "dataname", "<>", "\"\<.tfi\>\""}], ",", 
+        "\"\<D:\\\\_volume_data\\\\Mathematica\\\\CTengine.tiff\>\"", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
+          "\"\<Feature 3\>\"", ",", "\"\<Feature 4\>\""}], "}"}], ",", 
+        "\[IndentingNewLine]", "\"\<bottom\>\"", ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
+         "filenames"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
+         "filenames"}], ",", "othernames", ",", "resultxml", ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.png\>\""}], ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.raw\>\""}], ",", 
+        "dataname"}], "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~images\\\\\>\"", 
+        "<>", "dataname", "<>", "xmlname"}], ",", "expressionML"}], "]"}]}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", 
+      RowBox[{"Length", "[", "str", "]"}]}], "}"}]}], "]"}], "//", 
+  "Length"}]}], "Input",
+ CellChangeTimes->{{3.6523910650013704`*^9, 3.6523911435690784`*^9}, 
+   3.652391295965825*^9, 3.6524415415977325`*^9, 3.6524429608047023`*^9, 
+   3.652467649290311*^9}],
+
+Cell[BoxData["7"], "Output",
+ CellChangeTimes->{
+  3.6524429654987497`*^9, 3.6524432508408313`*^9, 3.652443596535328*^9, 
+   3.65244378980278*^9, {3.652445275093376*^9, 3.652445282477987*^9}, 
+   3.652445718616474*^9, {3.652454828762961*^9, 3.6524548387465343`*^9}, 
+   3.6524573582153425`*^9, 3.6524653595689087`*^9, 3.652466838021081*^9, 
+   3.6524673421018295`*^9, 3.6524676028140993`*^9, 3.65246767064296*^9, 
+   3.6524677777357073`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{
+   "StringSplit", "@", 
+    "\"\<foot_green_medium_optimized_green_1000\nfoot_green_medium\n\
+foot_green_strong\nfoot_green_weak\nfoot_naive_optimized_green_1000\n\
+foot_naive\>\""}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dataname", "=", 
+      RowBox[{"str", "[", 
+       RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"filenames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"othernames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", 
+       "onames"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"expressionML", "=", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\\>\"", "<>", "dataname", "<>", "\"\<.tfi\>\""}], ",", 
+        "\[IndentingNewLine]", "\"\<D:\\\\_data\\\\foot.tif\>\"", ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
+          "\"\<Feature 3\>\"", ",", "\"\<Feature 4\>\"", ",", 
+          "\"\<Feature 5\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+        "\"\<left\>\"", ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
+         "filenames"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
+         "filenames"}], ",", "othernames", ",", "resultxml", ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.png\>\""}], ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.raw\>\""}], ",", 
+        "dataname"}], "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~images\\\\\>\"", 
+        "<>", "dataname", "<>", "xmlname"}], ",", "expressionML"}], "]"}]}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", 
+      RowBox[{"Length", "[", "str", "]"}]}], "}"}]}], "]"}], "//", 
+  "Length"}]}], "Input",
+ CellChangeTimes->{{3.652391304706517*^9, 3.6523913136648245`*^9}, {
+   3.652442510527145*^9, 3.652442511069417*^9}, 3.6524426462802734`*^9, {
+   3.652442747510784*^9, 3.6524428236198645`*^9}, {3.6524435936716175`*^9, 
+   3.6524435941257315`*^9}, 3.6524676520273085`*^9}],
+
+Cell[BoxData["6"], "Output",
+ CellChangeTimes->{
+  3.652442826916643*^9, 3.652442901171341*^9, {3.652442952149474*^9, 
+   3.6524429655974183`*^9}, 3.652443250928888*^9, 3.652443596630889*^9, 
+   3.652443789888296*^9, {3.6524452751824493`*^9, 3.652445282575425*^9}, 
+   3.6524457186915216`*^9, {3.6524548288532743`*^9, 3.6524548388345547`*^9}, 
+   3.6524573583168545`*^9, 3.652465359653926*^9, 3.6524668381335616`*^9, 
+   3.652467342198417*^9, 3.6524676029045396`*^9, 3.6524676707420287`*^9, 
+   3.652467777827752*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{
+   "StringSplit", "@", 
+    "\"\<horse_embryo_45_days_naive2_optimized_blue_1000\n\
+horse_embryo_45_days_naive2\nhorse_embryo_45_days_naive2\n\
+horse_embryo_45_days_naive_optimized_blue_1000\n\
+horse_embryo_45_days_naive_optimized_blue_1000\n\
+horse_embryo_45_days_naive\>\""}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dataname", "=", 
+      RowBox[{"str", "[", 
+       RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"filenames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"othernames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", 
+       "onames"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"expressionML", "=", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\\>\"", "<>", "dataname", "<>", "\"\<.tfi\>\""}], ",", 
+        "\"\<D:\\\\_equine_data\\\\raw\\\\horse_embryo_45_days.I.tif\>\"", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
+          "\"\<Feature 3\>\"", ",", "\"\<Feature 4\>\""}], "}"}], ",", 
+        "\[IndentingNewLine]", "\"\<top\>\"", ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
+         "filenames"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
+         "filenames"}], ",", "othernames", ",", "resultxml", ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.png\>\""}], ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.raw\>\""}], ",", 
+        "dataname"}], "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~images\\\\\>\"", 
+        "<>", "dataname", "<>", "xmlname"}], ",", "expressionML"}], "]"}]}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", 
+      RowBox[{"Length", "[", "str", "]"}]}], "}"}]}], "]"}], "//", 
+  "Length"}]}], "Input",
+ CellChangeTimes->{{3.652391370438571*^9, 3.6523913775046186`*^9}, {
+   3.6524651670214276`*^9, 3.6524651674654174`*^9}, 3.6524653334870396`*^9, {
+   3.652466792337983*^9, 3.6524667927904987`*^9}, 3.6524676547323384`*^9}],
+
+Cell[BoxData["6"], "Output",
+ CellChangeTimes->{3.652465359756806*^9, 3.652466838243586*^9, 
+  3.6524673422863936`*^9, 3.6524676029965973`*^9, 3.6524676708399763`*^9, 
+  3.652467777914751*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{
+   "StringSplit", "@", 
+    "\"\<MRbrain_naive_optimized_green_1000\nMRbrain_naive\n\
+MRbrain_strong_green\nMRbrain_weak_green\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dataname", "=", 
+      RowBox[{"str", "[", 
+       RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"filenames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"othernames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", 
+       "onames"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"expressionML", "=", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\\>\"", "<>", "dataname", "<>", "\"\<.tfi\>\""}], ",", 
+        "\"\<D:\\\\_volume_data\\\\Mathematica\\\\MRbrain.tiff\>\"", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
+          "\"\<Feature 3\>\"", ",", "\"\<Feature 4\>\""}], "}"}], ",", 
+        "\[IndentingNewLine]", "\"\<top\>\"", ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
+         "filenames"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
+         "filenames"}], ",", "othernames", ",", "resultxml", ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.png\>\""}], ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.raw\>\""}], ",", 
+        "dataname"}], "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~images\\\\\>\"", 
+        "<>", "dataname", "<>", "xmlname"}], ",", "expressionML"}], "]"}]}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", 
+      RowBox[{"Length", "[", "str", "]"}]}], "}"}]}], "]"}], "//", 
+  "Length"}]}], "Input",
+ CellChangeTimes->{{3.6523914074218903`*^9, 3.6523914149081855`*^9}, {
+   3.652465116149392*^9, 3.652465152064004*^9}, {3.652466718649955*^9, 
+   3.652466719087515*^9}, 3.652467657487096*^9}],
+
+Cell[BoxData["4"], "Output",
+ CellChangeTimes->{3.652465359828369*^9, 3.6524668383300905`*^9, 
+  3.6524673423573985`*^9, 3.6524676030646114`*^9, 3.652467670921554*^9, 
+  3.652467777991253*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{
+   "StringSplit", "@", 
+    "\"\<nucleon_naive_optimized_green_1000\n\
+nucleon_naive_optimized_green_1000\nnucleon_naive_optimized_red_1000\n\
+nucleon_naive_optimized_red_1000\nnucleon_naive\nnucleon_naive\n\
+nucleon_strong_red_coronal\nnucleon_weak_red_coronal\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dataname", "=", 
+      RowBox[{"str", "[", 
+       RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"filenames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"othernames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", 
+       "onames"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"expressionML", "=", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\\>\"", "<>", "dataname", "<>", "\"\<.tfi\>\""}], ",", 
+        "\"\<D:\\\\_data\\\\nucleon.tif\>\"", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
+          "\"\<Feature 3\>\"", ",", "\"\<Feature 4\>\""}], "}"}], ",", 
+        "\[IndentingNewLine]", "\"\<front\>\"", ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
+         "filenames"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
+         "filenames"}], ",", "othernames", ",", "resultxml", ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.png\>\""}], ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.raw\>\""}], ",", 
+        "dataname"}], "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~images\\\\\>\"", 
+        "<>", "dataname", "<>", "xmlname"}], ",", "expressionML"}], "]"}]}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", 
+      RowBox[{"Length", "[", "str", "]"}]}], "}"}]}], "]"}], "//", 
+  "Length"}]}], "Input",
+ CellChangeTimes->{{3.6523914999468913`*^9, 3.6523915099450083`*^9}, {
+   3.6524419677817955`*^9, 3.6524420127432213`*^9}, 3.652442740796988*^9, 
+   3.652467660478029*^9}],
+
+Cell[BoxData["8"], "Output",
+ CellChangeTimes->{
+  3.6524420378238487`*^9, 3.6524423742669454`*^9, {3.652442421839831*^9, 
+   3.6524424394504256`*^9}, {3.6524428092966075`*^9, 3.652442827042629*^9}, 
+   3.652442901279413*^9, {3.6524429522729635`*^9, 3.652442965728487*^9}, 
+   3.6524432510603685`*^9, 3.6524435967589593`*^9, 3.652443790003865*^9, {
+   3.6524452753009443`*^9, 3.652445282702443*^9}, 3.6524457188025155`*^9, {
+   3.6524548289793077`*^9, 3.6524548389620647`*^9}, 3.652457358449335*^9, 
+   3.65246535994383*^9, 3.652466838455144*^9, 3.652467342486387*^9, 
+   3.6524676031805754`*^9, 3.6524676710325727`*^9, 3.6524677781097927`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{
+   "StringSplit", "@", 
+    "\"\<tooth_naive_optimized_yellow_1000\ntooth_naive_optimized_yellow_1000\
+\ntooth_naive\ntooth_naive\ntooth_strong_yellow\n\
+tooth_weak_yellow_optimized_yellow_1000\ntooth_weak_yellow\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dataname", "=", 
+      RowBox[{"str", "[", 
+       RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"filenames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"othernames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", 
+       "onames"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"expressionML", "=", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\\>\"", "<>", "dataname", "<>", "\"\<.tfi\>\""}], ",", 
+        "\[IndentingNewLine]", 
+        "\"\<D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\>\"", ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
+          "\"\<Feature 3\>\"", ",", "\"\<Feature 4\>\""}], "}"}], ",", 
+        "\[IndentingNewLine]", "\"\<front\>\"", ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
+         "filenames"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
+         "filenames"}], ",", "othernames", ",", "resultxml", ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.png\>\""}], ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.raw\>\""}], ",", 
+        "dataname"}], "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~images\\\\\>\"", 
+        "<>", "dataname", "<>", "xmlname"}], ",", "expressionML"}], "]"}]}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", 
+      RowBox[{"Length", "[", "str", "]"}]}], "}"}]}], "]"}], "//", 
+  "Length"}]}], "Input",
+ CellChangeTimes->{{3.6523915780657177`*^9, 3.652391587476159*^9}, {
+   3.652394035408339*^9, 3.6523940784655867`*^9}, 3.6524415362926064`*^9, 
+   3.6524452697018375`*^9, 3.6524676628070173`*^9}],
+
+Cell[BoxData["7"], "Output",
+ CellChangeTimes->{
+  3.652442037919827*^9, 3.6524423743519425`*^9, {3.6524424219378357`*^9, 
+   3.6524424395510864`*^9}, {3.6524428093936777`*^9, 3.6524428271406384`*^9}, 
+   3.6524429013603773`*^9, {3.6524429523599844`*^9, 3.652442965820031*^9}, 
+   3.652443251168875*^9, 3.6524435968424935`*^9, 3.6524437901003942`*^9, {
+   3.652445275397995*^9, 3.6524452827993827`*^9}, 3.6524457188965483`*^9, {
+   3.652454829074834*^9, 3.652454839070119*^9}, 3.6524573585618725`*^9, 
+   3.6524653600468454`*^9, 3.6524668389023027`*^9, 3.6524673425899363`*^9, 
+   3.652467603289649*^9, 3.652467671134056*^9, 3.6524677782128253`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{
+   "StringSplit", "@", 
+    "\"\<vismale_naive_optimized_green_1000.png\n\
+vismale_naive_optimized_red_1000.png\nvismale_naive.png\nvismale_naive.png\n\
+vismale_strong_green_only.png\nvismale_strong_green.png\n\
+vismale_strong_red_only.png\nvismale_strong_red.png\n\
+vismale_weak_red_only.png\nvismale_weak_red.png\nvismale_week_green_only.png\n\
+vismale_week_green.png\>\""}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Table", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"dataname", "=", 
+      RowBox[{"str", "[", 
+       RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"filenames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"dataname", "<>", "#"}], "&"}], "/@", "names"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"othernames", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"path", "<>", "dataname", "<>", "#"}], "&"}], "/@", 
+       "onames"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"expressionML", "=", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+        "\"\<D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\\>\"", "<>", "dataname", "<>", "\"\<.tfi\>\""}], ",", 
+        "\[IndentingNewLine]", "\"\<D:\\\\_data\\\\VisMale.tif\>\"", ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
+          "\"\<Feature 3\>\"", ",", "\"\<Feature 4\>\""}], "}"}], ",", 
+        "\[IndentingNewLine]", "\"\<left\>\"", ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
+         "filenames"}], ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"path", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
+         "filenames"}], ",", "othernames", ",", "resultxml", ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.png\>\""}], ",", 
+        RowBox[{"path", "<>", "dataname", "<>", "\"\<.raw\>\""}], ",", 
+        "dataname"}], "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~images\\\\\>\"", 
+        "<>", "dataname", "<>", "xmlname"}], ",", "expressionML"}], "]"}]}], 
+    "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", 
+      RowBox[{"Length", "[", "str", "]"}]}], "}"}]}], "]"}], "//", 
+  "Length"}]}], "Input",
+ CellChangeTimes->{{3.6523916354777603`*^9, 3.652391645207239*^9}, {
+   3.6524412349214334`*^9, 3.652441235241452*^9}, {3.652441462487299*^9, 
+   3.652441523624753*^9}, {3.6524430840089445`*^9, 3.6524431531250305`*^9}, {
+   3.6524432060399384`*^9, 3.6524432064027653`*^9}, 3.652467666208598*^9}],
+
+Cell[BoxData["12"], "Output",
+ CellChangeTimes->{
+  3.6524420379323664`*^9, 3.652442374361944*^9, {3.652442421948856*^9, 
+   3.6524424395650506`*^9}, {3.6524428094106464`*^9, 3.6524428271566353`*^9}, 
+   3.652442901372361*^9, {3.652442948550297*^9, 3.652442965833493*^9}, {
+   3.6524430392115383`*^9, 3.6524430401482763`*^9}, {3.6524431580462637`*^9, 
+   3.6524431690003176`*^9}, 3.6524432129654784`*^9, {3.652443246785392*^9, 
+   3.652443251324937*^9}, 3.6524435969972944`*^9, 3.652443790246916*^9, {
+   3.652445275536936*^9, 3.6524452829444065`*^9}, 3.652445719042091*^9, {
+   3.652454829232333*^9, 3.6524548392475996`*^9}, 3.65245735873497*^9, 
+   3.652465360524831*^9, 3.6524668390740533`*^9, 3.652467343046355*^9, 
+   3.652467603719452*^9, 3.6524676715879536`*^9, 3.6524677787248993`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"s", "=", 
+     RowBox[{
+      RowBox[{"InputString", "[", 
+       RowBox[{
+       "\"\<Enter xml file name\>\"", ",", 
+        "\"\<engine_visibility_saliency.xml\>\""}], "]"}], "//", 
+      RowBox[{
+       RowBox[{"StringReplace", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"\"\< \>\"", "\[Rule]", "\"\<\>\""}]}], "]"}], "&"}]}]}], 
+    ";"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"xml", "=", 
+     RowBox[{"Import", "[", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~images\\\\\>\"", "<>",
+        "dataname", "<>", "xmlname"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "tfifile", ",", "volumefile", ",", "legends", ",", "face", ",", 
+       "imagefilenames", ",", "txtfilenames", ",", 
+       RowBox[{"{", 
+        RowBox[{"featurefilename", ",", "visibilityfilename"}], "}"}], ",", 
+       "resultxml", ",", "imagefile", ",", "rawfile", ",", "dataname"}], 
+      "}"}], "=", "xml"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Column", "[", 
+    RowBox[{"xml", ",", 
+     RowBox[{"Background", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Lighter", "@", "LightYellow"}], ",", 
+         RowBox[{"Lighter", "@", "LightBlue"}]}], "}"}], "}"}]}], ",", 
+     RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+     RowBox[{"FrameStyle", "\[Rule]", 
+      RowBox[{"Directive", "[", 
+       RowBox[{"LightGray", ",", "Thin", ",", "Dashed"}], "]"}]}]}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"scoremap", "=", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{"FileExistsQ", "[", "resultxml", "]"}], ",", 
+      RowBox[{"Association", "@", 
+       RowBox[{"Import", "[", "resultxml", "]"}]}], ",", 
+      RowBox[{"<|", "|>"}]}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{"resultxml", ",", 
+      RowBox[{"Normal", "[", "scoremap", "]"}]}], "]"}], ";"}]}]}]], "Input",
+ CellChangeTimes->{{3.6500156147112703`*^9, 3.6500156295805783`*^9}, {
+   3.6500156921592216`*^9, 3.650015807191111*^9}, {3.650015921533003*^9, 
+   3.6500159307146235`*^9}, {3.6500165421840696`*^9, 3.650016553141691*^9}, {
+   3.65001665361473*^9, 3.650016660578137*^9}, {3.650017282041211*^9, 
+   3.6500172865967913`*^9}, {3.6500173388982487`*^9, 3.650017458026077*^9}, {
+   3.6500176507579393`*^9, 3.650017662035861*^9}, {3.6500177925409937`*^9, 
+   3.6500177968839493`*^9}, {3.650018157533084*^9, 3.650018162540758*^9}, {
+   3.650022217625165*^9, 3.6500222180598183`*^9}, {3.6500225452010098`*^9, 
+   3.650022551270591*^9}, 3.6500231140622964`*^9, 3.6500249477788873`*^9, {
+   3.6500388097117243`*^9, 3.6500388759537706`*^9}, {3.6500390235812745`*^9, 
+   3.6500390612435393`*^9}, {3.6500391137794404`*^9, 
+   3.6500391325733123`*^9}, {3.6500392114201612`*^9, 
+   3.6500392127109685`*^9}, {3.650039248861974*^9, 3.6500392671053486`*^9}, {
+   3.6500393004326563`*^9, 3.650039362564988*^9}, {3.6500394850585613`*^9, 
+   3.6500394897101765`*^9}, {3.650039570909474*^9, 3.6500396641167297`*^9}, {
+   3.650039755411337*^9, 3.6500397556613417`*^9}, {3.650042377522483*^9, 
+   3.6500423832389755`*^9}, {3.6500449466805816`*^9, 3.65004498245288*^9}, {
+   3.6500450760135813`*^9, 3.6500450788635054`*^9}, {3.6500451328366194`*^9, 
+   3.650045142804812*^9}, {3.6500453107328563`*^9, 3.6500453258110223`*^9}, {
+   3.650098062608247*^9, 3.6500980967777996`*^9}, {3.6500991022691936`*^9, 
+   3.650099102894597*^9}, {3.650102688477276*^9, 3.650102690074266*^9}, {
+   3.650102734957528*^9, 3.650102747650358*^9}, {3.6501028439489546`*^9, 
+   3.650102844880715*^9}, 3.650103112568919*^9, {3.65012827269083*^9, 
+   3.650128290892002*^9}, 3.650128994288485*^9, 3.6501294410285034`*^9, 
+   3.650135259211527*^9, {3.650135305633783*^9, 3.6501353088126965`*^9}, 
+   3.6501397576437798`*^9, 3.65026588563083*^9, 3.652442336769842*^9, {
+   3.6524424164359283`*^9, 3.6524424368902807`*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\vismale_week_green.png.tfi\"\>"},
+    {"\<\"D:\\\\_data\\\\VisMale.tif\"\>"},
+    {
+     RowBox[{"{", 
+      RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
+       ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
+    {"\<\"left\"\>"},
+    {
+     RowBox[{"{", 
+      RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\vismale_week_green.png_saliency_chart.png\"\>", 
+       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\vismale_week_green.png_visibility_chart.png\"\>", 
+       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\vismale_week_green.png_visibility_saliency_brightness_chart.png\"\>\
+", ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\vismale_week_green.png_visibility_saliency_saturation_chart.png\"\>", 
+       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\vismale_week_green.png_visibility_saliency_weighted_chart.png\"\>"}]\
+, "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\vismale_week_green.png_saliency_chart.txt\"\>", 
+       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\vismale_week_green.png_visibility_chart.txt\"\>", 
+       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\vismale_week_green.png_visibility_saliency_brightness_chart.txt\"\>\
+", ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\vismale_week_green.png_visibility_saliency_saturation_chart.txt\"\>", 
+       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\vismale_week_green.png_visibility_saliency_weighted_chart.txt\"\>"}]\
+, "}"}]},
+    {
+     RowBox[{"{", 
+      RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\vismale_week_green.png_visibility_saliency_feature.png\"\>", 
+       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\vismale_week_green.png_visibility.raw\"\>"}], "}"}]},
+    {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\\\
+saliency.xml\"\>"},
+    {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\\\
+vismale_week_green.png.png\"\>"},
+    {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\\\
+vismale_week_green.png.raw\"\>"},
+    {"\<\"vismale_week_green.png\"\>"}
+   },
+   DefaultBaseStyle->"Column",
+   FrameStyle->Directive[
+     GrayLevel[0.85], 
+     Thickness[Tiny], 
+     Dashing[{Small, Small}]],
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+        RGBColor[1, 1, 0.9], 
+        RGBColor[0.9133333333333333, 0.96, 1]}}},
+   GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{{3.6500396867043324`*^9, 3.6500397010382366`*^9}, {
+   3.6500397419737*^9, 3.650039775282688*^9}, {3.650042371465991*^9, 
+   3.650042395651179*^9}, {3.6500443711499977`*^9, 3.6500443760327*^9}, {
+   3.6500447410130196`*^9, 3.650044784258623*^9}, {3.6500449509473476`*^9, 
+   3.650044982936763*^9}, {3.65004507199037*^9, 3.650045079339932*^9}, {
+   3.650045138629387*^9, 3.650045143674035*^9}, {3.650045320431927*^9, 
+   3.6500453281191797`*^9}, 3.650097727709149*^9, 3.650098043307847*^9, {
+   3.65009810234896*^9, 3.6500981141929803`*^9}, 3.650098145338987*^9, {
+   3.650098292146079*^9, 3.6500982925991373`*^9}, {3.650099088782655*^9, 
+   3.6500991085619106`*^9}, {3.6501026823465176`*^9, 3.650102750225094*^9}, 
+   3.65010284930906*^9, 3.6501029242183256`*^9, 3.650102957780405*^9, 
+   3.6501031147688637`*^9, {3.6501054791983624`*^9, 3.650105484093355*^9}, 
+   3.65010609916742*^9, 3.650106218064643*^9, 3.6501064827438025`*^9, {
+   3.650128279900745*^9, 3.6501283018258553`*^9}, {3.6501352438981247`*^9, 
+   3.650135262130252*^9}, 3.650135314579119*^9, 3.6501374187378287`*^9, {
+   3.6501376223116245`*^9, 3.6501376686796846`*^9}, 3.650139429704422*^9, 
+   3.6501394741507196`*^9, {3.6501397771818852`*^9, 3.650139783420369*^9}, 
+   3.6501398818748646`*^9, 3.6502658913677793`*^9, 3.6502662265721416`*^9, {
+   3.6502767647967587`*^9, 3.6502767689797587`*^9}, 3.6503709031459813`*^9, 
+   3.65037103044154*^9, {3.6503711343073*^9, 3.650371146307783*^9}, {
+   3.6503714163165574`*^9, 3.6503714337168517`*^9}, {3.6510617017531605`*^9, 
+   3.6510617056134696`*^9}, {3.6510619633800635`*^9, 
+   3.6510619700671573`*^9}, {3.65106228702495*^9, 3.6510623118723526`*^9}, 
+   3.651062342652485*^9, 3.6510625879567876`*^9, {3.6512665439163337`*^9, 
+   3.6512665604263334`*^9}, {3.65127358008959*^9, 3.651273585146389*^9}, 
+   3.6512737002562757`*^9, 3.6523861800527472`*^9, 3.6524420380098934`*^9, 
+   3.652442374435508*^9, {3.6524424220246153`*^9, 3.652442439633574*^9}, {
+   3.652442809504631*^9, 3.6524428272391415`*^9}, 3.6524429014508705`*^9, {
+   3.6524429524479656`*^9, 3.652442965909955*^9}, 3.652443251416909*^9, 
+   3.6524435970817738`*^9, 3.652443790338356*^9, {3.652445275626127*^9, 
+   3.652445283017937*^9}, 3.6524457191190453`*^9, {3.652454829327335*^9, 
+   3.65245483934713*^9}, 3.652457359155572*^9, 3.652465360619176*^9, 
+   3.652466839174568*^9, 3.652467343137862*^9, 3.6524676038224044`*^9, 
+   3.65246767168943*^9, 3.6524677788219075`*^9}],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.6500396867043324`*^9, 3.6500397010382366`*^9}, {
+   3.6500397419737*^9, 3.650039775282688*^9}, {3.650042371465991*^9, 
+   3.650042395651179*^9}, {3.6500443711499977`*^9, 3.6500443760327*^9}, {
+   3.6500447410130196`*^9, 3.650044784258623*^9}, {3.6500449509473476`*^9, 
+   3.650044982936763*^9}, {3.65004507199037*^9, 3.650045079339932*^9}, {
+   3.650045138629387*^9, 3.650045143674035*^9}, {3.650045320431927*^9, 
+   3.6500453281191797`*^9}, 3.650097727709149*^9, 3.650098043307847*^9, {
+   3.65009810234896*^9, 3.6500981141929803`*^9}, 3.650098145338987*^9, {
+   3.650098292146079*^9, 3.6500982925991373`*^9}, {3.650099088782655*^9, 
+   3.6500991085619106`*^9}, {3.6501026823465176`*^9, 3.650102750225094*^9}, 
+   3.65010284930906*^9, 3.6501029242183256`*^9, 3.650102957780405*^9, 
+   3.6501031147688637`*^9, {3.6501054791983624`*^9, 3.650105484093355*^9}, 
+   3.65010609916742*^9, 3.650106218064643*^9, 3.6501064827438025`*^9, {
+   3.650128279900745*^9, 3.6501283018258553`*^9}, {3.6501352438981247`*^9, 
+   3.650135262130252*^9}, 3.650135314579119*^9, 3.6501374187378287`*^9, {
+   3.6501376223116245`*^9, 3.6501376686796846`*^9}, 3.650139429704422*^9, 
+   3.6501394741507196`*^9, {3.6501397771818852`*^9, 3.650139783420369*^9}, 
+   3.6501398818748646`*^9, 3.6502658913677793`*^9, 3.6502662265721416`*^9, {
+   3.6502767647967587`*^9, 3.6502767689797587`*^9}, 3.6503709031459813`*^9, 
+   3.65037103044154*^9, {3.6503711343073*^9, 3.650371146307783*^9}, {
+   3.6503714163165574`*^9, 3.6503714337168517`*^9}, {3.6510617017531605`*^9, 
+   3.6510617056134696`*^9}, {3.6510619633800635`*^9, 
+   3.6510619700671573`*^9}, {3.65106228702495*^9, 3.6510623118723526`*^9}, 
+   3.651062342652485*^9, 3.6510625879567876`*^9, {3.6512665439163337`*^9, 
+   3.6512665604263334`*^9}, {3.65127358008959*^9, 3.651273585146389*^9}, 
+   3.6512737002562757`*^9, 3.6523861800527472`*^9, 3.6524420380098934`*^9, 
+   3.652442374435508*^9, {3.6524424220246153`*^9, 3.652442439633574*^9}, {
+   3.652442809504631*^9, 3.6524428272391415`*^9}, 3.6524429014508705`*^9, {
+   3.6524429524479656`*^9, 3.652442965909955*^9}, 3.652443251416909*^9, 
+   3.6524435970817738`*^9, 3.652443790338356*^9, {3.652445275626127*^9, 
+   3.652445283017937*^9}, 3.6524457191190453`*^9, {3.652454829327335*^9, 
+   3.65245483934713*^9}, 3.652457359155572*^9, 3.652465360619176*^9, 
+   3.652466839174568*^9, 3.652467343137862*^9, 3.6524676038224044`*^9, 
+   3.65246767168943*^9, 3.6524677788279114`*^9}]
+}, Open  ]]
+},
+WindowSize->{1282, 797},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 7, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1834, 39, 132, "Input"],
+Cell[CellGroupData[{
+Cell[2417, 63, 3163, 71, 412, "Input"],
+Cell[5583, 136, 465, 7, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6085, 148, 2505, 60, 372, "Input"],
+Cell[8593, 210, 441, 7, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9071, 222, 2647, 63, 372, "Input"],
+Cell[11721, 287, 517, 8, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12275, 300, 2640, 63, 352, "Input"],
+Cell[14918, 365, 192, 3, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15147, 373, 2454, 60, 312, "Input"],
+Cell[17604, 435, 192, 3, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17833, 443, 2548, 62, 392, "Input"],
+Cell[20384, 507, 644, 9, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21065, 521, 2607, 63, 392, "Input"],
+Cell[23675, 586, 649, 9, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24361, 600, 2831, 65, 492, "Input"],
+Cell[27195, 667, 793, 11, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28025, 683, 4018, 82, 152, "Input"],
+Cell[32046, 767, 5581, 95, 389, "Output"],
+Cell[37630, 864, 2553, 35, 31, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,1755 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     73017,       1746]
+NotebookOptionsPosition[     72607,       1728]
+NotebookOutlinePosition[     72949,       1743]
+CellTagsIndexPosition[     72906,       1740]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"top", ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "list", ",", "count", ",", "img", ",", "list2", ",", "list3", ",", 
+      "tmp"}], "}"}], ",", 
+    RowBox[{"(*", " ", "top", " ", "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"list", "=", 
+      RowBox[{"Image3DSlices", "[", 
+       RowBox[{"d", ",", "All", ",", "1"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"count", "=", 
+      RowBox[{"Length", "[", "list", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"img", "=", 
+      RowBox[{"First", "[", "list", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list2", "=", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"img", "=", 
+          RowBox[{"ImageApply", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#1", "+", 
+              RowBox[{
+               RowBox[{"Clip", "[", 
+                RowBox[{
+                 RowBox[{"1", "-", "#1"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "1"}], "}"}]}], "]"}], "*", 
+               RowBox[{"f", "[", "#2", "]"}]}]}], "&"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"img", ",", 
+              RowBox[{"list", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "2", ",", "count"}], "}"}]}], "]"}], "//", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"First", "[", "list", "]"}], "}"}], ",", "#"}], "]"}], 
+        "&"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list3", "=", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"ImageSubtract", "[", 
+          RowBox[{
+           RowBox[{"list2", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"list2", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", "-", "1"}], "]"}], "]"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "2", ",", "count"}], "}"}]}], "]"}], "//", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"First", "[", "list", "]"}], "}"}], ",", "#"}], "]"}], 
+        "&"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"d1", "=", 
+      RowBox[{"Image3D", "[", "list3", "]"}]}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"back", ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "list", ",", "count", ",", "img", ",", "list2", ",", "list3", ",", 
+      "tmp"}], "}"}], ",", 
+    RowBox[{"(*", " ", "back", " ", "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"list", "=", 
+      RowBox[{"Image3DSlices", "[", 
+       RowBox[{"d", ",", "All", ",", "2"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"count", "=", 
+      RowBox[{"Length", "[", "list", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"img", "=", 
+      RowBox[{"First", "[", "list", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list2", "=", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"img", "=", 
+          RowBox[{"ImageApply", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#1", "+", 
+              RowBox[{
+               RowBox[{"Clip", "[", 
+                RowBox[{
+                 RowBox[{"1", "-", "#1"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "1"}], "}"}]}], "]"}], "*", 
+               RowBox[{"f", "[", "#2", "]"}]}]}], "&"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"img", ",", 
+              RowBox[{"list", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "2", ",", "count"}], "}"}]}], "]"}], "//", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"First", "[", "list", "]"}], "}"}], ",", "#"}], "]"}], 
+        "&"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list3", "=", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"ImageSubtract", "[", 
+          RowBox[{
+           RowBox[{"list2", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"list2", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", "-", "1"}], "]"}], "]"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "2", ",", "count"}], "}"}]}], "]"}], "//", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"First", "[", "list", "]"}], "}"}], ",", "#"}], "]"}], 
+        "&"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"tmp", "=", 
+      RowBox[{"Image3D", "[", 
+       RowBox[{"Reverse", "[", "list3", "]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"d2", "=", 
+      RowBox[{"ImageRotate", "[", 
+       RowBox[{"tmp", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"90", " ", "Degree"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "0", ",", "0"}], "}"}]}], "}"}]}], "]"}]}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"left", ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "list", ",", "count", ",", "img", ",", "list2", ",", "list3", ",", 
+      "tmp"}], "}"}], ",", 
+    RowBox[{"(*", " ", "left", " ", "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"list", "=", 
+      RowBox[{"Image3DSlices", "[", 
+       RowBox[{"d", ",", "All", ",", "3"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"count", "=", 
+      RowBox[{"Length", "[", "list", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"img", "=", 
+      RowBox[{"First", "[", "list", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list2", "=", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"img", "=", 
+          RowBox[{"ImageApply", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#1", "+", 
+              RowBox[{
+               RowBox[{"Clip", "[", 
+                RowBox[{
+                 RowBox[{"1", "-", "#1"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "1"}], "}"}]}], "]"}], "*", 
+               RowBox[{"f", "[", "#2", "]"}]}]}], "&"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"img", ",", 
+              RowBox[{"list", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "2", ",", "count"}], "}"}]}], "]"}], "//", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"First", "[", "list", "]"}], "}"}], ",", "#"}], "]"}], 
+        "&"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list3", "=", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"ImageSubtract", "[", 
+          RowBox[{
+           RowBox[{"list2", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"list2", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", "-", "1"}], "]"}], "]"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "2", ",", "count"}], "}"}]}], "]"}], "//", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"First", "[", "list", "]"}], "}"}], ",", "#"}], "]"}], 
+        "&"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"tmp", "=", 
+      RowBox[{"Image3D", "[", "list3", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"d3", "=", 
+      RowBox[{
+       RowBox[{"ImageRotate", "[", 
+        RowBox[{"tmp", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"90", " ", "Degree"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "0", ",", "0"}], "}"}]}], "}"}]}], "]"}], "//", 
+       RowBox[{
+        RowBox[{"ImageRotate", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{"-", "90"}], " ", "Degree"}]}], "]"}], "&"}]}]}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"bottom", ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "list", ",", "count", ",", "img", ",", "list2", ",", "list3", ",", 
+      "tmp"}], "}"}], ",", 
+    RowBox[{"(*", " ", "bottom", " ", "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"list", "=", 
+      RowBox[{"Reverse", "@", 
+       RowBox[{"Image3DSlices", "[", 
+        RowBox[{"d", ",", "All", ",", "1"}], "]"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"count", "=", 
+      RowBox[{"Length", "[", "list", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"img", "=", 
+      RowBox[{"First", "[", "list", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list2", "=", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"img", "=", 
+          RowBox[{"ImageApply", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#1", "+", 
+              RowBox[{
+               RowBox[{"Clip", "[", 
+                RowBox[{
+                 RowBox[{"1", "-", "#1"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "1"}], "}"}]}], "]"}], "*", 
+               RowBox[{"f", "[", "#2", "]"}]}]}], "&"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"img", ",", 
+              RowBox[{"list", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "2", ",", "count"}], "}"}]}], "]"}], "//", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"First", "[", "list", "]"}], "}"}], ",", "#"}], "]"}], 
+        "&"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list3", "=", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"ImageSubtract", "[", 
+          RowBox[{
+           RowBox[{"list2", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"list2", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", "-", "1"}], "]"}], "]"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "2", ",", "count"}], "}"}]}], "]"}], "//", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"First", "[", "list", "]"}], "}"}], ",", "#"}], "]"}], 
+        "&"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"d4", "=", 
+      RowBox[{"Image3D", "[", 
+       RowBox[{"Reverse", "[", "list3", "]"}], "]"}]}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"front", ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "list", ",", "count", ",", "img", ",", "list2", ",", "list3", ",", 
+      "tmp"}], "}"}], ",", 
+    RowBox[{"(*", " ", "front", " ", "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"list", "=", 
+      RowBox[{"Reverse", "@", 
+       RowBox[{"Image3DSlices", "[", 
+        RowBox[{"d", ",", "All", ",", "2"}], "]"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"count", "=", 
+      RowBox[{"Length", "[", "list", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"img", "=", 
+      RowBox[{"First", "[", "list", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list2", "=", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"img", "=", 
+          RowBox[{"ImageApply", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#1", "+", 
+              RowBox[{
+               RowBox[{"Clip", "[", 
+                RowBox[{
+                 RowBox[{"1", "-", "#1"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "1"}], "}"}]}], "]"}], "*", 
+               RowBox[{"f", "[", "#2", "]"}]}]}], "&"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"img", ",", 
+              RowBox[{"list", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "2", ",", "count"}], "}"}]}], "]"}], "//", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"First", "[", "list", "]"}], "}"}], ",", "#"}], "]"}], 
+        "&"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list3", "=", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"ImageSubtract", "[", 
+          RowBox[{
+           RowBox[{"list2", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"list2", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", "-", "1"}], "]"}], "]"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "2", ",", "count"}], "}"}]}], "]"}], "//", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"First", "[", "list", "]"}], "}"}], ",", "#"}], "]"}], 
+        "&"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"tmp", "=", 
+      RowBox[{"Image3D", "[", "list3", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"d5", "=", 
+      RowBox[{"ImageRotate", "[", 
+       RowBox[{"tmp", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"90", " ", "Degree"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "0", ",", "0"}], "}"}]}], "}"}]}], "]"}]}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"right", ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "list", ",", "count", ",", "img", ",", "list2", ",", "list3", ",", 
+      "tmp"}], "}"}], ",", 
+    RowBox[{"(*", " ", "right", " ", "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"list", "=", 
+      RowBox[{"Reverse", "@", 
+       RowBox[{"Image3DSlices", "[", 
+        RowBox[{"d", ",", "All", ",", "3"}], "]"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"count", "=", 
+      RowBox[{"Length", "[", "list", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"img", "=", 
+      RowBox[{"First", "[", "list", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list2", "=", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"img", "=", 
+          RowBox[{"ImageApply", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#1", "+", 
+              RowBox[{
+               RowBox[{"Clip", "[", 
+                RowBox[{
+                 RowBox[{"1", "-", "#1"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "1"}], "}"}]}], "]"}], "*", 
+               RowBox[{"f", "[", "#2", "]"}]}]}], "&"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"img", ",", 
+              RowBox[{"list", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], "}"}]}], "]"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "2", ",", "count"}], "}"}]}], "]"}], "//", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"First", "[", "list", "]"}], "}"}], ",", "#"}], "]"}], 
+        "&"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"list3", "=", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"ImageSubtract", "[", 
+          RowBox[{
+           RowBox[{"list2", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"list2", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", "-", "1"}], "]"}], "]"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "2", ",", "count"}], "}"}]}], "]"}], "//", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"First", "[", "list", "]"}], "}"}], ",", "#"}], "]"}], 
+        "&"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"tmp", "=", 
+      RowBox[{"Image3D", "[", 
+       RowBox[{"Reverse", "[", "list3", "]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"d6", "=", 
+      RowBox[{
+       RowBox[{"ImageRotate", "[", 
+        RowBox[{"tmp", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"90", " ", "Degree"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "0", ",", "0"}], "}"}]}], "}"}]}], "]"}], "//", 
+       RowBox[{
+        RowBox[{"ImageRotate", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{"-", "90"}], " ", "Degree"}]}], "]"}], "&"}]}]}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"renderslices", "=", 
+   RowBox[{"<|", 
+    RowBox[{
+     RowBox[{"\"\<top\>\"", ":>", "top"}], ",", 
+     RowBox[{"\"\<back\>\"", ":>", "back"}], ",", 
+     RowBox[{"\"\<left\>\"", ":>", "left"}], ",", 
+     RowBox[{"\"\<bottom\>\"", ":>", "bottom"}], ",", 
+     RowBox[{"\"\<front\>\"", ":>", "front"}], ",", 
+     RowBox[{"\"\<right\>\"", ":>", "right"}]}], "|>"}]}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.6497658087551594`*^9, {3.6500192087685156`*^9, 3.6500192515699186`*^9}, 
+   3.65001931599556*^9, 3.6500195767484913`*^9, {3.6500207005273647`*^9, 
+   3.6500207022587805`*^9}, {3.6500207616615167`*^9, 3.650020797308521*^9}, {
+   3.650021623097101*^9, 3.65002162514269*^9}, {3.650021797399176*^9, 
+   3.6500218313512917`*^9}, {3.6524449692677517`*^9, 
+   3.6524449994548016`*^9}, {3.652445185962063*^9, 3.652445204009885*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{"DeleteDuplicates", "@", 
+    RowBox[{
+    "StringSplit", "@", 
+     "\"\<CT-Knee_naive_optimized_green_1000\nCT-Knee_naive\n\
+CT-Knee_strong_green\nCT-Knee_strong_red\n\
+CT-Knee_weak_green_optimized_green_1000\nCT-Knee_weak_green\n\
+CT-Knee_weak_red_optimized_red_1000\nCT-Knee_weak_red\nengine_medium_green\n\
+engine_naive_optimized_green_1000\nengine_naive\nengine_strong_green\n\
+engine_weak_green\nengine_weak_red_optimized_red_1000\nengine_weak_red\n\
+foot_green_medium_optimized_green_1000\nfoot_green_medium\nfoot_green_strong\n\
+foot_green_weak\nfoot_naive_optimized_green_1000\nfoot_naive\n\
+horse_embryo_45_days_naive2_optimized_blue_1000\nhorse_embryo_45_days_naive2\n\
+horse_embryo_45_days_naive2\nhorse_embryo_45_days_naive_optimized_blue_1000\n\
+horse_embryo_45_days_naive_optimized_blue_1000\nhorse_embryo_45_days_naive\n\
+MRbrain_naive_optimized_green_1000\nMRbrain_naive\nMRbrain_strong_green\n\
+MRbrain_weak_green\nnucleon_naive_optimized_green_1000\n\
+nucleon_naive_optimized_green_1000\nnucleon_naive_optimized_red_1000\n\
+nucleon_naive_optimized_red_1000\nnucleon_naive\nnucleon_naive\n\
+nucleon_strong_red_coronal\nnucleon_weak_red_coronal\n\
+tooth_naive_optimized_yellow_1000\ntooth_naive_optimized_yellow_1000\n\
+tooth_naive\ntooth_naive\ntooth_strong_yellow\n\
+tooth_weak_yellow_optimized_yellow_1000\ntooth_weak_yellow\n\
+vismale_naive_optimized_green_1000.png\nvismale_naive_optimized_red_1000.png\n\
+vismale_naive.png\nvismale_naive.png\nvismale_strong_green_only.png\n\
+vismale_strong_green.png\nvismale_strong_red_only.png\nvismale_strong_red.png\
+\nvismale_weak_red_only.png\nvismale_weak_red.png\n\
+vismale_week_green_only.png\nvismale_week_green.png\>\""}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6524457566788445`*^9, 3.652445760510152*^9}, {
+   3.652445796192479*^9, 3.6524458242254868`*^9}, 3.6524674611195855`*^9, {
+   3.652467550199399*^9, 3.6524675511732492`*^9}, {3.6524675839813433`*^9, 
+   3.6524675850666614`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"s", "=", 
+     RowBox[{
+      RowBox[{"InputString", "[", 
+       RowBox[{"\"\<Enter xml file name\>\"", ",", "\"\<tooth.xml\>\""}], 
+       "]"}], "//", 
+      RowBox[{
+       RowBox[{"StringReplace", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"\"\< \>\"", "\[Rule]", "\"\<\>\""}]}], "]"}], "&"}]}]}], 
+    ";"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Table", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"xml", "=", 
+      RowBox[{"Import", "[", 
+       RowBox[{
+        RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~images\\\\\>\"", 
+        "<>", 
+        RowBox[{"str", "[", 
+         RowBox[{"[", "xmlindex", "]"}], "]"}], "<>", "\"\<.xml\>\""}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "tfifile", ",", "volumefile", ",", "legends", ",", "face", ",", 
+        "imagefilenames", ",", "txtfilenames", ",", 
+        RowBox[{"{", 
+         RowBox[{"featurefilename", ",", "visibilityfilename"}], "}"}], ",", 
+        "resultxml", ",", "imagefile", ",", "rawfile", ",", "dataname"}], 
+       "}"}], "=", "xml"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"Column", "[", 
+       RowBox[{"xml", ",", 
+        RowBox[{"Background", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Lighter", "@", "LightYellow"}], ",", 
+            RowBox[{"Lighter", "@", "LightBlue"}]}], "}"}], "}"}]}], ",", 
+        RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+        RowBox[{"FrameStyle", "\[Rule]", 
+         RowBox[{"Directive", "[", 
+          RowBox[{"LightGray", ",", "Thin", ",", "Dashed"}], "]"}]}]}], "]"}],
+       "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"tf", "=", 
+      RowBox[{"Import", "[", 
+       RowBox[{"tfifile", ",", "\"\<XML\>\""}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"bincount", "=", "256"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"intensity", "=", 
+      RowBox[{"ToExpression", "@", 
+       RowBox[{"Cases", "[", 
+        RowBox[{"tf", ",", 
+         RowBox[{
+          RowBox[{"XMLElement", "[", 
+           RowBox[{"\"\<intensity\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"\"\<value\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
+             "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+         "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"r", "=", 
+      RowBox[{"ToExpression", "@", 
+       RowBox[{"Cases", "[", 
+        RowBox[{"tf", ",", 
+         RowBox[{
+          RowBox[{"XMLElement", "[", 
+           RowBox[{"\"\<colorL\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"\"\<r\>\"", "\[Rule]", "atrib_"}], ",", "___"}], "}"}],
+             ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+         "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"g", "=", 
+      RowBox[{"ToExpression", "@", 
+       RowBox[{"Cases", "[", 
+        RowBox[{"tf", ",", 
+         RowBox[{
+          RowBox[{"XMLElement", "[", 
+           RowBox[{"\"\<colorL\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{"___", ",", 
+              RowBox[{"\"\<g\>\"", "\[Rule]", "atrib_"}], ",", "___"}], "}"}],
+             ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+         "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"b", "=", 
+      RowBox[{"ToExpression", "@", 
+       RowBox[{"Cases", "[", 
+        RowBox[{"tf", ",", 
+         RowBox[{
+          RowBox[{"XMLElement", "[", 
+           RowBox[{"\"\<colorL\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{"___", ",", 
+              RowBox[{"\"\<b\>\"", "\[Rule]", "atrib_"}], ",", "___"}], "}"}],
+             ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+         "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"a", "=", 
+      RowBox[{"ToExpression", "@", 
+       RowBox[{"Cases", "[", 
+        RowBox[{"tf", ",", 
+         RowBox[{
+          RowBox[{"XMLElement", "[", 
+           RowBox[{"\"\<colorL\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{"___", ",", 
+              RowBox[{"\"\<a\>\"", "\[Rule]", "atrib_"}]}], "}"}], ",", 
+            "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", "\[Infinity]"}],
+         "]"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"rgbcolors", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{"r", ",", "g", ",", "b"}], "}"}], "]"}]}], "//", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"RGBColor", "/@", "#"}], "&"}], ")"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"rgbfunction", "=", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Blend", "[", 
+         RowBox[{
+          RowBox[{"Transpose", "[", 
+           RowBox[{"{", 
+            RowBox[{"intensity", ",", "rgbcolors"}], "}"}], "]"}], ",", " ", 
+          "#1"}], "]"}], " ", "&"}], " ", ")"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"rgba", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", 
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{"r", ",", "g", ",", "b", ",", "a"}], "}"}], "]"}]}], "//", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"RGBColor", "/@", "#"}], "&"}], ")"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"rgbafunction", "=", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Blend", "[", 
+         RowBox[{
+          RowBox[{"Transpose", "[", 
+           RowBox[{"{", 
+            RowBox[{"intensity", ",", "rgba"}], "}"}], "]"}], ",", " ", 
+          "#1"}], "]"}], " ", "&"}], " ", ")"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"alpha", "=", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", "a"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"intensity0", "=", "intensity"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"alpha0", "=", "alpha"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"First", "[", "intensity0", "]"}], ">", "0"}], ",", 
+       RowBox[{
+        RowBox[{"intensity0", "=", 
+         RowBox[{"Join", "[", 
+          RowBox[{
+           RowBox[{"{", "0", "}"}], ",", "intensity0"}], "]"}]}], ";", 
+        RowBox[{"alpha0", "=", 
+         RowBox[{"Join", "[", 
+          RowBox[{
+           RowBox[{"{", "0", "}"}], ",", "alpha0"}], "]"}]}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Last", "[", "intensity0", "]"}], "<", "1"}], ",", 
+       RowBox[{
+        RowBox[{"intensity0", "=", 
+         RowBox[{"Join", "[", 
+          RowBox[{"intensity0", ",", 
+           RowBox[{"{", "1", "}"}]}], "]"}]}], ";", 
+        RowBox[{"alpha0", "=", 
+         RowBox[{"Join", "[", 
+          RowBox[{"alpha0", ",", 
+           RowBox[{"{", "0", "}"}]}], "]"}]}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"ListLinePlot", "[", 
+       RowBox[{
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{"intensity0", ",", "alpha0"}], "}"}], "]"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"ColorFunction", "\[Rule]", "rgbfunction"}], ",", 
+        RowBox[{
+        "PlotLegends", "\[Rule]", 
+         "\"\<user specified transfer function\>\""}]}], "]"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"f", "=", 
+      RowBox[{"Interpolation", "[", 
+       RowBox[{
+        RowBox[{"Transpose", "[", 
+         RowBox[{"{", 
+          RowBox[{"intensity0", ",", "alpha0"}], "}"}], "]"}], ",", 
+        RowBox[{"InterpolationOrder", "\[Rule]", "1"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"Plot", "[", 
+       RowBox[{
+        RowBox[{"f", "[", "x", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"ColorFunction", "\[Rule]", "rgbfunction"}], ",", 
+        RowBox[{
+        "PlotLegends", "\[Rule]", 
+         "\"\<user specified transfer function\>\""}]}], "]"}], "*)"}], 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"d", " ", "=", " ", 
+      RowBox[{"Import", "[", 
+       RowBox[{"volumefile", ",", "\"\<Image3D\>\""}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"colorized", "=", 
+      RowBox[{"Image3D", "[", 
+       RowBox[{"d", ",", 
+        RowBox[{"ColorFunction", "\[Rule]", "rgbafunction"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"ImageDimensions", "[", "d", "]"}], "*)"}], 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"pos", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"intensity", "[", 
+         RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", 
+       RowBox[{"Position", "[", 
+        RowBox[{"alpha", ",", 
+         RowBox[{"_", "?", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"#", "==", "0"}], "&"}], ")"}]}]}], "]"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"features", "=", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"ImageApply", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#", "\[GreaterEqual]", 
+               RowBox[{"First", "[", 
+                RowBox[{"pos", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}], "]"}]}], " ", "&&", " ", 
+              RowBox[{"#", "\[LessEqual]", 
+               RowBox[{"First", "[", 
+                RowBox[{"pos", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"i", "+", "1"}], "]"}], "]"}], "]"}]}]}], ",", "1", 
+             ",", "0"}], "]"}], "&"}], ",", "d"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "1", ",", 
+          RowBox[{"Length", "[", "pos", "]"}], ",", "2"}], "}"}]}], "]"}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"chartcolors", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"rgbcolors", "[", 
+          RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", 
+        RowBox[{"Position", "[", 
+         RowBox[{"alpha", ",", 
+          RowBox[{"_", "?", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"#", ">", "0"}], "&"}], ")"}]}]}], "]"}]}], "//", 
+       "Flatten"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"colorizedfeatures", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"ImageMultiply", "[", 
+         RowBox[{"colorized", ",", "#"}], "]"}], "&"}], "/@", "features"}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"viewpoints", "=", 
+      RowBox[{"<|", 
+       RowBox[{
+        RowBox[{"\"\<top\>\"", "\[RuleDelayed]", "Top"}], ",", 
+        RowBox[{"\"\<back\>\"", "\[RuleDelayed]", "Back"}], ",", 
+        RowBox[{"\"\<left\>\"", "\[RuleDelayed]", "Left"}], ",", 
+        RowBox[{"\"\<bottom\>\"", "\[RuleDelayed]", "Bottom"}], ",", 
+        RowBox[{"\"\<front\>\"", "\[RuleDelayed]", "Front"}], ",", 
+        RowBox[{"\"\<right\>\"", "\[RuleDelayed]", "Right"}]}], "|>"}]}], ";",
+      "\[IndentingNewLine]", 
+     RowBox[{"MapIndexed", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Export", "[", 
+         RowBox[{
+          RowBox[{"StringReplace", "[", 
+           RowBox[{"imagefile", ",", 
+            RowBox[{"\"\<.\>\"", "\[Rule]", 
+             RowBox[{"\"\<_\>\"", "<>", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"First", "[", "#2", "]"}], "]"}], "<>", 
+              "\"\<.\>\""}]}]}], "]"}], ",", 
+          RowBox[{"Show", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"Boxed", "->", "False"}], ",", 
+            RowBox[{"ViewPoint", "\[Rule]", 
+             RowBox[{"viewpoints", "[", "face", "]"}]}]}], "]"}]}], "]"}], 
+        "&"}], ",", "colorizedfeatures"}], "]"}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"lightness", ",", "chroma", ",", "hue", ",", "opacity"}], 
+       "}"}], "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"ImageApply", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"List", "@@", 
+            RowBox[{"rgbafunction", "[", "#", "]"}]}], "&"}], ",", "d"}], 
+         "]"}], "//", 
+        RowBox[{
+         RowBox[{"Image3D", "[", 
+          RowBox[{"#", ",", 
+           RowBox[{"ColorSpace", "\[Rule]", "\"\<RGB\>\""}]}], "]"}], "&"}]}],
+        "//", 
+       RowBox[{
+        RowBox[{"ColorSeparate", "[", 
+         RowBox[{"ColorConvert", "[", 
+          RowBox[{"#", ",", "\"\<LCH\>\""}], "]"}], "]"}], "&"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"lo", "=", 
+        RowBox[{"ImageMultiply", "[", 
+         RowBox[{"lightness", ",", "opacity"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"co", "=", 
+        RowBox[{"ImageMultiply", "[", 
+         RowBox[{"chroma", ",", "opacity"}], "]"}]}], ";"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"g1", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"ImageDifference", "[", 
+           RowBox[{
+            RowBox[{"GaussianFilter", "[", 
+             RowBox[{"lightness", ",", 
+              RowBox[{"{", 
+               RowBox[{"2", ",", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "2"}]}], 
+               "}"}]}], "]"}], ",", 
+            RowBox[{"GaussianFilter", "[", 
+             RowBox[{"lightness", ",", 
+              RowBox[{"{", 
+               RowBox[{"4", ",", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "4"}]}], 
+               "}"}]}], "]"}]}], "]"}], "\[IndentingNewLine]", "g2"}], "=", 
+         RowBox[{
+          RowBox[{"ImageDifference", "[", 
+           RowBox[{
+            RowBox[{"GaussianFilter", "[", 
+             RowBox[{"chroma", ",", 
+              RowBox[{"{", 
+               RowBox[{"2", ",", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "2"}]}], 
+               "}"}]}], "]"}], ",", 
+            RowBox[{"GaussianFilter", "[", 
+             RowBox[{"chroma", ",", 
+              RowBox[{"{", 
+               RowBox[{"4", ",", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "4"}]}], 
+               "}"}]}], "]"}]}], "]"}], "\[IndentingNewLine]", 
+          RowBox[{"g3", "=", 
+           RowBox[{"ImageDifference", "[", 
+            RowBox[{
+             RowBox[{"GaussianFilter", "[", 
+              RowBox[{"hue", ",", 
+               RowBox[{"{", 
+                RowBox[{"2", ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "2"}]}],
+                 "}"}]}], "]"}], ",", 
+             RowBox[{"GaussianFilter", "[", 
+              RowBox[{"hue", ",", 
+               RowBox[{"{", 
+                RowBox[{"4", ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "4"}]}],
+                 "}"}]}], "]"}]}], "]"}]}]}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"g4", "=", 
+        RowBox[{"ImageDifference", "[", 
+         RowBox[{
+          RowBox[{"GaussianFilter", "[", 
+           RowBox[{"opacity", ",", 
+            RowBox[{"{", 
+             RowBox[{"2", ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "2"}]}], 
+             "}"}]}], "]"}], ",", 
+          RowBox[{"GaussianFilter", "[", 
+           RowBox[{"opacity", ",", 
+            RowBox[{"{", 
+             RowBox[{"4", ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "4"}]}], 
+             "}"}]}], "]"}]}], "]"}]}], ";"}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"g1", ",", "g2"}], "}"}], "=", 
+      RowBox[{"ParallelMap", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"ImageDifference", "[", 
+          RowBox[{
+           RowBox[{"GaussianFilter", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{"{", 
+              RowBox[{"2", ",", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "2"}]}], 
+              "}"}]}], "]"}], ",", 
+           RowBox[{"GaussianFilter", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{"{", 
+              RowBox[{"4", ",", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "4"}]}], 
+              "}"}]}], "]"}]}], "]"}], "&"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"lightness", ",", "chroma"}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"vis", "=", 
+      RowBox[{"renderslices", "[", "face", "]"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"visibility", "=", 
+      RowBox[{"ParallelTable", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"ImageMeasurements", "[", 
+          RowBox[{
+           RowBox[{"ImageMultiply", "[", 
+            RowBox[{"vis", ",", 
+             RowBox[{"features", "[", 
+              RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+           "\"\<TotalIntensity\>\""}], "]"}], "/", 
+         RowBox[{"ImageMeasurements", "[", 
+          RowBox[{"vis", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Length", "[", "features", "]"}]}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"chart1", "=", 
+      RowBox[{"BarChart", "[", 
+       RowBox[{"visibility", ",", 
+        RowBox[{"PlotLabel", "\[Rule]", "\"\<Visibility\>\""}], ",", 
+        RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
+        RowBox[{"ChartStyle", "\[Rule]", 
+         RowBox[{"Darker", "@", "chartcolors"}]}], ",", 
+        RowBox[{"ChartLabels", "\[Rule]", 
+         RowBox[{"Placed", "[", 
+          RowBox[{
+           RowBox[{"ToString", "/@", "visibility"}], ",", "Above"}], 
+          "]"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"dog", "=", "g1"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"saliency", "=", 
+      RowBox[{"ParallelTable", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"ImageMeasurements", "[", 
+          RowBox[{
+           RowBox[{"ImageMultiply", "[", 
+            RowBox[{"dog", ",", 
+             RowBox[{"features", "[", 
+              RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+           "\"\<TotalIntensity\>\""}], "]"}], "/", 
+         RowBox[{"ImageMeasurements", "[", 
+          RowBox[{"dog", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Length", "[", "features", "]"}]}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"chart0", "=", 
+      RowBox[{"BarChart", "[", 
+       RowBox[{"saliency", ",", 
+        RowBox[{"PlotLabel", "\[Rule]", "\"\<Saliency\>\""}], ",", 
+        RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
+        RowBox[{"ChartStyle", "\[Rule]", 
+         RowBox[{"Darker", "@", 
+          RowBox[{"Darker", "@", "chartcolors"}]}]}], ",", 
+        RowBox[{"ChartLabels", "\[Rule]", 
+         RowBox[{"Placed", "[", 
+          RowBox[{
+           RowBox[{"ToString", "/@", "saliency"}], ",", "Above"}], "]"}]}]}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"viss", "=", 
+      RowBox[{"ImageMultiply", "[", 
+       RowBox[{"dog", ",", "vis"}], "]"}]}], ";", 
+     RowBox[{"(*", " ", 
+      RowBox[{"weighted", " ", "by", " ", "lightness", " ", "DoG", " ", 
+       RowBox[{"(", 
+        RowBox[{"difference", " ", "of", " ", "Gaussians"}], ")"}]}], " ", 
+      "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"vs", "=", 
+      RowBox[{"ParallelTable", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"ImageMeasurements", "[", 
+          RowBox[{
+           RowBox[{"ImageMultiply", "[", 
+            RowBox[{"viss", ",", 
+             RowBox[{"features", "[", 
+              RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+           "\"\<TotalIntensity\>\""}], "]"}], "/", 
+         RowBox[{"ImageMeasurements", "[", 
+          RowBox[{"viss", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Length", "[", "features", "]"}]}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"chart2", "=", 
+      RowBox[{"BarChart", "[", 
+       RowBox[{"vs", ",", 
+        RowBox[{
+        "PlotLabel", "\[Rule]", 
+         "\"\<Visibility-weighted saliency of brightness\>\""}], ",", 
+        RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
+        RowBox[{"ChartStyle", "\[Rule]", 
+         RowBox[{"Lighter", "@", "chartcolors"}]}], ",", 
+        RowBox[{"ChartLabels", "\[Rule]", 
+         RowBox[{"Placed", "[", 
+          RowBox[{
+           RowBox[{"ToString", "/@", "vs"}], ",", "Above"}], "]"}]}]}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"viss2", "=", 
+      RowBox[{"ImageMultiply", "[", 
+       RowBox[{"g2", ",", "vis"}], "]"}]}], ";", 
+     RowBox[{"(*", " ", 
+      RowBox[{"weighted", " ", "by", " ", "chroma", " ", "DoG"}], " ", "*)"}],
+      "\[IndentingNewLine]", 
+     RowBox[{"vs2", "=", 
+      RowBox[{"ParallelTable", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"ImageMeasurements", "[", 
+          RowBox[{
+           RowBox[{"ImageMultiply", "[", 
+            RowBox[{"viss2", ",", 
+             RowBox[{"features", "[", 
+              RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+           "\"\<TotalIntensity\>\""}], "]"}], "/", 
+         RowBox[{"ImageMeasurements", "[", 
+          RowBox[{"viss2", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Length", "[", "features", "]"}]}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"chart2b", "=", 
+      RowBox[{"BarChart", "[", 
+       RowBox[{"vs2", ",", 
+        RowBox[{
+        "PlotLabel", "\[Rule]", 
+         "\"\<Visibility-weighted saliency of saturation\>\""}], ",", 
+        RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
+        RowBox[{"ChartStyle", "\[Rule]", 
+         RowBox[{"Lighter", "@", "chartcolors"}]}], ",", 
+        RowBox[{"ChartLabels", "\[Rule]", 
+         RowBox[{"Placed", "[", 
+          RowBox[{
+           RowBox[{"ToString", "/@", "vs2"}], ",", "Above"}], "]"}]}]}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"mean", "=", 
+      RowBox[{"Mean", "[", 
+       RowBox[{"{", 
+        RowBox[{"vs", ",", "vs2"}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"weighted", "=", 
+      RowBox[{"BarChart", "[", 
+       RowBox[{"mean", ",", 
+        RowBox[{
+        "PlotLabel", "\[Rule]", "\"\<Visibility-weighted saliency\>\""}], ",", 
+        RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
+        RowBox[{"ChartStyle", "\[Rule]", "chartcolors"}], ",", 
+        RowBox[{"ChartLabels", "\[Rule]", 
+         RowBox[{"Placed", "[", 
+          RowBox[{
+           RowBox[{"ToString", "/@", "mean"}], ",", "Above"}], "]"}]}]}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"charts", "=", 
+      RowBox[{"{", 
+       RowBox[{
+       "chart0", ",", "chart1", ",", "chart2", ",", "chart2b", ",", 
+        "weighted"}], "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"scores", "=", 
+      RowBox[{"{", 
+       RowBox[{
+       "saliency", ",", "visibility", ",", "vs", ",", "vs2", ",", "mean"}], 
+       "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Export", "[", 
+        RowBox[{
+         RowBox[{"imagefilenames", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", 
+         RowBox[{"charts", "[", 
+          RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{"Length", "[", "charts", "]"}]}], "}"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{"txtfilenames", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"scores", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{"Length", "[", "scores", "]"}]}], "}"}]}], "]"}], ";"}], 
+      "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"scoremap", "=", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"FileExistsQ", "[", "resultxml", "]"}], ",", 
+        RowBox[{"Association", "@", 
+         RowBox[{"Import", "[", "resultxml", "]"}]}], ",", 
+        RowBox[{"<|", "|>"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"AssociateTo", "[", 
+      RowBox[{"scoremap", ",", 
+       RowBox[{"dataname", "\[Rule]", "scores"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{"resultxml", ",", 
+       RowBox[{"Normal", "[", "scoremap", "]"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"w", "=", 
+      RowBox[{
+       RowBox[{"ImageAdd", "[", 
+        RowBox[{"viss", ",", "viss2"}], "]"}], "//", "ImageAdjust"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"results", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"ImageMultiply", "[", 
+         RowBox[{"w", ",", "#"}], "]"}], "&"}], "/@", "features"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"MapIndexed", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Export", "[", 
+         RowBox[{
+          RowBox[{"StringReplace", "[", 
+           RowBox[{"featurefilename", ",", 
+            RowBox[{"\"\<.\>\"", "->", 
+             RowBox[{
+              RowBox[{"ToString", "[", 
+               RowBox[{"First", "[", "#2", "]"}], "]"}], "<>", 
+              "\"\<.\>\""}]}]}], "]"}], ",", "#"}], "]"}], "&"}], ",", 
+       "results"}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Column", "[", 
+      RowBox[{"xml", ",", 
+       RowBox[{"Background", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Lighter", "@", "LightYellow"}], ",", 
+           RowBox[{"Lighter", "@", "LightBlue"}]}], "}"}], "}"}]}], ",", 
+       RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+       RowBox[{"FrameStyle", "\[Rule]", 
+        RowBox[{"Directive", "[", 
+         RowBox[{"LightGray", ",", "Thin", ",", "Dashed"}], "]"}]}]}], 
+      "]"}]}], "\[IndentingNewLine]", ",", 
+    RowBox[{"{", 
+     RowBox[{"xmlindex", ",", 
+      RowBox[{"Length", "[", "str", "]"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.650016010847435*^9, 3.6500160344620285`*^9}, 
+   3.6500160970401473`*^9, 3.6500165656694775`*^9, 3.650016713948494*^9, 
+   3.650017085260745*^9, {3.6500171411902285`*^9, 3.6500171817495975`*^9}, {
+   3.650017233984085*^9, 3.6500172898926163`*^9}, {3.6500174423929048`*^9, 
+   3.6500174871293154`*^9}, {3.6500175403349094`*^9, 
+   3.6500175986715207`*^9}, {3.6500176324156456`*^9, 3.650017632994951*^9}, {
+   3.6500177269517217`*^9, 3.65001777747255*^9}, 3.6500222412081485`*^9, 
+   3.6500225840162363`*^9, {3.650025621303483*^9, 3.6500256222287245`*^9}, 
+   3.6500395269270196`*^9, 3.65003979959371*^9, {3.650045015344633*^9, 
+   3.6500450580942793`*^9}, 3.6500451183246503`*^9, 3.6500451733582335`*^9, 
+   3.650045343145255*^9, {3.65009686307224*^9, 3.6500969160928507`*^9}, {
+   3.6500969618530903`*^9, 3.6500969752331004`*^9}, {3.6500971869883966`*^9, 
+   3.6500972288452*^9}, 3.6501073780119085`*^9, 3.650107723220256*^9, {
+   3.6501079238588104`*^9, 3.6501079321720405`*^9}, 3.650128318028931*^9, {
+   3.650128936247884*^9, 3.6501289619536343`*^9}, {3.65013095222859*^9, 
+   3.650130952964272*^9}, {3.6501312946084805`*^9, 3.650131298228372*^9}, {
+   3.6501317605222197`*^9, 3.6501317725783114`*^9}, {3.650135334384781*^9, 
+   3.6501353376933403`*^9}, {3.650137703884256*^9, 3.6501377064503856`*^9}, 
+   3.6501398070716214`*^9, 3.6502659151440983`*^9, 3.650266777120908*^9, 
+   3.6503712217213182`*^9, {3.6503715511097264`*^9, 3.6503715528021455`*^9}, {
+   3.6503716788627462`*^9, 3.6503716842142973`*^9}, {3.6503720868285866`*^9, 
+   3.6503720978840017`*^9}, {3.6512705809146957`*^9, 3.651270583350629*^9}, 
+   3.651273752937693*^9, {3.6520098937075024`*^9, 3.652009897594437*^9}, 
+   3.652390402197175*^9, {3.6523939877015543`*^9, 3.6523939878690786`*^9}, {
+   3.6523941334575434`*^9, 3.6523941342598553`*^9}, 3.652441919495344*^9, 
+   3.6524434241756444`*^9, {3.6524447961851425`*^9, 3.652444869530558*^9}, {
+   3.652445015292529*^9, 3.6524450412918005`*^9}, 3.6524450777138863`*^9, {
+   3.652445785964486*^9, 3.652445905451944*^9}, {3.6524459373233175`*^9, 
+   3.6524459551478577`*^9}, {3.6524543800374985`*^9, 3.652454397976972*^9}, {
+   3.6524571299457254`*^9, 3.6524571375157266`*^9}, {3.652458993849019*^9, 
+   3.6524590077831535`*^9}, {3.652459100955984*^9, 3.6524591033934774`*^9}, {
+   3.6524592237160687`*^9, 3.6524592377446156`*^9}, {3.652459579277351*^9, 
+   3.652459615810173*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[GridBox[{
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\tooth_naive_optimized_yellow_1000.tfi\"\>"},
+      {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\"\>"},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
+         ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
+      {"\<\"front\"\>"},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_saliency_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_brightness_\
+chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_saturation_\
+chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_weighted_\
+chart.png\"\>"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_saliency_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_brightness_\
+chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_saturation_\
+chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_weighted_\
+chart.txt\"\>"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_feature.png\"\
+\>", ",", \
+"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\\tooth_\
+naive_optimized_yellow_1000_visibility.raw\"\>"}], "}"}]},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\saliency.xml\"\>"},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\tooth_naive_optimized_yellow_1000.png\"\>"},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\tooth_naive_optimized_yellow_1000.raw\"\>"},
+      {"\<\"tooth_naive_optimized_yellow_1000\"\>"}
+     },
+     DefaultBaseStyle->"Column",
+     FrameStyle->Directive[
+       GrayLevel[0.85], 
+       Thickness[Tiny], 
+       Dashing[{Small, Small}]],
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+          RGBColor[1, 1, 0.9], 
+          RGBColor[0.9133333333333333, 0.96, 1]}}},
+     GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\tooth_naive_optimized_yellow_1000.tfi\"\>"},
+      {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\"\>"},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
+         ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
+      {"\<\"front\"\>"},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_saliency_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_brightness_\
+chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_saturation_\
+chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_weighted_\
+chart.png\"\>"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_saliency_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_brightness_\
+chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_saturation_\
+chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_weighted_\
+chart.txt\"\>"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_feature.png\"\
+\>", ",", \
+"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\\tooth_\
+naive_optimized_yellow_1000_visibility.raw\"\>"}], "}"}]},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\saliency.xml\"\>"},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\tooth_naive_optimized_yellow_1000.png\"\>"},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\tooth_naive_optimized_yellow_1000.raw\"\>"},
+      {"\<\"tooth_naive_optimized_yellow_1000\"\>"}
+     },
+     DefaultBaseStyle->"Column",
+     FrameStyle->Directive[
+       GrayLevel[0.85], 
+       Thickness[Tiny], 
+       Dashing[{Small, Small}]],
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+          RGBColor[1, 1, 0.9], 
+          RGBColor[0.9133333333333333, 0.96, 1]}}},
+     GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\tooth_naive.tfi\"\>"},
+      {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\"\>"},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
+         ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
+      {"\<\"front\"\>"},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_saliency_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_saliency_brightness_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_saliency_saturation_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_saliency_weighted_chart.png\"\>"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_saliency_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_saliency_brightness_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_saliency_saturation_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_saliency_weighted_chart.txt\"\>"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_saliency_feature.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility.raw\"\>"}], "}"}]},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\saliency.xml\"\>"},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\tooth_naive.png\"\>"},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\tooth_naive.raw\"\>"},
+      {"\<\"tooth_naive\"\>"}
+     },
+     DefaultBaseStyle->"Column",
+     FrameStyle->Directive[
+       GrayLevel[0.85], 
+       Thickness[Tiny], 
+       Dashing[{Small, Small}]],
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+          RGBColor[1, 1, 0.9], 
+          RGBColor[0.9133333333333333, 0.96, 1]}}},
+     GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\tooth_naive.tfi\"\>"},
+      {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\"\>"},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
+         ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
+      {"\<\"front\"\>"},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_saliency_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_saliency_brightness_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_saliency_saturation_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_saliency_weighted_chart.png\"\>"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_saliency_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_saliency_brightness_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_saliency_saturation_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_saliency_weighted_chart.txt\"\>"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility_saliency_feature.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_naive_visibility.raw\"\>"}], "}"}]},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\saliency.xml\"\>"},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\tooth_naive.png\"\>"},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\tooth_naive.raw\"\>"},
+      {"\<\"tooth_naive\"\>"}
+     },
+     DefaultBaseStyle->"Column",
+     FrameStyle->Directive[
+       GrayLevel[0.85], 
+       Thickness[Tiny], 
+       Dashing[{Small, Small}]],
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+          RGBColor[1, 1, 0.9], 
+          RGBColor[0.9133333333333333, 0.96, 1]}}},
+     GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\tooth_strong_yellow.tfi\"\>"},
+      {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\"\>"},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
+         ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
+      {"\<\"front\"\>"},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_strong_yellow_saliency_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_strong_yellow_visibility_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_strong_yellow_visibility_saliency_brightness_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_strong_yellow_visibility_saliency_saturation_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_strong_yellow_visibility_saliency_weighted_chart.png\"\>"}], 
+        "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_strong_yellow_saliency_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_strong_yellow_visibility_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_strong_yellow_visibility_saliency_brightness_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_strong_yellow_visibility_saliency_saturation_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_strong_yellow_visibility_saliency_weighted_chart.txt\"\>"}], 
+        "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_strong_yellow_visibility_saliency_feature.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_strong_yellow_visibility.raw\"\>"}], "}"}]},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\saliency.xml\"\>"},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\tooth_strong_yellow.png\"\>"},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\tooth_strong_yellow.raw\"\>"},
+      {"\<\"tooth_strong_yellow\"\>"}
+     },
+     DefaultBaseStyle->"Column",
+     FrameStyle->Directive[
+       GrayLevel[0.85], 
+       Thickness[Tiny], 
+       Dashing[{Small, Small}]],
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+          RGBColor[1, 1, 0.9], 
+          RGBColor[0.9133333333333333, 0.96, 1]}}},
+     GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\tooth_weak_yellow_optimized_yellow_1000.tfi\"\>"},
+      {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\"\>"},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
+         ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
+      {"\<\"front\"\>"},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_optimized_yellow_1000_saliency_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_saliency_\
+brightness_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_saliency_\
+saturation_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_saliency_\
+weighted_chart.png\"\>"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_optimized_yellow_1000_saliency_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_saliency_\
+brightness_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_saliency_\
+saturation_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_saliency_\
+weighted_chart.txt\"\>"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_saliency_feature.\
+png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility.raw\"\>"}], 
+        "}"}]},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\saliency.xml\"\>"},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\tooth_weak_yellow_optimized_yellow_1000.png\"\>"},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\tooth_weak_yellow_optimized_yellow_1000.raw\"\>"},
+      {"\<\"tooth_weak_yellow_optimized_yellow_1000\"\>"}
+     },
+     DefaultBaseStyle->"Column",
+     FrameStyle->Directive[
+       GrayLevel[0.85], 
+       Thickness[Tiny], 
+       Dashing[{Small, Small}]],
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+          RGBColor[1, 1, 0.9], 
+          RGBColor[0.9133333333333333, 0.96, 1]}}},
+     GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"], ",", 
+   TagBox[GridBox[{
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
+transfer_function\\\\tooth_weak_yellow.tfi\"\>"},
+      {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\"\>"},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
+         ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
+      {"\<\"front\"\>"},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_saliency_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_visibility_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_visibility_saliency_brightness_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_visibility_saliency_saturation_chart.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_visibility_saliency_weighted_chart.png\"\>"}], 
+        "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_saliency_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_visibility_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_visibility_saliency_brightness_chart.txt\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_visibility_saliency_saturation_chart.txt\"\>", 
+         ",", \
+"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\\tooth_\
+weak_yellow_visibility_saliency_weighted_chart.txt\"\>"}], "}"}]},
+      {
+       RowBox[{"{", 
+        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_visibility_saliency_feature.png\"\>", 
+         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
+images\\\\tooth_weak_yellow_visibility.raw\"\>"}], "}"}]},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\saliency.xml\"\>"},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\tooth_weak_yellow.png\"\>"},
+      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
+\\tooth_weak_yellow.raw\"\>"},
+      {"\<\"tooth_weak_yellow\"\>"}
+     },
+     DefaultBaseStyle->"Column",
+     FrameStyle->Directive[
+       GrayLevel[0.85], 
+       Thickness[Tiny], 
+       Dashing[{Small, Small}]],
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
+          RGBColor[1, 1, 0.9], 
+          RGBColor[0.9133333333333333, 0.96, 1]}}},
+     GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"]}], "}"}]], "Output",
+ CellChangeTimes->{3.6524600990624743`*^9}]
+}, Open  ]]
+},
+WindowSize->{1282, 797},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.2 for Microsoft Windows (64-bit) (July 7, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 17178, 471, 952, "Input"],
+Cell[17739, 493, 2023, 34, 1172, "Input"],
+Cell[CellGroupData[{
+Cell[19787, 531, 30061, 750, 1752, "Input"],
+Cell[49851, 1283, 22740, 442, 2813, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
