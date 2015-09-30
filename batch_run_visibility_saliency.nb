@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     73017,       1746]
-NotebookOptionsPosition[     72607,       1728]
-NotebookOutlinePosition[     72949,       1743]
-CellTagsIndexPosition[     72906,       1740]
+NotebookDataLength[     53107,       1370]
+NotebookOptionsPosition[     52659,       1351]
+NotebookOutlinePosition[     53001,       1366]
+CellTagsIndexPosition[     52958,       1363]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -512,20 +512,34 @@ MRbrain_naive_optimized_green_1000\nMRbrain_naive\nMRbrain_strong_green\n\
 MRbrain_weak_green\nnucleon_naive_optimized_green_1000\n\
 nucleon_naive_optimized_green_1000\nnucleon_naive_optimized_red_1000\n\
 nucleon_naive_optimized_red_1000\nnucleon_naive\nnucleon_naive\n\
-nucleon_strong_red_coronal\nnucleon_weak_red_coronal\n\
-tooth_naive_optimized_yellow_1000\ntooth_naive_optimized_yellow_1000\n\
-tooth_naive\ntooth_naive\ntooth_strong_yellow\n\
-tooth_weak_yellow_optimized_yellow_1000\ntooth_weak_yellow\n\
-vismale_naive_optimized_green_1000.png\nvismale_naive_optimized_red_1000.png\n\
-vismale_naive.png\nvismale_naive.png\nvismale_strong_green_only.png\n\
-vismale_strong_green.png\nvismale_strong_red_only.png\nvismale_strong_red.png\
-\nvismale_weak_red_only.png\nvismale_weak_red.png\n\
-vismale_week_green_only.png\nvismale_week_green.png\>\""}]}]}], 
-  ";"}]], "Input",
+nucleon_strong_red\nnucleon_weak_red\ntooth_naive_optimized_yellow_1000\n\
+tooth_naive_optimized_yellow_1000\ntooth_naive\ntooth_naive\n\
+tooth_strong_yellow\ntooth_weak_yellow_optimized_yellow_1000\n\
+tooth_weak_yellow\nvismale_naive_optimized_green_1000\n\
+vismale_naive_optimized_red_1000\nvismale_naive\nvismale_naive\n\
+vismale_strong_green_only\nvismale_strong_green\nvismale_strong_red_only\n\
+vismale_strong_red\nvismale_weak_red_only\nvismale_weak_red\n\
+vismale_week_green_only\nvismale_week_green\>\""}]}]}], ";"}]], "Input",
  CellChangeTimes->{{3.6524457566788445`*^9, 3.652445760510152*^9}, {
    3.652445796192479*^9, 3.6524458242254868`*^9}, 3.6524674611195855`*^9, {
    3.652467550199399*^9, 3.6524675511732492`*^9}, {3.6524675839813433`*^9, 
-   3.6524675850666614`*^9}}],
+   3.6524675850666614`*^9}, 3.652524283060569*^9, {3.6525243967224827`*^9, 
+   3.6525244019610624`*^9}, 3.6525246523479176`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{"DeleteDuplicates", "@", 
+    RowBox[{
+    "StringSplit", "@", 
+     "\"\<nucleon_strong_red\nnucleon_weak_red\n\
+vismale_naive_optimized_green_1000\nvismale_naive_optimized_red_1000\n\
+vismale_naive\nvismale_naive\nvismale_strong_green_only\nvismale_strong_green\
+\nvismale_strong_red_only\nvismale_strong_red\nvismale_weak_red_only\n\
+vismale_weak_red\nvismale_week_green_only\nvismale_week_green\>\""}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.652469391583647*^9, 3.6524693936639547`*^9}, {
+  3.6525245864381833`*^9, 3.6525246251967278`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -1231,19 +1245,7 @@ Cell[BoxData[
                RowBox[{"First", "[", "#2", "]"}], "]"}], "<>", 
               "\"\<.\>\""}]}]}], "]"}], ",", "#"}], "]"}], "&"}], ",", 
        "results"}], "]"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"Column", "[", 
-      RowBox[{"xml", ",", 
-       RowBox[{"Background", "\[Rule]", 
-        RowBox[{"{", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"Lighter", "@", "LightYellow"}], ",", 
-           RowBox[{"Lighter", "@", "LightBlue"}]}], "}"}], "}"}]}], ",", 
-       RowBox[{"Frame", "\[Rule]", "True"}], ",", 
-       RowBox[{"FrameStyle", "\[Rule]", 
-        RowBox[{"Directive", "[", 
-         RowBox[{"LightGray", ",", "Thin", ",", "Dashed"}], "]"}]}]}], 
-      "]"}]}], "\[IndentingNewLine]", ",", 
+     RowBox[{"dataname", "->", "mean"}]}], "\[IndentingNewLine]", ",", 
     RowBox[{"{", 
      RowBox[{"xmlindex", ",", 
       RowBox[{"Length", "[", "str", "]"}]}], "}"}]}], "]"}]}]], "Input",
@@ -1279,451 +1281,72 @@ Cell[BoxData[
    3.6524571299457254`*^9, 3.6524571375157266`*^9}, {3.652458993849019*^9, 
    3.6524590077831535`*^9}, {3.652459100955984*^9, 3.6524591033934774`*^9}, {
    3.6524592237160687`*^9, 3.6524592377446156`*^9}, {3.652459579277351*^9, 
-   3.652459615810173*^9}}],
+   3.652459615810173*^9}, {3.6525249616523123`*^9, 3.652524962777363*^9}, {
+   3.6525250036920986`*^9, 3.6525250117993784`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   TagBox[GridBox[{
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
-transfer_function\\\\tooth_naive_optimized_yellow_1000.tfi\"\>"},
-      {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\"\>"},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
-         ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
-      {"\<\"front\"\>"},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_saliency_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_brightness_\
-chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_saturation_\
-chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_weighted_\
-chart.png\"\>"}], "}"}]},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_saliency_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_brightness_\
-chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_saturation_\
-chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_weighted_\
-chart.txt\"\>"}], "}"}]},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_feature.png\"\
-\>", ",", \
-"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\\tooth_\
-naive_optimized_yellow_1000_visibility.raw\"\>"}], "}"}]},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\saliency.xml\"\>"},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\tooth_naive_optimized_yellow_1000.png\"\>"},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\tooth_naive_optimized_yellow_1000.raw\"\>"},
-      {"\<\"tooth_naive_optimized_yellow_1000\"\>"}
-     },
-     DefaultBaseStyle->"Column",
-     FrameStyle->Directive[
-       GrayLevel[0.85], 
-       Thickness[Tiny], 
-       Dashing[{Small, Small}]],
-     GridBoxAlignment->{"Columns" -> {{Left}}},
-     GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
-          RGBColor[1, 1, 0.9], 
-          RGBColor[0.9133333333333333, 0.96, 1]}}},
-     GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
-     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-    "Column"], ",", 
-   TagBox[GridBox[{
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
-transfer_function\\\\tooth_naive_optimized_yellow_1000.tfi\"\>"},
-      {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\"\>"},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
-         ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
-      {"\<\"front\"\>"},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_saliency_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_brightness_\
-chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_saturation_\
-chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_weighted_\
-chart.png\"\>"}], "}"}]},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_saliency_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_brightness_\
-chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_saturation_\
-chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_weighted_\
-chart.txt\"\>"}], "}"}]},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_optimized_yellow_1000_visibility_saliency_feature.png\"\
-\>", ",", \
-"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\\tooth_\
-naive_optimized_yellow_1000_visibility.raw\"\>"}], "}"}]},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\saliency.xml\"\>"},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\tooth_naive_optimized_yellow_1000.png\"\>"},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\tooth_naive_optimized_yellow_1000.raw\"\>"},
-      {"\<\"tooth_naive_optimized_yellow_1000\"\>"}
-     },
-     DefaultBaseStyle->"Column",
-     FrameStyle->Directive[
-       GrayLevel[0.85], 
-       Thickness[Tiny], 
-       Dashing[{Small, Small}]],
-     GridBoxAlignment->{"Columns" -> {{Left}}},
-     GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
-          RGBColor[1, 1, 0.9], 
-          RGBColor[0.9133333333333333, 0.96, 1]}}},
-     GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
-     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-    "Column"], ",", 
-   TagBox[GridBox[{
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
-transfer_function\\\\tooth_naive.tfi\"\>"},
-      {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\"\>"},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
-         ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
-      {"\<\"front\"\>"},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_saliency_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_saliency_brightness_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_saliency_saturation_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_saliency_weighted_chart.png\"\>"}], "}"}]},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_saliency_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_saliency_brightness_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_saliency_saturation_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_saliency_weighted_chart.txt\"\>"}], "}"}]},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_saliency_feature.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility.raw\"\>"}], "}"}]},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\saliency.xml\"\>"},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\tooth_naive.png\"\>"},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\tooth_naive.raw\"\>"},
-      {"\<\"tooth_naive\"\>"}
-     },
-     DefaultBaseStyle->"Column",
-     FrameStyle->Directive[
-       GrayLevel[0.85], 
-       Thickness[Tiny], 
-       Dashing[{Small, Small}]],
-     GridBoxAlignment->{"Columns" -> {{Left}}},
-     GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
-          RGBColor[1, 1, 0.9], 
-          RGBColor[0.9133333333333333, 0.96, 1]}}},
-     GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
-     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-    "Column"], ",", 
-   TagBox[GridBox[{
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
-transfer_function\\\\tooth_naive.tfi\"\>"},
-      {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\"\>"},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
-         ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
-      {"\<\"front\"\>"},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_saliency_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_saliency_brightness_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_saliency_saturation_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_saliency_weighted_chart.png\"\>"}], "}"}]},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_saliency_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_saliency_brightness_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_saliency_saturation_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_saliency_weighted_chart.txt\"\>"}], "}"}]},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility_saliency_feature.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_naive_visibility.raw\"\>"}], "}"}]},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\saliency.xml\"\>"},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\tooth_naive.png\"\>"},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\tooth_naive.raw\"\>"},
-      {"\<\"tooth_naive\"\>"}
-     },
-     DefaultBaseStyle->"Column",
-     FrameStyle->Directive[
-       GrayLevel[0.85], 
-       Thickness[Tiny], 
-       Dashing[{Small, Small}]],
-     GridBoxAlignment->{"Columns" -> {{Left}}},
-     GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
-          RGBColor[1, 1, 0.9], 
-          RGBColor[0.9133333333333333, 0.96, 1]}}},
-     GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
-     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-    "Column"], ",", 
-   TagBox[GridBox[{
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
-transfer_function\\\\tooth_strong_yellow.tfi\"\>"},
-      {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\"\>"},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
-         ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
-      {"\<\"front\"\>"},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_strong_yellow_saliency_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_strong_yellow_visibility_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_strong_yellow_visibility_saliency_brightness_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_strong_yellow_visibility_saliency_saturation_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_strong_yellow_visibility_saliency_weighted_chart.png\"\>"}], 
-        "}"}]},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_strong_yellow_saliency_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_strong_yellow_visibility_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_strong_yellow_visibility_saliency_brightness_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_strong_yellow_visibility_saliency_saturation_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_strong_yellow_visibility_saliency_weighted_chart.txt\"\>"}], 
-        "}"}]},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_strong_yellow_visibility_saliency_feature.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_strong_yellow_visibility.raw\"\>"}], "}"}]},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\saliency.xml\"\>"},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\tooth_strong_yellow.png\"\>"},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\tooth_strong_yellow.raw\"\>"},
-      {"\<\"tooth_strong_yellow\"\>"}
-     },
-     DefaultBaseStyle->"Column",
-     FrameStyle->Directive[
-       GrayLevel[0.85], 
-       Thickness[Tiny], 
-       Dashing[{Small, Small}]],
-     GridBoxAlignment->{"Columns" -> {{Left}}},
-     GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
-          RGBColor[1, 1, 0.9], 
-          RGBColor[0.9133333333333333, 0.96, 1]}}},
-     GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
-     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-    "Column"], ",", 
-   TagBox[GridBox[{
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
-transfer_function\\\\tooth_weak_yellow_optimized_yellow_1000.tfi\"\>"},
-      {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\"\>"},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
-         ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
-      {"\<\"front\"\>"},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_optimized_yellow_1000_saliency_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_saliency_\
-brightness_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_saliency_\
-saturation_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_saliency_\
-weighted_chart.png\"\>"}], "}"}]},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_optimized_yellow_1000_saliency_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_saliency_\
-brightness_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_saliency_\
-saturation_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_saliency_\
-weighted_chart.txt\"\>"}], "}"}]},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility_saliency_feature.\
-png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_optimized_yellow_1000_visibility.raw\"\>"}], 
-        "}"}]},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\saliency.xml\"\>"},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\tooth_weak_yellow_optimized_yellow_1000.png\"\>"},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\tooth_weak_yellow_optimized_yellow_1000.raw\"\>"},
-      {"\<\"tooth_weak_yellow_optimized_yellow_1000\"\>"}
-     },
-     DefaultBaseStyle->"Column",
-     FrameStyle->Directive[
-       GrayLevel[0.85], 
-       Thickness[Tiny], 
-       Dashing[{Small, Small}]],
-     GridBoxAlignment->{"Columns" -> {{Left}}},
-     GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
-          RGBColor[1, 1, 0.9], 
-          RGBColor[0.9133333333333333, 0.96, 1]}}},
-     GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
-     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-    "Column"], ",", 
-   TagBox[GridBox[{
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\feature_\
-transfer_function\\\\tooth_weak_yellow.tfi\"\>"},
-      {"\<\"D:\\\\_volume_data\\\\Mathematica\\\\tooth.tif\"\>"},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"Feature 1\"\>", ",", "\<\"Feature 2\"\>", 
-         ",", "\<\"Feature 3\"\>", ",", "\<\"Feature 4\"\>"}], "}"}]},
-      {"\<\"front\"\>"},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_saliency_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_visibility_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_visibility_saliency_brightness_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_visibility_saliency_saturation_chart.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_visibility_saliency_weighted_chart.png\"\>"}], 
-        "}"}]},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_saliency_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_visibility_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_visibility_saliency_brightness_chart.txt\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_visibility_saliency_saturation_chart.txt\"\>", 
-         ",", \
-"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\\tooth_\
-weak_yellow_visibility_saliency_weighted_chart.txt\"\>"}], "}"}]},
-      {
-       RowBox[{"{", 
-        RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_visibility_saliency_feature.png\"\>", 
-         ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\tooth_weak_yellow_visibility.raw\"\>"}], "}"}]},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\saliency.xml\"\>"},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\tooth_weak_yellow.png\"\>"},
-      {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\
-\\tooth_weak_yellow.raw\"\>"},
-      {"\<\"tooth_weak_yellow\"\>"}
-     },
-     DefaultBaseStyle->"Column",
-     FrameStyle->Directive[
-       GrayLevel[0.85], 
-       Thickness[Tiny], 
-       Dashing[{Small, Small}]],
-     GridBoxAlignment->{"Columns" -> {{Left}}},
-     GridBoxBackground->{"Columns" -> {{Automatic}}, "Rows" -> {{
-          RGBColor[1, 1, 0.9], 
-          RGBColor[0.9133333333333333, 0.96, 1]}}},
-     GridBoxFrame->{"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}},
-     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-    "Column"]}], "}"}]], "Output",
- CellChangeTimes->{3.6524600990624743`*^9}]
+   RowBox[{"\<\"nucleon_strong_red\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.055363355238920865`", ",", "0.8527822430571061`", ",", 
+      "0.09184417452175127`"}], "}"}]}], ",", 
+   RowBox[{"\<\"nucleon_weak_red\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.2208105512857051`", ",", "0.15934159598225212`", ",", 
+      "0.619807022133569`"}], "}"}]}], ",", 
+   RowBox[{"\<\"vismale_naive_optimized_green_1000\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.11979544794312741`", ",", "0.8640945070737633`", ",", 
+      "0.01608701558054349`"}], "}"}]}], ",", 
+   RowBox[{"\<\"vismale_naive_optimized_red_1000\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.854919271499089`", ",", "0.12519419688293248`", ",", 
+      "0.01986109223884531`"}], "}"}]}], ",", 
+   RowBox[{"\<\"vismale_naive\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.28092859417952115`", ",", "0.7145201652268147`", ",", 
+      "0.00453470661366777`"}], "}"}]}], ",", 
+   RowBox[{"\<\"vismale_strong_green_only\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0.`", ",", "0.`", ",", "0.`", ",", "0.`"}], "}"}]}], ",", 
+   RowBox[{"\<\"vismale_strong_green\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.06165561814436573`", ",", "0.9348904460173153`", ",", 
+      "0.0034375805823770875`"}], "}"}]}], ",", 
+   RowBox[{"\<\"vismale_strong_red_only\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0.999978381543492`", ",", "0.`", ",", "0.`", ",", "0.`"}], 
+     "}"}]}], ",", 
+   RowBox[{"\<\"vismale_strong_red\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.4088426645687516`", ",", "0.5883819035013926`", ",", 
+      "0.002761134487601088`"}], "}"}]}], ",", 
+   RowBox[{"\<\"vismale_weak_red_only\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0.9998736707139069`", ",", "0.`", ",", "0.`", ",", "0.`"}], 
+     "}"}]}], ",", 
+   RowBox[{"\<\"vismale_weak_red\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.08713098808551402`", ",", "0.9046644949369524`", ",", 
+      "0.008183156310444292`"}], "}"}]}], ",", 
+   RowBox[{"\<\"vismale_week_green_only\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"0.`", ",", "0.`", ",", "0.`", ",", "0.`"}], "}"}]}], ",", 
+   RowBox[{"\<\"vismale_week_green\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.301019154430889`", ",", "0.6614458000331973`", ",", 
+      "0.03748310284746795`"}], "}"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.652534994466881*^9}]
 }, Open  ]]
 },
 WindowSize->{1282, 797},
@@ -1743,10 +1366,11 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 17178, 471, 952, "Input"],
-Cell[17739, 493, 2023, 34, 1172, "Input"],
+Cell[17739, 493, 2054, 33, 1172, "Input"],
+Cell[19796, 528, 609, 13, 292, "Input"],
 Cell[CellGroupData[{
-Cell[19787, 531, 30061, 750, 1752, "Input"],
-Cell[49851, 1283, 22740, 442, 2813, "Output"]
+Cell[20430, 545, 29699, 739, 1752, "Input"],
+Cell[50132, 1286, 2511, 62, 132, "Output"]
 }, Open  ]]
 }
 ]
