@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+<!DOCTYPE Expression SYSTEM 'http://www.wolfram.com/XML/notebookml1.dtd'>
+<Expression xmlns:mathematica='http://www.wolfram.com/XML/'
+    xmlns='http://www.wolfram.com/XML/'>
+ <Function>
+  <Symbol>List</Symbol>
+  <String></String>
+  <String></String>
+  <Function>
+   <Symbol>List</Symbol>
+   <String>Feature 1</String>
+   <String>Feature 2</String>
+   <String>Feature 3</String>
+   <String>Feature 4</String>
+   <String>Feature 5</String>
+  </Function>
+  <Function>
+   <Symbol>List</Symbol>
+   <String>right</String>
+   <String>top</String>
+  </Function>
+  <Function>
+   <Symbol>List</Symbol>
+   <String>D:\document\work\time-varying-visualization\~images\foot_saliency_chart.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\foot_visibility_chart.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\foot_visibility_saliency_brightness_chart.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\foot_visibility_saliency_saturation_chart.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\foot_visibility_saliency_weighted_chart.png</String>
+  </Function>
+  <Function>
+   <Symbol>List</Symbol>
+   <String>D:\document\work\time-varying-visualization\~images\foot_saliency_chart.txt</String>
+   <String>D:\document\work\time-varying-visualization\~images\foot_visibility_chart.txt</String>
+   <String>D:\document\work\time-varying-visualization\~images\foot_visibility_saliency_brightness_chart.txt</String>
+   <String>D:\document\work\time-varying-visualization\~images\foot_visibility_saliency_saturation_chart.txt</String>
+   <String>D:\document\work\time-varying-visualization\~images\foot_visibility_saliency_weighted_chart.txt</String>
+  </Function>
+  <Function>
+   <Symbol>List</Symbol>
+   <String>D:\document\work\time-varying-visualization\~images\foot_visibility_saliency_feature.png</String>
+   <String>D:\document\work\time-varying-visualization\~images\foot_visibility.raw</String>
+  </Function>
+  <String>D:\document\work\time-varying-visualization\saliency.xml</String>
+  <String>D:\document\work\time-varying-visualization\~images\foot.png</String>
+  <String>D:\document\work\time-varying-visualization\~images\foot.raw</String>
+  <String>foot</String>
+ </Function>
+</Expression>
