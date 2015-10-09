@@ -21,18 +21,18 @@
                         <Property mapKey="applyLightAttenuation" name="applyLightAttenuation" value="false" />
                         <Property mapKey="camera" name="camera" projectionMode="1" maxValue="10250" minValue="1" frustLeft="-0.4142136" frustRight="0.4142136" frustBottom="-0.4142136" frustTop="0.4142136" frustNear="1" frustFar="10291" fovy="45.00000381" eyeMode="1" eyeSeparation="1" axisMode="0" stereoFocalLengh="600" stereoWidth="450" stereoRelativeFocalLength="0.05" useRealWorldFrustum="0" centerOption="0" adaptOnChange="true" id="ref7">
                             <MetaData>
-                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="1116" y="431" />
+                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="953" y="320" />
                             </MetaData>
-                            <position x="20.5" y="-33.67583466" z="20.5" />
+                            <position x="20.5" y="-33.67668915" z="20.5" />
                             <focus x="20.5" y="20.5" z="20.5" />
-                            <upVector x="0" y="-0.00000235" z="1" />
+                            <upVector x="0" y="-0.00000167" z="1" />
                             <trackball moveCenter="false">
                                 <center x="20.5" y="20.5" z="20.5" />
                             </trackball>
                             <sceneLLF x="0" y="0" z="0" />
                             <sceneURB x="41" y="41" z="41" />
                         </Property>
-                        <Property mapKey="classification" name="classification" value="pre-integrated-gpu" />
+                        <Property mapKey="classification" name="classification" value="pre-integrated-cpu" />
                         <Property mapKey="compositing" name="compositing" value="dvr" />
                         <Property mapKey="compositing1" name="compositing1" lod="1" value="dvr" />
                         <Property mapKey="compositing2" name="compositing2" lod="1" value="dvr" />
@@ -58,7 +58,7 @@
                                 <MetaItem name="FollowCamera" type="BoolMetaData" value="false" />
                                 <MetaItem name="UseBackHemisphere" type="BoolMetaData" value="false" />
                             </MetaData>
-                            <value x="20.5" y="0" z="20.5" w="1" />
+                            <value x="20.5" y="-0.00000191" z="20.5" w="1" />
                             <Center x="20.5" y="20.5" z="20.5" />
                             <LightPos x="0" y="0" z="20.5" w="0" />
                         </Property>
@@ -75,7 +75,7 @@
                         <Property mapKey="shading" name="shading" value="phong" />
                         <Property mapKey="transferFunction" name="transferFunction" domainFittingStrategy="1" id="ref11">
                             <MetaData>
-                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="625" y="261" width="683" height="538" />
+                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="750" y="617" width="683" height="538" />
                             </MetaData>
                             <TransferFunction type="TransFuncIntensity" alphaMode="1" gammaValue="1">
                                 <domain x="0" y="1" />
@@ -85,7 +85,7 @@
                                         <colorL r="153" g="0" b="255" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.15773851" split="false">
-                                        <colorL r="129" g="90" b="255" a="11" />
+                                        <colorL r="129" g="90" b="255" a="25" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.180556" split="false">
                                         <colorL r="145" g="78" b="221" a="0" />
@@ -94,7 +94,7 @@
                                         <colorL r="255" g="0" b="0" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.44358951" split="false">
-                                        <colorL r="255" g="0" b="0" a="255" />
+                                        <colorL r="255" g="0" b="0" a="25" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.489362" split="false">
                                         <colorL r="255" g="0" b="0" a="0" />
@@ -103,7 +103,7 @@
                                         <colorL r="4" g="255" b="0" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.86061502" split="false">
-                                        <colorL r="73" g="255" b="1" a="83" />
+                                        <colorL r="73" g="255" b="1" a="26" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.96627003" split="false">
                                         <colorL r="8" g="82" b="7" a="0" />
@@ -243,9 +243,9 @@
                             <MetaData>
                                 <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="false" x="721" y="372" />
                             </MetaData>
-                            <position x="20.5" y="-33.67583466" z="20.5" />
+                            <position x="20.5" y="-33.67668915" z="20.5" />
                             <focus x="20.5" y="20.5" z="20.5" />
-                            <upVector x="0" y="-0.00000235" z="1" />
+                            <upVector x="0" y="-0.00000167" z="1" />
                             <trackball moveCenter="false">
                                 <center x="20.5" y="20.5" z="20.5" />
                             </trackball>
@@ -330,7 +330,7 @@
                                         <colorL r="153" g="0" b="255" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.15773851" split="false">
-                                        <colorL r="129" g="90" b="255" a="11" />
+                                        <colorL r="129" g="90" b="255" a="25" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.180556" split="false">
                                         <colorL r="145" g="78" b="221" a="0" />
@@ -339,7 +339,7 @@
                                         <colorL r="255" g="0" b="0" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.44358951" split="false">
-                                        <colorL r="255" g="0" b="0" a="255" />
+                                        <colorL r="255" g="0" b="0" a="25" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.489362" split="false">
                                         <colorL r="255" g="0" b="0" a="0" />
@@ -348,7 +348,7 @@
                                         <colorL r="4" g="255" b="0" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.86061502" split="false">
-                                        <colorL r="73" g="255" b="1" a="83" />
+                                        <colorL r="73" g="255" b="1" a="26" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.96627003" split="false">
                                         <colorL r="8" g="82" b="7" a="0" />
