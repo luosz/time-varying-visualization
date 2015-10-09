@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     82211,       2118]
-NotebookOptionsPosition[     81673,       2097]
-NotebookOutlinePosition[     82016,       2112]
-CellTagsIndexPosition[     81973,       2109]
+NotebookDataLength[     81022,       2083]
+NotebookOptionsPosition[     80560,       2065]
+NotebookOutlinePosition[     80903,       2080]
+CellTagsIndexPosition[     80860,       2077]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1235,7 +1235,7 @@ vismale_week_green_only\nvismale_week_green\>\""}]}]}], ";"}]], "Input",
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"str2", "=", 
+  RowBox[{"str", "=", 
    RowBox[{"DeleteDuplicates", "@", 
     RowBox[{
     "StringSplit", "@", 
@@ -1244,9 +1244,8 @@ nucleon_naive_optimized_green_1000\n\
 nucleon_naive_optimized_red_1000\>\""}]}]}], ";"}]], "Input",
  CellChangeTimes->{{3.652469391583647*^9, 3.6524693936639547`*^9}, {
    3.6525245864381833`*^9, 3.6525246251967278`*^9}, {3.653235198956156*^9, 
-   3.6532352732783995`*^9}, 3.653414751259957*^9, 3.6534148061623397`*^9}],
-
-Cell[CellGroupData[{
+   3.6532352732783995`*^9}, 3.653414751259957*^9, 3.6534148061623397`*^9, 
+   3.653415887564683*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -1269,22 +1268,21 @@ Cell[BoxData[
       RowBox[{"{", 
        RowBox[{
        "xml", ",", "tfifile", ",", "volumefile", ",", "legends", ",", "face", 
-        ",", "imagefilenames", ",", "txtfilenames", ",", 
-        RowBox[{"{", 
-         RowBox[{"featurefilename", ",", "visibilityfilename"}], "}"}], ",", 
-        "resultxml", ",", "imagefile", ",", "rawfile", ",", "dataname", ",", 
-        "tf", ",", "bincount", ",", "intensity", ",", "r", ",", "g", ",", "b",
-         ",", "a", ",", "rgbcolors", ",", "rgbfunction", ",", "rgba", ",", 
-        "rgbafunction", ",", "alpha", ",", "intensity0", ",", "alpha0", ",", 
-        "fun", ",", "d", ",", "colorized", ",", "pos", ",", "index", ",", 
-        "features", ",", "chartcolors", ",", "colorizedfeatures", ",", 
-        "viewpoints", ",", "lightness", ",", "chroma", ",", "hue", ",", 
-        "opacity", ",", "g1", ",", "g2", ",", "vis", ",", "visibility", ",", 
-        "chart1", ",", "dog", ",", "saliency", ",", "chart0", ",", "viss", 
-        ",", "total", ",", "vs", ",", "chart2", ",", "viss2", ",", "total2", 
-        ",", "vs2", ",", "chart2b", ",", "mean", ",", "weighted", ",", 
-        "charts", ",", "scores", ",", "scoremap", ",", "w", ",", "results"}], 
-       "}"}], ",", "\[IndentingNewLine]", 
+        ",", "imagefilenames", ",", "txtfilenames", ",", "featurefilename", 
+        ",", "visibilityfilename", ",", "resultxml", ",", "imagefile", ",", 
+        "rawfile", ",", "dataname", ",", "tf", ",", "bincount", ",", 
+        "intensity", ",", "r", ",", "g", ",", "b", ",", "a", ",", "rgbcolors",
+         ",", "rgbfunction", ",", "rgba", ",", "rgbafunction", ",", "alpha", 
+        ",", "intensity0", ",", "alpha0", ",", "fun", ",", "d", ",", 
+        "colorized", ",", "pos", ",", "index", ",", "features", ",", 
+        "chartcolors", ",", "colorizedfeatures", ",", "viewpoints", ",", 
+        "lightness", ",", "chroma", ",", "hue", ",", "opacity", ",", "g1", 
+        ",", "g2", ",", "vis", ",", "visibility", ",", "chart1", ",", "dog", 
+        ",", "saliency", ",", "chart0", ",", "viss", ",", "total", ",", "vs", 
+        ",", "chart2", ",", "viss2", ",", "total2", ",", "vs2", ",", 
+        "chart2b", ",", "mean", ",", "weighted", ",", "charts", ",", "scores",
+         ",", "scoremap", ",", "w", ",", "results"}], "}"}], ",", 
+      "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"xml", "=", 
         RowBox[{"Import", "[", 
@@ -2062,38 +2060,8 @@ Cell[BoxData[
    3.6525250036920986`*^9, 3.6525250117993784`*^9}, {3.6532350631998053`*^9, 
    3.6532350953540077`*^9}, 3.6532361082526264`*^9, 3.6534146391655083`*^9, {
    3.653414689863912*^9, 3.6534147241631308`*^9}, {3.653415388668265*^9, 
-   3.6534156138601494`*^9}, 3.6534156487453747`*^9}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"\<\"nucleon_strong_red\"\>", "\[Rule]", 
-    RowBox[{"{", 
-     RowBox[{
-     "0.245281125260918`", ",", "0.03853027077989342`", ",", 
-      "0.03202418308491839`"}], "}"}]}], ",", 
-   RowBox[{"\<\"nucleon_weak_red\"\>", "\[Rule]", 
-    RowBox[{"{", 
-     RowBox[{
-     "0.245281125260918`", ",", "0.03853027077989342`", ",", 
-      "0.03202418308491839`"}], "}"}]}], ",", 
-   RowBox[{"\<\"nucleon_naive\"\>", "\[Rule]", 
-    RowBox[{"{", 
-     RowBox[{
-     "0.245281125260918`", ",", "0.03853027077989342`", ",", 
-      "0.03202418308491839`"}], "}"}]}], ",", 
-   RowBox[{"\<\"nucleon_naive_optimized_green_1000\"\>", "\[Rule]", 
-    RowBox[{"{", 
-     RowBox[{
-     "0.245281125260918`", ",", "0.03853027077989342`", ",", 
-      "0.03202418308491839`"}], "}"}]}], ",", 
-   RowBox[{"\<\"nucleon_naive_optimized_red_1000\"\>", "\[Rule]", 
-    RowBox[{"{", 
-     RowBox[{
-     "0.245281125260918`", ",", "0.03853027077989342`", ",", 
-      "0.03202418308491839`"}], "}"}]}]}], "}"}]], "Output",
- CellChangeTimes->{3.652534994466881*^9, 3.6534147843900194`*^9}]
-}, Open  ]]
+   3.6534156138601494`*^9}, 3.6534156487453747`*^9, {3.653415845903515*^9, 
+   3.6534158499511375`*^9}}]
 },
 WindowSize->{1282, 797},
 WindowMargins->{{-8, Automatic}, {Automatic, -8}},
@@ -2115,11 +2083,8 @@ Cell[558, 20, 16988, 468, 952, "Input"],
 Cell[17549, 490, 16381, 457, 972, "Input"],
 Cell[33933, 949, 9657, 249, 552, "Input"],
 Cell[43593, 1200, 2078, 33, 1172, "Input"],
-Cell[45674, 1235, 507, 11, 112, "Input"],
-Cell[CellGroupData[{
-Cell[46206, 1250, 34336, 814, 1932, "Input"],
-Cell[80545, 2066, 1112, 28, 72, "Output"]
-}, Open  ]]
+Cell[45674, 1235, 532, 12, 112, "Input"],
+Cell[46209, 1249, 34347, 814, 1932, "Input"]
 }
 ]
 *)
