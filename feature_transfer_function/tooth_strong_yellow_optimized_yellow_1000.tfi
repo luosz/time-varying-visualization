@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VoreenData version="1">
+    <TransFuncIntensity type="TransFuncIntensity">
+        <domain x="0" y="1"/>
+        <threshold x="0" y="1"/>
+        <Keys>
+            <key type="TransFuncMappingKey">
+                <intensity value="0.040000000000000001"/>
+                <split value="false"/>
+                <colorL r="0" g="170" b="255" a="0"/>
+            </key>
+            <key type="TransFuncMappingKey">
+                <intensity value="0.28000000000000003"/>
+                <split value="false"/>
+                <colorL r="0" g="170" b="255" a="34"/>
+            </key>
+            <key type="TransFuncMappingKey">
+                <intensity value="0.5"/>
+                <split value="false"/>
+                <colorL r="0" g="170" b="255" a="0"/>
+            </key>
+            <key type="TransFuncMappingKey">
+                <intensity value="0.57999997999999997"/>
+                <split value="false"/>
+                <colorL r="255" g="0" b="0" a="0"/>
+            </key>
+            <key type="TransFuncMappingKey">
+                <intensity value="0.63999998999999996"/>
+                <split value="false"/>
+                <colorL r="255" g="0" b="0" a="31"/>
+            </key>
+            <key type="TransFuncMappingKey">
+                <intensity value="0.69999999000000002"/>
+                <split value="false"/>
+                <colorL r="255" g="0" b="0" a="0"/>
+            </key>
+            <key type="TransFuncMappingKey">
+                <intensity value="0.75999998999999996"/>
+                <split value="false"/>
+                <colorL r="255" g="255" b="0" a="0"/>
+            </key>
+            <key type="TransFuncMappingKey">
+                <intensity value="0.88"/>
+                <split value="false"/>
+                <colorL r="255" g="255" b="0" a="238"/>
+            </key>
+            <key type="TransFuncMappingKey">
+                <intensity value="1"/>
+                <split value="false"/>
+                <colorL r="255" g="255" b="0" a="0"/>
+            </key>
+        </Keys>
+    </TransFuncIntensity>
+</VoreenData>
