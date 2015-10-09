@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     81022,       2083]
-NotebookOptionsPosition[     80560,       2065]
-NotebookOutlinePosition[     80903,       2080]
-CellTagsIndexPosition[     80860,       2077]
+NotebookDataLength[     83488,       2131]
+NotebookOptionsPosition[     82910,       2109]
+NotebookOutlinePosition[     83253,       2124]
+CellTagsIndexPosition[     83210,       2121]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1235,7 +1235,7 @@ vismale_week_green_only\nvismale_week_green\>\""}]}]}], ";"}]], "Input",
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"str", "=", 
+  RowBox[{"str2", "=", 
    RowBox[{"DeleteDuplicates", "@", 
     RowBox[{
     "StringSplit", "@", 
@@ -1245,7 +1245,9 @@ nucleon_naive_optimized_red_1000\>\""}]}]}], ";"}]], "Input",
  CellChangeTimes->{{3.652469391583647*^9, 3.6524693936639547`*^9}, {
    3.6525245864381833`*^9, 3.6525246251967278`*^9}, {3.653235198956156*^9, 
    3.6532352732783995`*^9}, 3.653414751259957*^9, 3.6534148061623397`*^9, 
-   3.653415887564683*^9}],
+   3.653415887564683*^9, 3.653416035408021*^9}],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
@@ -1261,425 +1263,390 @@ Cell[BoxData[
         RowBox[{"#", ",", 
          RowBox[{"\"\< \>\"", "\[Rule]", "\"\<\>\""}]}], "]"}], "&"}]}]}], 
     ";"}], "*)"}], "\[IndentingNewLine]", 
-  RowBox[{"Table", "[", 
+  RowBox[{
    RowBox[{
-    RowBox[{"Module", "[", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{
-       "xml", ",", "tfifile", ",", "volumefile", ",", "legends", ",", "face", 
-        ",", "imagefilenames", ",", "txtfilenames", ",", "featurefilename", 
-        ",", "visibilityfilename", ",", "resultxml", ",", "imagefile", ",", 
-        "rawfile", ",", "dataname", ",", "tf", ",", "bincount", ",", 
-        "intensity", ",", "r", ",", "g", ",", "b", ",", "a", ",", "rgbcolors",
-         ",", "rgbfunction", ",", "rgba", ",", "rgbafunction", ",", "alpha", 
-        ",", "intensity0", ",", "alpha0", ",", "fun", ",", "d", ",", 
-        "colorized", ",", "pos", ",", "index", ",", "features", ",", 
-        "chartcolors", ",", "colorizedfeatures", ",", "viewpoints", ",", 
-        "lightness", ",", "chroma", ",", "hue", ",", "opacity", ",", "g1", 
-        ",", "g2", ",", "vis", ",", "visibility", ",", "chart1", ",", "dog", 
-        ",", "saliency", ",", "chart0", ",", "viss", ",", "total", ",", "vs", 
-        ",", "chart2", ",", "viss2", ",", "total2", ",", "vs2", ",", 
-        "chart2b", ",", "mean", ",", "weighted", ",", "charts", ",", "scores",
-         ",", "scoremap", ",", "w", ",", "results"}], "}"}], ",", 
-      "\[IndentingNewLine]", 
+    RowBox[{"t1", "=", 
+     RowBox[{"AbsoluteTime", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Module", "[", 
       RowBox[{
-       RowBox[{"xml", "=", 
-        RowBox[{"Import", "[", 
-         RowBox[{
-          RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-          "\"\<~images\\\\\>\"", "<>", "xmlstr", "<>", "\"\<.xml\>\""}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "xml", ",", "tfifile", ",", "volumefile", ",", "legends", ",", "face",
+          ",", "imagefilenames", ",", "txtfilenames", ",", "featurefilename", 
+         ",", "visibilityfilename", ",", "resultxml", ",", "imagefile", ",", 
+         "rawfile", ",", "dataname", ",", "tf", ",", "bincount", ",", 
+         "intensity", ",", "r", ",", "g", ",", "b", ",", "a", ",", 
+         "rgbcolors", ",", "rgbfunction", ",", "rgba", ",", "rgbafunction", 
+         ",", "alpha", ",", "intensity0", ",", "alpha0", ",", "fun", ",", "d",
+          ",", "colorized", ",", "pos", ",", "index", ",", "features", ",", 
+         "chartcolors", ",", "colorizedfeatures", ",", "viewpoints", ",", 
+         "lightness", ",", "chroma", ",", "hue", ",", "opacity", ",", "g1", 
+         ",", "g2", ",", "vis", ",", "visibility", ",", "chart1", ",", "dog", 
+         ",", "saliency", ",", "chart0", ",", "viss", ",", "total", ",", "vs",
+          ",", "chart2", ",", "viss2", ",", "total2", ",", "vs2", ",", 
+         "chart2b", ",", "mean", ",", "weighted", ",", "charts", ",", 
+         "scores", ",", "scoremap", ",", "w", ",", "results"}], "}"}], ",", 
+       "\[IndentingNewLine]", 
        RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-         "tfifile", ",", "volumefile", ",", "legends", ",", "face", ",", 
-          "imagefilenames", ",", "txtfilenames", ",", 
-          RowBox[{"{", 
-           RowBox[{"featurefilename", ",", "visibilityfilename"}], "}"}], ",",
-           "resultxml", ",", "imagefile", ",", "rawfile", ",", "dataname"}], 
-         "}"}], "=", "xml"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{"Column", "[", 
-         RowBox[{"xml", ",", 
-          RowBox[{"Background", "\[Rule]", 
+        RowBox[{"xml", "=", 
+         RowBox[{"Import", "[", 
+          RowBox[{
+           RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+           "\"\<~images\\\\\>\"", "<>", "xmlstr", "<>", "\"\<.xml\>\""}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "tfifile", ",", "volumefile", ",", "legends", ",", "face", ",", 
+           "imagefilenames", ",", "txtfilenames", ",", 
            RowBox[{"{", 
+            RowBox[{"featurefilename", ",", "visibilityfilename"}], "}"}], 
+           ",", "resultxml", ",", "imagefile", ",", "rawfile", ",", 
+           "dataname"}], "}"}], "=", "xml"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{"Column", "[", 
+          RowBox[{"xml", ",", 
+           RowBox[{"Background", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Lighter", "@", "LightYellow"}], ",", 
+               RowBox[{"Lighter", "@", "LightBlue"}]}], "}"}], "}"}]}], ",", 
+           RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+           RowBox[{"FrameStyle", "\[Rule]", 
+            RowBox[{"Directive", "[", 
+             RowBox[{"LightGray", ",", "Thin", ",", "Dashed"}], "]"}]}]}], 
+          "]"}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"tf", "=", 
+         RowBox[{"Import", "[", 
+          RowBox[{"tfifile", ",", "\"\<XML\>\""}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"bincount", "=", "256"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"intensity", "=", 
+         RowBox[{"ToExpression", "@", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"tf", ",", 
+            RowBox[{
+             RowBox[{"XMLElement", "[", 
+              RowBox[{"\"\<intensity\>\"", ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"\"\<value\>\"", "\[Rule]", "atrib_"}], ",", "___"}],
+                 "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",",
+             "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"r", "=", 
+         RowBox[{"ToExpression", "@", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"tf", ",", 
+            RowBox[{
+             RowBox[{"XMLElement", "[", 
+              RowBox[{"\"\<colorL\>\"", ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"\"\<r\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
+                "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+            "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"g", "=", 
+         RowBox[{"ToExpression", "@", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"tf", ",", 
+            RowBox[{
+             RowBox[{"XMLElement", "[", 
+              RowBox[{"\"\<colorL\>\"", ",", 
+               RowBox[{"{", 
+                RowBox[{"___", ",", 
+                 RowBox[{"\"\<g\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
+                "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+            "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"b", "=", 
+         RowBox[{"ToExpression", "@", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"tf", ",", 
+            RowBox[{
+             RowBox[{"XMLElement", "[", 
+              RowBox[{"\"\<colorL\>\"", ",", 
+               RowBox[{"{", 
+                RowBox[{"___", ",", 
+                 RowBox[{"\"\<b\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
+                "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+            "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"a", "=", 
+         RowBox[{"ToExpression", "@", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"tf", ",", 
+            RowBox[{
+             RowBox[{"XMLElement", "[", 
+              RowBox[{"\"\<colorL\>\"", ",", 
+               RowBox[{"{", 
+                RowBox[{"___", ",", 
+                 RowBox[{"\"\<a\>\"", "\[Rule]", "atrib_"}]}], "}"}], ",", 
+               "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+            "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"rgbcolors", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", 
+           RowBox[{"Transpose", "[", 
+            RowBox[{"{", 
+             RowBox[{"r", ",", "g", ",", "b"}], "}"}], "]"}]}], "//", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"RGBColor", "/@", "#"}], "&"}], ")"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"rgbfunction", "=", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Blend", "[", 
+            RowBox[{
+             RowBox[{"Transpose", "[", 
+              RowBox[{"{", 
+               RowBox[{"intensity", ",", "rgbcolors"}], "}"}], "]"}], ",", 
+             " ", "#1"}], "]"}], " ", "&"}], " ", ")"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"rgba", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", 
+           RowBox[{"Transpose", "[", 
+            RowBox[{"{", 
+             RowBox[{"r", ",", "g", ",", "b", ",", "a"}], "}"}], "]"}]}], "//", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"RGBColor", "/@", "#"}], "&"}], ")"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"rgbafunction", "=", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"Blend", "[", 
+            RowBox[{
+             RowBox[{"Transpose", "[", 
+              RowBox[{"{", 
+               RowBox[{"intensity", ",", "rgba"}], "}"}], "]"}], ",", " ", 
+             "#1"}], "]"}], " ", "&"}], " ", ")"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"alpha", "=", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", "a"}]}], ";", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"intensity0", "=", "intensity"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"alpha0", "=", "alpha"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"First", "[", "intensity0", "]"}], ">", "0"}], ",", 
+          RowBox[{
+           RowBox[{"intensity0", "=", 
+            RowBox[{"Join", "[", 
+             RowBox[{
+              RowBox[{"{", "0", "}"}], ",", "intensity0"}], "]"}]}], ";", 
+           RowBox[{"alpha0", "=", 
+            RowBox[{"Join", "[", 
+             RowBox[{
+              RowBox[{"{", "0", "}"}], ",", "alpha0"}], "]"}]}]}]}], "]"}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Last", "[", "intensity0", "]"}], "<", "1"}], ",", 
+          RowBox[{
+           RowBox[{"intensity0", "=", 
+            RowBox[{"Join", "[", 
+             RowBox[{"intensity0", ",", 
+              RowBox[{"{", "1", "}"}]}], "]"}]}], ";", 
+           RowBox[{"alpha0", "=", 
+            RowBox[{"Join", "[", 
+             RowBox[{"alpha0", ",", 
+              RowBox[{"{", "0", "}"}]}], "]"}]}]}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{"ListLinePlot", "[", 
+          RowBox[{
+           RowBox[{"Transpose", "[", 
+            RowBox[{"{", 
+             RowBox[{"intensity0", ",", "alpha0"}], "}"}], "]"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", 
             RowBox[{"{", 
              RowBox[{
-              RowBox[{"Lighter", "@", "LightYellow"}], ",", 
-              RowBox[{"Lighter", "@", "LightBlue"}]}], "}"}], "}"}]}], ",", 
-          RowBox[{"Frame", "\[Rule]", "True"}], ",", 
-          RowBox[{"FrameStyle", "\[Rule]", 
-           RowBox[{"Directive", "[", 
-            RowBox[{"LightGray", ",", "Thin", ",", "Dashed"}], "]"}]}]}], 
-         "]"}], "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{"tf", "=", 
-        RowBox[{"Import", "[", 
-         RowBox[{"tfifile", ",", "\"\<XML\>\""}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"bincount", "=", "256"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"intensity", "=", 
-        RowBox[{"ToExpression", "@", 
-         RowBox[{"Cases", "[", 
-          RowBox[{"tf", ",", 
-           RowBox[{
-            RowBox[{"XMLElement", "[", 
-             RowBox[{"\"\<intensity\>\"", ",", 
               RowBox[{"{", 
+               RowBox[{"0", ",", "1"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"ColorFunction", "\[Rule]", "rgbfunction"}], ",", 
+           RowBox[{
+           "PlotLegends", "\[Rule]", 
+            "\"\<user specified transfer function\>\""}]}], "]"}], "*)"}], 
+        "\[IndentingNewLine]", 
+        RowBox[{"fun", "=", 
+         RowBox[{"Interpolation", "[", 
+          RowBox[{
+           RowBox[{"Transpose", "[", 
+            RowBox[{"{", 
+             RowBox[{"intensity0", ",", "alpha0"}], "}"}], "]"}], ",", 
+           RowBox[{"InterpolationOrder", "\[Rule]", "1"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{"Plot", "[", 
+          RowBox[{
+           RowBox[{"f", "[", "x", "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0", ",", "1"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
+           RowBox[{"ColorFunction", "\[Rule]", "rgbfunction"}], ",", 
+           RowBox[{
+           "PlotLegends", "\[Rule]", 
+            "\"\<user specified transfer function\>\""}]}], "]"}], "*)"}], 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"d", " ", "=", " ", 
+         RowBox[{"Import", "[", 
+          RowBox[{"volumefile", ",", "\"\<Image3D\>\""}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"colorized", "=", 
+         RowBox[{"Image3D", "[", 
+          RowBox[{"d", ",", 
+           RowBox[{"ColorFunction", "\[Rule]", "rgbafunction"}]}], "]"}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{"ImageDimensions", "[", "d", "]"}], "*)"}], 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"pos", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"intensity", "[", 
+            RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", 
+          RowBox[{"Flatten", "@", 
+           RowBox[{"Position", "[", 
+            RowBox[{"alpha", ",", 
+             RowBox[{"_", "?", 
+              RowBox[{"(", 
                RowBox[{
-                RowBox[{"\"\<value\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
-               "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
-           "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"r", "=", 
-        RowBox[{"ToExpression", "@", 
-         RowBox[{"Cases", "[", 
-          RowBox[{"tf", ",", 
-           RowBox[{
-            RowBox[{"XMLElement", "[", 
-             RowBox[{"\"\<colorL\>\"", ",", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"\"\<r\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
-               "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
-           "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"g", "=", 
-        RowBox[{"ToExpression", "@", 
-         RowBox[{"Cases", "[", 
-          RowBox[{"tf", ",", 
-           RowBox[{
-            RowBox[{"XMLElement", "[", 
-             RowBox[{"\"\<colorL\>\"", ",", 
-              RowBox[{"{", 
-               RowBox[{"___", ",", 
-                RowBox[{"\"\<g\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
-               "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
-           "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"b", "=", 
-        RowBox[{"ToExpression", "@", 
-         RowBox[{"Cases", "[", 
-          RowBox[{"tf", ",", 
-           RowBox[{
-            RowBox[{"XMLElement", "[", 
-             RowBox[{"\"\<colorL\>\"", ",", 
-              RowBox[{"{", 
-               RowBox[{"___", ",", 
-                RowBox[{"\"\<b\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
-               "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
-           "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"a", "=", 
-        RowBox[{"ToExpression", "@", 
-         RowBox[{"Cases", "[", 
-          RowBox[{"tf", ",", 
-           RowBox[{
-            RowBox[{"XMLElement", "[", 
-             RowBox[{"\"\<colorL\>\"", ",", 
-              RowBox[{"{", 
-               RowBox[{"___", ",", 
-                RowBox[{"\"\<a\>\"", "\[Rule]", "atrib_"}]}], "}"}], ",", 
-              "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
-           "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"rgbcolors", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", 
-          RowBox[{"Transpose", "[", 
-           RowBox[{"{", 
-            RowBox[{"r", ",", "g", ",", "b"}], "}"}], "]"}]}], "//", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"RGBColor", "/@", "#"}], "&"}], ")"}]}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"rgbfunction", "=", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"Blend", "[", 
-           RowBox[{
-            RowBox[{"Transpose", "[", 
-             RowBox[{"{", 
-              RowBox[{"intensity", ",", "rgbcolors"}], "}"}], "]"}], ",", " ",
-             "#1"}], "]"}], " ", "&"}], " ", ")"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"rgba", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", 
-          RowBox[{"Transpose", "[", 
-           RowBox[{"{", 
-            RowBox[{"r", ",", "g", ",", "b", ",", "a"}], "}"}], "]"}]}], "//", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"RGBColor", "/@", "#"}], "&"}], ")"}]}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"rgbafunction", "=", 
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"Blend", "[", 
-           RowBox[{
-            RowBox[{"Transpose", "[", 
-             RowBox[{"{", 
-              RowBox[{"intensity", ",", "rgba"}], "}"}], "]"}], ",", " ", 
-            "#1"}], "]"}], " ", "&"}], " ", ")"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"alpha", "=", 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", "a"}]}], ";", 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{"intensity0", "=", "intensity"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"alpha0", "=", "alpha"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"If", "[", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"First", "[", "intensity0", "]"}], ">", "0"}], ",", 
-         RowBox[{
-          RowBox[{"intensity0", "=", 
-           RowBox[{"Join", "[", 
-            RowBox[{
-             RowBox[{"{", "0", "}"}], ",", "intensity0"}], "]"}]}], ";", 
-          RowBox[{"alpha0", "=", 
-           RowBox[{"Join", "[", 
-            RowBox[{
-             RowBox[{"{", "0", "}"}], ",", "alpha0"}], "]"}]}]}]}], "]"}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"If", "[", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"Last", "[", "intensity0", "]"}], "<", "1"}], ",", 
-         RowBox[{
-          RowBox[{"intensity0", "=", 
-           RowBox[{"Join", "[", 
-            RowBox[{"intensity0", ",", 
-             RowBox[{"{", "1", "}"}]}], "]"}]}], ";", 
-          RowBox[{"alpha0", "=", 
-           RowBox[{"Join", "[", 
-            RowBox[{"alpha0", ",", 
-             RowBox[{"{", "0", "}"}]}], "]"}]}]}]}], "]"}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{"ListLinePlot", "[", 
-         RowBox[{
-          RowBox[{"Transpose", "[", 
-           RowBox[{"{", 
-            RowBox[{"intensity0", ",", "alpha0"}], "}"}], "]"}], ",", 
-          RowBox[{"PlotRange", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"0", ",", "1"}], "}"}], ",", 
-             RowBox[{"{", 
-              RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
-          RowBox[{"ColorFunction", "\[Rule]", "rgbfunction"}], ",", 
-          RowBox[{
-          "PlotLegends", "\[Rule]", 
-           "\"\<user specified transfer function\>\""}]}], "]"}], "*)"}], 
-       "\[IndentingNewLine]", 
-       RowBox[{"fun", "=", 
-        RowBox[{"Interpolation", "[", 
-         RowBox[{
-          RowBox[{"Transpose", "[", 
-           RowBox[{"{", 
-            RowBox[{"intensity0", ",", "alpha0"}], "}"}], "]"}], ",", 
-          RowBox[{"InterpolationOrder", "\[Rule]", "1"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{"Plot", "[", 
-         RowBox[{
-          RowBox[{"f", "[", "x", "]"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", 
-          RowBox[{"PlotRange", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"0", ",", "1"}], "}"}], ",", 
-             RowBox[{"{", 
-              RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
-          RowBox[{"ColorFunction", "\[Rule]", "rgbfunction"}], ",", 
-          RowBox[{
-          "PlotLegends", "\[Rule]", 
-           "\"\<user specified transfer function\>\""}]}], "]"}], "*)"}], 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{"d", " ", "=", " ", 
-        RowBox[{"Import", "[", 
-         RowBox[{"volumefile", ",", "\"\<Image3D\>\""}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"colorized", "=", 
-        RowBox[{"Image3D", "[", 
-         RowBox[{"d", ",", 
-          RowBox[{"ColorFunction", "\[Rule]", "rgbafunction"}]}], "]"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{"ImageDimensions", "[", "d", "]"}], "*)"}], 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{"pos", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"intensity", "[", 
-           RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", 
+                RowBox[{"#", "==", "0"}], "&"}], ")"}]}]}], "]"}]}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"index", "=", 
          RowBox[{"Flatten", "@", 
           RowBox[{"Position", "[", 
            RowBox[{"alpha", ",", 
             RowBox[{"_", "?", 
              RowBox[{"(", 
               RowBox[{
-               RowBox[{"#", "==", "0"}], "&"}], ")"}]}]}], "]"}]}]}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"index", "=", 
-        RowBox[{"Flatten", "@", 
-         RowBox[{"Position", "[", 
-          RowBox[{"alpha", ",", 
-           RowBox[{"_", "?", 
-            RowBox[{"(", 
-             RowBox[{
-              RowBox[{"#", ">", "0"}], "&"}], ")"}]}]}], "]"}]}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"features", "=", 
-        RowBox[{"Table", "[", 
-         RowBox[{
-          RowBox[{"ImageApply", "[", 
-           RowBox[{
+               RowBox[{"#", ">", "0"}], "&"}], ")"}]}]}], "]"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"features", "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"ImageApply", "[", 
             RowBox[{
-             RowBox[{"If", "[", 
-              RowBox[{
+             RowBox[{
+              RowBox[{"If", "[", 
                RowBox[{
-                RowBox[{"#", "\[GreaterEqual]", 
-                 RowBox[{"pos", "[", 
-                  RowBox[{"[", "i", "]"}], "]"}]}], " ", "&&", " ", 
-                RowBox[{"#", "\[LessEqual]", 
-                 RowBox[{"pos", "[", 
-                  RowBox[{"[", 
-                   RowBox[{"i", "+", "1"}], "]"}], "]"}]}]}], ",", "1", ",", 
-               "0"}], "]"}], "&"}], ",", "d"}], "]"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", "1", ",", 
-            RowBox[{"Length", "[", "pos", "]"}], ",", "2"}], "}"}]}], "]"}]}],
+                RowBox[{
+                 RowBox[{"#", "\[GreaterEqual]", 
+                  RowBox[{"pos", "[", 
+                   RowBox[{"[", "i", "]"}], "]"}]}], " ", "&&", " ", 
+                 RowBox[{"#", "\[LessEqual]", 
+                  RowBox[{"pos", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"i", "+", "1"}], "]"}], "]"}]}]}], ",", "1", ",", 
+                "0"}], "]"}], "&"}], ",", "d"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "1", ",", 
+             RowBox[{"Length", "[", "pos", "]"}], ",", "2"}], "}"}]}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"chartcolors", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"rgbcolors", "[", 
+            RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", "index"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"colorizedfeatures", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"ImageMultiply", "[", 
+            RowBox[{"colorized", ",", "#"}], "]"}], "&"}], "/@", 
+          "features"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"viewpoints", "=", 
+         RowBox[{"<|", 
+          RowBox[{
+           RowBox[{"\"\<top\>\"", "\[RuleDelayed]", "Top"}], ",", 
+           RowBox[{"\"\<back\>\"", "\[RuleDelayed]", "Back"}], ",", 
+           RowBox[{"\"\<left\>\"", "\[RuleDelayed]", "Left"}], ",", 
+           RowBox[{"\"\<bottom\>\"", "\[RuleDelayed]", "Bottom"}], ",", 
+           RowBox[{"\"\<front\>\"", "\[RuleDelayed]", "Front"}], ",", 
+           RowBox[{"\"\<right\>\"", "\[RuleDelayed]", "Right"}]}], "|>"}]}], 
         ";", "\[IndentingNewLine]", 
-       RowBox[{"chartcolors", "=", 
+        RowBox[{"MapIndexed", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Export", "[", 
+            RowBox[{
+             RowBox[{"StringReplace", "[", 
+              RowBox[{"imagefile", ",", 
+               RowBox[{"\"\<.\>\"", "\[Rule]", 
+                RowBox[{"\"\<_\>\"", "<>", 
+                 RowBox[{"ToString", "[", 
+                  RowBox[{"First", "[", "#2", "]"}], "]"}], "<>", 
+                 "\"\<.\>\""}]}]}], "]"}], ",", 
+             RowBox[{"Show", "[", 
+              RowBox[{"#", ",", 
+               RowBox[{"Boxed", "->", "False"}], ",", 
+               RowBox[{"ViewPoint", "\[Rule]", 
+                RowBox[{"viewpoints", "[", "face", "]"}]}]}], "]"}]}], "]"}], 
+           "&"}], ",", "colorizedfeatures"}], "]"}], ";", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
         RowBox[{
+         RowBox[{"{", 
+          RowBox[{"lightness", ",", "chroma", ",", "hue", ",", "opacity"}], 
+          "}"}], "=", 
          RowBox[{
-          RowBox[{"rgbcolors", "[", 
-           RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", "index"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"colorizedfeatures", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"ImageMultiply", "[", 
-           RowBox[{"colorized", ",", "#"}], "]"}], "&"}], "/@", 
-         "features"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"viewpoints", "=", 
-        RowBox[{"<|", 
-         RowBox[{
-          RowBox[{"\"\<top\>\"", "\[RuleDelayed]", "Top"}], ",", 
-          RowBox[{"\"\<back\>\"", "\[RuleDelayed]", "Back"}], ",", 
-          RowBox[{"\"\<left\>\"", "\[RuleDelayed]", "Left"}], ",", 
-          RowBox[{"\"\<bottom\>\"", "\[RuleDelayed]", "Bottom"}], ",", 
-          RowBox[{"\"\<front\>\"", "\[RuleDelayed]", "Front"}], ",", 
-          RowBox[{"\"\<right\>\"", "\[RuleDelayed]", "Right"}]}], "|>"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"MapIndexed", "[", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"Export", "[", 
+          RowBox[{
+           RowBox[{"ImageApply", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"List", "@@", 
+               RowBox[{"rgbafunction", "[", "#", "]"}]}], "&"}], ",", "d"}], 
+            "]"}], "//", 
            RowBox[{
-            RowBox[{"StringReplace", "[", 
-             RowBox[{"imagefile", ",", 
-              RowBox[{"\"\<.\>\"", "\[Rule]", 
-               RowBox[{"\"\<_\>\"", "<>", 
-                RowBox[{"ToString", "[", 
-                 RowBox[{"First", "[", "#2", "]"}], "]"}], "<>", 
-                "\"\<.\>\""}]}]}], "]"}], ",", 
-            RowBox[{"Show", "[", 
+            RowBox[{"Image3D", "[", 
              RowBox[{"#", ",", 
-              RowBox[{"Boxed", "->", "False"}], ",", 
-              RowBox[{"ViewPoint", "\[Rule]", 
-               RowBox[{"viewpoints", "[", "face", "]"}]}]}], "]"}]}], "]"}], 
-          "&"}], ",", "colorizedfeatures"}], "]"}], ";", 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"lightness", ",", "chroma", ",", "hue", ",", "opacity"}], 
-         "}"}], "=", 
-        RowBox[{
+              RowBox[{"ColorSpace", "\[Rule]", "\"\<RGB\>\""}]}], "]"}], 
+            "&"}]}], "//", 
+          RowBox[{
+           RowBox[{"ColorSeparate", "[", 
+            RowBox[{"ColorConvert", "[", 
+             RowBox[{"#", ",", "\"\<LCH\>\""}], "]"}], "]"}], "&"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", 
          RowBox[{
-          RowBox[{"ImageApply", "[", 
+          RowBox[{"lo", "=", 
+           RowBox[{"ImageMultiply", "[", 
+            RowBox[{"lightness", ",", "opacity"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"co", "=", 
+           RowBox[{"ImageMultiply", "[", 
+            RowBox[{"chroma", ",", "opacity"}], "]"}]}], ";"}], "*)"}], 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"g1", "=", 
            RowBox[{
             RowBox[{
-             RowBox[{"List", "@@", 
-              RowBox[{"rgbafunction", "[", "#", "]"}]}], "&"}], ",", "d"}], 
-           "]"}], "//", 
-          RowBox[{
-           RowBox[{"Image3D", "[", 
-            RowBox[{"#", ",", 
-             RowBox[{"ColorSpace", "\[Rule]", "\"\<RGB\>\""}]}], "]"}], 
-           "&"}]}], "//", 
-         RowBox[{
-          RowBox[{"ColorSeparate", "[", 
-           RowBox[{"ColorConvert", "[", 
-            RowBox[{"#", ",", "\"\<LCH\>\""}], "]"}], "]"}], "&"}]}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{
-         RowBox[{"lo", "=", 
-          RowBox[{"ImageMultiply", "[", 
-           RowBox[{"lightness", ",", "opacity"}], "]"}]}], ";", 
-         "\[IndentingNewLine]", 
-         RowBox[{"co", "=", 
-          RowBox[{"ImageMultiply", "[", 
-           RowBox[{"chroma", ",", "opacity"}], "]"}]}], ";"}], "*)"}], 
-       "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{
-         RowBox[{"g1", "=", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"ImageDifference", "[", 
-             RowBox[{
-              RowBox[{"GaussianFilter", "[", 
-               RowBox[{"lightness", ",", 
-                RowBox[{"{", 
-                 RowBox[{"2", ",", 
-                  RowBox[{
-                   RowBox[{
-                    RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", 
-                   "2"}]}], "}"}]}], "]"}], ",", 
-              RowBox[{"GaussianFilter", "[", 
-               RowBox[{"lightness", ",", 
-                RowBox[{"{", 
-                 RowBox[{"4", ",", 
-                  RowBox[{
-                   RowBox[{
-                    RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", 
-                   "4"}]}], "}"}]}], "]"}]}], "]"}], "\[IndentingNewLine]", 
-            "g2"}], "=", 
-           RowBox[{
-            RowBox[{"ImageDifference", "[", 
-             RowBox[{
-              RowBox[{"GaussianFilter", "[", 
-               RowBox[{"chroma", ",", 
-                RowBox[{"{", 
-                 RowBox[{"2", ",", 
-                  RowBox[{
-                   RowBox[{
-                    RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", 
-                   "2"}]}], "}"}]}], "]"}], ",", 
-              RowBox[{"GaussianFilter", "[", 
-               RowBox[{"chroma", ",", 
-                RowBox[{"{", 
-                 RowBox[{"4", ",", 
-                  RowBox[{
-                   RowBox[{
-                    RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", 
-                   "4"}]}], "}"}]}], "]"}]}], "]"}], "\[IndentingNewLine]", 
-            RowBox[{"g3", "=", 
              RowBox[{"ImageDifference", "[", 
               RowBox[{
                RowBox[{"GaussianFilter", "[", 
-                RowBox[{"hue", ",", 
+                RowBox[{"lightness", ",", 
                  RowBox[{"{", 
                   RowBox[{"2", ",", 
                    RowBox[{
@@ -1687,44 +1654,58 @@ Cell[BoxData[
                     RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", 
                     "2"}]}], "}"}]}], "]"}], ",", 
                RowBox[{"GaussianFilter", "[", 
-                RowBox[{"hue", ",", 
+                RowBox[{"lightness", ",", 
                  RowBox[{"{", 
                   RowBox[{"4", ",", 
                    RowBox[{
                     RowBox[{
                     RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", 
+                    "4"}]}], "}"}]}], "]"}]}], "]"}], "\[IndentingNewLine]", 
+             "g2"}], "=", 
+            RowBox[{
+             RowBox[{"ImageDifference", "[", 
+              RowBox[{
+               RowBox[{"GaussianFilter", "[", 
+                RowBox[{"chroma", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"2", ",", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", 
+                    "2"}]}], "}"}]}], "]"}], ",", 
+               RowBox[{"GaussianFilter", "[", 
+                RowBox[{"chroma", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"4", ",", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", 
+                    "4"}]}], "}"}]}], "]"}]}], "]"}], "\[IndentingNewLine]", 
+             RowBox[{"g3", "=", 
+              RowBox[{"ImageDifference", "[", 
+               RowBox[{
+                RowBox[{"GaussianFilter", "[", 
+                 RowBox[{"hue", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"2", ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", 
+                    "2"}]}], "}"}]}], "]"}], ",", 
+                RowBox[{"GaussianFilter", "[", 
+                 RowBox[{"hue", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"4", ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", 
                     "4"}]}], "}"}]}], "]"}]}], "]"}]}]}]}]}], ";", 
-         "\[IndentingNewLine]", 
-         RowBox[{"g4", "=", 
-          RowBox[{"ImageDifference", "[", 
-           RowBox[{
-            RowBox[{"GaussianFilter", "[", 
-             RowBox[{"opacity", ",", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "2"}]}], 
-               "}"}]}], "]"}], ",", 
-            RowBox[{"GaussianFilter", "[", 
-             RowBox[{"opacity", ",", 
-              RowBox[{"{", 
-               RowBox[{"4", ",", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "4"}]}], 
-               "}"}]}], "]"}]}], "]"}]}], ";"}], "*)"}], 
-       "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"g1", ",", "g2"}], "}"}], "=", 
-        RowBox[{"ParallelMap", "[", 
-         RowBox[{
-          RowBox[{
+          "\[IndentingNewLine]", 
+          RowBox[{"g4", "=", 
            RowBox[{"ImageDifference", "[", 
             RowBox[{
              RowBox[{"GaussianFilter", "[", 
-              RowBox[{"#", ",", 
+              RowBox[{"opacity", ",", 
                RowBox[{"{", 
                 RowBox[{"2", ",", 
                  RowBox[{
@@ -1732,298 +1713,327 @@ Cell[BoxData[
                    RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "2"}]}],
                  "}"}]}], "]"}], ",", 
              RowBox[{"GaussianFilter", "[", 
-              RowBox[{"#", ",", 
+              RowBox[{"opacity", ",", 
                RowBox[{"{", 
                 RowBox[{"4", ",", 
                  RowBox[{
                   RowBox[{
                    RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "4"}]}],
-                 "}"}]}], "]"}]}], "]"}], "&"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"lightness", ",", "chroma"}], "}"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{"Clear", "[", "f", "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"Clear", "[", "data", "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"vis", "=", 
-        RowBox[{"Block", "[", 
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"f", "=", "fun"}], ",", 
-            RowBox[{"data", "=", "d"}]}], "}"}], ",", 
-          RowBox[{"renderslices2", "[", "face", "]"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{"visibility", "=", 
-        RowBox[{"ParallelTable", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{
-             RowBox[{"ImageMultiply", "[", 
-              RowBox[{"vis", ",", 
-               RowBox[{"features", "[", 
-                RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
-             "\"\<TotalIntensity\>\""}], "]"}], "/", 
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{"vis", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", 
-            RowBox[{"Length", "[", "features", "]"}]}], "}"}]}], "]"}]}], ";",
+                 "}"}]}], "]"}]}], "]"}]}], ";"}], "*)"}], 
         "\[IndentingNewLine]", 
-       RowBox[{"chart1", "=", 
-        RowBox[{"BarChart", "[", 
-         RowBox[{"visibility", ",", 
-          RowBox[{"PlotLabel", "\[Rule]", "\"\<Visibility\>\""}], ",", 
-          RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
-          RowBox[{"ChartStyle", "\[Rule]", 
-           RowBox[{"Darker", "@", "chartcolors"}]}], ",", 
-          RowBox[{"ChartLabels", "\[Rule]", 
-           RowBox[{"Placed", "[", 
-            RowBox[{
-             RowBox[{"ToString", "/@", "visibility"}], ",", "Above"}], 
-            "]"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"dog", "=", "g1"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"saliency", "=", 
-        RowBox[{"ParallelTable", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{
-             RowBox[{"ImageMultiply", "[", 
-              RowBox[{"dog", ",", 
-               RowBox[{"features", "[", 
-                RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
-             "\"\<TotalIntensity\>\""}], "]"}], "/", 
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{"dog", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", 
-            RowBox[{"Length", "[", "features", "]"}]}], "}"}]}], "]"}]}], ";",
-        "\[IndentingNewLine]", 
-       RowBox[{"chart0", "=", 
-        RowBox[{"BarChart", "[", 
-         RowBox[{"saliency", ",", 
-          RowBox[{"PlotLabel", "\[Rule]", "\"\<Saliency\>\""}], ",", 
-          RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
-          RowBox[{"ChartStyle", "\[Rule]", 
-           RowBox[{"Darker", "@", 
-            RowBox[{"Darker", "@", "chartcolors"}]}]}], ",", 
-          RowBox[{"ChartLabels", "\[Rule]", 
-           RowBox[{"Placed", "[", 
-            RowBox[{
-             RowBox[{"ToString", "/@", "saliency"}], ",", "Above"}], 
-            "]"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"viss", "=", 
-        RowBox[{"ImageMultiply", "[", 
-         RowBox[{"g1", ",", "vis"}], "]"}]}], ";", 
-       RowBox[{"(*", " ", 
-        RowBox[{"weighted", " ", "by", " ", "lightness", " ", "DoG", " ", 
-         RowBox[{"(", 
-          RowBox[{"difference", " ", "of", " ", "Gaussians"}], ")"}]}], " ", 
-        "*)"}], "\[IndentingNewLine]", 
-       RowBox[{"(*", 
         RowBox[{
-         RowBox[{"vs", "=", 
-          RowBox[{"Table", "[", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"ImageMeasurements", "[", 
-              RowBox[{
-               RowBox[{"ImageMultiply", "[", 
-                RowBox[{"viss", ",", "i"}], "]"}], ",", 
-               "\"\<TotalIntensity\>\""}], "]"}], "/", 
-             RowBox[{"ImageMeasurements", "[", 
-              RowBox[{"viss", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
-            RowBox[{"{", 
-             RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";"}], "*)"}], 
-       "\[IndentingNewLine]", 
-       RowBox[{"total", "=", 
-        RowBox[{"ImageMeasurements", "[", 
-         RowBox[{"viss", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"vs", "=", 
-        RowBox[{"Table", "[", 
-         RowBox[{
-          RowBox[{"If", "[", 
-           RowBox[{
-            RowBox[{"total", "\[NotEqual]", "0"}], ",", 
-            RowBox[{
-             RowBox[{"ImageMeasurements", "[", 
-              RowBox[{
-               RowBox[{"ImageMultiply", "[", 
-                RowBox[{"viss", ",", "i"}], "]"}], ",", 
-               "\"\<TotalIntensity\>\""}], "]"}], "/", "total"}], ",", "0"}], 
-           "]"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"chart2", "=", 
-        RowBox[{"BarChart", "[", 
-         RowBox[{"vs", ",", 
-          RowBox[{
-          "PlotLabel", "\[Rule]", 
-           "\"\<Visibility-weighted saliency of brightness\>\""}], ",", 
-          RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
-          RowBox[{"ChartStyle", "\[Rule]", 
-           RowBox[{"Lighter", "@", "chartcolors"}]}], ",", 
-          RowBox[{"ChartLabels", "\[Rule]", 
-           RowBox[{"Placed", "[", 
-            RowBox[{
-             RowBox[{"ToString", "/@", "vs"}], ",", "Above"}], "]"}]}]}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"viss2", "=", 
-        RowBox[{"ImageMultiply", "[", 
-         RowBox[{"g2", ",", "vis"}], "]"}]}], ";", 
-       RowBox[{"(*", " ", 
-        RowBox[{"weighted", " ", "by", " ", "chroma", " ", "DoG"}], " ", 
-        "*)"}], "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{
-         RowBox[{"vs2", "=", 
-          RowBox[{"Table", "[", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"ImageMeasurements", "[", 
-              RowBox[{
-               RowBox[{"ImageMultiply", "[", 
-                RowBox[{"viss2", ",", "i"}], "]"}], ",", 
-               "\"\<TotalIntensity\>\""}], "]"}], "/", 
-             RowBox[{"ImageMeasurements", "[", 
-              RowBox[{"viss2", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
-            RowBox[{"{", 
-             RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";"}], "*)"}], 
-       "\[IndentingNewLine]", 
-       RowBox[{"total2", "=", 
-        RowBox[{"ImageMeasurements", "[", 
-         RowBox[{"viss2", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"vs2", "=", 
-        RowBox[{"Table", "[", 
-         RowBox[{
-          RowBox[{"If", "[", 
-           RowBox[{
-            RowBox[{"total2", "\[NotEqual]", "0"}], ",", 
-            RowBox[{
-             RowBox[{"ImageMeasurements", "[", 
-              RowBox[{
-               RowBox[{"ImageMultiply", "[", 
-                RowBox[{"viss2", ",", "i"}], "]"}], ",", 
-               "\"\<TotalIntensity\>\""}], "]"}], "/", "total2"}], ",", "0"}],
-            "]"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"chart2b", "=", 
-        RowBox[{"BarChart", "[", 
-         RowBox[{"vs2", ",", 
-          RowBox[{
-          "PlotLabel", "\[Rule]", 
-           "\"\<Visibility-weighted saliency of saturation\>\""}], ",", 
-          RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
-          RowBox[{"ChartStyle", "\[Rule]", 
-           RowBox[{"Lighter", "@", "chartcolors"}]}], ",", 
-          RowBox[{"ChartLabels", "\[Rule]", 
-           RowBox[{"Placed", "[", 
-            RowBox[{
-             RowBox[{"ToString", "/@", "vs2"}], ",", "Above"}], "]"}]}]}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"mean", "=", 
-        RowBox[{"Mean", "[", 
          RowBox[{"{", 
-          RowBox[{"vs", ",", "vs2"}], "}"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"weighted", "=", 
-        RowBox[{"BarChart", "[", 
-         RowBox[{"mean", ",", 
+          RowBox[{"g1", ",", "g2"}], "}"}], "=", 
+         RowBox[{"ParallelMap", "[", 
           RowBox[{
-          "PlotLabel", "\[Rule]", "\"\<Visibility-weighted saliency\>\""}], 
-          ",", 
-          RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
-          RowBox[{"ChartStyle", "\[Rule]", "chartcolors"}], ",", 
-          RowBox[{"ChartLabels", "\[Rule]", 
-           RowBox[{"Placed", "[", 
+           RowBox[{
+            RowBox[{"ImageDifference", "[", 
+             RowBox[{
+              RowBox[{"GaussianFilter", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", 
+                 RowBox[{"2", ",", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", 
+                   "2"}]}], "}"}]}], "]"}], ",", 
+              RowBox[{"GaussianFilter", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", 
+                 RowBox[{"4", ",", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", 
+                   "4"}]}], "}"}]}], "]"}]}], "]"}], "&"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"lightness", ",", "chroma"}], "}"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"Clear", "[", "f", "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Clear", "[", "data", "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"vis", "=", 
+         RowBox[{"Block", "[", 
+          RowBox[{
+           RowBox[{"{", 
             RowBox[{
-             RowBox[{"ToString", "/@", "mean"}], ",", "Above"}], "]"}]}]}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"charts", "=", 
-        RowBox[{"{", 
-         RowBox[{
-         "chart0", ",", "chart1", ",", "chart2", ",", "chart2b", ",", 
-          "weighted"}], "}"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"scores", "=", 
-        RowBox[{"{", 
-         RowBox[{
-         "saliency", ",", "visibility", ",", "vs", ",", "vs2", ",", "mean"}], 
-         "}"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"Table", "[", 
-        RowBox[{
-         RowBox[{"Export", "[", 
+             RowBox[{"f", "=", "fun"}], ",", 
+             RowBox[{"data", "=", "d"}]}], "}"}], ",", 
+           RowBox[{"renderslices2", "[", "face", "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"visibility", "=", 
+         RowBox[{"ParallelTable", "[", 
           RowBox[{
-           RowBox[{"imagefilenames", "[", 
-            RowBox[{"[", "i", "]"}], "]"}], ",", 
-           RowBox[{"charts", "[", 
-            RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
-         RowBox[{"{", 
-          RowBox[{"i", ",", 
-           RowBox[{"Length", "[", "charts", "]"}]}], "}"}]}], "]"}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{
-         RowBox[{"Table", "[", 
-          RowBox[{
-           RowBox[{"Export", "[", 
-            RowBox[{
-             RowBox[{"txtfilenames", "[", 
-              RowBox[{"[", "i", "]"}], "]"}], ",", 
-             RowBox[{"scores", "[", 
-              RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+           RowBox[{
+            RowBox[{"ImageMeasurements", "[", 
+             RowBox[{
+              RowBox[{"ImageMultiply", "[", 
+               RowBox[{"vis", ",", 
+                RowBox[{"features", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+              "\"\<TotalIntensity\>\""}], "]"}], "/", 
+            RowBox[{"ImageMeasurements", "[", 
+             RowBox[{"vis", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
            RowBox[{"{", 
             RowBox[{"i", ",", 
-             RowBox[{"Length", "[", "scores", "]"}]}], "}"}]}], "]"}], ";"}], 
-        "*)"}], "\[IndentingNewLine]", 
-       RowBox[{"scoremap", "=", 
-        RowBox[{"If", "[", 
+             RowBox[{"Length", "[", "features", "]"}]}], "}"}]}], "]"}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"chart1", "=", 
+         RowBox[{"BarChart", "[", 
+          RowBox[{"visibility", ",", 
+           RowBox[{"PlotLabel", "\[Rule]", "\"\<Visibility\>\""}], ",", 
+           RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
+           RowBox[{"ChartStyle", "\[Rule]", 
+            RowBox[{"Darker", "@", "chartcolors"}]}], ",", 
+           RowBox[{"ChartLabels", "\[Rule]", 
+            RowBox[{"Placed", "[", 
+             RowBox[{
+              RowBox[{"ToString", "/@", "visibility"}], ",", "Above"}], 
+             "]"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"dog", "=", "g1"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"saliency", "=", 
+         RowBox[{"ParallelTable", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"ImageMeasurements", "[", 
+             RowBox[{
+              RowBox[{"ImageMultiply", "[", 
+               RowBox[{"dog", ",", 
+                RowBox[{"features", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+              "\"\<TotalIntensity\>\""}], "]"}], "/", 
+            RowBox[{"ImageMeasurements", "[", 
+             RowBox[{"dog", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", 
+             RowBox[{"Length", "[", "features", "]"}]}], "}"}]}], "]"}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"chart0", "=", 
+         RowBox[{"BarChart", "[", 
+          RowBox[{"saliency", ",", 
+           RowBox[{"PlotLabel", "\[Rule]", "\"\<Saliency\>\""}], ",", 
+           RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
+           RowBox[{"ChartStyle", "\[Rule]", 
+            RowBox[{"Darker", "@", 
+             RowBox[{"Darker", "@", "chartcolors"}]}]}], ",", 
+           RowBox[{"ChartLabels", "\[Rule]", 
+            RowBox[{"Placed", "[", 
+             RowBox[{
+              RowBox[{"ToString", "/@", "saliency"}], ",", "Above"}], 
+             "]"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"viss", "=", 
+         RowBox[{"ImageMultiply", "[", 
+          RowBox[{"g1", ",", "vis"}], "]"}]}], ";", 
+        RowBox[{"(*", " ", 
+         RowBox[{"weighted", " ", "by", " ", "lightness", " ", "DoG", " ", 
+          RowBox[{"(", 
+           RowBox[{"difference", " ", "of", " ", "Gaussians"}], ")"}]}], " ", 
+         "*)"}], "\[IndentingNewLine]", 
+        RowBox[{"(*", 
          RowBox[{
-          RowBox[{"FileExistsQ", "[", "resultxml", "]"}], ",", 
-          RowBox[{"Association", "@", 
-           RowBox[{"Import", "[", "resultxml", "]"}]}], ",", 
-          RowBox[{"<|", "|>"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"AssociateTo", "[", 
-        RowBox[{"scoremap", ",", 
-         RowBox[{"dataname", "\[Rule]", "scores"}]}], "]"}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"Export", "[", 
-        RowBox[{"resultxml", ",", 
-         RowBox[{"Normal", "[", "scoremap", "]"}]}], "]"}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"w", "=", 
-        RowBox[{
-         RowBox[{"ImageAdd", "[", 
-          RowBox[{"viss", ",", "viss2"}], "]"}], "//", "ImageAdjust"}]}], ";",
+          RowBox[{"vs", "=", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"ImageMeasurements", "[", 
+               RowBox[{
+                RowBox[{"ImageMultiply", "[", 
+                 RowBox[{"viss", ",", "i"}], "]"}], ",", 
+                "\"\<TotalIntensity\>\""}], "]"}], "/", 
+              RowBox[{"ImageMeasurements", "[", 
+               RowBox[{"viss", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";"}], "*)"}],
+         "\[IndentingNewLine]", 
+        RowBox[{"total", "=", 
+         RowBox[{"ImageMeasurements", "[", 
+          RowBox[{"viss", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ";", 
         "\[IndentingNewLine]", 
-       RowBox[{"results", "=", 
-        RowBox[{
+        RowBox[{"vs", "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"total", "\[NotEqual]", "0"}], ",", 
+             RowBox[{
+              RowBox[{"ImageMeasurements", "[", 
+               RowBox[{
+                RowBox[{"ImageMultiply", "[", 
+                 RowBox[{"viss", ",", "i"}], "]"}], ",", 
+                "\"\<TotalIntensity\>\""}], "]"}], "/", "total"}], ",", "0"}],
+             "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"chart2", "=", 
+         RowBox[{"BarChart", "[", 
+          RowBox[{"vs", ",", 
+           RowBox[{
+           "PlotLabel", "\[Rule]", 
+            "\"\<Visibility-weighted saliency of brightness\>\""}], ",", 
+           RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
+           RowBox[{"ChartStyle", "\[Rule]", 
+            RowBox[{"Lighter", "@", "chartcolors"}]}], ",", 
+           RowBox[{"ChartLabels", "\[Rule]", 
+            RowBox[{"Placed", "[", 
+             RowBox[{
+              RowBox[{"ToString", "/@", "vs"}], ",", "Above"}], "]"}]}]}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"viss2", "=", 
+         RowBox[{"ImageMultiply", "[", 
+          RowBox[{"g2", ",", "vis"}], "]"}]}], ";", 
+        RowBox[{"(*", " ", 
+         RowBox[{"weighted", " ", "by", " ", "chroma", " ", "DoG"}], " ", 
+         "*)"}], "\[IndentingNewLine]", 
+        RowBox[{"(*", 
          RowBox[{
-          RowBox[{"ImageMultiply", "[", 
-           RowBox[{"w", ",", "#"}], "]"}], "&"}], "/@", "features"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"MapIndexed", "[", 
-        RowBox[{
+          RowBox[{"vs2", "=", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"ImageMeasurements", "[", 
+               RowBox[{
+                RowBox[{"ImageMultiply", "[", 
+                 RowBox[{"viss2", ",", "i"}], "]"}], ",", 
+                "\"\<TotalIntensity\>\""}], "]"}], "/", 
+              RowBox[{"ImageMeasurements", "[", 
+               RowBox[{"viss2", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";"}], "*)"}],
+         "\[IndentingNewLine]", 
+        RowBox[{"total2", "=", 
+         RowBox[{"ImageMeasurements", "[", 
+          RowBox[{"viss2", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"vs2", "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"total2", "\[NotEqual]", "0"}], ",", 
+             RowBox[{
+              RowBox[{"ImageMeasurements", "[", 
+               RowBox[{
+                RowBox[{"ImageMultiply", "[", 
+                 RowBox[{"viss2", ",", "i"}], "]"}], ",", 
+                "\"\<TotalIntensity\>\""}], "]"}], "/", "total2"}], ",", 
+             "0"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"chart2b", "=", 
+         RowBox[{"BarChart", "[", 
+          RowBox[{"vs2", ",", 
+           RowBox[{
+           "PlotLabel", "\[Rule]", 
+            "\"\<Visibility-weighted saliency of saturation\>\""}], ",", 
+           RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
+           RowBox[{"ChartStyle", "\[Rule]", 
+            RowBox[{"Lighter", "@", "chartcolors"}]}], ",", 
+           RowBox[{"ChartLabels", "\[Rule]", 
+            RowBox[{"Placed", "[", 
+             RowBox[{
+              RowBox[{"ToString", "/@", "vs2"}], ",", "Above"}], "]"}]}]}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"mean", "=", 
+         RowBox[{"Mean", "[", 
+          RowBox[{"{", 
+           RowBox[{"vs", ",", "vs2"}], "}"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"weighted", "=", 
+         RowBox[{"BarChart", "[", 
+          RowBox[{"mean", ",", 
+           RowBox[{
+           "PlotLabel", "\[Rule]", "\"\<Visibility-weighted saliency\>\""}], 
+           ",", 
+           RowBox[{"ChartLegends", "\[Rule]", "legends"}], ",", 
+           RowBox[{"ChartStyle", "\[Rule]", "chartcolors"}], ",", 
+           RowBox[{"ChartLabels", "\[Rule]", 
+            RowBox[{"Placed", "[", 
+             RowBox[{
+              RowBox[{"ToString", "/@", "mean"}], ",", "Above"}], "]"}]}]}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"charts", "=", 
+         RowBox[{"{", 
+          RowBox[{
+          "chart0", ",", "chart1", ",", "chart2", ",", "chart2b", ",", 
+           "weighted"}], "}"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"scores", "=", 
+         RowBox[{"{", 
+          RowBox[{
+          "saliency", ",", "visibility", ",", "vs", ",", "vs2", ",", "mean"}],
+           "}"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Table", "[", 
          RowBox[{
           RowBox[{"Export", "[", 
            RowBox[{
-            RowBox[{"StringReplace", "[", 
-             RowBox[{"featurefilename", ",", 
-              RowBox[{"\"\<.\>\"", "->", 
-               RowBox[{
-                RowBox[{"ToString", "[", 
-                 RowBox[{"First", "[", "#2", "]"}], "]"}], "<>", 
-                "\"\<.\>\""}]}]}], "]"}], ",", "#"}], "]"}], "&"}], ",", 
-         "results"}], "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"dataname", "->", "mean"}]}]}], "\[IndentingNewLine]", "]"}], 
-    ",", 
-    RowBox[{"{", 
-     RowBox[{"xmlstr", ",", "str"}], "}"}]}], "]"}]}]], "Input",
+            RowBox[{"imagefilenames", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], ",", 
+            RowBox[{"charts", "[", 
+             RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"Length", "[", "charts", "]"}]}], "}"}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"Export", "[", 
+             RowBox[{
+              RowBox[{"txtfilenames", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], ",", 
+              RowBox[{"scores", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"i", ",", 
+              RowBox[{"Length", "[", "scores", "]"}]}], "}"}]}], "]"}], ";"}],
+          "*)"}], "\[IndentingNewLine]", 
+        RowBox[{"scoremap", "=", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"FileExistsQ", "[", "resultxml", "]"}], ",", 
+           RowBox[{"Association", "@", 
+            RowBox[{"Import", "[", "resultxml", "]"}]}], ",", 
+           RowBox[{"<|", "|>"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"AssociateTo", "[", 
+         RowBox[{"scoremap", ",", 
+          RowBox[{"dataname", "\[Rule]", "scores"}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Export", "[", 
+         RowBox[{"resultxml", ",", 
+          RowBox[{"Normal", "[", "scoremap", "]"}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"w", "=", 
+         RowBox[{
+          RowBox[{"ImageAdd", "[", 
+           RowBox[{"viss", ",", "viss2"}], "]"}], "//", "ImageAdjust"}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"results", "=", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"ImageMultiply", "[", 
+            RowBox[{"w", ",", "#"}], "]"}], "&"}], "/@", "features"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"MapIndexed", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Export", "[", 
+            RowBox[{
+             RowBox[{"StringReplace", "[", 
+              RowBox[{"featurefilename", ",", 
+               RowBox[{"\"\<.\>\"", "->", 
+                RowBox[{
+                 RowBox[{"ToString", "[", 
+                  RowBox[{"First", "[", "#2", "]"}], "]"}], "<>", 
+                 "\"\<.\>\""}]}]}], "]"}], ",", "#"}], "]"}], "&"}], ",", 
+          "results"}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"dataname", "->", "mean"}]}]}], "\[IndentingNewLine]", "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"xmlstr", ",", "str2"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"t2", "=", 
+     RowBox[{"AbsoluteTime", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"t2", "-", "t1"}]}]}]], "Input",
  CellChangeTimes->{{3.650016010847435*^9, 3.6500160344620285`*^9}, 
    3.6500160970401473`*^9, 3.6500165656694775`*^9, 3.650016713948494*^9, 
    3.650017085260745*^9, {3.6500171411902285`*^9, 3.6500171817495975`*^9}, {
@@ -2061,7 +2071,41 @@ Cell[BoxData[
    3.6532350953540077`*^9}, 3.6532361082526264`*^9, 3.6534146391655083`*^9, {
    3.653414689863912*^9, 3.6534147241631308`*^9}, {3.653415388668265*^9, 
    3.6534156138601494`*^9}, 3.6534156487453747`*^9, {3.653415845903515*^9, 
-   3.6534158499511375`*^9}}]
+   3.6534158499511375`*^9}, {3.6534161198543253`*^9, 3.653416164362772*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"nucleon_strong_red\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.056653804900413926`", ",", "0.8515430570704958`", ",", 
+      "0.09180313802909021`"}], "}"}]}], ",", 
+   RowBox[{"\<\"nucleon_weak_red\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.2240566621702419`", ",", "0.1610146232843866`", ",", 
+      "0.6149287145453716`"}], "}"}]}], ",", 
+   RowBox[{"\<\"nucleon_naive\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.3453305493565747`", ",", "0.424197904783309`", ",", 
+      "0.23047154586011637`"}], "}"}]}], ",", 
+   RowBox[{"\<\"nucleon_naive_optimized_green_1000\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.028651490214885146`", ",", "0.12583808763587684`", ",", 
+      "0.845510422149238`"}], "}"}]}], ",", 
+   RowBox[{"\<\"nucleon_naive_optimized_red_1000\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+     "0.05095286355222849`", ",", "0.8781577840415759`", ",", 
+      "0.07088935240619562`"}], "}"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.6534162020799317`*^9}],
+
+Cell[BoxData["23.5888885`8.82425247106282"], "Output",
+ CellChangeTimes->{3.6534162020799317`*^9}]
+}, Open  ]]
 },
 WindowSize->{1282, 797},
 WindowMargins->{{-8, Automatic}, {Automatic, -8}},
@@ -2083,8 +2127,12 @@ Cell[558, 20, 16988, 468, 952, "Input"],
 Cell[17549, 490, 16381, 457, 972, "Input"],
 Cell[33933, 949, 9657, 249, 552, "Input"],
 Cell[43593, 1200, 2078, 33, 1172, "Input"],
-Cell[45674, 1235, 532, 12, 112, "Input"],
-Cell[46209, 1249, 34347, 814, 1932, "Input"]
+Cell[45674, 1235, 555, 12, 112, "Input"],
+Cell[CellGroupData[{
+Cell[46254, 1251, 35444, 822, 1992, "Input"],
+Cell[81701, 2075, 1092, 28, 72, "Output"],
+Cell[82796, 2105, 98, 1, 31, "Output"]
+}, Open  ]]
 }
 ]
 *)
