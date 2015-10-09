@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    312930,       5340]
-NotebookOptionsPosition[    311822,       5301]
-NotebookOutlinePosition[    312164,       5316]
-CellTagsIndexPosition[    312121,       5313]
+NotebookDataLength[    311613,       5302]
+NotebookOptionsPosition[    310549,       5265]
+NotebookOutlinePosition[    310891,       5280]
+CellTagsIndexPosition[    310848,       5277]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -5191,51 +5191,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9OX/ASud3UE=
   3.65334314192239*^9, 3.6533431653649087`*^9}}]
 }, Open  ]],
 
-Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"Needs", "[", "\"\<CUDALink`\>\"", "]"}], "\n", 
+ RowBox[{"SystemInformation", "[", "]"}]}], "Input",
+ CellChangeTimes->{{3.6533451885119467`*^9, 3.6533451885135756`*^9}}],
 
 Cell[BoxData[{
  RowBox[{"Needs", "[", "\"\<CUDALink`\>\"", "]"}], "\n", 
  RowBox[{"CUDAResourcesInstall", "[", 
   RowBox[{"Update", "\[Rule]", "True"}], "]"}]}], "Input"],
-
-Cell[BoxData[
- PanelBox[
-  StyleBox[
-   InterpretationBox["\<\"Loading from Wolfram Research server \
-(\\!\\(\\*DynamicBox[ToBoxes[Refresh[Round[Function[Which[Or[Not[NumericQ[\
-Slot[1]]], Less[Slot[1], 0]], 0, LessEqual[0, Slot[1], 1], Times[100, \
-Slot[1]], True, \
-100]][Last[PacletManager`Package`getTaskData[AsynchronousTaskObject[\\\"http:/\
-/pacletserver.wolfram.com/Paclets/CUDAResources-Win64-10.2.0.2.paclet\\\", 1, \
-28052936650901441754]]]]], Rule[UpdateInterval, 0.5`]], StandardForm]]\\)%)\"\
-\>",
-    StringForm["Loading from Wolfram Research server (`1`%)", 
-     Dynamic[
-      Refresh[
-       Round[
-        (Which[
-         Or[
-          Not[
-           NumericQ[#]], # < 0], 0, 0 <= # <= 1, 100 #, True, 100]& )[
-         Last[
-          PacletManager`Package`getTaskData[
-           AsynchronousTaskObject[
-           "http://pacletserver.wolfram.com/Paclets/CUDAResources-Win64-10.2.\
-0.2.paclet", 1, 28052936650901441754]]]]], UpdateInterval -> 0.5]]],
-    Editable->False], "Button",
-   StripOnInput->False,
-   LineColor->GrayLevel[0.5],
-   FrontFaceColor->GrayLevel[0.5],
-   BackFaceColor->GrayLevel[0.5],
-   GraphicsColor->GrayLevel[0.5],
-   FontColor->GrayLevel[0.5]],
-  Alignment->{Center, Center},
-  Appearance->{
-   "Default" -> 
-    FrontEnd`FileName[{"Typeset", "PrintTemporary"}, "LightBlue.9.png"]},
-  FrameMargins->{{12, 12}, {8, 12}}]], "PrintTemporary",
- CellChangeTimes->{3.6533446246485825`*^9}]
-}, Open  ]],
 
 Cell[BoxData[{
  RowBox[{"Needs", "[", "\"\<CUDALink`\>\"", "]"}], "\[IndentingNewLine]", 
@@ -5336,12 +5300,10 @@ Cell[CellGroupData[{
 Cell[220386, 3719, 1890, 56, 112, "Input"],
 Cell[222279, 3777, 85830, 1413, 406, "Output"]
 }, Open  ]],
-Cell[CellGroupData[{
-Cell[308146, 5195, 170, 3, 52, "Input"],
-Cell[308319, 5200, 1434, 36, 56, "PrintTemporary"]
-}, Open  ]],
-Cell[309768, 5239, 261, 4, 52, "Input"],
-Cell[310032, 5245, 1786, 54, 112, "Input"]
+Cell[308124, 5193, 195, 3, 52, "Input"],
+Cell[308322, 5198, 170, 3, 52, "Input"],
+Cell[308495, 5203, 261, 4, 52, "Input"],
+Cell[308759, 5209, 1786, 54, 112, "Input"]
 }
 ]
 *)
