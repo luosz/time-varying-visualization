@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    611655,      13735]
-NotebookOptionsPosition[    609339,      13669]
-NotebookOutlinePosition[    609682,      13684]
-CellTagsIndexPosition[    609639,      13681]
+NotebookDataLength[    612306,      13741]
+NotebookOptionsPosition[    609990,      13675]
+NotebookOutlinePosition[    610333,      13690]
+CellTagsIndexPosition[    610290,      13687]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -670,7 +670,8 @@ Cell[BoxData[
    3.653403521835101*^9, 3.6534035345433207`*^9}, {3.653404518236615*^9, 
    3.6534045214666348`*^9}, {3.6534252350196095`*^9, 3.653425269491725*^9}, {
    3.65347162891201*^9, 3.653471666888797*^9}, {3.6534729494060755`*^9, 
-   3.653472965806373*^9}, {3.6534745222349763`*^9, 3.653474522726985*^9}}],
+   3.653472965806373*^9}, {3.6534745222349763`*^9, 3.653474522726985*^9}, {
+   3.653476482075961*^9, 3.6534764885936155`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -2331,8 +2332,8 @@ Cell[BoxData[{
   RowBox[{"Export", "[", 
    RowBox[{
     RowBox[{
-     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-     "\"\<saliency_fixed.png\>\""}], ",", "saliency1"}], "]"}], 
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+     "\"\<_saliency_fixed.png\>\""}], ",", "saliency1"}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"opacity1", "=", 
   RowBox[{"ListLinePlot", "[", 
@@ -2361,8 +2362,8 @@ Cell[BoxData[{
   RowBox[{"Export", "[", 
    RowBox[{
     RowBox[{
-     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-     "\"\<opacity_fixed.png\>\""}], ",", "opacity1"}], "]"}], 
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+     "\"\<_opacity_fixed.png\>\""}], ",", "opacity1"}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"x", "=", 
@@ -2444,8 +2445,9 @@ Cell[BoxData[{
   RowBox[{"Export", "[", 
    RowBox[{
     RowBox[{
-     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<rms_fixed.png\>\""}],
-     ",", "rms1"}], "]"}], ";"}], "\[IndentingNewLine]", 
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+     "\"\<_rms_fixed.png\>\""}], ",", "rms1"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{"table1", "=", 
   RowBox[{"TableForm", "[", 
    RowBox[{"list", ",", 
@@ -2465,8 +2467,8 @@ Cell[BoxData[{
    RowBox[{"Export", "[", 
     RowBox[{
      RowBox[{
-      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-      "\"\<table_fixed.png\>\""}], ",", "table1"}], "]"}], ";"}], 
+      RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+      "\"\<_table_fixed.png\>\""}], ",", "table1"}], "]"}], ";"}], 
   "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
@@ -2505,7 +2507,8 @@ Cell[BoxData[{
    3.653311471569386*^9, 3.6533114785742683`*^9}, {3.6533178057627907`*^9, 
    3.653317805970583*^9}, {3.653317844817046*^9, 3.653317845074831*^9}, 
    3.6533283189009867`*^9, {3.6533315112223845`*^9, 3.6533315139254227`*^9}, {
-   3.653397113996985*^9, 3.6533971152036514`*^9}}],
+   3.653397113996985*^9, 3.6533971152036514`*^9}, {3.653476242076087*^9, 
+   3.653476302827565*^9}}],
 
 Cell[BoxData["121.5169449`9.536181835738532"], "Output",
  CellChangeTimes->{{3.652905338734441*^9, 3.652905362695603*^9}, {
@@ -7632,8 +7635,8 @@ Cell[BoxData[{
   RowBox[{"Export", "[", 
    RowBox[{
     RowBox[{
-     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-     "\"\<saliency_parallelsearch.png\>\""}], ",", "saliency2"}], "]"}], 
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+     "\"\<_saliency_parallelsearch.png\>\""}], ",", "saliency2"}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"opacity2", "=", 
   RowBox[{"ListLinePlot", "[", 
@@ -7662,8 +7665,8 @@ Cell[BoxData[{
   RowBox[{"Export", "[", 
    RowBox[{
     RowBox[{
-     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-     "\"\<opacity_parallelsearch.png\>\""}], ",", "opacity2"}], "]"}], 
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+     "\"\<_opacity_parallelsearch.png\>\""}], ",", "opacity2"}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"x", "=", 
@@ -7745,8 +7748,8 @@ Cell[BoxData[{
   RowBox[{"Export", "[", 
    RowBox[{
     RowBox[{
-     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-     "\"\<rms_parallelsearch.png\>\""}], ",", "rms2"}], "]"}], 
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+     "\"\<_rms_parallelsearch.png\>\""}], ",", "rms2"}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"table2", "=", 
   RowBox[{"TableForm", "[", 
@@ -7767,8 +7770,8 @@ Cell[BoxData[{
    RowBox[{"Export", "[", 
     RowBox[{
      RowBox[{
-      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-      "\"\<table_parallelsearch.png\>\""}], ",", "table2"}], "]"}], ";"}], 
+      RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+      "\"\<_table_parallelsearch.png\>\""}], ",", "table2"}], "]"}], ";"}], 
   "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
@@ -7825,7 +7828,8 @@ Cell[BoxData[{
    3.653302902671488*^9}, {3.6533067859595547`*^9, 3.6533067940182314`*^9}, {
    3.653307137925342*^9, 3.6533071468169694`*^9}, {3.6533114574840193`*^9, 
    3.6533114630134115`*^9}, 3.6533283127764997`*^9, {3.6533314958671465`*^9, 
-   3.6533314984802303`*^9}, {3.6533971305527215`*^9, 3.6533971311152325`*^9}}],
+   3.6533314984802303`*^9}, {3.6533971305527215`*^9, 
+   3.6533971311152325`*^9}, {3.6534763299055634`*^9, 3.65347635325474*^9}}],
 
 Cell[BoxData["33.7729957`8.980114578214208"], "Output",
  CellChangeTimes->{
@@ -10516,8 +10520,8 @@ Cell[BoxData[{
   RowBox[{"Export", "[", 
    RowBox[{
     RowBox[{
-     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-     "\"\<saliency_linesearch.png\>\""}], ",", "saliency3"}], "]"}], 
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+     "\"\<_saliency_linesearch.png\>\""}], ",", "saliency3"}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"opacity3", "=", 
   RowBox[{"ListLinePlot", "[", 
@@ -10546,8 +10550,8 @@ Cell[BoxData[{
   RowBox[{"Export", "[", 
    RowBox[{
     RowBox[{
-     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-     "\"\<opacity_linesearch.png\>\""}], ",", "opacity3"}], "]"}], 
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+     "\"\<_opacity_linesearch.png\>\""}], ",", "opacity3"}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"x", "=", 
@@ -10629,8 +10633,8 @@ Cell[BoxData[{
   RowBox[{"Export", "[", 
    RowBox[{
     RowBox[{
-     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-     "\"\<rms_linesearch.png\>\""}], ",", "rms3"}], "]"}], 
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+     "\"\<_rms_linesearch.png\>\""}], ",", "rms3"}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"table3", "=", 
   RowBox[{"TableForm", "[", 
@@ -10651,8 +10655,8 @@ Cell[BoxData[{
    RowBox[{"Export", "[", 
     RowBox[{
      RowBox[{
-      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-      "\"\<table_linesearch.png\>\""}], ",", "table3"}], "]"}], ";"}], 
+      RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+      "\"\<_table_linesearch.png\>\""}], ",", "table3"}], "]"}], ";"}], 
   "\[IndentingNewLine]", 
   RowBox[{"(*", 
    RowBox[{
@@ -10681,7 +10685,7 @@ Cell[BoxData[{
    3.6533049012929125`*^9, {3.6533071559315443`*^9, 3.6533071653349876`*^9}, {
    3.653311433445219*^9, 3.6533114489046164`*^9}, 3.6533283080690017`*^9, {
    3.653331485582052*^9, 3.6533314890892844`*^9}, {3.6533971415076075`*^9, 
-   3.6533971427297716`*^9}}],
+   3.6533971427297716`*^9}, {3.6534763692348766`*^9, 3.653476389138684*^9}}],
 
 Cell[BoxData["60.1708628`9.230931232453017"], "Output",
  CellChangeTimes->CompressedData["
@@ -13041,15 +13045,15 @@ Cell[BoxData[
     RowBox[{"Export", "[", 
      RowBox[{
       RowBox[{
-       RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-       "\"\<parameterspace.png\>\""}], ",", "sp"}], "]"}], ";"}], 
+       RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+       "\"\<_parameterspace.png\>\""}], ",", "sp"}], "]"}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"Export", "[", 
      RowBox[{
       RowBox[{
-       RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-       "\"\<parameterspace_path.png\>\""}], ",", "sp2"}], "]"}], ";"}], 
+       RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+       "\"\<_parameterspace_path.png\>\""}], ",", "sp2"}], "]"}], ";"}], 
    "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{
@@ -13200,8 +13204,8 @@ Cell[BoxData[
        RowBox[{"Export", "[", 
         RowBox[{
          RowBox[{
-          RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-          "\"\<densityplot\>\"", "<>", 
+          RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+          "\"\<_densityplot\>\"", "<>", 
           RowBox[{"ToString", "[", 
            RowBox[{"First", "@", "#2"}], "]"}], "<>", "\"\<.png\>\""}], ",", 
          "#"}], "]"}], "&"}], ",", "densityplots"}], "]"}], ";"}]}], 
@@ -13228,7 +13232,8 @@ Cell[BoxData[
    3.6534049247808065`*^9, {3.6534050560956626`*^9, 3.6534050590975018`*^9}, {
    3.6534051015950775`*^9, 3.6534051098054843`*^9}, 3.6534051408253427`*^9, {
    3.6534052260245843`*^9, 3.653405243621411*^9}, 3.6534063383707733`*^9, {
-   3.6534253974273567`*^9, 3.653425418302394*^9}}],
+   3.6534253974273567`*^9, 3.653425418302394*^9}, {3.653476420485875*^9, 
+   3.653476439765152*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -13451,8 +13456,8 @@ Cell[BoxData[{
     RowBox[{
      RowBox[{"Last", "[", "path1", "]"}], ",", 
      RowBox[{
-      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-      "\"\<optimized_fixed.tfi\>\""}]}], "]"}]}], 
+      RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+      "\"\<_optimized_fixed.tfi\>\""}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"tf2", "=", 
@@ -13460,8 +13465,8 @@ Cell[BoxData[{
     RowBox[{
      RowBox[{"Last", "[", "path2", "]"}], ",", 
      RowBox[{
-      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-      "\"\<optimized_parallelsearch.tfi\>\""}]}], "]"}]}], 
+      RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+      "\"\<_optimized_parallelsearch.tfi\>\""}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"tf3", "=", 
@@ -13469,8 +13474,8 @@ Cell[BoxData[{
     RowBox[{
      RowBox[{"Last", "[", "path3", "]"}], ",", 
      RowBox[{
-      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-      "\"\<optimized_linesearch.tfi\>\""}]}], "]"}]}], 
+      RowBox[{"NotebookDirectory", "[", "]"}], "<>", "dataname", "<>", 
+      "\"\<_optimized_linesearch.tfi\>\""}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Image3D", "[", 
   RowBox[{"d", ",", 
@@ -13533,7 +13538,8 @@ Cell[BoxData[{
   RowBox[{"(*", "xrgba", "*)"}]}]}], "Input",
  CellChangeTimes->{{3.6533208741577363`*^9, 3.6533208856807632`*^9}, {
    3.65332095572518*^9, 3.6533210910254526`*^9}, 3.6533211634340363`*^9, {
-   3.653331428744752*^9, 3.6533314355216293`*^9}}],
+   3.653331428744752*^9, 3.6533314355216293`*^9}, {3.6534764490064774`*^9, 
+   3.6534764570283737`*^9}}],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{}, 
@@ -13684,58 +13690,58 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 25522, 650, 1192, "Input"],
-Cell[26105, 674, 285, 6, 31, "Output"]
+Cell[580, 22, 25574, 651, 1192, "Input"],
+Cell[26157, 675, 285, 6, 31, "Output"]
 }, Open  ]],
-Cell[26405, 683, 16988, 468, 952, "Input"],
-Cell[43396, 1153, 16381, 457, 972, "Input"],
-Cell[59780, 1612, 6162, 157, 352, "Input"],
-Cell[65945, 1771, 13691, 339, 932, "Input"],
-Cell[79639, 2112, 9403, 184, 432, "Input"],
+Cell[26457, 684, 16988, 468, 952, "Input"],
+Cell[43448, 1154, 16381, 457, 972, "Input"],
+Cell[59832, 1613, 6162, 157, 352, "Input"],
+Cell[65997, 1772, 13691, 339, 932, "Input"],
+Cell[79691, 2113, 9403, 184, 432, "Input"],
 Cell[CellGroupData[{
-Cell[89067, 2300, 7691, 207, 452, "Input"],
-Cell[96761, 2509, 4590, 62, 31, "Output"],
-Cell[101354, 2573, 4563, 62, 31, "Output"],
-Cell[105920, 2637, 27117, 533, 221, "Output"],
-Cell[133040, 3172, 26359, 520, 251, "Output"],
-Cell[159402, 3694, 28574, 555, 223, "Output"],
-Cell[187979, 4251, 14679, 276, 232, "Output"],
-Cell[202661, 4529, 100820, 2532, 2191, "Output"]
+Cell[89119, 2301, 7821, 209, 452, "Input"],
+Cell[96943, 2512, 4590, 62, 31, "Output"],
+Cell[101536, 2576, 4563, 62, 31, "Output"],
+Cell[106102, 2640, 27117, 533, 221, "Output"],
+Cell[133222, 3175, 26359, 520, 251, "Output"],
+Cell[159584, 3697, 28574, 555, 223, "Output"],
+Cell[188161, 4254, 14679, 276, 232, "Output"],
+Cell[202843, 4532, 100820, 2532, 2177, "Output"]
 }, Open  ]],
-Cell[303496, 7064, 15068, 336, 612, "Input"],
-Cell[318567, 7402, 8771, 195, 492, "Input"],
+Cell[303678, 7067, 15068, 336, 612, "Input"],
+Cell[318749, 7405, 8771, 195, 492, "Input"],
 Cell[CellGroupData[{
-Cell[327363, 7601, 9156, 226, 452, "Input"],
-Cell[336522, 7829, 5147, 71, 31, "Output"],
-Cell[341672, 7902, 5120, 71, 31, "Output"],
-Cell[346795, 7975, 24953, 486, 219, "Output"],
-Cell[371751, 8463, 24680, 482, 248, "Output"],
-Cell[396434, 8947, 25781, 498, 223, "Output"],
-Cell[422218, 9447, 14355, 267, 229, "Output"],
-Cell[436576, 9716, 25059, 579, 471, "Output"]
+Cell[327545, 7604, 9283, 227, 452, "Input"],
+Cell[336831, 7833, 5147, 71, 31, "Output"],
+Cell[341981, 7906, 5120, 71, 31, "Output"],
+Cell[347104, 7979, 24953, 486, 219, "Output"],
+Cell[372060, 8467, 24680, 482, 248, "Output"],
+Cell[396743, 8951, 25781, 498, 223, "Output"],
+Cell[422527, 9451, 14355, 267, 229, "Output"],
+Cell[436885, 9720, 25059, 579, 457, "Output"]
 }, Open  ]],
-Cell[461650, 10298, 7738, 183, 552, "Input"],
+Cell[461959, 10302, 7738, 183, 552, "Input"],
 Cell[CellGroupData[{
-Cell[469413, 10485, 6995, 198, 452, "Input"],
-Cell[476411, 10685, 757, 13, 31, "Output"],
-Cell[477171, 10700, 730, 13, 31, "Output"],
-Cell[477904, 10715, 20563, 428, 219, "Output"],
-Cell[498470, 11145, 20293, 424, 248, "Output"],
-Cell[518766, 11571, 21393, 440, 223, "Output"],
-Cell[540162, 12013, 9965, 209, 229, "Output"],
-Cell[550130, 12224, 20669, 521, 471, "Output"]
+Cell[469722, 10489, 7119, 198, 452, "Input"],
+Cell[476844, 10689, 757, 13, 31, "Output"],
+Cell[477604, 10704, 730, 13, 31, "Output"],
+Cell[478337, 10719, 20563, 428, 219, "Output"],
+Cell[498903, 11149, 20293, 424, 248, "Output"],
+Cell[519199, 11575, 21393, 440, 223, "Output"],
+Cell[540595, 12017, 9965, 209, 229, "Output"],
+Cell[550563, 12228, 20669, 521, 457, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[570836, 12750, 1204, 29, 112, "Input"],
-Cell[572043, 12781, 2066, 40, 31, "Output"]
+Cell[571269, 12754, 1204, 29, 112, "Input"],
+Cell[572476, 12785, 2066, 40, 31, "Output"]
 }, Open  ]],
-Cell[574124, 12824, 3740, 75, 252, "Input"],
-Cell[577867, 12901, 12132, 329, 652, "Input"],
-Cell[590002, 13232, 8624, 210, 572, "Input"],
+Cell[574557, 12828, 3740, 75, 252, "Input"],
+Cell[578300, 12905, 12239, 330, 652, "Input"],
+Cell[590542, 13237, 8624, 210, 572, "Input"],
 Cell[CellGroupData[{
-Cell[598651, 13446, 3121, 89, 212, "Input"],
-Cell[601775, 13537, 3786, 64, 247, "Output"],
-Cell[605564, 13603, 3759, 63, 247, "Output"]
+Cell[599191, 13451, 3232, 90, 212, "Input"],
+Cell[602426, 13543, 3786, 64, 247, "Output"],
+Cell[606215, 13609, 3759, 63, 247, "Output"]
 }, Open  ]]
 }
 ]
