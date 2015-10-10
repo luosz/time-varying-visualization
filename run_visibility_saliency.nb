@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    197046,       4669]
-NotebookOptionsPosition[    195984,       4635]
-NotebookOutlinePosition[    196327,       4650]
-CellTagsIndexPosition[    196284,       4647]
+NotebookDataLength[    187550,       4429]
+NotebookOptionsPosition[    186534,       4396]
+NotebookOutlinePosition[    186877,       4411]
+CellTagsIndexPosition[    186834,       4408]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1594,257 +1594,6 @@ Cell[BoxData[{
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"VisibilitySaliency", "[", "peaks_", "]"}], ":=", 
-  RowBox[{"Module", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{
-     "alpha", ",", "fun", ",", "vis", ",", "viss", ",", "vs", ",", "viss2", 
-      ",", "vs2", ",", "mean", ",", "total", ",", "total2"}], "}"}], ",", 
-    "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"alpha", "=", "alpha0"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"MapIndexed", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"(", 
-         RowBox[{
-          RowBox[{"alpha", "[", 
-           RowBox[{"[", "#", "]"}], "]"}], "=", 
-          RowBox[{"peaks", "[", 
-           RowBox[{"[", 
-            RowBox[{"First", "@", "#2"}], "]"}], "]"}]}], ")"}], "&"}], ",", 
-       "index0"}], "]"}], ";", "\[IndentingNewLine]", 
-     RowBox[{"fun", "=", 
-      RowBox[{"Interpolation", "[", 
-       RowBox[{
-        RowBox[{"Transpose", "[", 
-         RowBox[{"{", 
-          RowBox[{"intensity0", ",", "alpha"}], "}"}], "]"}], ",", 
-        RowBox[{"InterpolationOrder", "\[Rule]", "1"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"vis", "=", 
-      RowBox[{"Block", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"f", "=", "fun"}], ",", 
-          RowBox[{"data", "=", "d"}]}], "}"}], ",", 
-        RowBox[{"renderslices2", "[", "face", "]"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"viss", "=", 
-      RowBox[{"ImageMultiply", "[", 
-       RowBox[{"g1", ",", "vis"}], "]"}]}], ";", 
-     RowBox[{"(*", " ", 
-      RowBox[{"weighted", " ", "by", " ", "lightness", " ", "DoG", " ", 
-       RowBox[{"(", 
-        RowBox[{"difference", " ", "of", " ", "Gaussians"}], ")"}]}], " ", 
-      "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-       RowBox[{"vs", "=", 
-        RowBox[{"Table", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{
-             RowBox[{"ImageMultiply", "[", 
-              RowBox[{"viss", ",", "i"}], "]"}], ",", 
-             "\"\<TotalIntensity\>\""}], "]"}], "/", 
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{"viss", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";"}], "*)"}], 
-     "\[IndentingNewLine]", 
-     RowBox[{"total", "=", 
-      RowBox[{"ImageMeasurements", "[", 
-       RowBox[{"viss", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"vs", "=", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"If", "[", 
-         RowBox[{
-          RowBox[{"total", "\[NotEqual]", "0"}], ",", 
-          RowBox[{
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{
-             RowBox[{"ImageMultiply", "[", 
-              RowBox[{"viss", ",", "i"}], "]"}], ",", 
-             "\"\<TotalIntensity\>\""}], "]"}], "/", "total"}], ",", "0"}], 
-         "]"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"viss2", "=", 
-      RowBox[{"ImageMultiply", "[", 
-       RowBox[{"g2", ",", "vis"}], "]"}]}], ";", 
-     RowBox[{"(*", " ", 
-      RowBox[{"weighted", " ", "by", " ", "chroma", " ", "DoG"}], " ", "*)"}],
-      "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-       RowBox[{"vs2", "=", 
-        RowBox[{"Table", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{
-             RowBox[{"ImageMultiply", "[", 
-              RowBox[{"viss2", ",", "i"}], "]"}], ",", 
-             "\"\<TotalIntensity\>\""}], "]"}], "/", 
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{"viss2", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";"}], "*)"}], 
-     "\[IndentingNewLine]", 
-     RowBox[{"total2", "=", 
-      RowBox[{"ImageMeasurements", "[", 
-       RowBox[{"viss2", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"vs2", "=", 
-      RowBox[{"Table", "[", 
-       RowBox[{
-        RowBox[{"If", "[", 
-         RowBox[{
-          RowBox[{"total2", "\[NotEqual]", "0"}], ",", 
-          RowBox[{
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{
-             RowBox[{"ImageMultiply", "[", 
-              RowBox[{"viss2", ",", "i"}], "]"}], ",", 
-             "\"\<TotalIntensity\>\""}], "]"}], "/", "total2"}], ",", "0"}], 
-         "]"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"mean", "=", 
-      RowBox[{"Mean", "[", 
-       RowBox[{"{", 
-        RowBox[{"vs", ",", "vs2"}], "}"}], "]"}]}]}]}], "\[IndentingNewLine]",
-    "]"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Visibility", "[", "fun_", "]"}], ":=", 
-  RowBox[{"Module", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{
-     "vis", ",", "viss", ",", "vs", ",", "viss2", ",", "vs2", ",", "mean", 
-      ",", "total", ",", "total2"}], "}"}], ",", "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"vis", "=", 
-      RowBox[{"Block", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"f", "=", "fun"}], ",", 
-          RowBox[{"data", "=", "d"}]}], "}"}], ",", 
-        RowBox[{"renderslices2", "[", "face", "]"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"viss", "=", 
-      RowBox[{"ImageMultiply", "[", 
-       RowBox[{"g1", ",", "vis"}], "]"}]}], ";", 
-     RowBox[{"(*", " ", 
-      RowBox[{"weighted", " ", "by", " ", "lightness", " ", "DoG", " ", 
-       RowBox[{"(", 
-        RowBox[{"difference", " ", "of", " ", "Gaussians"}], ")"}]}], " ", 
-      "*)"}], "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-       RowBox[{"vs", "=", 
-        RowBox[{"Table", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{
-             RowBox[{"ImageMultiply", "[", 
-              RowBox[{"viss", ",", "i"}], "]"}], ",", 
-             "\"\<TotalIntensity\>\""}], "]"}], "/", 
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{"viss", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";"}], "*)"}], 
-     "\[IndentingNewLine]", 
-     RowBox[{"total", "=", 
-      RowBox[{"ImageMeasurements", "[", 
-       RowBox[{"viss", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"vs", "=", 
-      RowBox[{"ParallelTable", "[", 
-       RowBox[{
-        RowBox[{"If", "[", 
-         RowBox[{
-          RowBox[{"total", "\[NotEqual]", "0"}], ",", 
-          RowBox[{
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{
-             RowBox[{"ImageMultiply", "[", 
-              RowBox[{"viss", ",", "i"}], "]"}], ",", 
-             "\"\<TotalIntensity\>\""}], "]"}], "/", "total"}], ",", "0"}], 
-         "]"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"viss2", "=", 
-      RowBox[{"ImageMultiply", "[", 
-       RowBox[{"g2", ",", "vis"}], "]"}]}], ";", 
-     RowBox[{"(*", " ", 
-      RowBox[{"weighted", " ", "by", " ", "chroma", " ", "DoG"}], " ", "*)"}],
-      "\[IndentingNewLine]", 
-     RowBox[{"(*", 
-      RowBox[{
-       RowBox[{"vs2", "=", 
-        RowBox[{"Table", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{
-             RowBox[{"ImageMultiply", "[", 
-              RowBox[{"viss2", ",", "i"}], "]"}], ",", 
-             "\"\<TotalIntensity\>\""}], "]"}], "/", 
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{"viss2", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ",", 
-          RowBox[{"{", 
-           RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";"}], "*)"}], 
-     "\[IndentingNewLine]", 
-     RowBox[{"total2", "=", 
-      RowBox[{"ImageMeasurements", "[", 
-       RowBox[{"viss2", ",", "\"\<TotalIntensity\>\""}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"vs2", "=", 
-      RowBox[{"ParallelTable", "[", 
-       RowBox[{
-        RowBox[{"If", "[", 
-         RowBox[{
-          RowBox[{"total2", "\[NotEqual]", "0"}], ",", 
-          RowBox[{
-           RowBox[{"ImageMeasurements", "[", 
-            RowBox[{
-             RowBox[{"ImageMultiply", "[", 
-              RowBox[{"viss2", ",", "i"}], "]"}], ",", 
-             "\"\<TotalIntensity\>\""}], "]"}], "/", "total2"}], ",", "0"}], 
-         "]"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"i", ",", "features"}], "}"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", 
-     RowBox[{"mean", "=", 
-      RowBox[{"Mean", "[", 
-       RowBox[{"{", 
-        RowBox[{"vs", ",", "vs2"}], "}"}], "]"}]}]}]}], "\[IndentingNewLine]",
-    "]"}]}]}], "Input",
- CellChangeTimes->{{3.652987001377157*^9, 3.652987030223106*^9}, {
-   3.6529870625748034`*^9, 3.6529871734513144`*^9}, 3.6529873541603017`*^9, {
-   3.652987638281007*^9, 3.652987652353901*^9}, 3.6529877735890985`*^9, {
-   3.6529878690570374`*^9, 3.652987916409946*^9}, {3.652988226637104*^9, 
-   3.6529882295885124`*^9}, {3.6529883741048403`*^9, 3.6529884271388826`*^9}, 
-   3.652989020429822*^9, 3.653221573427886*^9, {3.65322161206022*^9, 
-   3.6532216139279184`*^9}, 3.6532216668193874`*^9, 3.6532219082499895`*^9, {
-   3.6533932795890865`*^9, 3.6533933037017727`*^9}, {3.653395654590644*^9, 
-   3.6533958555038524`*^9}, {3.6533958943044233`*^9, 3.6533959915818834`*^9}, 
-   3.6533960381069093`*^9, {3.6534240899421754`*^9, 3.6534240925844336`*^9}}],
-
-Cell[BoxData[{
- RowBox[{
   RowBox[{"Clear", "[", "f", "]"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Clear", "[", "data", "]"}], ";"}], "\[IndentingNewLine]", 
@@ -2486,8 +2235,9 @@ Cell[BoxData[
                     RGBColor[0., 0.2962962962962963, 0.44444444444444453`], 
                     FrameTicks -> None, PlotRangePadding -> None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
                     "RGBColor[0., 0.4444444444444444, 0.6666666666666667]"], 
                     Appearance -> None, BaseStyle -> {}, BaselinePosition -> 
                     Baseline, DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -2532,8 +2282,9 @@ Cell[BoxData[
                     RGBColor[0.44444444444444453`, 0., 0.], FrameTicks -> 
                     None, PlotRangePadding -> None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
                     "RGBColor[0.6666666666666667, 0., 0.]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -2578,8 +2329,9 @@ Cell[BoxData[
                     RGBColor[0.44444444444444453`, 0.44444444444444453`, 0.], 
                     FrameTicks -> None, PlotRangePadding -> None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
                     "RGBColor[0.6666666666666667, 0.6666666666666667, 0.]"], 
                     Appearance -> None, BaseStyle -> {}, BaselinePosition -> 
                     Baseline, DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -2974,8 +2726,9 @@ Cell[BoxData[
                     RGBColor[0., 0.19753086419753085`, 0.2962962962962964], 
                     FrameTicks -> None, PlotRangePadding -> None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
                     "RGBColor[0., 0.2962962962962963, 0.44444444444444453]"], 
                     Appearance -> None, BaseStyle -> {}, BaselinePosition -> 
                     Baseline, DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -3019,8 +2772,9 @@ Cell[BoxData[
                     True, FrameStyle -> RGBColor[0.2962962962962964, 0., 0.], 
                     FrameTicks -> None, PlotRangePadding -> None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
                     "RGBColor[0.44444444444444453, 0., 0.]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -3065,8 +2819,9 @@ Cell[BoxData[
                     RGBColor[0.2962962962962964, 0.2962962962962964, 0.], 
                     FrameTicks -> None, PlotRangePadding -> None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
                     "RGBColor[0.44444444444444453, 0.44444444444444453, 0.]"],
                      Appearance -> None, BaseStyle -> {}, BaselinePosition -> 
                     Baseline, DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -3433,8 +3188,9 @@ Cell[BoxData[
                     0.6666666666666667], FrameTicks -> None, PlotRangePadding -> 
                     None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
                     "RGBColor[0.3333333333333333, 0.7777777777777778, 1.]"], 
                     Appearance -> None, BaseStyle -> {}, BaselinePosition -> 
                     Baseline, DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -3481,8 +3237,9 @@ Cell[BoxData[
                     0.2222222222222222], FrameTicks -> None, PlotRangePadding -> 
                     None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
                     "RGBColor[1., 0.3333333333333333, 0.3333333333333333]"], 
                     Appearance -> None, BaseStyle -> {}, BaselinePosition -> 
                     Baseline, DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -3529,8 +3286,9 @@ Cell[BoxData[
                     0.2222222222222222], FrameTicks -> None, PlotRangePadding -> 
                     None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
                     "RGBColor[1., 1., 0.3333333333333333]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -3896,8 +3654,9 @@ Cell[BoxData[
                     0.6666666666666667], FrameTicks -> None, PlotRangePadding -> 
                     None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
                     "RGBColor[0.3333333333333333, 0.7777777777777778, 1.]"], 
                     Appearance -> None, BaseStyle -> {}, BaselinePosition -> 
                     Baseline, DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -3944,8 +3703,9 @@ Cell[BoxData[
                     0.2222222222222222], FrameTicks -> None, PlotRangePadding -> 
                     None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
                     "RGBColor[1., 0.3333333333333333, 0.3333333333333333]"], 
                     Appearance -> None, BaseStyle -> {}, BaselinePosition -> 
                     Baseline, DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -3992,8 +3752,9 @@ Cell[BoxData[
                     0.2222222222222222], FrameTicks -> None, PlotRangePadding -> 
                     None, ImageSize -> 
                     Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
+                    Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}]], 
                     "RGBColor[1., 1., 0.3333333333333333]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -4657,20 +4418,19 @@ Cell[9393, 188, 4438, 131, 252, "Input"],
 Cell[13834, 321, 11376, 342, 572, "Input"],
 Cell[25213, 665, 17087, 468, 952, "Input"],
 Cell[42303, 1135, 16381, 457, 972, "Input"],
-Cell[58687, 1594, 9723, 249, 552, "Input"],
-Cell[68413, 1845, 1022, 21, 72, "Input"],
+Cell[58687, 1594, 1022, 21, 72, "Input"],
 Cell[CellGroupData[{
-Cell[69460, 1870, 11189, 302, 592, "Input"],
-Cell[80652, 2174, 1887, 29, 31, "Output"],
-Cell[82542, 2205, 21330, 455, 256, "Output"],
-Cell[103875, 2662, 1886, 29, 31, "Output"],
-Cell[105764, 2693, 21341, 454, 253, "Output"],
-Cell[127108, 3149, 21540, 461, 256, "Output"],
-Cell[148651, 3612, 21531, 461, 256, "Output"],
-Cell[170185, 4075, 1887, 29, 31, "Output"],
-Cell[172075, 4106, 20943, 453, 256, "Output"]
+Cell[59734, 1619, 11189, 302, 592, "Input"],
+Cell[70926, 1923, 1887, 29, 31, "Output"],
+Cell[72816, 1954, 21399, 458, 256, "Output"],
+Cell[94218, 2414, 1886, 29, 31, "Output"],
+Cell[96107, 2445, 21410, 457, 253, "Output"],
+Cell[117520, 2904, 21609, 464, 256, "Output"],
+Cell[139132, 3370, 21600, 464, 256, "Output"],
+Cell[160735, 3836, 1887, 29, 31, "Output"],
+Cell[162625, 3867, 20943, 453, 256, "Output"]
 }, Open  ]],
-Cell[193033, 4562, 2947, 71, 232, "Input"]
+Cell[183583, 4323, 2947, 71, 232, "Input"]
 }
 ]
 *)
