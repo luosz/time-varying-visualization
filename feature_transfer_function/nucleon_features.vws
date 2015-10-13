@@ -23,9 +23,9 @@
                             <MetaData>
                                 <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="1142" y="593" />
                             </MetaData>
-                            <position x="20.5" y="-33.67816162" z="20.5" />
+                            <position x="20.5" y="-33.67985153" z="20.5" />
                             <focus x="20.5" y="20.5" z="20.5" />
-                            <upVector x="0" y="-0.0000006" z="1" />
+                            <upVector x="0" y="-0.00000176" z="1" />
                             <trackball moveCenter="false">
                                 <center x="20.5" y="20.5" z="20.5" />
                             </trackball>
@@ -75,7 +75,7 @@
                         <Property mapKey="shading" name="shading" value="phong" />
                         <Property mapKey="transferFunction" name="transferFunction" domainFittingStrategy="1" id="ref11">
                             <MetaData>
-                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="699" y="184" width="683" height="538" />
+                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="685" y="151" width="683" height="538" />
                             </MetaData>
                             <TransferFunction type="TransFuncIntensity" alphaMode="1" gammaValue="1">
                                 <domain x="0" y="1" />
@@ -243,9 +243,9 @@
                             <MetaData>
                                 <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="false" x="721" y="372" />
                             </MetaData>
-                            <position x="20.5" y="-33.67816162" z="20.5" />
+                            <position x="20.5" y="-33.67985153" z="20.5" />
                             <focus x="20.5" y="20.5" z="20.5" />
-                            <upVector x="0" y="-0.0000006" z="1" />
+                            <upVector x="0" y="-0.00000176" z="1" />
                             <trackball moveCenter="false">
                                 <center x="20.5" y="20.5" z="20.5" />
                             </trackball>
