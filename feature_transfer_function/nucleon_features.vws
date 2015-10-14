@@ -23,9 +23,9 @@
                             <MetaData>
                                 <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="1142" y="593" />
                             </MetaData>
-                            <position x="20.5" y="-33.67985153" z="20.5" />
+                            <position x="20.5" y="-33.68058014" z="20.49999428" />
                             <focus x="20.5" y="20.5" z="20.5" />
-                            <upVector x="0" y="-0.00000176" z="1" />
+                            <upVector x="0" y="-0.00000188" z="1" />
                             <trackball moveCenter="false">
                                 <center x="20.5" y="20.5" z="20.5" />
                             </trackball>
@@ -58,7 +58,7 @@
                                 <MetaItem name="FollowCamera" type="BoolMetaData" value="false" />
                                 <MetaItem name="UseBackHemisphere" type="BoolMetaData" value="false" />
                             </MetaData>
-                            <value x="20.5" y="0" z="20.5" w="1" />
+                            <value x="20.5" y="0" z="20.49999809" w="1" />
                             <Center x="20.5" y="20.5" z="20.5" />
                             <LightPos x="0" y="0" z="20.5" w="0" />
                         </Property>
@@ -75,7 +75,7 @@
                         <Property mapKey="shading" name="shading" value="phong" />
                         <Property mapKey="transferFunction" name="transferFunction" domainFittingStrategy="1" id="ref11">
                             <MetaData>
-                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="685" y="151" width="683" height="538" />
+                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="677" y="165" width="683" height="538" />
                             </MetaData>
                             <TransferFunction type="TransFuncIntensity" alphaMode="1" gammaValue="1">
                                 <domain x="0" y="1" />
@@ -103,7 +103,7 @@
                                         <colorL r="4" g="255" b="0" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.86061502" split="false">
-                                        <colorL r="73" g="255" b="1" a="60" />
+                                        <colorL r="73" g="255" b="1" a="61" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.96627003" split="false">
                                         <colorL r="8" g="82" b="7" a="0" />
@@ -149,10 +149,10 @@
                 <Processor type="Canvas" name="Canvas" id="ref2">
                     <MetaData>
                         <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-473" y="198" />
-                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="104" y="370" width="512" height="512" />
+                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="64" y="302" width="512" height="512" />
                         <MetaItem name="preferedDevelopmentCanvasFS" type="BoolMetaData" value="false" />
                         <MetaItem name="preferedDevelopmentCanvasPosition" type="IVec2MetaData">
-                            <value x="104" y="370" />
+                            <value x="64" y="302" />
                         </MetaItem>
                         <MetaItem name="preferedDevelopmentCanvasSize" type="IVec2MetaData">
                             <value x="512" y="512" />
@@ -243,9 +243,9 @@
                             <MetaData>
                                 <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="false" x="721" y="372" />
                             </MetaData>
-                            <position x="20.5" y="-33.67985153" z="20.5" />
+                            <position x="20.5" y="-33.68058014" z="20.49999428" />
                             <focus x="20.5" y="20.5" z="20.5" />
-                            <upVector x="0" y="-0.00000176" z="1" />
+                            <upVector x="0" y="-0.00000188" z="1" />
                             <trackball moveCenter="false">
                                 <center x="20.5" y="20.5" z="20.5" />
                             </trackball>
@@ -348,7 +348,7 @@
                                         <colorL r="4" g="255" b="0" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.86061502" split="false">
-                                        <colorL r="73" g="255" b="1" a="60" />
+                                        <colorL r="73" g="255" b="1" a="61" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.96627003" split="false">
                                         <colorL r="8" g="82" b="7" a="0" />
