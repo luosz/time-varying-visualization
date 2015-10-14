@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    147079,       3633]
-NotebookOptionsPosition[    146746,       3618]
-NotebookOutlinePosition[    147088,       3633]
-CellTagsIndexPosition[    147045,       3630]
+NotebookDataLength[    185073,       4688]
+NotebookOptionsPosition[    181567,       4595]
+NotebookOutlinePosition[    181909,       4610]
+CellTagsIndexPosition[    181866,       4607]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -946,6 +946,8 @@ Cell[BoxData[{
    3.6533907050910063`*^9, 3.653390724347232*^9}, {3.6533910426423764`*^9, 
    3.6533910752363367`*^9}, 3.653391164293522*^9, {3.6533911974059334`*^9, 
    3.6533914334937663`*^9}, {3.653393937411039*^9, 3.6533939527707477`*^9}}],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{
@@ -3614,7 +3616,982 @@ Mathematica\>\"", "]"}]}], "}"}], ",", "VoreenData", ",",
    3.653777857083187*^9, 3.653777884131556*^9}, {3.653777980034647*^9, 
    3.653777996539095*^9}, {3.653778276318203*^9, 3.6537783076932807`*^9}, {
    3.653778803115438*^9, 3.653778804256445*^9}, {3.6537788548787956`*^9, 
-   3.6537789119428177`*^9}, {3.653778942645255*^9, 3.653778966503978*^9}}]
+   3.6537789119428177`*^9}, {3.653778942645255*^9, 3.653778966503978*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts1\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537826990183141`17.315317704200687*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.040626876909059056`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts1", -3.6537826990183141`17.315317704200687*^9, 0, {0., 
+   0.040626876909059056`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537791275978827`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts2\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537828308394268`17.31531771986916*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.04302531320422933`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts2", -3.6537828308394268`17.31531771986916*^9, 0, {0., 
+   0.04302531320422933, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653779259770001*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts3\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537829617535432`17.315317735429822*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.04608516254932969`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts3", -3.6537829617535432`17.315317735429822*^9, 0, {0., 
+   0.04608516254932969, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537793901903777`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts4\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537830935804651`17.31531775109898*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.04828849439139876`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts4", -3.6537830935804651`17.31531775109898*^9, 0, {0., 
+   0.04828849439139876, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537795223158593`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts5\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537832284346785`17.315317767127965*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.050751861022891726`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts5", -3.6537832284346785`17.315317767127965*^9, 0, {0., 
+   0.050751861022891726`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537796571601686`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts6\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537833661293263`17.31531778349457*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.050768107362572465`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts6", -3.6537833661293263`17.31531778349457*^9, 0, {0., 
+   0.050768107362572465`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537797946912184`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts7\"\>", "\[InvisibleSpace]", 
+   "16.0654225`8.657437144921374", "\[InvisibleSpace]", "17", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.004423284004876686`", ",", "0.05270459310211791`", ",", 
+     "0.999799435669735`"}], "}"}]}],
+  SequenceForm[
+  "vorts7", 16.0654225`8.657437144921374, 17, {0.004423284004876686, 
+   0.05270459310211791, 0.999799435669735}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537799332702727`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts8\"\>", "\[InvisibleSpace]", 
+   "5.0774808`8.157193283333562", "\[InvisibleSpace]", "5", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.005393921803707231`", ",", "0.05870439167858004`", ",", "1.`"}], 
+    "}"}]}],
+  SequenceForm[
+  "vorts8", 5.0774808`8.157193283333562, 5, {0.005393921803707231, 
+   0.05870439167858004, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653780075286208*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts9\"\>", "\[InvisibleSpace]", 
+   "4.2164626`8.076493245986521", "\[InvisibleSpace]", "4", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.006090785871656745`", ",", "0.06455031847273797`", ",", "1.`"}], 
+    "}"}]}],
+  SequenceForm[
+  "vorts9", 4.2164626`8.076493245986521, 4, {0.006090785871656745, 
+   0.06455031847273797, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537802235049286`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts10\"\>", "\[InvisibleSpace]", 
+   "6.9688221`8.294704371493486", "\[InvisibleSpace]", "7", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.004972510382510535`", ",", "0.05597255107472579`", ",", 
+     "0.9999956152841294`"}], "}"}]}],
+  SequenceForm[
+  "vorts10", 6.9688221`8.294704371493486, 7, {0.004972510382510535, 
+   0.05597255107472579, 0.9999956152841294}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537803697060304`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts11\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.653784089649097`17.31531786949327*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.05142789961267765`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts11", -3.653784089649097`17.31531786949327*^9, 0, {0., 
+   0.05142789961267765, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537805182852583`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts12\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537842402387203`17.315317887392585*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.04835145504477405`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts12", -3.6537842402387203`17.315317887392585*^9, 0, {0., 
+   0.04835145504477405, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653780670316286*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts13\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537843959412644`17.315317905899633*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.046716507915096406`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts13", -3.6537843959412644`17.315317905899633*^9, 0, {0., 
+   0.046716507915096406`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537808254097652`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts14\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537845541452701`17.315317924704004*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.045078005769248614`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts14", -3.6537845541452701`17.315317924704004*^9, 0, {0., 
+   0.045078005769248614`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537809834701214`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts15\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537847161292994`17.315317943957677*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.039329932086826155`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts15", -3.6537847161292994`17.315317943957677*^9, 0, {0., 
+   0.039329932086826155`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653781145035265*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts16\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.653784880078801`17.31531796344497*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.0359581045204955`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts16", -3.653784880078801`17.31531796344497*^9, 0, {0., 
+   0.0359581045204955, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537813090016756`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts17\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537850494584622`17.315317983577692*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03595896341403716`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts17", -3.6537850494584622`17.315317983577692*^9, 0, {0., 
+   0.03595896341403716, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537814784266644`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts18\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537852230095951`17.315318004206244*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03419923184424558`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts18", -3.6537852230095951`17.315318004206244*^9, 0, {0., 
+   0.03419923184424558, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537816516431804`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts19\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537854018624876`17.315318025464972*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03434393099594928`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts19", -3.6537854018624876`17.315318025464972*^9, 0, {0., 
+   0.03434393099594928, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537818304247704`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts20\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537855856748103`17.315318047313184*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03452517820617307`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts20", -3.6537855856748103`17.315318047313184*^9, 0, {0., 
+   0.03452517820617307, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537820144571114`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts21\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.653785775894292`17.31531806992296*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03540817578074572`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts21", -3.653785775894292`17.31531806992296*^9, 0, {0., 
+   0.03540817578074572, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653782204659047*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts22\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537859711441312`17.31531809313065*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03734890635231152`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts22", -3.6537859711441312`17.31531809313065*^9, 0, {0., 
+   0.03734890635231152, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653782400142988*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts23\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537861741933672`17.315318117265385*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03934258245144348`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts23", -3.6537861741933672`17.315318117265385*^9, 0, {0., 
+   0.03934258245144348, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537826035049314`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts24\"\>", "\[InvisibleSpace]", 
+   "1.2969624`7.564472379210569", "\[InvisibleSpace]", "2", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.014489078628801558`", ",", "0.0890919309063642`", ",", 
+     "0.978771931641307`"}], "}"}]}],
+  SequenceForm[
+  "vorts24", 1.2969624`7.564472379210569, 2, {0.014489078628801558`, 
+   0.0890919309063642, 0.978771931641307}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537827337077885`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts25\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537865194557056`17.315318158303782*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03764484898013857`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts25", -3.6537865194557056`17.315318158303782*^9, 0, {0., 
+   0.03764484898013857, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653782948363084*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts26\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537867398797053`17.315318184503703*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03812145377124293`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts26", -3.6537867398797053`17.315318184503703*^9, 0, {0., 
+   0.03812145377124293, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537831689726653`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts27\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.653786968424688`17.315318211668895*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03820350041917378`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts27", -3.653786968424688`17.315318211668895*^9, 0, {0., 
+   0.03820350041917378, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653783398565872*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts28\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.653787204584267`17.31531823973917*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.038202885689293586`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts28", -3.653787204584267`17.31531823973917*^9, 0, {0., 
+   0.038202885689293586`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537836338647547`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts29\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537874479268408`17.315318268663223*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03914203152447793`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts29", -3.6537874479268408`17.315318268663223*^9, 0, {0., 
+   0.03914203152447793, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537838773618116`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts30\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537876998559272`17.315318298607878*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03801784490929598`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts30", -3.6537876998559272`17.315318298607878*^9, 0, {0., 
+   0.03801784490929598, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537841291139097`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts31\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537879597854683`17.315318329503476*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03619684341275622`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts31", -3.6537879597854683`17.315318329503476*^9, 0, {0., 
+   0.03619684341275622, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653784389052147*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts32\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537882260511886`17.3153183611522*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03422953584395448`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts32", -3.6537882260511886`17.3153183611522*^9, 0, {0., 
+   0.03422953584395448, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653784655082428*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts33\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537885003209508`17.315318393752293*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03260632731846137`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts33", -3.6537885003209508`17.315318393752293*^9, 0, {0., 
+   0.03260632731846137, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537849292525773`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts34\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537887839564341`17.31531842746561*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.031345842723283585`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts34", -3.6537887839564341`17.31531842746561*^9, 0, {0., 
+   0.031345842723283585`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537852141121197`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts35\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537890763319499`17.31531846221777*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03174384848440556`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts35", -3.6537890763319499`17.31531846221777*^9, 0, {0., 
+   0.03174384848440556, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653785505020449*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts36\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537893790363896`17.315318498197648*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03303823586272883`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts36", -3.6537893790363896`17.315318498197648*^9, 0, {0., 
+   0.03303823586272883, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537858078940897`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts37\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537896909120157`17.315318535267615*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03476441656146889`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts37", -3.6537896909120157`17.315318535267615*^9, 0, {0., 
+   0.03476441656146889, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537861215791836`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts38\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537900165350141`17.315318573971613*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03685909401845923`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts38", -3.6537900165350141`17.315318573971613*^9, 0, {0., 
+   0.03685909401845923, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537864458306036`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts39\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537903494101716`17.315318613537606*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03685925916909099`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts39", -3.6537903494101716`17.315318613537606*^9, 0, {0., 
+   0.03685925916909099, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653786778676874*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts40\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537906949583656`17.31531865460993*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03871266685565365`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts40", -3.6537906949583656`17.31531865460993*^9, 0, {0., 
+   0.03871266685565365, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537871242377386`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts41\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537910476923225`17.315318696536366*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.040105879749981234`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts41", -3.6537910476923225`17.315318696536366*^9, 0, {0., 
+   0.040105879749981234`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537874768631287`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts42\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537914122065895`17.315318739863013*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.041210091306482816`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts42", -3.6537914122065895`17.315318739863013*^9, 0, {0., 
+   0.041210091306482816`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537878414878016`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts43\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537917909569575`17.315318784881782*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.04178450588279352`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts43", -3.6537917909569575`17.315318784881782*^9, 0, {0., 
+   0.04178450588279352, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653788220175789*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts44\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537921782706265`17.31531883091839*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.041975184960297854`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts44", -3.6537921782706265`17.31531883091839*^9, 0, {0., 
+   0.041975184960297854`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537886077221355`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts45\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537925809734347`17.315318878784165*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.042715949821970724`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts45", -3.6537925809734347`17.315318878784165*^9, 0, {0., 
+   0.042715949821970724`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537890105681486`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts46\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.653792995050709`17.31531892800192*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.04221356480433307`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts46", -3.653792995050709`17.31531892800192*^9, 0, {0., 
+   0.04221356480433307, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.65378942383112*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts47\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.653793421472311`17.315318978686932*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.04147182751050159`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts47", -3.653793421472311`17.315318978686932*^9, 0, {0., 
+   0.04147182751050159, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537898504873466`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts48\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537938679719579`17.31531903175844*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.002578127775058188`", ",", "0.0407388910119684`", ",", "1.`"}],
+     "}"}]}],
+  SequenceForm[
+  "vorts48", -3.6537938679719579`17.31531903175844*^9, 0, {
+   0.002578127775058188, 0.0407388910119684, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537902967991714`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts49\"\>", "\[InvisibleSpace]", 
+   "6.4822927`8.263273630671163", "\[InvisibleSpace]", "6", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.005378723463552785`", ",", "0.04396856501021491`", ",", 
+     "0.9999984952856773`"}], "}"}]}],
+  SequenceForm[
+  "vorts49", 6.4822927`8.263273630671163, 6, {0.005378723463552785, 
+   0.04396856501021491, 0.9999984952856773}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537907602210293`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts50\"\>", "\[InvisibleSpace]", 
+   "6.4848545`8.263445229805662", "\[InvisibleSpace]", "6", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.005376225469613022`", ",", "0.043951825728452916`", ",", 
+     "0.9999983497925851`"}], "}"}]}],
+  SequenceForm[
+  "vorts50", 6.4848545`8.263445229805662, 6, {0.005376225469613022, 
+   0.043951825728452916`, 0.9999983497925851}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537912489256926`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts51\"\>", "\[InvisibleSpace]", 
+   "6.0143245`8.23073185004355", "\[InvisibleSpace]", "6", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.0052306081988852515`", ",", "0.04282468540170854`", ",", 
+     "0.9999998410651119`"}], "}"}]}],
+  SequenceForm[
+  "vorts51", 6.0143245`8.23073185004355, 6, {0.0052306081988852515`, 
+   0.04282468540170854, 0.9999998410651119}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537917652242107`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts52\"\>", "\[InvisibleSpace]", 
+   "14.2362667`8.60494110890908", "\[InvisibleSpace]", "15", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.004249158910642464`", ",", "0.04025881796891412`", ",", 
+     "0.9998349512135081`"}], "}"}]}],
+  SequenceForm[
+  "vorts52", 14.2362667`8.60494110890908, 15, {0.004249158910642464, 
+   0.04025881796891412, 0.9998349512135081}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653792270252356*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts53\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537963768795328`17.315319329970208*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.04088350847370556`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts53", -3.6537963768795328`17.315319329970208*^9, 0, {0., 
+   0.04088350847370556, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537928064083796`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts54\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537969160976913`17.3153193940623*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.039826758975971814`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts54", -3.6537969160976913`17.3153193940623*^9, 0, {0., 
+   0.039826758975971814`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653793345613341*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts55\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537974577211653`17.315319458440282*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.039343774101178744`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts55", -3.6537974577211653`17.315319458440282*^9, 0, {0., 
+   0.039343774101178744`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653793887113826*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts56\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537981066596631`17.31531953557383*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03880501883249876`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts56", -3.6537981066596631`17.31531953557383*^9, 0, {0., 
+   0.03880501883249876, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537945359730115`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts57\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537987480477081`17.31531961180992*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03961790683936384`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts57", -3.6537987480477081`17.31531961180992*^9, 0, {0., 
+   0.03961790683936384, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653795177189822*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts58\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6537994178323871`17.315319691421244*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.040403837660027274`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts58", -3.6537994178323871`17.315319691421244*^9, 0, {0., 
+   0.040403837660027274`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537958478315306`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts59\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6538000966605008`17.315319772107472*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.04180912033876641`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts59", -3.6538000966605008`17.315319772107472*^9, 0, {0., 
+   0.04180912033876641, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653796526644943*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts60\"\>", "\[InvisibleSpace]", 
+   "18.6402993`8.721997874866664", "\[InvisibleSpace]", "20", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.004069012732698328`", ",", "0.04249468753807376`", ",", 
+     "0.9998707151190593`"}], "}"}]}],
+  SequenceForm[
+  "vorts60", 18.6402993`8.721997874866664, 20, {0.004069012732698328, 
+   0.04249468753807376, 0.9998707151190593}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653797191112198*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts61\"\>", "\[InvisibleSpace]", 
+   "18.7495813`8.724536567366114", "\[InvisibleSpace]", "20", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.004062924951481072`", ",", "0.042493434412462595`", ",", 
+     "0.9998715004932754`"}], "}"}]}],
+  SequenceForm[
+  "vorts61", 18.7495813`8.724536567366114, 20, {0.004062924951481072, 
+   0.042493434412462595`, 0.9998715004932754}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537978550666747`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts62\"\>", "\[InvisibleSpace]", 
+   "5.9536169`8.226325878968098", "\[InvisibleSpace]", "6", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.005028042165247107`", ",", "0.04454993923929522`", ",", 
+     "0.9999967974577637`"}], "}"}]}],
+  SequenceForm[
+  "vorts62", 5.9536169`8.226325878968098, 6, {0.005028042165247107, 
+   0.04454993923929522, 0.9999967974577637}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537985550839434`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts63\"\>", "\[InvisibleSpace]", 
+   "5.5301438`8.194281417881058", "\[InvisibleSpace]", "5", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.0055981104715061205`", ",", "0.04753768226950842`", ",", 
+     "0.9999999941004729`"}], "}"}]}],
+  SequenceForm[
+  "vorts63", 5.5301438`8.194281417881058, 5, {0.0055981104715061205`, 
+   0.04753768226950842, 0.9999999941004729}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6537992665328474`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts64\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6538036040200562`17.315320188995678*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.002390898889949311`", ",", "0.041080712985650344`", ",", "1.`"}], 
+    "}"}]}],
+  SequenceForm[
+  "vorts64", -3.6538036040200562`17.315320188995678*^9, 0, {
+   0.002390898889949311, 0.041080712985650344`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6538000328952894`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts65\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.653804368019905`17.3153202798054*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03696972332229445`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts65", -3.653804368019905`17.3153202798054*^9, 0, {0., 
+   0.03696972332229445, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6538007975341935`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts66\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6538051474865735`17.3153203724535*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.032905340875551095`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts66", -3.6538051474865735`17.3153203724535*^9, 0, {0., 
+   0.032905340875551095`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6538015768771973`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts67\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6538059652365436`17.315320469651965*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.030453241596130335`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts67", -3.6538059652365436`17.315320469651965*^9, 0, {0., 
+   0.030453241596130335`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653802394128363*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts68\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6538067974418429`17.315320568568584*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.030076905886496225`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts68", -3.6538067974418429`17.315320568568584*^9, 0, {0., 
+   0.030076905886496225`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6538032262376623`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts69\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.653807660767936`17.31532067118422*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03088963396798212`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts69", -3.653807660767936`17.31532067118422*^9, 0, {0., 
+   0.03088963396798212, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6538040897370234`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts70\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6538085289721426`17.31532077437965*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03207447994704318`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts70", -3.6538085289721426`17.31532077437965*^9, 0, {0., 
+   0.03207447994704318, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6538049578323054`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts71\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6538094460198793`17.315320883380632*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.033161660812317036`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts71", -3.6538094460198793`17.315320883380632*^9, 0, {0., 
+   0.033161660812317036`, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653805874926272*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts72\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6538104115188216`17.315320998140535*^9"}], 
+   "\[InvisibleSpace]", "0", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.`", ",", "0.03315782415629254`", ",", "1.`"}], "}"}]}],
+  SequenceForm[
+  "vorts72", -3.6538104115188216`17.315320998140535*^9, 0, {0., 
+   0.03315782415629254, 1.}],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.653806840393823*^9}]
+}, Open  ]],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.653807291550547*^9}],
+
+Cell[BoxData["28296.2631701`11.903274079488092"], "Output",
+ CellChangeTimes->{3.65380729159737*^9}]
+}, Open  ]]
 },
 WindowSize->{1474, 805},
 WindowMargins->{{-8, Automatic}, {Automatic, 0}},
@@ -3634,7 +4611,85 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 16988, 468, 952, "Input"],
 Cell[17549, 490, 16381, 457, 972, "Input"],
-Cell[33933, 949, 112809, 2667, 7012, "Input"]
+Cell[CellGroupData[{
+Cell[33955, 951, 112809, 2667, 7052, "Input"],
+Cell[CellGroupData[{
+Cell[146789, 3622, 472, 11, 23, "Print"],
+Cell[147264, 3635, 465, 11, 23, "Print"],
+Cell[147732, 3648, 469, 11, 23, "Print"],
+Cell[148204, 3661, 467, 11, 23, "Print"],
+Cell[148674, 3674, 472, 11, 23, "Print"],
+Cell[149149, 3687, 470, 11, 23, "Print"],
+Cell[149622, 3700, 508, 13, 23, "Print"],
+Cell[150133, 3715, 471, 13, 23, "Print"],
+Cell[150607, 3730, 473, 13, 23, "Print"],
+Cell[151083, 3745, 508, 13, 23, "Print"],
+Cell[151594, 3760, 467, 11, 23, "Print"],
+Cell[152064, 3773, 469, 11, 23, "Print"],
+Cell[152536, 3786, 474, 11, 23, "Print"],
+Cell[153013, 3799, 474, 11, 23, "Print"],
+Cell[153490, 3812, 472, 11, 23, "Print"],
+Cell[153965, 3825, 465, 11, 23, "Print"],
+Cell[154433, 3838, 471, 11, 23, "Print"],
+Cell[154907, 3851, 471, 11, 23, "Print"],
+Cell[155381, 3864, 471, 11, 23, "Print"],
+Cell[155855, 3877, 471, 11, 23, "Print"],
+Cell[156329, 3890, 465, 11, 23, "Print"],
+Cell[156797, 3903, 467, 11, 23, "Print"],
+Cell[157267, 3916, 471, 11, 23, "Print"],
+Cell[157741, 3929, 505, 13, 23, "Print"],
+Cell[158249, 3944, 469, 11, 23, "Print"],
+Cell[158721, 3957, 471, 11, 23, "Print"],
+Cell[159195, 3970, 467, 11, 23, "Print"],
+Cell[159665, 3983, 470, 11, 23, "Print"],
+Cell[160138, 3996, 471, 11, 23, "Print"],
+Cell[160612, 4009, 471, 11, 23, "Print"],
+Cell[161086, 4022, 469, 11, 23, "Print"],
+Cell[161558, 4035, 465, 11, 23, "Print"],
+Cell[162026, 4048, 471, 11, 23, "Print"],
+Cell[162500, 4061, 472, 11, 23, "Print"],
+Cell[162975, 4074, 467, 11, 23, "Print"],
+Cell[163445, 4087, 471, 11, 23, "Print"],
+Cell[163919, 4100, 471, 11, 23, "Print"],
+Cell[164393, 4113, 471, 11, 23, "Print"],
+Cell[164867, 4126, 469, 11, 23, "Print"],
+Cell[165339, 4139, 469, 11, 23, "Print"],
+Cell[165811, 4152, 474, 11, 23, "Print"],
+Cell[166288, 4165, 474, 11, 23, "Print"],
+Cell[166765, 4178, 469, 11, 23, "Print"],
+Cell[167237, 4191, 472, 11, 23, "Print"],
+Cell[167712, 4204, 474, 11, 23, "Print"],
+Cell[168189, 4217, 464, 11, 23, "Print"],
+Cell[168656, 4230, 469, 11, 23, "Print"],
+Cell[169128, 4243, 508, 12, 23, "Print"],
+Cell[169639, 4257, 508, 13, 23, "Print"],
+Cell[170150, 4272, 511, 13, 23, "Print"],
+Cell[170664, 4287, 509, 13, 23, "Print"],
+Cell[171176, 4302, 508, 13, 23, "Print"],
+Cell[171687, 4317, 471, 11, 23, "Print"],
+Cell[172161, 4330, 468, 11, 23, "Print"],
+Cell[172632, 4343, 472, 11, 23, "Print"],
+Cell[173107, 4356, 469, 11, 23, "Print"],
+Cell[173579, 4369, 467, 11, 23, "Print"],
+Cell[174049, 4382, 474, 11, 23, "Print"],
+Cell[174526, 4395, 469, 11, 23, "Print"],
+Cell[174998, 4408, 510, 13, 23, "Print"],
+Cell[175511, 4423, 515, 13, 23, "Print"],
+Cell[176029, 4438, 508, 13, 23, "Print"],
+Cell[176540, 4453, 511, 13, 23, "Print"],
+Cell[177054, 4468, 520, 13, 23, "Print"],
+Cell[177577, 4483, 465, 11, 23, "Print"],
+Cell[178045, 4496, 470, 11, 23, "Print"],
+Cell[178518, 4509, 472, 11, 23, "Print"],
+Cell[178993, 4522, 474, 11, 23, "Print"],
+Cell[179470, 4535, 467, 11, 23, "Print"],
+Cell[179940, 4548, 469, 11, 23, "Print"],
+Cell[180412, 4561, 472, 11, 23, "Print"],
+Cell[180887, 4574, 469, 11, 23, "Print"]
+}, Open  ]],
+Cell[181371, 4588, 77, 1, 31, "Output"],
+Cell[181451, 4591, 100, 1, 31, "Output"]
+}, Open  ]]
 }
 ]
 *)
