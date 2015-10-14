@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    146782,       3660]
-NotebookOptionsPosition[    146321,       3642]
-NotebookOutlinePosition[    146664,       3657]
-CellTagsIndexPosition[    146621,       3654]
+NotebookDataLength[    146603,       3656]
+NotebookOptionsPosition[    146142,       3638]
+NotebookOutlinePosition[    146485,       3653]
+CellTagsIndexPosition[    146442,       3650]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2444,68 +2444,66 @@ Cell[BoxData[{
           RowBox[{"iterator", ",", "iterationcount1"}], "}"}]}], "]"}]}], ";",
        "\[IndentingNewLine]", 
       RowBox[{"saliency1", "=", 
-       RowBox[{
-        RowBox[{"ListLinePlot", "[", 
-         RowBox[{
-          RowBox[{"Transpose", "[", 
+       RowBox[{"ListLinePlot", "[", 
+        RowBox[{
+         RowBox[{"Transpose", "[", 
+          RowBox[{
+           RowBox[{"#", "&"}], "@@@", "list"}], "]"}], ",", 
+         RowBox[{"PlotLegends", "\[Rule]", 
+          RowBox[{"{", 
            RowBox[{
-            RowBox[{"#", "&"}], "@@@", "list"}], "]"}], ",", 
-          RowBox[{"PlotLegends", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{
-            "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
-             "\"\<Feature 3\>\"", ",", "\"\<Feature 4\>\""}], "}"}]}], ",", 
-          RowBox[{
-          "PlotLabel", "\[Rule]", 
-           "\"\<Visibility-weighted saliency over iterations\>\""}], ",", 
-          RowBox[{"PlotRange", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{"All", ",", 
-             RowBox[{"{", 
-              RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
-          RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}], ",", 
-          RowBox[{"PlotMarkers", "\[Rule]", "Automatic"}], ",", 
-          RowBox[{"AxesLabel", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{
-            "\"\<Iterations\>\"", ",", 
-             "\"\<Visibility-weighted saliency\>\""}], "}"}]}]}], "]"}], 
-        "\[IndentingNewLine]", 
-        RowBox[{"Export", "[", 
+           "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
+            "\"\<Feature 3\>\"", ",", "\"\<Feature 4\>\""}], "}"}]}], ",", 
          RowBox[{
-          RowBox[{
-          "plotpath", "<>", "dataname", "<>", "\"\<_saliency_fixed.png\>\""}],
-           ",", "saliency1"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+         "PlotLabel", "\[Rule]", 
+          "\"\<Visibility-weighted saliency over iterations\>\""}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"All", ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}], ",", 
+         RowBox[{"PlotMarkers", "\[Rule]", "Automatic"}], ",", 
+         RowBox[{"AxesLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<Iterations\>\"", ",", 
+            "\"\<Visibility-weighted saliency\>\""}], "}"}]}]}], "]"}]}], ";",
+       "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{
+        "plotpath", "<>", "dataname", "<>", "\"\<_saliency_fixed.png\>\""}], 
+        ",", "saliency1"}], "]"}], ";", "\[IndentingNewLine]", 
       RowBox[{"opacity1", "=", 
-       RowBox[{
-        RowBox[{"ListLinePlot", "[", 
-         RowBox[{
-          RowBox[{"Transpose", "[", 
-           RowBox[{
-            RowBox[{"#2", "&"}], "@@@", "list"}], "]"}], ",", 
-          RowBox[{"PlotLegends", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{
-            "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
-             "\"\<Feature 3\>\"", ",", "\"\<Feature 4\>\""}], "}"}]}], ",", 
-          RowBox[{"PlotLabel", "\[Rule]", "\"\<Opacity over iterations\>\""}],
-           ",", 
-          RowBox[{"PlotRange", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{"All", ",", 
-             RowBox[{"{", 
-              RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
-          RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}], ",", 
-          RowBox[{"PlotMarkers", "\[Rule]", "Automatic"}], ",", 
-          RowBox[{"AxesLabel", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{"\"\<Iterations\>\"", ",", "\"\<Opacity\>\""}], "}"}]}]}],
-          "]"}], "\[IndentingNewLine]", 
-        RowBox[{"Export", "[", 
-         RowBox[{
+       RowBox[{"ListLinePlot", "[", 
+        RowBox[{
+         RowBox[{"Transpose", "[", 
           RowBox[{
-          "plotpath", "<>", "dataname", "<>", "\"\<_opacity_fixed.png\>\""}], 
-          ",", "opacity1"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"#2", "&"}], "@@@", "list"}], "]"}], ",", 
+         RowBox[{"PlotLegends", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
+            "\"\<Feature 3\>\"", ",", "\"\<Feature 4\>\""}], "}"}]}], ",", 
+         RowBox[{"PlotLabel", "\[Rule]", "\"\<Opacity over iterations\>\""}], 
+         ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"All", ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}], ",", 
+         RowBox[{"PlotMarkers", "\[Rule]", "Automatic"}], ",", 
+         RowBox[{"AxesLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Iterations\>\"", ",", "\"\<Opacity\>\""}], "}"}]}]}], 
+        "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{
+        "plotpath", "<>", "dataname", "<>", "\"\<_opacity_fixed.png\>\""}], 
+        ",", "opacity1"}], "]"}], ";", "\[IndentingNewLine]", 
       RowBox[{"x", "=", 
        RowBox[{"Transpose", "[", 
         RowBox[{
@@ -2566,96 +2564,94 @@ Cell[BoxData[{
          RowBox[{"PlotMarkers", "\[Rule]", "Automatic"}]}], "]"}], "*)"}], 
       "\[IndentingNewLine]", 
       RowBox[{"saliencyopacity1", "=", 
-       RowBox[{
-        RowBox[{"ListLinePlot", "[", 
+       RowBox[{"ListLinePlot", "[", 
+        RowBox[{
          RowBox[{
           RowBox[{
+           RowBox[{"Transpose", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"x", "[", 
+               RowBox[{"[", "#", "]"}], "]"}], ",", 
+              RowBox[{"y", "[", 
+               RowBox[{"[", "#", "]"}], "]"}]}], "}"}], "]"}], "&"}], "/@", 
+          RowBox[{"Range", "[", 
+           RowBox[{"Length", "[", "chartcolors", "]"}], "]"}]}], ",", 
+         RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}], ",", 
+         RowBox[{
+         "PlotLabel", "\[Rule]", 
+          "\"\<Visibility-weighted saliency vs opacity\>\""}], ",", 
+         RowBox[{"AxesLabel", "\[Rule]", 
+          RowBox[{"{", 
            RowBox[{
-            RowBox[{"Transpose", "[", 
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"x", "[", 
-                RowBox[{"[", "#", "]"}], "]"}], ",", 
-               RowBox[{"y", "[", 
-                RowBox[{"[", "#", "]"}], "]"}]}], "}"}], "]"}], "&"}], "/@", 
-           RowBox[{"Range", "[", 
-            RowBox[{"Length", "[", "chartcolors", "]"}], "]"}]}], ",", 
-          RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}], ",", 
-          RowBox[{
-          "PlotLabel", "\[Rule]", 
-           "\"\<Visibility-weighted saliency vs opacity\>\""}], ",", 
-          RowBox[{"AxesLabel", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{
-            "\"\<Opacity\>\"", ",", "\"\<Visibility-weighted saliency\>\""}], 
-            "}"}]}], ",", 
-          RowBox[{"PlotLegends", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{
-            "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
-             "\"\<Feature 3\>\"", ",", "\"\<Feature 4\>\""}], "}"}]}], ",", 
-          RowBox[{"PlotRange", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"0", ",", "1"}], "}"}], ",", 
-             RowBox[{"{", 
-              RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
-          RowBox[{"PlotMarkers", "\[Rule]", "Automatic"}]}], "]"}], 
-        "\[IndentingNewLine]", 
-        RowBox[{"Export", "[", 
-         RowBox[{
-          RowBox[{
-          "plotpath", "<>", "dataname", "<>", 
-           "\"\<_saliencyopacity_fixed.png\>\""}], ",", "saliencyopacity1"}], 
-         "]"}]}]}], ";", "\[IndentingNewLine]", 
+           "\"\<Opacity\>\"", ",", "\"\<Visibility-weighted saliency\>\""}], 
+           "}"}]}], ",", 
+         RowBox[{"PlotLegends", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
+            "\"\<Feature 3\>\"", ",", "\"\<Feature 4\>\""}], "}"}]}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", "1"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"PlotMarkers", "\[Rule]", "Automatic"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{
+        "plotpath", "<>", "dataname", "<>", 
+         "\"\<_saliencyopacity_fixed.png\>\""}], ",", "saliencyopacity1"}], 
+       "]"}], ";", "\[IndentingNewLine]", 
       RowBox[{"rmslist1", "=", 
        RowBox[{
         RowBox[{"#3", "&"}], "@@@", "list"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"rms1", "=", 
+       RowBox[{"ListLinePlot", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#3", "&"}], "@@@", "list"}], ",", 
+         RowBox[{"PlotLegends", "\[Rule]", 
+          RowBox[{"{", "\"\<Objective function\>\"", "}"}]}], ",", 
+         RowBox[{
+         "PlotLabel", "\[Rule]", 
+          "\"\<Objective function over iterations\>\""}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"All", ",", "All"}], "}"}]}], ",", 
+         RowBox[{"PlotMarkers", "\[Rule]", "Automatic"}], ",", 
+         RowBox[{"AxesLabel", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Iterations\>\"", ",", "\"\<Root mean square\>\""}], 
+           "}"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
        RowBox[{
-        RowBox[{"ListLinePlot", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"#3", "&"}], "@@@", "list"}], ",", 
-          RowBox[{"PlotLegends", "\[Rule]", 
-           RowBox[{"{", "\"\<Objective function\>\"", "}"}]}], ",", 
-          RowBox[{
-          "PlotLabel", "\[Rule]", 
-           "\"\<Objective function over iterations\>\""}], ",", 
-          RowBox[{"PlotRange", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{"All", ",", "All"}], "}"}]}], ",", 
-          RowBox[{"PlotMarkers", "\[Rule]", "Automatic"}], ",", 
-          RowBox[{"AxesLabel", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{"\"\<Iterations\>\"", ",", "\"\<Root mean square\>\""}], 
-            "}"}]}]}], "]"}], "\[IndentingNewLine]", 
-        RowBox[{"Export", "[", 
-         RowBox[{
-          RowBox[{
-          "plotpath", "<>", "dataname", "<>", "\"\<_rms_fixed.png\>\""}], ",",
-           "rms1"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+        "plotpath", "<>", "dataname", "<>", "\"\<_rms_fixed.png\>\""}], ",", 
+        "rms1"}], "]"}], ";", "\[IndentingNewLine]", 
       RowBox[{"table1", "=", 
+       RowBox[{"TableForm", "[", 
+        RowBox[{"list", ",", 
+         RowBox[{"TableHeadings", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"Automatic", ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Visibility-Weighted Saliency\>\"", ",", "\"\<Opacity\>\"", 
+              ",", " ", "\"\<Root Mean Square\>\"", ",", "\"\<Steps\>\""}], 
+             "}"}]}], "}"}]}], ",", 
+         RowBox[{"TableSpacing", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"2", ",", "3"}], "}"}]}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Export", "[", 
        RowBox[{
-        RowBox[{"TableForm", "[", 
-         RowBox[{"list", ",", 
-          RowBox[{"TableHeadings", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{"Automatic", ",", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Visibility-Weighted Saliency\>\"", ",", "\"\<Opacity\>\"", 
-               ",", " ", "\"\<Root Mean Square\>\"", ",", "\"\<Steps\>\""}], 
-              "}"}]}], "}"}]}], ",", 
-          RowBox[{"TableSpacing", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{"2", ",", "3"}], "}"}]}]}], "]"}], "\[IndentingNewLine]", 
-        RowBox[{"Export", "[", 
-         RowBox[{
-          RowBox[{
-          "plotpath", "<>", "dataname", "<>", "\"\<_table_fixed.png\>\""}], 
-          ",", "table1"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+        "plotpath", "<>", "dataname", "<>", "\"\<_table_fixed.png\>\""}], ",",
+         "table1"}], "]"}], ";", "\[IndentingNewLine]", 
       RowBox[{"path1", "=", 
        RowBox[{
         RowBox[{"#2", "&"}], "@@@", "list"}]}], ";", "\[IndentingNewLine]", 
@@ -3638,7 +3634,7 @@ Cell[BoxData[{
    3.653777562145019*^9, 3.6537776415688534`*^9}, {3.653777671958002*^9, 
    3.6537776726772594`*^9}, {3.653777723190691*^9, 3.6537777340353355`*^9}, {
    3.653777857083187*^9, 3.653777884131556*^9}, {3.653777980034647*^9, 
-   3.653777996539095*^9}}]
+   3.653777996539095*^9}, {3.653778276318203*^9, 3.6537783076932807`*^9}}]
 },
 WindowSize->{1474, 821},
 WindowMargins->{{-8, Automatic}, {Automatic, -8}},
@@ -3661,7 +3657,7 @@ Cell[17549, 490, 16381, 457, 972, "Input"],
 Cell[33933, 949, 6162, 157, 352, "Input"],
 Cell[40098, 1108, 309, 8, 31, "Input"],
 Cell[40410, 1118, 8624, 210, 572, "Input"],
-Cell[49037, 1330, 97280, 2310, 6052, "Input"]
+Cell[49037, 1330, 97101, 2306, 6052, "Input"]
 }
 ]
 *)
