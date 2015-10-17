@@ -5,7 +5,7 @@
             <MetaData>
                 <MetaItem name="ProcessorSelection" type="SelectionMetaData::Processor">
                     <values>
-                        <item type="SingleVolumeRaycaster" ref="ref0" />
+                        <item type="VolumeSelector" ref="ref5" />
                     </values>
                 </MetaItem>
                 <MetaItem name="ZoomCenter" type="Vec2MetaData">
@@ -76,7 +76,7 @@
                         <Property mapKey="shading" name="shading" value="phong" />
                         <Property mapKey="transferFunction" name="transferFunction" domainFittingStrategy="1" id="ref12">
                             <MetaData>
-                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="606" y="332" width="683" height="538" />
+                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="794" y="363" width="683" height="538" />
                             </MetaData>
                             <TransferFunction type="TransFuncIntensity" alphaMode="1" gammaValue="1">
                                 <domain x="0" y="1" />
@@ -95,7 +95,7 @@
                                         <colorL r="255" g="0" b="0" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.44999999" split="false">
-                                        <colorL r="255" g="0" b="0" a="19" />
+                                        <colorL r="255" g="0" b="0" a="18" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.5" split="false">
                                         <colorL r="255" g="0" b="0" a="0" />
@@ -150,10 +150,10 @@
                 <Processor type="Canvas" name="Canvas" id="ref2">
                     <MetaData>
                         <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-473" y="198" />
-                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="40" y="367" width="512" height="512" />
+                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="115" y="371" width="512" height="512" />
                         <MetaItem name="preferedDevelopmentCanvasFS" type="BoolMetaData" value="false" />
                         <MetaItem name="preferedDevelopmentCanvasPosition" type="IVec2MetaData">
-                            <value x="40" y="367" />
+                            <value x="115" y="371" />
                         </MetaItem>
                         <MetaItem name="preferedDevelopmentCanvasSize" type="IVec2MetaData">
                             <value x="512" y="512" />
@@ -223,7 +223,7 @@
                     </MetaData>
                     <Properties>
                         <Property mapKey="volumeInfo" name="volumeInfo" />
-                        <Property mapKey="volumeURL" name="volumeURL" url="E:/_time_varying_data/vortex_raw/vorts1.mhd?preferredReader=MhdVolumeReader" />
+                        <Property mapKey="volumeURL" name="volumeURL" url="../../../../_time_varying_data/vortex_raw/vorts1.mhd?preferredReader=MhdVolumeReader" />
                     </Properties>
                     <Inports />
                     <Outports>
@@ -340,7 +340,7 @@
                                         <colorL r="255" g="0" b="0" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.44999999" split="false">
-                                        <colorL r="255" g="0" b="0" a="19" />
+                                        <colorL r="255" g="0" b="0" a="18" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.5" split="false">
                                         <colorL r="255" g="0" b="0" a="0" />
@@ -457,206 +457,206 @@
                     <Properties>
                         <Property mapKey="volumeURLList" name="volumeURLList">
                             <VolumeURLs>
-                                <url value="E:/_time_varying_data/vortex_raw/vorts1.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts2.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts3.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts4.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts5.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts6.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts7.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts8.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts9.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts10.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts11.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts12.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts13.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts14.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts15.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts16.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts17.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts18.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts19.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts20.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts21.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts22.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts23.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts24.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts25.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts26.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts27.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts28.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts29.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts30.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts31.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts32.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts33.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts34.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts35.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts36.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts37.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts38.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts39.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts40.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts41.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts42.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts43.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts44.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts45.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts46.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts47.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts48.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts49.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts50.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts51.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts52.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts53.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts54.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts55.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts56.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts57.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts58.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts59.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts60.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts61.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts62.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts63.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts64.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts65.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts66.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts67.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts68.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts69.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts70.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts71.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts72.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts73.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts74.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts75.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts76.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts77.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts78.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts79.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts80.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts81.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts82.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts83.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts84.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts85.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts86.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts87.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts88.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts89.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts90.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts91.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts92.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts93.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts94.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts95.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts96.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts97.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts98.mhd" />
-                                <url value="E:/_time_varying_data/vortex_raw/vorts99.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts1.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts2.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts3.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts4.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts5.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts6.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts7.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts8.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts9.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts10.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts11.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts12.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts13.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts14.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts15.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts16.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts17.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts18.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts19.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts20.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts21.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts22.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts23.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts24.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts25.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts26.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts27.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts28.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts29.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts30.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts31.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts32.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts33.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts34.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts35.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts36.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts37.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts38.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts39.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts40.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts41.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts42.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts43.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts44.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts45.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts46.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts47.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts48.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts49.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts50.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts51.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts52.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts53.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts54.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts55.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts56.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts57.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts58.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts59.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts60.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts61.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts62.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts63.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts64.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts65.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts66.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts67.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts68.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts69.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts70.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts71.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts72.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts73.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts74.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts75.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts76.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts77.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts78.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts79.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts80.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts81.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts82.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts83.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts84.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts85.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts86.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts87.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts88.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts89.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts90.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts91.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts92.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts93.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts94.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts95.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts96.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts97.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts98.mhd" />
+                                <url value="../../../../_time_varying_data/vortex_raw/vorts99.mhd" />
                             </VolumeURLs>
                             <Selection>
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts1.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts10.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts11.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts12.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts13.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts14.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts15.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts16.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts17.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts18.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts19.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts2.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts20.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts21.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts22.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts23.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts24.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts25.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts26.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts27.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts28.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts29.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts3.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts30.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts31.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts32.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts33.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts34.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts35.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts36.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts37.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts38.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts39.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts4.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts40.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts41.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts42.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts43.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts44.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts45.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts46.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts47.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts48.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts49.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts5.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts50.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts51.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts52.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts53.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts54.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts55.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts56.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts57.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts58.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts59.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts6.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts60.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts61.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts62.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts63.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts64.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts65.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts66.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts67.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts68.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts69.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts7.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts70.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts71.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts72.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts73.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts74.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts75.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts76.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts77.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts78.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts79.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts8.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts80.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts81.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts82.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts83.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts84.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts85.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts86.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts87.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts88.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts89.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts9.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts90.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts91.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts92.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts93.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts94.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts95.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts96.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts97.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts98.mhd" value="true" />
-                                <entry url="E:/_time_varying_data/vortex_raw/vorts99.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts1.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts10.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts11.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts12.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts13.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts14.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts15.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts16.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts17.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts18.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts19.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts2.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts20.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts21.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts22.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts23.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts24.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts25.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts26.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts27.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts28.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts29.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts3.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts30.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts31.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts32.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts33.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts34.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts35.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts36.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts37.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts38.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts39.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts4.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts40.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts41.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts42.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts43.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts44.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts45.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts46.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts47.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts48.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts49.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts5.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts50.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts51.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts52.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts53.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts54.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts55.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts56.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts57.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts58.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts59.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts6.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts60.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts61.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts62.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts63.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts64.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts65.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts66.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts67.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts68.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts69.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts7.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts70.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts71.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts72.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts73.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts74.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts75.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts76.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts77.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts78.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts79.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts8.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts80.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts81.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts82.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts83.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts84.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts85.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts86.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts87.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts88.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts89.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts9.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts90.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts91.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts92.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts93.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts94.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts95.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts96.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts97.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts98.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts99.mhd" value="true" />
                             </Selection>
                         </Property>
                     </Properties>
