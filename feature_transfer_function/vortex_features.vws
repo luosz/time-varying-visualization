@@ -5,7 +5,7 @@
             <MetaData>
                 <MetaItem name="ProcessorSelection" type="SelectionMetaData::Processor">
                     <values>
-                        <item type="VolumeSelector" ref="ref5" />
+                        <item type="VolumeListSource" ref="ref6" />
                     </values>
                 </MetaItem>
                 <MetaItem name="ZoomCenter" type="Vec2MetaData">
@@ -22,7 +22,7 @@
                         <Property mapKey="applyLightAttenuation" name="applyLightAttenuation" value="false" />
                         <Property mapKey="camera" name="camera" projectionMode="1" maxValue="32000" minValue="1" frustLeft="-0.4142136" frustRight="0.4142136" frustBottom="-0.4142136" frustTop="0.4142136" frustNear="1" frustFar="32128" fovy="45.00000381" eyeMode="1" eyeSeparation="1" axisMode="0" stereoFocalLengh="600" stereoWidth="450" stereoRelativeFocalLength="0.05" useRealWorldFrustum="0" centerOption="0" adaptOnChange="true" id="ref8">
                             <MetaData>
-                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="967" y="619" />
+                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="1185" y="833" />
                             </MetaData>
                             <position x="64" y="64" z="308.56854248" />
                             <focus x="64" y="64" z="64" />
@@ -76,7 +76,7 @@
                         <Property mapKey="shading" name="shading" value="phong" />
                         <Property mapKey="transferFunction" name="transferFunction" domainFittingStrategy="1" id="ref12">
                             <MetaData>
-                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="794" y="363" width="683" height="538" />
+                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="653" y="482" width="683" height="538" />
                             </MetaData>
                             <TransferFunction type="TransFuncIntensity" alphaMode="1" gammaValue="1">
                                 <domain x="0" y="1" />
@@ -150,10 +150,10 @@
                 <Processor type="Canvas" name="Canvas" id="ref2">
                     <MetaData>
                         <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-473" y="198" />
-                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="115" y="371" width="512" height="512" />
+                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="121" y="387" width="512" height="512" />
                         <MetaItem name="preferedDevelopmentCanvasFS" type="BoolMetaData" value="false" />
                         <MetaItem name="preferedDevelopmentCanvasPosition" type="IVec2MetaData">
-                            <value x="115" y="371" />
+                            <value x="121" y="387" />
                         </MetaItem>
                         <MetaItem name="preferedDevelopmentCanvasSize" type="IVec2MetaData">
                             <value x="512" y="512" />
@@ -574,7 +574,7 @@
                                 <entry url="../../../../_time_varying_data/vortex_raw/vorts21.mhd" value="true" />
                                 <entry url="../../../../_time_varying_data/vortex_raw/vorts22.mhd" value="true" />
                                 <entry url="../../../../_time_varying_data/vortex_raw/vorts23.mhd" value="true" />
-                                <entry url="../../../../_time_varying_data/vortex_raw/vorts24.mhd" value="true" />
+                                <entry url="../../../../_time_varying_data/vortex_raw/vorts24.mhd" value="false" />
                                 <entry url="../../../../_time_varying_data/vortex_raw/vorts25.mhd" value="true" />
                                 <entry url="../../../../_time_varying_data/vortex_raw/vorts26.mhd" value="true" />
                                 <entry url="../../../../_time_varying_data/vortex_raw/vorts27.mhd" value="true" />
