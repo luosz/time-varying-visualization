@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    134232,       3266]
-NotebookOptionsPosition[    133823,       3248]
-NotebookOutlinePosition[    134168,       3263]
-CellTagsIndexPosition[    134125,       3260]
+NotebookDataLength[    136193,       3319]
+NotebookOptionsPosition[    135628,       3296]
+NotebookOutlinePosition[    135973,       3311]
+CellTagsIndexPosition[    135930,       3308]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -476,6 +476,12 @@ Cell[BoxData[{
    3.6533907050910063`*^9, 3.653390724347232*^9}, {3.6533910426423764`*^9, 
    3.6533910752363367`*^9}, 3.653391164293522*^9, {3.6533911974059334`*^9, 
    3.6533914334937663`*^9}, {3.653393937411039*^9, 3.6533939527707477`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"CloseKernels", "[", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"LaunchKernels", "[", "8", "]"}], ";"}]}], "Input"],
 
 Cell[CellGroupData[{
 
@@ -1446,8 +1452,6 @@ Mathematica\>\"", "]"}]}], "}"}], ",", "VoreenData", ",",
        RowBox[{"targets", "[", 
         RowBox[{"Length", "[", "index0", "]"}], "]"}]}], ";", 
       "\[IndentingNewLine]", 
-      RowBox[{"CloseKernels", "[", "]"}], ";", "\[IndentingNewLine]", 
-      RowBox[{"LaunchKernels", "[", "8", "]"}], ";", "\[IndentingNewLine]", 
       RowBox[{"Clear", "[", "f", "]"}], ";", "\[IndentingNewLine]", 
       RowBox[{"Clear", "[", "data", "]"}], ";", "\[IndentingNewLine]", 
       RowBox[{"records", "=", 
@@ -3237,16 +3241,60 @@ Mathematica\>\"", "]"}]}], "}"}], ",", "VoreenData", ",",
    3.6552380744520626`*^9}, {3.6554005595135403`*^9, 
    3.6554006311154895`*^9}, {3.655400680438281*^9, 3.655400775082362*^9}, {
    3.6554013195175743`*^9, 3.6554013304240274`*^9}, {3.655401983405362*^9, 
-   3.655402034876283*^9}, 3.6554132742119217`*^9}],
+   3.655402034876283*^9}, 3.6554132742119217`*^9, {3.655413752258113*^9, 
+   3.6554137537033916`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts1\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6554135282724887`17.315511503938925*^9"}], 
+   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
+   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{"0.01456012414105829`", ",", "0.08242600732949179`", ",", "1.`"}],
+     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "20", 
+   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
+   "0.014050345910372462`"}],
+  SequenceForm[
+  "vorts1", "\t", -3.6554135282724887`17.315511503938925*^9, "\t", 0, "\t", {
+   0.01456012414105829, 0.08242600732949179, 1.}, "\t", 20, "\t", 
+   0.014050345910372462`],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.655413554612013*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vorts2\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "23.7861781`8.827869659853466", 
+   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "17", 
+   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.016258869160507727`", ",", "0.08784146962793236`", ",", "1.`"}], "}"}],
+    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "20", 
+   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
+   "0.005185410534149746`"}],
+  SequenceForm[
+  "vorts2", "\t", 23.7861781`8.827869659853466, "\t", 17, "\t", {
+   0.016258869160507727`, 0.08784146962793236, 1.}, "\t", 20, "\t", 
+   0.005185410534149746],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.6554136755932245`*^9}]
+}, Open  ]],
 
 Cell[BoxData["$Aborted"], "Output",
- CellChangeTimes->{3.6554132183213778`*^9, 3.655413307313429*^9}],
+ CellChangeTimes->{3.6554132183213778`*^9, 3.655413307313429*^9, 
+  3.6554137078303175`*^9}],
 
-Cell[BoxData["6.9513549`8.293614455387424"], "Output",
- CellChangeTimes->{3.6554132183213778`*^9, 3.655413307313429*^9}]
+Cell[BoxData["274.6427578`9.89031314486367"], "Output",
+ CellChangeTimes->{3.6554132183213778`*^9, 3.655413307313429*^9, 
+  3.6554137078303175`*^9}]
 }, Open  ]]
 },
-WindowSize->{1282, 797},
+WindowSize->{1474, 821},
 WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
 StyleDefinitions->"Default.nb"
@@ -3263,10 +3311,15 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 16381, 457, 972, "Input"],
+Cell[16942, 479, 165, 4, 52, "Input"],
 Cell[CellGroupData[{
-Cell[16964, 481, 116616, 2758, 7472, "Input"],
-Cell[133583, 3241, 101, 1, 31, "Output"],
-Cell[133687, 3244, 120, 1, 31, "Output"]
+Cell[17132, 487, 116520, 2757, 7132, "Input"],
+Cell[CellGroupData[{
+Cell[133677, 3248, 836, 17, 23, "Print"],
+Cell[134516, 3267, 802, 17, 23, "Print"]
+}, Open  ]],
+Cell[135333, 3287, 128, 2, 31, "Output"],
+Cell[135464, 3291, 148, 2, 31, "Output"]
 }, Open  ]]
 }
 ]
