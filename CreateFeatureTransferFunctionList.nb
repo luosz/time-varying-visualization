@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     31329,        754]
-NotebookOptionsPosition[     30926,        736]
-NotebookOutlinePosition[     31271,        751]
-CellTagsIndexPosition[     31228,        748]
+NotebookDataLength[     31545,        757]
+NotebookOptionsPosition[     31143,        739]
+NotebookOutlinePosition[     31487,        754]
+CellTagsIndexPosition[     31444,        751]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -140,7 +140,8 @@ Cell[BoxData[
    TableForm[BoxForm`e$, TableHeadings -> Automatic]]]], "Output",
  CellChangeTimes->{{3.6555601573786817`*^9, 3.655560259586378*^9}, 
    3.655561768360444*^9, {3.655561863523467*^9, 3.6555618797381487`*^9}, 
-   3.655561917054961*^9}]
+   3.655561917054961*^9, {3.6555666230986156`*^9, 3.6555666373943267`*^9}, 
+   3.655566691147189*^9, 3.6555667339704065`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -693,8 +694,9 @@ Cell[BoxData[{
     RowBox[{"Export", "[", 
      RowBox[{
       RowBox[{
-       RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<tfilist.txt\>\""}],
-       ",", "#"}], "]"}], "&"}]}], ";"}], "\[IndentingNewLine]", 
+       RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~salience\\\\\>\"",
+        "<>", "\"\<tfilist.txt\>\""}], ",", "#"}], "]"}], "&"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"Table", "[", 
@@ -718,8 +720,9 @@ Cell[BoxData[{
     RowBox[{"Export", "[", 
      RowBox[{
       RowBox[{
-       RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<pnglist.xml\>\""}],
-       ",", "#"}], "]"}], "&"}]}], ";"}], "\[IndentingNewLine]", 
+       RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~salience\\\\\>\"",
+        "<>", "\"\<pnglist.xml\>\""}], ",", "#"}], "]"}], "&"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"(*", 
    RowBox[{"TableForm", "[", 
@@ -732,10 +735,10 @@ Cell[BoxData[{
   3.6555588064078894`*^9, 3.655558864974907*^9}, {3.6555591263537292`*^9, 
   3.6555591315918527`*^9}, {3.655559185172614*^9, 3.6555591940986447`*^9}, {
   3.655559410172371*^9, 3.655559468482501*^9}, {3.6555598528697414`*^9, 
-  3.655559872949812*^9}}]
+  3.655559872949812*^9}, {3.65556659941998*^9, 3.6555666353574095`*^9}}]
 },
 WindowSize->{1282, 797},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -752,10 +755,10 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 1760, 50, 152, "Input"],
-Cell[2343, 74, 3116, 68, 716, "Output"]
+Cell[2343, 74, 3216, 69, 716, "Output"]
 }, Open  ]],
-Cell[5474, 145, 23005, 521, 1492, "Input"],
-Cell[28482, 668, 2440, 66, 132, "Input"]
+Cell[5574, 146, 23005, 521, 1492, "Input"],
+Cell[28582, 669, 2557, 68, 132, "Input"]
 }
 ]
 *)
