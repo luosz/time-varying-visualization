@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     32912,        814]
-NotebookOptionsPosition[     32508,        796]
-NotebookOutlinePosition[     32852,        811]
-CellTagsIndexPosition[     32809,        808]
+NotebookDataLength[     33220,        820]
+NotebookOptionsPosition[     32816,        802]
+NotebookOutlinePosition[     33160,        817]
+CellTagsIndexPosition[     33117,        814]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -334,10 +334,15 @@ Cell[BoxData[{
            RowBox[{"features", "/", 
             RowBox[{"Total", "[", "features", "]"}]}]}]}], "*)"}], 
         "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+         "use", " ", "Gaussian", " ", "kernel", " ", "to", " ", "smooth", " ",
+           "the", " ", "overlap", " ", "feature", " ", "saliency", " ", 
+          "maps"}], " ", "*)"}], "\[IndentingNewLine]", 
         RowBox[{"size", "=", 
          RowBox[{
           RowBox[{"First", "@", 
-           RowBox[{"ImageDimensions", "[", "mixed", "]"}]}], "/", "16"}]}], 
+           RowBox[{"ImageDimensions", "[", "mixed", "]"}]}], "/", "8"}]}], 
         ";", "\[IndentingNewLine]", 
         RowBox[{"left", "=", 
          RowBox[{"ImageListSubtract", "[", 
@@ -499,7 +504,8 @@ Cell[BoxData[{
    3.6555678349466023`*^9}, {3.655567867156578*^9, 3.655567899797312*^9}, {
    3.6555686496907816`*^9, 3.6555686753974147`*^9}, {3.6555687066133614`*^9, 
    3.655568816418331*^9}, {3.655568856699342*^9, 3.655569016104062*^9}, {
-   3.655569658961447*^9, 3.655569718280781*^9}}],
+   3.655569658961447*^9, 3.655569718280781*^9}, {3.6561034177334533`*^9, 
+   3.6561034714609547`*^9}}],
 
 Cell[BoxData["227.4750559`9.808478773922406"], "Output",
  CellChangeTimes->{{3.655561040253855*^9, 3.655561079628556*^9}, 
@@ -794,7 +800,7 @@ Cell[BoxData[
    3.6555694632576113`*^9, 3.6555699502329564`*^9}]
 }, Open  ]]
 },
-WindowSize->{1282, 788},
+WindowSize->{1282, 781},
 WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
 StyleDefinitions->"Default.nb"
@@ -812,9 +818,9 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 2253, 60, 312, "Input"],
 Cell[CellGroupData[{
-Cell[2836, 84, 17703, 417, 1452, "Input"],
-Cell[20542, 503, 910, 12, 31, "Output"],
-Cell[21455, 517, 11037, 276, 716, "Output"]
+Cell[2836, 84, 18011, 423, 1472, "Input"],
+Cell[20850, 509, 910, 12, 31, "Output"],
+Cell[21763, 523, 11037, 276, 702, "Output"]
 }, Open  ]]
 }
 ]
