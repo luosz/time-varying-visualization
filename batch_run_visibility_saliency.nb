@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    192322,       4737]
-NotebookOptionsPosition[    187413,       4610]
-NotebookOutlinePosition[    187757,       4625]
-CellTagsIndexPosition[    187714,       4622]
+NotebookDataLength[    196838,       4832]
+NotebookOptionsPosition[    191924,       4705]
+NotebookOutlinePosition[    192269,       4720]
+CellTagsIndexPosition[    192226,       4717]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1942,1189 +1942,1288 @@ Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts1_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124909`6.946382368336611"}],
+   "0.3374288`6.979727140946736"}],
   SequenceForm[
-  "vorts1_optimized_parallelsearch", "\t", 0.3124909`6.946382368336611],
+  "vorts1_optimized_parallelsearch", "\t", 0.3374288`6.979727140946736],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566488116840515`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566731248269725`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts2_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3281398`6.967603902553448"}],
+   "0.3124881`6.946378476927304"}],
   SequenceForm[
-  "vorts2_optimized_parallelsearch", "\t", 0.3281398`6.967603902553448],
+  "vorts2_optimized_parallelsearch", "\t", 0.3124881`6.946378476927304],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656648826927929*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566731414106073`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts3_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3593785`7.007097085159689"}],
+   "0.3125165`6.946417945319359"}],
   SequenceForm[
-  "vorts3_optimized_parallelsearch", "\t", 0.3593785`7.007097085159689],
+  "vorts3_optimized_parallelsearch", "\t", 0.3125165`6.946417945319359],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.65664884189497*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566731573947053`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts4_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3128746`6.946915300881237"}],
+   "0.3281252`6.967584578958751"}],
   SequenceForm[
-  "vorts4_optimized_parallelsearch", "\t", 0.3128746`6.946915300881237],
+  "vorts4_optimized_parallelsearch", "\t", 0.3281252`6.967584578958751],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656648857255083*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673173364744*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts5_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3281315`6.967592917327673"}],
+   "0.3281248`6.967584049533097"}],
   SequenceForm[
-  "vorts5_optimized_parallelsearch", "\t", 0.3281315`6.967592917327673],
+  "vorts5_optimized_parallelsearch", "\t", 0.3281248`6.967584049533097],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566488725972857`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566731891901274`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts6_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3281291`6.967589740825055"}],
+   "0.3281252`6.967584578958751"}],
   SequenceForm[
-  "vorts6_optimized_parallelsearch", "\t", 0.3281291`6.967589740825055],
+  "vorts6_optimized_parallelsearch", "\t", 0.3281252`6.967584578958751],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566488880521417`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566732051273837`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts7_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124996`6.9463944592787765"}],
+   "0.3124912`6.9463827852712585"}],
   SequenceForm[
-  "vorts7_optimized_parallelsearch", "\t", 0.3124996`6.9463944592787765],
+  "vorts7_optimized_parallelsearch", "\t", 0.3124912`6.9463827852712585],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566489037236896`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566732211739225`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts8_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3281204`6.967578225808305"}],
+   "0.3346252`6.976103637261737"}],
   SequenceForm[
-  "vorts8_optimized_parallelsearch", "\t", 0.3281204`6.967578225808305],
+  "vorts8_optimized_parallelsearch", "\t", 0.3346252`6.976103637261737],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566489191286526`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.65667323751952*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts9_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.328927`6.968644517540303"}],
+   "0.3593713`7.007088384161735"}],
   SequenceForm[
-  "vorts9_optimized_parallelsearch", "\t", 0.328927`6.968644517540303],
+  "vorts9_optimized_parallelsearch", "\t", 0.3593713`7.007088384161735],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656648935130772*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673253456994*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts10_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3279132`6.967303892848401"}],
+   "0.3124952`6.946388344361589"}],
   SequenceForm[
-  "vorts10_optimized_parallelsearch", "\t", 0.3279132`6.967303892848401],
+  "vorts10_optimized_parallelsearch", "\t", 0.3124952`6.946388344361589],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566489510497885`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566732695192437`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts11_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3125134`6.946413637324193"}],
+   "0.3281224`6.967580872965618"}],
   SequenceForm[
-  "vorts11_optimized_parallelsearch", "\t", 0.3125134`6.946413637324193],
+  "vorts11_optimized_parallelsearch", "\t", 0.3281224`6.967580872965618],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656648966674106*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.65667328550299*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts12_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124872`6.946377226109766"}],
+   "0.3281248`6.967584049533097"}],
   SequenceForm[
-  "vorts12_optimized_parallelsearch", "\t", 0.3124872`6.946377226109766],
+  "vorts12_optimized_parallelsearch", "\t", 0.3281248`6.967584049533097],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566489826448183`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.65667330147161*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts13_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124959`6.946389317195086"}],
+   "0.3124964`6.946390012074815"}],
   SequenceForm[
-  "vorts13_optimized_parallelsearch", "\t", 0.3124959`6.946389317195086],
+  "vorts13_optimized_parallelsearch", "\t", 0.3124964`6.946390012074815],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.65664899784801*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673317549657*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts14_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3127324`6.946717871260437"}],
+   "0.3125004`6.946395571072648"}],
   SequenceForm[
-  "vorts14_optimized_parallelsearch", "\t", 0.3127324`6.946717871260437],
+  "vorts14_optimized_parallelsearch", "\t", 0.3125004`6.946395571072648],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566490127384233`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673333566351*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts15_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3194156`6.955901116408244"}],
+   "0.2968699`6.924111159678784"}],
   SequenceForm[
-  "vorts15_optimized_parallelsearch", "\t", 0.3194156`6.955901116408244],
+  "vorts15_optimized_parallelsearch", "\t", 0.2968699`6.924111159678784],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566490279421177`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673349598739*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts16_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3126633`6.94662190082501"}],
+   "0.3124992`6.946393903380771"}],
   SequenceForm[
-  "vorts16_optimized_parallelsearch", "\t", 0.3126633`6.94662190082501],
+  "vorts16_optimized_parallelsearch", "\t", 0.3124992`6.946393903380771],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649042707091*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566733654577894`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts17_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.312614`6.946553416912347"}],
+   "0.3266121`6.965577263504367"}],
   SequenceForm[
-  "vorts17_optimized_parallelsearch", "\t", 0.312614`6.946553416912347],
+  "vorts17_optimized_parallelsearch", "\t", 0.3266121`6.965577263504367],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566490575032835`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566733812054706`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts18_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968711`6.9241129151694025"}],
+   "0.3126121`6.94655077735678"}],
   SequenceForm[
-  "vorts18_optimized_parallelsearch", "\t", 0.2968711`6.9241129151694025],
+  "vorts18_optimized_parallelsearch", "\t", 0.3126121`6.94655077735678],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649072271175*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673396926086*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts19_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968715`6.924113500331363"}],
+   "0.3125173`6.946419057053111"}],
   SequenceForm[
-  "vorts19_optimized_parallelsearch", "\t", 0.2968715`6.924113500331363],
+  "vorts19_optimized_parallelsearch", "\t", 0.3125173`6.946419057053111],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566490870800323`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566734125975237`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts20_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968755`6.924119351907634"}],
+   "0.3125161`6.946417389451418"}],
   SequenceForm[
-  "vorts20_optimized_parallelsearch", "\t", 0.2968755`6.924119351907634],
+  "vorts20_optimized_parallelsearch", "\t", 0.3125161`6.946417389451418],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566491018151674`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673428110463*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts21_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.312496`6.946389456171121"}],
+   "0.3124991`6.946393764406156"}],
   SequenceForm[
-  "vorts21_optimized_parallelsearch", "\t", 0.312496`6.946389456171121],
+  "vorts21_optimized_parallelsearch", "\t", 0.3124991`6.946393764406156],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649116941208*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673443627665*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts22_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968905`6.924141294616482"}],
+   "0.3124956`6.946388900266711"}],
   SequenceForm[
-  "vorts22_optimized_parallelsearch", "\t", 0.2968905`6.924141294616482],
+  "vorts22_optimized_parallelsearch", "\t", 0.3124956`6.946388900266711],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.65664913189566*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673459848282*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts23_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3128244`6.946845613753596"}],
+   "0.3124992`6.946393903380768"}],
   SequenceForm[
-  "vorts23_optimized_parallelsearch", "\t", 0.3128244`6.946845613753596],
+  "vorts23_optimized_parallelsearch", "\t", 0.3124992`6.946393903380768],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566491468008223`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673476456095*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts24_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.1406189`6.599588689813282"}],
+   "0.1406198`6.599591469409644"}],
   SequenceForm[
-  "vorts24_optimized_parallelsearch", "\t", 0.1406189`6.599588689813282],
+  "vorts24_optimized_parallelsearch", "\t", 0.1406198`6.599591469409644],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649152535606*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566734828792343`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts25_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.313068`6.947183672311692"}],
+   "0.3125038`6.946400296164856"}],
   SequenceForm[
-  "vorts25_optimized_parallelsearch", "\t", 0.313068`6.947183672311692],
+  "vorts25_optimized_parallelsearch", "\t", 0.3125038`6.946400296164856],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566491668648567`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673497847558*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts26_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124139`6.946275341873459"}],
+   "0.3125003`6.946395432098569"}],
   SequenceForm[
-  "vorts26_optimized_parallelsearch", "\t", 0.3124139`6.946275341873459],
+  "vorts26_optimized_parallelsearch", "\t", 0.3125003`6.946395432098569],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566491818926425`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566735135049744`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts27_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3129673`6.9470439566927675"}],
+   "0.3124913`6.946382924249382"}],
   SequenceForm[
-  "vorts27_optimized_parallelsearch", "\t", 0.3129673`6.9470439566927675],
+  "vorts27_optimized_parallelsearch", "\t", 0.3124913`6.946382924249382],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566491970510287`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673529363804*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts28_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968763`6.92412052221343"}],
+   "0.3108818`6.944140291316157"}],
   SequenceForm[
-  "vorts28_optimized_parallelsearch", "\t", 0.2968763`6.92412052221343],
+  "vorts28_optimized_parallelsearch", "\t", 0.3108818`6.944140291316157],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566492121595917`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673545533448*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts29_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124956`6.9463889002667125"}],
+   "0.3080625`6.940183828994772"}],
   SequenceForm[
-  "vorts29_optimized_parallelsearch", "\t", 0.3124956`6.9463889002667125],
+  "vorts29_optimized_parallelsearch", "\t", 0.3080625`6.940183828994772],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566492272556252`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673561378851*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts30_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124983`6.946392652607659"}],
+   "0.3124963`6.946389873098957"}],
   SequenceForm[
-  "vorts30_optimized_parallelsearch", "\t", 0.3124983`6.946392652607659],
+  "vorts30_optimized_parallelsearch", "\t", 0.3124963`6.946389873098957],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566492423169403`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566735775186357`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts31_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968869`6.924136028467465"}],
+   "0.3125154`6.946416416680806"}],
   SequenceForm[
-  "vorts31_optimized_parallelsearch", "\t", 0.2968869`6.924136028467465],
+  "vorts31_optimized_parallelsearch", "\t", 0.3125154`6.946416416680806],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566492573790593`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566735936274595`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts32_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3281197`6.9675772992994345"}],
+   "0.3126018`6.946536467907921"}],
   SequenceForm[
-  "vorts32_optimized_parallelsearch", "\t", 0.3281197`6.9675772992994345],
+  "vorts32_optimized_parallelsearch", "\t", 0.3126018`6.946536467907921],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566492724419785`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673609487692*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts33_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968711`6.924112915169404"}],
+   "0.2968794`6.92412505711859"}],
   SequenceForm[
-  "vorts33_optimized_parallelsearch", "\t", 0.2968711`6.924112915169404],
+  "vorts33_optimized_parallelsearch", "\t", 0.2968794`6.92412505711859],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566492875679483`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566736250660825`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts34_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3125051`6.946402102804177"}],
+   "0.3125208`6.946423920854812"}],
   SequenceForm[
-  "vorts34_optimized_parallelsearch", "\t", 0.3125051`6.946402102804177],
+  "vorts34_optimized_parallelsearch", "\t", 0.3125208`6.946423920854812],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566493026436124`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673641002648*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts35_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2969631`6.924247481661717"}],
+   "0.3125035`6.946399879247023"}],
   SequenceForm[
-  "vorts35_optimized_parallelsearch", "\t", 0.2969631`6.924247481661717],
+  "vorts35_optimized_parallelsearch", "\t", 0.3125035`6.946399879247023],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566493180052276`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673656972129*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts36_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3437461`6.987782773038037"}],
+   "0.2968715`6.924113500331367"}],
   SequenceForm[
-  "vorts36_optimized_parallelsearch", "\t", 0.3437461`6.987782773038037],
+  "vorts36_optimized_parallelsearch", "\t", 0.2968715`6.924113500331367],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566493333300447`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566736730207214`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts37_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.312496`6.946389456171121"}],
+   "0.3124968`6.9463905679778035"}],
   SequenceForm[
-  "vorts37_optimized_parallelsearch", "\t", 0.312496`6.946389456171121],
+  "vorts37_optimized_parallelsearch", "\t", 0.3124968`6.9463905679778035],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566493483011475`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566736888784666`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts38_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.312496`6.9463894561711195"}],
+   "0.3270352`6.96613949338264"}],
   SequenceForm[
-  "vorts38_optimized_parallelsearch", "\t", 0.312496`6.9463894561711195],
+  "vorts38_optimized_parallelsearch", "\t", 0.3270352`6.96613949338264],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649363457305*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566737046753216`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts39_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3281252`6.967584578958747"}],
+   "0.3279353`6.967333161522656"}],
   SequenceForm[
-  "vorts39_optimized_parallelsearch", "\t", 0.3281252`6.967584578958747],
+  "vorts39_optimized_parallelsearch", "\t", 0.3279353`6.967333161522656],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566493787380114`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673720739227*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts40_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3126132`6.946552305522484"}],
+   "0.3124991`6.9463937644061575"}],
   SequenceForm[
-  "vorts40_optimized_parallelsearch", "\t", 0.3126132`6.946552305522484],
+  "vorts40_optimized_parallelsearch", "\t", 0.3124991`6.9463937644061575],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566493938793154`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673736737869*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts41_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124956`6.946388900266711"}],
+   "0.3124991`6.946393764406153"}],
   SequenceForm[
-  "vorts41_optimized_parallelsearch", "\t", 0.3124956`6.946388900266711],
+  "vorts41_optimized_parallelsearch", "\t", 0.3124991`6.946393764406153],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649409660342*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673752754729*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts42_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3281243`6.967583387750122"}],
+   "0.3124972`6.9463911238800735"}],
   SequenceForm[
-  "vorts42_optimized_parallelsearch", "\t", 0.3281243`6.967583387750122],
+  "vorts42_optimized_parallelsearch", "\t", 0.3124972`6.9463911238800735],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566494248484154`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566737688613834`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts43_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3125133`6.946413498355895"}],
+   "0.328126`6.967585637808123"}],
   SequenceForm[
-  "vorts43_optimized_parallelsearch", "\t", 0.3125133`6.946413498355895],
+  "vorts43_optimized_parallelsearch", "\t", 0.328126`6.967585637808123],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566494403473043`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566737848489084`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts44_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124987`6.946393208507263"}],
+   "0.3125212`6.946424476714395"}],
   SequenceForm[
-  "vorts44_optimized_parallelsearch", "\t", 0.3124987`6.946393208507263],
+  "vorts44_optimized_parallelsearch", "\t", 0.3125212`6.946424476714395],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649455799474*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673801021203*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts45_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124865`6.946376253249186"}],
+   "0.3125114`6.946410857949797"}],
   SequenceForm[
-  "vorts45_optimized_parallelsearch", "\t", 0.3124865`6.946376253249186],
+  "vorts45_optimized_parallelsearch", "\t", 0.3125114`6.946410857949797],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566494713778257`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566738169264297`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts46_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124869`6.946376809169783"}],
+   "0.3135109`6.947797638272151"}],
   SequenceForm[
-  "vorts46_optimized_parallelsearch", "\t", 0.3124869`6.946376809169783],
+  "vorts46_optimized_parallelsearch", "\t", 0.3135109`6.947797638272151],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649486644742*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566738331609106`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts47_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124952`6.946388344361593"}],
+   "0.3124948`6.946387788455762"}],
   SequenceForm[
-  "vorts47_optimized_parallelsearch", "\t", 0.3124952`6.946388344361593],
+  "vorts47_optimized_parallelsearch", "\t", 0.3124948`6.946387788455762],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566495021587534`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566738492226043`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts48_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3437496`6.987787194973144"}],
+   "0.3283348`6.9678619092652445"}],
   SequenceForm[
-  "vorts48_optimized_parallelsearch", "\t", 0.3437496`6.987787194973144],
+  "vorts48_optimized_parallelsearch", "\t", 0.3283348`6.9678619092652445],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566495177530375`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566738656127906`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts49_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3439194`6.9880016679376835"}],
+   "0.3124963`6.94638987309896"}],
   SequenceForm[
-  "vorts49_optimized_parallelsearch", "\t", 0.3439194`6.9880016679376835],
+  "vorts49_optimized_parallelsearch", "\t", 0.3124963`6.94638987309896],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649533316471*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673881925859*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts50_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3593733`7.007090801123097"}],
+   "0.3281213`6.967579417031091"}],
   SequenceForm[
-  "vorts50_optimized_parallelsearch", "\t", 0.3593733`7.007090801123097],
+  "vorts50_optimized_parallelsearch", "\t", 0.3281213`6.967579417031091],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566495488174286`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673898410389*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts51_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124952`6.9463883443615915"}],
+   "0.3124972`6.946391123880075"}],
   SequenceForm[
-  "vorts51_optimized_parallelsearch", "\t", 0.3124952`6.9463883443615915],
+  "vorts51_optimized_parallelsearch", "\t", 0.3124972`6.946391123880075],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649564332058*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566739151919947`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts52_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3281303`6.967591329079269"}],
+   "0.3124872`6.946377226109764"}],
   SequenceForm[
-  "vorts52_optimized_parallelsearch", "\t", 0.3281303`6.967591329079269],
+  "vorts52_optimized_parallelsearch", "\t", 0.3124872`6.946377226109764],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566495797524815`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673931533286*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts53_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2970038`6.924306999407371"}],
+   "0.328124`6.967582990679853"}],
   SequenceForm[
-  "vorts53_optimized_parallelsearch", "\t", 0.2970038`6.924306999407371],
+  "vorts53_optimized_parallelsearch", "\t", 0.328124`6.967582990679853],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566495952224617`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673947863391*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts54_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3281406`6.9676049613557085"}],
+   "0.312515`6.946415860810907"}],
   SequenceForm[
-  "vorts54_optimized_parallelsearch", "\t", 0.3281406`6.9676049613557085],
+  "vorts54_optimized_parallelsearch", "\t", 0.312515`6.946415860810907],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566496106591425`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656673964711944*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts55_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968704`6.924111891134068"}],
+   "0.3124996`6.946394459278775"}],
   SequenceForm[
-  "vorts55_optimized_parallelsearch", "\t", 0.2968704`6.924111891134068],
+  "vorts55_optimized_parallelsearch", "\t", 0.3124996`6.946394459278775],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649626035061*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566739814559813`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts56_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968708`6.924112476297411"}],
+   "0.3125129`6.946412942482263"}],
   SequenceForm[
-  "vorts56_optimized_parallelsearch", "\t", 0.2968708`6.924112476297411],
+  "vorts56_optimized_parallelsearch", "\t", 0.3125129`6.946412942482263],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566496416429014`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566739982233524`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts57_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3125011`6.946396543889953"}],
+   "0.3125133`6.946413498355895"}],
   SequenceForm[
-  "vorts57_optimized_parallelsearch", "\t", 0.3125011`6.946396543889953],
+  "vorts57_optimized_parallelsearch", "\t", 0.3125133`6.946413498355895],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566496570827265`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674015082094*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts58_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3125169`6.946418501186592"}],
+   "0.3124956`6.9463889002667125"}],
   SequenceForm[
-  "vorts58_optimized_parallelsearch", "\t", 0.3125169`6.946418501186592],
+  "vorts58_optimized_parallelsearch", "\t", 0.3124956`6.9463889002667125],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566496728796406`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566740316610594`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts59_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3126014`6.946535912191659"}],
+   "0.3281366`6.967599667318592"}],
   SequenceForm[
-  "vorts59_optimized_parallelsearch", "\t", 0.3126014`6.946535912191659],
+  "vorts59_optimized_parallelsearch", "\t", 0.3281366`6.967599667318592],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649688412013*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566740484580383`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts60_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124963`6.946389873098958"}],
+   "0.3125138`6.94641419319694"}],
   SequenceForm[
-  "vorts60_optimized_parallelsearch", "\t", 0.3124963`6.946389873098958],
+  "vorts60_optimized_parallelsearch", "\t", 0.3125138`6.94641419319694],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649704005357*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674065175347*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts61_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3281244`6.967583520106795"}],
+   "0.3282484`6.967747611356151"}],
   SequenceForm[
-  "vorts61_optimized_parallelsearch", "\t", 0.3281244`6.967583520106795],
+  "vorts61_optimized_parallelsearch", "\t", 0.3282484`6.967747611356151],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649719816614*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.65667408206741*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts62_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3128358`6.94686144009861"}],
+   "0.3282172`6.967706329717492"}],
   SequenceForm[
-  "vorts62_optimized_parallelsearch", "\t", 0.3128358`6.94686144009861],
+  "vorts62_optimized_parallelsearch", "\t", 0.3282172`6.967706329717492],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.65664973550562*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566740991765456`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts63_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3125154`6.946416416680806"}],
+   "0.3367877`6.978901215516958"}],
   SequenceForm[
-  "vorts63_optimized_parallelsearch", "\t", 0.3125154`6.946416416680806],
+  "vorts63_optimized_parallelsearch", "\t", 0.3367877`6.978901215516958],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649751302672*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674115968176*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts64_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124995`6.946394320304341"}],
+   "0.3437638`6.987805134933717"}],
   SequenceForm[
-  "vorts64_optimized_parallelsearch", "\t", 0.3124995`6.946394320304341],
+  "vorts64_optimized_parallelsearch", "\t", 0.3437638`6.987805134933717],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649767052563*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674132988457*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts65_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.323107`6.960891360453392"}],
+   "0.3281212`6.9675792846731675"}],
   SequenceForm[
-  "vorts65_optimized_parallelsearch", "\t", 0.323107`6.960891360453392],
+  "vorts65_optimized_parallelsearch", "\t", 0.3281212`6.9675792846731675],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566497828612933`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674149770356*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts66_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3085733`6.940903338540267"}],
+   "0.3281276`6.967587755499121"}],
   SequenceForm[
-  "vorts66_optimized_parallelsearch", "\t", 0.3085733`6.940903338540267],
+  "vorts66_optimized_parallelsearch", "\t", 0.3281276`6.967587755499121],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566497985183306`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674166567848*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts67_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124956`6.9463889002667125"}],
+   "0.312629`6.94657425494565"}],
   SequenceForm[
-  "vorts67_optimized_parallelsearch", "\t", 0.3124956`6.9463889002667125],
+  "vorts67_optimized_parallelsearch", "\t", 0.312629`6.94657425494565],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566498142544084`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674183049164*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts68_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124884`6.946378893865683"}],
+   "0.3281256`6.967585108383759"}],
   SequenceForm[
-  "vorts68_optimized_parallelsearch", "\t", 0.3124884`6.946378893865683],
+  "vorts68_optimized_parallelsearch", "\t", 0.3281256`6.967585108383759],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566498299416275`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566741996613503`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts69_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.328137`6.967600196725209"}],
+   "0.3125043`6.946400991027025"}],
   SequenceForm[
-  "vorts69_optimized_parallelsearch", "\t", 0.328137`6.967600196725209],
+  "vorts69_optimized_parallelsearch", "\t", 0.3125043`6.946400991027025],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649845815826*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566742164719095`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts70_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2814641`6.900968003105488"}],
+   "0.3127775`6.946780497547144"}],
   SequenceForm[
-  "vorts70_optimized_parallelsearch", "\t", 0.2814641`6.900968003105488],
+  "vorts70_optimized_parallelsearch", "\t", 0.3127775`6.946780497547144],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649861596961*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566742332709017`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts71_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2812415`6.900624399072707"}],
+   "0.2997303`6.928275641872532"}],
   SequenceForm[
-  "vorts71_optimized_parallelsearch", "\t", 0.2812415`6.900624399072707],
+  "vorts71_optimized_parallelsearch", "\t", 0.2997303`6.928275641872532],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649877377104*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566742498012905`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts72_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3125015`6.946397099784577"}],
+   "0.296879`6.9241244719722"}],
   SequenceForm[
-  "vorts72_optimized_parallelsearch", "\t", 0.3125015`6.946397099784577],
+  "vorts72_optimized_parallelsearch", "\t", 0.296879`6.9241244719722],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649893127571*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566742665030327`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts73_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3281287`6.967589211405695"}],
+   "0.3137099`6.948073217796293"}],
   SequenceForm[
-  "vorts73_optimized_parallelsearch", "\t", 0.3281287`6.967589211405695],
+  "vorts73_optimized_parallelsearch", "\t", 0.3137099`6.948073217796293],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656649909083459*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566742833801613`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts74_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968703`6.92411174484311"}],
+   "0.2968731`6.924115840971337"}],
   SequenceForm[
-  "vorts74_optimized_parallelsearch", "\t", 0.2968703`6.92411174484311],
+  "vorts74_optimized_parallelsearch", "\t", 0.2968731`6.924115840971337],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566499252065163`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674300175458*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts75_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968743`6.924117596443034"}],
+   "0.3281414`6.967606020155385"}],
   SequenceForm[
-  "vorts75_optimized_parallelsearch", "\t", 0.2968743`6.924117596443034],
+  "vorts75_optimized_parallelsearch", "\t", 0.3281414`6.967606020155385],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566499410366335`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566743168776855`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts76_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3281255`6.967584976027568"}],
+   "0.3124964`6.946390012074818"}],
   SequenceForm[
-  "vorts76_optimized_parallelsearch", "\t", 0.3281255`6.967584976027568],
+  "vorts76_optimized_parallelsearch", "\t", 0.3124964`6.946390012074818],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566499570839834`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566743336771173`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts77_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.312003`6.945703763402819"}],
+   "0.3281212`6.967579284673165"}],
   SequenceForm[
-  "vorts77_optimized_parallelsearch", "\t", 0.312003`6.945703763402819],
+  "vorts77_optimized_parallelsearch", "\t", 0.3281212`6.967579284673165],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566499729574585`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566743505970488`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts78_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3125`6.9463950151760665"}],
+   "0.3371667`6.979389668818817"}],
   SequenceForm[
-  "vorts78_optimized_parallelsearch", "\t", 0.3125`6.9463950151760665],
+  "vorts78_optimized_parallelsearch", "\t", 0.3371667`6.979389668818817],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566499890665383`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.65667436757727*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts79_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3125`6.9463950151760665"}],
+   "0.3124988`6.946393347482055"}],
   SequenceForm[
-  "vorts79_optimized_parallelsearch", "\t", 0.3125`6.9463950151760665],
+  "vorts79_optimized_parallelsearch", "\t", 0.3124988`6.946393347482055],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566500050036387`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674386128574*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts80_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968727`6.924115255812524"}],
+   "0.3267408`6.965748361545084"}],
   SequenceForm[
-  "vorts80_optimized_parallelsearch", "\t", 0.2968727`6.924115255812524],
+  "vorts80_optimized_parallelsearch", "\t", 0.3267408`6.965748361545084],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.65665002134878*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566744036449747`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts81_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124956`6.9463889002667125"}],
+   "0.3437635`6.987804755928129"}],
   SequenceForm[
-  "vorts81_optimized_parallelsearch", "\t", 0.3124956`6.9463889002667125],
+  "vorts81_optimized_parallelsearch", "\t", 0.3437635`6.987804755928129],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566500375522633`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566744208475623`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts82_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3281212`6.967579284673165"}],
+   "0.3593998`7.007122824591354"}],
   SequenceForm[
-  "vorts82_optimized_parallelsearch", "\t", 0.3281212`6.967579284673165],
+  "vorts82_optimized_parallelsearch", "\t", 0.3593998`7.007122824591354],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566500541144705`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674438036031*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts83_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3085922`6.940929938101357"}],
+   "0.3186285`6.95482961254164"}],
   SequenceForm[
-  "vorts83_optimized_parallelsearch", "\t", 0.3085922`6.940929938101357],
+  "vorts83_optimized_parallelsearch", "\t", 0.3186285`6.95482961254164],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656650070754575*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566744551912727`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts84_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3125161`6.946417389451418"}],
+   "0.3281185`6.96757571099391"}],
   SequenceForm[
-  "vorts84_optimized_parallelsearch", "\t", 0.3125161`6.946417389451418],
+  "vorts84_optimized_parallelsearch", "\t", 0.3281185`6.96757571099391],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566500870646105`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674472207162*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts85_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124929`6.946385147893345"}],
+   "0.312496`6.946389456171121"}],
   SequenceForm[
-  "vorts85_optimized_parallelsearch", "\t", 0.3124929`6.946385147893345],
+  "vorts85_optimized_parallelsearch", "\t", 0.312496`6.946389456171121],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566501033637433`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674489942208*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts86_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968715`6.924113500331365"}],
+   "0.3124881`6.946378476927302"}],
   SequenceForm[
-  "vorts86_optimized_parallelsearch", "\t", 0.2968715`6.924113500331365],
+  "vorts86_optimized_parallelsearch", "\t", 0.3124881`6.946378476927302],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566501198786983`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674507301405*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts87_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3125138`6.946414193196938"}],
+   "0.3124995`6.946394320304341"}],
   SequenceForm[
-  "vorts87_optimized_parallelsearch", "\t", 0.3125138`6.946414193196938],
+  "vorts87_optimized_parallelsearch", "\t", 0.3124995`6.946394320304341],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566501362078247`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566745246918917`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts88_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968707`6.9241123300066505"}],
+   "0.3281224`6.96758087296562"}],
   SequenceForm[
-  "vorts88_optimized_parallelsearch", "\t", 0.2968707`6.9241123300066505],
+  "vorts88_optimized_parallelsearch", "\t", 0.3281224`6.96758087296562],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566501523628135`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566745418320284`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts89_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2965482`6.923640285775494"}],
+   "0.3281212`6.967579284673165"}],
   SequenceForm[
-  "vorts89_optimized_parallelsearch", "\t", 0.2965482`6.923640285775494],
+  "vorts89_optimized_parallelsearch", "\t", 0.3281212`6.967579284673165],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656650168566407*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566745593619804`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts90_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968712`6.924113061459967"}],
+   "0.3125043`6.946400991027025"}],
   SequenceForm[
-  "vorts90_optimized_parallelsearch", "\t", 0.2968712`6.924113061459967],
+  "vorts90_optimized_parallelsearch", "\t", 0.3125043`6.946400991027025],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656650185753827*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566745774095488`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts91_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968703`6.924111744843112"}],
+   "0.3124877`6.946377921008844"}],
   SequenceForm[
-  "vorts91_optimized_parallelsearch", "\t", 0.2968703`6.924111744843112],
+  "vorts91_optimized_parallelsearch", "\t", 0.3124877`6.946377921008844],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656650202082279*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674594581703*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts92_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.2968712`6.924113061459969"}],
+   "0.34375`6.98778770033429"}],
   SequenceForm[
-  "vorts92_optimized_parallelsearch", "\t", 0.2968712`6.924113061459969],
+  "vorts92_optimized_parallelsearch", "\t", 0.34375`6.98778770033429],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566502185680647`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566746118951488`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts93_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124135`6.946274785822962"}],
+   "0.328113`6.967568431185945"}],
   SequenceForm[
-  "vorts93_optimized_parallelsearch", "\t", 0.3124135`6.946274785822962],
+  "vorts93_optimized_parallelsearch", "\t", 0.328113`6.967568431185945],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566502349433804`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674629237653*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts94_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3281406`6.9676049613557085"}],
+   "0.3283214`6.9678441844769665"}],
   SequenceForm[
-  "vorts94_optimized_parallelsearch", "\t", 0.3281406`6.9676049613557085],
+  "vorts94_optimized_parallelsearch", "\t", 0.3283214`6.9678441844769665],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566502514566927`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674646770425*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts95_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3125192`6.946421697409366"}],
+   "0.3281315`6.967592917327673"}],
   SequenceForm[
-  "vorts95_optimized_parallelsearch", "\t", 0.3125192`6.946421697409366],
+  "vorts95_optimized_parallelsearch", "\t", 0.3281315`6.967592917327673],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656650268317851*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566746644102864`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts96_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124955`6.946388761290499"}],
+   "0.328122`6.967580343535447"}],
   SequenceForm[
-  "vorts96_optimized_parallelsearch", "\t", 0.3124955`6.946388761290499],
+  "vorts96_optimized_parallelsearch", "\t", 0.328122`6.967580343535447],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566502851765175`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674681770054*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts97_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3211913`6.958308766674336"}],
+   "0.328274`6.967781480539418"}],
   SequenceForm[
-  "vorts97_optimized_parallelsearch", "\t", 0.3211913`6.958308766674336],
+  "vorts97_optimized_parallelsearch", "\t", 0.328274`6.967781480539418],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.656650302064747*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674698910691*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts98_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3124955`6.946388761290494"}],
+   "0.3125129`6.946412942482259"}],
   SequenceForm[
-  "vorts98_optimized_parallelsearch", "\t", 0.3124955`6.946388761290494],
+  "vorts98_optimized_parallelsearch", "\t", 0.3125129`6.946412942482259],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566503189269457`*^9}],
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.656674716161042*^9}],
 
 Cell[BoxData[
  InterpretationBox[
   RowBox[{"\<\"vorts99_optimized_parallelsearch\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.3125122`6.94641196970169"}],
+   "0.3437492`6.987786689611415"}],
   SequenceForm[
-  "vorts99_optimized_parallelsearch", "\t", 0.3125122`6.94641196970169],
+  "vorts99_optimized_parallelsearch", "\t", 0.3437492`6.987786689611415],
   Editable->False]], "Print",
  CellChangeTimes->{3.653461224066992*^9, 3.653461902545393*^9, 
   3.653463273343356*^9, 3.653514328834814*^9, 3.6535745378018546`*^9, 
-  3.653771608799781*^9, 3.6566503360355644`*^9}]
+  3.653771608799781*^9, 3.6566488116840515`*^9, 3.656672579720783*^9, 
+  3.6566747334575343`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -3258,48 +3357,48 @@ Cell[BoxData[
    RowBox[{"\<\"vorts26_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.28423398122135135`", ",", "0.3592293278481975`", ",", 
-      "0.35653669093044893`"}], "}"}]}], ",", 
+     "0.2893763454451724`", ",", "0.3478001848195675`", ",", 
+      "0.36282346973525986`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts27_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.31643992335393634`", ",", "0.34490347534950716`", ",", 
-      "0.3386566012965572`"}], "}"}]}], ",", 
+     "0.32159403883784554`", ",", "0.334223059160491`", ",", 
+      "0.344182902001666`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts28_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.31645929557323926`", ",", "0.3449061732191451`", ",", 
-      "0.33863453120761844`"}], "}"}]}], ",", 
+     "0.3216133598714291`", ",", "0.3342250031179785`", ",", 
+      "0.3441616370105949`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts29_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.3375909703855644`", ",", "0.3240959211713923`", ",", 
-      "0.3383131084430418`"}], "}"}]}], ",", 
+     "0.337355725632115`", ",", "0.32388118875534644`", ",", 
+      "0.33876308561254226`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts30_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.3040384928422545`", ",", "0.35020717920700517`", ",", 
-      "0.34575432795074124`"}], "}"}]}], ",", 
+     "0.3090797540965262`", ",", "0.33939438648580306`", ",", 
+      "0.3515258594176751`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts31_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.2831411257629918`", ",", "0.3517969352818477`", ",", 
-      "0.3650619389551641`"}], "}"}]}], ",", 
+     "0.2825052254492346`", ",", "0.35105215978719234`", ",", 
+      "0.36644261476357337`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts32_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.32052866211379083`", ",", "0.3430003372970419`", ",", 
-      "0.33647100058916485`"}], "}"}]}], ",", 
+     "0.3273270789595689`", ",", "0.3291758107134102`", ",", 
+      "0.3434971103270206`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts33_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.3599824921273185`", ",", "0.3192468727700439`", ",", 
-      "0.3207706351026343`"}], "}"}]}], ",", 
+     "0.3520852315260668`", ",", "0.3338469033256672`", ",", 
+      "0.31406786514826524`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts34_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.3680335378148368`", ",", "0.3271803830163539`", ",", 
-      "0.30478607916880684`"}], "}"}]}], ",", 
+     "0.3598629480505453`", ",", "0.3419038364338658`", ",", 
+      "0.2982332155155881`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts35_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
@@ -3308,23 +3407,23 @@ Cell[BoxData[
    RowBox[{"\<\"vorts36_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.3388647194497071`", ",", "0.32151559593129275`", ",", 
-      "0.33961968461899816`"}], "}"}]}], ",", 
+     "0.33957898150869054`", ",", "0.3221635389895533`", ",", 
+      "0.3382574795017552`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts37_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.29202005438486667`", ",", "0.3576574697222113`", ",", 
-      "0.3503224758929238`"}], "}"}]}], ",", 
+     "0.2979679810213297`", ",", "0.3450344276685756`", ",", 
+      "0.35699759131009734`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts38_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.3224060515581427`", ",", "0.3338580913875329`", ",", 
-      "0.3437358570543285`"}], "}"}]}], ",", 
+     "0.32171673276496393`", ",", "0.3331609962758085`", ",", 
+      "0.345122270959231`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts39_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.3224409588913497`", ",", "0.3338479165110717`", ",", 
-      "0.34371112459757835`"}], "}"}]}], ",", 
+     "0.3217516121075756`", ",", "0.3331505839092076`", ",", 
+      "0.345097803983217`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts40_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
@@ -3358,8 +3457,8 @@ Cell[BoxData[
    RowBox[{"\<\"vorts46_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.34038095056081696`", ",", "0.3266568512613792`", ",", 
-      "0.33296219817780354`"}], "}"}]}], ",", 
+     "0.30727454631811096`", ",", "0.34256247539951745`", ",", 
+      "0.35016297828237264`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts47_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
@@ -3383,8 +3482,8 @@ Cell[BoxData[
    RowBox[{"\<\"vorts51_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.33180943546966124`", ",", "0.330277202791901`", ",", 
-      "0.33791336173844044`"}], "}"}]}], ",", 
+     "0.3315642416041835`", ",", "0.3300489391120588`", ",", 
+      "0.3383868192837559`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts52_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
@@ -3393,23 +3492,23 @@ Cell[BoxData[
    RowBox[{"\<\"vorts53_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.31703061320873854`", ",", "0.3392903280435313`", ",", 
-      "0.3436790587477291`"}], "}"}]}], ",", 
+     "0.3172824934056596`", ",", "0.3395465066149739`", ",", 
+      "0.34317099997936695`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts54_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.3391727602925173`", ",", "0.32773349390408996`", ",", 
-      "0.3330937458033961`"}], "}"}]}], ",", 
+     "0.3001002552486519`", ",", "0.34662273841214214`", ",", 
+      "0.3532770063392086`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts55_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.31828814582706705`", ",", "0.3335624935228709`", ",", 
-      "0.3481493606500625`"}], "}"}]}], ",", 
+     "0.3185490245439301`", ",", "0.33382088608034355`", ",", 
+      "0.34763008937572826`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts56_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.3304219527840797`", ",", "0.3307211277888468`", ",", 
-      "0.3388569194270717`"}], "}"}]}], ",", 
+     "0.3309451667090934`", ",", "0.3312124370291703`", ",", 
+      "0.3378423962617346`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts57_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
@@ -3423,8 +3522,8 @@ Cell[BoxData[
    RowBox[{"\<\"vorts59_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.3214470210040337`", ",", "0.340549501588496`", ",", 
-      "0.3380034774074725`"}], "}"}]}], ",", 
+     "0.32588661459336343`", ",", "0.3322872740405977`", ",", 
+      "0.3418261113660368`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts60_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
@@ -3443,8 +3542,8 @@ Cell[BoxData[
    RowBox[{"\<\"vorts63_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.33587454849176335`", ",", "0.32931486207673355`", ",", 
-      "0.3348105894315011`"}], "}"}]}], ",", 
+     "0.311133582632424`", ",", "0.34148488922743947`", ",", 
+      "0.3473815281401411`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts64_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
@@ -3458,23 +3557,23 @@ Cell[BoxData[
    RowBox[{"\<\"vorts66_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.34286700544140847`", ",", "0.32244707896336017`", ",", 
-      "0.33468591559523203`"}], "}"}]}], ",", 
+     "0.28186502061361457`", ",", "0.35216040314728364`", ",", 
+      "0.3659745762391023`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts67_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.2580153573795718`", ",", "0.3737634671189727`", ",", 
-      "0.3682211755014563`"}], "}"}]}], ",", 
+     "0.34239630134792864`", ",", "0.33141927978520647`", ",", 
+      "0.3261844188668616`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts68_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.2974227057858705`", ",", "0.355763127189476`", ",", 
-      "0.34681416702465095`"}], "}"}]}], ",", 
+     "0.37019423370832816`", ",", "0.3436783221473545`", ",", 
+      "0.28612744414431757`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts69_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.3816815143755114`", ",", "0.34536982551176754`", ",", 
-      "0.2729486601127221`"}], "}"}]}], ",", 
+     "0.29888901747840957`", ",", "0.3794182804696492`", ",", 
+      "0.32169270205193873`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts70_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
@@ -3483,23 +3582,23 @@ Cell[BoxData[
    RowBox[{"\<\"vorts71_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.3748643160531924`", ",", "0.3602062894819595`", ",", 
-      "0.2649293944648473`"}], "}"}]}], ",", 
+     "0.36819536641705264`", ",", "0.37188498384239055`", ",", 
+      "0.2599196497405527`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts72_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.37472791854931103`", ",", "0.36027469713232974`", ",", 
-      "0.2649973843183565`"}], "}"}]}], ",", 
+     "0.3680607685767995`", ",", "0.37195440529029467`", ",", 
+      "0.25998482613290375`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts73_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.3650841321980706`", ",", "0.36361951509571183`", ",", 
-      "0.2712963527062212`"}], "}"}]}], ",", 
+     "0.4212716910993488`", ",", "0.3453965313120547`", ",", 
+      "0.23333177758859536`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts74_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.369762340074337`", ",", "0.3247598542219526`", ",", 
-      "0.3054778057037095`"}], "}"}]}], ",", 
+     "0.35629330276730303`", ",", "0.34926826768227814`", ",", 
+      "0.2944384295504191`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts75_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
@@ -3508,8 +3607,8 @@ Cell[BoxData[
    RowBox[{"\<\"vorts76_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.31647558872508463`", ",", "0.3473851844634221`", ",", 
-      "0.336139226811495`"}], "}"}]}], ",", 
+     "0.3227541914217016`", ",", "0.3347890408489308`", ",", 
+      "0.34245676772936695`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts77_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
@@ -3518,13 +3617,13 @@ Cell[BoxData[
    RowBox[{"\<\"vorts78_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.32643938891564095`", ",", "0.33522029569334044`", ",", 
-      "0.33834031539102205`"}], "}"}]}], ",", 
+     "0.326175498393075`", ",", "0.33495038683318773`", ",", 
+      "0.33887411477373813`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts79_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.3420983681091251`", ",", "0.32510096262019506`", ",", 
-      "0.33280066927068386`"}], "}"}]}], ",", 
+     "0.30894231361746216`", ",", "0.3419911841099398`", ",", 
+      "0.3490665022725967`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts80_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
@@ -3538,8 +3637,8 @@ Cell[BoxData[
    RowBox[{"\<\"vorts82_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.32178513404797193`", ",", "0.3373307467318449`", ",", 
-      "0.3408841192201854`"}], "}"}]}], ",", 
+     "0.3220420251848442`", ",", "0.33759284519985067`", ",", 
+      "0.3403651296153103`"}], "}"}]}], ",", 
    RowBox[{"\<\"vorts83_optimized_parallelsearch\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
@@ -3625,14 +3724,10 @@ Cell[BoxData[
      RowBox[{
      "0.31498648087365155`", ",", "0.33973591900226835`", ",", 
       "0.3452776001240839`"}], "}"}]}]}], "}"}]], "Output",
- CellChangeTimes->{3.6534612819590335`*^9, 3.6534619296561823`*^9, 
-  3.653463348390429*^9, 3.6535186532577944`*^9, 3.6535774058161182`*^9, 
-  3.653773792435253*^9, 3.6566503405643816`*^9}],
+ CellChangeTimes->{3.6566747378943267`*^9}],
 
-Cell[BoxData["1544.0759298`10.640213646414306"], "Output",
- CellChangeTimes->{3.6534612819590335`*^9, 3.6534619296561823`*^9, 
-  3.653463348390429*^9, 3.6535186532577944`*^9, 3.6535774058161182`*^9, 
-  3.653773792435253*^9, 3.656650340580013*^9}]
+Cell[BoxData["1628.6865203`10.66338249548097"], "Output",
+ CellChangeTimes->{3.6566747379099364`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -4608,8 +4703,8 @@ Cell[BoxData[
    3.653462097534732*^9, 3.6534621060111446`*^9}, {3.653462144080432*^9, 
    3.653462187326709*^9}}]
 },
-WindowSize->{1282, 797},
-WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+WindowSize->{1474, 821},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -4631,114 +4726,114 @@ Cell[36014, 984, 2248, 45, 992, "Input"],
 Cell[38265, 1031, 451, 11, 112, "Input"],
 Cell[38719, 1044, 718, 21, 52, "Input"],
 Cell[CellGroupData[{
-Cell[39462, 1069, 37807, 867, 2072, "Input"],
+Cell[39462, 1069, 37807, 867, 1892, "Input"],
 Cell[CellGroupData[{
-Cell[77294, 1940, 487, 10, 23, "Print"],
-Cell[77784, 1952, 485, 10, 23, "Print"],
-Cell[78272, 1964, 484, 10, 23, "Print"],
-Cell[78759, 1976, 485, 10, 23, "Print"],
-Cell[79247, 1988, 487, 10, 23, "Print"],
-Cell[79737, 2000, 487, 10, 23, "Print"],
-Cell[80227, 2012, 489, 10, 23, "Print"],
-Cell[80719, 2024, 487, 10, 23, "Print"],
-Cell[81209, 2036, 483, 10, 23, "Print"],
-Cell[81695, 2048, 489, 10, 23, "Print"],
-Cell[82187, 2060, 487, 10, 23, "Print"],
-Cell[82677, 2072, 489, 10, 23, "Print"],
-Cell[83169, 2084, 486, 10, 23, "Print"],
-Cell[83658, 2096, 489, 10, 23, "Print"],
-Cell[84150, 2108, 489, 10, 23, "Print"],
-Cell[84642, 2120, 485, 10, 23, "Print"],
-Cell[85130, 2132, 487, 10, 23, "Print"],
-Cell[85620, 2144, 489, 10, 23, "Print"],
-Cell[86112, 2156, 489, 10, 23, "Print"],
-Cell[86604, 2168, 489, 10, 23, "Print"],
-Cell[87096, 2180, 485, 10, 23, "Print"],
-Cell[87584, 2192, 486, 10, 23, "Print"],
-Cell[88073, 2204, 489, 10, 23, "Print"],
-Cell[88565, 2216, 487, 10, 23, "Print"],
-Cell[89055, 2228, 487, 10, 23, "Print"],
-Cell[89545, 2240, 489, 10, 23, "Print"],
-Cell[90037, 2252, 491, 10, 23, "Print"],
-Cell[90531, 2264, 487, 10, 23, "Print"],
-Cell[91021, 2276, 491, 10, 23, "Print"],
-Cell[91515, 2288, 489, 10, 23, "Print"],
-Cell[92007, 2300, 489, 10, 23, "Print"],
-Cell[92499, 2312, 491, 10, 23, "Print"],
-Cell[92993, 2324, 489, 10, 23, "Print"],
-Cell[93485, 2336, 489, 10, 23, "Print"],
-Cell[93977, 2348, 489, 10, 23, "Print"],
-Cell[94469, 2360, 489, 10, 23, "Print"],
-Cell[94961, 2372, 487, 10, 23, "Print"],
-Cell[95451, 2384, 487, 10, 23, "Print"],
-Cell[95941, 2396, 489, 10, 23, "Print"],
-Cell[96433, 2408, 489, 10, 23, "Print"],
-Cell[96925, 2420, 487, 10, 23, "Print"],
-Cell[97415, 2432, 489, 10, 23, "Print"],
-Cell[97907, 2444, 489, 10, 23, "Print"],
-Cell[98399, 2456, 487, 10, 23, "Print"],
-Cell[98889, 2468, 489, 10, 23, "Print"],
-Cell[99381, 2480, 487, 10, 23, "Print"],
-Cell[99871, 2492, 489, 10, 23, "Print"],
-Cell[100363, 2504, 489, 10, 23, "Print"],
-Cell[100855, 2516, 489, 10, 23, "Print"],
-Cell[101347, 2528, 489, 10, 23, "Print"],
-Cell[101839, 2540, 489, 10, 23, "Print"],
-Cell[102331, 2552, 489, 10, 23, "Print"],
-Cell[102823, 2564, 489, 10, 23, "Print"],
-Cell[103315, 2576, 491, 10, 23, "Print"],
-Cell[103809, 2588, 487, 10, 23, "Print"],
-Cell[104299, 2600, 489, 10, 23, "Print"],
-Cell[104791, 2612, 489, 10, 23, "Print"],
-Cell[105283, 2624, 489, 10, 23, "Print"],
-Cell[105775, 2636, 487, 10, 23, "Print"],
-Cell[106265, 2648, 487, 10, 23, "Print"],
-Cell[106755, 2660, 487, 10, 23, "Print"],
-Cell[107245, 2672, 484, 10, 23, "Print"],
-Cell[107732, 2684, 487, 10, 23, "Print"],
-Cell[108222, 2696, 487, 10, 23, "Print"],
-Cell[108712, 2708, 487, 10, 23, "Print"],
-Cell[109202, 2720, 489, 10, 23, "Print"],
-Cell[109694, 2732, 491, 10, 23, "Print"],
-Cell[110188, 2744, 489, 10, 23, "Print"],
-Cell[110680, 2756, 485, 10, 23, "Print"],
-Cell[111168, 2768, 487, 10, 23, "Print"],
-Cell[111658, 2780, 487, 10, 23, "Print"],
-Cell[112148, 2792, 487, 10, 23, "Print"],
-Cell[112638, 2804, 487, 10, 23, "Print"],
-Cell[113128, 2816, 487, 10, 23, "Print"],
-Cell[113618, 2828, 489, 10, 23, "Print"],
-Cell[114110, 2840, 489, 10, 23, "Print"],
-Cell[114602, 2852, 487, 10, 23, "Print"],
-Cell[115092, 2864, 485, 10, 23, "Print"],
-Cell[115580, 2876, 485, 10, 23, "Print"],
-Cell[116068, 2888, 486, 10, 23, "Print"],
-Cell[116557, 2900, 491, 10, 23, "Print"],
-Cell[117051, 2912, 489, 10, 23, "Print"],
-Cell[117543, 2924, 487, 10, 23, "Print"],
-Cell[118033, 2936, 489, 10, 23, "Print"],
-Cell[118525, 2948, 489, 10, 23, "Print"],
-Cell[119017, 2960, 489, 10, 23, "Print"],
-Cell[119509, 2972, 489, 10, 23, "Print"],
-Cell[120001, 2984, 491, 10, 23, "Print"],
-Cell[120495, 2996, 487, 10, 23, "Print"],
-Cell[120985, 3008, 487, 10, 23, "Print"],
-Cell[121475, 3020, 487, 10, 23, "Print"],
-Cell[121965, 3032, 489, 10, 23, "Print"],
-Cell[122457, 3044, 489, 10, 23, "Print"],
-Cell[122949, 3056, 491, 10, 23, "Print"],
-Cell[123443, 3068, 487, 10, 23, "Print"],
-Cell[123933, 3080, 489, 10, 23, "Print"],
-Cell[124425, 3092, 487, 10, 23, "Print"],
-Cell[124915, 3104, 489, 10, 23, "Print"],
-Cell[125407, 3116, 487, 10, 23, "Print"]
+Cell[77294, 1940, 536, 11, 23, "Print"],
+Cell[77833, 1953, 536, 11, 23, "Print"],
+Cell[78372, 1966, 536, 11, 23, "Print"],
+Cell[78911, 1979, 534, 11, 23, "Print"],
+Cell[79448, 1992, 536, 11, 23, "Print"],
+Cell[79987, 2005, 536, 11, 23, "Print"],
+Cell[80526, 2018, 538, 11, 23, "Print"],
+Cell[81067, 2031, 533, 11, 23, "Print"],
+Cell[81603, 2044, 534, 11, 23, "Print"],
+Cell[82140, 2057, 538, 11, 23, "Print"],
+Cell[82681, 2070, 535, 11, 23, "Print"],
+Cell[83219, 2083, 535, 11, 23, "Print"],
+Cell[83757, 2096, 536, 11, 23, "Print"],
+Cell[84296, 2109, 536, 11, 23, "Print"],
+Cell[84835, 2122, 536, 11, 23, "Print"],
+Cell[85374, 2135, 538, 11, 23, "Print"],
+Cell[85915, 2148, 538, 11, 23, "Print"],
+Cell[86456, 2161, 534, 11, 23, "Print"],
+Cell[86993, 2174, 538, 11, 23, "Print"],
+Cell[87534, 2187, 536, 11, 23, "Print"],
+Cell[88073, 2200, 536, 11, 23, "Print"],
+Cell[88612, 2213, 536, 11, 23, "Print"],
+Cell[89151, 2226, 536, 11, 23, "Print"],
+Cell[89690, 2239, 538, 11, 23, "Print"],
+Cell[90231, 2252, 536, 11, 23, "Print"],
+Cell[90770, 2265, 538, 11, 23, "Print"],
+Cell[91311, 2278, 536, 11, 23, "Print"],
+Cell[91850, 2291, 536, 11, 23, "Print"],
+Cell[92389, 2304, 536, 11, 23, "Print"],
+Cell[92928, 2317, 538, 11, 23, "Print"],
+Cell[93469, 2330, 538, 11, 23, "Print"],
+Cell[94010, 2343, 536, 11, 23, "Print"],
+Cell[94549, 2356, 536, 11, 23, "Print"],
+Cell[95088, 2369, 536, 11, 23, "Print"],
+Cell[95627, 2382, 536, 11, 23, "Print"],
+Cell[96166, 2395, 538, 11, 23, "Print"],
+Cell[96707, 2408, 540, 11, 23, "Print"],
+Cell[97250, 2421, 536, 11, 23, "Print"],
+Cell[97789, 2434, 536, 11, 23, "Print"],
+Cell[98328, 2447, 538, 11, 23, "Print"],
+Cell[98869, 2460, 536, 11, 23, "Print"],
+Cell[99408, 2473, 540, 11, 23, "Print"],
+Cell[99951, 2486, 536, 11, 23, "Print"],
+Cell[100490, 2499, 536, 11, 23, "Print"],
+Cell[101029, 2512, 538, 11, 23, "Print"],
+Cell[101570, 2525, 538, 11, 23, "Print"],
+Cell[102111, 2538, 538, 11, 23, "Print"],
+Cell[102652, 2551, 540, 11, 23, "Print"],
+Cell[103195, 2564, 534, 11, 23, "Print"],
+Cell[103732, 2577, 536, 11, 23, "Print"],
+Cell[104271, 2590, 538, 11, 23, "Print"],
+Cell[104812, 2603, 536, 11, 23, "Print"],
+Cell[105351, 2616, 534, 11, 23, "Print"],
+Cell[105888, 2629, 534, 11, 23, "Print"],
+Cell[106425, 2642, 538, 11, 23, "Print"],
+Cell[106966, 2655, 538, 11, 23, "Print"],
+Cell[107507, 2668, 536, 11, 23, "Print"],
+Cell[108046, 2681, 540, 11, 23, "Print"],
+Cell[108589, 2694, 538, 11, 23, "Print"],
+Cell[109130, 2707, 534, 11, 23, "Print"],
+Cell[109667, 2720, 535, 11, 23, "Print"],
+Cell[110205, 2733, 538, 11, 23, "Print"],
+Cell[110746, 2746, 536, 11, 23, "Print"],
+Cell[111285, 2759, 536, 11, 23, "Print"],
+Cell[111824, 2772, 538, 11, 23, "Print"],
+Cell[112365, 2785, 536, 11, 23, "Print"],
+Cell[112904, 2798, 532, 11, 23, "Print"],
+Cell[113439, 2811, 538, 11, 23, "Print"],
+Cell[113980, 2824, 538, 11, 23, "Print"],
+Cell[114521, 2837, 538, 11, 23, "Print"],
+Cell[115062, 2850, 538, 11, 23, "Print"],
+Cell[115603, 2863, 532, 11, 23, "Print"],
+Cell[116138, 2876, 538, 11, 23, "Print"],
+Cell[116679, 2889, 536, 11, 23, "Print"],
+Cell[117218, 2902, 538, 11, 23, "Print"],
+Cell[117759, 2915, 538, 11, 23, "Print"],
+Cell[118300, 2928, 538, 11, 23, "Print"],
+Cell[118841, 2941, 535, 11, 23, "Print"],
+Cell[119379, 2954, 536, 11, 23, "Print"],
+Cell[119918, 2967, 538, 11, 23, "Print"],
+Cell[120459, 2980, 538, 11, 23, "Print"],
+Cell[121000, 2993, 536, 11, 23, "Print"],
+Cell[121539, 3006, 536, 11, 23, "Print"],
+Cell[122078, 3019, 534, 11, 23, "Print"],
+Cell[122615, 3032, 534, 11, 23, "Print"],
+Cell[123152, 3045, 536, 11, 23, "Print"],
+Cell[123691, 3058, 538, 11, 23, "Print"],
+Cell[124232, 3071, 536, 11, 23, "Print"],
+Cell[124771, 3084, 538, 11, 23, "Print"],
+Cell[125312, 3097, 538, 11, 23, "Print"],
+Cell[125853, 3110, 536, 11, 23, "Print"],
+Cell[126392, 3123, 532, 11, 23, "Print"],
+Cell[126927, 3136, 534, 11, 23, "Print"],
+Cell[127464, 3149, 538, 11, 23, "Print"],
+Cell[128005, 3162, 538, 11, 23, "Print"],
+Cell[128546, 3175, 534, 11, 23, "Print"],
+Cell[129083, 3188, 534, 11, 23, "Print"],
+Cell[129620, 3201, 536, 11, 23, "Print"],
+Cell[130159, 3214, 538, 11, 23, "Print"]
 }, Open  ]],
-Cell[125909, 3129, 20833, 500, 1012, "Output"],
-Cell[146745, 3631, 246, 3, 31, "Output"]
+Cell[130712, 3228, 20686, 498, 1012, "Output"],
+Cell[151401, 3728, 101, 1, 31, "Output"]
 }, Open  ]],
-Cell[147006, 3637, 14390, 332, 1072, "Input"],
-Cell[161399, 3971, 14372, 331, 1072, "Input"],
-Cell[175774, 4304, 11635, 304, 592, "Input"]
+Cell[151517, 3732, 14390, 332, 1072, "Input"],
+Cell[165910, 4066, 14372, 331, 1072, "Input"],
+Cell[180285, 4399, 11635, 304, 592, "Input"]
 }
 ]
 *)
