@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    680849,      11394]
-NotebookOptionsPosition[    680233,      11371]
-NotebookOutlinePosition[    680578,      11386]
-CellTagsIndexPosition[    680535,      11383]
+NotebookDataLength[    680990,      11396]
+NotebookOptionsPosition[    680375,      11373]
+NotebookOutlinePosition[    680719,      11388]
+CellTagsIndexPosition[    680676,      11385]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -233,8 +233,8 @@ Cell[BoxData[
        "rgba2denormalized", ",", "xrgba", ",", "strlist", ",", "alphaMode", 
        ",", "gammaValue", ",", "domain", ",", "threshold", ",", "k", ",", 
        "int", ",", "split", ",", "colorL", ",", "keylist", ",", "keys", ",", 
-       "TransFuncIntensity", ",", "VoreenData", ",", "xml"}], "}"}], ",", 
-     "\[IndentingNewLine]", 
+       "TransFuncIntensity", ",", "VoreenData", ",", "xmlobject"}], "}"}], 
+     ",", "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"MapIndexed", "[", 
        RowBox[{
@@ -410,7 +410,7 @@ Cell[BoxData[
           RowBox[{"\"\<version\>\"", "\[Rule]", "\"\<1\>\""}], "}"}], ",", 
          RowBox[{"{", "TransFuncIntensity", "}"}]}], "]"}]}], ";", 
       "\[IndentingNewLine]", 
-      RowBox[{"xml", "=", 
+      RowBox[{"xmlobject", "=", 
        RowBox[{
         RowBox[{"XMLObject", "[", "\"\<Document\>\"", "]"}], "[", 
         RowBox[{
@@ -425,12 +425,13 @@ Cell[BoxData[
 Mathematica\>\"", "]"}]}], "}"}], ",", "VoreenData", ",", 
          RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"Export", "[", 
-       RowBox[{"filename", ",", "xml", ",", " ", "\"\<XML\>\""}], "]"}], ";", 
-      "\[IndentingNewLine]", "rgbafunction2"}]}], "\[IndentingNewLine]", 
-    "]"}]}], ";"}]], "Input",
+       RowBox[{"filename", ",", "xmlobject", ",", " ", "\"\<XML\>\""}], "]"}],
+       ";", "\[IndentingNewLine]", "rgbafunction2"}]}], "\[IndentingNewLine]",
+     "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.653320615065018*^9, 3.653320862051858*^9}, {
   3.6533208987245283`*^9, 3.653320941678205*^9}, {3.653331442100185*^9, 
-  3.653331453410994*^9}, {3.656875542416452*^9, 3.6568755702928143`*^9}}],
+  3.653331453410994*^9}, {3.656875542416452*^9, 3.6568755702928143`*^9}, {
+  3.656876129396053*^9, 3.65687613369163*^9}}],
 
 Cell[CellGroupData[{
 
@@ -535,7 +536,7 @@ Cell[BoxData[
    3.6568749698507996`*^9, 3.6568750081476784`*^9}, {3.656875085059641*^9, 
    3.656875205624877*^9}, {3.6568753926129093`*^9, 3.6568754099984283`*^9}, {
    3.656875480776351*^9, 3.656875501913334*^9}, {3.656875575385874*^9, 
-   3.6568755812178698`*^9}}],
+   3.6568755812178698`*^9}, 3.656876142342207*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -547,7 +548,7 @@ Cell[BoxData[
    3.6568749698507996`*^9, 3.6568750081476784`*^9}, {3.656875085059641*^9, 
    3.656875205624877*^9}, {3.6568753926129093`*^9, 3.6568754099984283`*^9}, {
    3.656875480776351*^9, 3.656875501913334*^9}, {3.656875575385874*^9, 
-   3.6568755812248325`*^9}}],
+   3.6568755812178698`*^9}, 3.6568761423491983`*^9}],
 
 Cell[BoxData[
  Graphics3DBox[
@@ -9717,11 +9718,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAA/kP9f9AtIPM=
     "], {{0, 120, 161}, {140, 0, 0}}, {0, 255},
     ColorFunction->(Blend[
-      Transpose[{$CellContext`intensity2$3468, $CellContext`rgba2$3468}], #]& \
+      Transpose[{$CellContext`intensity2$5405, $CellContext`rgba2$5405}], #]& \
 ),
     Method->{"FastRendering" -> True}],
    BoxForm`ImageTag["Byte", ColorFunction -> (Blend[
-      Transpose[{$CellContext`intensity2$3468, $CellContext`rgba2$3468}], #]& \
+      Transpose[{$CellContext`intensity2$5405, $CellContext`rgba2$5405}], #]& \
 ), ColorSpace -> "Grayscale", Interleaving -> None],
    Selectable->False],
   AxesStyle->{},
@@ -9736,7 +9737,8 @@ AAAA/kP9f9AtIPM=
    3.6568749698507996`*^9, 3.6568750081476784`*^9}, {3.656875085059641*^9, 
    3.656875205624877*^9}, {3.6568753926129093`*^9, 3.6568754099984283`*^9}, {
    3.656875480776351*^9, 3.656875501913334*^9}, {3.656875575385874*^9, 
-   3.656875581436402*^9}},ImageCache->GraphicsData["CompressedBitmap", "\<\
+   3.6568755812178698`*^9}, 
+   3.6568761425630302`*^9},ImageCache->GraphicsData["CompressedBitmap", "\<\
 eJzsvYdfVlfWNny95HnemWcmk2RSJ5kUU0zsvTdAkSIgCHbBXrGBvYAIggIi
 iAqCSC8K0juCir23xPQ66ZnJTDLpReVd1zpn39H5/oTv+f3Ec9/nPmWfda2+
 1t7Hd9aqhfOWzlq1aM6sDh4rZoUuXDRnZQf35Stk1z3/B/g/C+WvuAP4uR0w
@@ -11369,8 +11371,8 @@ eSmiwH9pwfCf5D3T3plMtrpOlBd//I//Uj9fax8tv/b5769/f/376//va/zX
 \>"]]
 }, Open  ]]
 },
-WindowSize->{1282, 797},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{1282, 788},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -11388,12 +11390,12 @@ Notebook[{
 Cell[558, 20, 514, 13, 52, "Input"],
 Cell[1075, 35, 4412, 131, 252, "Input"],
 Cell[5490, 168, 1686, 52, 132, "Input"],
-Cell[7179, 222, 8680, 210, 572, "Input"],
+Cell[7179, 222, 8746, 211, 572, "Input"],
 Cell[CellGroupData[{
-Cell[15884, 436, 1872, 49, 132, "Input"],
-Cell[17759, 487, 2669, 50, 247, "Output"],
-Cell[20431, 539, 497, 10, 31, "Output"],
-Cell[20931, 551, 659286, 10817, 437, 559564, 9181, "CachedBoxData", \
+Cell[15950, 437, 1872, 49, 132, "Input"],
+Cell[17825, 488, 2691, 50, 247, "Output"],
+Cell[20519, 540, 521, 10, 31, "Output"],
+Cell[21043, 552, 659316, 10818, 437, 559564, 9181, "CachedBoxData", \
 "BoxData", "Output"]
 }, Open  ]]
 }
