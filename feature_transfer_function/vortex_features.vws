@@ -22,7 +22,7 @@
                         <Property mapKey="applyLightAttenuation" name="applyLightAttenuation" value="false" />
                         <Property mapKey="camera" name="camera" projectionMode="1" maxValue="32000" minValue="1" frustLeft="-0.4142136" frustRight="0.4142136" frustBottom="-0.4142136" frustTop="0.4142136" frustNear="1" frustFar="32128" fovy="45.00000381" eyeMode="1" eyeSeparation="1" axisMode="0" stereoFocalLengh="600" stereoWidth="450" stereoRelativeFocalLength="0.05" useRealWorldFrustum="0" centerOption="0" adaptOnChange="true" id="ref8">
                             <MetaData>
-                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="1185" y="509" />
+                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="false" x="631" y="469" />
                             </MetaData>
                             <position x="64" y="64" z="308.56854248" />
                             <focus x="64" y="64" z="64" />
@@ -76,7 +76,7 @@
                         <Property mapKey="shading" name="shading" value="phong" />
                         <Property mapKey="transferFunction" name="transferFunction" domainFittingStrategy="1" id="ref12">
                             <MetaData>
-                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="738" y="177" width="683" height="538" />
+                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="767" y="465" width="683" height="538" />
                             </MetaData>
                             <TransferFunction type="TransFuncIntensity" alphaMode="1" gammaValue="1">
                                 <domain x="0" y="1" />
