@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    222902,       5737]
-NotebookOptionsPosition[    222416,       5716]
-NotebookOutlinePosition[    222761,       5731]
-CellTagsIndexPosition[    222718,       5728]
+NotebookDataLength[    223633,       5756]
+NotebookOptionsPosition[    223148,       5735]
+NotebookOutlinePosition[    223492,       5750]
+CellTagsIndexPosition[    223449,       5747]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -72,7 +72,8 @@ Cell[BoxData[{
     RowBox[{"inputxml", "=", 
      RowBox[{
       RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-      "\"\<~images\\\\extraction.xml\>\""}]}], ";", "\[IndentingNewLine]", 
+      "\"\<~images\\\\saliencyextraction.xml\>\""}]}], ";", 
+    "\[IndentingNewLine]", 
     RowBox[{"targetxml", "=", 
      RowBox[{
       RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
@@ -128,7 +129,9 @@ Cell[BoxData[{
    3.656697525033826*^9}, 3.656698081313122*^9, {3.656698140654055*^9, 
    3.6566982117068477`*^9}, {3.656698299643504*^9, 3.65669833586351*^9}, {
    3.6566985881830363`*^9, 3.656698603427902*^9}, {3.65670788479224*^9, 
-   3.656707887935773*^9}, {3.656794397363804*^9, 3.656794409395681*^9}}],
+   3.656707887935773*^9}, {3.656794397363804*^9, 3.656794409395681*^9}, {
+   3.6567962441467247`*^9, 3.6567962537446365`*^9}, {3.656796485545388*^9, 
+   3.656796495611602*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -2529,7 +2532,7 @@ Cell[BoxData[
  CellChangeTimes->{
   3.6566981009008627`*^9, 3.6566981717865453`*^9, 3.6566982149443207`*^9, {
    3.656703344621892*^9, 3.656703358730423*^9}, 3.6567099422527494`*^9, 
-   3.656794533407261*^9}]
+   3.656794533407261*^9, {3.656796331634445*^9, 3.6567963485703573`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2541,11 +2544,24 @@ Cell[BoxData[{
     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
     "\"\<~plot\\\\records.xml\>\""}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"targetxml", "=", 
+  RowBox[{
+   RowBox[{"targetxml", "=", 
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<~plot\\\\recordsextraction.xml\>\""}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
    RowBox[{
-    RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-    "\"\<~plot\\\\recordsextraction.xml\>\""}]}], 
-  ";"}], "\[IndentingNewLine]", 
+    RowBox[{"inputxml", "=", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+      "\"\<~plot\\\\recordsextraction.xml\>\""}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"targetxml", "=", 
+     RowBox[{
+      RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+      "\"\<~plot\\\\records.xml\>\""}]}], ";"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"extraction", "=", 
    RowBox[{"If", "[", 
@@ -2589,7 +2605,9 @@ Cell[BoxData[{
   RowBox[{"Export", "[", 
    RowBox[{"targetxml", ",", 
     RowBox[{"Normal", "[", "extraction", "]"}]}], "]"}], ";"}]}], "Input",
- CellChangeTimes->{{3.656794484770485*^9, 3.6567945143634567`*^9}}],
+ CellChangeTimes->{{3.656794484770485*^9, 3.6567945143634567`*^9}, {
+  3.6567962643370557`*^9, 3.6567962779151487`*^9}, {3.656796475654566*^9, 
+  3.6567964789198475`*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -5711,11 +5729,12 @@ Cell[BoxData[
    OutputFormsDump`HeadedColumn],
   Function[BoxForm`e$, 
    TableForm[BoxForm`e$, TableHeadings -> Automatic]]]], "Output",
- CellChangeTimes->{3.656794534880304*^9}]
+ CellChangeTimes->{
+  3.656794534880304*^9, {3.6567963361212*^9, 3.6567963527978573`*^9}}]
 }, Open  ]]
 },
-WindowSize->{1474, 821},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{1328, 781},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -5732,12 +5751,12 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 1089, 32, 72, "Input"],
 Cell[CellGroupData[{
-Cell[1672, 56, 2913, 74, 252, "Input"],
-Cell[4588, 132, 90320, 2399, 1511, "Output"]
+Cell[1672, 56, 3030, 77, 252, "Input"],
+Cell[4705, 135, 90368, 2399, 1511, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[94945, 2536, 1979, 55, 212, "Input"],
-Cell[96927, 2593, 125473, 3120, 1877, "Output"]
+Cell[95110, 2539, 2497, 70, 252, "Input"],
+Cell[97610, 2611, 125522, 3121, 1877, "Output"]
 }, Open  ]]
 }
 ]
