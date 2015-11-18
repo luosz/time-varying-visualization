@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     33374,        821]
-NotebookOptionsPosition[     32970,        803]
-NotebookOutlinePosition[     33314,        818]
-CellTagsIndexPosition[     33271,        815]
+NotebookDataLength[     34464,        844]
+NotebookOptionsPosition[     34060,        826]
+NotebookOutlinePosition[     34404,        841]
+CellTagsIndexPosition[     34361,        838]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -121,8 +121,8 @@ Cell[BoxData[{
          ",", "size", ",", "left", ",", "gaussian", ",", "sumOfGaussian", ",",
           "ratio", ",", "leftGaussian", ",", "weightedSaliency", ",", 
          "features2", ",", "total2", ",", "metric", ",", "chart", ",", 
-         "saliencemap", ",", "saliencemapxml"}], "}"}], ",", 
-       "\[IndentingNewLine]", 
+         "saliencemap", ",", "saliencemapxml", ",", "saliencemap2", ",", 
+         "saliencemapxml2"}], "}"}], ",", "\[IndentingNewLine]", 
        RowBox[{"(*", 
         RowBox[{
          RowBox[{"index", "=", "36"}], ";"}], "*)"}], "\[IndentingNewLine]", 
@@ -482,8 +482,30 @@ Cell[BoxData[{
          RowBox[{"saliencemapxml", ",", 
           RowBox[{"Normal", "[", "saliencemap", "]"}]}], "]"}], ";", 
         "\[IndentingNewLine]", 
-        RowBox[{"dataname", "\[Rule]", "metric"}]}]}], "\[IndentingNewLine]", 
-      "]"}], ",", 
+        RowBox[{"saliencemapxml2", "=", 
+         RowBox[{
+          RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+          "\"\<~metric\\\\salience.xml\>\""}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"saliencemap2", "=", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"FileExistsQ", "[", "saliencemapxml2", "]"}], ",", 
+           RowBox[{"Association", "@", 
+            RowBox[{"Import", "[", "saliencemapxml2", "]"}]}], ",", 
+           RowBox[{"<|", "|>"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"AssociateTo", "[", 
+         RowBox[{"saliencemap2", ",", 
+          RowBox[{"dataname", "\[Rule]", "features2"}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Export", "[", 
+         RowBox[{"saliencemapxml2", ",", 
+          RowBox[{"Normal", "[", "saliencemap2", "]"}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"dataname", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"metric", ",", "features2"}], "}"}]}], "}"}]}]}], 
+      "\[IndentingNewLine]", "]"}], ",", 
      RowBox[{"{", 
       RowBox[{"pngstr", ",", "pnglist"}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
@@ -505,7 +527,8 @@ Cell[BoxData[{
    3.6555686496907816`*^9, 3.6555686753974147`*^9}, {3.6555687066133614`*^9, 
    3.655568816418331*^9}, {3.655568856699342*^9, 3.655569016104062*^9}, {
    3.655569658961447*^9, 3.655569718280781*^9}, {3.6561034177334533`*^9, 
-   3.6561034714609547`*^9}, 3.656630360044797*^9}],
+   3.6561034714609547`*^9}, 3.656630360044797*^9, {3.6568492770684767`*^9, 
+   3.656849542611176*^9}}],
 
 Cell[BoxData["138.7057911`9.59363958715953"], "Output",
  CellChangeTimes->{{3.655561040253855*^9, 3.655561079628556*^9}, 
@@ -819,9 +842,9 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 2253, 60, 312, "Input"],
 Cell[CellGroupData[{
-Cell[2836, 84, 18033, 423, 1472, "Input"],
-Cell[20872, 509, 979, 13, 31, "Output"],
-Cell[21854, 524, 11100, 276, 716, "Output"]
+Cell[2836, 84, 19123, 446, 1572, "Input"],
+Cell[21962, 532, 979, 13, 31, "Output"],
+Cell[22944, 547, 11100, 276, 702, "Output"]
 }, Open  ]]
 }
 ]
