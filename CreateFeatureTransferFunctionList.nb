@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     31545,        757]
-NotebookOptionsPosition[     31143,        739]
-NotebookOutlinePosition[     31487,        754]
-CellTagsIndexPosition[     31444,        751]
+NotebookDataLength[     32585,        794]
+NotebookOptionsPosition[     32066,        773]
+NotebookOutlinePosition[     32410,        788]
+CellTagsIndexPosition[     32367,        785]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -141,396 +141,409 @@ Cell[BoxData[
  CellChangeTimes->{{3.6555601573786817`*^9, 3.655560259586378*^9}, 
    3.655561768360444*^9, {3.655561863523467*^9, 3.6555618797381487`*^9}, 
    3.655561917054961*^9, {3.6555666230986156`*^9, 3.6555666373943267`*^9}, 
-   3.655566691147189*^9, 3.6555667339704065`*^9}]
+   3.655566691147189*^9, 3.6555667339704065`*^9, 3.656949109677782*^9}]
 }, Open  ]],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"pathlist", "=", 
-   RowBox[{"Table", "[", 
-    RowBox[{
-     RowBox[{"Module", "[", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{
-        "xml", ",", "tfifile", ",", "volumefile", ",", "legends", ",", "face",
-          ",", "imagefilenames", ",", "txtfilenames", ",", "featurefilename", 
-         ",", "visibilityfilename", ",", "resultxml", ",", "imagefile", ",", 
-         "rawfile", ",", "dataname", ",", "tf", ",", "bincount", ",", 
-         "intensity", ",", "r", ",", "g", ",", "b", ",", "a", ",", 
-         "rgbcolors", ",", "rgbfunction", ",", "rgba", ",", "rgbafunction", 
-         ",", "alpha", ",", "intensity0", ",", "alpha0", ",", "d", ",", 
-         "colorized", ",", "pos", ",", "index", ",", "chartcolors", ",", 
-         "viewpoints", ",", "rangeOfAlpha", ",", "plotpath", ",", "imagepath",
-          ",", "tfpath", ",", "tflist"}], "}"}], ",", "\[IndentingNewLine]", 
+  RowBox[{"vorts", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\"\<vorts\>\"", "<>", 
+       RowBox[{"ToString", "[", "#", "]"}], "<>", 
+       "\"\<_optimized_parallelsearch\>\""}], "&"}], ")"}], "/@", 
+    RowBox[{"Range", "[", "99", "]"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6569491245977488`*^9, 3.6569491282160015`*^9}, {
+  3.656949163220147*^9, 3.6569491714917393`*^9}, {3.6569492022038727`*^9, 
+  3.65694921699807*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GenerateTFs", "[", "namelist_", "]"}], ":=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
        RowBox[{
-        RowBox[{"xml", "=", 
-         RowBox[{"Import", "[", 
-          RowBox[{
-           RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-           "\"\<~images\\\\\>\"", "<>", "xmlstr", "<>", "\"\<.xml\>\""}], 
-          "]"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-          "tfifile", ",", "volumefile", ",", "legends", ",", "face", ",", 
-           "imagefilenames", ",", "txtfilenames", ",", 
-           RowBox[{"{", 
-            RowBox[{"featurefilename", ",", "visibilityfilename"}], "}"}], 
-           ",", "resultxml", ",", "imagefile", ",", "rawfile", ",", 
-           "dataname", ",", "plotpath", ",", "imagepath"}], "}"}], "=", 
-         "xml"}], ";", "\[IndentingNewLine]", 
-        RowBox[{"tf", "=", 
-         RowBox[{"Import", "[", 
-          RowBox[{"tfifile", ",", "\"\<XML\>\""}], "]"}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"bincount", "=", "256"}], ";", "\[IndentingNewLine]", 
-        RowBox[{"intensity", "=", 
-         RowBox[{"ToExpression", "@", 
-          RowBox[{"Cases", "[", 
-           RowBox[{"tf", ",", 
-            RowBox[{
-             RowBox[{"XMLElement", "[", 
-              RowBox[{"\"\<intensity\>\"", ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"\"\<value\>\"", "\[Rule]", "atrib_"}], ",", "___"}],
-                 "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",",
-             "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"r", "=", 
-         RowBox[{"ToExpression", "@", 
-          RowBox[{"Cases", "[", 
-           RowBox[{"tf", ",", 
-            RowBox[{
-             RowBox[{"XMLElement", "[", 
-              RowBox[{"\"\<colorL\>\"", ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"\"\<r\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
-                "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
-            "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"g", "=", 
-         RowBox[{"ToExpression", "@", 
-          RowBox[{"Cases", "[", 
-           RowBox[{"tf", ",", 
-            RowBox[{
-             RowBox[{"XMLElement", "[", 
-              RowBox[{"\"\<colorL\>\"", ",", 
-               RowBox[{"{", 
-                RowBox[{"___", ",", 
-                 RowBox[{"\"\<g\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
-                "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
-            "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"b", "=", 
-         RowBox[{"ToExpression", "@", 
-          RowBox[{"Cases", "[", 
-           RowBox[{"tf", ",", 
-            RowBox[{
-             RowBox[{"XMLElement", "[", 
-              RowBox[{"\"\<colorL\>\"", ",", 
-               RowBox[{"{", 
-                RowBox[{"___", ",", 
-                 RowBox[{"\"\<b\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
-                "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
-            "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"a", "=", 
-         RowBox[{"ToExpression", "@", 
-          RowBox[{"Cases", "[", 
-           RowBox[{"tf", ",", 
-            RowBox[{
-             RowBox[{"XMLElement", "[", 
-              RowBox[{"\"\<colorL\>\"", ",", 
-               RowBox[{"{", 
-                RowBox[{"___", ",", 
-                 RowBox[{"\"\<a\>\"", "\[Rule]", "atrib_"}]}], "}"}], ",", 
-               "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
-            "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"rgbcolors", "=", 
+       "xml", ",", "tfifile", ",", "volumefile", ",", "legends", ",", "face", 
+        ",", "imagefilenames", ",", "txtfilenames", ",", "featurefilename", 
+        ",", "visibilityfilename", ",", "resultxml", ",", "imagefile", ",", 
+        "rawfile", ",", "dataname", ",", "tf", ",", "bincount", ",", 
+        "intensity", ",", "r", ",", "g", ",", "b", ",", "a", ",", "rgbcolors",
+         ",", "rgbfunction", ",", "rgba", ",", "rgbafunction", ",", "alpha", 
+        ",", "intensity0", ",", "alpha0", ",", "d", ",", "colorized", ",", 
+        "pos", ",", "index", ",", "chartcolors", ",", "viewpoints", ",", 
+        "rangeOfAlpha", ",", "plotpath", ",", "imagepath", ",", "tfpath", ",",
+         "tflist", ",", "index0"}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"xml", "=", 
+        RowBox[{"Import", "[", 
          RowBox[{
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", 
-           RowBox[{"Transpose", "[", 
-            RowBox[{"{", 
-             RowBox[{"r", ",", "g", ",", "b"}], "}"}], "]"}]}], "//", 
-          RowBox[{"(", 
+          RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+          "\"\<~images\\\\\>\"", "<>", "xmlstr", "<>", "\"\<.xml\>\""}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         "tfifile", ",", "volumefile", ",", "legends", ",", "face", ",", 
+          "imagefilenames", ",", "txtfilenames", ",", 
+          RowBox[{"{", 
+           RowBox[{"featurefilename", ",", "visibilityfilename"}], "}"}], ",",
+           "resultxml", ",", "imagefile", ",", "rawfile", ",", "dataname", 
+          ",", "plotpath", ",", "imagepath"}], "}"}], "=", "xml"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"tf", "=", 
+        RowBox[{"Import", "[", 
+         RowBox[{"tfifile", ",", "\"\<XML\>\""}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"bincount", "=", "256"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"intensity", "=", 
+        RowBox[{"ToExpression", "@", 
+         RowBox[{"Cases", "[", 
+          RowBox[{"tf", ",", 
            RowBox[{
-            RowBox[{"RGBColor", "/@", "#"}], "&"}], ")"}]}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"rgbfunction", "=", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"Blend", "[", 
-            RowBox[{
-             RowBox[{"Transpose", "[", 
+            RowBox[{"XMLElement", "[", 
+             RowBox[{"\"\<intensity\>\"", ",", 
               RowBox[{"{", 
-               RowBox[{"intensity", ",", "rgbcolors"}], "}"}], "]"}], ",", 
-             " ", "#1"}], "]"}], " ", "&"}], " ", ")"}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"rgba", "=", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", 
-           RowBox[{"Transpose", "[", 
-            RowBox[{"{", 
-             RowBox[{"r", ",", "g", ",", "b", ",", "a"}], "}"}], "]"}]}], "//", 
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{"RGBColor", "/@", "#"}], "&"}], ")"}]}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"rgbafunction", "=", 
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"Blend", "[", 
-            RowBox[{
-             RowBox[{"Transpose", "[", 
-              RowBox[{"{", 
-               RowBox[{"intensity", ",", "rgba"}], "}"}], "]"}], ",", " ", 
-             "#1"}], "]"}], " ", "&"}], " ", ")"}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"alpha", "=", 
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", "a"}]}], ";", 
-        "\[IndentingNewLine]", "\[IndentingNewLine]", 
-        RowBox[{"d", " ", "=", " ", 
-         RowBox[{"Import", "[", 
-          RowBox[{"volumefile", ",", "\"\<Image3D\>\""}], "]"}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"pos", "=", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"intensity", "[", 
-            RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", 
-          RowBox[{"Flatten", "@", 
-           RowBox[{"Position", "[", 
-            RowBox[{"alpha", ",", 
-             RowBox[{"_", "?", 
-              RowBox[{"(", 
                RowBox[{
-                RowBox[{"#", "==", "0"}], "&"}], ")"}]}]}], "]"}]}]}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"index", "=", 
+                RowBox[{"\"\<value\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
+               "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+           "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"r", "=", 
+        RowBox[{"ToExpression", "@", 
+         RowBox[{"Cases", "[", 
+          RowBox[{"tf", ",", 
+           RowBox[{
+            RowBox[{"XMLElement", "[", 
+             RowBox[{"\"\<colorL\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"\"\<r\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
+               "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+           "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"g", "=", 
+        RowBox[{"ToExpression", "@", 
+         RowBox[{"Cases", "[", 
+          RowBox[{"tf", ",", 
+           RowBox[{
+            RowBox[{"XMLElement", "[", 
+             RowBox[{"\"\<colorL\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{"___", ",", 
+                RowBox[{"\"\<g\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
+               "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+           "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"b", "=", 
+        RowBox[{"ToExpression", "@", 
+         RowBox[{"Cases", "[", 
+          RowBox[{"tf", ",", 
+           RowBox[{
+            RowBox[{"XMLElement", "[", 
+             RowBox[{"\"\<colorL\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{"___", ",", 
+                RowBox[{"\"\<b\>\"", "\[Rule]", "atrib_"}], ",", "___"}], 
+               "}"}], ",", "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+           "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"a", "=", 
+        RowBox[{"ToExpression", "@", 
+         RowBox[{"Cases", "[", 
+          RowBox[{"tf", ",", 
+           RowBox[{
+            RowBox[{"XMLElement", "[", 
+             RowBox[{"\"\<colorL\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{"___", ",", 
+                RowBox[{"\"\<a\>\"", "\[Rule]", "atrib_"}]}], "}"}], ",", 
+              "___"}], "]"}], "\[RuleDelayed]", "atrib"}], ",", 
+           "\[Infinity]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"rgbcolors", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", 
+          RowBox[{"Transpose", "[", 
+           RowBox[{"{", 
+            RowBox[{"r", ",", "g", ",", "b"}], "}"}], "]"}]}], "//", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"RGBColor", "/@", "#"}], "&"}], ")"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"rgbfunction", "=", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Blend", "[", 
+           RowBox[{
+            RowBox[{"Transpose", "[", 
+             RowBox[{"{", 
+              RowBox[{"intensity", ",", "rgbcolors"}], "}"}], "]"}], ",", " ",
+             "#1"}], "]"}], " ", "&"}], " ", ")"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"rgba", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", 
+          RowBox[{"Transpose", "[", 
+           RowBox[{"{", 
+            RowBox[{"r", ",", "g", ",", "b", ",", "a"}], "}"}], "]"}]}], "//", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"RGBColor", "/@", "#"}], "&"}], ")"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"rgbafunction", "=", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Blend", "[", 
+           RowBox[{
+            RowBox[{"Transpose", "[", 
+             RowBox[{"{", 
+              RowBox[{"intensity", ",", "rgba"}], "}"}], "]"}], ",", " ", 
+            "#1"}], "]"}], " ", "&"}], " ", ")"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"alpha", "=", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", "a"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"d", " ", "=", " ", 
+        RowBox[{"Import", "[", 
+         RowBox[{"volumefile", ",", "\"\<Image3D\>\""}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"pos", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"intensity", "[", 
+           RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", 
          RowBox[{"Flatten", "@", 
           RowBox[{"Position", "[", 
            RowBox[{"alpha", ",", 
             RowBox[{"_", "?", 
              RowBox[{"(", 
               RowBox[{
-               RowBox[{"#", ">", "0"}], "&"}], ")"}]}]}], "]"}]}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"chartcolors", "=", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"rgbcolors", "[", 
-            RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", "index"}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"viewpoints", "=", 
-         RowBox[{"<|", 
-          RowBox[{
-           RowBox[{"\"\<top\>\"", "\[RuleDelayed]", "Top"}], ",", 
-           RowBox[{"\"\<back\>\"", "\[RuleDelayed]", "Back"}], ",", 
-           RowBox[{"\"\<left\>\"", "\[RuleDelayed]", "Left"}], ",", 
-           RowBox[{"\"\<bottom\>\"", "\[RuleDelayed]", "Bottom"}], ",", 
-           RowBox[{"\"\<front\>\"", "\[RuleDelayed]", "Front"}], ",", 
-           RowBox[{"\"\<right\>\"", "\[RuleDelayed]", "Right"}]}], "|>"}]}], 
-        ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-        RowBox[{"intensity0", "=", "intensity"}], ";", "\[IndentingNewLine]", 
-        RowBox[{"alpha0", "=", "alpha"}], ";", "\[IndentingNewLine]", 
-        RowBox[{"rangeOfAlpha", "=", 
-         RowBox[{"Range", "[", 
-          RowBox[{"Length", "[", "alpha", "]"}], "]"}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"If", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"First", "[", "intensity0", "]"}], ">", "0"}], ",", 
-          RowBox[{
-           RowBox[{"intensity0", "=", 
-            RowBox[{"Join", "[", 
+               RowBox[{"#", "==", "0"}], "&"}], ")"}]}]}], "]"}]}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"index", "=", 
+        RowBox[{"Flatten", "@", 
+         RowBox[{"Position", "[", 
+          RowBox[{"alpha", ",", 
+           RowBox[{"_", "?", 
+            RowBox[{"(", 
              RowBox[{
-              RowBox[{"{", "0", "}"}], ",", "intensity0"}], "]"}]}], ";", 
-           RowBox[{"alpha0", "=", 
-            RowBox[{"Join", "[", 
-             RowBox[{
-              RowBox[{"{", "0", "}"}], ",", "alpha0"}], "]"}]}], ";", 
-           RowBox[{"rangeOfAlpha", "+=", "1"}]}]}], "]"}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"If", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"Last", "[", "intensity0", "]"}], "<", "1"}], ",", 
-          RowBox[{
-           RowBox[{"intensity0", "=", 
-            RowBox[{"Join", "[", 
-             RowBox[{"intensity0", ",", 
-              RowBox[{"{", "1", "}"}]}], "]"}]}], ";", 
-           RowBox[{"alpha0", "=", 
-            RowBox[{"Join", "[", 
-             RowBox[{"alpha0", ",", 
-              RowBox[{"{", "0", "}"}]}], "]"}]}]}]}], "]"}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"index0", "=", 
-         RowBox[{"Flatten", "@", 
-          RowBox[{"Position", "[", 
-           RowBox[{"alpha0", ",", 
-            RowBox[{"_", "?", 
-             RowBox[{"(", 
-              RowBox[{
-               RowBox[{"#", ">", "0"}], "&"}], ")"}]}]}], "]"}]}]}], ";", 
-        "\[IndentingNewLine]", "\[IndentingNewLine]", 
+              RowBox[{"#", ">", "0"}], "&"}], ")"}]}]}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"chartcolors", "=", 
         RowBox[{
-         RowBox[{"saveTransferFunction", "[", 
-          RowBox[{"peaks_", ",", "filename_"}], "]"}], ":=", 
-         RowBox[{"Module", "[", 
-          RowBox[{
-           RowBox[{"{", 
+         RowBox[{
+          RowBox[{"rgbcolors", "[", 
+           RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", "index"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"viewpoints", "=", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{"\"\<top\>\"", "\[RuleDelayed]", "Top"}], ",", 
+          RowBox[{"\"\<back\>\"", "\[RuleDelayed]", "Back"}], ",", 
+          RowBox[{"\"\<left\>\"", "\[RuleDelayed]", "Left"}], ",", 
+          RowBox[{"\"\<bottom\>\"", "\[RuleDelayed]", "Bottom"}], ",", 
+          RowBox[{"\"\<front\>\"", "\[RuleDelayed]", "Front"}], ",", 
+          RowBox[{"\"\<right\>\"", "\[RuleDelayed]", "Right"}]}], "|>"}]}], 
+       ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"intensity0", "=", "intensity"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"alpha0", "=", "alpha"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"rangeOfAlpha", "=", 
+        RowBox[{"Range", "[", 
+         RowBox[{"Length", "[", "alpha", "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"First", "[", "intensity0", "]"}], ">", "0"}], ",", 
+         RowBox[{
+          RowBox[{"intensity0", "=", 
+           RowBox[{"Join", "[", 
             RowBox[{
-            "a2", ",", "rgba2", ",", "intensity2", ",", "rgbafunction2", ",", 
-             "rgba2denormalized", ",", "xrgba", ",", "strlist", ",", 
-             "alphaMode", ",", "gammaValue", ",", "domain", ",", "threshold", 
-             ",", "k", ",", "int", ",", "split", ",", "colorL", ",", 
-             "keylist", ",", "keys", ",", "TransFuncIntensity", ",", 
-             "VoreenData", ",", "xmlobject"}], "}"}], ",", 
-           "\[IndentingNewLine]", 
+             RowBox[{"{", "0", "}"}], ",", "intensity0"}], "]"}]}], ";", 
+          RowBox[{"alpha0", "=", 
+           RowBox[{"Join", "[", 
+            RowBox[{
+             RowBox[{"{", "0", "}"}], ",", "alpha0"}], "]"}]}], ";", 
+          RowBox[{"rangeOfAlpha", "+=", "1"}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Last", "[", "intensity0", "]"}], "<", "1"}], ",", 
+         RowBox[{
+          RowBox[{"intensity0", "=", 
+           RowBox[{"Join", "[", 
+            RowBox[{"intensity0", ",", 
+             RowBox[{"{", "1", "}"}]}], "]"}]}], ";", 
+          RowBox[{"alpha0", "=", 
+           RowBox[{"Join", "[", 
+            RowBox[{"alpha0", ",", 
+             RowBox[{"{", "0", "}"}]}], "]"}]}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"index0", "=", 
+        RowBox[{"Flatten", "@", 
+         RowBox[{"Position", "[", 
+          RowBox[{"alpha0", ",", 
+           RowBox[{"_", "?", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"#", ">", "0"}], "&"}], ")"}]}]}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"saveTransferFunction", "[", 
+         RowBox[{"peaks_", ",", "filename_"}], "]"}], ":=", 
+        RowBox[{"Module", "[", 
+         RowBox[{
+          RowBox[{"{", 
            RowBox[{
-            RowBox[{"MapIndexed", "[", 
+           "a2", ",", "rgba2", ",", "intensity2", ",", "rgbafunction2", ",", 
+            "rgba2denormalized", ",", "xrgba", ",", "strlist", ",", 
+            "alphaMode", ",", "gammaValue", ",", "domain", ",", "threshold", 
+            ",", "k", ",", "int", ",", "split", ",", "colorL", ",", "keylist",
+             ",", "keys", ",", "TransFuncIntensity", ",", "VoreenData", ",", 
+            "xmlobject"}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"MapIndexed", "[", 
+            RowBox[{
              RowBox[{
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{
-                 RowBox[{"alpha0", "[", 
-                  RowBox[{"[", "#", "]"}], "]"}], "=", 
-                 RowBox[{"peaks", "[", 
-                  RowBox[{"[", 
-                   RowBox[{"First", "@", "#2"}], "]"}], "]"}]}], ")"}], "&"}],
-               ",", "index0"}], "]"}], ";", "\[IndentingNewLine]", 
-            RowBox[{"a2", "=", 
-             RowBox[{
-              RowBox[{
-               RowBox[{"IntegerPart", "[", 
-                RowBox[{"255", "*", 
-                 RowBox[{"alpha0", "[", 
-                  RowBox[{"[", "#", "]"}], "]"}]}], "]"}], "&"}], "/@", 
-              "rangeOfAlpha"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"rgba2", "=", 
-             RowBox[{
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{
-                 RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", 
-               RowBox[{"Transpose", "[", 
-                RowBox[{"{", 
-                 RowBox[{"r", ",", "g", ",", "b", ",", "a2"}], "}"}], "]"}]}],
-               "//", 
               RowBox[{"(", 
                RowBox[{
-                RowBox[{"RGBColor", "/@", "#"}], "&"}], ")"}]}]}], ";", 
-            "\[IndentingNewLine]", 
-            RowBox[{"intensity2", "=", 
+                RowBox[{"alpha0", "[", 
+                 RowBox[{"[", "#", "]"}], "]"}], "=", 
+                RowBox[{"peaks", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"First", "@", "#2"}], "]"}], "]"}]}], ")"}], "&"}], 
+             ",", "index0"}], "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"a2", "=", 
+            RowBox[{
              RowBox[{
-              RowBox[{
-               RowBox[{"intensity0", "[", 
-                RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", 
-              "rangeOfAlpha"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"rgbafunction2", "=", 
+              RowBox[{"IntegerPart", "[", 
+               RowBox[{"255", "*", 
+                RowBox[{"alpha0", "[", 
+                 RowBox[{"[", "#", "]"}], "]"}]}], "]"}], "&"}], "/@", 
+             "rangeOfAlpha"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"rgba2", "=", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"#", "/", "255."}], "&"}], ")"}], "/@", 
+              RowBox[{"Transpose", "[", 
+               RowBox[{"{", 
+                RowBox[{"r", ",", "g", ",", "b", ",", "a2"}], "}"}], "]"}]}], 
+             "//", 
              RowBox[{"(", 
               RowBox[{
-               RowBox[{"Blend", "[", 
-                RowBox[{
-                 RowBox[{"Transpose", "[", 
-                  RowBox[{"{", 
-                   RowBox[{"intensity2", ",", "rgba2"}], "}"}], "]"}], ",", 
-                 " ", "#"}], "]"}], " ", "&"}], " ", ")"}]}], ";", 
-            RowBox[{"(*", " ", 
-             RowBox[{"for", " ", "return", " ", 
-              RowBox[{"only", ".", " ", "not"}], " ", "used", " ", "in", " ", 
-              "this", " ", "function"}], " ", "*)"}], "\[IndentingNewLine]", 
-            "\[IndentingNewLine]", 
-            RowBox[{"rgba2denormalized", "=", 
-             RowBox[{"Transpose", "[", 
-              RowBox[{"{", 
-               RowBox[{"r", ",", "g", ",", "b", ",", "a2"}], "}"}], "]"}]}], 
-            ";", "\[IndentingNewLine]", 
-            RowBox[{"xrgba", "=", 
-             RowBox[{"Table", "[", 
-              RowBox[{
-               RowBox[{"Join", "[", 
-                RowBox[{
+               RowBox[{"RGBColor", "/@", "#"}], "&"}], ")"}]}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"intensity2", "=", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"intensity0", "[", 
+               RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", 
+             "rangeOfAlpha"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"rgbafunction2", "=", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"Blend", "[", 
+               RowBox[{
+                RowBox[{"Transpose", "[", 
                  RowBox[{"{", 
-                  RowBox[{"intensity2", "[", 
-                   RowBox[{"[", "i", "]"}], "]"}], "}"}], ",", 
-                 RowBox[{"rgba2denormalized", "[", 
-                  RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
-               RowBox[{"{", 
-                RowBox[{"i", ",", 
-                 RowBox[{"Length", "[", "intensity2", "]"}]}], "}"}]}], 
-              "]"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"strlist", "=", 
+                  RowBox[{"intensity2", ",", "rgba2"}], "}"}], "]"}], ",", 
+                " ", "#"}], "]"}], " ", "&"}], " ", ")"}]}], ";", 
+           RowBox[{"(*", " ", 
+            RowBox[{"for", " ", "return", " ", 
+             RowBox[{"only", ".", " ", "not"}], " ", "used", " ", "in", " ", 
+             "this", " ", "function"}], " ", "*)"}], "\[IndentingNewLine]", 
+           "\[IndentingNewLine]", 
+           RowBox[{"rgba2denormalized", "=", 
+            RowBox[{"Transpose", "[", 
+             RowBox[{"{", 
+              RowBox[{"r", ",", "g", ",", "b", ",", "a2"}], "}"}], "]"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"xrgba", "=", 
+            RowBox[{"Table", "[", 
              RowBox[{
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"ToString", "[", "#1", "]"}], ",", 
-                 RowBox[{"ToString", "[", "#2", "]"}], ",", 
-                 RowBox[{"ToString", "[", "#3", "]"}], ",", 
-                 RowBox[{"ToString", "[", "#4", "]"}], ",", 
-                 RowBox[{"ToString", "[", "#5", "]"}]}], "}"}], "&"}], "@@@", 
-              "xrgba"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"alphaMode", "=", 
-             RowBox[{"XMLElement", "[", 
-              RowBox[{"\"\<alphaMode\>\"", ",", 
-               RowBox[{"{", 
-                RowBox[{"\"\<value\>\"", "\[Rule]", "\"\<1\>\""}], "}"}], ",", 
-               RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"gammaValue", "=", 
-             RowBox[{"XMLElement", "[", 
-              RowBox[{"\"\<gammaValue\>\"", ",", 
-               RowBox[{"{", 
-                RowBox[{"\"\<value\>\"", "\[Rule]", "\"\<1\>\""}], "}"}], ",", 
-               RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"domain", "=", 
-             RowBox[{"XMLElement", "[", 
-              RowBox[{"\"\<domain\>\"", ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"\"\<x\>\"", "\[Rule]", "\"\<0\>\""}], ",", 
-                 RowBox[{"\"\<y\>\"", "\[Rule]", "\"\<1\>\""}]}], "}"}], ",", 
-               RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"threshold", "=", 
-             RowBox[{"XMLElement", "[", 
-              RowBox[{"\"\<threshold\>\"", ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"\"\<x\>\"", "\[Rule]", "\"\<0\>\""}], ",", 
-                 RowBox[{"\"\<y\>\"", "\[Rule]", "\"\<1\>\""}]}], "}"}], ",", 
-               RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"k", "=", 
-             RowBox[{
-              RowBox[{"(", 
+              RowBox[{"Join", "[", 
                RowBox[{
                 RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"int", "=", 
-                   RowBox[{"XMLElement", "[", 
-                    RowBox[{"\"\<intensity\>\"", ",", 
+                 RowBox[{"intensity2", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], "}"}], ",", 
+                RowBox[{"rgba2denormalized", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", 
+                RowBox[{"Length", "[", "intensity2", "]"}]}], "}"}]}], 
+             "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"strlist", "=", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"ToString", "[", "#1", "]"}], ",", 
+                RowBox[{"ToString", "[", "#2", "]"}], ",", 
+                RowBox[{"ToString", "[", "#3", "]"}], ",", 
+                RowBox[{"ToString", "[", "#4", "]"}], ",", 
+                RowBox[{"ToString", "[", "#5", "]"}]}], "}"}], "&"}], "@@@", 
+             "xrgba"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"alphaMode", "=", 
+            RowBox[{"XMLElement", "[", 
+             RowBox[{"\"\<alphaMode\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<value\>\"", "\[Rule]", "\"\<1\>\""}], "}"}], ",", 
+              RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"gammaValue", "=", 
+            RowBox[{"XMLElement", "[", 
+             RowBox[{"\"\<gammaValue\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<value\>\"", "\[Rule]", "\"\<1\>\""}], "}"}], ",", 
+              RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"domain", "=", 
+            RowBox[{"XMLElement", "[", 
+             RowBox[{"\"\<domain\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"\"\<x\>\"", "\[Rule]", "\"\<0\>\""}], ",", 
+                RowBox[{"\"\<y\>\"", "\[Rule]", "\"\<1\>\""}]}], "}"}], ",", 
+              RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"threshold", "=", 
+            RowBox[{"XMLElement", "[", 
+             RowBox[{"\"\<threshold\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"\"\<x\>\"", "\[Rule]", "\"\<0\>\""}], ",", 
+                RowBox[{"\"\<y\>\"", "\[Rule]", "\"\<1\>\""}]}], "}"}], ",", 
+              RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"k", "=", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"int", "=", 
+                  RowBox[{"XMLElement", "[", 
+                   RowBox[{"\"\<intensity\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"\"\<value\>\"", "\[Rule]", "#1"}], "}"}], ",", 
                     RowBox[{"{", "}"}]}], "]"}]}], ",", 
-                  RowBox[{"split", "=", 
-                   RowBox[{"XMLElement", "[", 
-                    RowBox[{"\"\<split\>\"", ",", 
+                 RowBox[{"split", "=", 
+                  RowBox[{"XMLElement", "[", 
+                   RowBox[{"\"\<split\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{"\"\<value\>\"", "\[Rule]", "\"\<false\>\""}], 
                     "}"}], ",", 
                     RowBox[{"{", "}"}]}], "]"}]}], ",", 
-                  RowBox[{"colorL", "=", 
-                   RowBox[{"XMLElement", "[", 
-                    RowBox[{"\"\<colorL\>\"", ",", 
+                 RowBox[{"colorL", "=", 
+                  RowBox[{"XMLElement", "[", 
+                   RowBox[{"\"\<colorL\>\"", ",", 
                     RowBox[{"{", 
                     RowBox[{
                     RowBox[{"\"\<r\>\"", "\[Rule]", "#2"}], ",", 
@@ -538,125 +551,123 @@ Cell[BoxData[
                     RowBox[{"\"\<b\>\"", "\[Rule]", "#4"}], ",", 
                     RowBox[{"\"\<a\>\"", "\[Rule]", "#5"}]}], "}"}], ",", 
                     RowBox[{"{", "}"}]}], "]"}]}]}], "}"}], "&"}], ")"}], "@@@",
-               "strlist"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"keylist", "=", 
-             RowBox[{
-              RowBox[{
-               RowBox[{"XMLElement", "[", 
-                RowBox[{"\"\<key\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{
-                  "\"\<type\>\"", "\[Rule]", "\"\<TransFuncMappingKey\>\""}], 
-                  "}"}], ",", 
-                 RowBox[{"{", 
-                  RowBox[{"#1", ",", "#2", ",", "#3"}], "}"}]}], "]"}], "&"}],
-               "@@@", "k"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"keys", "=", 
-             RowBox[{"XMLElement", "[", 
-              RowBox[{"\"\<Keys\>\"", ",", 
-               RowBox[{"{", "}"}], ",", "keylist"}], "]"}]}], ";", 
-            "\[IndentingNewLine]", 
-            RowBox[{"TransFuncIntensity", "=", 
-             RowBox[{"XMLElement", "[", 
-              RowBox[{"\"\<TransFuncIntensity\>\"", ",", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<type\>\"", "\[Rule]", "\"\<TransFuncIntensity\>\""}], 
-                "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{
-                "alphaMode", ",", "gammaValue", ",", "domain", ",", 
-                 "threshold", ",", "keys"}], "}"}]}], "]"}]}], ";", 
-            "\[IndentingNewLine]", 
-            RowBox[{"VoreenData", "=", 
-             RowBox[{"XMLElement", "[", 
-              RowBox[{"\"\<VoreenData\>\"", ",", 
-               RowBox[{"{", 
-                RowBox[{"\"\<version\>\"", "\[Rule]", "\"\<1\>\""}], "}"}], 
-               ",", 
-               RowBox[{"{", "TransFuncIntensity", "}"}]}], "]"}]}], ";", 
-            "\[IndentingNewLine]", 
-            RowBox[{"xmlobject", "=", 
-             RowBox[{
-              RowBox[{"XMLObject", "[", "\"\<Document\>\"", "]"}], "[", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"XMLObject", "[", "\"\<Declaration\>\"", "]"}], "[", 
-                  RowBox[{"\"\<Version\>\"", "\[Rule]", "\"\<1.0\>\""}], 
-                  "]"}], ",", 
-                 RowBox[{
-                  RowBox[{"XMLObject", "[", "\"\<Comment\>\"", "]"}], "[", 
-                  "\"\<This is a Voreen transfer function exported from \
-Mathematica\>\"", "]"}]}], "}"}], ",", "VoreenData", ",", 
-               RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"Export", "[", 
-             RowBox[{"filename", ",", "xmlobject", ",", " ", "\"\<XML\>\""}], 
-             "]"}], ";", "\[IndentingNewLine]", "rgbafunction2"}]}], 
-          "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
-        "\[IndentingNewLine]", 
-        RowBox[{"peaks", "=", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"alpha", "[", 
-            RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", "index"}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"tfpath", "=", 
-         RowBox[{
-          RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
-          "\"\<~salience\\\\\>\"", "<>", "dataname", "<>", "\"\<.tfi\>\""}]}],
-         ";", "\[IndentingNewLine]", 
-        RowBox[{"saveTransferFunction", "[", 
-         RowBox[{"peaks", ",", "tfpath"}], "]"}], ";", "\[IndentingNewLine]", 
-        RowBox[{"tflist", "=", 
-         RowBox[{"Table", "[", 
-          RowBox[{
-           RowBox[{"Module", "[", 
+              "strlist"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"keylist", "=", 
             RowBox[{
-             RowBox[{"{", 
-              RowBox[{"p", ",", "tfpath2"}], "}"}], ",", 
+             RowBox[{
+              RowBox[{"XMLElement", "[", 
+               RowBox[{"\"\<key\>\"", ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<type\>\"", "\[Rule]", "\"\<TransFuncMappingKey\>\""}], 
+                 "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"#1", ",", "#2", ",", "#3"}], "}"}]}], "]"}], "&"}], 
+             "@@@", "k"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"keys", "=", 
+            RowBox[{"XMLElement", "[", 
+             RowBox[{"\"\<Keys\>\"", ",", 
+              RowBox[{"{", "}"}], ",", "keylist"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"TransFuncIntensity", "=", 
+            RowBox[{"XMLElement", "[", 
+             RowBox[{"\"\<TransFuncIntensity\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<type\>\"", "\[Rule]", "\"\<TransFuncIntensity\>\""}], 
+               "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "alphaMode", ",", "gammaValue", ",", "domain", ",", 
+                "threshold", ",", "keys"}], "}"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"VoreenData", "=", 
+            RowBox[{"XMLElement", "[", 
+             RowBox[{"\"\<VoreenData\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<version\>\"", "\[Rule]", "\"\<1\>\""}], "}"}], 
+              ",", 
+              RowBox[{"{", "TransFuncIntensity", "}"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"xmlobject", "=", 
+            RowBox[{
+             RowBox[{"XMLObject", "[", "\"\<Document\>\"", "]"}], "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"XMLObject", "[", "\"\<Declaration\>\"", "]"}], "[", 
+                 RowBox[{"\"\<Version\>\"", "\[Rule]", "\"\<1.0\>\""}], "]"}],
+                 ",", 
+                RowBox[{
+                 RowBox[{"XMLObject", "[", "\"\<Comment\>\"", "]"}], "[", 
+                 "\"\<This is a Voreen transfer function exported from \
+Mathematica\>\"", "]"}]}], "}"}], ",", "VoreenData", ",", 
+              RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"Export", "[", 
+            RowBox[{"filename", ",", "xmlobject", ",", " ", "\"\<XML\>\""}], 
+            "]"}], ";", "\[IndentingNewLine]", "rgbafunction2"}]}], 
+         "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"peaks", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"alpha", "[", 
+           RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", "index"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"tfpath", "=", 
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+         "\"\<~salience\\\\\>\"", "<>", "dataname", "<>", "\"\<.tfi\>\""}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"saveTransferFunction", "[", 
+        RowBox[{"peaks", ",", "tfpath"}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"tflist", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Module", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"p", ",", "tfpath2"}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"p", "=", 
+              RowBox[{"ConstantArray", "[", 
+               RowBox[{"0", ",", 
+                RowBox[{"Length", "[", "peaks", "]"}]}], "]"}]}], ";", 
              "\[IndentingNewLine]", 
              RowBox[{
-              RowBox[{"p", "=", 
-               RowBox[{"ConstantArray", "[", 
-                RowBox[{"0", ",", 
-                 RowBox[{"Length", "[", "peaks", "]"}]}], "]"}]}], ";", 
-              "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"p", "[", 
-                RowBox[{"[", "i", "]"}], "]"}], "=", 
-               RowBox[{"peaks", "[", 
-                RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-              RowBox[{"tfpath2", "=", 
-               RowBox[{"StringReplace", "[", 
-                RowBox[{"tfpath", ",", 
-                 RowBox[{"\"\<.tfi\>\"", "->", 
-                  RowBox[{"\"\<_\>\"", "<>", 
-                   RowBox[{"ToString", "[", "i", "]"}], "<>", 
-                   "\"\<.tfi\>\""}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-              RowBox[{"saveTransferFunction", "[", 
-               RowBox[{"p", ",", "tfpath2"}], "]"}], ";", 
-              "\[IndentingNewLine]", "tfpath2"}]}], "\[IndentingNewLine]", 
-            "]"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"i", ",", 
-             RowBox[{"Length", "[", "peaks", "]"}]}], "}"}]}], "]"}]}], ";", 
-        "\[IndentingNewLine]", 
-        RowBox[{"{", 
-         RowBox[{"tfpath", ",", "tflist"}], "}"}]}]}], "\[IndentingNewLine]", 
-      RowBox[{"(*", 
+              RowBox[{"p", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], "=", 
+              RowBox[{"peaks", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"tfpath2", "=", 
+              RowBox[{"StringReplace", "[", 
+               RowBox[{"tfpath", ",", 
+                RowBox[{"\"\<.tfi\>\"", "->", 
+                 RowBox[{"\"\<_\>\"", "<>", 
+                  RowBox[{"ToString", "[", "i", "]"}], "<>", 
+                  "\"\<.tfi\>\""}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"saveTransferFunction", "[", 
+              RowBox[{"p", ",", "tfpath2"}], "]"}], ";", 
+             "\[IndentingNewLine]", "tfpath2"}]}], "\[IndentingNewLine]", 
+           "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"Length", "[", "peaks", "]"}]}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"tfpath", ",", "tflist"}], "}"}]}]}], "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
        RowBox[{
-        RowBox[{
-         RowBox[{"Image3D", "[", 
-          RowBox[{"d", ",", 
-           RowBox[{"ColorFunction", "\[Rule]", "#"}], ",", 
-           RowBox[{"ViewPoint", "\[Rule]", 
-            RowBox[{"viewpoints", "[", "face", "]"}]}]}], "]"}], "&"}], "/@", 
-        "tflist"}], "*)"}], "\[IndentingNewLine]", "]"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"xmlstr", ",", "datanamelist"}], "}"}]}], "]"}]}], 
-  ";"}]], "Input",
+        RowBox[{"Image3D", "[", 
+         RowBox[{"d", ",", 
+          RowBox[{"ColorFunction", "\[Rule]", "#"}], ",", 
+          RowBox[{"ViewPoint", "\[Rule]", 
+           RowBox[{"viewpoints", "[", "face", "]"}]}]}], "]"}], "&"}], "/@", 
+       "tflist"}], "*)"}], "\[IndentingNewLine]", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"xmlstr", ",", "namelist"}], "}"}]}], "]"}]}]], "Input",
  CellChangeTimes->{{3.655554082405849*^9, 3.655554126774208*^9}, {
    3.6555541605030904`*^9, 3.6555541620885396`*^9}, {3.655554260736865*^9, 
    3.655554300381*^9}, {3.655554512345025*^9, 3.655554536777725*^9}, 
@@ -665,7 +676,23 @@ Mathematica\>\"", "]"}]}], "}"}], ",", "VoreenData", ",",
    3.6555563666323977`*^9}, {3.6555566984023867`*^9, 3.655556773811528*^9}, {
    3.6555574772321234`*^9, 3.655557483279252*^9}, {3.655558776668374*^9, 
    3.655558792740161*^9}, {3.6555589711947913`*^9, 3.655559109692063*^9}, {
-   3.655559357411625*^9, 3.6555593585879045`*^9}}],
+   3.655559357411625*^9, 3.6555593585879045`*^9}, {3.656949267587334*^9, 
+   3.6569492749020004`*^9}, {3.6569493820166545`*^9, 3.656949382250065*^9}, {
+   3.656949428585987*^9, 3.656949554646824*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"pathlist", "=", 
+   RowBox[{"GenerateTFs", "[", "datanamelist", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6569495298116393`*^9, 3.656949531338051*^9}, {
+  3.6569496302705145`*^9, 3.6569496322150335`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"vortxpathlist", "=", 
+   RowBox[{"GenerateTFs", "[", "vorts", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.656949580610735*^9, 3.6569495814012804`*^9}, {
+  3.656949617435482*^9, 3.6569496253680415`*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -677,8 +704,14 @@ Cell[BoxData[{
      "\"\<nucleon\>\"", ",", "\"\<tooth\>\"", ",", "\"\<vismale\>\""}], 
     "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"flat", "=", 
-   RowBox[{"Flatten", "[", "pathlist", "]"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"flat", "=", 
+    RowBox[{"Flatten", "[", "pathlist", "]"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "group", " ", "the", " ", "path", " ", "and", " ", "filenames", " ", "by", 
+    " ", "data", " ", "set", " ", "names"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"Table", "[", 
@@ -735,7 +768,8 @@ Cell[BoxData[{
   3.6555588064078894`*^9, 3.655558864974907*^9}, {3.6555591263537292`*^9, 
   3.6555591315918527`*^9}, {3.655559185172614*^9, 3.6555591940986447`*^9}, {
   3.655559410172371*^9, 3.655559468482501*^9}, {3.6555598528697414`*^9, 
-  3.655559872949812*^9}, {3.65556659941998*^9, 3.6555666353574095`*^9}}]
+  3.655559872949812*^9}, {3.65556659941998*^9, 3.6555666353574095`*^9}, {
+  3.6569487857872663`*^9, 3.6569488278036118`*^9}}]
 },
 WindowSize->{1282, 797},
 WindowMargins->{{-8, Automatic}, {Automatic, 0}},
@@ -755,10 +789,13 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 1760, 50, 152, "Input"],
-Cell[2343, 74, 3216, 69, 716, "Output"]
+Cell[2343, 74, 3238, 69, 716, "Output"]
 }, Open  ]],
-Cell[5574, 146, 23005, 521, 1492, "Input"],
-Cell[28582, 669, 2557, 68, 132, "Input"]
+Cell[5596, 146, 479, 12, 31, "Input"],
+Cell[6078, 160, 22665, 520, 1512, "Input"],
+Cell[28746, 682, 245, 5, 31, "Input"],
+Cell[28994, 689, 241, 5, 31, "Input"],
+Cell[29238, 696, 2824, 75, 152, "Input"]
 }
 ]
 *)
