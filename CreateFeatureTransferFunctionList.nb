@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     32585,        794]
-NotebookOptionsPosition[     32066,        773]
-NotebookOutlinePosition[     32410,        788]
-CellTagsIndexPosition[     32367,        785]
+NotebookDataLength[     32804,        801]
+NotebookOptionsPosition[     32285,        780]
+NotebookOutlinePosition[     32629,        795]
+CellTagsIndexPosition[     32586,        792]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -704,6 +704,12 @@ Cell[BoxData[{
      "\"\<nucleon\>\"", ",", "\"\<tooth\>\"", ",", "\"\<vismale\>\""}], 
     "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
+  RowBox[{"tfilist", "=", "\"\<tfilist.txt\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pnglist", "=", "\"\<pnglist.xml\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{
    RowBox[{"flat", "=", 
     RowBox[{"Flatten", "[", "pathlist", "]"}]}], ";"}], "\[IndentingNewLine]", 
@@ -728,7 +734,7 @@ Cell[BoxData[{
      RowBox[{
       RowBox[{
        RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~salience\\\\\>\"",
-        "<>", "\"\<tfilist.txt\>\""}], ",", "#"}], "]"}], "&"}]}], 
+        "<>", "tfilist"}], ",", "#"}], "]"}], "&"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
@@ -754,7 +760,7 @@ Cell[BoxData[{
      RowBox[{
       RowBox[{
        RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~salience\\\\\>\"",
-        "<>", "\"\<pnglist.xml\>\""}], ",", "#"}], "]"}], "&"}]}], 
+        "<>", "pnglist"}], ",", "#"}], "]"}], "&"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"(*", 
@@ -769,9 +775,10 @@ Cell[BoxData[{
   3.6555591315918527`*^9}, {3.655559185172614*^9, 3.6555591940986447`*^9}, {
   3.655559410172371*^9, 3.655559468482501*^9}, {3.6555598528697414`*^9, 
   3.655559872949812*^9}, {3.65556659941998*^9, 3.6555666353574095`*^9}, {
-  3.6569487857872663`*^9, 3.6569488278036118`*^9}}]
+  3.6569487857872663`*^9, 3.6569488278036118`*^9}, {3.6569498165106945`*^9, 
+  3.6569498767490797`*^9}}]
 },
-WindowSize->{1282, 797},
+WindowSize->{1282, 788},
 WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
 StyleDefinitions->"Default.nb"
@@ -795,7 +802,7 @@ Cell[5596, 146, 479, 12, 31, "Input"],
 Cell[6078, 160, 22665, 520, 1512, "Input"],
 Cell[28746, 682, 245, 5, 31, "Input"],
 Cell[28994, 689, 241, 5, 31, "Input"],
-Cell[29238, 696, 2824, 75, 152, "Input"]
+Cell[29238, 696, 3043, 82, 192, "Input"]
 }
 ]
 *)
