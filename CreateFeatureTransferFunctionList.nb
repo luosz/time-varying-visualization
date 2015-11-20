@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     32804,        801]
-NotebookOptionsPosition[     32285,        780]
-NotebookOutlinePosition[     32629,        795]
-CellTagsIndexPosition[     32586,        792]
+NotebookDataLength[     35320,        863]
+NotebookOptionsPosition[     34756,        841]
+NotebookOutlinePosition[     35100,        856]
+CellTagsIndexPosition[     35057,        853]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -141,7 +141,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.6555601573786817`*^9, 3.655560259586378*^9}, 
    3.655561768360444*^9, {3.655561863523467*^9, 3.6555618797381487`*^9}, 
    3.655561917054961*^9, {3.6555666230986156`*^9, 3.6555666373943267`*^9}, 
-   3.655566691147189*^9, 3.6555667339704065`*^9, 3.656949109677782*^9}]
+   3.655566691147189*^9, 3.6555667339704065`*^9, 3.656949109677782*^9, 
+   3.6570095229501905`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -680,19 +681,78 @@ Mathematica\>\"", "]"}]}], "}"}], ",", "VoreenData", ",",
    3.6569492749020004`*^9}, {3.6569493820166545`*^9, 3.656949382250065*^9}, {
    3.656949428585987*^9, 3.656949554646824*^9}}],
 
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
   RowBox[{"pathlist", "=", 
-   RowBox[{"GenerateTFs", "[", "datanamelist", "]"}]}], ";"}]], "Input",
+   RowBox[{"GenerateTFs", "[", "datanamelist", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vortxpathlist", "=", 
+   RowBox[{"GenerateTFs", "[", "vorts", "]"}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.6569495298116393`*^9, 3.656949531338051*^9}, {
-  3.6569496302705145`*^9, 3.6569496322150335`*^9}}],
+  3.6569496302705145`*^9, 3.6569496322150335`*^9}, {3.6570092850700736`*^9, 
+  3.6570092852867804`*^9}}],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"vortxpathlist", "=", 
-   RowBox[{"GenerateTFs", "[", "vorts", "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.656949580610735*^9, 3.6569495814012804`*^9}, {
-  3.656949617435482*^9, 3.6569496253680415`*^9}}],
+  RowBox[{"GenerateListFiles", "[", 
+   RowBox[{"pathlist_", ",", "datanames_", ",", "targetfilename_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "flat", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"(*", " ", 
+     RowBox[{
+     "group", " ", "the", " ", "path", " ", "and", " ", "filenames", " ", 
+      "by", " ", "data", " ", "set", " ", "names"}], " ", "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"flat", "=", 
+      RowBox[{"Flatten", "[", "pathlist", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"Select", "[", 
+         RowBox[{"flat", ",", 
+          RowBox[{
+           RowBox[{"StringContainsQ", "[", 
+            RowBox[{"#", ",", "i"}], "]"}], "&"}]}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "datanames"}], "}"}]}], "]"}], "//", 
+      RowBox[{
+       RowBox[{"Export", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+          "\"\<~salience\\\\\>\"", "<>", "targetfilename", "<>", 
+          "\"\<.txt\>\""}], ",", "#"}], "]"}], "&"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"StringReplace", "[", 
+           RowBox[{
+            RowBox[{"First", "@", "l"}], ",", 
+            RowBox[{"\"\<.tfi\>\"", "\[Rule]", "\"\<.png\>\""}]}], "]"}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"StringReplace", "[", 
+             RowBox[{"#", ",", 
+              RowBox[{"\"\<.tfi\>\"", "\[Rule]", "\"\<.png\>\""}]}], "]"}], 
+            "&"}], "/@", 
+           RowBox[{"Last", "@", "l"}]}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"l", ",", "pathlist"}], "}"}]}], "]"}], "//", 
+      RowBox[{
+       RowBox[{"Export", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+          "\"\<~salience\\\\\>\"", "<>", "targetfilename", "<>", 
+          "\"\<.xml\>\""}], ",", "#"}], "]"}], "&"}]}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.6570092055410357`*^9, 3.6570092707259865`*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -703,71 +763,12 @@ Cell[BoxData[{
      "\"\<horse_embryo_45_days\>\"", ",", "\"\<MRbrain\>\"", ",", 
      "\"\<nucleon\>\"", ",", "\"\<tooth\>\"", ",", "\"\<vismale\>\""}], 
     "}"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"tfilist", "=", "\"\<tfilist.txt\>\""}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"pnglist", "=", "\"\<pnglist.xml\>\""}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"flat", "=", 
-    RowBox[{"Flatten", "[", "pathlist", "]"}]}], ";"}], "\[IndentingNewLine]", 
-  RowBox[{"(*", " ", 
-   RowBox[{
-   "group", " ", "the", " ", "path", " ", "and", " ", "filenames", " ", "by", 
-    " ", "data", " ", "set", " ", "names"}], " ", 
-   "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"Table", "[", 
-    RowBox[{
-     RowBox[{"Select", "[", 
-      RowBox[{"flat", ",", 
-       RowBox[{
-        RowBox[{"StringContainsQ", "[", 
-         RowBox[{"#", ",", "i"}], "]"}], "&"}]}], "]"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"i", ",", "names"}], "}"}]}], "]"}], "//", 
-   RowBox[{
-    RowBox[{"Export", "[", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~salience\\\\\>\"",
-        "<>", "tfilist"}], ",", "#"}], "]"}], "&"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"Table", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"StringReplace", "[", 
-        RowBox[{
-         RowBox[{"First", "@", "l"}], ",", 
-         RowBox[{"\"\<.tfi\>\"", "\[Rule]", "\"\<.png\>\""}]}], "]"}], ",", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"StringReplace", "[", 
-          RowBox[{"#", ",", 
-           RowBox[{"\"\<.tfi\>\"", "\[Rule]", "\"\<.png\>\""}]}], "]"}], 
-         "&"}], "/@", 
-        RowBox[{"Last", "@", "l"}]}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"l", ",", "pathlist"}], "}"}]}], "]"}], "//", 
-   RowBox[{
-    RowBox[{"Export", "[", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~salience\\\\\>\"",
-        "<>", "pnglist"}], ",", "#"}], "]"}], "&"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"(*", 
-   RowBox[{"TableForm", "[", 
-    RowBox[{"flat", ",", 
-     RowBox[{"TableHeadings", "\[Rule]", "Automatic"}]}], "]"}], 
-   "*)"}]}]}], "Input",
+ RowBox[{"GenerateListFiles", "[", 
+  RowBox[{"pathlist", ",", "names", ",", "\"\<pnglist\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"GenerateListFiles", "[", 
+  RowBox[{"vortxpathlist", ",", "vorts", ",", "\"\<vortslist\>\""}], 
+  "]"}]}], "Input",
  CellChangeTimes->{{3.6555575509765415`*^9, 3.6555575566535187`*^9}, {
   3.6555576471672697`*^9, 3.655557714057126*^9}, {3.6555577503153925`*^9, 
   3.6555578647495084`*^9}, {3.6555579701470137`*^9, 3.655558085739484*^9}, {
@@ -776,7 +777,67 @@ Cell[BoxData[{
   3.655559410172371*^9, 3.655559468482501*^9}, {3.6555598528697414`*^9, 
   3.655559872949812*^9}, {3.65556659941998*^9, 3.6555666353574095`*^9}, {
   3.6569487857872663`*^9, 3.6569488278036118`*^9}, {3.6569498165106945`*^9, 
-  3.6569498767490797`*^9}}]
+  3.6569498767490797`*^9}, {3.657008951509787*^9, 3.657009040209711*^9}, {
+  3.65700907636983*^9, 3.6570091164349656`*^9}, {3.6570093298478565`*^9, 
+  3.6570094687395997`*^9}, {3.6570095108213015`*^9, 3.657009512475862*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "group", " ", "the", " ", "path", " ", "and", " ", "filenames", " ", "by", 
+    " ", "data", " ", "set", " ", "names"}], " ", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"Select", "[", 
+        RowBox[{"flat", ",", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{"#", ",", "i"}], "]"}], "&"}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "names"}], "}"}]}], "]"}], "//", 
+     RowBox[{
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+         "\"\<~salience\\\\\>\"", "<>", "tfilist"}], ",", "#"}], "]"}], 
+      "&"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"StringReplace", "[", 
+          RowBox[{
+           RowBox[{"First", "@", "l"}], ",", 
+           RowBox[{"\"\<.tfi\>\"", "\[Rule]", "\"\<.png\>\""}]}], "]"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"StringReplace", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{"\"\<.tfi\>\"", "\[Rule]", "\"\<.png\>\""}]}], "]"}], 
+           "&"}], "/@", 
+          RowBox[{"Last", "@", "l"}]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"l", ",", "pathlist"}], "}"}]}], "]"}], "//", 
+     RowBox[{
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+         "\"\<~salience\\\\\>\"", "<>", "pnglist"}], ",", "#"}], "]"}], 
+      "&"}]}], ";"}]}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"TableForm", "[", 
+    RowBox[{"flat", ",", 
+     RowBox[{"TableHeadings", "\[Rule]", "Automatic"}]}], "]"}], "*)"}], 
+  "*)"}]], "Input"]
 },
 WindowSize->{1282, 788},
 WindowMargins->{{-8, Automatic}, {Automatic, 0}},
@@ -796,13 +857,14 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 1760, 50, 152, "Input"],
-Cell[2343, 74, 3238, 69, 716, "Output"]
+Cell[2343, 74, 3266, 70, 716, "Output"]
 }, Open  ]],
-Cell[5596, 146, 479, 12, 31, "Input"],
-Cell[6078, 160, 22665, 520, 1512, "Input"],
-Cell[28746, 682, 245, 5, 31, "Input"],
-Cell[28994, 689, 241, 5, 31, "Input"],
-Cell[29238, 696, 3043, 82, 192, "Input"]
+Cell[5624, 147, 479, 12, 31, "Input"],
+Cell[6106, 161, 22665, 520, 1512, "Input"],
+Cell[28774, 683, 426, 10, 52, "Input"],
+Cell[29203, 695, 2236, 59, 152, "Input"],
+Cell[31442, 756, 1418, 25, 72, "Input"],
+Cell[32863, 783, 1889, 56, 112, "Input"]
 }
 ]
 *)
