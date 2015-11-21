@@ -10,37 +10,27 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3177,        100]
-NotebookOptionsPosition[      2858,         85]
-NotebookOutlinePosition[      3203,        100]
-CellTagsIndexPosition[      3160,         97]
+NotebookDataLength[      7607,        205]
+NotebookOptionsPosition[      7140,        184]
+NotebookOutlinePosition[      7484,        199]
+CellTagsIndexPosition[      7441,        196]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"index", "=", 
-   RowBox[{"Flatten", "[", 
-    RowBox[{"{", 
+  RowBox[{"ExportAnimation", "[", 
+   RowBox[{"targetfilename_", ",", "imagefilelist_"}], "]"}], ":=", 
+  RowBox[{"Export", "[", 
+   RowBox[{"targetfilename", ",", 
+    RowBox[{
      RowBox[{
-      RowBox[{"Range", "[", 
-       RowBox[{"1", ",", "23"}], "]"}], ",", 
-      RowBox[{"Range", "[", 
-       RowBox[{"25", ",", "99"}], "]"}]}], "}"}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"basepath", "=", 
-   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}]}], "Input",
- CellChangeTimes->{{3.656870862273347*^9, 3.6568709043500013`*^9}, {
-   3.6568709965838366`*^9, 3.65687105018519*^9}, {3.6568712611210694`*^9, 
-   3.6568712621113815`*^9}, {3.656871349513435*^9, 3.6568713676095753`*^9}, 
-   3.656871467653448*^9, {3.6569376369800873`*^9, 3.656937640704131*^9}}],
-
-Cell[BoxData[
+      RowBox[{"Import", "[", "#", "]"}], "&"}], "/@", "imagefilelist"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"ExportVideo", "[", 
-   RowBox[{"name_", ",", "path_", ",", "indices_"}], "]"}], ":=", 
+   RowBox[{"path_", ",", "name_", ",", "indices_"}], "]"}], ":=", 
   RowBox[{"Module", "[", 
    RowBox[{
     RowBox[{"{", 
@@ -55,36 +45,145 @@ Cell[BoxData[
           RowBox[{"IntegerString", "[", 
            RowBox[{"#", ",", "10", ",", "2"}], "]"}], "<>", "\"\<.png\>\""}], 
          "]"}], "&"}], "/@", "indices"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"f1", "=", 
-      RowBox[{"Export", "[", 
-       RowBox[{
-        RowBox[{"path", "<>", "name", "<>", "\"\<.gif\>\""}], ",", "imgs"}], 
-       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"f1", "=", 
+        RowBox[{"Export", "[", 
+         RowBox[{
+          RowBox[{"path", "<>", "name", "<>", "\"\<.gif\>\""}], ",", "imgs"}],
+          "]"}]}], ";"}], "*)"}], "\[IndentingNewLine]", 
      RowBox[{"f2", "=", 
       RowBox[{"Export", "[", 
        RowBox[{
         RowBox[{"path", "<>", "name", "<>", "\"\<.avi\>\""}], ",", "imgs"}], 
-       "]"}]}], ";", "\[IndentingNewLine]", 
+       "]"}]}]}]}], "\[IndentingNewLine]", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.6571326185283623`*^9, 3.6571326198167706`*^9}, {
+  3.6571327127176113`*^9, 3.6571327184338694`*^9}, {3.6571328677428617`*^9, 
+  3.6571328689631643`*^9}, {3.6571329865118494`*^9, 3.657133024237812*^9}, {
+  3.6571341067795305`*^9, 3.657134128401272*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"paths", "=", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"\"\<C:\\\\Users\\\\dell\\\\Desktop\\\\vorts\\\\\>\"", "<>", 
+         RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\<\\\\\>\""}], "&"}], "/@", 
+       RowBox[{"Range", "[", "4", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "\"\<C:\\\\Users\\\\dell\\\\Desktop\\\\vorts_static\\\\\>\"", "<>", 
+         RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\<\\\\\>\""}], "&"}], "/@", 
+       RowBox[{"Range", "[", "4", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "\"\<C:\\\\Users\\\\dell\\\\Desktop\\\\vorts_optimized\\\\\>\"", "<>", 
+         RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\<\\\\\>\""}], "&"}], "/@", 
+       RowBox[{"Range", "[", "4", "]"}]}]}], "}"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
      RowBox[{"{", 
-      RowBox[{"f1", ",", "f2"}], "}"}]}]}], "]"}]}]], "Input",
- CellChangeTimes->{{3.656871911664385*^9, 3.656871973731332*^9}, 
-   3.6568721413348584`*^9}],
+      RowBox[{"imagefilelist", ",", "path", ",", "parent"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"path", "=", 
+       RowBox[{"paths", "[", 
+        RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"SetDirectory", "[", "path", "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"imagefilelist", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"path", "<>", "#"}], "&"}], "/@", 
+        RowBox[{"FileNames", "[", "]"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"ExportAnimation", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"ParentDirectory", "[", "path", "]"}], "<>", 
+         RowBox[{"ToString", "[", 
+          RowBox[{"Mod", "[", 
+           RowBox[{"i", ",", "4"}], "]"}], "]"}], "<>", "\"\<.avi\>\""}], ",",
+         "imagefilelist"}], "]"}]}]}], "\[IndentingNewLine]", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", 
+     RowBox[{"Length", "[", "paths", "]"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6571320266026955`*^9, 3.6571320641223173`*^9}, {
+   3.657132117240347*^9, 3.657132206802273*^9}, {3.6571324354838495`*^9, 
+   3.6571325770175295`*^9}, {3.657132638677737*^9, 3.6571327247787347`*^9}, 
+   3.6571329600772514`*^9, {3.657133098681389*^9, 3.6571331071790094`*^9}, {
+   3.657133567651407*^9, 3.6571336344816422`*^9}, 3.6571336762335434`*^9, {
+   3.6571340521343822`*^9, 3.6571340578150077`*^9}, 3.6571342680247035`*^9}],
 
 Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"C:\\\\Users\\\\dell\\\\Desktop\\\\vorts1.avi\"\>", 
+   ",", "\<\"C:\\\\Users\\\\dell\\\\Desktop\\\\vorts2.avi\"\>", 
+   ",", "\<\"C:\\\\Users\\\\dell\\\\Desktop\\\\vorts3.avi\"\>", 
+   ",", "\<\"C:\\\\Users\\\\dell\\\\Desktop\\\\vorts0.avi\"\>", 
+   ",", "\<\"C:\\\\Users\\\\dell\\\\Desktop\\\\vorts_static1.avi\"\>", 
+   ",", "\<\"C:\\\\Users\\\\dell\\\\Desktop\\\\vorts_static2.avi\"\>", 
+   ",", "\<\"C:\\\\Users\\\\dell\\\\Desktop\\\\vorts_static3.avi\"\>", 
+   ",", "\<\"C:\\\\Users\\\\dell\\\\Desktop\\\\vorts_static0.avi\"\>", 
+   ",", "\<\"C:\\\\Users\\\\dell\\\\Desktop\\\\vorts_optimized1.avi\"\>", 
+   ",", "\<\"C:\\\\Users\\\\dell\\\\Desktop\\\\vorts_optimized2.avi\"\>", 
+   ",", "\<\"C:\\\\Users\\\\dell\\\\Desktop\\\\vorts_optimized3.avi\"\>", 
+   ",", "\<\"C:\\\\Users\\\\dell\\\\Desktop\\\\vorts_optimized0.avi\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.6571344528754525`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"index", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Range", "[", 
+       RowBox[{"1", ",", "23"}], "]"}], ",", 
+      RowBox[{"Range", "[", 
+       RowBox[{"25", ",", "99"}], "]"}]}], "}"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"basepath", "=", 
+   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
+   RowBox[{"ExportVideo", "[", 
+    RowBox[{"basepath", ",", "#", ",", "index"}], "]"}], "&"}], "/@", 
+  RowBox[{"{", 
    RowBox[{
-    RowBox[{"ExportVideo", "[", 
-     RowBox[{"#", ",", "basepath", ",", "index"}], "]"}], "&"}], "/@", 
-   RowBox[{"{", 
-    RowBox[{
-    "\"\<~vorts\>\"", ",", "\"\<~vorts_static\>\"", ",", 
-     "\"\<~vorts_optimized\>\""}], "}"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.6568720686803765`*^9, 3.6568720945095024`*^9}, 
-   3.656873649672405*^9}]
+   "\"\<~vorts\>\"", ",", "\"\<~vorts_static\>\"", ",", 
+    "\"\<~vorts_optimized\>\""}], "}"}]}]}], "Input",
+ CellChangeTimes->{{3.656870862273347*^9, 3.6568709043500013`*^9}, {
+   3.6568709965838366`*^9, 3.65687105018519*^9}, {3.6568712611210694`*^9, 
+   3.6568712621113815`*^9}, {3.656871349513435*^9, 3.6568713676095753`*^9}, 
+   3.656871467653448*^9, {3.6569376369800873`*^9, 3.656937640704131*^9}, {
+   3.657132906959979*^9, 3.6571329631423254`*^9}, 3.6571336607456446`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~vorts.\
+avi\"\>", 
+   ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~vorts_\
+static.avi\"\>", 
+   ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~vorts_\
+optimized.avi\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.657134487377399*^9}]
+}, Open  ]]
 },
-WindowSize->{1282, 797},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{1282, 781},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -99,9 +198,15 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 703, 17, 52, "Input"],
-Cell[1264, 39, 1191, 31, 112, "Input"],
-Cell[2458, 72, 396, 11, 31, "Input"]
+Cell[558, 20, 1678, 42, 132, "Input"],
+Cell[CellGroupData[{
+Cell[2261, 66, 2446, 57, 192, "Input"],
+Cell[4710, 125, 944, 15, 92, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5691, 145, 1055, 26, 72, "Input"],
+Cell[6749, 173, 375, 8, 52, "Output"]
+}, Open  ]]
 }
 ]
 *)

@@ -10,25 +10,115 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7611,        199]
-NotebookOptionsPosition[      7258,        182]
-NotebookOutlinePosition[      7603,        197]
-CellTagsIndexPosition[      7560,        194]
+NotebookDataLength[     11534,        311]
+NotebookOptionsPosition[     10745,        278]
+NotebookOutlinePosition[     11090,        293]
+CellTagsIndexPosition[     11047,        290]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PacletManager`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.657135431959893*^9, 3.657135431960893*^9}}],
 
 Cell[CellGroupData[{
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"linkedin", "=", 
-   RowBox[{"ServiceConnect", "[", 
-    RowBox[{"\"\<LinkedIn\>\"", ",", "\"\<New\>\""}], "]"}]}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"ServiceExecute", "[", 
-  RowBox[{"linkedin", ",", "\"\<UserData\>\""}], "]"}]}], "Input",
- CellChangeTimes->{{3.6571162185612416`*^9, 3.6571162263817997`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"PacletFind", "[", "\"\<*Social*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.6571354545288353`*^9, 3.6571354545298395`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  InterpretationBox[
+   RowBox[{
+   "Paclet", "[", "\<\"SocialMediaData\"\>", ",", "\<\"9.0.1.5\"\>", ",", "<>",
+     "]"}],
+   PacletManager`Paclet[
+   "Name" -> "SocialMediaData", "Version" -> "9.0.1.5", "MathematicaVersion" -> 
+    "9+", "BackwardCompatible" -> "*", 
+    "Extensions" -> {{
+      "Resource", "Root" -> "Data", "Resources" -> {"SocialMediaData.wdx"}}}, 
+    "Location" -> 
+    "C:\\Users\\dell\\AppData\\Roaming\\Mathematica\\Paclets\\Repository\\\
+SocialMediaData-9.0.1.5"]], "}"}]], "Output",
+ CellChangeTimes->{3.6571354567340603`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SocialMediaData", "[", 
+  RowBox[{"\"\<LinkedIn\>\"", ",", "\"\<Connections\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.657135218408735*^9, 3.6571352184097357`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"SocialMediaData", "[", 
+  RowBox[{"\<\"LinkedIn\"\>", ",", "\<\"Connections\"\>"}], "]"}]], "Output",
+ CellChangeTimes->{3.657135440714539*^9, 3.6571360341272774`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SystemInformation", "[", "\"\<Small\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.657135475273329*^9, 3.6571354752743177`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"Kernel\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\<\"SystemID\"\>", "\[Rule]", "\<\"Windows-x86-64\"\>"}], ",", 
+      RowBox[{"\<\"ReleaseID\"\>", 
+       "\[Rule]", "\<\"10.3.0.0 (5416318, 2015100902)\"\>"}], ",", 
+      RowBox[{"\<\"CreationDate\"\>", "\[Rule]", 
+       TemplateBox[{RowBox[{"\"Fri 9 Oct 2015 20:12:47\"", 
+           StyleBox["\"GMT\"", FontColor -> GrayLevel[0.5]]}],
+         RowBox[{"DateObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"2015", ",", "10", ",", "9"}], "}"}], ",", 
+             RowBox[{"TimeObject", "[", 
+               RowBox[{
+                 RowBox[{"{", 
+                   RowBox[{"20", ",", "12", ",", "47.`"}], "}"}], ",", 
+                 RowBox[{"TimeZone", "\[Rule]", "0.`"}]}], "]"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", "0.`"}]}], "]"}]},
+        "DateObject",
+        Editable->False]}]}], "}"}]}], ",", 
+   RowBox[{"\<\"FrontEnd\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\<\"OperatingSystem\"\>", "\[Rule]", "\<\"Windows\"\>"}], ",", 
+      RowBox[{"\<\"ReleaseID\"\>", 
+       "\[Rule]", "\<\"10.3.0.0 (5416318, 2015100903)\"\>"}], ",", 
+      RowBox[{"\<\"CreationDate\"\>", "\[Rule]", 
+       TemplateBox[{RowBox[{"\"Fri 9 Oct 2015 20:56:45\"", 
+           StyleBox["\"GMT\"", FontColor -> GrayLevel[0.5]]}],
+         RowBox[{"DateObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"2015", ",", "10", ",", "9"}], "}"}], ",", 
+             RowBox[{"TimeObject", "[", 
+               RowBox[{
+                 RowBox[{"{", 
+                   RowBox[{"20", ",", "56", ",", "45.`"}], "}"}], ",", 
+                 RowBox[{"TimeZone", "\[Rule]", "0.`"}]}], "]"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", "0.`"}]}], "]"}]},
+        "DateObject",
+        Editable->False]}]}], "}"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.6571354761986127`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"linkedin", "=", 
+  RowBox[{"ServiceConnect", "[", 
+   RowBox[{"\"\<LinkedIn\>\"", ",", "\"\<New\>\""}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6571355603571887`*^9, 3.6571355603591447`*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -71,7 +161,7 @@ XttUPe6KP/xPbfbzvjmobzUYPug/DKMTH/EfI7LF+lbzBzat/9A=
                If[
                 TrueQ[
                  ServiceConnections`Private`authenticatedServiceQ[
-                 "connection-a7109b6086f2b62a139cfd4b6777c7da"]], "Connected",
+                 "connection-2d9c8e6a6509bd22c614d5e361bd84da"]], "Connected",
                  "Not Connected"], StandardForm],
               ImageSizeCache->{58., {0., 9.}}],
              "SummaryItem"]}
@@ -125,7 +215,7 @@ XttUPe6KP/xPbfbzvjmobzUYPug/DKMTH/EfI7LF+lbzBzat/9A=
                If[
                 TrueQ[
                  ServiceConnections`Private`authenticatedServiceQ[
-                 "connection-a7109b6086f2b62a139cfd4b6777c7da"]], "Connected",
+                 "connection-2d9c8e6a6509bd22c614d5e361bd84da"]], "Connected",
                  "Not Connected"], StandardForm]],
              "SummaryItem"]}
           },
@@ -150,12 +240,19 @@ XttUPe6KP/xPbfbzvjmobzUYPug/DKMTH/EfI7LF+lbzBzat/9A=
      BaselinePosition->Baseline],
     DynamicModuleValues:>{}], "]"}],
   ServiceObject[
-  "LinkedIn", "ID" -> "connection-a7109b6086f2b62a139cfd4b6777c7da"],
+  "LinkedIn", "ID" -> "connection-2d9c8e6a6509bd22c614d5e361bd84da"],
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output",
- CellChangeTimes->{{3.6571162739958725`*^9, 3.657116284316947*^9}, 
-   3.6571163645474153`*^9}],
+ CellChangeTimes->{3.657135573859226*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ServiceExecute", "[", 
+  RowBox[{"linkedin", ",", "\"\<UserData\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.657135580005452*^9, 3.6571355800074525`*^9}}],
 
 Cell[BoxData[
  RowBox[{"\[LeftAssociation]", 
@@ -171,17 +268,16 @@ opportunities)\"\>"}], ",",
     RowBox[{"{", "}"}]}], ",", 
    RowBox[{"\<\"CurrentShare\"\>", "\[Rule]", 
     RowBox[{"{", "}"}]}], ",", 
-   RowBox[{"\<\"NumConnections\"\>", "\[Rule]", "230"}], ",", 
+   RowBox[{"\<\"NumConnections\"\>", "\[Rule]", "231"}], ",", 
    RowBox[{"\<\"PictureURL\"\>", "\[Rule]", 
     RowBox[{"{", "}"}]}], ",", 
    RowBox[{"\<\"PublicProfileURL\"\>", "\[Rule]", 
     RowBox[{"{", "}"}]}]}], "\[RightAssociation]"}]], "Output",
- CellChangeTimes->{{3.6571162739958725`*^9, 3.657116284316947*^9}, 
-   3.6571163649928246`*^9}]
+ CellChangeTimes->{3.657135581324769*^9}]
 }, Open  ]]
 },
-WindowSize->{759, 673},
-WindowMargins->{{Automatic, 222}, {Automatic, 44}},
+WindowSize->{1282, 797},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
 StyleDefinitions->"Default.nb"
 ]
@@ -196,14 +292,29 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[558, 20, 145, 2, 31, "Input"],
 Cell[CellGroupData[{
-Cell[580, 22, 372, 8, 72, "Input"],
-Cell[955, 32, 5302, 125, 70, "Output"],
-Cell[6260, 159, 982, 20, 92, "Output"]
+Cell[728, 26, 148, 2, 31, "Input"],
+Cell[879, 30, 586, 14, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1502, 49, 192, 3, 31, "Input"],
+Cell[1697, 54, 191, 3, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1925, 62, 150, 2, 31, "Input"],
+Cell[2078, 66, 1999, 45, 71, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4114, 116, 216, 4, 31, "Input"],
+Cell[4333, 122, 5248, 124, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9618, 251, 180, 3, 31, "Input"],
+Cell[9801, 256, 928, 19, 52, "Output"]
 }, Open  ]]
 }
 ]
 *)
 
 (* End of internal cache information *)
-
