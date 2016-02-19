@@ -75,7 +75,7 @@
                         <Property mapKey="shading" name="shading" value="phong" />
                         <Property mapKey="transferFunction" name="transferFunction" domainFittingStrategy="1" id="ref11">
                             <MetaData>
-                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="711" y="226" width="605" height="538" />
+                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="726" y="165" width="687" height="538" />
                             </MetaData>
                             <TransferFunction type="TransFuncIntensity" alphaMode="1" gammaValue="1">
                                 <domain x="0" y="1" />
@@ -85,7 +85,7 @@
                                         <colorL r="0" g="170" b="255" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.28" split="false">
-                                        <colorL r="0" g="170" b="255" a="13" />
+                                        <colorL r="0" g="170" b="255" a="12" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.5" split="false">
                                         <colorL r="0" g="170" b="255" a="0" />
@@ -94,7 +94,7 @@
                                         <colorL r="255" g="0" b="0" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.63999999" split="false">
-                                        <colorL r="255" g="0" b="0" a="26" />
+                                        <colorL r="255" g="0" b="0" a="24" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.69999999" split="false">
                                         <colorL r="255" g="0" b="0" a="0" />
@@ -103,7 +103,7 @@
                                         <colorL r="255" g="255" b="0" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.88" split="false">
-                                        <colorL r="255" g="255" b="0" a="255" />
+                                        <colorL r="255" g="255" b="0" a="227" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="1" split="false">
                                         <colorL r="255" g="255" b="0" a="0" />
@@ -149,10 +149,10 @@
                 <Processor type="Canvas" name="Canvas" id="ref2">
                     <MetaData>
                         <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-473" y="198" />
-                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="86" y="263" width="512" height="512" />
+                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="59" y="272" width="512" height="512" />
                         <MetaItem name="preferedDevelopmentCanvasFS" type="BoolMetaData" value="false" />
                         <MetaItem name="preferedDevelopmentCanvasPosition" type="IVec2MetaData">
-                            <value x="86" y="263" />
+                            <value x="59" y="272" />
                         </MetaItem>
                         <MetaItem name="preferedDevelopmentCanvasSize" type="IVec2MetaData">
                             <value x="512" y="512" />
@@ -330,7 +330,7 @@
                                         <colorL r="0" g="170" b="255" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.28" split="false">
-                                        <colorL r="0" g="170" b="255" a="13" />
+                                        <colorL r="0" g="170" b="255" a="12" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.5" split="false">
                                         <colorL r="0" g="170" b="255" a="0" />
@@ -339,7 +339,7 @@
                                         <colorL r="255" g="0" b="0" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.63999999" split="false">
-                                        <colorL r="255" g="0" b="0" a="26" />
+                                        <colorL r="255" g="0" b="0" a="24" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.69999999" split="false">
                                         <colorL r="255" g="0" b="0" a="0" />
@@ -348,7 +348,7 @@
                                         <colorL r="255" g="255" b="0" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.88" split="false">
-                                        <colorL r="255" g="255" b="0" a="255" />
+                                        <colorL r="255" g="255" b="0" a="227" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="1" split="false">
                                         <colorL r="255" g="255" b="0" a="0" />

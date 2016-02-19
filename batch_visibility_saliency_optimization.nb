@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    403367,       9205]
-NotebookOptionsPosition[    398568,       9081]
-NotebookOutlinePosition[    398913,       9096]
-CellTagsIndexPosition[    398870,       9093]
+NotebookDataLength[    327670,       7550]
+NotebookOptionsPosition[    326672,       7517]
+NotebookOutlinePosition[    327018,       7532]
+CellTagsIndexPosition[    326975,       7529]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -495,16 +495,31 @@ Cell[BoxData[{
        RowBox[{"67", ",", "75"}], "]"}]}], "}"}], "]"}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.655456794552016*^9, 3.6554568044677086`*^9}}],
 
-Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"proportional", "=", 
+   RowBox[{
+   "StringSplit", "@", 
+    "\"\<nucleon_naive\ntooth_naive\nCT-Knee_naive\nvortex_naive\n\
+nucleon_naive_proportional\ntooth_naive_proportional\n\
+CT-Knee_naive_proportional\nvortex_naive_proportional\>\""}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.664718715678975*^9, 3.664718720399274*^9}, {
+  3.664718759899807*^9, 3.664718846006027*^9}}],
 
-Cell[BoxData[{
+Cell[BoxData[
  RowBox[{
   RowBox[{"vorts", "=", 
    RowBox[{
     RowBox[{
      RowBox[{"\"\<vorts\>\"", "<>", 
       RowBox[{"ToString", "[", "#", "]"}]}], "&"}], "/@", 
-    RowBox[{"Range", "[", "99", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+    RowBox[{"Range", "[", "99", "]"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{3.664718925181156*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
  RowBox[{
   RowBox[{"time1", "=", 
    RowBox[{"AbsoluteTime", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
@@ -1447,25 +1462,27 @@ Mathematica\>\"", "]"}]}], "}"}], ",", "VoreenData", ",",
             RowBox[{"{", 
              RowBox[{"0.1", ",", "0.2", ",", "0.3", ",", "0.4"}], "}"}]}]}], 
           "|>"}]}], ";"}], "*)"}], "\[IndentingNewLine]", 
-      RowBox[{"targets", "=", 
-       RowBox[{"<|", 
-        RowBox[{
-         RowBox[{"2", "\[Rule]", 
-          RowBox[{"{", 
-           RowBox[{"0.2", ",", "0.8"}], "}"}]}], ",", 
-         RowBox[{"3", "\[Rule]", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"1", "/", "3."}], ",", 
-            RowBox[{"1", "/", "3."}], ",", 
-            RowBox[{"1", "/", "3."}]}], "}"}]}], ",", 
-         RowBox[{"4", "\[Rule]", 
-          RowBox[{"{", 
-           RowBox[{"0.1", ",", "0.2", ",", "0.3", ",", "0.4"}], "}"}]}]}], 
-        "|>"}]}], ";", "\[IndentingNewLine]", 
-      RowBox[{"target", "=", 
-       RowBox[{"targets", "[", 
-        RowBox[{"Length", "[", "index0", "]"}], "]"}]}], ";", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"targets", "=", 
+         RowBox[{"<|", 
+          RowBox[{
+           RowBox[{"2", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"0.2", ",", "0.8"}], "}"}]}], ",", 
+           RowBox[{"3", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"1", "/", "3."}], ",", 
+              RowBox[{"1", "/", "3."}], ",", 
+              RowBox[{"1", "/", "3."}]}], "}"}]}], ",", 
+           RowBox[{"4", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"0.1", ",", "0.2", ",", "0.3", ",", "0.4"}], "}"}]}]}], 
+          "|>"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"target", "=", 
+         RowBox[{"targets", "[", 
+          RowBox[{"Length", "[", "index0", "]"}], "]"}]}], ";"}], "*)"}], 
       "\[IndentingNewLine]", 
       RowBox[{"Clear", "[", "f", "]"}], ";", "\[IndentingNewLine]", 
       RowBox[{"Clear", "[", "data", "]"}], ";", "\[IndentingNewLine]", 
@@ -1475,7 +1492,12 @@ Mathematica\>\"", "]"}]}], "}"}], ",", "VoreenData", ",",
       RowBox[{"stepsize", "=", "0.05"}], ";", "\[IndentingNewLine]", 
       RowBox[{"iterationcount1", "=", "70"}], ";", "\[IndentingNewLine]", 
       RowBox[{"iterationcount2", "=", "30"}], ";", "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", 
+      RowBox[{"target", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"alpha0", "[", 
+          RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", "index0"}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"(*", " ", 
        RowBox[{
         RowBox[{"x", 
@@ -3076,7 +3098,8 @@ Mathematica\>\"", "]"}]}], "}"}], ",", "VoreenData", ",",
       RowBox[{"dataname", "\[Rule]", "records"}]}]}], "\[IndentingNewLine]", 
     "]"}], ",", 
    RowBox[{"{", 
-    RowBox[{"xmlstr", ",", "vorts"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+    RowBox[{"xmlstr", ",", "proportional"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"time2", "=", 
    RowBox[{"AbsoluteTime", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
@@ -3262,2027 +3285,440 @@ Mathematica\>\"", "]"}]}], "}"}], ",", "VoreenData", ",",
    3.6554574230148735`*^9}, {3.6554630547005534`*^9, 3.655463055184933*^9}, {
    3.6554906898209343`*^9, 3.65549069419179*^9}, {3.656619800122944*^9, 
    3.6566198104966974`*^9}, {3.6567107608973885`*^9, 3.656710762188172*^9}, 
-   3.6567126901388826`*^9, {3.6568761591912093`*^9, 3.6568761596372447`*^9}}],
+   3.6567126901388826`*^9, {3.6568761591912093`*^9, 3.6568761596372447`*^9}, {
+   3.6647186752867317`*^9, 3.6647186796476126`*^9}, 3.6647188655320177`*^9, 
+   3.664718921532711*^9}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  InterpretationBox[
-  RowBox[{"\<\"vorts1\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "26.6230757`8.876803220531567", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "21", 
+  RowBox[{"\<\"nucleon_naive\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "1.6296666`7.663643758273958", 
+   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "5", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
    RowBox[{"{", 
     RowBox[{
-    "0.012967054064722204`", ",", "0.07464059124956605`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.0017902507878920539`"}],
+    "0.1618323570709359`", ",", "0.13220926873000985`", ",", 
+     "0.7059583741990539`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "24", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "0.00023734345399787664`"}],
   SequenceForm[
-  "vorts1", "\t", 26.6230757`8.876803220531567, "\t", 21, "\t", {
-   0.012967054064722204`, 0.07464059124956605, 1.}, "\t", 30, "\t", 
-   0.0017902507878920539`],
+  "nucleon_naive", "\t", 1.6296666`7.663643758273958, "\t", 5, "\t", {
+   0.1618323570709359, 0.13220926873000985`, 0.7059583741990539}, "\t", 24, 
+   "\t", 0.00023734345399787664`],
   Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656712896525481*^9}],
+ CellChangeTimes->{3.664718976329521*^9}],
 
 Cell[BoxData[
  InterpretationBox[
-  RowBox[{"\<\"vorts2\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "22.9059643`8.81149357301142", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "17", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.015497202428977149`", ",", "0.08408081307683413`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.0004772788371961596`"}],
-  SequenceForm[
-  "vorts2", "\t", 22.9059643`8.81149357301142, "\t", 17, "\t", {
-   0.015497202428977149`, 0.08408081307683413, 1.}, "\t", 30, "\t", 
-   0.0004772788371961596],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656713063547634*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts3\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "24.284971`8.83688258269076", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "18", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.018777301811542364`", ",", "0.09637386556419926`", ",", 
-     "0.9997293124065976`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "0.00001542858131283288`"}],
-  SequenceForm[
-  "vorts3", "\t", 24.284971`8.83688258269076, "\t", 18, "\t", {
-   0.018777301811542364`, 0.09637386556419926, 0.9997293124065976}, "\t", 30, 
-   "\t", 0.00001542858131283288],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567132272809815`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts4\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "23.2995359`8.818892263960773", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "16", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.022245042703317876`", ",", "0.10589201263507897`", ",", 
-     "0.9999996953720377`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "29", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "5.4051716578994277`*^-8"}],
-  SequenceForm[
-  "vorts4", "\t", 23.2995359`8.818892263960773, "\t", 16, "\t", {
-   0.022245042703317876`, 0.10589201263507897`, 0.9999996953720377}, "\t", 29,
-    "\t", 5.4051716578994277`*^-8],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656713397508678*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts5\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "24.6907215`8.84407877435097", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "16", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.02568414563210793`", ",", "0.11485041728511713`", ",", 
-     "0.9999998294812336`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "1.2689347531233915`*^-6"}],
-  SequenceForm[
-  "vorts5", "\t", 24.6907215`8.84407877435097, "\t", 16, "\t", {
-   0.02568414563210793, 0.11485041728511713`, 0.9999998294812336}, "\t", 30, 
-   "\t", 1.2689347531233915`*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656713572379512*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts6\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "24.601284`8.842502768061237", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "16", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.02569324168126912`", ",", "0.1148965399178357`", ",", 
-     "0.9999999035582543`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "1.2975687901656732`*^-6"}],
-  SequenceForm[
-  "vorts6", "\t", 24.601284`8.842502768061237, "\t", 16, "\t", {
-   0.02569324168126912, 0.1148965399178357, 0.9999999035582543}, "\t", 30, 
-   "\t", 1.2975687901656732`*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656713750278139*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts7\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "22.4918307`8.803569799334024", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "13", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.029522689676119977`", ",", "0.12580877893058567`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.00007212154883509878`"}],
-  SequenceForm[
-  "vorts7", "\t", 22.4918307`8.803569799334024, "\t", 13, "\t", {
-   0.029522689676119977`, 0.12580877893058567`, 1.}, "\t", 30, "\t", 
-   0.00007212154883509878],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656713939470297*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts8\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "23.131438`8.81574762566359", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "13", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.03378073286169138`", ",", "0.1408257919714503`", ",", "1.`"}], 
-    "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.00005049742474070914`"}],
-  SequenceForm[
-  "vorts8", "\t", 23.131438`8.81574762566359, "\t", 13, "\t", {
-   0.03378073286169138, 0.1408257919714503, 1.}, "\t", 30, "\t", 
-   0.00005049742474070914],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656714134809019*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts9\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.8260148`8.79051943885385", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "12", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.0380598770295433`", ",", "0.15470137119228353`", ",", "1.`"}], 
-    "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "2.313223230936411`*^-6"}],
-  SequenceForm[
-  "vorts9", "\t", 21.8260148`8.79051943885385, "\t", 12, "\t", {
-   0.0380598770295433, 0.15470137119228353`, 1.}, "\t", 30, "\t", 
-   2.313223230936411*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656714336893742*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts10\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "22.905645`8.811487519077483", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "13", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.03135554667209282`", ",", "0.13343772195265372`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.00005054339259985192`"}],
-  SequenceForm[
-  "vorts10", "\t", 22.905645`8.811487519077483, "\t", 13, "\t", {
-   0.03135554667209282, 0.13343772195265372`, 1.}, "\t", 30, "\t", 
-   0.00005054339259985192],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567145436285543`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts11\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "23.3483092`8.81980042950315", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "15", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.02565470860727569`", ",", "0.114907315520225`", ",", "1.`"}], 
-    "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.00020973141908532436`"}],
-  SequenceForm[
-  "vorts11", "\t", 23.3483092`8.81980042950315, "\t", 15, "\t", {
-   0.02565470860727569, 0.114907315520225, 1.}, "\t", 30, "\t", 
-   0.00020973141908532436`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567147462803783`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts12\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "17.6103804`8.697313730714617", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "11", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.022615663259668527`", ",", "0.10286896986822504`", ",", 
-     "0.9999574073959779`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "28", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "7.819296346518964`*^-9"}],
-  SequenceForm[
-  "vorts12", "\t", 17.6103804`8.697313730714617, "\t", 11, "\t", {
-   0.022615663259668527`, 0.10286896986822504`, 0.9999574073959779}, "\t", 28,
-    "\t", 7.819296346518964*^-9],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567149506681485`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts13\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "20.6023407`8.765461558299332", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "14", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.021315033302158712`", ",", "0.09699632026562169`", ",", 
-     "0.9999951291902496`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "2.3220755924936504`*^-7"}],
-  SequenceForm[
-  "vorts13", "\t", 20.6023407`8.765461558299332, "\t", 14, "\t", {
-   0.021315033302158712`, 0.09699632026562169, 0.9999951291902496}, "\t", 30, 
-   "\t", 2.3220755924936504`*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.65671515921914*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts14\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "20.1660218`8.7561652258331", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "14", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.02032985873008843`", ",", "0.09177927973397172`", ",", 
-     "0.9979536444065226`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "7.713551231363971`*^-7"}],
-  SequenceForm[
-  "vorts14", "\t", 20.1660218`8.7561652258331, "\t", 14, "\t", {
-   0.02032985873008843, 0.09177927973397172, 0.9979536444065226}, "\t", 30, 
-   "\t", 7.713551231363971*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656715376512689*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts15\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "17.7212085`8.700038328822682", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "13", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.015491160823299264`", ",", "0.0727061355369271`", ",", 
-     "0.9966372077286824`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "0.00004500463189809618`"}],
-  SequenceForm[
-  "vorts15", "\t", 17.7212085`8.700038328822682, "\t", 13, "\t", {
-   0.015491160823299264`, 0.0727061355369271, 0.9966372077286824}, "\t", 30, 
-   "\t", 0.00004500463189809618],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656715592201297*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts16\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.2959112`8.779841220702908", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "19", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.012328383263922521`", ",", "0.06150319660609778`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.001355207687009566`"}],
-  SequenceForm[
-  "vorts16", "\t", 21.2959112`8.779841220702908, "\t", 19, "\t", {
-   0.012328383263922521`, 0.06150319660609778, 1.}, "\t", 30, "\t", 
-   0.001355207687009566],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656715808836709*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts17\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.7103101`8.788211020255645", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "19", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.012321790478084658`", ",", "0.061506492082113756`", ",", "1.`"}], 
-    "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.0014270779279180607`"}],
-  SequenceForm[
-  "vorts17", "\t", 21.7103101`8.788211020255645, "\t", 19, "\t", {
-   0.012321790478084658`, 0.061506492082113756`, 1.}, "\t", 30, "\t", 
-   0.0014270779279180607`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567160327114754`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts18\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+  RowBox[{"\<\"tooth_naive\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
    "\[InvisibleSpace]", 
-   RowBox[{"-", "3.6567162312484684`17.315666248654516*^9"}], 
+   RowBox[{"-", "3.6647191224876474`17.316615683490927*^9"}], 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
    RowBox[{"{", 
     RowBox[{
-    "0.012071259506583151`", ",", "0.057101728455116796`", ",", "1.`"}], 
-    "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "21", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.013847576810463289`"}],
+    "0.48962242574798065`", ",", "0.5035850602313995`", ",", 
+     "0.9597336904923441`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "7", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "0.06775719051752023`"}],
   SequenceForm[
-  "vorts18", "\t", -3.6567162312484684`17.315666248654516*^9, "\t", 0, "\t", {
-   0.012071259506583151`, 0.057101728455116796`, 1.}, "\t", 21, "\t", 
-   0.013847576810463289`],
+  "tooth_naive", "\t", -3.6647191224876474`17.316615683490927*^9, "\t", 0, 
+   "\t", {0.48962242574798065`, 0.5035850602313995, 0.9597336904923441}, "\t",
+    7, "\t", 0.06775719051752023],
   Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567162632022247`*^9}],
+ CellChangeTimes->{3.6647191668515244`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
-  RowBox[{"\<\"vorts19\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+  RowBox[{"\<\"CT-Knee_naive\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
    "\[InvisibleSpace]", 
-   RowBox[{"-", "3.6567164692307751`17.315666276918783*^9"}], 
+   RowBox[{"-", "3.6647202295207272`17.316615814681963*^9"}], 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
    RowBox[{"{", 
-    RowBox[{
-    "0.012699775017271622`", ",", "0.058493547626589794`", ",", "1.`"}], 
-    "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "21", 
+    RowBox[{"0.35080195138991377`", ",", "0.6827865537424403`", ",", "1.`"}], 
+    "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "3", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.02154257113355833`"}],
+   "0.24527129701587297`"}],
   SequenceForm[
-  "vorts19", "\t", -3.6567164692307751`17.315666276918783*^9, "\t", 0, "\t", {
-   0.012699775017271622`, 0.058493547626589794`, 1.}, "\t", 21, "\t", 
-   0.02154257113355833],
+  "CT-Knee_naive", "\t", -3.6647202295207272`17.316615814681963*^9, "\t", 0, 
+   "\t", {0.35080195138991377`, 0.6827865537424403, 1.}, "\t", 3, "\t", 
+   0.24527129701587297`],
   Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656716502867079*^9}],
+ CellChangeTimes->{3.6647204806570487`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
-  RowBox[{"\<\"vorts20\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.5211437`8.784410340852803", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "19", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.011092195889944844`", ",", "0.05745632812486888`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "27", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.0042999873140577155`"}],
-  SequenceForm[
-  "vorts20", "\t", 21.5211437`8.784410340852803, "\t", 19, "\t", {
-   0.011092195889944844`, 0.05745632812486888, 1.}, "\t", 27, "\t", 
-   0.0042999873140577155`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567167468035426`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts21\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "22.2413464`8.798706067610638", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "19", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.012647728541826428`", ",", "0.06100426364586688`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.0007806003223580004`"}],
-  SequenceForm[
-  "vorts21", "\t", 22.2413464`8.798706067610638, "\t", 19, "\t", {
-   0.012647728541826428`, 0.06100426364586688, 1.}, "\t", 30, "\t", 
-   0.0007806003223580004],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656716999764517*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts22\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "19.4590699`8.740667071619924", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "15", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.015084689384667158`", ",", "0.06913700007717173`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.000053300239932045716`"}],
-  SequenceForm[
-  "vorts22", "\t", 19.4590699`8.740667071619924, "\t", 15, "\t", {
-   0.015084689384667158`, 0.06913700007717173, 1.}, "\t", 30, "\t", 
-   0.000053300239932045716`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656717262482813*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts23\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.5760508`8.78551694947203", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "15", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.01889149362163559`", ",", "0.07921874410067337`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.000014211793330846244`"}],
-  SequenceForm[
-  "vorts23", "\t", 21.5760508`8.78551694947203, "\t", 15, "\t", {
-   0.01889149362163559, 0.07921874410067337, 1.}, "\t", 30, "\t", 
-   0.000014211793330846244`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567175420671463`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts24\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "5.9141709`8.22343886354312", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "9", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.10537316340505566`", ",", "0.22286367974890806`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "3.336940802320165`*^-7"}],
-  SequenceForm[
-  "vorts24", "\t", 5.9141709`8.22343886354312, "\t", 9, "\t", {
-   0.10537316340505566`, 0.22286367974890806`, 1.}, "\t", 30, "\t", 
-   3.336940802320165*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656717743322195*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts25\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.3347327`8.780632199508167", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "16", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.014636230295593898`", ",", "0.06959420207449353`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.00027685518922104975`"}],
-  SequenceForm[
-  "vorts25", "\t", 21.3347327`8.780632199508167, "\t", 16, "\t", {
-   0.014636230295593898`, 0.06959420207449353, 1.}, "\t", 30, "\t", 
-   0.00027685518922104975`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567180344442415`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts26\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "19.4545381`8.740565917507357", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "15", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.014894637038046601`", ",", "0.07050418581686042`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.0000828457910983971`"}],
-  SequenceForm[
-  "vorts26", "\t", 19.4545381`8.740565917507357, "\t", 15, "\t", {
-   0.014894637038046601`, 0.07050418581686042, 1.}, "\t", 30, "\t", 
-   0.0000828457910983971],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567183347567425`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts27\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "20.4323516`8.761863346821052", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "15", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.016845984054181758`", ",", "0.07319059301176137`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.000054809948136041186`"}],
-  SequenceForm[
-  "vorts27", "\t", 20.4323516`8.761863346821052, "\t", 15, "\t", {
-   0.016845984054181758`, 0.07319059301176137, 1.}, "\t", 30, "\t", 
-   0.000054809948136041186`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567186452381473`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts28\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "20.6016622`8.765447255377998", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "15", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.016848321347569705`", ",", "0.07321292407791291`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.00010275673436133409`"}],
-  SequenceForm[
-  "vorts28", "\t", 20.6016622`8.765447255377998, "\t", 15, "\t", {
-   0.016848321347569705`, 0.07321292407791291, 1.}, "\t", 30, "\t", 
-   0.00010275673436133409`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656718965164029*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts29\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "22.558068`8.80484689497444", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "16", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.01968959629539903`", ",", "0.07840436042264216`", ",", 
-     "0.9963522943666762`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "6.958813418591578`*^-6"}],
-  SequenceForm[
-  "vorts29", "\t", 22.558068`8.80484689497444, "\t", 16, "\t", {
-   0.01968959629539903, 0.07840436042264216, 0.9963522943666762}, "\t", 30, 
-   "\t", 6.958813418591578*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567192981680636`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts30\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.4448405`8.782867813936885", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "16", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.01794529212784896`", ",", "0.07380658859511725`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.000021063859107277087`"}],
-  SequenceForm[
-  "vorts30", "\t", 21.4448405`8.782867813936885, "\t", 16, "\t", {
-   0.01794529212784896, 0.07380658859511725, 1.}, "\t", 30, "\t", 
-   0.000021063859107277087`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567196388819847`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts31\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.8699606`8.791392994127666", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "16", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.015424643225648411`", ",", "0.06654602751245647`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.0001331045216557822`"}],
-  SequenceForm[
-  "vorts31", "\t", 21.8699606`8.791392994127666, "\t", 16, "\t", {
-   0.015424643225648411`, 0.06654602751245647, 1.}, "\t", 30, "\t", 
-   0.0001331045216557822],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567199874846344`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts32\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "23.1865626`8.816781362897073", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "20", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.012311449418377071`", ",", "0.05806883634040393`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.001484578594679161`"}],
-  SequenceForm[
-  "vorts32", "\t", 23.1865626`8.816781362897073, "\t", 20, "\t", {
-   0.012311449418377071`, 0.05806883634040393, 1.}, "\t", 30, "\t", 
-   0.001484578594679161],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567203436034393`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts33\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+  RowBox[{"\<\"vortex_naive\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
    "\[InvisibleSpace]", 
-   RowBox[{"-", "3.6567206782489619`17.315666776807777*^9"}], 
+   RowBox[{"-", "3.6647206387355543`17.31661586317672*^9"}], 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
    RowBox[{"{", 
-    RowBox[{
-    "0.012530261897948636`", ",", "0.05681945625127773`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "19", 
+    RowBox[{"0.07101835628664216`", ",", "0.9936081544306006`", ",", "1.`"}], 
+    "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "4", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.023703858456029177`"}],
+   "0.2523902567790197`"}],
   SequenceForm[
-  "vorts33", "\t", -3.6567206782489619`17.315666776807777*^9, "\t", 0, "\t", {
-   0.012530261897948636`, 0.05681945625127773, 1.}, "\t", 19, "\t", 
-   0.023703858456029177`],
+  "vortex_naive", "\t", -3.6647206387355543`17.31661586317672*^9, "\t", 0, 
+   "\t", {0.07101835628664216, 0.9936081544306006, 1.}, "\t", 4, "\t", 
+   0.2523902567790197],
   Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567207105878863`*^9}],
+ CellChangeTimes->{3.664720681633249*^9}],
 
 Cell[BoxData[
  InterpretationBox[
-  RowBox[{"\<\"vorts34\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+  RowBox[{"\<\"nucleon_naive_proportional\"\>", 
+   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
+   "1.0139303`7.457553095075346", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\"\\t\"\>", 
    "\[InvisibleSpace]", 
-   RowBox[{"-", "3.6567210530984018`17.31566682132718*^9"}], 
+   RowBox[{"{", 
+    RowBox[{
+    "0.025707952230706533`", ",", "0.06118630739299173`", ",", 
+     "0.940556720768458`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "16", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "0.002051761801046949`"}],
+  SequenceForm[
+  "nucleon_naive_proportional", "\t", 1.0139303`7.457553095075346, "\t", 3, 
+   "\t", {0.025707952230706533`, 0.06118630739299173, 0.940556720768458}, 
+   "\t", 16, "\t", 0.002051761801046949],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.664720726472048*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"tooth_naive_proportional\"\>", 
+   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
+   "7.0196022`8.297857494907825", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "3", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.048276705972732696`", ",", "0.09426625978575189`", ",", 
+     "0.89079036757891`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "19", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "0.0017710155573790612`"}],
+  SequenceForm[
+  "tooth_naive_proportional", "\t", 7.0196022`8.297857494907825, "\t", 3, 
+   "\t", {0.048276705972732696`, 0.09426625978575189, 0.89079036757891}, "\t",
+    19, "\t", 0.0017710155573790612`],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.664720928050705*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"CT-Knee_naive_proportional\"\>", 
+   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
+   "54.5822238`9.188596219303916", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "4", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", 
+   RowBox[{"{", 
+    RowBox[{
+    "0.033297913999986724`", ",", "0.11784718581280668`", ",", 
+     "0.8702424176627962`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "10", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "0.008178843937079905`"}],
+  SequenceForm[
+  "CT-Knee_naive_proportional", "\t", 54.5822238`9.188596219303916, "\t", 4, 
+   "\t", {0.033297913999986724`, 0.11784718581280668`, 0.8702424176627962}, 
+   "\t", 10, "\t", 0.008178843937079905],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.664722151607686*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"vortex_naive_proportional\"\>", 
+   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
+   RowBox[{"-", "3.6647223204967599`17.316616062476893*^9"}], 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
    RowBox[{"{", 
-    RowBox[{
-    "0.01391282797403701`", ",", "0.055432077414439784`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "18", 
+    RowBox[{"0.`", ",", "0.04124873226255554`", ",", "1.`"}], "}"}], 
+   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "28", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.048510765712593266`"}],
+   "0.0776444212574493`"}],
   SequenceForm[
-  "vorts34", "\t", -3.6567210530984018`17.31566682132718*^9, "\t", 0, "\t", {
-   0.01391282797403701, 0.055432077414439784`, 1.}, "\t", 18, "\t", 
-   0.048510765712593266`],
+  "vortex_naive_proportional", 
+   "\t", -3.6647223204967599`17.316616062476893*^9, "\t", 0, "\t", {0., 
+   0.04124873226255554, 1.}, "\t", 28, "\t", 0.0776444212574493],
   Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567210867608624`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts35\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", 
-   RowBox[{"-", "3.6567214447977843`17.315666867847785*^9"}], 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.012320660040734994`", ",", "0.054685964801451256`", ",", "1.`"}], 
-    "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "20", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.023176556203182975`"}],
-  SequenceForm[
-  "vorts35", "\t", -3.6567214447977843`17.315666867847785*^9, "\t", 0, "\t", {
-   0.012320660040734994`, 0.054685964801451256`, 1.}, "\t", 20, "\t", 
-   0.023176556203182975`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.65672147827056*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts36\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", 
-   RowBox[{"-", "3.656721843407479`17.315666915189098*^9"}], 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.014591377585293516`", ",", "0.05216085613349985`", ",", 
-     "0.9886215033952552`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "0.0376027543812757`"}],
-  SequenceForm[
-  "vorts36", "\t", -3.656721843407479`17.315666915189098*^9, "\t", 0, "\t", {
-   0.014591377585293516`, 0.05216085613349985, 0.9886215033952552}, "\t", 30, 
-   "\t", 0.0376027543812757],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567218772222652`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts37\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "19.67581`8.745477613626914", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "15", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.014152884986707958`", ",", "0.061338790943403165`", ",", 
-     "0.9973212730330155`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "0.00003872371492744188`"}],
-  SequenceForm[
-  "vorts37", "\t", 19.67581`8.745477613626914, "\t", 15, "\t", {
-   0.014152884986707958`, 0.061338790943403165`, 0.9973212730330155}, "\t", 
-   30, "\t", 0.00003872371492744188],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656722289625333*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts38\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.6853904`8.78771223861297", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "16", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.01685474530281201`", ",", "0.06951985173405018`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.00010616425393297291`"}],
-  SequenceForm[
-  "vorts38", "\t", 21.6853904`8.78771223861297, "\t", 16, "\t", {
-   0.01685474530281201, 0.06951985173405018, 1.}, "\t", 30, "\t", 
-   0.00010616425393297291`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656722718015931*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts39\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.4924711`8.78383134492958", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "16", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.01685169551059666`", ",", "0.06951637443239278`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.0001061443130138825`"}],
-  SequenceForm[
-  "vorts39", "\t", 21.4924711`8.78383134492958, "\t", 16, "\t", {
-   0.01685169551059666, 0.06951637443239278, 1.}, "\t", 30, "\t", 
-   0.0001061443130138825],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656723157439391*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts40\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "20.541257`8.764172009751404", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "15", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.018302330859407794`", ",", "0.07548587486914504`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.0000149102625447676`"}],
-  SequenceForm[
-  "vorts40", "\t", 20.541257`8.764172009751404, "\t", 15, "\t", {
-   0.018302330859407794`, 0.07548587486914504, 1.}, "\t", 30, "\t", 
-   0.0000149102625447676],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567236126499805`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts41\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "22.1058815`8.796052831125234", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "15", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.018675036857334484`", ",", "0.0785613544693782`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "4.798150133119602`*^-6"}],
-  SequenceForm[
-  "vorts41", "\t", 22.1058815`8.796052831125234, "\t", 15, "\t", {
-   0.018675036857334484`, 0.0785613544693782, 1.}, "\t", 30, "\t", 
-   4.798150133119602*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656724084752006*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts42\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "18.319389`8.71445597820152", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "13", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.019676154806123017`", ",", "0.08122434639703177`", ",", 
-     "0.9956307608344295`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "2.064238539699853`*^-6"}],
-  SequenceForm[
-  "vorts42", "\t", 18.319389`8.71445597820152, "\t", 13, "\t", {
-   0.019676154806123017`, 0.08122434639703177, 0.9956307608344295}, "\t", 30, 
-   "\t", 2.064238539699853*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567245646706157`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts43\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "23.0908255`8.81498445277462", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "16", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.020759839809606054`", ",", "0.08316830362536536`", ",", 
-     "0.9973187229310927`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "2.7793776982703185`*^-6"}],
-  SequenceForm[
-  "vorts43", "\t", 23.0908255`8.81498445277462, "\t", 16, "\t", {
-   0.020759839809606054`, 0.08316830362536536, 0.9973187229310927}, "\t", 30, 
-   "\t", 2.7793776982703185`*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567250618993697`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts44\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "19.4027303`8.73940784047733", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "12", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.022517767996119573`", ",", "0.08484309642313367`", ",", 
-     "0.9986759525011355`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "2.0070957766427236`*^-7"}],
-  SequenceForm[
-  "vorts44", "\t", 19.4027303`8.73940784047733, "\t", 12, "\t", {
-   0.022517767996119573`, 0.08484309642313367, 0.9986759525011355}, "\t", 30, 
-   "\t", 2.0070957766427236`*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567255710089254`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts45\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.608214`8.78616386579342", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "13", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.025783172347102395`", ",", "0.08885576987317323`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "7.026597969940223`*^-6"}],
-  SequenceForm[
-  "vorts45", "\t", 21.608214`8.78616386579342, "\t", 13, "\t", {
-   0.025783172347102395`, 0.08885576987317323, 1.}, "\t", 30, "\t", 
-   7.026597969940223*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.65672609688317*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts46\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.4138396`8.782239538772055", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "13", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.026840444097798642`", ",", "0.08821661163952778`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.000010852005662192544`"}],
-  SequenceForm[
-  "vorts46", "\t", 21.4138396`8.782239538772055, "\t", 13, "\t", {
-   0.026840444097798642`, 0.08821661163952778, 1.}, "\t", 30, "\t", 
-   0.000010852005662192544`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567266371386724`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts47\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "19.9481191`8.751446945999907", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "12", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.026515647892248397`", ",", "0.08637635275568877`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "2.5662671584595535`*^-7"}],
-  SequenceForm[
-  "vorts47", "\t", 19.9481191`8.751446945999907, "\t", 12, "\t", {
-   0.026515647892248397`, 0.08637635275568877, 1.}, "\t", 30, "\t", 
-   2.5662671584595535`*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656727196083473*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts48\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "18.9711883`8.729639528178515", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "11", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.027853225287557876`", ",", "0.08754937703777955`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "4.705627809762851`*^-6"}],
-  SequenceForm[
-  "vorts48", "\t", 18.9711883`8.729639528178515, "\t", 11, "\t", {
-   0.027853225287557876`, 0.08754937703777955, 1.}, "\t", 30, "\t", 
-   4.705627809762851*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656727771057914*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts49\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "15.4758593`8.641199766140462", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "9", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.03300659294291571`", ",", "0.09541003344399429`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "3.223270472121152`*^-7"}],
-  SequenceForm[
-  "vorts49", "\t", 15.4758593`8.641199766140462, "\t", 9, "\t", {
-   0.03300659294291571, 0.09541003344399429, 1.}, "\t", 30, "\t", 
-   3.223270472121152*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567283620713634`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts50\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "15.4356028`8.64006858796208", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "9", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.03299081656460274`", ",", "0.09537549697942271`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "3.6796903087992377`*^-7"}],
-  SequenceForm[
-  "vorts50", "\t", 15.4356028`8.64006858796208, "\t", 9, "\t", {
-   0.03299081656460274, 0.09537549697942271, 1.}, "\t", 30, "\t", 
-   3.6796903087992377`*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567289664739037`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts51\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "13.9533213`8.596222588243918", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "8", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.03198629324352038`", ",", "0.09264260924449473`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "5.049117332806928`*^-7"}],
-  SequenceForm[
-  "vorts51", "\t", 13.9533213`8.596222588243918, "\t", 8, "\t", {
-   0.03198629324352038, 0.09264260924449473, 1.}, "\t", 30, "\t", 
-   5.049117332806928*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567295822299643`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts52\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "18.5776938`8.720536793998694", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "11", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.02835345683406303`", ",", "0.08700170041111732`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "1.7399771361010442`*^-6"}],
-  SequenceForm[
-  "vorts52", "\t", 18.5776938`8.720536793998694, "\t", 11, "\t", {
-   0.02835345683406303, 0.08700170041111732, 1.}, "\t", 30, "\t", 
-   1.7399771361010442`*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656730213180703*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts53\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "15.7086012`8.647682507742305", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "9", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.025516220816011053`", ",", "0.08340702337271401`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "6.282941288287736`*^-8"}],
-  SequenceForm[
-  "vorts53", "\t", 15.7086012`8.647682507742305, "\t", 9, "\t", {
-   0.025516220816011053`, 0.08340702337271401, 1.}, "\t", 30, "\t", 
-   6.282941288287736*^-8],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567308561823616`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts54\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "20.1366046`8.755531235890361", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "12", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.023094797585314276`", ",", "0.07989422298584826`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "29", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "2.7380998594133048`*^-8"}],
-  SequenceForm[
-  "vorts54", "\t", 20.1366046`8.755531235890361, "\t", 12, "\t", {
-   0.023094797585314276`, 0.07989422298584826, 1.}, "\t", 29, "\t", 
-   2.7380998594133048`*^-8],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567315211985703`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts55\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "17.7489733`8.700718229589016", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "11", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.021440201962029084`", ",", "0.0780683383889935`", ",", 
-     "0.9949475943085375`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "5.899710098222906`*^-8"}],
-  SequenceForm[
-  "vorts55", "\t", 17.7489733`8.700718229589016, "\t", 11, "\t", {
-   0.021440201962029084`, 0.0780683383889935, 0.9949475943085375}, "\t", 30, 
-   "\t", 5.899710098222906*^-8],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656732192043775*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts56\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "18.7653388`8.724901403313135", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "12", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.020057208640225234`", ",", "0.07635326454502551`", ",", 
-     "0.9949760731384735`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "1.9275966362154514`*^-7"}],
-  SequenceForm[
-  "vorts56", "\t", 18.7653388`8.724901403313135, "\t", 12, "\t", {
-   0.020057208640225234`, 0.07635326454502551, 0.9949760731384735}, "\t", 30, 
-   "\t", 1.9275966362154514`*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567328819271173`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts57\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.0954292`8.775733359302777", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "15", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.020271061865477596`", ",", "0.07911269683322152`", ",", 
-     "0.9953979962646553`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "3.975275330886687`*^-6"}],
-  SequenceForm[
-  "vorts57", "\t", 21.0954292`8.775733359302777, "\t", 15, "\t", {
-   0.020271061865477596`, 0.07911269683322152, 0.9953979962646553}, "\t", 30, 
-   "\t", 3.975275330886687*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567335878203015`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts58\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "20.6126218`8.765678228402601", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "14", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.021637809671748737`", ",", "0.08303944483869753`", ",", 
-     "0.9981384263107944`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "1.3346378685191517`*^-7"}],
-  SequenceForm[
-  "vorts58", "\t", 20.6126218`8.765678228402601, "\t", 14, "\t", {
-   0.021637809671748737`, 0.08303944483869753, 0.9981384263107944}, "\t", 30, 
-   "\t", 1.3346378685191517`*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567343170179*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts59\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.7138673`8.788282172891202", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "13", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.024790169460961766`", ",", "0.08945785084192152`", ",", 
-     "0.9997673307276415`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "1.9689299197206026`*^-7"}],
-  SequenceForm[
-  "vorts59", "\t", 21.7138673`8.788282172891202, "\t", 13, "\t", {
-   0.024790169460961766`, 0.08945785084192152, 0.9997673307276415}, "\t", 30, 
-   "\t", 1.9689299197206026`*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656735065931017*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts60\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "17.6104376`8.697315141337409", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "10", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.029657276239795333`", ",", "0.09832679757686205`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "3.776716958108021`*^-6"}],
-  SequenceForm[
-  "vorts60", "\t", 17.6104376`8.697315141337409, "\t", 10, "\t", {
-   0.029657276239795333`, 0.09832679757686205, 1.}, "\t", 30, "\t", 
-   3.776716958108021*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.65673583236768*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts61\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "17.5801712`8.696568093520032", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "10", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.02965256110377488`", ",", "0.0983233459299521`", ",", "1.`"}], 
-    "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "3.0179403088177824`*^-6"}],
-  SequenceForm[
-  "vorts61", "\t", 17.5801712`8.696568093520032, "\t", 10, "\t", {
-   0.02965256110377488, 0.0983233459299521, 1.}, "\t", 30, "\t", 
-   3.0179403088177824`*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567366197888947`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts62\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "15.9145831`8.653340259780613", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "9", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.032094961663744315`", ",", "0.10262108132850704`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "1.247662103791021`*^-6"}],
-  SequenceForm[
-  "vorts62", "\t", 15.9145831`8.653340259780613, "\t", 9, "\t", {
-   0.032094961663744315`, 0.10262108132850704`, 1.}, "\t", 30, "\t", 
-   1.247662103791021*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567374210128193`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts63\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "16.1806283`8.660540374920876", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "9", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.03515381724923825`", ",", "0.10792367779129701`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "4.811079719412267`*^-7"}],
-  SequenceForm[
-  "vorts63", "\t", 16.1806283`8.660540374920876, "\t", 9, "\t", {
-   0.03515381724923825, 0.10792367779129701`, 1.}, "\t", 30, "\t", 
-   4.811079719412267*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656738247059761*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts64\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "20.3512292`8.760135638932159", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "12", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.02799373209222976`", ",", "0.09001606862384418`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "6.895218140690548`*^-6"}],
-  SequenceForm[
-  "vorts64", "\t", 20.3512292`8.760135638932159, "\t", 12, "\t", {
-   0.02799373209222976, 0.09001606862384418, 1.}, "\t", 30, "\t", 
-   6.895218140690548*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.65673908889291*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts65\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "19.2139054`8.735160641610385", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "13", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.020993093442143552`", ",", "0.07214289697276775`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "9.346541025505858`*^-8"}],
-  SequenceForm[
-  "vorts65", "\t", 19.2139054`8.735160641610385, "\t", 13, "\t", {
-   0.020993093442143552`, 0.07214289697276775, 1.}, "\t", 30, "\t", 
-   9.346541025505858*^-8],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567399397528276`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts66\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "20.9497033`8.772722870149828", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "16", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.015294940993572615`", ",", "0.0572134567299824`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.00007794315136597387`"}],
-  SequenceForm[
-  "vorts66", "\t", 20.9497033`8.772722870149828, "\t", 16, "\t", {
-   0.015294940993572615`, 0.0572134567299824, 1.}, "\t", 30, "\t", 
-   0.00007794315136597387],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.65674080043017*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts67\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", 
-   RowBox[{"-", "3.6567416398897444`17.315669266333128*^9"}], 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.013136944236792621`", ",", "0.04843609344223592`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "20", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.022787860693511366`"}],
-  SequenceForm[
-  "vorts67", "\t", -3.6567416398897444`17.315669266333128*^9, "\t", 0, "\t", {
-   0.013136944236792621`, 0.04843609344223592, 1.}, "\t", 20, "\t", 
-   0.022787860693511366`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567416721364927`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts68\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", 
-   RowBox[{"-", "3.6567425110685879`17.315669369799046*^9"}], 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.012730781164165782`", ",", "0.05112748429406151`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "17", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.04536375482245743`"}],
-  SequenceForm[
-  "vorts68", "\t", -3.6567425110685879`17.315669369799046*^9, "\t", 0, "\t", {
-   0.012730781164165782`, 0.05112748429406151, 1.}, "\t", 17, "\t", 
-   0.04536375482245743],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656742542598303*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts69\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", 
-   RowBox[{"-", "3.6567434014481014`17.31566947554531*^9"}], 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.011713423746267562`", ",", "0.05237717814547936`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "12", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.044268401450106035`"}],
-  SequenceForm[
-  "vorts69", "\t", -3.6567434014481014`17.31566947554531*^9, "\t", 0, "\t", {
-   0.011713423746267562`, 0.05237717814547936, 1.}, "\t", 12, "\t", 
-   0.044268401450106035`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567434323337975`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts70\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", 
-   RowBox[{"-", "3.6567443157455423`17.315669584132166*^9"}], 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.015397834138859649`", ",", "0.06573686341693023`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "12", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.08203697890731226`"}],
-  SequenceForm[
-  "vorts70", "\t", -3.6567443157455423`17.315669584132166*^9, "\t", 0, "\t", {
-   0.015397834138859649`, 0.06573686341693023, 1.}, "\t", 12, "\t", 
-   0.08203697890731226],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567443468442354`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts71\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", 
-   RowBox[{"-", "3.656745241628049`17.315669694094908*^9"}], 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.013463436249466795`", ",", "0.07363721216466265`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "11", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.06524456489566549`"}],
-  SequenceForm[
-  "vorts71", "\t", -3.656745241628049`17.315669694094908*^9, "\t", 0, "\t", {
-   0.013463436249466795`, 0.07363721216466265, 1.}, "\t", 11, "\t", 
-   0.06524456489566549],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567452732345343`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts72\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", 
-   RowBox[{"-", "3.6567461980619197`17.315669807686053*^9"}], 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.013418199271692579`", ",", "0.07367046810583713`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "11", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.06485968635698666`"}],
-  SequenceForm[
-  "vorts72", "\t", -3.6567461980619197`17.315669807686053*^9, "\t", 0, "\t", {
-   0.013418199271692579`, 0.07367046810583713, 1.}, "\t", 11, "\t", 
-   0.06485968635698666],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567462297932944`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts73\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", 
-   RowBox[{"-", "3.6567471711923282`17.315669923260145*^9"}], 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.015959407852953807`", ",", "0.08137681290636246`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "13", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.07931378206416913`"}],
-  SequenceForm[
-  "vorts73", "\t", -3.6567471711923282`17.315669923260145*^9, "\t", 0, "\t", {
-   0.015959407852953807`, 0.08137681290636246, 1.}, "\t", 13, "\t", 
-   0.07931378206416913],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656747203649136*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts74\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", 
-   RowBox[{"-", "3.656748226783416`17.315670048627663*^9"}], 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.012791487375604677`", ",", "0.06715071142753991`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "16", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.03709043460865629`"}],
-  SequenceForm[
-  "vorts74", "\t", -3.656748226783416`17.315670048627663*^9, "\t", 0, "\t", {
-   0.012791487375604677`, 0.06715071142753991, 1.}, "\t", 16, "\t", 
-   0.03709043460865629],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656748259222295*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts75\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", 
-   RowBox[{"-", "3.6567492843705211`17.315670174232203*^9"}], 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "0", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.011892966422928267`", ",", "0.061134123453420244`", ",", "1.`"}], 
-    "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "21", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.01583793412561676`"}],
-  SequenceForm[
-  "vorts75", "\t", -3.6567492843705211`17.315670174232203*^9, "\t", 0, "\t", {
-   0.011892966422928267`, 0.061134123453420244`, 1.}, "\t", 21, "\t", 
-   0.01583793412561676],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567493167528343`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts76\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "23.1140313`8.815420690539801", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "20", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.012607280046819162`", ",", "0.06079826571313608`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.0012102752105270856`"}],
-  SequenceForm[
-  "vorts76", "\t", 23.1140313`8.815420690539801, "\t", 20, "\t", {
-   0.012607280046819162`, 0.06079826571313608, 1.}, "\t", 30, "\t", 
-   0.0012102752105270856`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656750411782931*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts77\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "20.5132585`8.763579646363912", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "15", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.01570118965231108`", ",", "0.06504520849688217`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.00010687056273417524`"}],
-  SequenceForm[
-  "vorts77", "\t", 20.5132585`8.763579646363912, "\t", 15, "\t", {
-   0.01570118965231108, 0.06504520849688217, 1.}, "\t", 30, "\t", 
-   0.00010687056273417524`],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656751541875168*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts78\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "19.6655424`8.74525092278628", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "13", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.0203840680786776`", ",", "0.0715457297300119`", ",", "1.`"}], 
-    "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "2.82455700495905`*^-7"}],
-  SequenceForm[
-  "vorts78", "\t", 19.6655424`8.74525092278628, "\t", 13, "\t", {
-   0.0203840680786776, 0.0715457297300119, 1.}, "\t", 30, "\t", 
-   2.82455700495905*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567527034156046`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts79\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "18.2195658`8.712083016357377", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "11", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.026692162364201757`", ",", "0.08057881473793908`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "2.4602453706531664`*^-7"}],
-  SequenceForm[
-  "vorts79", "\t", 18.2195658`8.712083016357377, "\t", 11, "\t", {
-   0.026692162364201757`, 0.08057881473793908, 1.}, "\t", 30, "\t", 
-   2.4602453706531664`*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656753905374436*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts80\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "18.2180657`8.712047257438597", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "10", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.03692405338375441`", ",", "0.09922366996469993`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "3.531294184248686`*^-7"}],
-  SequenceForm[
-  "vorts80", "\t", 18.2180657`8.712047257438597, "\t", 10, "\t", {
-   0.03692405338375441, 0.09922366996469993, 1.}, "\t", 30, "\t", 
-   3.531294184248686*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656755104517213*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts81\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "15.7099107`8.647718709878566", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "9", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.032289041261705634`", ",", "0.09127917196563151`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "1.9175581216218358`*^-6"}],
-  SequenceForm[
-  "vorts81", "\t", 15.7099107`8.647718709878566, "\t", 9, "\t", {
-   0.032289041261705634`, 0.09127917196563151, 1.}, "\t", 30, "\t", 
-   1.9175581216218358`*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656756339895746*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts82\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "22.3930698`8.801658627307887", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "13", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.024981428823667648`", ",", "0.07955094237398594`", ",", 
-     "0.9998084057805429`"}], "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "30", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "2.756638655677258`*^-7"}],
-  SequenceForm[
-  "vorts82", "\t", 22.3930698`8.801658627307887, "\t", 13, "\t", {
-   0.024981428823667648`, 0.07955094237398594, 0.9998084057805429}, "\t", 30, 
-   "\t", 2.756638655677258*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567575894110527`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts83\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "21.3415269`8.780770481711038", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "13", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.024980264177255906`", ",", "0.07955471679099638`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "3.4996224924201`*^-6"}],
-  SequenceForm[
-  "vorts83", "\t", 21.3415269`8.780770481711038, "\t", 13, "\t", {
-   0.024980264177255906`, 0.07955471679099638, 1.}, "\t", 30, "\t", 
-   3.4996224924201*^-6],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567588593767953`*^9}]
+ CellChangeTimes->{3.6647223653813667`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"LinkObject", "::", "linkd"}], "MessageName"], 
+ RowBox[{"{", 
   RowBox[{
-  ":", " "}], "\<\"Unable to communicate with closed link \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"LinkObject\\\", \\\"[\\\", \
-RowBox[{\\\"\\\\\\\"\\\\\\\\\\\\\\\"C:\\\\\\\\\\\\\\\\Program Files\\\\\\\\\\\
-\\\\\\Wolfram Research\\\\\\\\\\\\\\\\Mathematica\\\\\\\\\\\\\\\\10.3\\\\\\\\\
-\\\\\\\\WolframKernel.exe\\\\\\\\\\\\\\\" -subkernel -noinit -wstp \
--noicon\\\\\\\"\\\", \\\",\\\", \\\"9605\\\", \\\",\\\", \\\"10\\\"}], \
-\\\"]\\\"}]\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/LinkObject/linkd\\\", ButtonNote -> \
-\\\"LinkObject::linkd\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6567590997046347`*^9}],
+   RowBox[{"\<\"nucleon_naive\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"3.8071628`8.032146441791802", ",", "48", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.1640173810343909`", ",", "0.1338051568168449`", ",", 
+          "0.7021774621487638`"}], "}"}], ",", "70", ",", 
+        "0.0019719268603558423`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"3.7655932`8.02737839453566", ",", "48", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.16412883189653318`", ",", "0.13371597395938367`", ",", 
+          "0.7021551941440828`"}], "}"}], ",", "70", ",", 
+        "0.0019719268603558423`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1.7533695`7.695418441193416", ",", "5", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.16184885734049806`", ",", "0.13224716803188527`", ",", 
+          "0.7059039746276162`"}], "}"}], ",", "13", ",", 
+        "0.00022184512194102257`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1.6296666`7.663643758273958", ",", "5", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.1618323570709359`", ",", "0.13220926873000985`", ",", 
+          "0.7059583741990539`"}], "}"}], ",", "24", ",", 
+        "0.00023734345399787664`"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"\<\"tooth_naive\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647190008788975`17.316615669079454*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.49869571450104816`", ",", "0.52073667272609`", ",", 
+          "0.9829320083975807`"}], "}"}], ",", "48", ",", 
+        "0.06853285791328324`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647190416578348`17.31661567391204*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.5020879329546398`", ",", "0.5266550355025676`", ",", 
+          "0.9947864433086334`"}], "}"}], ",", "49", ",", 
+        "0.0686500866925488`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647190838690392`17.31661567891436*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.48962242574798065`", ",", "0.5035850602313995`", ",", 
+          "0.9597336904923441`"}], "}"}], ",", "7", ",", 
+        "0.06775719051752023`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647191224876474`17.316615683490927*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.48962242574798065`", ",", "0.5035850602313995`", ",", 
+          "0.9597336904923441`"}], "}"}], ",", "7", ",", 
+        "0.06775719051752023`"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"\<\"CT-Knee_naive\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647194481098531`17.316615722079405*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.36086337400813195`", ",", "0.7173908663720261`", ",", "1.`"}], 
+         "}"}], ",", "19", ",", "0.24879680499343504`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647197215252266`17.316615754481006*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.36120315511379897`", ",", "0.7301103564889153`", ",", "1.`"}], 
+         "}"}], ",", "21", ",", "0.24966685227301005`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647199904337978`17.31661578634852*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.35080195138991377`", ",", "0.6827865537424403`", ",", "1.`"}], 
+         "}"}], ",", "3", ",", "0.24527129701587297`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647202295207272`17.316615814681963*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.35080195138991377`", ",", "0.6827865537424403`", ",", "1.`"}], 
+         "}"}], ",", "3", ",", "0.24527129701587297`"}], "}"}]}], "}"}]}], 
+   ",", 
+   RowBox[{"\<\"vortex_naive\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647205018214658`17.316615846951464*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"0.0884741701118736`", ",", "1.`", ",", "1.`"}], "}"}], ",", 
+        "65", ",", "0.255015558267812`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647205508970114`17.316615852767253*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"0.0884741860811018`", ",", "1.`", ",", "1.`"}], "}"}], ",", 
+        "70", ",", "0.25501556509015766`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647205974579559`17.316615858285047*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.07101835628664216`", ",", "0.9936081544306006`", ",", "1.`"}], 
+         "}"}], ",", "4", ",", "0.2523902567790197`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647206387355543`17.31661586317672*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.07101835628664216`", ",", "0.9936081544306006`", ",", "1.`"}], 
+         "}"}], ",", "4", ",", "0.2523902567790197`"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"\<\"nucleon_naive_proportional\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1.718779`7.686765032340842", ",", "22", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.026161698864291254`", ",", "0.06135375816309759`", ",", 
+          "0.9391743606537213`"}], "}"}], ",", "61", ",", 
+        "0.002050848717280256`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1.7968698`7.706061603053411", ",", "23", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.026191811107093798`", ",", "0.06134651410354478`", ",", 
+          "0.9399126551815182`"}], "}"}], ",", "61", ",", 
+        "0.0020371483018663756`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2.9687428`7.92411756718523", ",", "3", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.026197894521518807`", ",", "0.06111895617202526`", ",", 
+          "0.9585655022476317`"}], "}"}], ",", "30", ",", 
+        "0.001867796026091243`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1.0139303`7.457553095075346", ",", "3", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.025707952230706533`", ",", "0.06118630739299173`", ",", 
+          "0.940556720768458`"}], "}"}], ",", "16", ",", 
+        "0.002051761801046949`"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"\<\"tooth_naive_proportional\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"17.0100498`8.682250578586114", ",", "31", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.048278350560455215`", ",", "0.09400899271440363`", ",", 
+          "0.8878342828612944`"}], "}"}], ",", "70", ",", 
+        "0.0020213071525211294`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"17.6894422`8.699259132042698", ",", "32", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.04829651847820866`", ",", "0.09410828558825836`", ",", 
+          "0.8885755880941889`"}], "}"}], ",", "70", ",", 
+        "0.001975139895281134`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"6.6818392`8.276441013527064", ",", "3", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.04888633340332254`", ",", "0.09541664528197402`", ",", 
+          "0.9007950605361965`"}], "}"}], ",", "24", ",", 
+        "0.0017779330464057158`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"7.0196022`8.297857494907825", ",", "3", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.048276705972732696`", ",", "0.09426625978575189`", ",", 
+          "0.89079036757891`"}], "}"}], ",", "19", ",", 
+        "0.0017710155573790612`"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"\<\"CT-Knee_naive_proportional\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"86.0999227`9.386547755042791", ",", "24", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.03294348738647588`", ",", "0.11731823926958532`", ",", 
+          "0.8689468509892738`"}], "}"}], ",", "33", ",", 
+        "0.008132749539125645`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"94.0447542`9.424879569187459", ",", "26", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.03325564010826106`", ",", "0.11741410987722824`", ",", 
+          "0.866585151953232`"}], "}"}], ",", "35", ",", 
+        "0.008035692749741594`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"38.6313561`9.038484947211845", ",", "4", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.033297913999986724`", ",", "0.11784718581280668`", ",", 
+          "0.8702424176627962`"}], "}"}], ",", "10", ",", 
+        "0.008178843937079905`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"54.5822238`9.188596219303916", ",", "4", ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0.033297913999986724`", ",", "0.11784718581280668`", ",", 
+          "0.8702424176627962`"}], "}"}], ",", "10", ",", 
+        "0.008178843937079905`"}], "}"}]}], "}"}]}], ",", 
+   RowBox[{"\<\"vortex_naive_proportional\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647221711608112`17.31661604477957*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"0.`", ",", "0.034093282249084145`", ",", "1.`"}], "}"}], 
+        ",", "26", ",", "0.0711865732365037`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647222190677478`17.316616050456865*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"0.`", ",", "0.04124872857883809`", ",", "1.`"}], "}"}], ",",
+         "36", ",", "0.07764441339060695`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647222672132893`17.316616056162438*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"0.`", ",", "0.04124873226255554`", ",", "1.`"}], "}"}], ",",
+         "28", ",", "0.0776444212574493`"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "3.6647223204967599`17.316616062476893*^9"}], ",", "0", 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"0.`", ",", "0.04124873226255554`", ",", "1.`"}], "}"}], ",",
+         "28", ",", "0.0776444212574493`"}], "}"}]}], "}"}]}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.6647189117618456`*^9, 3.664722366756399*^9}],
 
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Kernels", "::", "rdead"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Subkernel connected through \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"KernelObject\\\\\\\"\\\", \\\"[\\\", \
-RowBox[{\\\"15\\\", \\\",\\\", \\\"\\\\\\\"local\\\\\\\"\\\"}], \
-\\\"]\\\"}]\\)\[NoBreak] appears dead. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/Kernels\\\", ButtonNote -> \
-\\\"Kernels::rdead\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6567590997546425`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Parallel`Developer`QueueRun", "::", "req"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Requeueing evaluations \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", \\\"33674\\\", \\\"}\\\"}]\\)\[NoBreak] \
-assigned to \[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"KernelObject\\\\\\\"\\\", \
-\\\"[\\\", RowBox[{\\\"15\\\", \\\",\\\", \\\"\\\\\\\"local\\\\\\\"\\\", \
-\\\",\\\", \\\"\\\\\\\"<defunct>\\\\\\\"\\\"}], \
-\\\"]\\\"}]\\)\[NoBreak].\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.656759099854633*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"LinkObject", "::", "linkd"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Unable to communicate with closed link \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"LinkObject\\\", \\\"[\\\", \
-RowBox[{\\\"\\\\\\\"\\\\\\\\\\\\\\\"C:\\\\\\\\\\\\\\\\Program Files\\\\\\\\\\\
-\\\\\\Wolfram Research\\\\\\\\\\\\\\\\Mathematica\\\\\\\\\\\\\\\\10.3\\\\\\\\\
-\\\\\\\\WolframKernel.exe\\\\\\\\\\\\\\\" -subkernel -noinit -wstp \
--noicon\\\\\\\"\\\", \\\",\\\", \\\"9604\\\", \\\",\\\", \\\"9\\\"}], \\\"]\\\
-\"}]\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\
-\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/LinkObject/linkd\\\", ButtonNote -> \
-\\\"LinkObject::linkd\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6567590998846354`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Kernels", "::", "rdead"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Subkernel connected through \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"KernelObject\\\\\\\"\\\", \\\"[\\\", \
-RowBox[{\\\"14\\\", \\\",\\\", \\\"\\\\\\\"local\\\\\\\"\\\"}], \
-\\\"]\\\"}]\\)\[NoBreak] appears dead. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/Kernels\\\", ButtonNote -> \
-\\\"Kernels::rdead\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.656759099924653*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Parallel`Developer`QueueRun", "::", "req"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Requeueing evaluations \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", \\\"33675\\\", \\\"}\\\"}]\\)\[NoBreak] \
-assigned to \[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"KernelObject\\\\\\\"\\\", \
-\\\"[\\\", RowBox[{\\\"14\\\", \\\",\\\", \\\"\\\\\\\"local\\\\\\\"\\\", \
-\\\",\\\", \\\"\\\\\\\"<defunct>\\\\\\\"\\\"}], \
-\\\"]\\\"}]\\)\[NoBreak].\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6567591000346603`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"LinkObject", "::", "linkd"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Unable to communicate with closed link \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"LinkObject\\\", \\\"[\\\", \
-RowBox[{\\\"\\\\\\\"\\\\\\\\\\\\\\\"C:\\\\\\\\\\\\\\\\Program Files\\\\\\\\\\\
-\\\\\\Wolfram Research\\\\\\\\\\\\\\\\Mathematica\\\\\\\\\\\\\\\\10.3\\\\\\\\\
-\\\\\\\\WolframKernel.exe\\\\\\\\\\\\\\\" -subkernel -noinit -wstp \
--noicon\\\\\\\"\\\", \\\",\\\", \\\"9603\\\", \\\",\\\", \\\"8\\\"}], \\\"]\\\
-\"}]\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\
-\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/LinkObject/linkd\\\", ButtonNote -> \
-\\\"LinkObject::linkd\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.656759100064663*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\[NoBreak]\\!\\(\\*StyleBox[RowBox[{\\\"LinkObject\\\", \\\"::\\\", \\\"linkd\
-\\\"}], \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
-calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
-\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6567591000846643`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Kernels", "::", "rdead"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Subkernel connected through \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"KernelObject\\\\\\\"\\\", \\\"[\\\", \
-RowBox[{\\\"13\\\", \\\",\\\", \\\"\\\\\\\"local\\\\\\\"\\\"}], \
-\\\"]\\\"}]\\)\[NoBreak] appears dead. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/Kernels\\\", ButtonNote -> \
-\\\"Kernels::rdead\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6567591001346664`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\[NoBreak]\\!\\(\\*StyleBox[RowBox[{\\\"Kernels\\\", \\\"::\\\", \
-\\\"rdead\\\"}], \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during \
-this calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
-\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6567591001546693`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"Parallel`Developer`QueueRun", "::", "req"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Requeueing evaluations \
-\[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", \\\"33676\\\", \\\"}\\\"}]\\)\[NoBreak] \
-assigned to \[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"KernelObject\\\\\\\"\\\", \
-\\\"[\\\", RowBox[{\\\"13\\\", \\\",\\\", \\\"\\\\\\\"local\\\\\\\"\\\", \
-\\\",\\\", \\\"\\\\\\\"<defunct>\\\\\\\"\\\"}], \
-\\\"]\\\"}]\\)\[NoBreak].\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6567591002546744`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\[NoBreak]\\!\\(\\*StyleBox[RowBox[{\\\"Parallel`Developer`QueueRun\\\", \
-\\\"::\\\", \\\"req\\\"}], \\\"MessageName\\\"]\\)\[NoBreak] will be \
-suppressed during this calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\
-\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
-\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.656759100274677*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"LaunchKernels", "::", "clone"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Kernel \[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"KernelObject\
-\\\\\\\"\\\", \\\"[\\\", RowBox[{\\\"15\\\", \\\",\\\", \\\"\\\\\\\"local\\\\\
-\\\"\\\", \\\",\\\", \\\"\\\\\\\"<defunct>\\\\\\\"\\\"}], \\\"]\\\"}]\\)\
-\[NoBreak] resurrected as \[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"KernelObject\
-\\\\\\\"\\\", \\\"[\\\", RowBox[{\\\"17\\\", \\\",\\\", \\\"\\\\\\\"local\\\\\
-\\\"\\\"}], \\\"]\\\"}]\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\
-\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/LaunchKernels\\\", ButtonNote -> \
-\\\"LaunchKernels::clone\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6567591062386065`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"LaunchKernels", "::", "clone"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Kernel \[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"KernelObject\
-\\\\\\\"\\\", \\\"[\\\", RowBox[{\\\"14\\\", \\\",\\\", \\\"\\\\\\\"local\\\\\
-\\\"\\\", \\\",\\\", \\\"\\\\\\\"<defunct>\\\\\\\"\\\"}], \\\"]\\\"}]\\)\
-\[NoBreak] resurrected as \[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"KernelObject\
-\\\\\\\"\\\", \\\"[\\\", RowBox[{\\\"18\\\", \\\",\\\", \\\"\\\\\\\"local\\\\\
-\\\"\\\"}], \\\"]\\\"}]\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\
-\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/LaunchKernels\\\", ButtonNote -> \
-\\\"LaunchKernels::clone\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6567591114100184`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"LaunchKernels", "::", "clone"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Kernel \[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"KernelObject\
-\\\\\\\"\\\", \\\"[\\\", RowBox[{\\\"13\\\", \\\",\\\", \\\"\\\\\\\"local\\\\\
-\\\"\\\", \\\",\\\", \\\"\\\\\\\"<defunct>\\\\\\\"\\\"}], \\\"]\\\"}]\\)\
-\[NoBreak] resurrected as \[NoBreak]\\!\\(\\*RowBox[{\\\"\\\\\\\"KernelObject\
-\\\\\\\"\\\", \\\"[\\\", RowBox[{\\\"19\\\", \\\",\\\", \\\"\\\\\\\"local\\\\\
-\\\"\\\"}], \\\"]\\\"}]\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\
-\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/LaunchKernels\\\", ButtonNote -> \
-\\\"LaunchKernels::clone\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.656759116692197*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"General", "::", "stop"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"Further output of \
-\[NoBreak]\\!\\(\\*StyleBox[RowBox[{\\\"LaunchKernels\\\", \\\"::\\\", \
-\\\"clone\\\"}], \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during \
-this calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
-\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.6567591167121973`*^9}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts84\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "17.2457267`8.688226492874971", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "12", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{
-    "0.018923760260787063`", ",", "0.06737674362376715`", ",", "1.`"}], "}"}],
-    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "8.97275225742203`*^-7"}],
-  SequenceForm[
-  "vorts84", "\t", 17.2457267`8.688226492874971, "\t", 12, "\t", {
-   0.018923760260787063`, 0.06737674362376715, 1.}, "\t", 30, "\t", 
-   8.97275225742203*^-7],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.656760253006831*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"vorts85\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
-   "\[InvisibleSpace]", "18.1164073`8.70961706959135", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "14", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   RowBox[{"{", 
-    RowBox[{"0.01562769286956788`", ",", "0.06194592239245001`", ",", "1.`"}],
-     "}"}], "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", "30", 
-   "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.00002662103491654875`"}],
-  SequenceForm[
-  "vorts85", "\t", 18.1164073`8.70961706959135, "\t", 14, "\t", {
-   0.01562769286956788, 0.06194592239245001, 1.}, "\t", 30, "\t", 
-   0.00002662103491654875],
-  Editable->False]], "Print",
- CellChangeTimes->{3.65541408191492*^9, 3.6554576144698668`*^9, 
-  3.655463214468565*^9, 3.6566201450452423`*^9, 3.65671090736524*^9, 
-  3.6567638708499937`*^9}]
-}, Open  ]]
+Cell[BoxData["3425.8462655`10.986312863642377"], "Output",
+ CellChangeTimes->{3.6647189117618456`*^9, 3.664722366756399*^9}]
 }, Open  ]],
 
 Cell[TextData[{
@@ -9079,9 +7515,9 @@ Cell[TextData[{
 }], "Text",
  CellChangeTimes->{{3.6567943108489676`*^9, 3.6567943399403152`*^9}}]
 },
-WindowSize->{1282, 797},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
-FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
+WindowSize->{1275, 785},
+WindowMargins->{{Automatic, -3}, {Automatic, 2}},
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -9097,116 +7533,25 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 16381, 457, 972, "Input"],
 Cell[16942, 479, 600, 16, 72, "Input"],
+Cell[17545, 497, 414, 10, 172, "Input"],
+Cell[17962, 509, 271, 8, 31, "Input"],
 Cell[CellGroupData[{
-Cell[17567, 499, 117049, 2765, 7432, "Input"],
+Cell[18258, 521, 117212, 2768, 7432, "Input"],
 Cell[CellGroupData[{
-Cell[134641, 3268, 921, 19, 23, "Print"],
-Cell[135565, 3289, 918, 19, 23, "Print"],
-Cell[136486, 3310, 954, 19, 23, "Print"],
-Cell[137443, 3331, 958, 19, 23, "Print"],
-Cell[138404, 3352, 953, 19, 23, "Print"],
-Cell[139360, 3373, 950, 19, 23, "Print"],
-Cell[140313, 3394, 923, 19, 23, "Print"],
-Cell[141239, 3415, 909, 18, 23, "Print"],
-Cell[142151, 3435, 910, 18, 23, "Print"],
-Cell[143064, 3455, 918, 18, 23, "Print"],
-Cell[143985, 3475, 914, 18, 23, "Print"],
-Cell[144902, 3495, 959, 19, 23, "Print"],
-Cell[145864, 3516, 958, 19, 23, "Print"],
-Cell[146825, 3537, 949, 19, 23, "Print"],
-Cell[147777, 3558, 956, 19, 23, "Print"],
-Cell[148736, 3579, 920, 19, 23, "Print"],
-Cell[149659, 3600, 929, 19, 23, "Print"],
-Cell[150591, 3621, 969, 20, 23, "Print"],
-Cell[151563, 3643, 964, 20, 23, "Print"],
-Cell[152530, 3665, 925, 19, 23, "Print"],
-Cell[153458, 3686, 922, 19, 23, "Print"],
-Cell[154383, 3707, 927, 19, 23, "Print"],
-Cell[155313, 3728, 920, 18, 23, "Print"],
-Cell[156236, 3748, 911, 18, 23, "Print"],
-Cell[157150, 3768, 927, 19, 23, "Print"],
-Cell[158080, 3789, 924, 19, 23, "Print"],
-Cell[159007, 3810, 929, 19, 23, "Print"],
-Cell[159939, 3831, 925, 19, 23, "Print"],
-Cell[160867, 3852, 951, 19, 23, "Print"],
-Cell[161821, 3873, 922, 18, 23, "Print"],
-Cell[162746, 3893, 924, 19, 23, "Print"],
-Cell[163673, 3914, 922, 19, 23, "Print"],
-Cell[164598, 3935, 965, 20, 23, "Print"],
-Cell[165566, 3957, 963, 20, 23, "Print"],
-Cell[166532, 3979, 966, 20, 23, "Print"],
-Cell[167501, 4001, 992, 20, 23, "Print"],
-Cell[168496, 4023, 957, 19, 23, "Print"],
-Cell[169456, 4044, 916, 18, 23, "Print"],
-Cell[170375, 4064, 913, 18, 23, "Print"],
-Cell[171291, 4084, 922, 19, 23, "Print"],
-Cell[172216, 4105, 916, 18, 23, "Print"],
-Cell[173135, 4125, 954, 19, 23, "Print"],
-Cell[174092, 4146, 959, 19, 23, "Print"],
-Cell[175054, 4167, 959, 19, 23, "Print"],
-Cell[176016, 4188, 917, 19, 23, "Print"],
-Cell[176936, 4209, 929, 19, 23, "Print"],
-Cell[177868, 4230, 925, 19, 23, "Print"],
-Cell[178796, 4251, 922, 19, 23, "Print"],
-Cell[179721, 4272, 915, 18, 23, "Print"],
-Cell[180639, 4292, 916, 18, 23, "Print"],
-Cell[181558, 4312, 915, 18, 23, "Print"],
-Cell[182476, 4332, 918, 18, 23, "Print"],
-Cell[183397, 4352, 922, 19, 23, "Print"],
-Cell[184322, 4373, 927, 19, 23, "Print"],
-Cell[185252, 4394, 954, 19, 23, "Print"],
-Cell[186209, 4415, 961, 19, 23, "Print"],
-Cell[187173, 4436, 958, 19, 23, "Print"],
-Cell[188134, 4457, 957, 19, 23, "Print"],
-Cell[189094, 4478, 959, 19, 23, "Print"],
-Cell[190056, 4499, 921, 19, 23, "Print"],
-Cell[190980, 4520, 918, 18, 23, "Print"],
-Cell[191901, 4540, 923, 19, 23, "Print"],
-Cell[192827, 4561, 914, 18, 23, "Print"],
-Cell[193744, 4581, 914, 18, 23, "Print"],
-Cell[194661, 4601, 924, 19, 23, "Print"],
-Cell[195588, 4622, 917, 18, 23, "Print"],
-Cell[196508, 4642, 965, 20, 23, "Print"],
-Cell[197476, 4664, 960, 20, 23, "Print"],
-Cell[198439, 4686, 963, 20, 23, "Print"],
-Cell[199405, 4708, 962, 20, 23, "Print"],
-Cell[200370, 4730, 960, 20, 23, "Print"],
-Cell[201333, 4752, 962, 20, 23, "Print"],
-Cell[202298, 4774, 960, 20, 23, "Print"],
-Cell[203261, 4796, 958, 20, 23, "Print"],
-Cell[204222, 4818, 966, 20, 23, "Print"],
-Cell[205191, 4840, 923, 19, 23, "Print"],
-Cell[206117, 4861, 918, 18, 23, "Print"],
-Cell[207038, 4881, 909, 18, 23, "Print"],
-Cell[207950, 4901, 925, 19, 23, "Print"],
-Cell[208878, 4922, 915, 18, 23, "Print"],
-Cell[209796, 4942, 923, 19, 23, "Print"],
-Cell[210722, 4963, 958, 19, 23, "Print"],
-Cell[211683, 4984, 920, 19, 23, "Print"]
+Cell[135495, 3293, 845, 17, 23, "Print"],
+Cell[136343, 3312, 880, 18, 23, "Print"],
+Cell[137226, 3332, 847, 17, 23, "Print"],
+Cell[138076, 3351, 837, 17, 23, "Print"],
+Cell[138916, 3370, 872, 18, 23, "Print"],
+Cell[139791, 3390, 869, 18, 23, "Print"],
+Cell[140663, 3410, 877, 18, 23, "Print"],
+Cell[141543, 3430, 836, 17, 23, "Print"]
 }, Open  ]],
-Cell[212618, 5006, 820, 15, 21, "Message"],
-Cell[213441, 5023, 583, 12, 21, "Message"],
-Cell[214027, 5037, 543, 11, 21, "Message"],
-Cell[214573, 5050, 819, 15, 21, "Message"],
-Cell[215395, 5067, 581, 12, 21, "Message"],
-Cell[215979, 5081, 545, 11, 21, "Message"],
-Cell[216527, 5094, 817, 15, 21, "Message"],
-Cell[217347, 5111, 568, 12, 21, "Message"],
-Cell[217918, 5125, 583, 12, 21, "Message"],
-Cell[218504, 5139, 565, 12, 21, "Message"],
-Cell[219072, 5153, 545, 11, 21, "Message"],
-Cell[219620, 5166, 581, 12, 21, "Message"],
-Cell[220204, 5180, 797, 14, 21, "Message"],
-Cell[221004, 5196, 797, 14, 21, "Message"],
-Cell[221804, 5212, 795, 14, 21, "Message"],
-Cell[222602, 5228, 571, 12, 21, "Message"],
-Cell[CellGroupData[{
-Cell[223198, 5244, 920, 19, 23, "Print"],
-Cell[224121, 5265, 917, 18, 23, "Print"]
-}, Open  ]]
+Cell[142394, 3450, 10633, 267, 413, "Output"],
+Cell[153030, 3719, 124, 1, 31, "Output"]
 }, Open  ]],
-Cell[225065, 5287, 91244, 1993, 1732, "Text"],
-Cell[316312, 7282, 82252, 1797, 1494, "Text"]
+Cell[153169, 3723, 91244, 1993, 1732, "Text"],
+Cell[244416, 5718, 82252, 1797, 1494, "Text"]
 }
 ]
 *)

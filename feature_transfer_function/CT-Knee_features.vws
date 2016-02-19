@@ -21,7 +21,7 @@
                         <Property mapKey="applyLightAttenuation" name="applyLightAttenuation" value="false" />
                         <Property mapKey="camera" name="camera" projectionMode="1" maxValue="94750" minValue="1" frustLeft="-0.4142136" frustRight="0.4142136" frustBottom="-0.4142136" frustTop="0.4142136" frustNear="1" frustFar="95129" fovy="45.00000381" eyeMode="1" eyeSeparation="1" axisMode="0" stereoFocalLengh="600" stereoWidth="450" stereoRelativeFocalLength="0.05" useRealWorldFrustum="0" centerOption="0" adaptOnChange="true" id="ref7">
                             <MetaData>
-                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="1048" y="121" />
+                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="1176" y="93" />
                             </MetaData>
                             <position x="189.5" y="-378.02224731" z="152.49995422" />
                             <focus x="189.5" y="114.5" z="152.5" />
@@ -60,7 +60,7 @@
                             </MetaData>
                             <value x="189.5" y="-75" z="152.49998474" w="1" />
                             <Center x="189.5" y="114.5" z="152.5" />
-                            <LightPos x="0" y="0.00000235" z="189.5" w="1" />
+                            <LightPos x="0" y="0" z="189.5" w="0" />
                         </Property>
                         <Property mapKey="lightSpecular" name="lightSpecular">
                             <value x="0.60000002" y="0.60000002" z="0.60000002" w="1" />
@@ -75,7 +75,7 @@
                         <Property mapKey="shading" name="shading" value="phong" />
                         <Property mapKey="transferFunction" name="transferFunction" domainFittingStrategy="1" id="ref11">
                             <MetaData>
-                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="730" y="499" width="605" height="538" />
+                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="697" y="342" width="682" height="538" />
                             </MetaData>
                             <TransferFunction type="TransFuncIntensity" alphaMode="1" gammaValue="1">
                                 <domain x="0" y="1" />
@@ -94,7 +94,7 @@
                                         <colorL r="127" g="255" b="0" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.47" split="false">
-                                        <colorL r="127" g="255" b="0" a="32" />
+                                        <colorL r="127" g="255" b="0" a="30" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.69999999" split="false">
                                         <colorL r="127" g="255" b="0" a="0" />
@@ -103,7 +103,7 @@
                                         <colorL r="127" g="0" b="255" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.89999998" split="false">
-                                        <colorL r="127" g="0" b="255" a="255" />
+                                        <colorL r="127" g="0" b="255" a="221" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="1" split="false">
                                         <colorL r="127" g="0" b="255" a="0" />
@@ -149,10 +149,10 @@
                 <Processor type="Canvas" name="Canvas" id="ref2">
                     <MetaData>
                         <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-473" y="198" />
-                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="89" y="422" width="512" height="512" />
+                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="100" y="321" width="512" height="512" />
                         <MetaItem name="preferedDevelopmentCanvasFS" type="BoolMetaData" value="false" />
                         <MetaItem name="preferedDevelopmentCanvasPosition" type="IVec2MetaData">
-                            <value x="89" y="422" />
+                            <value x="100" y="321" />
                         </MetaItem>
                         <MetaItem name="preferedDevelopmentCanvasSize" type="IVec2MetaData">
                             <value x="512" y="512" />
@@ -339,7 +339,7 @@
                                         <colorL r="127" g="255" b="0" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.47" split="false">
-                                        <colorL r="127" g="255" b="0" a="32" />
+                                        <colorL r="127" g="255" b="0" a="30" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.69999999" split="false">
                                         <colorL r="127" g="255" b="0" a="0" />
@@ -348,7 +348,7 @@
                                         <colorL r="127" g="0" b="255" a="0" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="0.89999998" split="false">
-                                        <colorL r="127" g="0" b="255" a="255" />
+                                        <colorL r="127" g="0" b="255" a="221" />
                                     </key>
                                     <key type="TransFuncMappingKey" intensity="1" split="false">
                                         <colorL r="127" g="0" b="255" a="0" />
