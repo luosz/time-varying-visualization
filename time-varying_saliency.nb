@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    260671,       5378]
-NotebookOptionsPosition[    258273,       5294]
-NotebookOutlinePosition[    258785,       5314]
-CellTagsIndexPosition[    258742,       5311]
+NotebookDataLength[    264203,       5420]
+NotebookOptionsPosition[    261803,       5336]
+NotebookOutlinePosition[    262317,       5356]
+CellTagsIndexPosition[    262274,       5353]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -66,16 +66,15 @@ Cell[BoxData[
     RowBox[{"labels", "=", 
      RowBox[{"{", 
       RowBox[{
-      "\"\<: naive TF\>\"", ",", "\"\<: TF optimized for first frame\>\"", 
-       ",", "\"\<: TF optimized for each frame\>\""}], "}"}]}], 
-    ";"}]}]}]], "Input",
+      "\"\<: not optimized\>\"", ",", "\"\<: statically optimized\>\"", ",", 
+       "\"\<: dynamically optimized\>\""}], "}"}]}], ";"}]}]}]], "Input",
  CellChangeTimes->{{3.656877985507925*^9, 3.656878016484955*^9}, {
    3.656878092807291*^9, 3.6568782009130154`*^9}, {3.6568783555518885`*^9, 
    3.6568784122968082`*^9}, {3.656878880468526*^9, 3.6568789543192286`*^9}, 
    3.65687910268272*^9, {3.6568791351391993`*^9, 3.6568791897488327`*^9}, {
    3.6568792247021217`*^9, 3.656879264614855*^9}, {3.6568792963275948`*^9, 
    3.6568793666897864`*^9}, {3.6572841508132267`*^9, 3.6572841609525537`*^9}, 
-   3.6572848581494107`*^9}],
+   3.6572848581494107`*^9, {3.6650775317939253`*^9, 3.6650775529933767`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -368,8 +367,7 @@ saliency.xml\>\""}], ";", "\[IndentingNewLine]",
          RowBox[{"\"\<Feature saliency\>\"", "<>", "label"}]}], ",", 
         RowBox[{"AxesLabel", "\[Rule]", 
          RowBox[{"{", 
-          RowBox[{"\"\<Time step\>\"", ",", "\"\<Saliency\>\""}], "}"}]}], 
-        ",", 
+          RowBox[{"\"\<Frame\>\"", ",", "\"\<Saliency\>\""}], "}"}]}], ",", 
         RowBox[{"PlotRange", "\[Rule]", 
          RowBox[{"{", 
           RowBox[{"Automatic", ",", 
@@ -401,7 +399,7 @@ saliency.xml\>\""}], ";", "\[IndentingNewLine]",
          RowBox[{"\"\<Feature visibility\>\"", "<>", "label"}]}], ",", 
         RowBox[{"AxesLabel", "\[Rule]", 
          RowBox[{"{", 
-          RowBox[{"\"\<Time step\>\"", ",", "\"\<FV\>\""}], "}"}]}], ",", 
+          RowBox[{"\"\<Frame\>\"", ",", "\"\<FV\>\""}], "}"}]}], ",", 
         RowBox[{"PlotRange", "\[Rule]", 
          RowBox[{"{", 
           RowBox[{"Automatic", ",", 
@@ -430,17 +428,19 @@ saliency.xml\>\""}], ";", "\[IndentingNewLine]",
           "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
            "\"\<Feature 3\>\""}], "}"}]}], ",", 
         RowBox[{"PlotLabel", "\[Rule]", 
-         RowBox[{
-         "\"\<Visibility-weighted saliency (VWS)\>\"", "<>", "label"}]}], ",", 
+         RowBox[{"\"\<VWS\>\"", "<>", "label"}]}], ",", 
         RowBox[{"AxesLabel", "\[Rule]", 
          RowBox[{"{", 
-          RowBox[{"\"\<Time step\>\"", ",", "\"\<VWS\>\""}], "}"}]}], ",", 
+          RowBox[{"\"\<Frame\>\"", ",", "\"\<VWS\>\""}], "}"}]}], ",", 
         RowBox[{"PlotRange", "\[Rule]", 
          RowBox[{"{", 
           RowBox[{"Automatic", ",", 
            RowBox[{"{", 
             RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
-        RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}]}], "]"}]}], ";", 
+        RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}], ",", 
+        RowBox[{"BaseStyle", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"FontSize", "\[Rule]", "20"}], "}"}]}]}], "]"}]}], ";", 
      "\[IndentingNewLine]", 
      RowBox[{"(*", 
       RowBox[{
@@ -479,16 +479,19 @@ saliencemap\\\\saliencemap.xml\>\""}], ";", "\[IndentingNewLine]",
           "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", 
            "\"\<Feature 3\>\""}], "}"}]}], ",", 
         RowBox[{"PlotLabel", "\[Rule]", 
-         RowBox[{"\"\<2D feature saliency\>\"", "<>", "label"}]}], ",", 
+         RowBox[{"\"\<2DFS\>\"", "<>", "label"}]}], ",", 
         RowBox[{"AxesLabel", "\[Rule]", 
          RowBox[{"{", 
-          RowBox[{"\"\<Time step\>\"", ",", "\"\<2DFS\>\""}], "}"}]}], ",", 
+          RowBox[{"\"\<Frame\>\"", ",", "\"\<2DFS\>\""}], "}"}]}], ",", 
         RowBox[{"PlotRange", "\[Rule]", 
          RowBox[{"{", 
           RowBox[{"Automatic", ",", 
            RowBox[{"{", 
             RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
-        RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}]}], "]"}]}], ";", 
+        RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}], ",", 
+        RowBox[{"BaseStyle", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"FontSize", "\[Rule]", "20"}], "}"}]}]}], "]"}]}], ";", 
      "\[IndentingNewLine]", 
      RowBox[{"{", 
       RowBox[{"plot1", ",", "plot2", ",", "plot3", ",", "plot4"}], "}"}]}]}], 
@@ -504,7 +507,9 @@ saliencemap\\\\saliencemap.xml\>\""}], ";", "\[IndentingNewLine]",
    3.657284761848971*^9, 3.6572848180977354`*^9}, {3.6572848623566976`*^9, 
    3.6572849295420265`*^9}, {3.657284977595482*^9, 3.657284984107519*^9}, {
    3.657285031245247*^9, 3.6572851053383846`*^9}, {3.6572854590191393`*^9, 
-   3.6572854592218432`*^9}, 3.657286411613004*^9}],
+   3.6572854592218432`*^9}, 3.657286411613004*^9, {3.6650667478264465`*^9, 
+   3.665066753058337*^9}, {3.6650669341364985`*^9, 3.6650669441761475`*^9}, {
+   3.6650774906831675`*^9, 3.665077504326048*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -693,14 +698,14 @@ xVgG2wc1rLR57nd8O0X/Aiyay9U=
      PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
      AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {True, True}, AxesLabel -> {
-       FormBox["\"Time step\"", TraditionalForm], 
+       FormBox["\"Frame\"", TraditionalForm], 
        FormBox["\"Saliency\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
      DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
        GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
-     FormBox["\"Feature saliency: naive TF\"", TraditionalForm], 
+     FormBox["\"Feature saliency: not optimized\"", TraditionalForm], 
      PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
      PlotRangePadding -> {{
         Scaled[0.02], 
@@ -974,7 +979,8 @@ xVgG2wc1rLR57nd8O0X/Aiyay9U=
   3.657285935475518*^9, 3.657286327913375*^9, 3.657286358286681*^9, {
    3.65728641157399*^9, 3.6572864562978086`*^9}, 3.6572864974887686`*^9, 
    3.6572866013534403`*^9, 3.6574845469802675`*^9, 3.6574845825283113`*^9, 
-   3.6574851025417376`*^9, 3.6574852210406866`*^9}]
+   3.6574851025417376`*^9, 3.6574852210406866`*^9, 3.6650666947255764`*^9, 
+   3.665066761826586*^9, 3.665066952297207*^9, 3.6650775666098604`*^9}]
 }, Open  ]],
 
 Cell["The second one is the feature visibility (Wang et al. 2011)", "Text",
@@ -1088,14 +1094,14 @@ n4y6QyN7BvI/C/kHViG2Og==
      PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
      AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {True, True}, AxesLabel -> {
-       FormBox["\"Time step\"", TraditionalForm], 
+       FormBox["\"Frame\"", TraditionalForm], 
        FormBox["\"FV\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
      DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
        GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
-     FormBox["\"Feature visibility: naive TF\"", TraditionalForm], 
+     FormBox["\"Feature visibility: not optimized\"", TraditionalForm], 
      PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
      PlotRangePadding -> {{
         Scaled[0.02], 
@@ -1369,7 +1375,9 @@ n4y6QyN7BvI/C/kHViG2Og==
   3.6572857186782055`*^9, 3.657285752293089*^9, 3.6572863280098906`*^9, 
    3.657286358381149*^9, {3.657286411656968*^9, 3.657286456384777*^9}, 
    3.657286497570797*^9, 3.65728660142893*^9, 3.657484547096283*^9, 
-   3.6574845826597767`*^9, 3.657485102610258*^9, 3.65748522111016*^9}]
+   3.6574845826597767`*^9, 3.657485102610258*^9, 3.65748522111016*^9, 
+   3.6650666947718525`*^9, 3.6650667618795853`*^9, 3.6650669523619623`*^9, 
+   3.665077566668101*^9}]
 }, Open  ]],
 
 Cell["The third one is our visibility-weighted saliency", "Text",
@@ -1388,7 +1396,7 @@ Cell[BoxData[
         Hue[0.67, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[0.5058823529411764, 0.3529411764705882, 1.]], 
         LineBox[CompressedData["
 1:eJw9k31QkwUcx5/oJlB27HhZWC5xcUIbLBgiTAK+wAZ7YcLGNogD7gTB1ANl
@@ -1418,7 +1426,7 @@ TPwH2ITcYA==
         Hue[0.9060679774997897, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[1., 0., 0.]], 
         LineBox[CompressedData["
 1:eJw1lAtQVGUUx2+k+eCpMEAOw4SusKDAugHx0OXPe3kt7BvIFkQKiWylGWtA
@@ -1449,7 +1457,7 @@ Zy6Ekn9qCEoDzwddo/MzkMK5+Y/y2PwiA0I3tzxVKs1zBgTPlo5W642R/wLo
         Hue[0.1421359549995791, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[0.28627450980392155`, 1., 0.00392156862745098]], 
         LineBox[CompressedData["
 1:eJw91AlQlGUYB/CNdEBTYwRUbJ1EAwkE5LQFaf8cy7Fy7cVimBKHKQQEwirH
@@ -1482,16 +1490,17 @@ jN8JYfdzCLqTKtb05qiF/wIoy72N
      PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
      AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {True, True}, AxesLabel -> {
-       FormBox["\"Time step\"", TraditionalForm], 
+       FormBox["\"Frame\"", TraditionalForm], 
        FormBox["\"VWS\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
-     DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
+     BaseStyle -> {FontSize -> 20}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
        GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
-     FormBox["\"Visibility-weighted saliency (VWS): naive TF\"", 
-       TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> 
-     True, PlotRangePadding -> {{
+     FormBox["\"VWS: not optimized\"", TraditionalForm], 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     PlotRangePadding -> {{
         Scaled[0.02], 
         Scaled[0.02]}, {0, 0}}, Ticks -> {Automatic, Automatic}}],FormBox[
     FormBox[
@@ -1511,7 +1520,7 @@ jN8JYfdzCLqTKtb05qiF/wIoy72N
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[0.5058823529411764, 0.3529411764705882, 1.]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -1520,7 +1529,7 @@ jN8JYfdzCLqTKtb05qiF/wIoy72N
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[
                     0.5058823529411764, 0.3529411764705882, 1.]], {}}}, 
                     AspectRatio -> Full, ImageSize -> {20, 10}, 
@@ -1533,7 +1542,7 @@ jN8JYfdzCLqTKtb05qiF/wIoy72N
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[1., 0., 0.]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -1542,7 +1551,7 @@ jN8JYfdzCLqTKtb05qiF/wIoy72N
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[1., 0., 0.]], {}}}, AspectRatio -> Full, 
                     ImageSize -> {20, 10}, PlotRangePadding -> None, 
                     ImagePadding -> Automatic, 
@@ -1554,7 +1563,7 @@ jN8JYfdzCLqTKtb05qiF/wIoy72N
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[0.28627450980392155`, 1., 0.00392156862745098]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -1563,7 +1572,7 @@ jN8JYfdzCLqTKtb05qiF/wIoy72N
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[
                     0.28627450980392155`, 1., 0.00392156862745098]], {}}}, 
                     AspectRatio -> Full, ImageSize -> {20, 10}, 
@@ -1596,6 +1605,7 @@ jN8JYfdzCLqTKtb05qiF/wIoy72N
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -1641,6 +1651,7 @@ jN8JYfdzCLqTKtb05qiF/wIoy72N
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -1683,6 +1694,7 @@ jN8JYfdzCLqTKtb05qiF/wIoy72N
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -1763,7 +1775,8 @@ jN8JYfdzCLqTKtb05qiF/wIoy72N
   3.657285762303137*^9, 3.657286328107682*^9, 3.657286358475196*^9, {
    3.657286411726466*^9, 3.657286456465342*^9}, 3.657286497661251*^9, 
    3.657286601506946*^9, 3.6574845471767807`*^9, 3.6574845827263393`*^9, 
-   3.657485102691254*^9, 3.657485221206174*^9}]
+   3.657485102691254*^9, 3.657485221206174*^9, 3.665066694806959*^9, 
+   3.6650667619380703`*^9, 3.6650669523984685`*^9, 3.6650775667351885`*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -1785,7 +1798,7 @@ Cell[BoxData[
         Hue[0.67, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[0.5058823529411764, 0.3529411764705882, 1.]], 
         LineBox[CompressedData["
 1:eJw1kwlMXFUUhqGRTUCnMhGS4tIpM6AsoWWRRco/LDMwTGEYZmsx6XSEWhBK
@@ -1815,7 +1828,7 @@ oaDz6+A3sNZz8QjNkw6TtwI+Lkw3R/8D/SHbfw==
         Hue[0.9060679774997897, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[1., 0., 0.]], 
         LineBox[CompressedData["
 1:eJw103tMk1cYBnAKZFwCgeFCZeHuEFRExkRQhD7lDgV6hZaBLisUOxQEMgxy
@@ -1845,7 +1858,7 @@ dbR/BfbVcA/mWdH9KdCzll2hKKb+KbBz7veKu91TvH8BrMDQUw==
         Hue[0.1421359549995791, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[0.28627450980392155`, 1., 0.00392156862745098]], 
         LineBox[CompressedData["
 1:eJw1kwlMVFcUhqdAwoitSx3KUjUMTFuhCKKURSn8IsMmOjDDLJEiCCKILAao
@@ -1878,14 +1891,15 @@ R3Mu658cBWelbe/0sfrl4PRe4P2cz+ZHgVmRvqs6jfyAAnes4m1qM8gvpQKK
      PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
      AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {True, True}, AxesLabel -> {
-       FormBox["\"Time step\"", TraditionalForm], 
+       FormBox["\"Frame\"", TraditionalForm], 
        FormBox["\"2DFS\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
-     DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
+     BaseStyle -> {FontSize -> 20}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
        GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
-     FormBox["\"2D feature saliency: naive TF\"", TraditionalForm], 
+     FormBox["\"2DFS: not optimized\"", TraditionalForm], 
      PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
      PlotRangePadding -> {{
         Scaled[0.02], 
@@ -1907,7 +1921,7 @@ R3Mu658cBWelbe/0sfrl4PRe4P2cz+ZHgVmRvqs6jfyAAnes4m1qM8gvpQKK
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[0.5058823529411764, 0.3529411764705882, 1.]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -1916,7 +1930,7 @@ R3Mu658cBWelbe/0sfrl4PRe4P2cz+ZHgVmRvqs6jfyAAnes4m1qM8gvpQKK
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[
                     0.5058823529411764, 0.3529411764705882, 1.]], {}}}, 
                     AspectRatio -> Full, ImageSize -> {20, 10}, 
@@ -1929,7 +1943,7 @@ R3Mu658cBWelbe/0sfrl4PRe4P2cz+ZHgVmRvqs6jfyAAnes4m1qM8gvpQKK
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[1., 0., 0.]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -1938,7 +1952,7 @@ R3Mu658cBWelbe/0sfrl4PRe4P2cz+ZHgVmRvqs6jfyAAnes4m1qM8gvpQKK
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[1., 0., 0.]], {}}}, AspectRatio -> Full, 
                     ImageSize -> {20, 10}, PlotRangePadding -> None, 
                     ImagePadding -> Automatic, 
@@ -1950,7 +1964,7 @@ R3Mu658cBWelbe/0sfrl4PRe4P2cz+ZHgVmRvqs6jfyAAnes4m1qM8gvpQKK
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[0.28627450980392155`, 1., 0.00392156862745098]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -1959,7 +1973,7 @@ R3Mu658cBWelbe/0sfrl4PRe4P2cz+ZHgVmRvqs6jfyAAnes4m1qM8gvpQKK
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[
                     0.28627450980392155`, 1., 0.00392156862745098]], {}}}, 
                     AspectRatio -> Full, ImageSize -> {20, 10}, 
@@ -1992,6 +2006,7 @@ R3Mu658cBWelbe/0sfrl4PRe4P2cz+ZHgVmRvqs6jfyAAnes4m1qM8gvpQKK
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -2037,6 +2052,7 @@ R3Mu658cBWelbe/0sfrl4PRe4P2cz+ZHgVmRvqs6jfyAAnes4m1qM8gvpQKK
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -2079,6 +2095,7 @@ R3Mu658cBWelbe/0sfrl4PRe4P2cz+ZHgVmRvqs6jfyAAnes4m1qM8gvpQKK
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -2159,7 +2176,8 @@ R3Mu658cBWelbe/0sfrl4PRe4P2cz+ZHgVmRvqs6jfyAAnes4m1qM8gvpQKK
   3.657285766355687*^9, 3.657286328198668*^9, 3.6572863585792074`*^9, {
    3.6572864118180695`*^9, 3.6572864565513515`*^9}, 3.6572864977472925`*^9, 
    3.6572866015979247`*^9, 3.6574845472542925`*^9, 3.6574845828282986`*^9, 
-   3.6574851027787676`*^9, 3.6574852212971845`*^9}]
+   3.6574851027787676`*^9, 3.6574852212971845`*^9, 3.6650666948820133`*^9, 
+   3.665066762006611*^9, 3.6650669524509916`*^9, 3.665077566849492*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -2275,16 +2293,16 @@ z+9j82BA4oLeJ0/eL/0XHyLA1w==
      PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
      AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {True, True}, AxesLabel -> {
-       FormBox["\"Time step\"", TraditionalForm], 
+       FormBox["\"Frame\"", TraditionalForm], 
        FormBox["\"Saliency\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
      DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
        GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
-     FormBox["\"Feature saliency: TF optimized for first frame\"", 
-       TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> 
-     True, PlotRangePadding -> {{
+     FormBox["\"Feature saliency: statically optimized\"", TraditionalForm], 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     PlotRangePadding -> {{
         Scaled[0.02], 
         Scaled[0.02]}, {0, 0}}, Ticks -> {Automatic, Automatic}}],FormBox[
     FormBox[
@@ -2556,7 +2574,8 @@ z+9j82BA4oLeJ0/eL/0XHyLA1w==
   3.657285948196147*^9, 3.657286328277709*^9, 3.6572863586715546`*^9, {
    3.65728641190265*^9, 3.657286456636306*^9}, 3.657286497832843*^9, 
    3.6572866016889167`*^9, 3.657484547325791*^9, 3.6574845829018393`*^9, 
-   3.657485102860349*^9, 3.657485221370696*^9}]
+   3.657485102860349*^9, 3.657485221370696*^9, 3.665066694922842*^9, 
+   3.665066762043586*^9, 3.6650669524985156`*^9, 3.665077566927164*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2665,16 +2684,16 @@ dUdL0Vzkv2F+w34=
      PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
      AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {True, True}, AxesLabel -> {
-       FormBox["\"Time step\"", TraditionalForm], 
+       FormBox["\"Frame\"", TraditionalForm], 
        FormBox["\"FV\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
      DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
        GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
-     FormBox["\"Feature visibility: TF optimized for first frame\"", 
-       TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> 
-     True, PlotRangePadding -> {{
+     FormBox["\"Feature visibility: statically optimized\"", TraditionalForm],
+      PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     PlotRangePadding -> {{
         Scaled[0.02], 
         Scaled[0.02]}, {0, 0}}, Ticks -> {Automatic, Automatic}}],FormBox[
     FormBox[
@@ -2946,7 +2965,8 @@ dUdL0Vzkv2F+w34=
   3.6572858413963995`*^9, 3.6572863283627453`*^9, 3.6572863587590156`*^9, {
    3.6572864119906855`*^9, 3.657286456730821*^9}, 3.6572864979222765`*^9, 
    3.6572866017804794`*^9, 3.6574845474458704`*^9, 3.657484582993822*^9, 
-   3.657485102945817*^9, 3.6574852214572134`*^9}]
+   3.657485102945817*^9, 3.6574852214572134`*^9, 3.6650666949773827`*^9, 
+   3.665066762089572*^9, 3.6650669525470195`*^9, 3.6650775669871416`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2961,7 +2981,7 @@ Cell[BoxData[
         Hue[0.67, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[0.5058823529411764, 0.3529411764705882, 1.]], 
         LineBox[CompressedData["
 1:eJw9lAtQVGUYhlcuRjcDJwgJFYspWAzl4gIC8S7ssrgsC+yFXZkiwQCDIXCK
@@ -2992,7 +3012,7 @@ WzY9bgv5GynT3Mo=
         Hue[0.9060679774997897, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[1., 0., 0.]], 
         LineBox[CompressedData["
 1:eJw9lAtMU1cYx5uyuE2QdgbDU1f2qGxUhjKtINB/eRYEWm6fbmVhDTZSRGCT
@@ -3022,7 +3042,7 @@ SOcmZf8CwKfT+w==
         Hue[0.1421359549995791, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[0.28627450980392155`, 1., 0.00392156862745098]], 
         LineBox[CompressedData["
 1:eJw9lAtQlGUUhgFbAtlMCEoY5CaCFjpy3ZVWeF1cWNhd2BsLJDAKKZcgpjQG
@@ -3055,16 +3075,17 @@ C6mCzkU=
      PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
      AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {True, True}, AxesLabel -> {
-       FormBox["\"Time step\"", TraditionalForm], 
+       FormBox["\"Frame\"", TraditionalForm], 
        FormBox["\"VWS\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
-     DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
+     BaseStyle -> {FontSize -> 20}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
        GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
-     FormBox["\"Visibility-weighted saliency (VWS): TF optimized for first \
-frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}}, 
-     PlotRangeClipping -> True, PlotRangePadding -> {{
+     FormBox["\"VWS: statically optimized\"", TraditionalForm], 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     PlotRangePadding -> {{
         Scaled[0.02], 
         Scaled[0.02]}, {0, 0}}, Ticks -> {Automatic, Automatic}}],FormBox[
     FormBox[
@@ -3084,7 +3105,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[0.5058823529411764, 0.3529411764705882, 1.]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -3093,7 +3114,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[
                     0.5058823529411764, 0.3529411764705882, 1.]], {}}}, 
                     AspectRatio -> Full, ImageSize -> {20, 10}, 
@@ -3106,7 +3127,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[1., 0., 0.]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -3115,7 +3136,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[1., 0., 0.]], {}}}, AspectRatio -> Full, 
                     ImageSize -> {20, 10}, PlotRangePadding -> None, 
                     ImagePadding -> Automatic, 
@@ -3127,7 +3148,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[0.28627450980392155`, 1., 0.00392156862745098]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -3136,7 +3157,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[
                     0.28627450980392155`, 1., 0.00392156862745098]], {}}}, 
                     AspectRatio -> Full, ImageSize -> {20, 10}, 
@@ -3169,6 +3190,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -3214,6 +3236,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -3256,6 +3279,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -3336,7 +3360,8 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
   3.657285844422477*^9, 3.657286328459792*^9, 3.657286358846503*^9, {
    3.6572864120807047`*^9, 3.657286456811878*^9}, 3.6572864980048285`*^9, 
    3.6572866018659716`*^9, 3.6574845475373335`*^9, 3.657484583082348*^9, 
-   3.657485103028333*^9, 3.6574852215357523`*^9}]
+   3.657485103028333*^9, 3.6574852215357523`*^9, 3.665066695033388*^9, 
+   3.6650667621405954`*^9, 3.665066952596994*^9, 3.665077567051367*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3351,7 +3376,7 @@ Cell[BoxData[
         Hue[0.67, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[0.5058823529411764, 0.3529411764705882, 1.]], 
         LineBox[CompressedData["
 1:eJw9lAtMk2cUhgsO3UTQ4MK4OYUpKGwwuTkY2BdLQcqtLW1/AojCYAQHQrKY
@@ -3381,7 +3406,7 @@ N7w0hO4fj5IB9++EH1H+8cjqOuGW/4TlycejhTvH9dUPC/8GI8TZ0g==
         Hue[0.9060679774997897, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[1., 0., 0.]], 
         LineBox[CompressedData["
 1:eJw1kwtQVGUYhhk1gVoKRBAMi5XLEHfwgsv1ZRcWFlj2yu7iapd1TEVHmlLc
@@ -3411,7 +3436,7 @@ ur0u92P+ASGz2/s=
         Hue[0.1421359549995791, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[0.28627450980392155`, 1., 0.00392156862745098]], 
         LineBox[CompressedData["
 1:eJw9lAtMU3cUxstANCihKzIZYngzxpD3SwT5eEMpQgulHU5IecWZ0Q3MMCji
@@ -3444,16 +3469,17 @@ w19JhzsOnaX9kuPjS8+qi32ZX5DDmHfuobk1+x5xL9jUXNP5xkT4f1CI0nI=
      PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
      AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {True, True}, AxesLabel -> {
-       FormBox["\"Time step\"", TraditionalForm], 
+       FormBox["\"Frame\"", TraditionalForm], 
        FormBox["\"2DFS\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
-     DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
+     BaseStyle -> {FontSize -> 20}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
        GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
-     FormBox["\"2D feature saliency: TF optimized for first frame\"", 
-       TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> 
-     True, PlotRangePadding -> {{
+     FormBox["\"2DFS: statically optimized\"", TraditionalForm], 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     PlotRangePadding -> {{
         Scaled[0.02], 
         Scaled[0.02]}, {0, 0}}, Ticks -> {Automatic, Automatic}}],FormBox[
     FormBox[
@@ -3473,7 +3499,7 @@ w19JhzsOnaX9kuPjS8+qi32ZX5DDmHfuobk1+x5xL9jUXNP5xkT4f1CI0nI=
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[0.5058823529411764, 0.3529411764705882, 1.]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -3482,7 +3508,7 @@ w19JhzsOnaX9kuPjS8+qi32ZX5DDmHfuobk1+x5xL9jUXNP5xkT4f1CI0nI=
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[
                     0.5058823529411764, 0.3529411764705882, 1.]], {}}}, 
                     AspectRatio -> Full, ImageSize -> {20, 10}, 
@@ -3495,7 +3521,7 @@ w19JhzsOnaX9kuPjS8+qi32ZX5DDmHfuobk1+x5xL9jUXNP5xkT4f1CI0nI=
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[1., 0., 0.]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -3504,7 +3530,7 @@ w19JhzsOnaX9kuPjS8+qi32ZX5DDmHfuobk1+x5xL9jUXNP5xkT4f1CI0nI=
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[1., 0., 0.]], {}}}, AspectRatio -> Full, 
                     ImageSize -> {20, 10}, PlotRangePadding -> None, 
                     ImagePadding -> Automatic, 
@@ -3516,7 +3542,7 @@ w19JhzsOnaX9kuPjS8+qi32ZX5DDmHfuobk1+x5xL9jUXNP5xkT4f1CI0nI=
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[0.28627450980392155`, 1., 0.00392156862745098]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -3525,7 +3551,7 @@ w19JhzsOnaX9kuPjS8+qi32ZX5DDmHfuobk1+x5xL9jUXNP5xkT4f1CI0nI=
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[
                     0.28627450980392155`, 1., 0.00392156862745098]], {}}}, 
                     AspectRatio -> Full, ImageSize -> {20, 10}, 
@@ -3558,6 +3584,7 @@ w19JhzsOnaX9kuPjS8+qi32ZX5DDmHfuobk1+x5xL9jUXNP5xkT4f1CI0nI=
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -3603,6 +3630,7 @@ w19JhzsOnaX9kuPjS8+qi32ZX5DDmHfuobk1+x5xL9jUXNP5xkT4f1CI0nI=
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -3645,6 +3673,7 @@ w19JhzsOnaX9kuPjS8+qi32ZX5DDmHfuobk1+x5xL9jUXNP5xkT4f1CI0nI=
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -3725,7 +3754,8 @@ w19JhzsOnaX9kuPjS8+qi32ZX5DDmHfuobk1+x5xL9jUXNP5xkT4f1CI0nI=
   3.6572858475418186`*^9, 3.657286328541789*^9, 3.657286358941018*^9, {
    3.6572864121711626`*^9, 3.6572864568998547`*^9}, 3.657286498097171*^9, 
    3.6572866019529505`*^9, 3.657484547730838*^9, 3.6574845831723423`*^9, 
-   3.657485103120346*^9, 3.657485221612723*^9}]
+   3.657485103120346*^9, 3.657485221612723*^9, 3.6650666951243644`*^9, 
+   3.6650667621940823`*^9, 3.665066952683001*^9, 3.665077567119863*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -3841,16 +3871,16 @@ z+9j82BA4oLeJ0/eL/0XHyLA1w==
      PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
      AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {True, True}, AxesLabel -> {
-       FormBox["\"Time step\"", TraditionalForm], 
+       FormBox["\"Frame\"", TraditionalForm], 
        FormBox["\"Saliency\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
      DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
        GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
-     FormBox["\"Feature saliency: TF optimized for each frame\"", 
-       TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> 
-     True, PlotRangePadding -> {{
+     FormBox["\"Feature saliency: dynamically optimized\"", TraditionalForm], 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     PlotRangePadding -> {{
         Scaled[0.02], 
         Scaled[0.02]}, {0, 0}}, Ticks -> {Automatic, Automatic}}],FormBox[
     FormBox[
@@ -4122,7 +4152,8 @@ z+9j82BA4oLeJ0/eL/0XHyLA1w==
   3.6572859566471243`*^9, 3.6572863286257486`*^9, 3.6572863590310273`*^9, {
    3.6572864122631736`*^9, 3.6572864569814034`*^9}, 3.6572864981797476`*^9, 
    3.657286602047984*^9, 3.6574845478203673`*^9, 3.6574845832903576`*^9, 
-   3.6574851032048197`*^9, 3.6574852217032547`*^9}]
+   3.6574851032048197`*^9, 3.6574852217032547`*^9, 3.665066695210876*^9, 
+   3.665066762242758*^9, 3.6650669527315607`*^9, 3.665077567179639*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4229,14 +4260,14 @@ gUFo80HDJXa/QoMF45q6/j7GnAbGMV+HFaJbkn8BxeXOVQ==
      PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
      AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {True, True}, AxesLabel -> {
-       FormBox["\"Time step\"", TraditionalForm], 
+       FormBox["\"Frame\"", TraditionalForm], 
        FormBox["\"FV\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
      DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
        GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
-     FormBox["\"Feature visibility: TF optimized for each frame\"", 
+     FormBox["\"Feature visibility: dynamically optimized\"", 
        TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> 
      True, PlotRangePadding -> {{
         Scaled[0.02], 
@@ -4510,7 +4541,8 @@ gUFo80HDJXa/QoMF45q6/j7GnAbGMV+HFaJbkn8BxeXOVQ==
   3.657285888991547*^9, 3.657286328709764*^9, 3.657286359136572*^9, {
    3.657286412345216*^9, 3.6572864570668635`*^9}, 3.6572864982637177`*^9, 
    3.6572866021329737`*^9, 3.6574845479043503`*^9, 3.65748458338887*^9, 
-   3.6574851032818584`*^9, 3.6574852217833204`*^9}]
+   3.6574851032818584`*^9, 3.6574852217833204`*^9, 3.6650666953005533`*^9, 
+   3.6650667622921143`*^9, 3.66506695277754*^9, 3.665077567233377*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4525,7 +4557,7 @@ Cell[BoxData[
         Hue[0.67, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[0.5058823529411764, 0.3529411764705882, 1.]], 
         LineBox[CompressedData["
 1:eJw9lHtQVGUYxpcNkeGimIwhkJIDDIkwgEtQXPZxweW+7LLsLg2XBIYuDlPT
@@ -4555,7 +4587,7 @@ Ol9IgkAlL7zjTuc9CU33K77s9Zjk/wNPdt/C
         Hue[0.9060679774997897, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[1., 0., 0.]], 
         LineBox[CompressedData["
 1:eJw9lA1Qk3UcxzmvPC7QA4SSCQTmqbwkyJC1Dd13vI23ufcx2QUBmYgpQ8KJ
@@ -4585,7 +4617,7 @@ zP9mRPAPfADesg==
         Hue[0.1421359549995791, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[0.28627450980392155`, 1., 0.00392156862745098]], 
         LineBox[CompressedData["
 1:eJw9lH9Q03UYxyd3DTzDCGgKGCEQxwFjDAUnIHvDBqgg7DezuEwODDKaJ38g
@@ -4617,16 +4649,17 @@ XovKd0XV3Bfv938Bh5zbzg==
      PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
      AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {True, True}, AxesLabel -> {
-       FormBox["\"Time step\"", TraditionalForm], 
+       FormBox["\"Frame\"", TraditionalForm], 
        FormBox["\"VWS\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
-     DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
+     BaseStyle -> {FontSize -> 20}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
        GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
-     FormBox["\"Visibility-weighted saliency (VWS): TF optimized for each \
-frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}}, 
-     PlotRangeClipping -> True, PlotRangePadding -> {{
+     FormBox["\"VWS: dynamically optimized\"", TraditionalForm], 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     PlotRangePadding -> {{
         Scaled[0.02], 
         Scaled[0.02]}, {0, 0}}, Ticks -> {Automatic, Automatic}}],FormBox[
     FormBox[
@@ -4646,7 +4679,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[0.5058823529411764, 0.3529411764705882, 1.]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -4655,7 +4688,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[
                     0.5058823529411764, 0.3529411764705882, 1.]], {}}}, 
                     AspectRatio -> Full, ImageSize -> {20, 10}, 
@@ -4668,7 +4701,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[1., 0., 0.]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -4677,7 +4710,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[1., 0., 0.]], {}}}, AspectRatio -> Full, 
                     ImageSize -> {20, 10}, PlotRangePadding -> None, 
                     ImagePadding -> Automatic, 
@@ -4689,7 +4722,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[0.28627450980392155`, 1., 0.00392156862745098]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -4698,7 +4731,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[
                     0.28627450980392155`, 1., 0.00392156862745098]], {}}}, 
                     AspectRatio -> Full, ImageSize -> {20, 10}, 
@@ -4731,6 +4764,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -4776,6 +4810,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -4818,6 +4853,7 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -4898,7 +4934,8 @@ frame\"", TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}},
   3.657285891999015*^9, 3.6572863288068004`*^9, 3.657286359233052*^9, {
    3.6572864124317265`*^9, 3.657286457177413*^9}, 3.65728649834525*^9, 
    3.6572866022185516`*^9, 3.657484547989363*^9, 3.6574845834703803`*^9, 
-   3.657485103360901*^9, 3.657485221862777*^9}]
+   3.657485103360901*^9, 3.657485221862777*^9, 3.665066695354432*^9, 
+   3.6650667623416004`*^9, 3.665066952825556*^9, 3.665077567307453*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4913,7 +4950,7 @@ Cell[BoxData[
         Hue[0.67, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[0.5058823529411764, 0.3529411764705882, 1.]], 
         LineBox[CompressedData["
 1:eJw9kw0wm3ccx6NDV9RZ6yV9G33Bau2GsijVfIUkJCKRCNojhjpnvdV67cbc
@@ -4943,7 +4980,7 @@ W43VqYn6T8bK7daWHU4sHpKh97J3c+PTvSbDIus66q4ZFf4DKbHTFg==
         Hue[0.9060679774997897, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[1., 0., 0.]], 
         LineBox[CompressedData["
 1:eJw9k3tQlGUUxhcYBhkgAhyIKSgiLi6wgoZyEfYBFliW215ZgmGBhbVIMBkS
@@ -4973,7 +5010,7 @@ iLDb0B0wR/UzsbzfIrt9aZL/D+IO1rI=
         Hue[0.1421359549995791, 0.6, 0.6], 
         Directive[
          PointSize[0.011111111111111112`], 
-         AbsoluteThickness[1.6], 
+         AbsoluteThickness[1.6], FontSize -> 20, 
          RGBColor[0.28627450980392155`, 1., 0.00392156862745098]], 
         LineBox[CompressedData["
 1:eJw9lAtMU3cUxgs0GzDGOjJTFDcRkYmFTRhDkEc/QF5FoA8KqNsizRDGMziB
@@ -5006,16 +5043,17 @@ dti/
      PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
      AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
      Axes -> {True, True}, AxesLabel -> {
-       FormBox["\"Time step\"", TraditionalForm], 
+       FormBox["\"Frame\"", TraditionalForm], 
        FormBox["\"2DFS\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
-     DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
+     BaseStyle -> {FontSize -> 20}, DisplayFunction :> Identity, 
+     Frame -> {{False, False}, {False, False}}, 
      FrameLabel -> {{None, None}, {None, None}}, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
      GridLines -> {None, None}, GridLinesStyle -> Directive[
        GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
-     FormBox["\"2D feature saliency: TF optimized for each frame\"", 
-       TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> 
-     True, PlotRangePadding -> {{
+     FormBox["\"2DFS: dynamically optimized\"", TraditionalForm], 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     PlotRangePadding -> {{
         Scaled[0.02], 
         Scaled[0.02]}, {0, 0}}, Ticks -> {Automatic, Automatic}}],FormBox[
     FormBox[
@@ -5035,7 +5073,7 @@ dti/
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[0.5058823529411764, 0.3529411764705882, 1.]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -5044,7 +5082,7 @@ dti/
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[
                     0.5058823529411764, 0.3529411764705882, 1.]], {}}}, 
                     AspectRatio -> Full, ImageSize -> {20, 10}, 
@@ -5057,7 +5095,7 @@ dti/
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[1., 0., 0.]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -5066,7 +5104,7 @@ dti/
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[1., 0., 0.]], {}}}, AspectRatio -> Full, 
                     ImageSize -> {20, 10}, PlotRangePadding -> None, 
                     ImagePadding -> Automatic, 
@@ -5078,7 +5116,7 @@ dti/
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[0.28627450980392155`, 1., 0.00392156862745098]], {
                     LineBox[{{0, 10}, {20, 10}}]}}, {
                     Directive[
@@ -5087,7 +5125,7 @@ dti/
                     Opacity[0.3], 
                     GrayLevel[0]]], 
                     PointSize[0.2], 
-                    AbsoluteThickness[1.6], 
+                    AbsoluteThickness[1.6], FontSize -> 20, 
                     RGBColor[
                     0.28627450980392155`, 1., 0.00392156862745098]], {}}}, 
                     AspectRatio -> Full, ImageSize -> {20, 10}, 
@@ -5120,6 +5158,7 @@ dti/
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -5165,6 +5204,7 @@ dti/
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -5207,6 +5247,7 @@ dti/
                    RowBox[{"PointSize", "[", "0.011111111111111112`", "]"}], 
                    ",", 
                    RowBox[{"AbsoluteThickness", "[", "1.6`", "]"}], ",", 
+                   RowBox[{"FontSize", "\[Rule]", "20"}], ",", 
                    InterpretationBox[
                     ButtonBox[
                     TooltipBox[
@@ -5287,7 +5328,8 @@ dti/
   3.657285895248949*^9, 3.657286328875348*^9, 3.6572863593370743`*^9, {
    3.6572864125227575`*^9, 3.657286457254385*^9}, 3.657286498446743*^9, 
    3.657286602310996*^9, 3.6574845480919247`*^9, 3.657484583572893*^9, 
-   3.657485103470358*^9, 3.657485221947271*^9}]
+   3.657485103470358*^9, 3.657485221947271*^9, 3.6650666954168653`*^9, 
+   3.665066762396126*^9, 3.665066952877898*^9, 3.6650775673704224`*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -5299,7 +5341,7 @@ PrintingPageRange->{32000, 32000},
 PrintingOptions->{"Magnification"->1.,
 "PaperOrientation"->"Portrait",
 "PaperSize"->{595.3199999999999, 841.92}},
-FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -5313,70 +5355,70 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2064, 57, 152, "Input"],
-Cell[2625, 79, 17130, 427, 1052, "Input"],
-Cell[19758, 508, 2293, 59, 152, "Input"],
+Cell[558, 20, 2100, 56, 152, "Input"],
+Cell[2661, 78, 17459, 433, 1032, "Input"],
+Cell[20123, 513, 2293, 59, 152, "Input"],
 Cell[CellGroupData[{
-Cell[22076, 571, 304, 5, 63, "Section"],
+Cell[22441, 576, 304, 5, 63, "Section"],
 Cell[CellGroupData[{
-Cell[22405, 580, 118, 1, 43, "Subsection"],
-Cell[22526, 583, 262, 5, 30, "Text"],
+Cell[22770, 585, 118, 1, 43, "Subsection"],
+Cell[22891, 588, 262, 5, 30, "Text"],
 Cell[CellGroupData[{
-Cell[22813, 592, 150, 3, 31, "Input"],
-Cell[22966, 597, 19332, 379, 247, "Output"]
+Cell[23178, 597, 150, 3, 31, "Input"],
+Cell[23331, 602, 19429, 380, 258, "Output"]
 }, Open  ]],
-Cell[42313, 979, 169, 2, 30, "Text"],
+Cell[42775, 985, 169, 2, 30, "Text"],
 Cell[CellGroupData[{
-Cell[42507, 985, 199, 4, 31, "Input"],
-Cell[42709, 991, 19350, 380, 248, "Output"]
+Cell[42969, 991, 199, 4, 31, "Input"],
+Cell[43171, 997, 19453, 382, 259, "Output"]
 }, Open  ]],
-Cell[62074, 1374, 209, 2, 30, "Text"],
+Cell[62639, 1382, 209, 2, 30, "Text"],
 Cell[CellGroupData[{
-Cell[62308, 1380, 150, 3, 31, "Input"],
-Cell[62461, 1385, 19347, 380, 248, "Output"]
+Cell[62873, 1388, 150, 3, 31, "Input"],
+Cell[63026, 1393, 19786, 385, 266, "Output"]
 }, Open  ]],
-Cell[81823, 1768, 253, 5, 30, "Text"],
+Cell[82827, 1781, 253, 5, 30, "Text"],
 Cell[CellGroupData[{
-Cell[82101, 1777, 150, 3, 31, "Input"],
-Cell[82254, 1782, 19352, 379, 248, "Output"]
+Cell[83105, 1790, 150, 3, 31, "Input"],
+Cell[83258, 1795, 19807, 384, 266, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[101655, 2167, 160, 3, 43, "Subsection"],
+Cell[103114, 2185, 160, 3, 43, "Subsection"],
 Cell[CellGroupData[{
-Cell[101840, 2174, 150, 3, 31, "Input"],
-Cell[101993, 2179, 19354, 379, 247, "Output"]
+Cell[103299, 2192, 150, 3, 31, "Input"],
+Cell[103452, 2197, 19434, 380, 258, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[121384, 2563, 150, 3, 31, "Input"],
-Cell[121537, 2568, 19354, 380, 248, "Output"]
+Cell[122923, 2582, 150, 3, 31, "Input"],
+Cell[123076, 2587, 19438, 381, 259, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[140928, 2953, 152, 3, 31, "Input"],
-Cell[141083, 2958, 19363, 380, 234, "Output"]
+Cell[142551, 2973, 152, 3, 31, "Input"],
+Cell[142706, 2978, 19791, 385, 266, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[160483, 3343, 152, 3, 31, "Input"],
-Cell[160638, 3348, 19326, 379, 248, "Output"]
+Cell[162534, 3368, 152, 3, 31, "Input"],
+Cell[162689, 3373, 19766, 384, 266, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[180013, 3733, 203, 3, 43, "Subsection"],
+Cell[182504, 3763, 203, 3, 43, "Subsection"],
 Cell[CellGroupData[{
-Cell[180241, 3740, 147, 3, 31, "Input"],
-Cell[180391, 3745, 19368, 379, 247, "Output"]
+Cell[182732, 3770, 147, 3, 31, "Input"],
+Cell[182882, 3775, 19450, 380, 258, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[199796, 4129, 150, 3, 31, "Input"],
-Cell[199949, 4134, 19290, 378, 248, "Output"]
+Cell[202369, 4160, 150, 3, 31, "Input"],
+Cell[202522, 4165, 19375, 379, 259, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[219276, 4517, 150, 3, 31, "Input"],
-Cell[219429, 4522, 19273, 378, 231, "Output"]
+Cell[221934, 4549, 150, 3, 31, "Input"],
+Cell[222087, 4554, 19703, 383, 266, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[238739, 4905, 150, 3, 31, "Input"],
-Cell[238892, 4910, 19341, 379, 248, "Output"]
+Cell[241827, 4942, 150, 3, 31, "Input"],
+Cell[241980, 4947, 19783, 384, 266, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
