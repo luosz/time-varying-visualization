@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    264203,       5420]
-NotebookOptionsPosition[    261803,       5336]
-NotebookOutlinePosition[    262317,       5356]
-CellTagsIndexPosition[    262274,       5353]
+NotebookDataLength[    272747,       5581]
+NotebookOptionsPosition[    270315,       5496]
+NotebookOutlinePosition[    270858,       5517]
+CellTagsIndexPosition[    270815,       5514]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -373,7 +373,8 @@ saliency.xml\>\""}], ";", "\[IndentingNewLine]",
           RowBox[{"Automatic", ",", 
            RowBox[{"{", 
             RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
-        RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}]}], "]"}]}], ";", 
+        RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}], ",", 
+        RowBox[{"PlotTheme", "\[Rule]", "\"\<Detailed\>\""}]}], "]"}]}], ";", 
      "\[IndentingNewLine]", 
      RowBox[{"plot2", "=", 
       RowBox[{"ListLinePlot", "[", 
@@ -405,7 +406,8 @@ saliency.xml\>\""}], ";", "\[IndentingNewLine]",
           RowBox[{"Automatic", ",", 
            RowBox[{"{", 
             RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
-        RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}]}], "]"}]}], ";", 
+        RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}], ",", 
+        RowBox[{"PlotTheme", "\[Rule]", "\"\<Detailed\>\""}]}], "]"}]}], ";", 
      "\[IndentingNewLine]", 
      RowBox[{"plot3", "=", 
       RowBox[{"ListLinePlot", "[", 
@@ -440,7 +442,8 @@ saliency.xml\>\""}], ";", "\[IndentingNewLine]",
         RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}], ",", 
         RowBox[{"BaseStyle", "\[Rule]", 
          RowBox[{"{", 
-          RowBox[{"FontSize", "\[Rule]", "20"}], "}"}]}]}], "]"}]}], ";", 
+          RowBox[{"FontSize", "\[Rule]", "20"}], "}"}]}], ",", 
+        RowBox[{"PlotTheme", "\[Rule]", "\"\<Detailed\>\""}]}], "]"}]}], ";", 
      "\[IndentingNewLine]", 
      RowBox[{"(*", 
       RowBox[{
@@ -491,7 +494,8 @@ saliencemap\\\\saliencemap.xml\>\""}], ";", "\[IndentingNewLine]",
         RowBox[{"PlotStyle", "\[Rule]", "chartcolors"}], ",", 
         RowBox[{"BaseStyle", "\[Rule]", 
          RowBox[{"{", 
-          RowBox[{"FontSize", "\[Rule]", "20"}], "}"}]}]}], "]"}]}], ";", 
+          RowBox[{"FontSize", "\[Rule]", "20"}], "}"}]}], ",", 
+        RowBox[{"PlotTheme", "\[Rule]", "\"\<Detailed\>\""}]}], "]"}]}], ";", 
      "\[IndentingNewLine]", 
      RowBox[{"{", 
       RowBox[{"plot1", ",", "plot2", ",", "plot3", ",", "plot4"}], "}"}]}]}], 
@@ -509,7 +513,8 @@ saliencemap\\\\saliencemap.xml\>\""}], ";", "\[IndentingNewLine]",
    3.657285031245247*^9, 3.6572851053383846`*^9}, {3.6572854590191393`*^9, 
    3.6572854592218432`*^9}, 3.657286411613004*^9, {3.6650667478264465`*^9, 
    3.665066753058337*^9}, {3.6650669341364985`*^9, 3.6650669441761475`*^9}, {
-   3.6650774906831675`*^9, 3.665077504326048*^9}}],
+   3.6650774906831675`*^9, 3.665077504326048*^9}, {3.676830984371127*^9, 
+   3.676831008664911*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -554,7 +559,7 @@ Cell[BoxData[{
           RowBox[{"chartnames", "[", 
            RowBox[{"[", 
             RowBox[{"First", "@", "#2"}], "]"}], "]"}], "<>", 
-          "\"\<.png\>\""}], ",", "#1"}], "]"}], "&"}], ",", 
+          "\"\<.pdf\>\""}], ",", "#1"}], "]"}], "&"}], ",", 
       RowBox[{"results", "[", 
        RowBox[{"[", "i", "]"}], "]"}]}], "]"}], "\[IndentingNewLine]", ",", 
     RowBox[{"{", 
@@ -570,7 +575,7 @@ Cell[BoxData[{
    3.657484650861184*^9, 3.6574846511932693`*^9}, {3.6574846890246086`*^9, 
    3.6574847812373524`*^9}, {3.6574848142837625`*^9, 
    3.6574848599218187`*^9}, {3.6574849158086014`*^9, 3.657485067172761*^9}, 
-   3.657485227409635*^9}],
+   3.657485227409635*^9, {3.6768309364208117`*^9, 3.676830936655239*^9}}],
 
 Cell[CellGroupData[{
 
@@ -694,17 +699,29 @@ b0TAONr1gWAt03sE0idOltwa6ST/CLRsyTlk4NxF/mooBi8IP9xHdqhRNG/5
 xVgG2wc1rLR57nd8O0X/Aiyay9U=
          "]]}}}, {}}, {DisplayFunction -> Identity, PlotRangePadding -> {{
         Scaled[0.02], 
-        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0, 0}, 
-     PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
-     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
-     Axes -> {True, True}, AxesLabel -> {
+        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0., 0}, 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     ImagePadding -> All, DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {False, False}, 
+     AxesLabel -> {
        FormBox["\"Frame\"", TraditionalForm], 
-       FormBox["\"Saliency\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
-     DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
-     FrameLabel -> {{None, None}, {None, None}}, 
+       FormBox["\"Saliency\"", TraditionalForm]}, AxesOrigin -> {0., 0}, 
+     DisplayFunction :> Identity, Frame -> {{True, True}, {True, True}}, 
+     FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> Automatic, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
-     GridLines -> {None, None}, GridLinesStyle -> Directive[
-       GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
+     GridLines -> {Automatic, Automatic}, GridLinesStyle -> Directive[
+       GrayLevel[0.4, 0.5], 
+       AbsoluteThickness[1], 
+       AbsoluteDashing[{1, 2}]], 
+     Method -> {"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& )}}, PlotLabel -> 
      FormBox["\"Feature saliency: not optimized\"", TraditionalForm], 
      PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
      PlotRangePadding -> {{
@@ -980,7 +997,8 @@ xVgG2wc1rLR57nd8O0X/Aiyay9U=
    3.65728641157399*^9, 3.6572864562978086`*^9}, 3.6572864974887686`*^9, 
    3.6572866013534403`*^9, 3.6574845469802675`*^9, 3.6574845825283113`*^9, 
    3.6574851025417376`*^9, 3.6574852210406866`*^9, 3.6650666947255764`*^9, 
-   3.665066761826586*^9, 3.665066952297207*^9, 3.6650775666098604`*^9}]
+   3.665066761826586*^9, 3.665066952297207*^9, 3.6650775666098604`*^9, 
+   3.6769603447021146`*^9}]
 }, Open  ]],
 
 Cell["The second one is the feature visibility (Wang et al. 2011)", "Text",
@@ -1090,17 +1108,29 @@ Oq39uYKZS4JaecuoTUDz1SXh3ie/3gyLYvdxMuZ3jFip5un+RDKqHQ29JAks
 n4y6QyN7BvI/C/kHViG2Og==
          "]]}}}, {}}, {DisplayFunction -> Identity, PlotRangePadding -> {{
         Scaled[0.02], 
-        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0, 0}, 
-     PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
-     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
-     Axes -> {True, True}, AxesLabel -> {
+        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0., 0}, 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     ImagePadding -> All, DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {False, False}, 
+     AxesLabel -> {
        FormBox["\"Frame\"", TraditionalForm], 
-       FormBox["\"FV\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
-     DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
-     FrameLabel -> {{None, None}, {None, None}}, 
+       FormBox["\"FV\"", TraditionalForm]}, AxesOrigin -> {0., 0}, 
+     DisplayFunction :> Identity, Frame -> {{True, True}, {True, True}}, 
+     FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> Automatic, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
-     GridLines -> {None, None}, GridLinesStyle -> Directive[
-       GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
+     GridLines -> {Automatic, Automatic}, GridLinesStyle -> Directive[
+       GrayLevel[0.4, 0.5], 
+       AbsoluteThickness[1], 
+       AbsoluteDashing[{1, 2}]], 
+     Method -> {"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& )}}, PlotLabel -> 
      FormBox["\"Feature visibility: not optimized\"", TraditionalForm], 
      PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
      PlotRangePadding -> {{
@@ -1377,7 +1407,7 @@ n4y6QyN7BvI/C/kHViG2Og==
    3.657286497570797*^9, 3.65728660142893*^9, 3.657484547096283*^9, 
    3.6574845826597767`*^9, 3.657485102610258*^9, 3.65748522111016*^9, 
    3.6650666947718525`*^9, 3.6650667618795853`*^9, 3.6650669523619623`*^9, 
-   3.665077566668101*^9}]
+   3.665077566668101*^9, 3.676960344776693*^9}]
 }, Open  ]],
 
 Cell["The third one is our visibility-weighted saliency", "Text",
@@ -1486,18 +1516,30 @@ HYy04faJjltkBMPpR37O3sds3oMh+8UlZuogzYs2GG3TM5dOvcnuTyX+Sowv
 jN8JYfdzCLqTKtb05qiF/wIoy72N
          "]]}}}, {}}, {DisplayFunction -> Identity, PlotRangePadding -> {{
         Scaled[0.02], 
-        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0, 0}, 
-     PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
-     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
-     Axes -> {True, True}, AxesLabel -> {
+        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0., 0}, 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     ImagePadding -> All, DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {False, False}, 
+     AxesLabel -> {
        FormBox["\"Frame\"", TraditionalForm], 
-       FormBox["\"VWS\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
+       FormBox["\"VWS\"", TraditionalForm]}, AxesOrigin -> {0., 0}, 
      BaseStyle -> {FontSize -> 20}, DisplayFunction :> Identity, 
-     Frame -> {{False, False}, {False, False}}, 
-     FrameLabel -> {{None, None}, {None, None}}, 
+     Frame -> {{True, True}, {True, True}}, 
+     FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> Automatic, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
-     GridLines -> {None, None}, GridLinesStyle -> Directive[
-       GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
+     GridLines -> {Automatic, Automatic}, GridLinesStyle -> Directive[
+       GrayLevel[0.4, 0.5], 
+       AbsoluteThickness[1], 
+       AbsoluteDashing[{1, 2}]], 
+     Method -> {"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& )}}, PlotLabel -> 
      FormBox["\"VWS: not optimized\"", TraditionalForm], 
      PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
      PlotRangePadding -> {{
@@ -1776,7 +1818,8 @@ jN8JYfdzCLqTKtb05qiF/wIoy72N
    3.657286411726466*^9, 3.657286456465342*^9}, 3.657286497661251*^9, 
    3.657286601506946*^9, 3.6574845471767807`*^9, 3.6574845827263393`*^9, 
    3.657485102691254*^9, 3.657485221206174*^9, 3.665066694806959*^9, 
-   3.6650667619380703`*^9, 3.6650669523984685`*^9, 3.6650775667351885`*^9}]
+   3.6650667619380703`*^9, 3.6650669523984685`*^9, 3.6650775667351885`*^9, 
+   3.6769603448127203`*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -1887,18 +1930,30 @@ R3Mu658cBWelbe/0sfrl4PRe4P2cz+ZHgVmRvqs6jfyAAnes4m1qM8gvpQKK
 +QP3Gjb0+v0D7uXSFA==
          "]]}}}, {}}, {DisplayFunction -> Identity, PlotRangePadding -> {{
         Scaled[0.02], 
-        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0, 0}, 
-     PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
-     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
-     Axes -> {True, True}, AxesLabel -> {
+        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0., 0}, 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     ImagePadding -> All, DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {False, False}, 
+     AxesLabel -> {
        FormBox["\"Frame\"", TraditionalForm], 
-       FormBox["\"2DFS\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
+       FormBox["\"2DFS\"", TraditionalForm]}, AxesOrigin -> {0., 0}, 
      BaseStyle -> {FontSize -> 20}, DisplayFunction :> Identity, 
-     Frame -> {{False, False}, {False, False}}, 
-     FrameLabel -> {{None, None}, {None, None}}, 
+     Frame -> {{True, True}, {True, True}}, 
+     FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> Automatic, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
-     GridLines -> {None, None}, GridLinesStyle -> Directive[
-       GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
+     GridLines -> {Automatic, Automatic}, GridLinesStyle -> Directive[
+       GrayLevel[0.4, 0.5], 
+       AbsoluteThickness[1], 
+       AbsoluteDashing[{1, 2}]], 
+     Method -> {"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& )}}, PlotLabel -> 
      FormBox["\"2DFS: not optimized\"", TraditionalForm], 
      PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
      PlotRangePadding -> {{
@@ -2177,7 +2232,8 @@ R3Mu658cBWelbe/0sfrl4PRe4P2cz+ZHgVmRvqs6jfyAAnes4m1qM8gvpQKK
    3.6572864118180695`*^9, 3.6572864565513515`*^9}, 3.6572864977472925`*^9, 
    3.6572866015979247`*^9, 3.6574845472542925`*^9, 3.6574845828282986`*^9, 
    3.6574851027787676`*^9, 3.6574852212971845`*^9, 3.6650666948820133`*^9, 
-   3.665066762006611*^9, 3.6650669524509916`*^9, 3.665077566849492*^9}]
+   3.665066762006611*^9, 3.6650669524509916`*^9, 3.665077566849492*^9, 
+   3.676960344853877*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -2289,17 +2345,29 @@ SW/oEZjjnurmwvyuh8j4YW3dT/2Ur0cA1i17JWiA8g2YEPs51ZsoDgMK35s1
 z+9j82BA4oLeJ0/eL/0XHyLA1w==
          "]]}}}, {}}, {DisplayFunction -> Identity, PlotRangePadding -> {{
         Scaled[0.02], 
-        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0, 0}, 
-     PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
-     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
-     Axes -> {True, True}, AxesLabel -> {
+        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0., 0}, 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     ImagePadding -> All, DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {False, False}, 
+     AxesLabel -> {
        FormBox["\"Frame\"", TraditionalForm], 
-       FormBox["\"Saliency\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
-     DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
-     FrameLabel -> {{None, None}, {None, None}}, 
+       FormBox["\"Saliency\"", TraditionalForm]}, AxesOrigin -> {0., 0}, 
+     DisplayFunction :> Identity, Frame -> {{True, True}, {True, True}}, 
+     FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> Automatic, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
-     GridLines -> {None, None}, GridLinesStyle -> Directive[
-       GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
+     GridLines -> {Automatic, Automatic}, GridLinesStyle -> Directive[
+       GrayLevel[0.4, 0.5], 
+       AbsoluteThickness[1], 
+       AbsoluteDashing[{1, 2}]], 
+     Method -> {"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& )}}, PlotLabel -> 
      FormBox["\"Feature saliency: statically optimized\"", TraditionalForm], 
      PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
      PlotRangePadding -> {{
@@ -2575,7 +2643,8 @@ z+9j82BA4oLeJ0/eL/0XHyLA1w==
    3.65728641190265*^9, 3.657286456636306*^9}, 3.657286497832843*^9, 
    3.6572866016889167`*^9, 3.657484547325791*^9, 3.6574845829018393`*^9, 
    3.657485102860349*^9, 3.657485221370696*^9, 3.665066694922842*^9, 
-   3.665066762043586*^9, 3.6650669524985156`*^9, 3.665077566927164*^9}]
+   3.665066762043586*^9, 3.6650669524985156`*^9, 3.665077566927164*^9, 
+   3.676960344918463*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2680,17 +2749,29 @@ w5hTIuofs8uvzlK+OiVKKnwq86Rs3qajs3x4ZaOU5ivSISp7fs3fnZhLh2C5
 dUdL0Vzkv2F+w34=
          "]]}}}, {}}, {DisplayFunction -> Identity, PlotRangePadding -> {{
         Scaled[0.02], 
-        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0, 0}, 
-     PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
-     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
-     Axes -> {True, True}, AxesLabel -> {
+        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0., 0}, 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     ImagePadding -> All, DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {False, False}, 
+     AxesLabel -> {
        FormBox["\"Frame\"", TraditionalForm], 
-       FormBox["\"FV\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
-     DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
-     FrameLabel -> {{None, None}, {None, None}}, 
+       FormBox["\"FV\"", TraditionalForm]}, AxesOrigin -> {0., 0}, 
+     DisplayFunction :> Identity, Frame -> {{True, True}, {True, True}}, 
+     FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> Automatic, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
-     GridLines -> {None, None}, GridLinesStyle -> Directive[
-       GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
+     GridLines -> {Automatic, Automatic}, GridLinesStyle -> Directive[
+       GrayLevel[0.4, 0.5], 
+       AbsoluteThickness[1], 
+       AbsoluteDashing[{1, 2}]], 
+     Method -> {"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& )}}, PlotLabel -> 
      FormBox["\"Feature visibility: statically optimized\"", TraditionalForm],
       PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
      PlotRangePadding -> {{
@@ -2966,7 +3047,8 @@ dUdL0Vzkv2F+w34=
    3.6572864119906855`*^9, 3.657286456730821*^9}, 3.6572864979222765`*^9, 
    3.6572866017804794`*^9, 3.6574845474458704`*^9, 3.657484582993822*^9, 
    3.657485102945817*^9, 3.6574852214572134`*^9, 3.6650666949773827`*^9, 
-   3.665066762089572*^9, 3.6650669525470195`*^9, 3.6650775669871416`*^9}]
+   3.665066762089572*^9, 3.6650669525470195`*^9, 3.6650775669871416`*^9, 
+   3.6769603449539843`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3071,18 +3153,30 @@ es+y/Rti0Nrc0b6siN6nsVjXej455UcWRywCd+Y6z68nv8Ri7ssYtw8q7wX/
 C6mCzkU=
          "]]}}}, {}}, {DisplayFunction -> Identity, PlotRangePadding -> {{
         Scaled[0.02], 
-        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0, 0}, 
-     PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
-     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
-     Axes -> {True, True}, AxesLabel -> {
+        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0., 0}, 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     ImagePadding -> All, DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {False, False}, 
+     AxesLabel -> {
        FormBox["\"Frame\"", TraditionalForm], 
-       FormBox["\"VWS\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
+       FormBox["\"VWS\"", TraditionalForm]}, AxesOrigin -> {0., 0}, 
      BaseStyle -> {FontSize -> 20}, DisplayFunction :> Identity, 
-     Frame -> {{False, False}, {False, False}}, 
-     FrameLabel -> {{None, None}, {None, None}}, 
+     Frame -> {{True, True}, {True, True}}, 
+     FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> Automatic, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
-     GridLines -> {None, None}, GridLinesStyle -> Directive[
-       GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
+     GridLines -> {Automatic, Automatic}, GridLinesStyle -> Directive[
+       GrayLevel[0.4, 0.5], 
+       AbsoluteThickness[1], 
+       AbsoluteDashing[{1, 2}]], 
+     Method -> {"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& )}}, PlotLabel -> 
      FormBox["\"VWS: statically optimized\"", TraditionalForm], 
      PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
      PlotRangePadding -> {{
@@ -3361,7 +3455,8 @@ C6mCzkU=
    3.6572864120807047`*^9, 3.657286456811878*^9}, 3.6572864980048285`*^9, 
    3.6572866018659716`*^9, 3.6574845475373335`*^9, 3.657484583082348*^9, 
    3.657485103028333*^9, 3.6574852215357523`*^9, 3.665066695033388*^9, 
-   3.6650667621405954`*^9, 3.665066952596994*^9, 3.665077567051367*^9}]
+   3.6650667621405954`*^9, 3.665066952596994*^9, 3.665077567051367*^9, 
+   3.676960345025481*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3465,18 +3560,30 @@ w19JhzsOnaX9kuPjS8+qi32ZX5DDmHfuobk1+x5xL9jUXNP5xkT4f1CI0nI=
 
          "]]}}}, {}}, {DisplayFunction -> Identity, PlotRangePadding -> {{
         Scaled[0.02], 
-        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0, 0}, 
-     PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
-     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
-     Axes -> {True, True}, AxesLabel -> {
+        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0., 0}, 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     ImagePadding -> All, DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {False, False}, 
+     AxesLabel -> {
        FormBox["\"Frame\"", TraditionalForm], 
-       FormBox["\"2DFS\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
+       FormBox["\"2DFS\"", TraditionalForm]}, AxesOrigin -> {0., 0}, 
      BaseStyle -> {FontSize -> 20}, DisplayFunction :> Identity, 
-     Frame -> {{False, False}, {False, False}}, 
-     FrameLabel -> {{None, None}, {None, None}}, 
+     Frame -> {{True, True}, {True, True}}, 
+     FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> Automatic, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
-     GridLines -> {None, None}, GridLinesStyle -> Directive[
-       GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
+     GridLines -> {Automatic, Automatic}, GridLinesStyle -> Directive[
+       GrayLevel[0.4, 0.5], 
+       AbsoluteThickness[1], 
+       AbsoluteDashing[{1, 2}]], 
+     Method -> {"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& )}}, PlotLabel -> 
      FormBox["\"2DFS: statically optimized\"", TraditionalForm], 
      PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
      PlotRangePadding -> {{
@@ -3755,7 +3862,8 @@ w19JhzsOnaX9kuPjS8+qi32ZX5DDmHfuobk1+x5xL9jUXNP5xkT4f1CI0nI=
    3.6572864121711626`*^9, 3.6572864568998547`*^9}, 3.657286498097171*^9, 
    3.6572866019529505`*^9, 3.657484547730838*^9, 3.6574845831723423`*^9, 
    3.657485103120346*^9, 3.657485221612723*^9, 3.6650666951243644`*^9, 
-   3.6650667621940823`*^9, 3.665066952683001*^9, 3.665077567119863*^9}]
+   3.6650667621940823`*^9, 3.665066952683001*^9, 3.665077567119863*^9, 
+   3.6769603450805607`*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -3867,17 +3975,29 @@ SW/oEZjjnurmwvyuh8j4YW3dT/2Ur0cA1i17JWiA8g2YEPs51ZsoDgMK35s1
 z+9j82BA4oLeJ0/eL/0XHyLA1w==
          "]]}}}, {}}, {DisplayFunction -> Identity, PlotRangePadding -> {{
         Scaled[0.02], 
-        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0, 0}, 
-     PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
-     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
-     Axes -> {True, True}, AxesLabel -> {
+        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0., 0}, 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     ImagePadding -> All, DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {False, False}, 
+     AxesLabel -> {
        FormBox["\"Frame\"", TraditionalForm], 
-       FormBox["\"Saliency\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
-     DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
-     FrameLabel -> {{None, None}, {None, None}}, 
+       FormBox["\"Saliency\"", TraditionalForm]}, AxesOrigin -> {0., 0}, 
+     DisplayFunction :> Identity, Frame -> {{True, True}, {True, True}}, 
+     FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> Automatic, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
-     GridLines -> {None, None}, GridLinesStyle -> Directive[
-       GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
+     GridLines -> {Automatic, Automatic}, GridLinesStyle -> Directive[
+       GrayLevel[0.4, 0.5], 
+       AbsoluteThickness[1], 
+       AbsoluteDashing[{1, 2}]], 
+     Method -> {"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& )}}, PlotLabel -> 
      FormBox["\"Feature saliency: dynamically optimized\"", TraditionalForm], 
      PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
      PlotRangePadding -> {{
@@ -4153,7 +4273,8 @@ z+9j82BA4oLeJ0/eL/0XHyLA1w==
    3.6572864122631736`*^9, 3.6572864569814034`*^9}, 3.6572864981797476`*^9, 
    3.657286602047984*^9, 3.6574845478203673`*^9, 3.6574845832903576`*^9, 
    3.6574851032048197`*^9, 3.6574852217032547`*^9, 3.665066695210876*^9, 
-   3.665066762242758*^9, 3.6650669527315607`*^9, 3.665077567179639*^9}]
+   3.665066762242758*^9, 3.6650669527315607`*^9, 3.665077567179639*^9, 
+   3.676960345139371*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4256,17 +4377,29 @@ OxOOp6eOBfOZbs7EtnqvNgcz9UcFvnaxtS6N6q/C+eOCs+JPya9C53XrnhgB
 gUFo80HDJXa/QoMF45q6/j7GnAbGMV+HFaJbkn8BxeXOVQ==
          "]]}}}, {}}, {DisplayFunction -> Identity, PlotRangePadding -> {{
         Scaled[0.02], 
-        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0, 0}, 
-     PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
-     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
-     Axes -> {True, True}, AxesLabel -> {
+        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0., 0}, 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     ImagePadding -> All, DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {False, False}, 
+     AxesLabel -> {
        FormBox["\"Frame\"", TraditionalForm], 
-       FormBox["\"FV\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
-     DisplayFunction :> Identity, Frame -> {{False, False}, {False, False}}, 
-     FrameLabel -> {{None, None}, {None, None}}, 
+       FormBox["\"FV\"", TraditionalForm]}, AxesOrigin -> {0., 0}, 
+     DisplayFunction :> Identity, Frame -> {{True, True}, {True, True}}, 
+     FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> Automatic, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
-     GridLines -> {None, None}, GridLinesStyle -> Directive[
-       GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
+     GridLines -> {Automatic, Automatic}, GridLinesStyle -> Directive[
+       GrayLevel[0.4, 0.5], 
+       AbsoluteThickness[1], 
+       AbsoluteDashing[{1, 2}]], 
+     Method -> {"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& )}}, PlotLabel -> 
      FormBox["\"Feature visibility: dynamically optimized\"", 
        TraditionalForm], PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> 
      True, PlotRangePadding -> {{
@@ -4542,7 +4675,8 @@ gUFo80HDJXa/QoMF45q6/j7GnAbGMV+HFaJbkn8BxeXOVQ==
    3.657286412345216*^9, 3.6572864570668635`*^9}, 3.6572864982637177`*^9, 
    3.6572866021329737`*^9, 3.6574845479043503`*^9, 3.65748458338887*^9, 
    3.6574851032818584`*^9, 3.6574852217833204`*^9, 3.6650666953005533`*^9, 
-   3.6650667622921143`*^9, 3.66506695277754*^9, 3.665077567233377*^9}]
+   3.6650667622921143`*^9, 3.66506695277754*^9, 3.665077567233377*^9, 
+   3.676960345243868*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4645,18 +4779,30 @@ ymcisOiReIHYkIlGH57+nfu0/kzILqVu5dbR/FosFVizvvmd8loUCF4++ONK
 XovKd0XV3Bfv938Bh5zbzg==
          "]]}}}, {}}, {DisplayFunction -> Identity, PlotRangePadding -> {{
         Scaled[0.02], 
-        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0, 0}, 
-     PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
-     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
-     Axes -> {True, True}, AxesLabel -> {
+        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0., 0}, 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     ImagePadding -> All, DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {False, False}, 
+     AxesLabel -> {
        FormBox["\"Frame\"", TraditionalForm], 
-       FormBox["\"VWS\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
+       FormBox["\"VWS\"", TraditionalForm]}, AxesOrigin -> {0., 0}, 
      BaseStyle -> {FontSize -> 20}, DisplayFunction :> Identity, 
-     Frame -> {{False, False}, {False, False}}, 
-     FrameLabel -> {{None, None}, {None, None}}, 
+     Frame -> {{True, True}, {True, True}}, 
+     FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> Automatic, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
-     GridLines -> {None, None}, GridLinesStyle -> Directive[
-       GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
+     GridLines -> {Automatic, Automatic}, GridLinesStyle -> Directive[
+       GrayLevel[0.4, 0.5], 
+       AbsoluteThickness[1], 
+       AbsoluteDashing[{1, 2}]], 
+     Method -> {"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& )}}, PlotLabel -> 
      FormBox["\"VWS: dynamically optimized\"", TraditionalForm], 
      PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
      PlotRangePadding -> {{
@@ -4935,7 +5081,8 @@ XovKd0XV3Bfv938Bh5zbzg==
    3.6572864124317265`*^9, 3.657286457177413*^9}, 3.65728649834525*^9, 
    3.6572866022185516`*^9, 3.657484547989363*^9, 3.6574845834703803`*^9, 
    3.657485103360901*^9, 3.657485221862777*^9, 3.665066695354432*^9, 
-   3.6650667623416004`*^9, 3.665066952825556*^9, 3.665077567307453*^9}]
+   3.6650667623416004`*^9, 3.665066952825556*^9, 3.665077567307453*^9, 
+   3.6769603453114805`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -5039,18 +5186,30 @@ gF/E9Awp8NM+KT9vRf5KRWjNlr+fetL+UxE5YvHX0/eSS4V/UFSg+KpR/A+l
 dti/
          "]]}}}, {}}, {DisplayFunction -> Identity, PlotRangePadding -> {{
         Scaled[0.02], 
-        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0, 0}, 
-     PlotRange -> {{0., 98.}, {0, 1}}, DisplayFunction -> Identity, 
-     AspectRatio -> NCache[GoldenRatio^(-1), 0.6180339887498948], 
-     Axes -> {True, True}, AxesLabel -> {
+        Scaled[0.02]}, {0, 0}}, AxesOrigin -> {0., 0}, 
+     PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
+     ImagePadding -> All, DisplayFunction -> Identity, AspectRatio -> 
+     NCache[GoldenRatio^(-1), 0.6180339887498948], Axes -> {False, False}, 
+     AxesLabel -> {
        FormBox["\"Frame\"", TraditionalForm], 
-       FormBox["\"2DFS\"", TraditionalForm]}, AxesOrigin -> {0, 0}, 
+       FormBox["\"2DFS\"", TraditionalForm]}, AxesOrigin -> {0., 0}, 
      BaseStyle -> {FontSize -> 20}, DisplayFunction :> Identity, 
-     Frame -> {{False, False}, {False, False}}, 
-     FrameLabel -> {{None, None}, {None, None}}, 
+     Frame -> {{True, True}, {True, True}}, 
+     FrameLabel -> {{None, None}, {None, None}}, FrameStyle -> Automatic, 
      FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
-     GridLines -> {None, None}, GridLinesStyle -> Directive[
-       GrayLevel[0.5, 0.4]], Method -> {}, PlotLabel -> 
+     GridLines -> {Automatic, Automatic}, GridLinesStyle -> Directive[
+       GrayLevel[0.4, 0.5], 
+       AbsoluteThickness[1], 
+       AbsoluteDashing[{1, 2}]], 
+     Method -> {"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+            Part[#, 1]], 
+           (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+            Part[#, 2]]}& )}}, PlotLabel -> 
      FormBox["\"2DFS: dynamically optimized\"", TraditionalForm], 
      PlotRange -> {{0., 98.}, {0, 1}}, PlotRangeClipping -> True, 
      PlotRangePadding -> {{
@@ -5329,19 +5488,21 @@ dti/
    3.6572864125227575`*^9, 3.657286457254385*^9}, 3.657286498446743*^9, 
    3.657286602310996*^9, 3.6574845480919247`*^9, 3.657484583572893*^9, 
    3.657485103470358*^9, 3.657485221947271*^9, 3.6650666954168653`*^9, 
-   3.665066762396126*^9, 3.665066952877898*^9, 3.6650775673704224`*^9}]
+   3.665066762396126*^9, 3.665066952877898*^9, 3.6650775673704224`*^9, 
+   3.676960345402484*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1282, 781},
-WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+WindowSize->{1920, 976},
+WindowMargins->{{-9, Automatic}, {Automatic, -9}},
 PrintingCopies->1,
 PrintingPageRange->{32000, 32000},
 PrintingOptions->{"Magnification"->1.,
 "PaperOrientation"->"Portrait",
 "PaperSize"->{595.3199999999999, 841.92}},
-FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (December 10, 2015)",
+Magnification:>1.25 Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -5355,70 +5516,70 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2100, 56, 152, "Input"],
-Cell[2661, 78, 17459, 433, 1032, "Input"],
-Cell[20123, 513, 2293, 59, 152, "Input"],
+Cell[558, 20, 2100, 56, 175, "Input"],
+Cell[2661, 78, 17781, 438, 1141, "Input"],
+Cell[20445, 518, 2341, 59, 175, "Input"],
 Cell[CellGroupData[{
-Cell[22441, 576, 304, 5, 63, "Section"],
+Cell[22811, 581, 304, 5, 86, "Section"],
 Cell[CellGroupData[{
-Cell[22770, 585, 118, 1, 43, "Subsection"],
-Cell[22891, 588, 262, 5, 30, "Text"],
+Cell[23140, 590, 118, 1, 59, "Subsection"],
+Cell[23261, 593, 262, 5, 38, "Text"],
 Cell[CellGroupData[{
-Cell[23178, 597, 150, 3, 31, "Input"],
-Cell[23331, 602, 19429, 380, 258, "Output"]
+Cell[23548, 602, 150, 3, 36, "Input"],
+Cell[23701, 607, 20109, 393, 323, "Output"]
 }, Open  ]],
-Cell[42775, 985, 169, 2, 30, "Text"],
+Cell[43825, 1003, 169, 2, 38, "Text"],
 Cell[CellGroupData[{
-Cell[42969, 991, 199, 4, 31, "Input"],
-Cell[43171, 997, 19453, 382, 259, "Output"]
+Cell[44019, 1009, 199, 4, 36, "Input"],
+Cell[44221, 1015, 20127, 394, 323, "Output"]
 }, Open  ]],
-Cell[62639, 1382, 209, 2, 30, "Text"],
+Cell[64363, 1412, 209, 2, 38, "Text"],
 Cell[CellGroupData[{
-Cell[62873, 1388, 150, 3, 31, "Input"],
-Cell[63026, 1393, 19786, 385, 266, "Output"]
+Cell[64597, 1418, 150, 3, 36, "Input"],
+Cell[64750, 1423, 20466, 398, 342, "Output"]
 }, Open  ]],
-Cell[82827, 1781, 253, 5, 30, "Text"],
+Cell[85231, 1824, 253, 5, 38, "Text"],
 Cell[CellGroupData[{
-Cell[83105, 1790, 150, 3, 31, "Input"],
-Cell[83258, 1795, 19807, 384, 266, "Output"]
+Cell[85509, 1833, 150, 3, 36, "Input"],
+Cell[85662, 1838, 20485, 397, 375, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[103114, 2185, 160, 3, 43, "Subsection"],
+Cell[106196, 2241, 160, 3, 59, "Subsection"],
 Cell[CellGroupData[{
-Cell[103299, 2192, 150, 3, 31, "Input"],
-Cell[103452, 2197, 19434, 380, 258, "Output"]
+Cell[106381, 2248, 150, 3, 36, "Input"],
+Cell[106534, 2253, 20112, 393, 323, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[122923, 2582, 150, 3, 31, "Input"],
-Cell[123076, 2587, 19438, 381, 259, "Output"]
+Cell[126683, 2651, 150, 3, 36, "Input"],
+Cell[126836, 2656, 20118, 394, 323, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[142551, 2973, 152, 3, 31, "Input"],
-Cell[142706, 2978, 19791, 385, 266, "Output"]
+Cell[146991, 3055, 152, 3, 36, "Input"],
+Cell[147146, 3060, 20469, 398, 342, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[162534, 3368, 152, 3, 31, "Input"],
-Cell[162689, 3373, 19766, 384, 266, "Output"]
+Cell[167652, 3463, 152, 3, 36, "Input"],
+Cell[167807, 3468, 20446, 397, 342, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[182504, 3763, 203, 3, 43, "Subsection"],
+Cell[188302, 3871, 203, 3, 59, "Subsection"],
 Cell[CellGroupData[{
-Cell[182732, 3770, 147, 3, 31, "Input"],
-Cell[182882, 3775, 19450, 380, 258, "Output"]
+Cell[188530, 3878, 147, 3, 36, "Input"],
+Cell[188680, 3883, 20128, 393, 323, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[202369, 4160, 150, 3, 31, "Input"],
-Cell[202522, 4165, 19375, 379, 259, "Output"]
+Cell[208845, 4281, 150, 3, 36, "Input"],
+Cell[208998, 4286, 20053, 392, 323, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[221934, 4549, 150, 3, 31, "Input"],
-Cell[222087, 4554, 19703, 383, 266, "Output"]
+Cell[229088, 4683, 150, 3, 38, "Input"],
+Cell[229241, 4688, 20383, 396, 343, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[241827, 4942, 150, 3, 31, "Input"],
-Cell[241980, 4947, 19783, 384, 266, "Output"]
+Cell[249661, 5089, 150, 3, 38, "Input"],
+Cell[249814, 5094, 20461, 397, 343, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -5426,4 +5587,3 @@ Cell[241980, 4947, 19783, 384, 266, "Output"]
 ]
 *)
 
-(* End of internal cache information *)

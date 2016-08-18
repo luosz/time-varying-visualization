@@ -1,0 +1,86 @@
+<?xml version='1.0'?>
+<!--This is a Voreen transfer function created using Wolfram Mathematica-->
+<VoreenData version='1'>
+ <TransFuncIntensity type='TransFuncIntensity'>
+  <alphaMode value='1' />
+  <gammaValue value='1' />
+  <domain x='0'
+      y='1' />
+  <threshold x='0'
+      y='1' />
+  <Keys>
+   <key type='TransFuncMappingKey'>
+    <intensity value='0.134921' />
+    <split value='false' />
+    <colorL r='153'
+        g='0'
+        b='255'
+        a='0' />
+   </key>
+   <key type='TransFuncMappingKey'>
+    <intensity value='0.157739' />
+    <split value='false' />
+    <colorL r='129'
+        g='90'
+        b='255'
+        a='{{26, 77, 153}, {24, 70, 161}, {22, 64, 169}, {20, 58, 176}, {19, 53, 183}, {18, 47, 189}, {16, 43, 195}, {15, 39, 201}, {14, 35, 206}, {13, 31, 210}, {12, 29, 214}, {11, 26, 217}, {10, 24, 220}, {10, 22, 223}, {9, 21, 225}, {9, 20, 226}, {8, 19, 228}, {8, 18, 229}, {8, 17, 230}}' />
+   </key>
+   <key type='TransFuncMappingKey'>
+    <intensity value='0.180556' />
+    <split value='false' />
+    <colorL r='145'
+        g='78'
+        b='221'
+        a='0' />
+   </key>
+   <key type='TransFuncMappingKey'>
+    <intensity value='0.397817' />
+    <split value='false' />
+    <colorL r='255'
+        g='0'
+        b='0'
+        a='0' />
+   </key>
+   <key type='TransFuncMappingKey'>
+    <intensity value='0.44359' />
+    <split value='false' />
+    <colorL r='255'
+        g='0'
+        b='0'
+        a='IntegerPart[255 NotFound]' />
+   </key>
+   <key type='TransFuncMappingKey'>
+    <intensity value='0.489362' />
+    <split value='false' />
+    <colorL r='255'
+        g='0'
+        b='0'
+        a='0' />
+   </key>
+   <key type='TransFuncMappingKey'>
+    <intensity value='0.75496' />
+    <split value='false' />
+    <colorL r='4'
+        g='255'
+        b='0'
+        a='0' />
+   </key>
+   <key type='TransFuncMappingKey'>
+    <intensity value='0.860615' />
+    <split value='false' />
+    <colorL r='73'
+        g='255'
+        b='1'
+        a='IntegerPart[255 {{0.101961, 0.301961, 0.6}, {0.0948188, 0.276556, 0.632547}, {0.0883123, 0.252279, 0.66333}, {0.082055, 0.229474, 0.692393}, {0.0762303, 0.208048, 0.719643}, {0.0707914, 0.188186, 0.744944}, {0.0657372, 0.170001, 0.768183}, {0.060838, 0.153591, 0.789492}, {0.0564427, 0.138839, 0.808639}, {0.0526149, 0.125473, 0.825833}, {0.0489367, 0.114009, 0.840975}, {0.0455312, 0.104404, 0.853987}, {0.0428601, 0.0959332, 0.865128}, {0.040035, 0.0890901, 0.874796}, {0.0376397, 0.0834385, 0.882843}, {0.0357084, 0.0788228, 0.88939}, {0.0342428, 0.0750089, 0.89467}, {0.0329282, 0.07202, 0.898973}, {0.0318782, 0.0696586, 0.902385}}[[NotFound]][[3]]]' />
+   </key>
+   <key type='TransFuncMappingKey'>
+    <intensity value='0.96627' />
+    <split value='false' />
+    <colorL r='8'
+        g='82'
+        b='7'
+        a='0' />
+   </key>
+  </Keys>
+ </TransFuncIntensity>
+</VoreenData>

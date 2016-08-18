@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9585,        263]
-NotebookOptionsPosition[      9108,        244]
-NotebookOutlinePosition[      9451,        259]
-CellTagsIndexPosition[      9408,        256]
+NotebookDataLength[     18127,        412]
+NotebookOptionsPosition[     17493,        388]
+NotebookOutlinePosition[     17837,        403]
+CellTagsIndexPosition[     17794,        400]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -240,11 +240,155 @@ Cell[BoxData[{
    RowBox[{"Range", "[", "99", "]"}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.640514408405222*^9, 3.6405144355064616`*^9}, {
    3.640514486459976*^9, 3.6405144867329397`*^9}, {3.6405145605500045`*^9, 
-   3.640514561694999*^9}, 3.6405147227158804`*^9}]
+   3.640514561694999*^9}, 3.6405147227158804`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"result", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", "data", "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"data", "=", 
+         RowBox[{"Import", "[", 
+          RowBox[{
+           RowBox[{"filelist", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Binary\>\"", ",", "\"\<Real32\>\""}], "}"}], ",", 
+           RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"ImageAdjust", "@", 
+         RowBox[{"UCARImage3D", "[", "data", "]"}]}]}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "n"}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6733550136461463`*^9, 3.6733550538953133`*^9}, {
+  3.6733551359614806`*^9, 3.673355140897002*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MapIndexed", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+      RowBox[{"\"\<E:\\\\_time_varying_data\\\\vortex\\\\vorts\>\"", "<>", 
+       RowBox[{"ToString", "[", 
+        RowBox[{"First", "[", "#2", "]"}], "]"}], "<>", "\"\<.tif\>\""}], ",",
+       "#"}], "]"}], "&"}], ",", "result"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6733551581135855`*^9, 3.6733551786815643`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts1.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts2.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts3.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts4.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts5.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts6.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts7.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts8.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts9.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts10.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts11.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts12.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts13.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts14.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts15.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts16.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts17.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts18.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts19.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts20.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts21.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts22.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts23.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts24.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts25.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts26.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts27.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts28.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts29.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts30.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts31.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts32.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts33.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts34.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts35.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts36.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts37.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts38.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts39.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts40.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts41.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts42.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts43.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts44.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts45.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts46.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts47.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts48.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts49.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts50.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts51.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts52.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts53.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts54.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts55.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts56.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts57.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts58.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts59.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts60.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts61.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts62.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts63.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts64.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts65.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts66.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts67.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts68.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts69.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts70.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts71.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts72.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts73.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts74.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts75.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts76.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts77.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts78.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts79.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts80.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts81.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts82.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts83.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts84.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts85.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts86.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts87.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts88.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts89.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts90.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts91.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts92.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts93.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts94.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts95.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts96.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts97.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts98.tif\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts99.tif\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.6733552216146126`*^9}]
+}, Open  ]]
 },
-WindowSize->{1602, 978},
-WindowMargins->{{-9, Automatic}, {Automatic, 0}},
-FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+WindowSize->{1282, 797},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -260,13 +404,17 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 1201, 33, 72, "Input"],
 Cell[1762, 55, 2306, 57, 252, "Input"],
-Cell[4071, 114, 1371, 39, 52, "Input"],
+Cell[4071, 114, 1371, 39, 72, "Input"],
 Cell[5445, 155, 941, 21, 72, "Input"],
 Cell[6389, 178, 506, 9, 31, "Input"],
 Cell[6898, 189, 741, 14, 31, "Input"],
-Cell[7642, 205, 1462, 37, 112, "Input"]
+Cell[7642, 205, 1462, 37, 132, "Input"],
+Cell[9107, 244, 898, 23, 72, "Input"],
+Cell[CellGroupData[{
+Cell[10030, 271, 427, 10, 31, "Input"],
+Cell[10460, 283, 7017, 102, 672, "Output"]
+}, Open  ]]
 }
 ]
 *)
 
-(* End of internal cache information *)

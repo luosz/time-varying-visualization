@@ -1,0 +1,128 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3827,        120]
+NotebookOptionsPosition[      3404,        100]
+NotebookOutlinePosition[      3748,        115]
+CellTagsIndexPosition[      3705,        112]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"list", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"List", "@@", "#"}], "&"}], "/@", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"RGBColor", "[", 
+      RowBox[{"0", ",", "0", ",", "1"}], "]"}], ",", "Red", ",", "Green"}], 
+    "}"}]}]}]], "Input",
+ CellChangeTimes->{{3.6754184421338606`*^9, 3.6754184990596037`*^9}, {
+  3.675418897875679*^9, 3.675418929925729*^9}, {3.6754189878851786`*^9, 
+  3.6754190173203692`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "0"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.675418452980288*^9, {3.675418484830996*^9, 3.675418499638788*^9}, 
+   3.675418899350889*^9, 3.6754189304306145`*^9, {3.675418988754434*^9, 
+   3.6754190179929857`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPointPlot3D", "[", 
+  RowBox[{"list", ",", 
+   RowBox[{"ColorFunction", "\[Rule]", 
+    RowBox[{"Function", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y", ",", "z"}], "}"}], ",", 
+      RowBox[{"RGBColor", "[", 
+       RowBox[{"x", ",", "y", ",", "z"}], "]"}]}], "]"}]}], ",", 
+   RowBox[{"PlotTheme", "->", "\"\<Detailed\>\""}], ",", 
+   RowBox[{"PlotStyle", "\[Rule]", 
+    RowBox[{"PointSize", "[", "0.02", "]"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6754184716765475`*^9, 3.675418474018522*^9}, {
+   3.6754185041645575`*^9, 3.6754185337585993`*^9}, {3.6754185825960774`*^9, 
+   3.675418620717743*^9}, {3.675418670951356*^9, 3.675418686983371*^9}, {
+   3.6754187224627237`*^9, 3.675418909693248*^9}, 3.6754190045094757`*^9, {
+   3.675419064534195*^9, 3.6754191431549664`*^9}, {3.675419298333479*^9, 
+   3.6754193909757032`*^9}}],
+
+Cell[BoxData[
+ Graphics3DBox[
+  {RGBColor[0.3315753, 0.4561011, 0.6388182], PointSize[0.02], 
+   {RGBColor[0., 0., 1.], Point3DBox[{0., 0., 1.}]}, 
+   {RGBColor[1., 0., 0.], Point3DBox[{1., 0., 0.}]}, 
+   {RGBColor[0., 1., 0.], Point3DBox[{0., 1., 0.}]}},
+  Axes->True,
+  AxesEdge->{{-1, -1}, {1, -1}, {-1, -1}},
+  AxesLabel->{None, None, None},
+  BoxRatios->{1, 1, 0.4},
+  Boxed->{Left, Bottom, Back},
+  FaceGrids->{{0, 0, -1}, {0, 1, 0}, {-1, 0, 0}},
+  FaceGridsStyle->Directive[
+    GrayLevel[0.3, 1], 
+    AbsoluteDashing[{1, 2}]],
+  PlotRange->{{0., 1.}, {0., 1.}, Automatic},
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.02]}, {Automatic, Automatic}},
+  Ticks->{Automatic, Automatic, Automatic}]], "Output",
+ CellChangeTimes->{{3.6754188822806497`*^9, 3.675418934312787*^9}, {
+  3.6754189908425303`*^9, 3.6754190206228237`*^9}, {3.675419071603203*^9, 
+  3.675419143911542*^9}, {3.675419347469715*^9, 3.675419391546445*^9}}]
+}, Open  ]]
+},
+WindowSize->{759, 673},
+WindowMargins->{{Automatic, 84}, {-61, Automatic}},
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 441, 12, 31, "Input"],
+Cell[1024, 36, 453, 12, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1514, 53, 888, 18, 52, "Input"],
+Cell[2405, 73, 983, 24, 301, "Output"]
+}, Open  ]]
+}
+]
+*)
+
