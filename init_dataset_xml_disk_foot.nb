@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     30551,        694]
-NotebookOptionsPosition[     30066,        674]
-NotebookOutlinePosition[     30410,        689]
-CellTagsIndexPosition[     30367,        686]
+NotebookDataLength[     27399,        620]
+NotebookOptionsPosition[     26882,        599]
+NotebookOutlinePosition[     27258,        615]
+CellTagsIndexPosition[     27215,        612]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -28,18 +28,15 @@ Cell[BoxData[{
   RowBox[{"names", "=", 
    RowBox[{"{", 
     RowBox[{
-    "\"\<_saliency_chart\>\"", ",", "\[IndentingNewLine]", 
-     "\"\<_visibility_chart\>\"", ",", 
-     "\"\<_visibility_saliency_brightness_chart\>\"", ",", 
-     "\"\<_visibility_saliency_saturation_chart\>\"", ",", 
-     "\"\<_visibility_saliency_weighted_chart\>\""}], "}"}]}], 
+    "\"\<_saliency_chart.pdf\>\"", ",", "\[IndentingNewLine]", 
+     "\"\<_visibility_chart.pdf\>\"", ",", 
+     "\"\<_visibility_saliency_brightness_chart.pdf\>\"", ",", 
+     "\"\<_visibility_saliency_saturation_chart.pdf\>\"", ",", 
+     "\"\<_visibility_saliency_weighted_chart.pdf\>\""}], "}"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"onames", "=", 
-   RowBox[{"{", 
-    RowBox[{
-    "\"\<_visibility_saliency_feature.png\>\"", ",", 
-     "\"\<_visibility.raw\>\""}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"onames", "=", "\"\<_visibility_saliency_feature.png\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"xmlname", "=", "\"\<.xml\>\""}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -63,7 +60,8 @@ Cell[BoxData[{
    3.650265780674996*^9, 3.650265800331646*^9}, 3.6502658564442043`*^9, {
    3.6503713944530315`*^9, 3.650371410909602*^9}, {3.6537507119249773`*^9, 
    3.653750712160721*^9}, {3.653750833179865*^9, 3.6537508488450193`*^9}, {
-   3.653752280151143*^9, 3.653752282325086*^9}}],
+   3.653752280151143*^9, 3.653752282325086*^9}, {3.68244690477534*^9, 
+   3.6824469199278545`*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -76,10 +74,8 @@ Cell[BoxData[{
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"othernames", "=", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"imagepath", "<>", "dataname", "<>", "#"}], "&"}], "/@", 
-    "onames"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"imagepath", "<>", "dataname", "<>", "onames"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"expressionML", "=", 
    RowBox[{"{", 
@@ -88,21 +84,17 @@ Cell[BoxData[{
      "\[IndentingNewLine]", 
      RowBox[{"{", 
       RowBox[{
-      "\"\<Disk 1\>\"", ",", "\"\<Disk 2\>\"", ",", "\"\<Disk 3\>\"", ",", 
-       "\"\<Disk 4\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+      "\"\<Feature 1\>\"", ",", "\"\<Feature 2\>\"", ",", "\"\<Feature 3\>\"",
+        ",", "\"\<Feature 4\>\"", ",", "\"\<Feature 5\>\""}], "}"}], ",", 
+     "\[IndentingNewLine]", 
      RowBox[{"{", 
       RowBox[{"\"\<left\>\"", ",", "\"\<right\>\""}], "}"}], ",", 
      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{
-       RowBox[{"imagepath", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
-      "filenames"}], ",", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"imagepath", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
-      "filenames"}], ",", "othernames", ",", "resultxml", ",", 
+       RowBox[{"imagepath", "<>", "#"}], "&"}], "/@", "filenames"}], ",", 
+     "othernames", ",", "resultxml", ",", 
      RowBox[{"imagepath", "<>", "dataname", "<>", "\"\<.png\>\""}], ",", 
-     RowBox[{"imagepath", "<>", "dataname", "<>", "\"\<.raw\>\""}], ",", 
      "dataname", ",", "plotpath", ",", "imagepath"}], "}"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -117,7 +109,9 @@ Cell[BoxData[{
    3.650137537186204*^9, 3.6501375378031015`*^9}, 3.6502658210041533`*^9, 
    3.65026585648521*^9, 3.650370819066497*^9, {3.6537507177204037`*^9, 
    3.653750717951594*^9}, {3.6537521210637445`*^9, 3.6537521236558695`*^9}, {
-   3.6537522857053404`*^9, 3.6537522857118783`*^9}, 3.657461173271468*^9}],
+   3.6537522857053404`*^9, 3.6537522857118783`*^9}, 3.657461173271468*^9, {
+   3.6823647970471306`*^9, 3.682364797311157*^9}, {3.6824469346163235`*^9, 
+   3.682446973080826*^9}, 3.682447737643653*^9}],
 
 Cell[BoxData[{
  RowBox[{
@@ -130,10 +124,8 @@ Cell[BoxData[{
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"othernames", "=", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"imagepath", "<>", "dataname", "<>", "#"}], "&"}], "/@", 
-    "onames"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"imagepath", "<>", "dataname", "<>", "onames"}]}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"expressionML", "=", 
    RowBox[{"{", 
@@ -150,14 +142,9 @@ Cell[BoxData[{
      "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{
-       RowBox[{"imagepath", "<>", "#", "<>", "\"\<.png\>\""}], "&"}], "/@", 
-      "filenames"}], ",", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"imagepath", "<>", "#", "<>", "\"\<.txt\>\""}], "&"}], "/@", 
-      "filenames"}], ",", "othernames", ",", "resultxml", ",", 
+       RowBox[{"imagepath", "<>", "#"}], "&"}], "/@", "filenames"}], ",", 
+     "othernames", ",", "resultxml", ",", 
      RowBox[{"imagepath", "<>", "dataname", "<>", "\"\<.png\>\""}], ",", 
-     RowBox[{"imagepath", "<>", "dataname", "<>", "\"\<.raw\>\""}], ",", 
      "dataname", ",", "plotpath", ",", "imagepath"}], "}"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -170,7 +157,9 @@ Cell[BoxData[{
    3.650137523878718*^9, 3.6501375994407687`*^9, 3.650265822820053*^9, 
    3.6502658564897103`*^9, {3.6502767580174756`*^9, 3.650276760940352*^9}, 
    3.6503708220499105`*^9, 3.653750722880949*^9, 3.653752127752531*^9, {
-   3.653752285718342*^9, 3.653752285724843*^9}, 3.657461179060669*^9}],
+   3.653752285718342*^9, 3.653752285724843*^9}, 3.657461179060669*^9, {
+   3.682364813719798*^9, 3.6823648139598217`*^9}, {3.682446929095772*^9, 
+   3.6824469469285545`*^9}, {3.68244698016962*^9, 3.682446983953038*^9}}],
 
 Cell[CellGroupData[{
 
@@ -200,12 +189,9 @@ Cell[BoxData[
      RowBox[{"{", 
       RowBox[{
       "tfifile", ",", "volumefile", ",", "legends", ",", "face", ",", 
-       "imagefilenames", ",", "txtfilenames", ",", 
-       RowBox[{"{", 
-        RowBox[{"featurefilename", ",", "visibilityfilename"}], "}"}], ",", 
-       "resultxml", ",", "imagefile", ",", "rawfile", ",", "dataname", ",", 
-       "plotpath", ",", "imagepath"}], "}"}], "=", "xml"}], ";"}], 
-   "\[IndentingNewLine]", 
+       "imagefilenames", ",", "featurefilename", ",", "resultxml", ",", 
+       "imagefile", ",", "dataname", ",", "plotpath", ",", "imagepath"}], 
+      "}"}], "=", "xml"}], ";"}], "\[IndentingNewLine]", 
    RowBox[{"Column", "[", 
     RowBox[{"xml", ",", 
      RowBox[{"Background", "\[Rule]", 
@@ -258,7 +244,8 @@ Cell[BoxData[
    3.6501397576437798`*^9, 3.65026588563083*^9, {3.653750726266101*^9, 
    3.6537507661620164`*^9}, 3.6537521165475965`*^9, 3.6574605078723793`*^9, {
    3.6574608485436773`*^9, 3.657460849129735*^9}, {3.657461205550044*^9, 
-   3.657461205822239*^9}, 3.6574612501122665`*^9}],
+   3.657461205822239*^9}, 3.6574612501122665`*^9, {3.682447068444716*^9, 
+   3.6824471049525537`*^9}}],
 
 Cell[BoxData[
  TagBox[GridBox[{
@@ -275,39 +262,21 @@ Cell[BoxData[
     {
      RowBox[{"{", 
       RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\foot_saliency_chart.png\"\>", 
+images\\\\foot_saliency_chart.pdf\"\>", 
        ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\foot_visibility_chart.png\"\>", 
+images\\\\foot_visibility_chart.pdf\"\>", 
        ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\foot_visibility_saliency_brightness_chart.png\"\>", 
+images\\\\foot_visibility_saliency_brightness_chart.pdf\"\>", 
        ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\foot_visibility_saliency_saturation_chart.png\"\>", 
+images\\\\foot_visibility_saliency_saturation_chart.pdf\"\>", 
        ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\foot_visibility_saliency_weighted_chart.png\"\>"}], "}"}]},
-    {
-     RowBox[{"{", 
-      RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\foot_saliency_chart.txt\"\>", 
-       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\foot_visibility_chart.txt\"\>", 
-       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\foot_visibility_saliency_brightness_chart.txt\"\>", 
-       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\foot_visibility_saliency_saturation_chart.txt\"\>", 
-       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\foot_visibility_saliency_weighted_chart.txt\"\>"}], "}"}]},
-    {
-     RowBox[{"{", 
-      RowBox[{"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\foot_visibility_saliency_feature.png\"\>", 
-       ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
-images\\\\foot_visibility.raw\"\>"}], "}"}]},
+images\\\\foot_visibility_saliency_weighted_chart.pdf\"\>"}], "}"}]},
+    {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\\\
+foot_visibility_saliency_feature.png\"\>"},
     {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\\\
 saliency.xml\"\>"},
     {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\\\
 foot.png\"\>"},
-    {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~images\\\\\
-foot.raw\"\>"},
     {"\<\"foot\"\>"},
     {"\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~plot\\\\\"\
 \>"},
@@ -358,7 +327,8 @@ foot.raw\"\>"},
    3.657460384486621*^9, 3.6574604481958075`*^9, {3.65746049765779*^9, 
    3.6574605221601925`*^9}, 3.657460759643081*^9, 3.657460852801606*^9, {
    3.6574611832771697`*^9, 3.6574612554409695`*^9}, {3.657488812085664*^9, 
-   3.657488830447009*^9}}],
+   3.657488830447009*^9}, 3.6823647998574114`*^9, {3.682447056909832*^9, 
+   3.682447107466516*^9}, 3.682447269657234*^9, 3.6824477406100593`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -374,25 +344,25 @@ Cell[BoxData[
              RowBox[{
               RowBox[{"{", 
                RowBox[{
-               "0.1860150783562284`", ",", "0.1793446886565983`", ",", 
-                "0.1355531272924656`"}], "}"}], ",", 
+               "0.18601500237762802`", ",", "0.17934461968794202`", ",", 
+                "0.135553137894406`"}], "}"}], ",", 
               RowBox[{"{", 
                RowBox[{
                "0.450036469730124`", ",", "0.3814733770970095`", ",", 
                 "0.16849015317286653`"}], "}"}], ",", 
               RowBox[{"{", 
                RowBox[{
-               "0.5345052723780661`", ",", "0.30891618336809384`", ",", 
-                "0.15657854425384002`"}], "}"}], ",", 
+               "0.5345052783774121`", ",", "0.3089161720098883`", ",", 
+                "0.15657854961269949`"}], "}"}], ",", 
               RowBox[{"{", 
                RowBox[{
-               "0.1550098882612006`", ",", "0.7551333746326314`", ",", 
-                "0.08985673710616804`"}], "}"}], ",", 
+               "0.15500983864444337`", ",", "0.75513341411046`", ",", 
+                "0.08985674724509658`"}], "}"}], ",", 
               RowBox[{"{", 
                RowBox[{
-               "0.3447575803196333`", ",", "0.5320247790003626`", ",", 
-                "0.12321764068000403`"}], "}"}]}], "}"}]}], ",", 
-           TemplateBox[{"320"},
+               "0.34475755851092776`", ",", "0.5320247930601741`", ",", 
+                "0.12321764842889804`"}], "}"}]}], "}"}]}], ",", 
+           TemplateBox[{"383"},
             "OutputSizeLimit`Skeleton",
             DisplayFunction->(FrameBox[
               RowBox[{"\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}],
@@ -400,62 +370,16 @@ Cell[BoxData[
               BaseStyle -> {
                "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
                 ShowStringCharacters -> False}, BaselinePosition -> Baseline, 
-              ContentPadding -> False, FrameMargins -> 1, FrameStyle -> 
-              GrayLevel[0.75], RoundingRadius -> 7]& )], ",", 
-           RowBox[{"\<\"nucleon_naive\"\>", "\[Rule]", 
+              ContentPadding -> False, FrameMargins -> {{1, 1}, {1, 2}}, 
+              FrameStyle -> None, RoundingRadius -> 7]& )], ",", 
+           RowBox[{"\<\"disk\"\>", "\[Rule]", 
             RowBox[{"{", 
              RowBox[{
-              RowBox[{"{", 
-               RowBox[{
-               "0.0962366184916345`", ",", "0.09566057284273961`", ",", 
-                "0.13440003315331941`"}], "}"}], ",", 
-              RowBox[{"{", 
-               TemplateBox[{"1"},
-                "OutputSizeLimit`Skeleton",
-                DisplayFunction->(FrameBox[
-                  
-                  RowBox[{
-                   "\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}], 
-                  Background -> GrayLevel[0.75], 
-                  BaseStyle -> {
-                   "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
-                    ShowStringCharacters -> False}, BaselinePosition -> 
-                  Baseline, ContentPadding -> False, FrameMargins -> 1, 
-                  FrameStyle -> GrayLevel[0.75], RoundingRadius -> 7]& )], 
-               "}"}], ",", 
-              RowBox[{"{", 
-               TemplateBox[{"1"},
-                "OutputSizeLimit`Skeleton",
-                DisplayFunction->(FrameBox[
-                  
-                  RowBox[{
-                   "\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}], 
-                  Background -> GrayLevel[0.75], 
-                  BaseStyle -> {
-                   "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
-                    ShowStringCharacters -> False}, BaselinePosition -> 
-                  Baseline, ContentPadding -> False, FrameMargins -> 1, 
-                  FrameStyle -> GrayLevel[0.75], RoundingRadius -> 7]& )], 
-               "}"}], ",", 
-              RowBox[{"{", 
-               TemplateBox[{"1"},
-                "OutputSizeLimit`Skeleton",
-                DisplayFunction->(FrameBox[
-                  
-                  RowBox[{
-                   "\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}], 
-                  Background -> GrayLevel[0.75], 
-                  BaseStyle -> {
-                   "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
-                    ShowStringCharacters -> False}, BaselinePosition -> 
-                  Baseline, ContentPadding -> False, FrameMargins -> 1, 
-                  FrameStyle -> GrayLevel[0.75], RoundingRadius -> 7]& )], 
-               "}"}], ",", 
-              RowBox[{"{", 
-               RowBox[{
-               "0.3453305493565747`", ",", "0.424197904783309`", ",", 
-                "0.23047154586011637`"}], "}"}]}], "}"}]}]}], 
-          "\[RightAssociation]"}],
+              RowBox[{"{", "}"}], ",", 
+              RowBox[{"{", "}"}], ",", 
+              RowBox[{"{", "}"}], ",", 
+              RowBox[{"{", "}"}], ",", 
+              RowBox[{"{", "}"}]}], "}"}]}]}], "\[RightAssociation]"}],
          Short[#, 5]& ],
         BaseStyle->{Deployed -> False},
         StripOnInput->False]},
@@ -468,7 +392,7 @@ Cell[BoxData[
               DynamicBox[ToBoxes[
                 FEPrivate`FrontEndResource[
                 "FEStrings", "sizeBriefExplanation"], StandardForm],
-               ImageSizeCache->{65., {3., 9.}}],
+               ImageSizeCache->{127., {5., 17.}}],
               StripOnInput->False,
               DynamicUpdating->True], "SuggestionsBarCategory",
              StripOnInput->False],
@@ -490,7 +414,7 @@ Cell[BoxData[
               DynamicBox[ToBoxes[
                 FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
                 StandardForm],
-               ImageSizeCache->{52., {1., 9.}}],
+               ImageSizeCache->{101., {1., 17.}}],
               StripOnInput->False,
               DynamicUpdating->True], "SuggestionsBarControl",
              StripOnInput->False], True->
@@ -509,7 +433,7 @@ Cell[BoxData[
            Appearance->None,
            
            ButtonFunction:>OutputSizeLimit`ButtonFunction[
-            Identity, 78, 28080096197477499949, 5/2],
+            OutputSizeLimit`Defer, 545, 32608824972693628946, 5/2],
            Enabled->True,
            Evaluator->Automatic,
            Method->"Queued"], 
@@ -520,7 +444,7 @@ Cell[BoxData[
               DynamicBox[ToBoxes[
                 FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
                 StandardForm],
-               ImageSizeCache->{62., {1., 9.}}],
+               ImageSizeCache->{118., {1., 17.}}],
               StripOnInput->False,
               DynamicUpdating->True], "SuggestionsBarControl",
              StripOnInput->False], True->
@@ -539,7 +463,7 @@ Cell[BoxData[
            Appearance->None,
            
            ButtonFunction:>OutputSizeLimit`ButtonFunction[
-            Identity, 78, 28080096197477499949, 5 2],
+            OutputSizeLimit`Defer, 545, 32608824972693628946, 5 2],
            Enabled->True,
            Evaluator->Automatic,
            Method->"Queued"], 
@@ -550,7 +474,7 @@ Cell[BoxData[
               DynamicBox[ToBoxes[
                 FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
                 StandardForm],
-               ImageSizeCache->{44., {1., 9.}}],
+               ImageSizeCache->{88., {1., 17.}}],
               StripOnInput->False,
               DynamicUpdating->True], "SuggestionsBarControl",
              StripOnInput->False], True->
@@ -569,7 +493,7 @@ Cell[BoxData[
            Appearance->None,
            
            ButtonFunction:>OutputSizeLimit`ButtonFunction[
-            Identity, 78, 28080096197477499949, Infinity],
+            OutputSizeLimit`Defer, 545, 32608824972693628946, Infinity],
            Enabled->True,
            Evaluator->Automatic,
            Method->"Queued"], 
@@ -580,7 +504,7 @@ Cell[BoxData[
               DynamicBox[ToBoxes[
                 FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
                 StandardForm],
-               ImageSizeCache->{78., {1., 9.}}],
+               ImageSizeCache->{152., {1., 17.}}],
               StripOnInput->False,
               DynamicUpdating->True], "SuggestionsBarControl",
              StripOnInput->False], True->
@@ -636,7 +560,7 @@ Cell[BoxData[
     StripOnInput->False],
    Deploy,
    DefaultBaseStyle->"Deploy"],
-  Out[78]]], "Output",
+  Out[545]]], "Output",
  CellChangeTimes->{{3.6500396867043324`*^9, 3.6500397010382366`*^9}, {
    3.6500397419737*^9, 3.650039775282688*^9}, {3.650042371465991*^9, 
    3.650042395651179*^9}, {3.6500443711499977`*^9, 3.6500443760327*^9}, {
@@ -669,12 +593,14 @@ Cell[BoxData[
    3.657460384486621*^9, 3.6574604481958075`*^9, {3.65746049765779*^9, 
    3.6574605221601925`*^9}, 3.657460759643081*^9, 3.657460852801606*^9, {
    3.6574611832771697`*^9, 3.6574612554409695`*^9}, {3.657488812085664*^9, 
-   3.65748883281153*^9}}]
+   3.657488830447009*^9}, 3.6823647998574114`*^9, {3.682447056909832*^9, 
+   3.682447107466516*^9}, 3.682447269657234*^9, 3.682447741280925*^9}]
 }, Open  ]]
 },
-WindowSize->{1266, 788},
-WindowMargins->{{-8, Automatic}, {Automatic, 0}},
-FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
+WindowSize->{1920, 1028},
+WindowMargins->{{1911, Automatic}, {Automatic, -9}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -688,16 +614,15 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2061, 45, 152, "Input"],
-Cell[2622, 67, 2206, 52, 212, "Input"],
-Cell[4831, 121, 2090, 51, 212, "Input"],
+Cell[558, 20, 2053, 43, 220, "Input"],
+Cell[2614, 65, 2097, 48, 278, "Input"],
+Cell[4714, 115, 1960, 46, 278, "Input"],
 Cell[CellGroupData[{
-Cell[6946, 176, 4140, 84, 152, "Input"],
-Cell[11089, 262, 5363, 98, 419, "Output"],
-Cell[16455, 362, 13595, 309, 131, "Output"]
+Cell[6699, 165, 4076, 82, 191, "Input"],
+Cell[10778, 249, 4545, 81, 411, "Output"],
+Cell[15326, 332, 11540, 264, 203, "Output"]
 }, Open  ]]
 }
 ]
 *)
 
-(* End of internal cache information *)

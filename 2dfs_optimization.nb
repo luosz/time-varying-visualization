@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    543615,       9293]
-NotebookOptionsPosition[    542885,       9266]
-NotebookOutlinePosition[    543232,       9281]
-CellTagsIndexPosition[    543189,       9278]
+NotebookDataLength[    543634,       9293]
+NotebookOptionsPosition[    542872,       9265]
+NotebookOutlinePosition[    543248,       9281]
+CellTagsIndexPosition[    543205,       9278]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -70,7 +70,8 @@ Cell[BoxData[
    3.6662715351803784`*^9, 3.6662732350462832`*^9, 3.666273716819676*^9, {
    3.666274694971638*^9, 3.6662747061603255`*^9}, 3.666274952515218*^9, 
    3.666275195243526*^9, 3.6662812523207765`*^9, 3.6662821892525053`*^9, 
-   3.666282514109416*^9, 3.6662828870170994`*^9, 3.6662830149082623`*^9}]
+   3.666282514109416*^9, 3.6662828870170994`*^9, 3.6662830149082623`*^9, 
+   3.68245019581758*^9}]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -95,12 +96,9 @@ Cell[BoxData[{
    RowBox[{"{", 
     RowBox[{
     "tfifile", ",", "volumefile", ",", "legends", ",", "face", ",", 
-     "imagefilenames", ",", "txtfilenames", ",", 
-     RowBox[{"{", 
-      RowBox[{"featurefilename", ",", "visibilityfilename"}], "}"}], ",", 
-     "resultxml", ",", "imagefile", ",", "rawfile", ",", "dataname", ",", 
-     "plotpath", ",", "imagepath"}], "}"}], "=", "xml"}], 
-  ";"}], "\[IndentingNewLine]", 
+     "imagefilenames", ",", "featurefilename", ",", "resultxml", ",", 
+     "imagefile", ",", "dataname", ",", "plotpath", ",", "imagepath"}], "}"}],
+    "=", "xml"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"tf", "=", 
    RowBox[{"Import", "[", 
@@ -230,7 +228,8 @@ Cell[BoxData[{
   ";"}]}], "Input",
  CellChangeTimes->{{3.666274649666149*^9, 3.6662746667509346`*^9}, 
    3.6662749220924325`*^9, {3.6662810206435184`*^9, 3.666281029550113*^9}, {
-   3.6662825033630457`*^9, 3.6662825065163803`*^9}}],
+   3.6662825033630457`*^9, 3.6662825065163803`*^9}, {3.6824491840994186`*^9, 
+   3.682449188282837*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -8825,7 +8824,7 @@ mZmZmZmZmZmZmZmZmf2f+id61fKq
   3.666273237671743*^9, 3.6662737195545444`*^9, {3.6662746952454243`*^9, 
    3.6662747093589497`*^9}, 3.6662749560209894`*^9, 3.666275198106314*^9, 
    3.666281256413353*^9, 3.666282192623386*^9, 3.666282517773749*^9, 
-   3.666282889975917*^9, 3.66628301760765*^9}]
+   3.666282889975917*^9, 3.66628301760765*^9, 3.682450197365735*^9}]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -9264,9 +9263,10 @@ Cell[BoxData[
   3.6662819703501005`*^9}, {3.6662820303045015`*^9, 3.666282034568657*^9}, {
   3.666282487376279*^9, 3.666282488592223*^9}}]
 },
-WindowSize->{1282, 797},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
-FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (February 25, 2016)",
+WindowSize->{1920, 1028},
+WindowMargins->{{1911, Automatic}, {Automatic, -9}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -9280,21 +9280,21 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 549, 13, 31, "Input"],
+Cell[558, 20, 549, 13, 45, "Input"],
 Cell[CellGroupData[{
-Cell[1132, 37, 1046, 25, 92, "Input"],
-Cell[2181, 64, 476, 8, 31, "Output"]
+Cell[1132, 37, 1046, 25, 133, "Input"],
+Cell[2181, 64, 501, 9, 64, "Output"]
 }, Open  ]],
-Cell[2672, 75, 5348, 157, 332, "Input"],
-Cell[8023, 234, 1649, 54, 92, "Input"],
+Cell[2697, 76, 5288, 155, 452, "Input"],
+Cell[7988, 233, 1649, 54, 133, "Input"],
 Cell[CellGroupData[{
-Cell[9697, 292, 2725, 79, 152, "Input"],
-Cell[12425, 373, 514570, 8454, 197, "Output"]
+Cell[9662, 291, 2725, 79, 191, "Input"],
+Cell[12390, 372, 514592, 8454, 313, "Output"]
 }, Open  ]],
-Cell[527010, 8830, 376, 10, 52, "Input"],
-Cell[527389, 8842, 9664, 278, 812, "Input"],
-Cell[537056, 9122, 3840, 93, 192, "Input"],
-Cell[540899, 9217, 1982, 47, 132, "Input"]
+Cell[526997, 8829, 376, 10, 75, "Input"],
+Cell[527376, 8841, 9664, 278, 1177, "Input"],
+Cell[537043, 9121, 3840, 93, 278, "Input"],
+Cell[540886, 9216, 1982, 47, 224, "Input"]
 }
 ]
 *)

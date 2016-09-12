@@ -1,0 +1,133 @@
+1 thread
+nucleon_naive_proportional	
+1.0921092	17
+1.0641064	2
+0.5740574	2
+nucleon_naive_proportional	
+1.0736110	17
+0.9560956	2
+0.5780578	2
+tooth_naive_proportional	
+7.7180177	21
+3.7126731	2
+3.3359248	2
+tooth_naive_proportional	
+7.5504484	21
+3.5256226	2
+3.2448208	2
+CT-Knee_naive_proportional	
+33.6975120	17
+17.7223952	2
+17.7530276	2
+CT-Knee_naive_proportional	
+35.0821875	17
+18.4416841	2
+18.5462306	2
+vortex_naive_proportional	
+13.6285411	33
+24.3657389	13
+15.3710000	13
+vortex_naive_proportional	
+14.4409622	33
+24.1019499	13
+15.5900000	13
+2 threads
+nucleon_naive_proportional	
+1.0466083	17
+0.4306051	2
+0.5460035	2
+nucleon_naive_proportional	
+1.0310228	17
+0.4212027	2
+0.5890516	2
+tooth_naive_proportional	
+7.5052760	21
+2.0570232	2
+3.2638008	2
+tooth_naive_proportional	
+7.5172077	21
+2.3102310	2
+3.2973297	2
+CT-Knee_naive_proportional	
+35.0012808	17
+11.8559300	2
+17.7653530	2
+CT-Knee_naive_proportional	
+33.6606869	17
+11.5863118	2
+17.7691709	2
+vortex_naive_proportional	
+13.9964000	33
+13.4183000	13
+15.5087000	13
+vortex_naive_proportional	
+13.6812877	33
+13.7592882	13
+15.5688998	13
+4 threads
+nucleon_naive_proportional	
+1.3116348	17
+0.4528263	2
+0.6089733	2
+nucleon_naive_proportional	
+1.1388000	17
+0.3276000	2
+0.6084000	2
+tooth_naive_proportional	
+7.5717571	21
+1.7101710	2
+3.2403240	2
+tooth_naive_proportional	
+7.6472000	21
+1.7918000	2
+3.2982000	2
+CT-Knee_naive_proportional	
+35.6985695	17
+9.7139713	2
+18.0233092	2
+CT-Knee_naive_proportional	
+34.4510000	17
+9.0640000	2
+18.2654000	2
+vortex_naive_proportional	
+14.1951934	33
+8.8844652	13
+15.3500964	13
+vortex_naive_proportional	
+13.7808940	33
+9.2247254	13
+15.1056607	13
+8 threads
+nucleon_naive_proportional	
+1.0611169	17
+0.3930174	2
+0.6060533	2
+nucleon_naive_proportional	
+1.0861086	17
+0.3630363	2
+0.5820582	2
+tooth_naive_proportional	
+7.6017601	21
+1.5083187	2
+3.2702467	2
+tooth_naive_proportional	
+7.5086559	21
+1.6230236	2
+3.2266219	2
+CT-Knee_naive_proportional	
+33.8484429	17
+8.5419817	2
+17.8689181	2
+CT-Knee_naive_proportional	
+33.8393224	17
+9.9799238	2
+17.7527753	2
+vortex_naive_proportional	
+13.7543190	33
+8.3958030	13
+14.8594901	13
+vortex_naive_proportional	
+14.2428913	33
+8.4084539	13
+15.5844999	13
+

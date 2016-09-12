@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     41600,       1021]
-NotebookOptionsPosition[     40768,        990]
-NotebookOutlinePosition[     41112,       1005]
-CellTagsIndexPosition[     41069,       1002]
+NotebookDataLength[     41635,       1021]
+NotebookOptionsPosition[     40769,        989]
+NotebookOutlinePosition[     41144,       1005]
+CellTagsIndexPosition[     41101,       1002]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -145,7 +145,7 @@ Cell[BoxData[
    3.6570095229501905`*^9, 3.657021380338237*^9, 3.6570218610030375`*^9, 
    3.6570222581773834`*^9, 3.65702371140703*^9, 3.6570247480289516`*^9, 
    3.6570250785233593`*^9, 3.657114427440321*^9, 3.657116912533248*^9, 
-   3.6571256084054823`*^9, 3.657820233699709*^9}]
+   3.6571256084054823`*^9, 3.657820233699709*^9, 3.6824496243734417`*^9}]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -210,12 +210,9 @@ Cell[BoxData[
         RowBox[{"{", 
          RowBox[{
          "tfifile", ",", "volumefile", ",", "legends", ",", "face", ",", 
-          "imagefilenames", ",", "txtfilenames", ",", 
-          RowBox[{"{", 
-           RowBox[{"featurefilename", ",", "visibilityfilename"}], "}"}], ",",
-           "resultxml", ",", "imagefile", ",", "rawfile", ",", "dataname", 
-          ",", "plotpath", ",", "imagepath"}], "}"}], "=", "xml"}], ";", 
-       "\[IndentingNewLine]", 
+          "imagefilenames", ",", "featurefilename", ",", "resultxml", ",", 
+          "imagefile", ",", "dataname", ",", "plotpath", ",", "imagepath"}], 
+         "}"}], "=", "xml"}], ";", "\[IndentingNewLine]", 
        RowBox[{"tf", "=", 
         RowBox[{"Import", "[", 
          RowBox[{"tfifile", ",", "\"\<XML\>\""}], "]"}]}], ";", 
@@ -700,7 +697,8 @@ Mathematica\>\"", "]"}]}], "}"}], ",", "VoreenData", ",",
    3.655558792740161*^9}, {3.6555589711947913`*^9, 3.655559109692063*^9}, {
    3.655559357411625*^9, 3.6555593585879045`*^9}, {3.656949267587334*^9, 
    3.6569492749020004`*^9}, {3.6569493820166545`*^9, 3.656949382250065*^9}, {
-   3.656949428585987*^9, 3.656949554646824*^9}}],
+   3.656949428585987*^9, 3.656949554646824*^9}, {3.6824492187998886`*^9, 
+   3.6824492229603043`*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -836,7 +834,8 @@ Cell[BoxData[{
 
 Cell[BoxData["\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
 salience\\\\pnglist.txt\"\>"], "Output",
- CellChangeTimes->{3.657116975655546*^9, 3.657125673857278*^9}]
+ CellChangeTimes->{3.657116975655546*^9, 3.657125673857278*^9, 
+  3.6824496826982737`*^9}]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -916,7 +915,7 @@ salience\\\\vortslist2.txt\"\>",
    ",", "\<\"D:\\\\document\\\\work\\\\time-varying-visualization\\\\~\
 salience\\\\vortslist3.txt\"\>"}], "}"}]], "Output",
  CellChangeTimes->{3.6571145048684464`*^9, 3.657116976111107*^9, 
-  3.657125674285861*^9}]
+  3.657125674285861*^9, 3.682449682999304*^9}]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -988,9 +987,10 @@ Cell[BoxData[
      RowBox[{"TableHeadings", "\[Rule]", "Automatic"}]}], "]"}], "*)"}], 
   "*)"}]], "Input"]
 },
-WindowSize->{1282, 788},
-WindowMargins->{{-8, Automatic}, {Automatic, 0}},
-FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
+WindowSize->{1920, 1100},
+WindowMargins->{{-9, Automatic}, {Automatic, -9}},
+Magnification:>1.45 Inherited,
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -1005,26 +1005,25 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 1760, 50, 152, "Input"],
-Cell[2343, 74, 3507, 73, 716, "Output"]
+Cell[580, 22, 1760, 50, 156, "Input"],
+Cell[2343, 74, 3531, 73, 1184, "Output"]
 }, Open  ]],
-Cell[5865, 150, 1144, 30, 72, "Input"],
-Cell[7012, 182, 22665, 520, 1512, "Input"],
-Cell[29680, 704, 732, 17, 52, "Input"],
-Cell[30415, 723, 1646, 42, 92, "Input"],
+Cell[5889, 150, 1144, 30, 100, "Input"],
+Cell[7036, 182, 22593, 518, 2088, "Input"],
+Cell[29632, 702, 732, 17, 72, "Input"],
+Cell[30367, 721, 1646, 42, 100, "Input"],
 Cell[CellGroupData[{
-Cell[32086, 769, 2957, 65, 112, "Input"],
-Cell[35046, 836, 181, 2, 31, "Output"]
+Cell[32038, 767, 2957, 65, 156, "Input"],
+Cell[34998, 834, 208, 3, 43, "Output"]
 }, Open  ]],
-Cell[35242, 841, 608, 19, 52, "Input"],
+Cell[35221, 840, 608, 19, 72, "Input"],
 Cell[CellGroupData[{
-Cell[35875, 864, 1848, 43, 112, "Input"],
-Cell[37726, 909, 458, 9, 52, "Output"]
+Cell[35854, 863, 1848, 43, 156, "Input"],
+Cell[37705, 908, 480, 9, 72, "Output"]
 }, Open  ]],
-Cell[38199, 921, 673, 9, 31, "Input"],
-Cell[38875, 932, 1889, 56, 112, "Input"]
+Cell[38200, 920, 673, 9, 43, "Input"],
+Cell[38876, 931, 1889, 56, 161, "Input"]
 }
 ]
 *)
 
-(* End of internal cache information *)

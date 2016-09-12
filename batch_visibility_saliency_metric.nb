@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    153463,       3682]
-NotebookOptionsPosition[    152014,       3638]
-NotebookOutlinePosition[    152389,       3654]
-CellTagsIndexPosition[    152346,       3651]
+NotebookDataLength[    152392,       3661]
+NotebookOptionsPosition[    150942,       3617]
+NotebookOutlinePosition[    151319,       3633]
+CellTagsIndexPosition[    151276,       3630]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1008,6 +1008,15 @@ vismale_week_green_only\nvismale_week_green\>\""}]}]}], ";"}]], "Input",
 
 Cell[BoxData[
  RowBox[{
+  RowBox[{"str3", "=", 
+   RowBox[{
+   "StringSplit", "@", 
+    "\"\<nucleon_naive\nnucleon_naive_proportional\>\""}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.682450245040502*^9, 3.682450268961894*^9}, {
+  3.6824503448934865`*^9, 3.6824503556055574`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
   RowBox[{"tooths", "=", 
    RowBox[{
    "StringSplit", "@", 
@@ -1229,12 +1238,9 @@ Cell[BoxData[
          RowBox[{"{", 
           RowBox[{
           "tfifile", ",", "volumefile", ",", "legends", ",", "face", ",", 
-           "imagefilenames", ",", "txtfilenames", ",", 
-           RowBox[{"{", 
-            RowBox[{"featurefilename", ",", "visibilityfilename"}], "}"}], 
-           ",", "resultxml", ",", "imagefile", ",", "rawfile", ",", 
-           "dataname", ",", "plotpath", ",", "imagepath"}], "}"}], "=", 
-         "xml"}], ";", "\[IndentingNewLine]", 
+           "imagefilenames", ",", "featurefilename", ",", "resultxml", ",", 
+           "imagefile", ",", "dataname", ",", "plotpath", ",", "imagepath"}], 
+          "}"}], "=", "xml"}], ";", "\[IndentingNewLine]", 
         RowBox[{"(*", 
          RowBox[{"Column", "[", 
           RowBox[{"xml", ",", 
@@ -2034,7 +2040,7 @@ Cell[BoxData[
         RowBox[{"dataname", "->", "mean"}]}]}], "\[IndentingNewLine]", "]"}], 
      ",", 
      RowBox[{"{", 
-      RowBox[{"xmlstr", ",", "cavw4"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+      RowBox[{"xmlstr", ",", "str3"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"t2", "=", 
      RowBox[{"AbsoluteTime", "[", "]"}]}], ";"}], "\[IndentingNewLine]", 
@@ -2102,86 +2108,59 @@ Cell[BoxData[
    3.6769749177891855`*^9, 3.6769749183517113`*^9}, {3.6769750303140326`*^9, 
    3.6769750418185596`*^9}, {3.67697512142502*^9, 3.6769751278469095`*^9}, 
    3.6769796207712865`*^9, {3.676979685060207*^9, 3.676979720245501*^9}, 
-   3.6772604969912834`*^9, 3.6779520747911644`*^9}],
+   3.6772604969912834`*^9, 3.6779520747911644`*^9, {3.682449116758685*^9, 
+   3.6824491501520243`*^9}, 3.682450275897588*^9, 3.68245036172917*^9, {
+   3.6824504404970455`*^9, 3.6824504458105774`*^9}, {3.6824505478727827`*^9, 
+   3.6824505480548005`*^9}}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  InterpretationBox[
-  RowBox[{"\<\"CT-Knee_CT-Bone5_diagonal\"\>", 
+  RowBox[{"\<\"nucleon_naive\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", 
+   "\[InvisibleSpace]", "0.0580058`6.215016414335772"}],
+  SequenceForm["nucleon_naive", "\t", 0.0580058`6.215016414335772],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.676875955812011*^9, 3.6769750763954105`*^9, 3.6769751551915836`*^9, 
+   3.676975472070154*^9, 3.676979635804183*^9, 3.6769796920912757`*^9, 
+   3.6769797403316164`*^9, 3.67698356553783*^9, 3.677952520172165*^9, 
+   3.6779535029341645`*^9, 3.682450279181916*^9, 3.6824503767416706`*^9, 
+   3.6824504494839444`*^9, {3.6824505257225676`*^9, 3.682450551740169*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"nucleon_naive_proportional\"\>", 
    "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.875`7.393553046518287"}],
-  SequenceForm["CT-Knee_CT-Bone5_diagonal", "\t", 0.875`7.393553046518287],
-  Editable->False]], "Print",
- CellChangeTimes->{3.676875955812011*^9, 3.6769750763954105`*^9, 
-  3.6769751551915836`*^9, 3.676975472070154*^9, 3.676979635804183*^9, 
-  3.6769796920912757`*^9, 3.6769797403316164`*^9, 3.67698356553783*^9, 
-  3.677952520172165*^9, 3.6779535029341645`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"CT-Knee_CT-Bone5_diagonal_optimized_parallelsearch_target_even\
-\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.895`7.403368028811885"}],
+   "0.0580058`6.215016414335768"}],
   SequenceForm[
-  "CT-Knee_CT-Bone5_diagonal_optimized_parallelsearch_target_even", "\t", 
-   0.895`7.403368028811885],
+  "nucleon_naive_proportional", "\t", 0.0580058`6.215016414335768],
   Editable->False]], "Print",
- CellChangeTimes->{3.676875955812011*^9, 3.6769750763954105`*^9, 
-  3.6769751551915836`*^9, 3.676975472070154*^9, 3.676979635804183*^9, 
-  3.6769796920912757`*^9, 3.6769797403316164`*^9, 3.67698356553783*^9, 
-  3.677952520172165*^9, 3.6779537009791646`*^9}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"\<\"CT-Knee_CT-Bone5_diagonal_optimized_parallelsearch_target_\
-diagonal\"\>", "\[InvisibleSpace]", "\<\"\\t\"\>", "\[InvisibleSpace]", 
-   "0.9`7.405787502935298"}],
-  SequenceForm[
-  "CT-Knee_CT-Bone5_diagonal_optimized_parallelsearch_target_diagonal", "\t", 
-   0.9`7.405787502935298],
-  Editable->False]], "Print",
- CellChangeTimes->{3.676875955812011*^9, 3.6769750763954105`*^9, 
-  3.6769751551915836`*^9, 3.676975472070154*^9, 3.676979635804183*^9, 
-  3.6769796920912757`*^9, 3.6769797403316164`*^9, 3.67698356553783*^9, 
-  3.677952520172165*^9, 3.6779538925931644`*^9}]
+ CellChangeTimes->{
+  3.676875955812011*^9, 3.6769750763954105`*^9, 3.6769751551915836`*^9, 
+   3.676975472070154*^9, 3.676979635804183*^9, 3.6769796920912757`*^9, 
+   3.6769797403316164`*^9, 3.67698356553783*^9, 3.677952520172165*^9, 
+   3.6779535029341645`*^9, 3.682450279181916*^9, 3.6824503767416706`*^9, 
+   3.6824504494839444`*^9, {3.6824505257225676`*^9, 3.6824505543834333`*^9}}]
 }, Open  ]],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-   RowBox[{"\<\"CT-Knee_CT-Bone5_diagonal\"\>", "\[Rule]", 
+   RowBox[{"\<\"nucleon_naive\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.10812479348448793`", ",", "0.33045990727928415`", ",", 
-      "0.23231922687886616`", ",", "0.1869410651150873`", ",", 
-      "0.14215500726740318`"}], "}"}]}], ",", 
-   RowBox[{"\<\"CT-Knee_CT-Bone5_diagonal_optimized_parallelsearch_target_\
-even\"\>", "\[Rule]", 
+     "0.40651173045138844`", ",", "0.434632370755286`", ",", 
+      "0.15885589879332546`"}], "}"}]}], ",", 
+   RowBox[{"\<\"nucleon_naive_proportional\"\>", "\[Rule]", 
     RowBox[{"{", 
      RowBox[{
-     "0.1976328140410646`", ",", "0.1973328391339929`", ",", 
-      "0.20077625518900177`", ",", "0.20314695783591`", ",", 
-      "0.20111113381801524`"}], "}"}]}], ",", 
-   RowBox[{"\<\"CT-Knee_CT-Bone5_diagonal_optimized_parallelsearch_target_\
-diagonal\"\>", "\[Rule]", 
-    RowBox[{"{", 
-     RowBox[{
-     "0.04088950701985132`", ",", "0.12189926035774651`", ",", 
-      "0.19799692794860227`", ",", "0.2822668489607271`", ",", 
-      "0.3569474557444356`"}], "}"}]}]}], "}"}]], "Output",
- CellChangeTimes->{3.676875857777011*^9, 3.6768759083920107`*^9, 
-  3.6768778825892105`*^9, 3.6769751132104115`*^9, 3.676975191321529*^9, 
-  3.6769761648428607`*^9, 3.6769796741645546`*^9, 3.6769797294350576`*^9, 
-  3.6769797777651854`*^9, 3.6769836202782173`*^9, 3.6779529822291646`*^9, 
-  3.677953906745165*^9}],
+     "0.17931646542707858`", ",", "0.5574743468085228`", ",", 
+      "0.26320918776439856`"}], "}"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6824505331213074`*^9, 3.682450556009596*^9}}],
 
-Cell[BoxData["588.946`10.221620469985734"], "Output",
- CellChangeTimes->{3.676875857777011*^9, 3.6768759083920107`*^9, 
-  3.6768778825892105`*^9, 3.6769751132104115`*^9, 3.676975191321529*^9, 
-  3.6769761648428607`*^9, 3.6769796741645546`*^9, 3.6769797294350576`*^9, 
-  3.6769797777651854`*^9, 3.6769836202782173`*^9, 3.6779529822291646`*^9, 
-  3.677953906745165*^9}]
+Cell[BoxData["5.2025202`8.167758768632687"], "Output",
+ CellChangeTimes->{{3.6824505331213074`*^9, 3.6824505560105963`*^9}}]
 }, Open  ]],
 
 Cell[TextData[{
@@ -3636,10 +3615,10 @@ Cell[BoxData[
    3.653462097534732*^9, 3.6534621060111446`*^9}, {3.653462144080432*^9, 
    3.653462187326709*^9}}]
 },
-WindowSize->{1280, 637},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
-Magnification:>1.15 Inherited,
-FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+WindowSize->{1920, 1028},
+WindowMargins->{{1911, Automatic}, {Automatic, -9}},
+Magnification:>1.35 Inherited,
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -3653,37 +3632,37 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 16988, 468, 1047, "Input"],
-Cell[17549, 490, 16381, 457, 1069, "Input"],
-Cell[33933, 949, 2078, 33, 1289, "Input"],
-Cell[36014, 984, 1309, 22, 893, "Input"],
-Cell[37326, 1008, 532, 12, 167, "Input"],
-Cell[37861, 1022, 357, 8, 167, "Input"],
-Cell[38221, 1032, 1761, 46, 123, "Input"],
-Cell[39985, 1080, 287, 8, 101, "Input"],
-Cell[40275, 1090, 299, 8, 189, "Input"],
-Cell[40577, 1100, 343, 8, 101, "Input"],
-Cell[40923, 1110, 394, 9, 34, "Input"],
-Cell[41320, 1121, 628, 13, 255, "Input"],
-Cell[41951, 1136, 555, 12, 145, "Input"],
-Cell[42509, 1150, 653, 13, 277, "Input"],
-Cell[43165, 1165, 408, 10, 79, "Input"],
+Cell[558, 20, 16988, 468, 1331, "Input"],
+Cell[17549, 490, 16381, 457, 1359, "Input"],
+Cell[33933, 949, 2078, 33, 1639, "Input"],
+Cell[36014, 984, 1309, 22, 1135, "Input"],
+Cell[37326, 1008, 280, 7, 71, "Input"],
+Cell[37609, 1017, 532, 12, 211, "Input"],
+Cell[38144, 1031, 357, 8, 211, "Input"],
+Cell[38504, 1041, 1761, 46, 155, "Input"],
+Cell[40268, 1089, 287, 8, 127, "Input"],
+Cell[40558, 1099, 299, 8, 239, "Input"],
+Cell[40860, 1109, 343, 8, 127, "Input"],
+Cell[41206, 1119, 394, 9, 42, "Input"],
+Cell[41603, 1130, 628, 13, 323, "Input"],
+Cell[42234, 1145, 555, 12, 183, "Input"],
+Cell[42792, 1159, 653, 13, 351, "Input"],
+Cell[43448, 1174, 408, 10, 99, "Input"],
 Cell[CellGroupData[{
-Cell[43598, 1179, 40548, 925, 2433, "Input"],
+Cell[43881, 1188, 40620, 925, 2731, "Input"],
 Cell[CellGroupData[{
-Cell[84171, 2108, 538, 10, 26, "Print"],
-Cell[84712, 2120, 617, 12, 26, "Print"],
-Cell[85332, 2134, 621, 12, 26, "Print"]
+Cell[84526, 2117, 646, 11, 29, "Print"],
+Cell[85175, 2130, 681, 13, 29, "Print"]
 }, Open  ]],
-Cell[85968, 2149, 1245, 27, 79, "Output"],
-Cell[87216, 2178, 367, 5, 34, "Output"]
+Cell[85871, 2146, 513, 13, 42, "Output"],
+Cell[86387, 2161, 124, 1, 42, "Output"]
 }, Open  ]],
-Cell[87598, 2186, 3482, 76, 124, "Text"],
-Cell[91083, 2264, 4732, 97, 145, "Text"],
-Cell[95818, 2363, 15786, 300, 358, "Text"],
-Cell[111607, 2665, 14390, 332, 1179, "Input"],
-Cell[126000, 2999, 14372, 331, 1179, "Input"],
-Cell[140375, 3332, 11635, 304, 717, "Input"]
+Cell[86526, 2165, 3482, 76, 150, "Text"],
+Cell[90011, 2243, 4732, 97, 179, "Text"],
+Cell[94746, 2342, 15786, 300, 436, "Text"],
+Cell[110535, 2644, 14390, 332, 1499, "Input"],
+Cell[124928, 2978, 14372, 331, 1499, "Input"],
+Cell[139303, 3311, 11635, 304, 827, "Input"]
 }
 ]
 *)
