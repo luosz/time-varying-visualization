@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3427,        110]
-NotebookOptionsPosition[      3046,         92]
-NotebookOutlinePosition[      3421,        108]
-CellTagsIndexPosition[      3378,        105]
+NotebookDataLength[      3744,        120]
+NotebookOptionsPosition[      3293,         99]
+NotebookOutlinePosition[      3668,        115]
+CellTagsIndexPosition[      3625,        112]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -78,17 +78,24 @@ Cell[BoxData[
  CellChangeTimes->{
   3.6826847031130953`*^9, 3.6826848209790955`*^9, {3.682684854185096*^9, 
    3.6826848827460957`*^9}, {3.6826850579890957`*^9, 3.682685131421096*^9}, 
-   3.6826852152710953`*^9}]
+   3.6826852152710953`*^9, {3.682704703737096*^9, 3.6827047128070955`*^9}}]
 }, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"If", "[", 
   RowBox[{
-   RowBox[{"!", 
-    RowBox[{"DirectoryQ", "[", "imagepath", "]"}]}], ",", 
+   RowBox[{"DirectoryQ", "[", "imagepath", "]"}], ",", 
+   RowBox[{"DirectoryQ", "[", "imagepath", "]"}], ",", 
    RowBox[{"CreateDirectory", "[", "imagepath", "]"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.6826848309310956`*^9, 3.6826848806870956`*^9}, {
-  3.6826850729810953`*^9, 3.6826850733250957`*^9}}]
+  3.6826850729810953`*^9, 3.6826850733250957`*^9}, {3.6827047074500957`*^9, 
+  3.682704710777096*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.6827047128450956`*^9}]
+}, Open  ]]
 },
 WindowSize->{1902, 1010},
 WindowMargins->{{1920, Automatic}, {Automatic, 0}},
@@ -109,9 +116,12 @@ CellTagsIndex->{}
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 1790, 48, 220, "Input"],
-Cell[2373, 72, 336, 8, 45, "Output"]
+Cell[2373, 72, 384, 8, 45, "Output"]
 }, Open  ]],
-Cell[2724, 83, 318, 7, 78, "Input"]
+Cell[CellGroupData[{
+Cell[2794, 85, 405, 8, 45, "Input"],
+Cell[3202, 95, 75, 1, 45, "Output"]
+}, Open  ]]
 }
 ]
 *)
