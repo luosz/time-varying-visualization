@@ -3,6 +3,11 @@
     <Workspace version="2" GlobalDescription="">
         <ProcessorNetwork version="15">
             <MetaData>
+                <MetaItem name="ProcessorSelection" type="SelectionMetaData::Processor">
+                    <values>
+                        <item type="Background" ref="ref1" />
+                    </values>
+                </MetaItem>
                 <MetaItem name="ZoomCenter" type="Vec2MetaData">
                     <value x="-349.85879517" y="75.76017761" />
                 </MetaItem>
@@ -15,9 +20,9 @@
                     </MetaData>
                     <Properties>
                         <Property mapKey="applyLightAttenuation" name="applyLightAttenuation" value="false" />
-                        <Property mapKey="camera" name="camera" projectionMode="1" maxValue="10250" minValue="1" frustLeft="-0.4142136" frustRight="0.4142136" frustBottom="-0.4142136" frustTop="0.4142136" frustNear="1" frustFar="10291" fovy="45.00000381" eyeMode="1" eyeSeparation="1" axisMode="0" stereoFocalLengh="600" stereoWidth="450" stereoRelativeFocalLength="0.05" useRealWorldFrustum="0" centerOption="0" adaptOnChange="true" id="ref9">
+                        <Property mapKey="camera" name="camera" projectionMode="1" maxValue="10250" minValue="1" frustLeft="-0.4142136" frustRight="0.4142136" frustBottom="-0.4142136" frustTop="0.4142136" frustNear="1" frustFar="10291" fovy="45.00000381" eyeMode="1" eyeSeparation="1" axisMode="0" stereoFocalLengh="600" stereoWidth="450" stereoRelativeFocalLength="0.05" useRealWorldFrustum="0" centerOption="0" adaptOnChange="true" id="ref7">
                             <MetaData>
-                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="true" x="1568" y="963" />
+                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="false" x="1068" y="290" />
                             </MetaData>
                             <position x="20.5" y="-33.68058014" z="20.49999428" />
                             <focus x="20.5" y="20.5" z="20.5" />
@@ -69,7 +74,7 @@
                         </Property>
                         <Property mapKey="samplingRate" name="samplingRate" value="2" />
                         <Property mapKey="shading" name="shading" value="phong" />
-                        <Property mapKey="transferFunction" name="transferFunction" domainFittingStrategy="1" id="ref10">
+                        <Property mapKey="transferFunction" name="transferFunction" domainFittingStrategy="1" id="ref8">
                             <MetaData>
                                 <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="false" />
                             </MetaData>
@@ -144,11 +149,11 @@
                 </Processor>
                 <Processor type="Canvas" name="Canvas" id="ref2">
                     <MetaData>
-                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-473" y="198" />
-                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="123" y="203" width="512" height="512" />
+                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-464" y="196" />
+                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="1102" y="472" width="512" height="512" />
                         <MetaItem name="preferedDevelopmentCanvasFS" type="BoolMetaData" value="false" />
                         <MetaItem name="preferedDevelopmentCanvasPosition" type="IVec2MetaData">
-                            <value x="123" y="203" />
+                            <value x="1102" y="472" />
                         </MetaItem>
                         <MetaItem name="preferedDevelopmentCanvasSize" type="IVec2MetaData">
                             <value x="512" y="512" />
@@ -167,7 +172,7 @@
                     <Inports>
                         <Port name="image.input" direction="1" portID="image.input" guiName="Image Input" allowMultipleConnections="false" invalidationLevel="1">
                             <Properties>
-                                <Property mapKey="image.input.renderSizeOrigin" name="image.input.renderSizeOrigin" id="ref12">
+                                <Property mapKey="image.input.renderSizeOrigin" name="image.input.renderSizeOrigin" id="ref10">
                                     <value x="512" y="512" />
                                 </Property>
                             </Properties>
@@ -178,7 +183,7 @@
                 </Processor>
                 <Processor type="Background" name="Background" id="ref1">
                     <MetaData>
-                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-473" y="107" />
+                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-472" y="104" />
                     </MetaData>
                     <Properties>
                         <Property mapKey="angle" name="angle" value="60" />
@@ -196,7 +201,7 @@
                                 <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="false" />
                             </MetaData>
                         </Property>
-                        <Property mapKey="texture" name="texture" noPathSet="false" value="tcd2.jpg" />
+                        <Property mapKey="texture" name="texture" noPathSet="false" value="night.jpg" />
                     </Properties>
                     <Inports>
                         <Port name="image.input" direction="1" portID="image.input" guiName="Image Input" allowMultipleConnections="false" invalidationLevel="1">
@@ -235,7 +240,7 @@
                         <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-393" y="-91" />
                     </MetaData>
                     <Properties>
-                        <Property mapKey="camera" name="camera" projectionMode="1" maxValue="10250" minValue="1" frustLeft="-0.4142136" frustRight="0.4142136" frustBottom="-0.4142136" frustTop="0.4142136" frustNear="1" frustFar="10291" fovy="45.00000381" eyeMode="1" eyeSeparation="1" axisMode="0" stereoFocalLengh="600" stereoWidth="450" stereoRelativeFocalLength="0.05" useRealWorldFrustum="0" centerOption="0" adaptOnChange="true" id="ref8">
+                        <Property mapKey="camera" name="camera" projectionMode="1" maxValue="10250" minValue="1" frustLeft="-0.4142136" frustRight="0.4142136" frustBottom="-0.4142136" frustTop="0.4142136" frustNear="1" frustFar="10291" fovy="45.00000381" eyeMode="1" eyeSeparation="1" axisMode="0" stereoFocalLengh="600" stereoWidth="450" stereoRelativeFocalLength="0.05" useRealWorldFrustum="0" centerOption="0" adaptOnChange="true" id="ref6">
                             <MetaData>
                                 <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="false" x="721" y="372" />
                             </MetaData>
@@ -263,7 +268,7 @@
                         <Port name="image.entrypoints" direction="0" portID="image.entrypoints" guiName="Entry-points Output" allowMultipleConnections="true" invalidationLevel="1">
                             <Properties>
                                 <Property mapKey="blockEvents" name="blockEvents" value="false" />
-                                <Property mapKey="image.entrypoints.renderSizeReceive" name="image.entrypoints.renderSizeReceive" id="ref13">
+                                <Property mapKey="image.entrypoints.renderSizeReceive" name="image.entrypoints.renderSizeReceive" id="ref11">
                                     <value x="512" y="512" />
                                 </Property>
                             </Properties>
@@ -271,7 +276,7 @@
                         <Port name="image.exitpoints" direction="0" portID="image.exitpoints" guiName="Exit-points Output" allowMultipleConnections="true" invalidationLevel="1">
                             <Properties>
                                 <Property mapKey="blockEvents" name="blockEvents" value="false" />
-                                <Property mapKey="image.exitpoints.renderSizeReceive" name="image.exitpoints.renderSizeReceive" id="ref14">
+                                <Property mapKey="image.exitpoints.renderSizeReceive" name="image.exitpoints.renderSizeReceive" id="ref12">
                                     <value x="512" y="512" />
                                 </Property>
                             </Properties>
@@ -314,7 +319,7 @@
                         <Property mapKey="rightClippingPlane" name="rightClippingPlane" value="0" />
                         <Property mapKey="threshold" name="threshold" value="1" />
                         <Property mapKey="topClippingPlane" name="topClippingPlane" value="40" />
-                        <Property mapKey="transferfunction" name="transferfunction" domainFittingStrategy="1" id="ref11">
+                        <Property mapKey="transferfunction" name="transferfunction" domainFittingStrategy="1" id="ref9">
                             <MetaData>
                                 <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="false" />
                             </MetaData>
@@ -424,76 +429,6 @@
                     </Outports>
                     <InteractionHandlers />
                 </Processor>
-                <Processor type="Canvas" name="Canvas 2" id="ref7">
-                    <MetaData>
-                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-319" y="197" />
-                        <MetaItem name="ProcessorWidget" type="WindowStateMetaData" visible="true" x="430" y="327" width="512" height="512" />
-                        <MetaItem name="preferedDevelopmentCanvasFS" type="BoolMetaData" value="false" />
-                        <MetaItem name="preferedDevelopmentCanvasPosition" type="IVec2MetaData">
-                            <value x="57" y="230" />
-                        </MetaItem>
-                        <MetaItem name="preferedDevelopmentCanvasSize" type="IVec2MetaData">
-                            <value x="512" y="512" />
-                        </MetaItem>
-                    </MetaData>
-                    <Properties>
-                        <Property mapKey="canvasSize" name="canvasSize">
-                            <value x="512" y="512" />
-                        </Property>
-                        <Property mapKey="saveScreenshot" name="saveScreenshot" />
-                        <Property mapKey="screenshotFilename" name="screenshotFilename" noPathSet="true" value="" />
-                        <Property mapKey="showCanvas" name="showCanvas" value="true" />
-                        <Property mapKey="showCursor" name="showCursor" value="true" />
-                        <Property mapKey="showFullScreen" name="showFullScreen" value="false" />
-                    </Properties>
-                    <Inports>
-                        <Port name="image.input" direction="1" portID="image.input" guiName="Image Input" allowMultipleConnections="false" invalidationLevel="1">
-                            <Properties>
-                                <Property mapKey="image.input.renderSizeOrigin" name="image.input.renderSizeOrigin">
-                                    <value x="512" y="512" />
-                                </Property>
-                            </Properties>
-                        </Port>
-                    </Inports>
-                    <Outports />
-                    <InteractionHandlers />
-                </Processor>
-                <Processor type="Background" name="Background 2" id="ref6">
-                    <MetaData>
-                        <MetaItem name="ProcessorGraphicsItem" type="PositionMetaData" x="-335" y="105" />
-                    </MetaData>
-                    <Properties>
-                        <Property mapKey="angle" name="angle" value="60" />
-                        <Property mapKey="backgroundModeAsString" name="backgroundModeAsString" value="texture" />
-                        <Property mapKey="blendMode" name="blendMode" value="alpha-blending" />
-                        <Property mapKey="color1" name="color1">
-                            <value x="1" y="1" z="1" w="1" />
-                        </Property>
-                        <Property mapKey="color2" name="color2">
-                            <value x="0.39215699" y="0.39215699" z="0.39215699" w="1" />
-                        </Property>
-                        <Property mapKey="repeat" name="repeat" value="1" />
-                        <Property mapKey="shader.program" name="shader.program" fragmentModified="false" fragmentIsExternal="false" vertexModified="false" vertexIsExternal="false" geometryModified="false" geometryIsExternal="false">
-                            <MetaData>
-                                <MetaItem name="EditorWindow" type="WindowStateMetaData" visible="false" />
-                            </MetaData>
-                        </Property>
-                        <Property mapKey="texture" name="texture" noPathSet="false" value="tcd.jpg" />
-                    </Properties>
-                    <Inports>
-                        <Port name="image.input" direction="1" portID="image.input" guiName="Image Input" allowMultipleConnections="false" invalidationLevel="1">
-                            <Properties />
-                        </Port>
-                    </Inports>
-                    <Outports>
-                        <Port name="image.output" direction="0" portID="image.output" guiName="Image Output" allowMultipleConnections="true" invalidationLevel="1">
-                            <Properties>
-                                <Property mapKey="blockEvents" name="blockEvents" value="false" />
-                            </Properties>
-                        </Port>
-                    </Outports>
-                    <InteractionHandlers />
-                </Processor>
             </Processors>
             <Connections>
                 <Connection>
@@ -552,45 +487,37 @@
                         <Processor type="MeshEntryExitPoints" ref="ref5" />
                     </Inport>
                 </Connection>
-                <Connection>
-                    <Outport name="image.output">
-                        <Processor type="Background" ref="ref6" />
-                    </Outport>
-                    <Inport name="image.input">
-                        <Processor type="Canvas" ref="ref7" />
-                    </Inport>
-                </Connection>
             </Connections>
             <CoProcessorConnections />
             <PropertyLinks>
                 <PropertyLink>
-                    <SourceProperty type="CameraProperty" ref="ref8" />
-                    <DestinationProperty type="CameraProperty" ref="ref9" />
+                    <SourceProperty type="CameraProperty" ref="ref6" />
+                    <DestinationProperty type="CameraProperty" ref="ref7" />
                     <Evaluator type="LinkEvaluatorCameraId" />
                 </PropertyLink>
                 <PropertyLink>
-                    <SourceProperty type="CameraProperty" ref="ref9" />
-                    <DestinationProperty type="CameraProperty" ref="ref8" />
+                    <SourceProperty type="CameraProperty" ref="ref7" />
+                    <DestinationProperty type="CameraProperty" ref="ref6" />
                     <Evaluator type="LinkEvaluatorCameraId" />
                 </PropertyLink>
                 <PropertyLink>
-                    <SourceProperty type="TransFuncProperty" ref="ref10" />
-                    <DestinationProperty type="TransFuncProperty" ref="ref11" />
+                    <SourceProperty type="TransFuncProperty" ref="ref8" />
+                    <DestinationProperty type="TransFuncProperty" ref="ref9" />
                     <Evaluator type="LinkEvaluatorTransFuncId" />
                 </PropertyLink>
                 <PropertyLink>
-                    <SourceProperty type="TransFuncProperty" ref="ref11" />
-                    <DestinationProperty type="TransFuncProperty" ref="ref10" />
+                    <SourceProperty type="TransFuncProperty" ref="ref9" />
+                    <DestinationProperty type="TransFuncProperty" ref="ref8" />
                     <Evaluator type="LinkEvaluatorTransFuncId" />
                 </PropertyLink>
                 <PropertyLink>
-                    <SourceProperty ref="ref12" />
-                    <DestinationProperty ref="ref13" />
+                    <SourceProperty ref="ref10" />
+                    <DestinationProperty ref="ref11" />
                     <Evaluator type="LinkEvaluatorRenderSize" />
                 </PropertyLink>
                 <PropertyLink>
-                    <SourceProperty ref="ref12" />
-                    <DestinationProperty ref="ref14" />
+                    <SourceProperty ref="ref10" />
+                    <DestinationProperty ref="ref12" />
                     <Evaluator type="LinkEvaluatorRenderSize" />
                 </PropertyLink>
             </PropertyLinks>

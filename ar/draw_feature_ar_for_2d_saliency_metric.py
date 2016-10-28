@@ -12,7 +12,7 @@ for i in range(len(list)):
     voreen.loadTransferFunction("SingleVolumeRaycaster", "transferFunction", s)
     print("loaded transfer function %s" % s)
     if i%5<2:
-        voreen.setPropertyValue("Background", "texture", "D:/document/work/time-varying-visualization/ar/tcd2.jpg")
+        voreen.setPropertyValue("Background", "texture", "D:/document/work/time-varying-visualization/ar/background.jpg")
         voreen.setPropertyValue("Background", "backgroundModeAsString", "texture")
     else:
         voreen.setPropertyValue("Background", "backgroundModeAsString", "monochrome")
