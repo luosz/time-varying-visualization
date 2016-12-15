@@ -23,7 +23,7 @@
     <colorL r='129'
         g='90'
         b='255'
-        a='7' />
+        a='43' />
    </key>
    <key type='TransFuncMappingKey'>
     <intensity value='0.180556' />
@@ -47,7 +47,7 @@
     <colorL r='255'
         g='0'
         b='0'
-        a='16' />
+        a='36' />
    </key>
    <key type='TransFuncMappingKey'>
     <intensity value='0.489362' />
@@ -71,7 +71,7 @@
     <colorL r='73'
         g='255'
         b='1'
-        a='232' />
+        a='175' />
    </key>
    <key type='TransFuncMappingKey'>
     <intensity value='0.96627' />

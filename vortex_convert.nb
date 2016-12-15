@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     18127,        412]
-NotebookOptionsPosition[     17493,        388]
-NotebookOutlinePosition[     17837,        403]
-CellTagsIndexPosition[     17794,        400]
+NotebookDataLength[     25578,        533]
+NotebookOptionsPosition[     24900,        507]
+NotebookOutlinePosition[     25247,        522]
+CellTagsIndexPosition[     25204,        519]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -53,104 +53,108 @@ Cell[BoxData[{
  CellChangeTimes->{{3.640447359181718*^9, 3.640447373335322*^9}, {
   3.640447504858236*^9, 3.6404475117298536`*^9}}],
 
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"start", "=", "1"}], ";", 
-  RowBox[{"end", "=", "n"}], ";", 
-  RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"Do", "[", "\[IndentingNewLine]", 
+Cell[BoxData[
+ RowBox[{"(*", 
   RowBox[{
    RowBox[{
-    RowBox[{"endofstep", "=", 
-     RowBox[{"Min", "[", 
-      RowBox[{
-       RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
-    "\[IndentingNewLine]", 
-    RowBox[{"num", "=", 
-     RowBox[{"Range", "[", 
-      RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"start", "=", "1"}], ";", 
+    RowBox[{"end", "=", "n"}], ";", 
+    RowBox[{"step", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Do", "[", "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{"Table", "[", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"Module", "[", 
-        RowBox[{
-         RowBox[{"{", "data", "}"}], ",", "\[IndentingNewLine]", 
-         RowBox[{
-          RowBox[{"data", "=", 
-           RowBox[{"Import", "[", 
-            RowBox[{
-             RowBox[{"filelist", "[", 
-              RowBox[{"[", "i", "]"}], "]"}], ",", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Binary\>\"", ",", "\"\<Real32\>\""}], "}"}], ",", 
-             RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"ImageAdjust", "@", 
-           RowBox[{"UCARImage3D", "[", "data", "]"}]}]}]}], 
-        "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
-       RowBox[{"{", 
-        RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
-     "\[IndentingNewLine]", "//", 
      RowBox[{
-      RowBox[{"MapIndexed", "[", 
-       RowBox[{
+      RowBox[{"endofstep", "=", 
+       RowBox[{"Min", "[", 
         RowBox[{
-         RowBox[{"Export", "[", 
+         RowBox[{"j", "+", "step", "-", "1"}], ",", "end"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"num", "=", 
+       RowBox[{"Range", "[", 
+        RowBox[{"j", ",", "endofstep"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Table", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Module", "[", 
           RowBox[{
-           RowBox[{"\"\<E:\\\\_time_varying_data\\\\vortex\\\\vorts\>\"", "<>", 
-            RowBox[{"ToString", "[", 
-             RowBox[{"num", "[", 
-              RowBox[{"[", 
-               RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], "]"}], "<>", 
-            "\"\<.tif\>\""}], ",", "#"}], "]"}], "&"}], ",", "#"}], "]"}], 
-      "&"}]}]}], "\[IndentingNewLine]", ",", 
-   RowBox[{"{", 
-    RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], 
-  "]"}]}], "Input",
+           RowBox[{"{", "data", "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"data", "=", 
+             RowBox[{"Import", "[", 
+              RowBox[{
+               RowBox[{"filelist", "[", 
+                RowBox[{"[", "i", "]"}], "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\"\<Binary\>\"", ",", "\"\<Real32\>\""}], "}"}], ",", 
+               RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"ImageAdjust", "@", 
+             RowBox[{"UCARImage3D", "[", "data", "]"}]}]}]}], 
+          "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "j", ",", "endofstep"}], "}"}]}], "]"}], 
+       "\[IndentingNewLine]", "//", 
+       RowBox[{
+        RowBox[{"MapIndexed", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Export", "[", 
+            RowBox[{
+             RowBox[{"\"\<E:\\\\_time_varying_data\\\\vortex\\\\vorts\>\"", "<>", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"num", "[", 
+                RowBox[{"[", 
+                 RowBox[{"First", "[", "#2", "]"}], "]"}], "]"}], "]"}], 
+              "<>", "\"\<.tif\>\""}], ",", "#"}], "]"}], "&"}], ",", "#"}], 
+         "]"}], "&"}]}]}], "\[IndentingNewLine]", ",", 
+     RowBox[{"{", 
+      RowBox[{"j", ",", "start", ",", "end", ",", "step"}], "}"}]}], "]"}]}], 
+  "*)"}]], "Input",
  CellChangeTimes->{{3.6404476187248096`*^9, 3.640447620774909*^9}, {
   3.640447657175684*^9, 3.6404476748647637`*^9}, {3.6404485583179502`*^9, 
   3.640448588062807*^9}, {3.6404523282948236`*^9, 3.6404523324808273`*^9}, {
-  3.64051330959892*^9, 3.64051331373464*^9}}],
+  3.64051330959892*^9, 3.64051331373464*^9}, {3.6906128712962227`*^9, 
+  3.6906128728900857`*^9}}],
 
 Cell[BoxData[
- RowBox[{
+ RowBox[{"(*", 
   RowBox[{
-   RowBox[{"ibmFloat32", "[", "bytes_List", "]"}], ":=", 
    RowBox[{
+    RowBox[{"ibmFloat32", "[", "bytes_List", "]"}], ":=", 
     RowBox[{
-     RowBox[{"With", "[", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{"sign", "=", 
-          RowBox[{"BitGet", "[", 
-           RowBox[{
-            RowBox[{"#", "[", 
-             RowBox[{"[", "1", "]"}], "]"}], ",", "7"}], "]"}]}], ",", 
-         RowBox[{"exponent", "=", 
-          RowBox[{"BitClear", "[", 
-           RowBox[{
-            RowBox[{"#", "[", 
-             RowBox[{"[", "1", "]"}], "]"}], ",", "7"}], "]"}]}], ",", 
-         RowBox[{"significand", "=", 
-          RowBox[{"FromDigits", "[", 
-           RowBox[{
-            RowBox[{"#", "[", 
-             RowBox[{"[", 
-              RowBox[{"2", ";;", "4"}], "]"}], "]"}], ",", 
-            RowBox[{"2", "^", "8"}]}], "]"}]}]}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"With", "[", 
        RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"sign", "=", 
+           RowBox[{"BitGet", "[", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", "7"}], "]"}]}], ",", 
+          RowBox[{"exponent", "=", 
+           RowBox[{"BitClear", "[", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", "7"}], "]"}]}], ",", 
+          RowBox[{"significand", "=", 
+           RowBox[{"FromDigits", "[", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", 
+               RowBox[{"2", ";;", "4"}], "]"}], "]"}], ",", 
+             RowBox[{"2", "^", "8"}]}], "]"}]}]}], "}"}], ",", 
         RowBox[{
-         RowBox[{"N", "@", 
+         RowBox[{
+          RowBox[{"N", "@", 
+           RowBox[{"(", 
+            RowBox[{"-", "1"}], ")"}]}], "^", "sign"}], "*", 
+         RowBox[{"significand", "/", 
+          RowBox[{"2", "^", "24"}]}], "*", 
+         RowBox[{"16", "^", 
           RowBox[{"(", 
-           RowBox[{"-", "1"}], ")"}]}], "^", "sign"}], "*", 
-        RowBox[{"significand", "/", 
-         RowBox[{"2", "^", "24"}]}], "*", 
-        RowBox[{"16", "^", 
-         RowBox[{"(", 
-          RowBox[{"exponent", "-", "64"}], ")"}]}]}]}], "]"}], "&"}], "/@", 
-    RowBox[{"Partition", "[", 
-     RowBox[{"bytes", ",", "4"}], "]"}]}]}], ";"}]], "Input",
+           RowBox[{"exponent", "-", "64"}], ")"}]}]}]}], "]"}], "&"}], "/@", 
+     RowBox[{"Partition", "[", 
+      RowBox[{"bytes", ",", "4"}], "]"}]}]}], ";"}], "*)"}]], "Input",
  CellChangeTimes->{{3.640511712821948*^9, 3.6405117128229065`*^9}}],
 
 Cell[BoxData[{
@@ -166,42 +170,30 @@ Cell[BoxData[{
       RowBox[{"\"\<Binary\>\"", ",", "\"\<Real32\>\""}], "}"}], ",", 
      RowBox[{"ByteOrdering", "\[Rule]", "1"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
- RowBox[{"img", "=", 
-  RowBox[{"ImageAdjust", "@", 
-   RowBox[{"UCARImage3D", "[", "data", "]"}]}]}]}], "Input",
+ RowBox[{
+  RowBox[{"img", "=", 
+   RowBox[{"ImageAdjust", "@", 
+    RowBox[{"UCARImage3D", "[", "data", "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"list", "=", 
+   RowBox[{"ClusteringComponents", "[", 
+    RowBox[{"img", ",", "4"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Colorize", "[", 
+   RowBox[{"list", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"1", "\[Rule]", "0"}], ",", 
+      RowBox[{"2", "\[Rule]", "0"}], ",", 
+      RowBox[{"3", "\[Rule]", "0"}]}], "}"}]}], "]"}], ";"}]}], "Input",
  CellChangeTimes->{{3.640447827843603*^9, 3.640447827862646*^9}, {
   3.640448608701769*^9, 3.6404486276867533`*^9}, {3.640448812284495*^9, 
   3.640448813139594*^9}, {3.640509044306879*^9, 3.640509056245533*^9}, {
   3.640509101054558*^9, 3.6405091287966805`*^9}, {3.640511301268655*^9, 
   3.6405113026237593`*^9}, {3.6405117662268715`*^9, 3.6405117684432244`*^9}, {
-  3.6405132519476414`*^9, 3.640513263059159*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"list", "=", 
-   RowBox[{"ClusteringComponents", "[", 
-    RowBox[{"img", ",", "4"}], "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.6405095968127213`*^9, 3.640509597741721*^9}, {
-   3.640510011282486*^9, 3.6405100119064913`*^9}, {3.6405100726921577`*^9, 
-   3.64051010144501*^9}, 3.6405137121148505`*^9, 3.6405149071611934`*^9, 
-   3.640515034845518*^9, 3.640515144769184*^9, 3.640522816517874*^9, 
-   3.640522868455491*^9, 3.6405229260867925`*^9, 3.643836920664793*^9}],
-
-Cell[BoxData[
- RowBox[{"Colorize", "[", 
-  RowBox[{"list", "/.", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"1", "\[Rule]", "0"}], ",", 
-     RowBox[{"2", "\[Rule]", "0"}], ",", 
-     RowBox[{"3", "\[Rule]", "0"}]}], "}"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.640509144677613*^9, 3.640509147372697*^9}, {
-   3.6405099780253325`*^9, 3.6405099817065268`*^9}, 3.6405100765483274`*^9, {
-   3.64051036742292*^9, 3.640510370243494*^9}, {3.640514901129422*^9, 
-   3.6405149012882767`*^9}, {3.6405150723504868`*^9, 
-   3.6405152059543104`*^9}, {3.640516306614069*^9, 3.6405163077703924`*^9}, {
-   3.640522848408042*^9, 3.6405228762763133`*^9}, {3.640522974394698*^9, 
-   3.64052299027169*^9}, {3.6409695726634398`*^9, 3.6409695888231525`*^9}}],
+  3.6405132519476414`*^9, 3.640513263059159*^9}, {3.690613756397807*^9, 
+  3.690613756632187*^9}, {3.6908021442354417`*^9, 3.690802144985401*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -228,8 +220,7 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{"Export", "[", 
      RowBox[{
-      RowBox[{
-       RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<vorts\>\"", "<>", 
+      RowBox[{"\"\<E:\\\\_time_varying_data\\\\vortex\\\\vorts\>\"", "<>", 
        RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\<.mhd\>\""}], ",", 
       RowBox[{
       "\"\<NDims = 3\\nDimSize = \>\"", "<>", "dimsize", "<>", 
@@ -240,7 +231,8 @@ Cell[BoxData[{
    RowBox[{"Range", "[", "99", "]"}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.640514408405222*^9, 3.6405144355064616`*^9}, {
    3.640514486459976*^9, 3.6405144867329397`*^9}, {3.6405145605500045`*^9, 
-   3.640514561694999*^9}, 3.6405147227158804`*^9}],
+   3.640514561694999*^9}, 3.6405147227158804`*^9, {3.6906136517360287`*^9, 
+   3.6906136650487947`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -383,12 +375,139 @@ Cell[BoxData[
    ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts98.tif\"\>", 
    ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts99.tif\"\>"}], 
   "}"}]], "Output",
- CellChangeTimes->{3.6733552216146126`*^9}]
+ CellChangeTimes->{3.6733552216146126`*^9, 3.690613482612913*^9, 
+  3.690626563911356*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MapIndexed", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Export", "[", 
+     RowBox[{
+      RowBox[{"\"\<E:\\\\_time_varying_data\\\\vortex\\\\vorts\>\"", "<>", 
+       RowBox[{"ToString", "[", 
+        RowBox[{"First", "[", "#2", "]"}], "]"}], "<>", "\"\<.raw\>\""}], ",", 
+      RowBox[{"Flatten", "@", 
+       RowBox[{"ImageData", "[", 
+        RowBox[{"#", ",", "\"\<Byte\>\""}], "]"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Binary\>\"", ",", "\"\<Byte\>\""}], "}"}]}], "]"}], "&"}],
+    ",", "result"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6906132996337285`*^9, 3.6906132999618626`*^9}, {
+  3.6906133309764547`*^9, 3.6906133343359394`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts1.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts2.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts3.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts4.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts5.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts6.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts7.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts8.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts9.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts10.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts11.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts12.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts13.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts14.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts15.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts16.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts17.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts18.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts19.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts20.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts21.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts22.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts23.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts24.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts25.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts26.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts27.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts28.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts29.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts30.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts31.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts32.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts33.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts34.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts35.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts36.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts37.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts38.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts39.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts40.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts41.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts42.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts43.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts44.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts45.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts46.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts47.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts48.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts49.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts50.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts51.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts52.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts53.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts54.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts55.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts56.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts57.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts58.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts59.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts60.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts61.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts62.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts63.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts64.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts65.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts66.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts67.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts68.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts69.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts70.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts71.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts72.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts73.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts74.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts75.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts76.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts77.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts78.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts79.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts80.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts81.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts82.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts83.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts84.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts85.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts86.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts87.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts88.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts89.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts90.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts91.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts92.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts93.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts94.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts95.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts96.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts97.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts98.raw\"\>", 
+   ",", "\<\"E:\\\\_time_varying_data\\\\vortex\\\\vorts99.raw\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.690613492269103*^9, 3.690613502847453*^9}, 
+   3.6906265689239273`*^9}]
 }, Open  ]]
 },
-WindowSize->{1282, 797},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
-FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+WindowSize->{1520, 877},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -402,17 +521,19 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1201, 33, 72, "Input"],
-Cell[1762, 55, 2306, 57, 252, "Input"],
-Cell[4071, 114, 1371, 39, 72, "Input"],
-Cell[5445, 155, 941, 21, 72, "Input"],
-Cell[6389, 178, 506, 9, 31, "Input"],
-Cell[6898, 189, 741, 14, 31, "Input"],
-Cell[7642, 205, 1462, 37, 132, "Input"],
-Cell[9107, 244, 898, 23, 72, "Input"],
+Cell[558, 20, 1201, 33, 69, "Input"],
+Cell[1762, 55, 2499, 60, 240, "Input"],
+Cell[4264, 117, 1433, 40, 30, "Input"],
+Cell[5700, 159, 1475, 36, 107, "Input"],
+Cell[7178, 197, 1499, 37, 107, "Input"],
+Cell[8680, 236, 898, 23, 69, "Input"],
 Cell[CellGroupData[{
-Cell[10030, 271, 427, 10, 31, "Input"],
-Cell[10460, 283, 7017, 102, 672, "Output"]
+Cell[9603, 263, 427, 10, 30, "Input"],
+Cell[10033, 275, 7064, 103, 487, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17134, 383, 680, 16, 30, "Input"],
+Cell[17817, 401, 7067, 103, 487, "Output"]
 }, Open  ]]
 }
 ]

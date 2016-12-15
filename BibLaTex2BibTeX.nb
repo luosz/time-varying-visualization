@@ -1,0 +1,641 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     32607,        632]
+NotebookOptionsPosition[     31976,        606]
+NotebookOutlinePosition[     32320,        621]
+CellTagsIndexPosition[     32277,        618]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"bibliography", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\<D:\\\\document\\\\work\\\\phd-thesis\\\\thesis\\\\bibliography.bib\>\
+\"", ",", "\"\<Text\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bib", "=", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{"bibliography", ",", "\"\<\\n\\n\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", "bib", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b2", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"bib", ",", 
+     RowBox[{
+      RowBox[{"StringContainsQ", "[", 
+       RowBox[{"#", ",", "\"\<@article\>\""}], "]"}], "&"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", "b2", "]"}]}], "Input",
+ CellChangeTimes->{{3.654455292196679*^9, 3.6544553127423525`*^9}, {
+   3.6544553467062874`*^9, 3.65445534784709*^9}, 3.654455414203182*^9, {
+   3.6544556138178935`*^9, 3.654455633296836*^9}, {3.654458328032748*^9, 
+   3.6544583282358713`*^9}, {3.654461550842847*^9, 3.6544615510816593`*^9}}],
+
+Cell[BoxData["230"], "Output",
+ CellChangeTimes->{
+  3.6544583285606136`*^9, {3.654458537297442*^9, 3.654458562459748*^9}, {
+   3.654459426045344*^9, 3.6544594412123036`*^9}, 3.6544608505016627`*^9, {
+   3.6544609050705357`*^9, 3.654460920909462*^9}, 3.654461038867071*^9, {
+   3.654461089651702*^9, 3.6544611070138016`*^9}, {3.6544612744739475`*^9, 
+   3.654461304675696*^9}, {3.6544613418403244`*^9, 3.654461349972391*^9}, {
+   3.654461431246153*^9, 3.654461455496726*^9}, {3.6544615434864902`*^9, 
+   3.6544615854645977`*^9}, 3.6544616515845137`*^9, 3.6544617204379544`*^9, 
+   3.6544617561133523`*^9, 3.6544617980431747`*^9}],
+
+Cell[BoxData["112"], "Output",
+ CellChangeTimes->{
+  3.6544583285606136`*^9, {3.654458537297442*^9, 3.654458562459748*^9}, {
+   3.654459426045344*^9, 3.6544594412123036`*^9}, 3.6544608505016627`*^9, {
+   3.6544609050705357`*^9, 3.654460920909462*^9}, 3.654461038867071*^9, {
+   3.654461089651702*^9, 3.6544611070138016`*^9}, {3.6544612744739475`*^9, 
+   3.654461304675696*^9}, {3.6544613418403244`*^9, 3.654461349972391*^9}, {
+   3.654461431246153*^9, 3.654461455496726*^9}, {3.6544615434864902`*^9, 
+   3.6544615854645977`*^9}, 3.6544616515845137`*^9, 3.6544617204379544`*^9, 
+   3.6544617561133523`*^9, 3.6544617980431747`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"filtered", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Module", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"list", ",", "l2"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"list", "=", 
+         RowBox[{"StringSplit", "[", 
+          RowBox[{"i", ",", "\"\<\\n\>\""}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"l2", "=", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Count", "[", 
+             RowBox[{
+              RowBox[{"StringContainsQ", "[", 
+               RowBox[{"list", ",", "\"\<urldate\>\""}], "]"}], ",", "True"}],
+              "]"}], ">", "0"}], ",", 
+           RowBox[{"Delete", "[", 
+            RowBox[{"list", ",", 
+             RowBox[{"First", "@", 
+              RowBox[{"FirstPosition", "[", 
+               RowBox[{
+                RowBox[{"StringContainsQ", "[", 
+                 RowBox[{"list", ",", "\"\<urldate\>\""}], "]"}], ",", 
+                "True"}], "]"}]}]}], "]"}], ",", "list"}], "]"}]}], ";", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Count", "[", 
+            RowBox[{
+             RowBox[{"StringContainsQ", "[", 
+              RowBox[{"l2", ",", "\"\<date\>\""}], "]"}], ",", "True"}], 
+            "]"}], ">", "0"}], ",", "i", ",", "\"\<\>\""}], "]"}]}]}], 
+      "\[IndentingNewLine]", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "b2"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"filtered", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{"filtered", ",", 
+     RowBox[{
+      RowBox[{"#", "\[NotEqual]", "\"\<\>\""}], "&"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TableForm", "[", 
+  RowBox[{"filtered", ",", 
+   RowBox[{"TableHeadings", "\[Rule]", "Automatic"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6544607768930435`*^9, 3.6544608459868765`*^9}, {
+  3.654460880287329*^9, 3.654460948255494*^9}, {3.654461036436166*^9, 
+  3.654461214772605*^9}, {3.6544612508267865`*^9, 3.6544612715441895`*^9}, {
+  3.6544613224197755`*^9, 3.6544614141881437`*^9}, {3.6544614905367947`*^9, 
+  3.6544615326641026`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {"1", "\<\"@article{ma_coherent_2013,\\n\\ttitle = {Coherent \
+view-dependent streamline selection for importance-driven flow \
+visualization},\\n\\turl = {http://dx.doi.org/10.1117/12.2001887},\\n\\tdoi = \
+{10.1117/12.2001887},\\n\\tabstract = {Streamline visualization can be \
+formulated as the problem of streamline placement or streamline selection. In \
+this \\npaper, we present an importance-driven approach to view-dependent \
+streamline selection that guarantees coherent \\nstreamline update when the \
+view changes gradually. Given a large number of randomly or uniformly seeded \
+\\nand traced streamlines and sample viewpoints, our approach evaluates, for \
+each streamline, the view-dependent \\nimportance by considering the amount \
+of information shared by the {3D} streamline and its {2D} projection as well \
+as \\nhow stereoscopic the streamline\[CloseCurlyQuote]s shape is reflected \
+under each viewpoint. We achieve coherent view-dependent \\nstreamline \
+selection following a two-pass solution that considers i) the relationships \
+between local viewpoints \\nand the global streamline set selected in a \
+view-independent manner and ii) the continuity between adjacent \
+\\nviewpoints. We demonstrate the effectiveness of our approach with several \
+synthesized and simulated flow fields \\nand compare our view-dependent \
+streamline selection algorithm with a na\[IDoubleDot]ve algorithm that \
+selects streamlines \\nsolely based on the information at the current \
+viewpoint.},\\n\\turldate = {2013-05-14},\\n\\tjournal = {Proc. {SPIE} 8654, \
+Visualization and Data Analysis},\\n\\tauthor = {Ma, Jun and Wang, Chaoli and \
+Shene, Ching-Kuang},\\n\\tmonth = feb,\\n\\tyear = {2013},\\n\\tpages = \
+{865407--865407},\\n\\tfile = \
+{vda13-vds.pdf:C:\\\\Users\\\\Joe\\\\AppData\\\\Roaming\\\\Zotero\\\\Zotero\\\
+\\Profiles\\\\3r6072id.default\\\\zotero\\\\storage\\\\KCNR8G4E\\\\vda13-vds.\
+pdf:application/pdf}\\n}\"\>"},
+     {"2", "\<\"@article{schlegel_visibility-difference_2013,\\n\\ttitle = \
+{Visibility-difference entropy for automatic transfer function \
+generation},\\n\\turl = {http://dx.doi.org/10.1117/12.2002971},\\n\\tdoi = \
+{10.1117/12.2002971},\\n\\tabstract = {Direct volume rendering allows for \
+interactive exploration of volumetric data and has become an important tool \
+in many \\nvisualization domains. But the insight and information that can be \
+obtained are dependent on the transfer function defining \\nthe transparency \
+of voxels. Constructing good transfer functions is one of the most time \
+consuming and cumbersome tasks \\nin volume visualization. We present a novel \
+general purpose method for automatically generating an initial set of best \
+\\ntransfer function candidates. The generated transfer functions reveal the \
+major structural features within the volume and \\nallow for an efficient \
+initial visual analysis, serving as a basis for further interactive \
+exploration in particular of originally \\nunknown data. The basic idea is to \
+introduce a metric as a measure of the goodness of a transfer function which \
+indicates the \\ninformation that can be gained from rendered images by \
+interactive visualization. In contrast to prior methods, our approach \\ndoes \
+not require a user feedback-loop, operates exclusively in image space and \
+takes the characteristics of interactive data \\nexploration into account. We \
+show how our new transfer function generation method can uncover the major \
+structures of \\nan unknown dataset within only a few minutes.},\\n\\turldate \
+= {2013-07-17},\\n\\tauthor = {Schlegel, Philipp and Pajarola, \
+Renato},\\n\\tmonth = feb,\\n\\tyear = {2013},\\n\\tpages = {865406--865406},\
+\\n\\tfile = {VDE_TF.pdf:C:\\\\Users\\\\Joe\\\\AppData\\\\Roaming\\\\Zotero\\\
+\\Zotero\\\\Profiles\\\\3r6072id.default\\\\zotero\\\\storage\\\\229KG5CU\\\\\
+VDE_TF.pdf:application/pdf}\\n}\"\>"},
+     {"3", "\<\"@article{tsoumpas_fast_2011,\\n\\ttitle = {Fast generation of \
+{4D} {PET-MR} data from real dynamic {MR} acquisitions},\\n\\tvolume = \
+{56},\\n\\tissn = {0031-9155},\\n\\turl = \
+{http://iopscience.iop.org/0031-9155/56/20/005},\\n\\tdoi = \
+{10.1088/0031-9155/56/20/005},\\n\\tabstract = {We have implemented and \
+evaluated a framework for simulating simultaneous dynamic {PET-MR} data using \
+the anatomic and dynamic information from real {MR} acquisitions. {PET} \
+radiotracer distribution is simulated by assigning typical {FDG} uptake \
+values to segmented {MR} images with manually inserted additional virtual \
+lesions. {PET} projection data and images are simulated using analytic \
+forward projections (including attenuation and Poisson statistics) \
+implemented within the image reconstruction package {STIR.} {PET} image \
+reconstructions are also performed with {STIR.} The simulation is validated \
+with numerical simulation based on Monte Carlo ({GATE)} which uses more \
+accurate physical modelling, but has 150\[Times] slower computation time \
+compared to the analytic method for ten respiratory positions and is 7000\
+\[Times] slower when performing multiple realizations. Results are validated \
+in terms of region of interest mean values and coefficients of variation for \
+65 million coincidences including scattered events. Although some discrepancy \
+is observed, agreement between the two different simulation methods is good \
+given the statistical noise in the data. In particular, the percentage \
+difference of the mean values is 3.1\\\\% for tissue, 17\\\\% for the lungs \
+and 18\\\\% for a small lesion. The utility of the procedure is demonstrated \
+by simulating realistic {PET-MR} datasets from multiple volunteers with \
+different breathing patterns. The usefulness of the toolkit will be shown for \
+performance investigations of the reconstruction, motion correction and \
+attenuation correction algorithms for dynamic {PET-MR} data.},\\n\\tlanguage \
+= {en},\\n\\tnumber = {20},\\n\\turldate = {2013-11-14},\\n\\tjournal = \
+{Physics in Medicine and Biology},\\n\\tauthor = {Tsoumpas, C. and Buerger, \
+C. and King, A. P. and Mollet, P. and Keereman, V. and Vandenberghe, S. and \
+Schulz, V. and Schleyer, P. and Schaeffter, T. and Marsden, P. \
+K.},\\n\\tmonth = oct,\\n\\tyear = {2011},\\n\\tpages = {6597},\\n\\tfile = \
+{Full Text PDF:C:\\\\Users\\\\Joe\\\\AppData\\\\Roaming\\\\Zotero\\\\Zotero\\\
+\\Profiles\\\\3r6072id.default\\\\zotero\\\\storage\\\\GC8WSKW5\\\\Tsoumpas \
+et al. - 2011 - Fast generation of 4D PET-MR data from real \
+dynami.pdf:application/pdf;Snapshot:C:\\\\Users\\\\Joe\\\\AppData\\\\Roaming\\\
+\\Zotero\\\\Zotero\\\\Profiles\\\\3r6072id.default\\\\zotero\\\\storage\\\\\
+NB2HMDHI\\\\005.html:text/html}\\n}\"\>"},
+     {"4", "\<\"@article{akiba_visualizing_2007,\\n\\ttitle = {Visualizing \
+{Multivariate} {Volume} {Data} from {Turbulent} {Combustion} \
+{Simulations}},\\n\\tvolume = {9},\\n\\tissn = {1521-9615},\\n\\tdoi = \
+{10.1109/MCSE.2007.42},\\n\\tabstract = {To understand dynamic mechanisms, \
+scientists need intuitive and convenient ways to validate known relationships \
+and reveal hidden ones among multiple variables},\\n\\tnumber = \
+{2},\\n\\tjournal = {Computing in Science Engineering},\\n\\tauthor = {Akiba, \
+Hiroshi and Ma, Kwan-Liu and Chen, Jacqueline H. and Hawkes, Evatt \
+R.},\\n\\tmonth = apr,\\n\\tyear = {2007},\\n\\tkeywords = {Biomedical \
+Engineering, Biomedical imaging, chemistry computing, combustion, \
+Computational modeling, data rendering, data visualisation, Data \
+visualization, dynamic mechanisms, dynamics, Fires, heat of combustion, \
+Magnetic resonance imaging, multivariate, multivariate volume data \
+visualization, rendering (computer graphics), Rendering (computer graphics), \
+turbulence, turbulent, turbulent combustion simulations, Ultrasonic imaging, \
+visualization, X-ray imaging},\\n\\tpages = {76 --83},\\n\\tfile = {IEEE \
+Xplore Abstract Record:C\\\\:\\\\\\\\Users\\\\\\\\JoeShengzhou\\\\\\\\AppData\
+\\\\\\\\Roaming\\\\\\\\Zotero\\\\\\\\Zotero\\\\\\\\Profiles\\\\\\\\0m7eflhb.\
+default\\\\\\\\zotero\\\\\\\\storage\\\\\\\\W7SGPANQ\\\\\\\\abstractAuthors.\
+html:text/html;IEEE Xplore Abstract \
+Record:C\\\\:\\\\\\\\Users\\\\\\\\JoeShengzhou\\\\\\\\AppData\\\\\\\\Roaming\\\
+\\\\\\Zotero\\\\\\\\Zotero\\\\\\\\Profiles\\\\\\\\0m7eflhb.default\\\\\\\\\
+zotero\\\\\\\\storage\\\\\\\\7HW2URBD\\\\\\\\articleDetails.html:text/html;\
+IEEE Xplore Full Text \
+PDF:C\\\\:\\\\\\\\Users\\\\\\\\JoeShengzhou\\\\\\\\AppData\\\\\\\\Roaming\\\\\
+\\\\Zotero\\\\\\\\Zotero\\\\\\\\Profiles\\\\\\\\0m7eflhb.default\\\\\\\\\
+zotero\\\\\\\\storage\\\\\\\\K2D2J3SU\\\\\\\\Akiba et al. - 2007 - \
+Visualizing Multivariate Volume Data from Turbulen.pdf:application/pdf;IEEE \
+Xplore Full Text PDF:C\\\\:\\\\\\\\Users\\\\\\\\JoeShengzhou\\\\\\\\AppData\\\
+\\\\\\Roaming\\\\\\\\Zotero\\\\\\\\Zotero\\\\\\\\Profiles\\\\\\\\0m7eflhb.\
+default\\\\\\\\zotero\\\\\\\\storage\\\\\\\\8SABM3EX\\\\\\\\Akiba et al. - \
+2007 - Visualizing Multivariate Volume Data from \
+Turbulen.pdf:application/pdf}\\n}\"\>"},
+     {"5", "\<\"@article{kim_saliency-guided_2006,\\n\\ttitle = \
+{Saliency-guided {Enhancement} for {Volume} {Visualization}},\\n\\tvolume = \
+{12},\\n\\tissn = {1077-2626},\\n\\turl = \
+{http://dx.doi.org/10.1109/TVCG.2006.174},\\n\\tdoi = \
+{10.1109/TVCG.2006.174},\\n\\tabstract = {Recent research in visual saliency \
+has established a computational measure of perceptual importance. In this \
+paper we present a visual-saliency-based operator to enhance selected regions \
+of a volume. We show how we use such an operator on a user-specified saliency \
+field to compute an emphasis field. We further discuss how the emphasis field \
+can be integrated into the visualization pipeline through its modifications \
+of regional luminance and chrominance. Finally, we validate our work using an \
+eye-tracking-based user study and show that our new saliency enhancement \
+operator is more effective at eliciting viewer attention than the traditional \
+Gaussian enhancement operator.},\\n\\tnumber = {5},\\n\\turldate = \
+{2013-03-07},\\n\\tjournal = {IEEE Transactions on Visualization and Computer \
+Graphics},\\n\\tauthor = {Kim, Youngmin and Varshney, Amitabh},\\n\\tmonth = \
+sep,\\n\\tyear = {2006},\\n\\tkeywords = {Algorithms, Art, Attention, \
+Biomedical imaging, computer graphics, data visualisation, Data \
+visualization, Eye Movements, Fixation, Ocular, Geometry, Humans, image \
+enhancement, Image Interpretation, Computer-Assisted, Imaging, \
+Three-Dimensional, Large-scale systems, Mouth, non-photorealistic rendering, \
+Optical attenuators, perceptual enhancement, Pipelines, rendering (computer \
+graphics), Rendering (computer graphics), Saliency, saliency-guided \
+enhancement, Transfer functions, transfer functions, User-Computer Interface, \
+Visual attention, visual-saliency-based operator, Volume rendering, volume \
+rendering, volume visualization},\\n\\tpages = {925--932},\\n\\tfile = {IEEE \
+Xplore Abstract Record:C\\\\:\\\\\\\\Users\\\\\\\\JoeShengzhou\\\\\\\\AppData\
+\\\\\\\\Roaming\\\\\\\\Zotero\\\\\\\\Zotero\\\\\\\\Profiles\\\\\\\\0m7eflhb.\
+default\\\\\\\\zotero\\\\\\\\storage\\\\\\\\7S3EG4U5\\\\\\\\articleDetails.\
+html:text/html;IEEE Xplore Full Text \
+PDF:C\\\\:\\\\\\\\Users\\\\\\\\JoeShengzhou\\\\\\\\AppData\\\\\\\\Roaming\\\\\
+\\\\Zotero\\\\\\\\Zotero\\\\\\\\Profiles\\\\\\\\0m7eflhb.default\\\\\\\\\
+zotero\\\\\\\\storage\\\\\\\\GQZFMBRX\\\\\\\\Kim and Varshney - 2006 - \
+Saliency-guided Enhancement for Volume \
+Visualizati.pdf:application/pdf;saliency_guided_enhancement.ppt:C\\\\:\\\\\\\\\
+Users\\\\\\\\JoeShengzhou\\\\\\\\AppData\\\\\\\\Roaming\\\\\\\\Zotero\\\\\\\\\
+Zotero\\\\\\\\Profiles\\\\\\\\0m7eflhb.default\\\\\\\\zotero\\\\\\\\storage\\\
+\\\\\\2XCJEI6T\\\\\\\\saliency_guided_enhancement.ppt:application/msword}\\n}\
+\"\>"},
+     {"6", "\<\"@article{ward_visual_2011,\\n\\ttitle = {Visual {Exploration} \
+of {Time}-{Series} {Data} with {Shape} {Space} {Projections}},\\n\\tvolume = \
+{30},\\n\\tcopyright = {\[Copyright] 2011 The Author(s) Journal compilation \
+\[Copyright] 2011 The Eurographics Association and Blackwell Publishing \
+Ltd.},\\n\\tissn = {1467-8659},\\n\\turl = \
+{http://onlinelibrary.wiley.com/doi/10.1111/j.1467-8659.2011.01919.x/abstract}\
+,\\n\\tdoi = {10.1111/j.1467-8659.2011.01919.x},\\n\\tabstract = {Time-series \
+data is a common target for visual analytics, as they appear in a wide range \
+of application domains. Typical tasks in analyzing time-series data include \
+identifying cyclic behavior, outliers, trends, and periods of time that share \
+distinctive shape characteristics. Many methods for visualizing time series \
+data exist, generally mapping the data values to positions or colors. While \
+each can be used to perform a subset of the above tasks, none to date is a \
+complete solution. In this paper we present a novel approach to time-series \
+data visualization, namely creating multivariate data records out of short \
+subsequences of the data and then using multivariate visualization methods to \
+display and explore the data in the resulting shape space. We borrow ideas \
+from text analysis, where the use of N-grams is a common approach to \
+decomposing and processing unstructured text. By mapping each temporal N-gram \
+to a glyph, and then positioning the glyphs via PCA (basically a projection \
+in shape space), many different kinds of patterns in the sequence can be \
+readily identified. Interactive selection via brushing, in conjunction with \
+linking to other visualizations, provides a wide range of tools for exploring \
+the data. We validate the usefulness of this approach with examples from \
+several application domains and tasks, comparing our methods with traditional \
+time-series visualizations.},\\n\\tlanguage = {en},\\n\\tnumber = \
+{3},\\n\\turldate = {2015-02-27},\\n\\tjournal = {Computer Graphics \
+Forum},\\n\\tauthor = {Ward, Matthew O. and Guo, Zhenyu},\\n\\tmonth = \
+jun,\\n\\tyear = {2011},\\n\\tkeywords = {graphical user interfaces, \
+Information Interfaces and Presentation [H.5.2]: User Interfaces},\\n\\tpages \
+= {701--710},\\n\\tfile = {Full Text \
+PDF:C\\\\:\\\\\\\\Users\\\\\\\\dell\\\\\\\\AppData\\\\\\\\Roaming\\\\\\\\\
+Zotero\\\\\\\\Zotero\\\\\\\\Profiles\\\\\\\\727v3yux.default\\\\\\\\zotero\\\\\
+\\\\storage\\\\\\\\U6HV2AU3\\\\\\\\Ward and Guo - 2011 - Visual Exploration \
+of Time-Series Data with Shape \
+.pdf:application/pdf;Snapshot:C\\\\:\\\\\\\\Users\\\\\\\\dell\\\\\\\\AppData\\\
+\\\\\\Roaming\\\\\\\\Zotero\\\\\\\\Zotero\\\\\\\\Profiles\\\\\\\\727v3yux.\
+default\\\\\\\\zotero\\\\\\\\storage\\\\\\\\AQIV4JTR\\\\\\\\abstract.html:\
+text/html}\\n}\"\>"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {False, {True}, False}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   OutputFormsDump`HeadedColumn],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$, TableHeadings -> Automatic]]]], "Output",
+ CellChangeTimes->{{3.6544614011072283`*^9, 3.6544614555645266`*^9}, {
+   3.6544615095071344`*^9, 3.6544615855203333`*^9}, 3.654461652051094*^9, 
+   3.654461720711511*^9, 3.6544617561757965`*^9, 3.654461798107106*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"entry", "=", 
+   RowBox[{"filtered", "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"list", "=", 
+   RowBox[{"StringSplit", "[", 
+    RowBox[{"entry", ",", "\"\<\\n\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"l2", "=", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Count", "[", 
+       RowBox[{
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"list", ",", "\"\<urldate\>\""}], "]"}], ",", "True"}], 
+       "]"}], ">", "0"}], ",", 
+     RowBox[{"Delete", "[", 
+      RowBox[{"list", ",", 
+       RowBox[{"First", "@", 
+        RowBox[{"FirstPosition", "[", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{"list", ",", "\"\<urldate\>\""}], "]"}], ",", "True"}], 
+         "]"}]}]}], "]"}], ",", "list"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TableForm", "[", 
+  RowBox[{"list", ",", 
+   RowBox[{"TableHeadings", "\[Rule]", "Automatic"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"TableForm", "[", 
+   RowBox[{"l2", ",", 
+    RowBox[{"TableHeadings", "\[Rule]", "Automatic"}]}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"journal", "=", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Count", "[", 
+       RowBox[{
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"l2", ",", "\"\<journaltitle\>\""}], "]"}], ",", "True"}], 
+       "]"}], ">", "0"}], ",", 
+     RowBox[{"StringReplace", "[", 
+      RowBox[{
+       RowBox[{"l2", "[", 
+        RowBox[{"[", 
+         RowBox[{"First", "@", 
+          RowBox[{"FirstPosition", "[", 
+           RowBox[{
+            RowBox[{"StringContainsQ", "[", 
+             RowBox[{"l2", ",", "\"\<journaltitle\>\""}], "]"}], ",", 
+            "True"}], "]"}]}], "]"}], "]"}], ",", 
+       RowBox[{"\"\<journaltitle\>\"", "\[Rule]", "\"\<journal\>\""}]}], 
+      "]"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"year", "=", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Count", "[", 
+       RowBox[{
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"l2", ",", "\"\<date\>\""}], "]"}], ",", "True"}], "]"}], 
+      ">", "0"}], ",", 
+     RowBox[{"StringReplace", "[", 
+      RowBox[{
+       RowBox[{"l2", "[", 
+        RowBox[{"[", 
+         RowBox[{"First", "@", 
+          RowBox[{"FirstPosition", "[", 
+           RowBox[{
+            RowBox[{"StringContainsQ", "[", 
+             RowBox[{"l2", ",", "\"\<date\>\""}], "]"}], ",", "True"}], 
+           "]"}]}], "]"}], "]"}], ",", 
+       RowBox[{"\"\<date\>\"", "\[Rule]", "\"\<year\>\""}]}], "]"}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"l3", "=", 
+   RowBox[{"Insert", "[", 
+    RowBox[{"list", ",", "journal", ",", 
+     RowBox[{"-", "3"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"l4", "=", 
+   RowBox[{"Insert", "[", 
+    RowBox[{"l3", ",", "year", ",", 
+     RowBox[{"-", "3"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TableForm", "[", 
+  RowBox[{"l4", ",", 
+   RowBox[{"TableHeadings", "\[Rule]", "Automatic"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.654456965482519*^9, 3.65445703405063*^9}, {
+   3.6544570725850697`*^9, 3.6544570732891026`*^9}, {3.6544579244907093`*^9, 
+   3.65445799661378*^9}, {3.6544580346668544`*^9, 3.6544580356736956`*^9}, 
+   3.65445806681524*^9, {3.6544585473281403`*^9, 3.6544585608674326`*^9}, {
+   3.6544614265128627`*^9, 3.654461451646903*^9}, 3.654461541519143*^9, {
+   3.6544617174004097`*^9, 3.65446175475342*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {"1", "\<\"@article{ma_coherent_2013,\"\>"},
+     {"2", "\<\"\\ttitle = {Coherent view-dependent streamline selection for \
+importance-driven flow visualization},\"\>"},
+     {"3", "\<\"\\turl = {http://dx.doi.org/10.1117/12.2001887},\"\>"},
+     {"4", "\<\"\\tdoi = {10.1117/12.2001887},\"\>"},
+     {"5", "\<\"\\tabstract = {Streamline visualization can be formulated as \
+the problem of streamline placement or streamline selection. In this \"\>"},
+     {"6", "\<\"paper, we present an importance-driven approach to \
+view-dependent streamline selection that guarantees coherent \"\>"},
+     {"7", "\<\"streamline update when the view changes gradually. Given a \
+large number of randomly or uniformly seeded \"\>"},
+     {"8", "\<\"and traced streamlines and sample viewpoints, our approach \
+evaluates, for each streamline, the view-dependent \"\>"},
+     {"9", "\<\"importance by considering the amount of information shared by \
+the {3D} streamline and its {2D} projection as well as \"\>"},
+     {"10", "\<\"how stereoscopic the streamline\[CloseCurlyQuote]s shape is \
+reflected under each viewpoint. We achieve coherent view-dependent \"\>"},
+     {"11", "\<\"streamline selection following a two-pass solution that \
+considers i) the relationships between local viewpoints \"\>"},
+     {"12", "\<\"and the global streamline set selected in a view-independent \
+manner and ii) the continuity between adjacent \"\>"},
+     {"13", "\<\"viewpoints. We demonstrate the effectiveness of our approach \
+with several synthesized and simulated flow fields \"\>"},
+     {"14", "\<\"and compare our view-dependent streamline selection \
+algorithm with a na\[IDoubleDot]ve algorithm that selects streamlines \"\>"},
+     {"15", "\<\"solely based on the information at the current \
+viewpoint.},\"\>"},
+     {"16", "\<\"\\turldate = {2013-05-14},\"\>"},
+     {"17", "\<\"\\tjournal = {Proc. {SPIE} 8654, Visualization and Data \
+Analysis},\"\>"},
+     {"18", "\<\"\\tauthor = {Ma, Jun and Wang, Chaoli and Shene, \
+Ching-Kuang},\"\>"},
+     {"19", "\<\"\\tmonth = feb,\"\>"},
+     {"20", "\<\"\\tyear = {2013},\"\>"},
+     {"21", "\<\"\\tpages = {865407--865407},\"\>"},
+     {"22", "\<\"\\tfile = \
+{vda13-vds.pdf:C:\\\\Users\\\\Joe\\\\AppData\\\\Roaming\\\\Zotero\\\\Zotero\\\
+\\Profiles\\\\3r6072id.default\\\\zotero\\\\storage\\\\KCNR8G4E\\\\vda13-vds.\
+pdf:application/pdf}\"\>"},
+     {"23", "\<\"}\"\>"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {False, {True}, False}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   OutputFormsDump`HeadedColumn],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$, TableHeadings -> Automatic]]]], "Output",
+ CellChangeTimes->{{3.6544585373793945`*^9, 3.654458562514304*^9}, {
+   3.65445942612164*^9, 3.6544594412681303`*^9}, 3.654460850703512*^9, {
+   3.6544609053809595`*^9, 3.6544609210455894`*^9}, 3.654461038971529*^9, {
+   3.654461089749163*^9, 3.6544611071334453`*^9}, {3.6544612745809546`*^9, 
+   3.6544613047762074`*^9}, {3.6544613419335675`*^9, 3.65446135009251*^9}, {
+   3.6544614316112275`*^9, 3.654461455605527*^9}, {3.654461543602912*^9, 
+   3.6544615855548754`*^9}, 3.654461652087946*^9, {3.654461720747779*^9, 
+   3.654461756214604*^9}, 3.6544617981516113`*^9}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {"1", "\<\"@article{ma_coherent_2013,\"\>"},
+     {"2", "\<\"\\ttitle = {Coherent view-dependent streamline selection for \
+importance-driven flow visualization},\"\>"},
+     {"3", "\<\"\\turl = {http://dx.doi.org/10.1117/12.2001887},\"\>"},
+     {"4", "\<\"\\tdoi = {10.1117/12.2001887},\"\>"},
+     {"5", "\<\"\\tabstract = {Streamline visualization can be formulated as \
+the problem of streamline placement or streamline selection. In this \"\>"},
+     {"6", "\<\"paper, we present an importance-driven approach to \
+view-dependent streamline selection that guarantees coherent \"\>"},
+     {"7", "\<\"streamline update when the view changes gradually. Given a \
+large number of randomly or uniformly seeded \"\>"},
+     {"8", "\<\"and traced streamlines and sample viewpoints, our approach \
+evaluates, for each streamline, the view-dependent \"\>"},
+     {"9", "\<\"importance by considering the amount of information shared by \
+the {3D} streamline and its {2D} projection as well as \"\>"},
+     {"10", "\<\"how stereoscopic the streamline\[CloseCurlyQuote]s shape is \
+reflected under each viewpoint. We achieve coherent view-dependent \"\>"},
+     {"11", "\<\"streamline selection following a two-pass solution that \
+considers i) the relationships between local viewpoints \"\>"},
+     {"12", "\<\"and the global streamline set selected in a view-independent \
+manner and ii) the continuity between adjacent \"\>"},
+     {"13", "\<\"viewpoints. We demonstrate the effectiveness of our approach \
+with several synthesized and simulated flow fields \"\>"},
+     {"14", "\<\"and compare our view-dependent streamline selection \
+algorithm with a na\[IDoubleDot]ve algorithm that selects streamlines \"\>"},
+     {"15", "\<\"solely based on the information at the current \
+viewpoint.},\"\>"},
+     {"16", "\<\"\\turldate = {2013-05-14},\"\>"},
+     {"17", "\<\"\\tjournal = {Proc. {SPIE} 8654, Visualization and Data \
+Analysis},\"\>"},
+     {"18", "\<\"\\tauthor = {Ma, Jun and Wang, Chaoli and Shene, \
+Ching-Kuang},\"\>"},
+     {"19", "\<\"\\tmonth = feb,\"\>"},
+     {"20", "\<\"\\tyear = {2013},\"\>"},
+     {"21", "\<\"\\tpages = {865407--865407},\"\>"},
+     {"22", "Null"},
+     {"23", "\<\"streamline upyear when the view changes gradually. Given a \
+large number of randomly or uniformly seeded \"\>"},
+     {"24", "\<\"\\tfile = \
+{vda13-vds.pdf:C:\\\\Users\\\\Joe\\\\AppData\\\\Roaming\\\\Zotero\\\\Zotero\\\
+\\Profiles\\\\3r6072id.default\\\\zotero\\\\storage\\\\KCNR8G4E\\\\vda13-vds.\
+pdf:application/pdf}\"\>"},
+     {"25", "\<\"}\"\>"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {False, {True}, False}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   OutputFormsDump`HeadedColumn],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$, TableHeadings -> Automatic]]]], "Output",
+ CellChangeTimes->{{3.6544585373793945`*^9, 3.654458562514304*^9}, {
+   3.65445942612164*^9, 3.6544594412681303`*^9}, 3.654460850703512*^9, {
+   3.6544609053809595`*^9, 3.6544609210455894`*^9}, 3.654461038971529*^9, {
+   3.654461089749163*^9, 3.6544611071334453`*^9}, {3.6544612745809546`*^9, 
+   3.6544613047762074`*^9}, {3.6544613419335675`*^9, 3.65446135009251*^9}, {
+   3.6544614316112275`*^9, 3.654461455605527*^9}, {3.654461543602912*^9, 
+   3.6544615855548754`*^9}, 3.654461652087946*^9, {3.654461720747779*^9, 
+   3.654461756214604*^9}, 3.6544617981586113`*^9}]
+}, Open  ]]
+},
+WindowSize->{1282, 781},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.3 for Microsoft Windows (64-bit) (October 9, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1050, 25, 112, "Input"],
+Cell[1633, 49, 629, 9, 31, "Output"],
+Cell[2265, 60, 629, 9, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2931, 74, 2212, 57, 152, "Input"],
+Cell[5146, 133, 15597, 224, 2292, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20780, 362, 3606, 100, 252, "Input"],
+Cell[24389, 464, 3708, 67, 372, "Output"],
+Cell[28100, 533, 3860, 70, 402, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
