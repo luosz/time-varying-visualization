@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     37372,        898]
-NotebookOptionsPosition[     36330,        862]
-NotebookOutlinePosition[     36678,        877]
-CellTagsIndexPosition[     36635,        874]
+NotebookDataLength[     37706,        909]
+NotebookOptionsPosition[     36594,        870]
+NotebookOutlinePosition[     36942,        885]
+CellTagsIndexPosition[     36899,        882]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -53,16 +53,19 @@ Cell[BoxData[{
   3.693899271884914*^9, 3.693899317165264*^9}, {3.6942542984508066`*^9, 
   3.6942543149545975`*^9}, {3.6943295524835777`*^9, 3.6943295605149784`*^9}}],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{
   RowBox[{"images", "=", 
    RowBox[{"Import", "/@", "imgfiles"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{"imgs", "=", 
-  RowBox[{
+ RowBox[{
+  RowBox[{"imgs", "=", 
    RowBox[{
-    RowBox[{"ImageAdjust", "@", 
-     RowBox[{"ImageSaliencyFilter", "[", "#", "]"}]}], "&"}], "/@", 
-   "images"}]}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"ImageAdjust", "@", 
+      RowBox[{"ImageSaliencyFilter", "[", "#", "]"}]}], "&"}], "/@", 
+    "images"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"(*", 
    RowBox[{
@@ -82,7 +85,11 @@ Cell[BoxData[{
  CellChangeTimes->{{3.6942448713837967`*^9, 3.6942448816029844`*^9}, {
    3.69425355109237*^9, 3.694253562584923*^9}, {3.6942535998177767`*^9, 
    3.6942536618725033`*^9}, {3.6943312995093555`*^9, 3.694331336105735*^9}, 
-   3.6943313708357725`*^9}],
+   3.6943313708357725`*^9, 3.6944373465499983`*^9}],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.694437256328735*^9, 3.694437348831311*^9}]
+}, Open  ]],
 
 Cell[BoxData[{
  RowBox[{
@@ -228,9 +235,7 @@ Cell[BoxData[{
   RowBox[{"Length", "@", 
    RowBox[{"opacities", "[", 
     RowBox[{"[", "1", "]"}], "]"}]}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Length", "@", "imgs"}], "==", 
-  RowBox[{"Length", "@", "opacities"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "@", "imgs"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"ListLinePlot", "[", 
@@ -248,7 +253,8 @@ Cell[BoxData[{
    3.6938371140565033`*^9, {3.6941577882770247`*^9, 3.6941578028444433`*^9}, {
    3.694168461020999*^9, 3.694168500229258*^9}, {3.694244941297056*^9, 
    3.6942449458435984`*^9}, {3.694268169587529*^9, 3.6942681909251366`*^9}, {
-   3.6942683379404273`*^9, 3.6942683430491347`*^9}, 3.6943400437999253`*^9}],
+   3.6942683379404273`*^9, 3.6942683430491347`*^9}, 3.6943400437999253`*^9, {
+   3.694437213631852*^9, 3.6944372249602923`*^9}}],
 
 Cell[BoxData["128"], "Output",
  CellChangeTimes->{
@@ -332,35 +338,36 @@ Cell[BoxData[
    3.6941684973982162`*^9, 3.69426857457895*^9}],
 
 Cell[BoxData[
- RowBox[{"lenet", "=", 
-  RowBox[{"NetChain", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"ConvolutionLayer", "[", 
-       RowBox[{"20", ",", "5"}], "]"}], ",", "Ramp", ",", 
-      RowBox[{"PoolingLayer", "[", 
-       RowBox[{"2", ",", "2"}], "]"}], ",", 
-      RowBox[{"ConvolutionLayer", "[", 
-       RowBox[{"50", ",", "5"}], "]"}], ",", "Ramp", ",", 
-      RowBox[{"PoolingLayer", "[", 
-       RowBox[{"2", ",", "2"}], "]"}], ",", 
-      RowBox[{"FlattenLayer", "[", "]"}], ",", "500", ",", "Ramp", ",", 
-      "output", ",", 
-      RowBox[{"SoftmaxLayer", "[", "]"}]}], "}"}], ",", 
-    RowBox[{"\"\<Output\>\"", "\[Rule]", "output"}], ",", 
-    RowBox[{"\"\<Input\>\"", "\[Rule]", 
-     RowBox[{"NetEncoder", "[", 
-      RowBox[{"{", 
-       RowBox[{"\"\<Image\>\"", ",", 
-        RowBox[{"ImageDimensions", "[", 
-         RowBox[{"First", "@", "imgs"}], "]"}]}], "}"}], "]"}]}]}], 
-   "]"}]}]], "Input",
+ RowBox[{
+  RowBox[{"lenet", "=", 
+   RowBox[{"NetChain", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"ConvolutionLayer", "[", 
+        RowBox[{"20", ",", "5"}], "]"}], ",", "Ramp", ",", 
+       RowBox[{"PoolingLayer", "[", 
+        RowBox[{"2", ",", "2"}], "]"}], ",", 
+       RowBox[{"ConvolutionLayer", "[", 
+        RowBox[{"50", ",", "5"}], "]"}], ",", "Ramp", ",", 
+       RowBox[{"PoolingLayer", "[", 
+        RowBox[{"2", ",", "2"}], "]"}], ",", 
+       RowBox[{"FlattenLayer", "[", "]"}], ",", "500", ",", "Ramp", ",", 
+       "output", ",", 
+       RowBox[{"SoftmaxLayer", "[", "]"}]}], "}"}], ",", 
+     RowBox[{"\"\<Output\>\"", "\[Rule]", "output"}], ",", 
+     RowBox[{"\"\<Input\>\"", "\[Rule]", 
+      RowBox[{"NetEncoder", "[", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Image\>\"", ",", 
+         RowBox[{"ImageDimensions", "[", 
+          RowBox[{"First", "@", "imgs"}], "]"}]}], "}"}], "]"}]}]}], "]"}]}], 
+  ";"}]], "Input",
  CellChangeTimes->{{3.6938348847890368`*^9, 3.6938349287272987`*^9}, {
-  3.693834961920926*^9, 3.693834964559804*^9}, {3.694157914597273*^9, 
-  3.694157930541663*^9}, {3.694179130406028*^9, 3.694179130733999*^9}, {
-  3.694268382590272*^9, 3.694268385855994*^9}, {3.694268556693015*^9, 
-  3.694268558568057*^9}}],
+   3.693834961920926*^9, 3.693834964559804*^9}, {3.694157914597273*^9, 
+   3.694157930541663*^9}, {3.694179130406028*^9, 3.694179130733999*^9}, {
+   3.694268382590272*^9, 3.694268385855994*^9}, {3.694268556693015*^9, 
+   3.694268558568057*^9}, 3.69443737481646*^9}],
 
 Cell[BoxData[{
  RowBox[{"trained", "=", 
@@ -368,7 +375,7 @@ Cell[BoxData[{
    RowBox[{"lenet", ",", "rules", ",", 
     RowBox[{"MaxTrainingRounds", "\[Rule]", "4"}], ",", 
     RowBox[{"BatchSize", "\[Rule]", "1"}], ",", 
-    RowBox[{"TargetDevice", "\[Rule]", "\"\<CPU\>\""}]}], 
+    RowBox[{"TargetDevice", "\[Rule]", "\"\<GPU\>\""}]}], 
    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"results", "=", 
@@ -381,7 +388,8 @@ Cell[BoxData[{
    3.6942456553334017`*^9, 3.6942456650745687`*^9}, {3.6942457366410503`*^9, 
    3.6942457402711287`*^9}, {3.6942462394659634`*^9, 3.6942462396847663`*^9}, 
    3.694246392010192*^9, 3.6942466676216636`*^9, {3.6942469052981014`*^9, 
-   3.6942469206567516`*^9}, 3.694247357518898*^9, 3.6942483160913544`*^9}],
+   3.6942469206567516`*^9}, 3.694247357518898*^9, 3.6942483160913544`*^9, 
+   3.69443731911178*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -877,28 +885,31 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 1280, 33, 126, "Input"],
-Cell[1841, 55, 1053, 29, 69, "Input"],
-Cell[2897, 86, 1231, 33, 69, "Input"],
-Cell[4131, 121, 3585, 90, 183, "Input"],
 Cell[CellGroupData[{
-Cell[7741, 215, 1499, 35, 107, "Input"],
-Cell[9243, 252, 1823, 25, 30, "Output"],
-Cell[11069, 279, 1825, 25, 30, "Output"]
+Cell[1863, 57, 1100, 30, 69, "Input"],
+Cell[2966, 89, 99, 1, 30, "Output"]
 }, Open  ]],
-Cell[12909, 307, 926, 24, 30, "Input"],
-Cell[13838, 333, 1256, 29, 50, "Input"],
-Cell[15097, 364, 1082, 19, 50, "Input"],
-Cell[16182, 385, 431, 10, 30, "Input"],
+Cell[3080, 93, 1231, 33, 69, "Input"],
+Cell[4314, 128, 3585, 90, 183, "Input"],
 Cell[CellGroupData[{
-Cell[16638, 399, 3484, 103, 202, "Input"],
-Cell[20125, 504, 1660, 25, 69, "Output"]
+Cell[7924, 222, 1491, 34, 107, "Input"],
+Cell[9418, 258, 1823, 25, 30, "Output"],
+Cell[11244, 285, 1825, 25, 30, "Output"]
 }, Open  ]],
-Cell[21800, 532, 8515, 208, 468, "Input"],
-Cell[30318, 742, 1208, 33, 69, "Input"],
+Cell[13084, 313, 926, 24, 30, "Input"],
+Cell[14013, 339, 1320, 30, 50, "Input"],
+Cell[15336, 371, 1107, 20, 50, "Input"],
+Cell[16446, 393, 431, 10, 30, "Input"],
 Cell[CellGroupData[{
-Cell[31551, 779, 313, 5, 69, "Input"],
-Cell[31867, 786, 954, 14, 30, "Output"],
-Cell[32824, 802, 3490, 57, 107, "Output"]
+Cell[16902, 407, 3484, 103, 202, "Input"],
+Cell[20389, 512, 1660, 25, 69, "Output"]
+}, Open  ]],
+Cell[22064, 540, 8515, 208, 468, "Input"],
+Cell[30582, 750, 1208, 33, 69, "Input"],
+Cell[CellGroupData[{
+Cell[31815, 787, 313, 5, 69, "Input"],
+Cell[32131, 794, 954, 14, 30, "Output"],
+Cell[33088, 810, 3490, 57, 107, "Output"]
 }, Open  ]]
 }
 ]
