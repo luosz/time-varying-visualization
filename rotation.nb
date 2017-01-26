@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8444,        246]
-NotebookOptionsPosition[      8052,        229]
-NotebookOutlinePosition[      8425,        245]
-CellTagsIndexPosition[      8382,        242]
+NotebookDataLength[      8473,        246]
+NotebookOptionsPosition[      8076,        229]
+NotebookOutlinePosition[      8454,        245]
+CellTagsIndexPosition[      8411,        242]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -32,7 +32,7 @@ Cell[BoxData[{
     RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<~rotated\\\\\>\""}]}],
    ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"filename", "=", "\"\<D:\\\\_data\\\\VisMale.tif\>\""}], 
+  RowBox[{"filename", "=", "\"\<C:\\\\_data\\\\VisMale.tif\>\""}], 
   ";"}]}], "Input",
  CellChangeTimes->{{3.6864850577021136`*^9, 3.686485092560874*^9}, {
    3.6864854544497986`*^9, 3.6864854792733574`*^9}, {3.686486076711864*^9, 
@@ -45,7 +45,7 @@ Cell[BoxData[{
    3.686563162567611*^9, 3.6865631703270235`*^9}, {3.6865632164619613`*^9, 
    3.6865632167585983`*^9}, {3.686563273291461*^9, 3.686563283829899*^9}, {
    3.686565588134899*^9, 3.6865655949425793`*^9}, {3.68656666607707*^9, 
-   3.6865666671223307`*^9}}],
+   3.6865666671223307`*^9}, 3.6938141863585978`*^9}],
 
 Cell[BoxData[{
  RowBox[{
@@ -227,10 +227,10 @@ _.raw\\n\>\""}], ";"}], "\[IndentingNewLine]",
   3.6865525118391027`*^9, 3.6865525145243373`*^9}, {3.6865564652323074`*^9, 
   3.6865564699426017`*^9}, {3.68656689150814*^9, 3.6865669116378717`*^9}}]
 },
-WindowSize->{1536, 781},
+WindowSize->{1536, 877},
 WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 Magnification:>1.5 Inherited,
-FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (July 28, 2016)",
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -244,10 +244,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1366, 27, 133, "Input"],
-Cell[1927, 49, 1488, 41, 133, "Input"],
-Cell[3418, 92, 813, 25, 104, "Input"],
-Cell[4234, 119, 3814, 108, 365, "Input"]
+Cell[558, 20, 1390, 27, 133, "Input"],
+Cell[1951, 49, 1488, 41, 133, "Input"],
+Cell[3442, 92, 813, 25, 104, "Input"],
+Cell[4258, 119, 3814, 108, 422, "Input"]
 }
 ]
 *)
