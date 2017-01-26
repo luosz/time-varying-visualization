@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     37706,        909]
-NotebookOptionsPosition[     36594,        870]
-NotebookOutlinePosition[     36942,        885]
-CellTagsIndexPosition[     36899,        882]
+NotebookDataLength[     49653,       1166]
+NotebookOptionsPosition[     48690,       1132]
+NotebookOutlinePosition[     49038,       1147]
+CellTagsIndexPosition[     48995,       1144]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -53,8 +53,6 @@ Cell[BoxData[{
   3.693899271884914*^9, 3.693899317165264*^9}, {3.6942542984508066`*^9, 
   3.6942543149545975`*^9}, {3.6943295524835777`*^9, 3.6943295605149784`*^9}}],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[{
  RowBox[{
   RowBox[{"images", "=", 
@@ -86,10 +84,6 @@ Cell[BoxData[{
    3.69425355109237*^9, 3.694253562584923*^9}, {3.6942535998177767`*^9, 
    3.6942536618725033`*^9}, {3.6943312995093555`*^9, 3.694331336105735*^9}, 
    3.6943313708357725`*^9, 3.6944373465499983`*^9}],
-
-Cell[BoxData["$Aborted"], "Output",
- CellChangeTimes->{3.694437256328735*^9, 3.694437348831311*^9}]
-}, Open  ]],
 
 Cell[BoxData[{
  RowBox[{
@@ -256,7 +250,7 @@ Cell[BoxData[{
    3.6942683379404273`*^9, 3.6942683430491347`*^9}, 3.6943400437999253`*^9, {
    3.694437213631852*^9, 3.6944372249602923`*^9}}],
 
-Cell[BoxData["128"], "Output",
+Cell[BoxData["32"], "Output",
  CellChangeTimes->{
   3.6938329694371815`*^9, 3.6938331475227957`*^9, 3.6938333235502977`*^9, 
    3.693833529360584*^9, 3.6938335774878454`*^9, 3.6938336848710375`*^9, 
@@ -281,9 +275,11 @@ Cell[BoxData["128"], "Output",
    3.6942535109522896`*^9, 3.6942538208166885`*^9, 3.6942549155446773`*^9, 
    3.6942674948799543`*^9, 3.694268043128316*^9, 3.694268191847002*^9, 
    3.6942683453764515`*^9, 3.6942684036580954`*^9, 3.6942686490294476`*^9, 
-   3.694329885769167*^9, 3.694331366616742*^9, 3.6943341617023635`*^9}],
+   3.694329885769167*^9, 3.694331366616742*^9, 3.6943341617023635`*^9, 
+   3.6944374220364923`*^9, 3.694437476204392*^9, 3.694437853800311*^9, 
+   3.6944381203444605`*^9}],
 
-Cell[BoxData["False"], "Output",
+Cell[BoxData["64"], "Output",
  CellChangeTimes->{
   3.6938329694371815`*^9, 3.6938331475227957`*^9, 3.6938333235502977`*^9, 
    3.693833529360584*^9, 3.6938335774878454`*^9, 3.6938336848710375`*^9, 
@@ -308,7 +304,9 @@ Cell[BoxData["False"], "Output",
    3.6942535109522896`*^9, 3.6942538208166885`*^9, 3.6942549155446773`*^9, 
    3.6942674948799543`*^9, 3.694268043128316*^9, 3.694268191847002*^9, 
    3.6942683453764515`*^9, 3.6942684036580954`*^9, 3.6942686490294476`*^9, 
-   3.694329885769167*^9, 3.694331366616742*^9, 3.6943341617023635`*^9}]
+   3.694329885769167*^9, 3.694331366616742*^9, 3.6943341617023635`*^9, 
+   3.6944374220364923`*^9, 3.694437476204392*^9, 3.694437853800311*^9, 
+   3.6944381203444605`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -369,13 +367,15 @@ Cell[BoxData[
    3.694268382590272*^9, 3.694268385855994*^9}, {3.694268556693015*^9, 
    3.694268558568057*^9}, 3.69443737481646*^9}],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{"trained", "=", 
   RowBox[{"NetTrain", "[", 
    RowBox[{"lenet", ",", "rules", ",", 
     RowBox[{"MaxTrainingRounds", "\[Rule]", "4"}], ",", 
     RowBox[{"BatchSize", "\[Rule]", "1"}], ",", 
-    RowBox[{"TargetDevice", "\[Rule]", "\"\<GPU\>\""}]}], 
+    RowBox[{"TargetDevice", "\[Rule]", "\"\<CPU\>\""}]}], 
    "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"results", "=", 
@@ -389,7 +389,370 @@ Cell[BoxData[{
    3.6942457402711287`*^9}, {3.6942462394659634`*^9, 3.6942462396847663`*^9}, 
    3.694246392010192*^9, 3.6942466676216636`*^9, {3.6942469052981014`*^9, 
    3.6942469206567516`*^9}, 3.694247357518898*^9, 3.6942483160913544`*^9, 
-   3.69443731911178*^9}],
+   3.69443731911178*^9, 3.6944374375314875`*^9}],
+
+Cell[BoxData[
+ StyleBox[
+  TagBox[
+   TagBox[
+    RowBox[{"NetChain", 
+     RowBox[{"[", 
+      PanelBox[
+       DynamicModuleBox[{NeuralNetworks`NetChain`PackagePrivate`grid$$ = 
+        Grid[{{
+           MouseAppearance[
+            Annotation["", {"Inputs", "Input"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation["Input", {"Inputs", "Input"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[
+             Row[{"encoded", " ", 
+               Row[{"tensor", " ", 
+                 Row[{"(", "\[VeryThinSpace]", "size", ":", " ", 
+                   Row[{"3", "512", "512"}, "\[Times]"], "\[VeryThinSpace]", 
+                   ")"}, BaseStyle -> GrayLevel[0.5]]}]}], {
+             "Inputs", "Input"}, "Mouse"], "LinkHand"]}, {
+           MouseAppearance[
+            Annotation[
+             Style["1", 
+              GrayLevel[0.5]], {"Layers", "1"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[ConvolutionLayer, {"Layers", "1"}, "Mouse"], 
+            "LinkHand"], 
+           MouseAppearance[
+            Annotation[
+             Row[{"tensor", " ", 
+               Row[{"(", "\[VeryThinSpace]", "size", ":", " ", 
+                 Row[{"20", "508", "508"}, "\[Times]"], "\[VeryThinSpace]", 
+                 ")"}, BaseStyle -> GrayLevel[0.5]]}], {"Layers", "1"}, 
+             "Mouse"], "LinkHand"]}, {
+           MouseAppearance[
+            Annotation[
+             Style["2", 
+              GrayLevel[0.5]], {"Layers", "2"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[ElementwiseLayer, {"Layers", "2"}, "Mouse"], 
+            "LinkHand"], 
+           MouseAppearance[
+            Annotation[
+             Row[{"tensor", " ", 
+               Row[{"(", "\[VeryThinSpace]", "size", ":", " ", 
+                 Row[{"20", "508", "508"}, "\[Times]"], "\[VeryThinSpace]", 
+                 ")"}, BaseStyle -> GrayLevel[0.5]]}], {"Layers", "2"}, 
+             "Mouse"], "LinkHand"]}, {
+           MouseAppearance[
+            Annotation[
+             Style["3", 
+              GrayLevel[0.5]], {"Layers", "3"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[PoolingLayer, {"Layers", "3"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[
+             Row[{"tensor", " ", 
+               Row[{"(", "\[VeryThinSpace]", "size", ":", " ", 
+                 Row[{"20", "254", "254"}, "\[Times]"], "\[VeryThinSpace]", 
+                 ")"}, BaseStyle -> GrayLevel[0.5]]}], {"Layers", "3"}, 
+             "Mouse"], "LinkHand"]}, {
+           MouseAppearance[
+            Annotation[
+             Style["4", 
+              GrayLevel[0.5]], {"Layers", "4"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[ConvolutionLayer, {"Layers", "4"}, "Mouse"], 
+            "LinkHand"], 
+           MouseAppearance[
+            Annotation[
+             Row[{"tensor", " ", 
+               Row[{"(", "\[VeryThinSpace]", "size", ":", " ", 
+                 Row[{"50", "250", "250"}, "\[Times]"], "\[VeryThinSpace]", 
+                 ")"}, BaseStyle -> GrayLevel[0.5]]}], {"Layers", "4"}, 
+             "Mouse"], "LinkHand"]}, {
+           MouseAppearance[
+            Annotation[
+             Style["5", 
+              GrayLevel[0.5]], {"Layers", "5"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[ElementwiseLayer, {"Layers", "5"}, "Mouse"], 
+            "LinkHand"], 
+           MouseAppearance[
+            Annotation[
+             Row[{"tensor", " ", 
+               Row[{"(", "\[VeryThinSpace]", "size", ":", " ", 
+                 Row[{"50", "250", "250"}, "\[Times]"], "\[VeryThinSpace]", 
+                 ")"}, BaseStyle -> GrayLevel[0.5]]}], {"Layers", "5"}, 
+             "Mouse"], "LinkHand"]}, {
+           MouseAppearance[
+            Annotation[
+             Style["6", 
+              GrayLevel[0.5]], {"Layers", "6"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[PoolingLayer, {"Layers", "6"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[
+             Row[{"tensor", " ", 
+               Row[{"(", "\[VeryThinSpace]", "size", ":", " ", 
+                 Row[{"50", "125", "125"}, "\[Times]"], "\[VeryThinSpace]", 
+                 ")"}, BaseStyle -> GrayLevel[0.5]]}], {"Layers", "6"}, 
+             "Mouse"], "LinkHand"]}, {
+           MouseAppearance[
+            Annotation[
+             Style["7", 
+              GrayLevel[0.5]], {"Layers", "7"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[FlattenLayer, {"Layers", "7"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[
+             Row[{"vector", " ", 
+               Row[{"(", "\[VeryThinSpace]", "size", ":", " ", 
+                 Row[{"781250"}, "\[Times]"], "\[VeryThinSpace]", ")"}, 
+                BaseStyle -> GrayLevel[0.5]]}], {"Layers", "7"}, "Mouse"], 
+            "LinkHand"]}, {
+           MouseAppearance[
+            Annotation[
+             Style["8", 
+              GrayLevel[0.5]], {"Layers", "8"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[DotPlusLayer, {"Layers", "8"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[
+             Row[{"vector", " ", 
+               Row[{"(", "\[VeryThinSpace]", "size", ":", " ", 
+                 Row[{"500"}, "\[Times]"], "\[VeryThinSpace]", ")"}, 
+                BaseStyle -> GrayLevel[0.5]]}], {"Layers", "8"}, "Mouse"], 
+            "LinkHand"]}, {
+           MouseAppearance[
+            Annotation[
+             Style["9", 
+              GrayLevel[0.5]], {"Layers", "9"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[ElementwiseLayer, {"Layers", "9"}, "Mouse"], 
+            "LinkHand"], 
+           MouseAppearance[
+            Annotation[
+             Row[{"vector", " ", 
+               Row[{"(", "\[VeryThinSpace]", "size", ":", " ", 
+                 Row[{"500"}, "\[Times]"], "\[VeryThinSpace]", ")"}, 
+                BaseStyle -> GrayLevel[0.5]]}], {"Layers", "9"}, "Mouse"], 
+            "LinkHand"]}, {
+           MouseAppearance[
+            Annotation[
+             Style["10", 
+              GrayLevel[0.5]], {"Layers", "10"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[DotPlusLayer, {"Layers", "10"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[
+             Row[{"vector", " ", 
+               Row[{"(", "\[VeryThinSpace]", "size", ":", " ", 
+                 Row[{"32"}, "\[Times]"], "\[VeryThinSpace]", ")"}, BaseStyle -> 
+                GrayLevel[0.5]]}], {"Layers", "10"}, "Mouse"], "LinkHand"]}, {
+           MouseAppearance[
+            Annotation[
+             Style["11", 
+              GrayLevel[0.5]], {"Layers", "11"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[SoftmaxLayer, {"Layers", "11"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[
+             Row[{"vector", " ", 
+               Row[{"(", "\[VeryThinSpace]", "size", ":", " ", 
+                 Row[{"32"}, "\[Times]"], "\[VeryThinSpace]", ")"}, BaseStyle -> 
+                GrayLevel[0.5]]}], {"Layers", "11"}, "Mouse"], "LinkHand"]}, {
+           MouseAppearance[
+            Annotation["", {"Outputs", "Output"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation["Output", {"Outputs", "Output"}, "Mouse"], "LinkHand"], 
+           MouseAppearance[
+            Annotation[
+             Row[{"vector", " ", 
+               Row[{"(", "\[VeryThinSpace]", "size", ":", " ", 
+                 Row[{"32"}, "\[Times]"], "\[VeryThinSpace]", ")"}, BaseStyle -> 
+                GrayLevel[0.5]]}], {"Outputs", "Output"}, "Mouse"], 
+            "LinkHand"]}}, Alignment -> Left, Spacings -> 1.1], 
+        NeuralNetworks`NetChain`PackagePrivate`assoc$$ = Association[
+        "Type" -> "Chain", "Layers" -> 
+         Association[
+          "1" -> Association[
+            "Type" -> "Convolution", "Arrays" -> 
+             Association[
+              "Weights" -> NeuralNetworks`TensorT[4, {20, 3, 5, 5}], "Biases" -> 
+               NeuralNetworks`TensorT[1, {20}]], "Parameters" -> 
+             Association[
+              "OutputChannels" -> 20, "KernelSize" -> {5, 5}, 
+               "Stride" -> {1, 1}, "PaddingSize" -> {0, 0}, 
+               "Dilation" -> {1, 1}, "InputChannels" -> 3, "$GroupNumber" -> 
+               1, "$InputSize" -> {512, 512}, "$OutputSize" -> {508, 508}], 
+             "Inputs" -> Association["Input" -> NeuralNetworks`ChannelT[3, 
+                 NeuralNetworks`TensorT[2, {512, 512}]]], "Outputs" -> 
+             Association["Output" -> NeuralNetworks`ChannelT[20, 
+                 NeuralNetworks`TensorT[2, {508, 508}]]]], "2" -> 
+           Association[
+            "Type" -> "Elementwise", "Arrays" -> Association[], "Parameters" -> 
+             Association[
+              "Function" -> Ramp, "$Dimensions" -> {20, 508, 508}, "$Rank" -> 
+               3], "Inputs" -> 
+             Association["Input" -> NeuralNetworks`ChannelT[20, 
+                 NeuralNetworks`TensorT[2, {508, 508}]]], "Outputs" -> 
+             Association[
+              "Output" -> NeuralNetworks`TensorT[3, {20, 508, 508}]]], "3" -> 
+           Association[
+            "Type" -> "Pooling", "Arrays" -> Association[], "Parameters" -> 
+             Association[
+              "KernelSize" -> {2, 2}, "Stride" -> {2, 2}, 
+               "PaddingSize" -> {0, 0}, "Function" -> Max, "Channels" -> 20, 
+               "$InputSize" -> {508, 508}, "$OutputSize" -> {254, 254}], 
+             "Inputs" -> 
+             Association[
+              "Input" -> NeuralNetworks`TensorT[3, {20, 508, 508}]], 
+             "Outputs" -> Association["Output" -> NeuralNetworks`ChannelT[20, 
+                 NeuralNetworks`TensorT[2, {254, 254}]]]], "4" -> 
+           Association[
+            "Type" -> "Convolution", "Arrays" -> 
+             Association[
+              "Weights" -> NeuralNetworks`TensorT[4, {50, 20, 5, 5}], 
+               "Biases" -> NeuralNetworks`TensorT[1, {50}]], "Parameters" -> 
+             Association[
+              "OutputChannels" -> 50, "KernelSize" -> {5, 5}, 
+               "Stride" -> {1, 1}, "PaddingSize" -> {0, 0}, 
+               "Dilation" -> {1, 1}, "InputChannels" -> 20, "$GroupNumber" -> 
+               1, "$InputSize" -> {254, 254}, "$OutputSize" -> {250, 250}], 
+             "Inputs" -> Association["Input" -> NeuralNetworks`ChannelT[20, 
+                 NeuralNetworks`TensorT[2, {254, 254}]]], "Outputs" -> 
+             Association["Output" -> NeuralNetworks`ChannelT[50, 
+                 NeuralNetworks`TensorT[2, {250, 250}]]]], "5" -> 
+           Association[
+            "Type" -> "Elementwise", "Arrays" -> Association[], "Parameters" -> 
+             Association[
+              "Function" -> Ramp, "$Dimensions" -> {50, 250, 250}, "$Rank" -> 
+               3], "Inputs" -> 
+             Association["Input" -> NeuralNetworks`ChannelT[50, 
+                 NeuralNetworks`TensorT[2, {250, 250}]]], "Outputs" -> 
+             Association[
+              "Output" -> NeuralNetworks`TensorT[3, {50, 250, 250}]]], "6" -> 
+           Association[
+            "Type" -> "Pooling", "Arrays" -> Association[], "Parameters" -> 
+             Association[
+              "KernelSize" -> {2, 2}, "Stride" -> {2, 2}, 
+               "PaddingSize" -> {0, 0}, "Function" -> Max, "Channels" -> 50, 
+               "$InputSize" -> {250, 250}, "$OutputSize" -> {125, 125}], 
+             "Inputs" -> 
+             Association[
+              "Input" -> NeuralNetworks`TensorT[3, {50, 250, 250}]], 
+             "Outputs" -> Association["Output" -> NeuralNetworks`ChannelT[50, 
+                 NeuralNetworks`TensorT[2, {125, 125}]]]], "7" -> 
+           Association[
+            "Type" -> "Flatten", "Arrays" -> Association[], "Parameters" -> 
+             Association[
+              "Dimensions" -> {50, 125, 125}, "$Rank" -> 3, "$OutputSize" -> 
+               781250], "Inputs" -> 
+             Association["Input" -> NeuralNetworks`ChannelT[50, 
+                 NeuralNetworks`TensorT[2, {125, 125}]]], "Outputs" -> 
+             Association["Output" -> NeuralNetworks`TensorT[1, {781250}]]], 
+           "8" -> Association[
+            "Type" -> "DotPlus", "Arrays" -> 
+             Association[
+              "Weights" -> NeuralNetworks`TensorT[2, {500, 781250}], "Biases" -> 
+               NeuralNetworks`TensorT[1, {500}]], "Parameters" -> 
+             Association["Size" -> 500, "$InputSize" -> 781250], "Inputs" -> 
+             Association["Input" -> NeuralNetworks`TensorT[1, {781250}]], 
+             "Outputs" -> 
+             Association["Output" -> NeuralNetworks`TensorT[1, {500}]]], "9" -> 
+           Association[
+            "Type" -> "Elementwise", "Arrays" -> Association[], "Parameters" -> 
+             Association[
+              "Function" -> Ramp, "$Dimensions" -> {500}, "$Rank" -> 1], 
+             "Inputs" -> 
+             Association["Input" -> NeuralNetworks`TensorT[1, {500}]], 
+             "Outputs" -> 
+             Association["Output" -> NeuralNetworks`TensorT[1, {500}]]], "10" -> 
+           Association[
+            "Type" -> "DotPlus", "Arrays" -> 
+             Association[
+              "Weights" -> NeuralNetworks`TensorT[2, {32, 500}], "Biases" -> 
+               NeuralNetworks`TensorT[1, {32}]], "Parameters" -> 
+             Association["Size" -> 32, "$InputSize" -> 500], "Inputs" -> 
+             Association["Input" -> NeuralNetworks`TensorT[1, {500}]], 
+             "Outputs" -> 
+             Association["Output" -> NeuralNetworks`TensorT[1, {32}]]], "11" -> 
+           Association[
+            "Type" -> "Softmax", "Arrays" -> Association[], "Parameters" -> 
+             Association["Size" -> 32], "Inputs" -> 
+             Association["Input" -> NeuralNetworks`TensorT[1, {32}]], 
+             "Outputs" -> 
+             Association["Output" -> NeuralNetworks`TensorT[1, {32}]]]], 
+         "Connections" -> {
+          NetPort["Layers", "1", "Inputs", "Input"] -> 
+           NetPort["Inputs", "Input"], 
+           NetPort["Layers", "2", "Inputs", "Input"] -> 
+           NetPort["Layers", "1", "Outputs", "Output"], 
+           NetPort["Layers", "3", "Inputs", "Input"] -> 
+           NetPort["Layers", "2", "Outputs", "Output"], 
+           NetPort["Layers", "4", "Inputs", "Input"] -> 
+           NetPort["Layers", "3", "Outputs", "Output"], 
+           NetPort["Layers", "5", "Inputs", "Input"] -> 
+           NetPort["Layers", "4", "Outputs", "Output"], 
+           NetPort["Layers", "6", "Inputs", "Input"] -> 
+           NetPort["Layers", "5", "Outputs", "Output"], 
+           NetPort["Layers", "7", "Inputs", "Input"] -> 
+           NetPort["Layers", "6", "Outputs", "Output"], 
+           NetPort["Layers", "8", "Inputs", "Input"] -> 
+           NetPort["Layers", "7", "Outputs", "Output"], 
+           NetPort["Layers", "9", "Inputs", "Input"] -> 
+           NetPort["Layers", "8", "Outputs", "Output"], 
+           NetPort["Layers", "10", "Inputs", "Input"] -> 
+           NetPort["Layers", "9", "Outputs", "Output"], 
+           NetPort["Layers", "11", "Inputs", "Input"] -> 
+           NetPort["Layers", "10", "Outputs", "Output"], 
+           NetPort["Outputs", "Output"] -> 
+           NetPort["Layers", "11", "Outputs", "Output"]}, "Inputs" -> 
+         Association["Input" -> NeuralNetworks`EncodedType[
+             NetEncoder["Image", 
+              Association[
+              "Parameters" -> 
+               Association[
+                "ImageSize" -> {512, 512}, "ColorSpace" -> "RGB", 
+                 "ColorChannels" -> 3, "$AugmentationFunction" -> None, 
+                 "Parallelize" -> False, "MeanImage" -> None], "Output" -> 
+               NeuralNetworks`ChannelT[3, 
+                 NeuralNetworks`TensorT[2, {512, 512}]]]], 
+             NeuralNetworks`ChannelT[3, 
+              NeuralNetworks`TensorT[2, {512, 512}]]]], "Outputs" -> 
+         Association["Output" -> NeuralNetworks`TensorT[1, {32}]]], 
+        NeuralNetworks`NetChain`PackagePrivate`opart$$, 
+        NeuralNetworks`NetChain`PackagePrivate`part$$, 
+        NeuralNetworks`NetChain`PackagePrivate`selected$$ = Null}, 
+        DynamicBox[ToBoxes[
+          Column[{
+            EventHandler[
+            NeuralNetworks`NetChain`PackagePrivate`grid$$, "MouseClicked" :> 
+             If[
+               ListQ[
+               NeuralNetworks`NetChain`PackagePrivate`part$$ = 
+                MouseAnnotation[]], 
+               If[NeuralNetworks`NetChain`PackagePrivate`opart$$ === 
+                 NeuralNetworks`NetChain`PackagePrivate`part$$, 
+                 NeuralNetworks`NetChain`PackagePrivate`selected$$ = Null; 
+                 NeuralNetworks`NetChain`PackagePrivate`opart$$ = Null, 
+                 NeuralNetworks`NetChain`PackagePrivate`selected$$ = 
+                  Part[NeuralNetworks`NetChain`PackagePrivate`assoc$$, 
+                    Apply[
+                    Sequence, NeuralNetworks`NetChain`PackagePrivate`part$$]]; 
+                 NeuralNetworks`NetChain`PackagePrivate`opart$$ = 
+                  NeuralNetworks`NetChain`PackagePrivate`part$$; Null]; 
+               Null]], 
+            NeuralNetworks`NetChain`PackagePrivate`fmtSelected[
+            NeuralNetworks`NetChain`PackagePrivate`selected$$, 
+             NeuralNetworks`NetChain`PackagePrivate`part$$]}, Spacings -> 1], 
+          StandardForm],
+         ImageSizeCache->{314., {106., 111.}},
+         TrackedSymbols:>{NeuralNetworks`NetChain`PackagePrivate`selected$$}],
+        DynamicModuleValues:>{}],
+       BaselinePosition->Automatic], "]"}]}],
+    False],
+   Deploy],
+  LineBreakWithin->False]], "Output",
+ CellChangeTimes->{3.6944388147350426`*^9}]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
@@ -517,25 +880,9 @@ Cell[BoxData[
    ",", "10", ",", "11", ",", "12", ",", "13", ",", "14", ",", "15", ",", 
    "16", ",", "17", ",", "18", ",", "19", ",", "20", ",", "21", ",", "22", 
    ",", "23", ",", "24", ",", "25", ",", "26", ",", "27", ",", "28", ",", 
-   "29", ",", "30", ",", "31", ",", "32", ",", "33", ",", "34", ",", "35", 
-   ",", "36", ",", "37", ",", "38", ",", "39", ",", "40", ",", "41", ",", 
-   "42", ",", "43", ",", "44", ",", "45", ",", "46", ",", "47", ",", "48", 
-   ",", "49", ",", "50", ",", "51", ",", "52", ",", "53", ",", "54", ",", 
-   "55", ",", "56", ",", "57", ",", "58", ",", "59", ",", "60", ",", "61", 
-   ",", "62", ",", "63", ",", "64", ",", "65", ",", "66", ",", "67", ",", 
-   "68", ",", "69", ",", "70", ",", "71", ",", "72", ",", "73", ",", "74", 
-   ",", "75", ",", "76", ",", "77", ",", "78", ",", "79", ",", "80", ",", 
-   "81", ",", "82", ",", "83", ",", "84", ",", "85", ",", "86", ",", "87", 
-   ",", "88", ",", "89", ",", "90", ",", "91", ",", "92", ",", "93", ",", 
-   "94", ",", "95", ",", "96", ",", "97", ",", "98", ",", "99", ",", "100", 
-   ",", "101", ",", "102", ",", "103", ",", "104", ",", "105", ",", "106", 
-   ",", "107", ",", "108", ",", "109", ",", "110", ",", "111", ",", "112", 
-   ",", "113", ",", "114", ",", "115", ",", "116", ",", "117", ",", "118", 
-   ",", "119", ",", "120", ",", "121", ",", "122", ",", "123", ",", "124", 
-   ",", "125", ",", "126", ",", "127", ",", "128", ",", "129"}], 
-  "}"}]], "Output",
+   "29", ",", "30", ",", "31", ",", "32", ",", "33"}], "}"}]], "Output",
  CellChangeTimes->{3.6943303079972906`*^9, 3.6943317993446746`*^9, 
-  3.6943345673399243`*^9}]
+  3.6943345673399243`*^9, 3.6944374328906837`*^9, 3.6944388661892624`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -759,7 +1106,7 @@ Cell[BoxData[{
   RowBox[{"If", "[", 
    RowBox[{
     RowBox[{"!", 
-     RowBox[{"DirectoryQ", "[", "path2", "]"}]}], ",", 
+     RowBox[{"DirectoryQ", "[", "path3", "]"}]}], ",", 
     RowBox[{"CreateDirectory", "[", "path3", "]"}]}], "]"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -781,92 +1128,7 @@ Cell[BoxData[{
    3.6943294952791104`*^9, 3.694329519951564*^9}, {3.694329605781705*^9, 
    3.694329667955037*^9}, 3.69433125264357*^9, {3.694331846218486*^9, 
    3.694331853784919*^9}, 3.694340123479987*^9, {3.6943403874433546`*^9, 
-   3.6943403905996585`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{"Needs", "[", "\"\<CUDALink`\>\"", "]"}], "\[IndentingNewLine]", 
- RowBox[{"CUDAQ", "[", "]"}], "\[IndentingNewLine]", 
- RowBox[{"CUDAInformation", "[", "]"}]}], "Input",
- CellChangeTimes->{{3.6938995256961894`*^9, 3.6938995477689495`*^9}, {
-  3.693899634374836*^9, 3.693899634728076*^9}}],
-
-Cell[BoxData["True"], "Output",
- CellChangeTimes->{
-  3.693899527127202*^9, {3.6939008516627817`*^9, 3.6939008518248997`*^9}, 
-   3.693903899030426*^9, 3.693903938228683*^9, 3.693904231898383*^9, 
-   3.6939142929278603`*^9, 3.693916716415064*^9, 3.693918331950612*^9, 
-   3.6939186680315247`*^9, 3.6939234735243654`*^9, 3.693923743336589*^9, 
-   3.6939246841802864`*^9, 3.6939251696797323`*^9, 3.69415855136887*^9, 
-   3.694162633346343*^9, 3.69416291849433*^9, {3.6941684053388414`*^9, 
-   3.6941684221799927`*^9}, 3.694168756010805*^9, 3.6941690670653005`*^9, 
-   3.694179078071322*^9, 3.694179263306281*^9, 3.694179762068828*^9, 
-   3.694180520688383*^9, 3.6942456002529044`*^9, 3.6942457810758967`*^9, 
-   3.6942468833264184`*^9, 3.6942473390057993`*^9, 3.694247656777207*^9, 
-   3.6942487527341986`*^9, 3.694255332485811*^9, 3.6942684193649025`*^9, 
-   3.6942690895302963`*^9, 3.6943303086737576`*^9, 3.694331799963121*^9, 
-   3.694334568840609*^9}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"1", "\[Rule]", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"\<\"Name\"\>", "\[Rule]", "\<\"Quadro K4200\"\>"}], ",", 
-     RowBox[{"\<\"Clock Rate\"\>", "\[Rule]", "784000"}], ",", 
-     RowBox[{"\<\"Compute Capabilities\"\>", "\[Rule]", "3.`"}], ",", 
-     RowBox[{"\<\"GPU Overlap\"\>", "\[Rule]", "1"}], ",", 
-     RowBox[{"\<\"Maximum Block Dimensions\"\>", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{"1024", ",", "1024", ",", "64"}], "}"}]}], ",", 
-     RowBox[{"\<\"Maximum Grid Dimensions\"\>", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{"2147483647", ",", "65535", ",", "65535"}], "}"}]}], ",", 
-     RowBox[{"\<\"Maximum Threads Per Block\"\>", "\[Rule]", "1024"}], ",", 
-     RowBox[{"\<\"Maximum Shared Memory Per Block\"\>", "\[Rule]", "49152"}], 
-     ",", 
-     RowBox[{"\<\"Total Constant Memory\"\>", "\[Rule]", "65536"}], ",", 
-     RowBox[{"\<\"Warp Size\"\>", "\[Rule]", "32"}], ",", 
-     RowBox[{"\<\"Maximum Pitch\"\>", "\[Rule]", "2147483647"}], ",", 
-     RowBox[{"\<\"Maximum Registers Per Block\"\>", "\[Rule]", "65536"}], ",", 
-     RowBox[{"\<\"Texture Alignment\"\>", "\[Rule]", "512"}], ",", 
-     RowBox[{"\<\"Multiprocessor Count\"\>", "\[Rule]", "7"}], ",", 
-     RowBox[{"\<\"Core Count\"\>", "\[Rule]", "224"}], ",", 
-     RowBox[{"\<\"Execution Timeout\"\>", "\[Rule]", "1"}], ",", 
-     RowBox[{"\<\"Integrated\"\>", "\[Rule]", "False"}], ",", 
-     RowBox[{"\<\"Can Map Host Memory\"\>", "\[Rule]", "True"}], ",", 
-     RowBox[{"\<\"Compute Mode\"\>", "\[Rule]", "\<\"Default\"\>"}], ",", 
-     RowBox[{"\<\"Texture1D Width\"\>", "\[Rule]", "65536"}], ",", 
-     RowBox[{"\<\"Texture2D Width\"\>", "\[Rule]", "65536"}], ",", 
-     RowBox[{"\<\"Texture2D Height\"\>", "\[Rule]", "65536"}], ",", 
-     RowBox[{"\<\"Texture3D Width\"\>", "\[Rule]", "4096"}], ",", 
-     RowBox[{"\<\"Texture3D Height\"\>", "\[Rule]", "4096"}], ",", 
-     RowBox[{"\<\"Texture3D Depth\"\>", "\[Rule]", "4096"}], ",", 
-     RowBox[{"\<\"Texture2D Array Width\"\>", "\[Rule]", "16384"}], ",", 
-     RowBox[{"\<\"Texture2D Array Height\"\>", "\[Rule]", "16384"}], ",", 
-     RowBox[{"\<\"Texture2D Array Slices\"\>", "\[Rule]", "2048"}], ",", 
-     RowBox[{"\<\"Surface Alignment\"\>", "\[Rule]", "512"}], ",", 
-     RowBox[{"\<\"Concurrent Kernels\"\>", "\[Rule]", "True"}], ",", 
-     RowBox[{"\<\"ECC Enabled\"\>", "\[Rule]", "False"}], ",", 
-     RowBox[{"\<\"TCC Enabled\"\>", "\[Rule]", "False"}], ",", 
-     RowBox[{"\<\"Total Memory\"\>", "\[Rule]", "4294967296"}]}], "}"}]}], 
-  "}"}]], "Output",
- CellChangeTimes->{
-  3.693899527127202*^9, {3.6939008516627817`*^9, 3.6939008518248997`*^9}, 
-   3.693903899030426*^9, 3.693903938228683*^9, 3.693904231898383*^9, 
-   3.6939142929278603`*^9, 3.693916716415064*^9, 3.693918331950612*^9, 
-   3.6939186680315247`*^9, 3.6939234735243654`*^9, 3.693923743336589*^9, 
-   3.6939246841802864`*^9, 3.6939251696797323`*^9, 3.69415855136887*^9, 
-   3.694162633346343*^9, 3.69416291849433*^9, {3.6941684053388414`*^9, 
-   3.6941684221799927`*^9}, 3.694168756010805*^9, 3.6941690670653005`*^9, 
-   3.694179078071322*^9, 3.694179263306281*^9, 3.694179762068828*^9, 
-   3.694180520688383*^9, 3.6942456002529044`*^9, 3.6942457810758967`*^9, 
-   3.6942468833264184`*^9, 3.6942473390057993`*^9, 3.694247656777207*^9, 
-   3.6942487527341986`*^9, 3.694255332485811*^9, 3.6942684193649025`*^9, 
-   3.6942690895302963`*^9, 3.6943303086737576`*^9, 3.694331799963121*^9, 
-   3.694334568840609*^9}]
-}, Open  ]]
+   3.6943403905996585`*^9}, 3.694438888986663*^9}]
 },
 WindowSize->{1536, 877},
 WindowMargins->{{-8, Automatic}, {Automatic, -8}},
@@ -885,32 +1147,27 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 1280, 33, 126, "Input"],
+Cell[1841, 55, 1100, 30, 69, "Input"],
+Cell[2944, 87, 1231, 33, 69, "Input"],
+Cell[4178, 122, 3585, 90, 183, "Input"],
 Cell[CellGroupData[{
-Cell[1863, 57, 1100, 30, 69, "Input"],
-Cell[2966, 89, 99, 1, 30, "Output"]
+Cell[7788, 216, 1491, 34, 107, "Input"],
+Cell[9282, 252, 1922, 27, 30, "Output"],
+Cell[11207, 281, 1922, 27, 30, "Output"]
 }, Open  ]],
-Cell[3080, 93, 1231, 33, 69, "Input"],
-Cell[4314, 128, 3585, 90, 183, "Input"],
+Cell[13144, 311, 926, 24, 30, "Input"],
+Cell[14073, 337, 1320, 30, 50, "Input"],
 Cell[CellGroupData[{
-Cell[7924, 222, 1491, 34, 107, "Input"],
-Cell[9418, 258, 1823, 25, 30, "Output"],
-Cell[11244, 285, 1825, 25, 30, "Output"]
+Cell[15418, 371, 1131, 20, 50, "Input"],
+Cell[16552, 393, 17854, 360, 257, "Output"]
 }, Open  ]],
-Cell[13084, 313, 926, 24, 30, "Input"],
-Cell[14013, 339, 1320, 30, 50, "Input"],
-Cell[15336, 371, 1107, 20, 50, "Input"],
-Cell[16446, 393, 431, 10, 30, "Input"],
+Cell[34421, 756, 431, 10, 30, "Input"],
 Cell[CellGroupData[{
-Cell[16902, 407, 3484, 103, 202, "Input"],
-Cell[20389, 512, 1660, 25, 69, "Output"]
+Cell[34877, 770, 3484, 103, 202, "Input"],
+Cell[38364, 875, 559, 9, 30, "Output"]
 }, Open  ]],
-Cell[22064, 540, 8515, 208, 468, "Input"],
-Cell[30582, 750, 1208, 33, 69, "Input"],
-Cell[CellGroupData[{
-Cell[31815, 787, 313, 5, 69, "Input"],
-Cell[32131, 794, 954, 14, 30, "Output"],
-Cell[33088, 810, 3490, 57, 107, "Output"]
-}, Open  ]]
+Cell[38938, 887, 8515, 208, 468, "Input"],
+Cell[47456, 1097, 1230, 33, 69, "Input"]
 }
 ]
 *)
