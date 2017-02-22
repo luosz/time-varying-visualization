@@ -77,7 +77,7 @@
     <intensity value='1' />
     <split value='false' />
     <colorL r='8'
-        g='82'
+        g='255'
         b='7'
         a='0' />
    </key>

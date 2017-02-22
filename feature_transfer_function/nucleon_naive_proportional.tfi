@@ -49,7 +49,7 @@
             <key type="TransFuncMappingKey">
                 <intensity value="0.96627003" />
                 <split value="false" />
-                <colorL r="8" g="82" b="7" a="0" />
+                <colorL r="8" g="255" b="7" a="0" />
             </key>
         </Keys>
     </TransFuncIntensity>
