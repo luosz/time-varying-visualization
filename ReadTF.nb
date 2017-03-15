@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     60425,       1384]
-NotebookOptionsPosition[     59623,       1354]
-NotebookOutlinePosition[     59971,       1369]
-CellTagsIndexPosition[     59928,       1366]
+NotebookDataLength[     60460,       1382]
+NotebookOptionsPosition[     59658,       1352]
+NotebookOutlinePosition[     60006,       1367]
+CellTagsIndexPosition[     59963,       1364]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1318,39 +1318,37 @@ Cell[BoxData[
    3.694955881797536*^9}, {3.694955925480831*^9, 3.6949560215159817`*^9}, 
    3.6949563111763964`*^9}],
 
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"pyfile", "=", 
-   RowBox[{"FileNameJoin", "[", 
-    RowBox[{"{", 
-     RowBox[{
-     "path", ",", 
-      "\"\<_voreen_render_with_transfer_functions_in_directory.py\>\""}], 
-     "}"}], "]"}]}], ";"}], "\n", 
- RowBox[{
-  RowBox[{"list", "=", 
-   RowBox[{"StringSplit", "[", 
-    RowBox[{
-     RowBox[{"Import", "[", "pyfile", "]"}], ",", "\"\<\\n\>\""}], "]"}]}], 
-  ";"}], "\n", 
- RowBox[{
-  RowBox[{"list2", "=", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"If", "[", 
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"pyfile", "=", 
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
       RowBox[{
-       RowBox[{"StringContainsQ", "[", 
-        RowBox[{"#", ",", "\"\<mypath=\>\""}], "]"}], ",", 
-       RowBox[{"\"\<mypath=\>\"", "<>", 
-        RowBox[{"ToString", "@", 
-         RowBox[{"InputForm", "@", "path"}]}]}], ",", "#"}], "]"}], "&"}], "/@",
-     "list"}]}], ";"}], "\n", 
- RowBox[{
-  RowBox[{"Export", "[", 
-   RowBox[{"pyfile", ",", "list2", ",", "\"\<List\>\""}], "]"}], 
-  ";"}]}], "Input",
+      "path", ",", 
+       "\"\<_voreen_render_with_transfer_functions_in_directory.py\>\""}], 
+      "}"}], "]"}]}], ";", "\n", 
+   RowBox[{"list", "=", 
+    RowBox[{"StringSplit", "[", 
+     RowBox[{
+      RowBox[{"Import", "[", "pyfile", "]"}], ",", "\"\<\\n\>\""}], "]"}]}], 
+   ";", "\n", 
+   RowBox[{"list2", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"StringContainsQ", "[", 
+         RowBox[{"#", ",", "\"\<mypath=\>\""}], "]"}], ",", 
+        RowBox[{"\"\<mypath=\>\"", "<>", 
+         RowBox[{"ToString", "@", 
+          RowBox[{"InputForm", "@", "path"}]}]}], ",", "#"}], "]"}], "&"}], "/@",
+      "list"}]}], ";", "\n", 
+   RowBox[{"Export", "[", 
+    RowBox[{"pyfile", ",", "list2", ",", "\"\<List\>\""}], "]"}], ";"}], 
+  "*)"}]], "Input",
  CellChangeTimes->{{3.6944363156457605`*^9, 3.6944363519786844`*^9}, {
-  3.6949560136746817`*^9, 3.6949560237474403`*^9}}]
+   3.6949560136746817`*^9, 3.6949560237474403`*^9}, 3.698563783865266*^9}]
 },
 WindowSize->{1536, 877},
 WindowMargins->{{-8, Automatic}, {Automatic, -8}},
@@ -1374,7 +1372,7 @@ Cell[CellGroupData[{
 Cell[4513, 129, 745, 22, 69, "Input"],
 Cell[5261, 153, 8290, 189, 134, "Output"]
 }, Open  ]],
-Cell[13566, 345, 8355, 208, 468, "Input"],
+Cell[13566, 345, 8355, 208, 563, "Input"],
 Cell[21924, 555, 2193, 61, 145, "Input"],
 Cell[CellGroupData[{
 Cell[24142, 620, 2035, 60, 145, "Input"],
@@ -1385,7 +1383,7 @@ Cell[26777, 696, 1096, 32, 50, "Input"],
 Cell[27876, 730, 29273, 548, 134, "Output"]
 }, Open  ]],
 Cell[57164, 1281, 1404, 37, 69, "Input"],
-Cell[58571, 1320, 1048, 32, 88, "Input"]
+Cell[58571, 1320, 1083, 30, 88, "Input"]
 }
 ]
 *)
