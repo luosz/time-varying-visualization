@@ -7,7 +7,7 @@ voreenqt.info()
 
 from os import listdir
 from os.path import isfile, join
-mypath="C:\\Users\\dell\\Desktop\\experiment_201703\\tf_new\\CT-Knee"
+mypath="C:\\Users\\dell\\Desktop\\experiment_201703\\new\\CT-Knee"
 tfs = [f for f in listdir(mypath) if isfile(join(mypath, f)) and -1!=f.find(".tfi")]
 print(tfs)
 
