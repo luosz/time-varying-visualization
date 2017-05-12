@@ -222,7 +222,7 @@
                     </MetaData>
                     <Properties>
                         <Property mapKey="volumeInfo" name="volumeInfo" />
-                        <Property mapKey="volumeURL" name="volumeURL" url="../../artivvis-development-repository/data/tooth.mhd?preferredReader=MhdVolumeReader" />
+                        <Property mapKey="volumeURL" name="volumeURL" url="../../../../_volume_data/Mathematica/tooth.mhd?preferredReader=MhdVolumeReader" />
                     </Properties>
                     <Inports />
                     <Outports>
