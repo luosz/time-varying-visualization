@@ -1,0 +1,127 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4063,        119]
+NotebookOptionsPosition[      3526,        100]
+NotebookOutlinePosition[      3901,        116]
+CellTagsIndexPosition[      3858,        113]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"r", "=", "2"}], ";", "\[IndentingNewLine]", 
+   RowBox[{"s", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "r"}]}], ";", 
+   "\[IndentingNewLine]", 
+   RowBox[{"d2", "=", 
+    RowBox[{"GaussianMatrix", "[", 
+     RowBox[{"{", 
+      RowBox[{"r", ",", "s"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{"d3", "=", 
+    RowBox[{"GaussianMatrix", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"r", ",", "r", ",", "r"}], "}"}], ",", "s"}], "}"}], "]"}]}], 
+   ";", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"TableForm", "@", "d2"}], "\[IndentingNewLine]", 
+    RowBox[{"TableForm", "@", "d3"}]}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.708778331444175*^9, 3.7087783411241503`*^9}, {
+   3.708778405718696*^9, 3.7087784999105935`*^9}, {3.7087786108034773`*^9, 
+   3.708778708662007*^9}, 3.7087787555107574`*^9, {3.708778810088087*^9, 
+   3.7087788108246193`*^9}, 3.7087788567937346`*^9, {3.70877890257073*^9, 
+   3.708778907531296*^9}, {3.7087806019629855`*^9, 
+   3.708780617225983*^9}},ExpressionUUID->"618677b4-1b8d-46a0-9f3a-\
+34802105a442"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Gaussian3D", "[", "r_", "]"}], ":=", 
+  RowBox[{"GaussianMatrix", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"r", ",", "r", ",", "r"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Sqrt", "[", "2", "]"}], "/", "8."}], "*", "r"}]}], "}"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.708779867545394*^9, 3.7087799097713933`*^9}, {
+  3.7087799405957265`*^9, 
+  3.708779941113511*^9}},ExpressionUUID->"7623d3d3-afca-45d7-beda-\
+e01a633d5d47"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a", "=", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"Gaussian3D", "[", "2", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", "=", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"Gaussian3D", "[", "4", "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<~gaussian_5_5_5.txt\>\""}], ",", "a", ",", "\"\<List\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"NotebookDirectory", "[", "]"}], "<>", 
+     "\"\<~gaussian_9_9_9.txt\>\""}], ",", "b", ",", "\"\<List\>\""}], "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.708779948551731*^9, 3.708779974830512*^9}, {
+  3.708863539586704*^9, 3.7088635571621313`*^9}, {3.708863629173958*^9, 
+  3.7088636527893143`*^9}, {3.708863727970909*^9, 3.7088638096785336`*^9}, {
+  3.7088638451916914`*^9, 3.7088638474547386`*^9}, {3.7088638837959075`*^9, 
+  3.7088639385704837`*^9}, {3.7088639824795685`*^9, 3.708863984319767*^9}, {
+  3.7088640697706366`*^9, 3.7088640876949344`*^9}, {3.708864159494234*^9, 
+  3.708864231797086*^9}},ExpressionUUID->"5645649b-2e51-4b11-a4a1-\
+2776c76c8b85"]
+},
+WindowSize->{1218, 757},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"11.1 for Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1188, 29, 159, "Input", "ExpressionUUID" -> \
+"618677b4-1b8d-46a0-9f3a-34802105a442"],
+Cell[1749, 51, 514, 15, 38, "Input", "ExpressionUUID" -> \
+"7623d3d3-afca-45d7-beda-e01a633d5d47"],
+Cell[2266, 68, 1256, 30, 111, "Input", "ExpressionUUID" -> \
+"5645649b-2e51-4b11-a4a1-2776c76c8b85"]
+}
+]
+*)
+
